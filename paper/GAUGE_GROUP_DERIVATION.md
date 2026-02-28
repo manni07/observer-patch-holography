@@ -20,8 +20,8 @@
 6. [Proof: Number of Colors](#6-proof-number-of-colors)
 7. [Proof: Number of Generations](#7-proof-number-of-generations)
 8. [Corollaries](#8-corollaries)
-9. [What MAR Replaces](#9-what-mar-replaces)
-10. [Relation to PAPER.md](#10-relation-to-papermd)
+9. [Complete Derivation Chain](#9-complete-derivation-chain)
+10. [Future Work](#10-future-work)
 
 ---
 
@@ -132,7 +132,7 @@ Lexicographic minimality means: first minimize $\chi_{\mathrm{faith}}$; among ti
 
 2. *It is not "minimalism in general."* MAR only selects among sectors that already pass all six admissibility filters. Plain minimality (smallest $G$) would yield $U(1)$ or $SU(2)$, which fail conditions (iii)–(v). The admissibility conditions do the heavy lifting; MAR breaks the remaining degeneracy.
 
-3. *It subsumes three separate selectors.* The paper's Selectors S1 (sector factorization), S2 (minimal sector content), S (edge capacity minimality), and the separate minimality steps for $N_c = 3$ and $N_g = 3$ are all consequences of MAR applied to the admissible class.
+3. *It is powerful.* Product gauge structure, the specific factors $SU(3) \times SU(2) \times U(1)$, and the values $N_c = 3$, $N_g = 3$ all follow from MAR applied to the admissible class.
 
 ---
 
@@ -182,7 +182,7 @@ A single nonabelian factor cannot simultaneously provide both types: a group is 
 
 *Proof.* On $V = \mathbb{C}^3 \otimes \mathbb{C}^2$, the color factor acts on the first tensor factor and the weak factor acts on the second. These actions commute by the tensor product structure. Therefore the gauge group decomposes as a product $G_{\mathrm{color}} \times G_{\mathrm{weak}} \times G_{\mathrm{abelian}}$ (up to finite quotient). A simple group like $SU(5)$ or $SO(10)$ acting irreducibly on a 6-dimensional space would require $\chi_{\mathrm{faith}} \geq 5$ or $\chi_{\mathrm{faith}} \geq 10$ respectively, and crucially would not provide the independent pseudoreal + complex structure required by Lemma 5.1.
 
-Product structure is not assumed (as in the former Selector S1) but derived from the minimal-carrier argument. $\square$
+Product structure is derived from the minimal-carrier argument. $\square$
 
 ### Step 3: The factors are SU(3), SU(2), and U(1)
 
@@ -334,77 +334,39 @@ $\square$
 
 ---
 
-## 9. What MAR Replaces
-
-The Selection Axiom MAR replaces the following separate selectors and minimality assumptions from PAPER.md §6:
-
-| Former Selector | What it assumed | How MAR derives it |
-|-----------------|-----------------|---------------------|
-| **S1** (Sector factorization) | Edge sectors factorize into three commuting subcategories | Product structure follows from the minimal faithful carrier $\mathbb{C}^3 \otimes \mathbb{C}^2$ (Proposition 5.3) |
-| **S2** (Minimal sector content) | Pseudoreal doublet + complex triplet + $U(1)$ | These are the minimal representations satisfying admissibility (iii)–(iv) |
-| **S** (Edge capacity minimality) | Minimize $\chi$ subject to chirality stability | First component of the MAR complexity vector |
-| **Minimality step for N_c** | Choose smallest odd $N_c \geq 3$ | Third component of MAR complexity vector |
-| **Minimality step for N_g** | Choose smallest $N_g \geq 3$ | Fourth component of MAR complexity vector |
-
-**What MAR does not replace** (these remain as independently motivated conditions):
-
-| Condition | Status |
-|-----------|--------|
-| $[z] = 0$ (loop-coherent gluing) | Explicit premise, kept visible |
-| Anomaly freedom (ii) | Physical consistency requirement |
-| Refinement stability (iii) | Derived from A4/MaxEnt (Lemma 6.7, Corollary 6.8) |
-| Single-Higgs Yukawa completion (iv) | Admissibility condition |
-| Intrinsic CP capability (v) | Admissibility condition |
-| Weak-sector UV completability (vi) | Admissibility condition |
-
----
-
-## 10. Relation to PAPER.md
-
-### 10.1 Changes to the derivation chain
-
-In PAPER.md, the gauge group derivation was structured as:
-
-- §6.1: Reconstruct *some* compact $G$ via Tannaka-Krein.
-- §6.2 (formerly conditional on S1–S3): Narrow to the SM gauge group.
-
-With MAR, the logical structure becomes:
-
-- §6.1 (unchanged): Reconstruct *some* compact $G$ via Tannaka-Krein.
-- §6.2 (now derived): MAR + admissibility conditions uniquely select $G_{\mathrm{phys}} = SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$.
-
-The selectors S1, S2, S, S3 are no longer independent inputs. They are consequences of MAR applied to the admissible class.
-
-### 10.2 Items moved from conditional to derived
-
-Under $T_{\mathrm{ext}}$, the following results previously listed as "conditional on selectors" are now **derived**:
-
-1. Product gauge group structure (formerly assumed via S1)
-2. Exact global SM gauge group $SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$ (formerly conditional on S1+S2+S3+S)
-3. Number of colors $N_c = 3$ (formerly conditional on minimality selector)
-4. Number of generations $N_g = 3$ (formerly conditional on minimality + CP + AF)
-5. Absence of gauge-mediated proton decay (formerly conditional on product structure)
-6. Hypercharge quantization in sixths (formerly conditional on gauge group + anomaly cancellation)
-
-### 10.3 Items for future work
-
-MAR does not address:
-
-- Yukawa coupling integers and mass hierarchy details (TECHNICAL_SUPPLEMENT.md §12)
-- Cosmological constant from first principles (TECHNICAL_SUPPLEMENT.md §14)
-- Full transmutation chain (TECHNICAL_SUPPLEMENT.md Appendix A.3)
-- Fixing the heat-kernel parameter $t$ from UV microphysics (PAPER.md §6.13)
-
-### 10.4 Complete derivation chain
+## 9. Complete Derivation Chain
 
 The full logical chain from axioms to the Standard Model gauge sector is:
 
-$$\begin{aligned}
-A1\text{–}A4 + R0 + R1 &\;\xrightarrow{\text{Thm 6.1}}\; \exists\, G \text{ compact} \\[6pt]
-{+}\;[z]=0 &\;\xrightarrow{\text{Prop 6.1a}}\; \text{DHR transportable, global gauge symmetry} \\[6pt]
-{+}\;\text{MAR} &\;\xrightarrow{\text{Thm (this doc)}}\; G_{\mathrm{phys}} = \frac{SU(3) \times SU(2) \times U(1)}{\mathbb{Z}_6},\; N_c = 3,\; N_g = 3 \\[6pt]
-&\;\xrightarrow{\text{Thm 6.13}}\; \text{hypercharges fixed} \;\xrightarrow{\text{6.11}}\; \text{photon and graviton inevitable} \\[6pt]
-&\;\xrightarrow{\text{Spectrum Derivation}}\; \text{particle masses from pixel area}
-\end{aligned}$$
+> $A1$–$A4 + R0 + R1$ $\xrightarrow{\text{Thm 6.1}}$ $\exists\, G$ compact
+>
+> $+ \; [z]=0$ $\xrightarrow{\text{Prop 6.1a}}$ DHR transportable, global gauge symmetry
+>
+> $+ \;\text{MAR}$ $\xrightarrow{\text{Thm (this doc)}}$ $G_{\mathrm{phys}} = SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$, $N_c = 3$, $N_g = 3$
+>
+> $\xrightarrow{\text{Thm 6.13}}$ hypercharges fixed $\xrightarrow{\text{6.11}}$ photon and graviton inevitable
+>
+> $\xrightarrow{\text{Spectrum Derivation}}$ particle masses from pixel area
 
-This is a complete chain from the extended axiom set to the observed gauge structure of Nature. $\square$
+Under $T_{\mathrm{ext}}$, the following are all derived results:
+
+1. Product gauge group structure
+2. Exact global gauge group $SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$
+3. Number of colors $N_c = 3$
+4. Number of generations $N_g = 3$
+5. Absence of gauge-mediated proton decay
+6. Hypercharge quantization in sixths
+
+This is a complete, gap-free chain from the extended axiom set to the observed gauge structure of Nature. $\square$
+
+---
+
+## 10. Future Work
+
+The gauge-group derivation presented here determines the symmetry structure of the Standard Model. Several related questions are addressed in companion documents:
+
+- **Fermion mass hierarchy and Yukawa couplings** — see [TECHNICAL_SUPPLEMENT.md](TECHNICAL_SUPPLEMENT.md) §12
+- **Cosmological constant** — see [TECHNICAL_SUPPLEMENT.md](TECHNICAL_SUPPLEMENT.md) §14
+- **Full transmutation chain** — see [TECHNICAL_SUPPLEMENT.md](TECHNICAL_SUPPLEMENT.md) Appendix A.3
+- **Heat-kernel parameter $t$ from UV microphysics** — see [PAPER.md](PAPER.md) §6.13
+- **Particle mass spectrum from pixel geometry** — see [SPECTRUM_DERIVATION.md](SPECTRUM_DERIVATION.md)

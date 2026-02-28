@@ -34,7 +34,7 @@ The prisoners represent the intuitive picture. They believe they are seeing real
 
 ### The Hint
 
-Plato's hint: **what we perceive might be a lower-dimensional projection of something deeper**.
+Plato's hint: **what we perceive is a lower-dimensional projection of something deeper**.
 
 The shadows on the wall are 2D projections of 3D objects. The prisoners think they live in a 2D world of shadows. They don't realize the information comes from a higher-dimensional source.
 
@@ -76,17 +76,17 @@ Zeno's hint: **infinite divisibility leads to paradox**.
 
 If space and time are infinitely divisible, Achilles must traverse infinitely many intervals. If motion requires being in different positions at different times, but each instant is frozen, motion seems impossible.
 
-The paradoxes suggest that our intuitive picture of continuous spacetime may be problematic.
+The paradoxes show that our intuitive picture of continuous spacetime is problematic.
 
 ### The Physics
 
-Modern physics has found two hints that spacetime may not be continuous.
+Modern physics has found two hints that spacetime is not continuous.
 
 First, the holographic bound suggests that space has a fundamental graininess. The maximum information in a region is finite, proportional to area. If space were truly continuous, you could pack infinite information into any region. The bound implies a minimum length scale-the Planck length, about $10^{-35}$ meters.
 
 Second, quantum mechanics already quantizes other continuous quantities. Energy comes in discrete packets (photons). Angular momentum comes in units of $\hbar/2$. If space and time are also quantized, Zeno's paradoxes dissolve.
 
-You don't need to traverse infinitely many intervals because there aren't infinitely many. Below the Planck scale, the very concept of "interval" may not exist. Space has pixels.
+You don't need to traverse infinitely many intervals because there aren't infinitely many. Below the Planck scale, the very concept of "interval" does not exist. Space has pixels.
 
 Zeno was reverse-engineering the need for discrete structure, 2,500 years before we had the physics to explain it.
 
@@ -278,7 +278,7 @@ The intuitive picture assumes that descriptions and the things they describe are
 
 Gödel's hint: **self-reference is not a bug but a feature of sufficiently rich systems**.
 
-Any system complex enough to describe itself will contain loops where the describer and the described become entangled. These loops are not paradoxes to be avoided—they may be essential to the system's nature.
+Any system complex enough to describe itself will contain loops where the describer and the described become entangled. These loops are not paradoxes to be avoided—they are essential to the system's nature.
 
 ### Hofstadter's Strange Loops
 
@@ -292,7 +292,7 @@ Hofstadter argued that consciousness itself is a strange loop—a pattern that p
 
 This has profound implications for our model. If reality is computational, and observers are patterns within that computation that model reality, then we have a strange loop: reality contains observers that understand reality.
 
-But Hofstadter and others have suggested something deeper: perhaps the loop doesn't just *exist* within reality—perhaps it *constitutes* reality. Perhaps self-reference is not merely possible but necessary.
+But Hofstadter and others have suggested something deeper: the loop doesn't just *exist* within reality—it *constitutes* reality. Self-reference is not merely possible but necessary.
 
 We will return to this idea in Chapter 18, where we consider the possibility that reality evolves toward producing observers capable of understanding and simulating it—closing the loop of self-creation.
 
@@ -352,7 +352,7 @@ This is the strange loop: **reality evolves observers who discover how reality w
 
 We are not programs running on someone else's hardware. We are patterns within a self-simulating system. The simulation isn't run by external beings—it runs itself, through us, through our understanding, through our eventual construction of the very computational substrate that gives rise to us.
 
-This isn't proven—it remains a conjecture. But it resolves the puzzle of existence in an elegant way. "Why does anything exist?" becomes "Why does the self-simulating loop close?" And the answer may be: because it must. A self-consistent strange loop is the only stable configuration.
+This isn't proven—it remains a conjecture. But it resolves the puzzle of existence in an elegant way. "Why does anything exist?" becomes "Why does the self-simulating loop close?" And the answer is: because it must. A self-consistent strange loop is the only stable configuration.
 
 Escher's hands draw each other. Reality simulates the observers who simulate reality.
 

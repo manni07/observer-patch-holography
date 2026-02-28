@@ -352,13 +352,13 @@ Classical objectivity is quantum redundancy. The facts everyone agrees on are th
 
 Let's step back and consider the big picture.
 
-We've been building toward a radical view of reality. There may be no single, global "state of the universe." Instead, reality might be like a **sheaf**-a mathematical structure where local data are glued together by consistency conditions.
+We've been building toward a radical view of reality. There is no single, global "state of the universe." Reality is a **sheaf**-a mathematical structure where local data are glued together by consistency conditions.
 
 ### The Internet Analogy
 
 Think of the internet. There's no single file called "The Internet" stored somewhere. There are billions of computers, each with its own memory. They communicate via protocols. When my computer sends a packet to yours, we "agree" on the content. The "internet" is the emergent consistency of all these local interactions.
 
-Similarly, reality might not exist as a single quantum state observed from a God's-eye view. It might be a collection of local states-one for each observer-constrained to agree on overlaps.
+Reality does not exist as a single quantum state observed from a God's-eye view. It is a collection of local states-one for each observer-constrained to agree on overlaps.
 
 When a global state exists, great. But we don't require one. Local states satisfying consistency conditions are enough for physics.
 
@@ -466,7 +466,7 @@ Put differently: Bell violations are the universe's compression algorithm for ma
 
 7. **Quantum Darwinism**: Classical objectivity emerges when quantum information gets redundantly copied into the environment, making it accessible through multiple overlapping channels.
 
-8. **Reality as a Sheaf**: Perhaps reality isn't a single global state but a collection of local states glued together by consistency conditions-like the internet, not like a centralized database.
+8. **Reality as a Sheaf**: Reality isn't a single global state but a collection of local states glued together by consistency conditions-like the internet, not like a centralized database.
 
 ---
 

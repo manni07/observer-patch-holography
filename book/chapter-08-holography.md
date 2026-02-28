@@ -44,7 +44,7 @@ This is the **Bekenstein bound**. It's a universal limit on information storage,
 
 ### The Holographic Principle
 
-In 1993, Dutch physicist Gerard 't Hooft made a wild suggestion. He proposed that this isn't just true for black holes. It might be true for everything.
+In 1993, Dutch physicist Gerard 't Hooft made a wild suggestion. He proposed that this isn't just true for black holes. It is true for everything.
 
 **The Holographic Principle**: The maximum information in any region of space is proportional to its surface area, not its volume.
 

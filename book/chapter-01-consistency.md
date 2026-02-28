@@ -20,7 +20,7 @@ The universe isn't a stage on which events unfold. It's more like a vast, self-i
 
 And the structure of this computation-the laws of physics, the geometry of space, the flow of time-isn't arbitrary. It's forced by a single requirement: different observers, looking at overlapping regions, must get consistent answers.
 
-This might sound like philosophy, but it's actually physics. And it might be the deepest physics there is.
+This sounds like philosophy, but it's actually physics. And it is the deepest physics there is.
 
 ## 1.2 The Intuitive Picture
 
@@ -366,6 +366,6 @@ The 3D world you see around you-the chairs, the stars, the empty space-is not th
 
 This isn't philosophy. It's physics. And it started with black holes.
 
-In the next chapter, we trace the intellectual lineage of these ideas. We'll meet the physicists who first realized that what we see might not be all there is. And we'll see how their insights led to the discovery that information, geometry, and reality are far more intertwined than anyone imagined.
+In the next chapter, we trace the intellectual lineage of these ideas. We'll meet the physicists who first realized that what we see is not all there is. And we'll see how their insights led to the discovery that information, geometry, and reality are far more intertwined than anyone imagined.
 
 The reverse engineering continues.

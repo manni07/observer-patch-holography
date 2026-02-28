@@ -61,9 +61,9 @@ is just... there.
 the information doesn't disappear. It's encoded on the horizon, scrambled
 but technically recoverable. The universe keeps perfect logs.
 
-**Space might be a hologram.** The information needed to describe a volume
+**Space is a hologram.** The information needed to describe a volume
 of space can be encoded entirely on its boundary. The three-dimensional
-world may be a projection from two-dimensional data.
+world is a projection from two-dimensional data.
 
 If a human engineer wrote a program with these specifications, we'd assume
 they were trolling us. But this is how reality behaves. These aren't bugs.

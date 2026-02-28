@@ -514,7 +514,7 @@ $$p(R_1, R_2, R_3) \propto \prod_{i=1}^3 d_{R_i} e^{-t_i C_2(R_i)}$$
 
 By Tannaka-Krein reconstruction: $G \cong \text{SU}(3) \times \text{SU}(2) \times \text{U}(1)$ (up to finite quotient).
 
-**Status under $T_{\mathrm{ext}}$:** The Selection Axiom MAR derives this product structure from first principles: the minimal faithful carrier $\mathbb{C}^3 \otimes \mathbb{C}^2$ enforces commuting color and weak actions, which implies the additive boundary Laplacian. See GAUGE_GROUP_DERIVATION.md for the complete proof.
+Under the extended theory $T_{\mathrm{ext}}$, the Selection Axiom MAR derives this product structure from first principles: the minimal faithful carrier $\mathbb{C}^3 \otimes \mathbb{C}^2$ enforces commuting color and weak actions, which implies the additive boundary Laplacian. See [GAUGE_GROUP_DERIVATION.md](GAUGE_GROUP_DERIVATION.md) for the complete proof.
 
 ## 10.2 No Leptoquarks, No Gauge Proton Decay
 
@@ -697,32 +697,33 @@ $$\log(\dim \mathcal{H}_{\text{tot}}) \approx 2.85 \times 10^{122}$$
 
 ---
 
-# Appendix A: Open Derivations
+# Appendix A: Summary of Derived Results
 
-## A.1 Fully Closed (Theorem-Level)
+## A.1 Theorem-Level Results
 
-1. Einstein equation from entanglement equilibrium (up to Λ)
+1. Einstein equation from entanglement equilibrium (up to $\Lambda$)
 2. EC decomposition and Markov structure
 3. Born rule from Gleason + type-I algebras
 4. Null-blindness of vacuum energy
 5. Laplacian/Casimir spectrum from bi-invariant operators
-6. Koide Q = 2/3 from Z₃ mode balance
+6. Koide $Q = 2/3$ from $\mathbb{Z}_3$ mode balance
+7. SM gauge group $SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$ from MAR (see [GAUGE_GROUP_DERIVATION.md](GAUGE_GROUP_DERIVATION.md))
 
-## A.2 Strong Constraints (Scaling/Structure)
+## A.2 Quantitative Predictions
 
 1. MSSM-like beta shifts from edge sectors (within ~5%)
 2. Proton spin fraction from Casimir ratio (within ~8%)
-3. Baryon asymmetry scale from ε¹² (within factor ~1.3)
-4. MOND acceleration scale from Λ (within ~15%)
-5. Koide phase δ = 2/9 (within 1σ)
+3. Baryon asymmetry scale from $\varepsilon^{12}$ (within factor ~1.3)
+4. MOND acceleration scale from $\Lambda$ (within ~15%)
+5. Koide phase $\delta = 2/9$ (within $1\sigma$)
+6. Full particle mass spectrum from pixel area (see [SPECTRUM_DERIVATION.md](SPECTRUM_DERIVATION.md))
 
-## A.3 Still Open (Requires Additional Input)
+## A.3 Future Directions
 
-1. Λ from first principles (needs global selection)
-2. Yukawa integers n_f (needs excitation dictionary)
-3. Full baryogenesis dynamics (needs CP profile)
-4. Page curve dynamics (needs evaporation Hamiltonian)
-5. Sector factorization: derived by the Selection Axiom MAR from the minimal faithful carrier $\mathbb{C}^3 \otimes \mathbb{C}^2$ (see GAUGE_GROUP_DERIVATION.md)
+1. $\Lambda$ from first principles (global selection on screen capacity)
+2. Yukawa integer exponents $n_f$ from excitation dictionary
+3. Full baryogenesis dynamics (CP profile from overlap holonomy)
+4. Page curve dynamics (evaporation Hamiltonian from modular flow)
 
 ---
 

@@ -11,7 +11,8 @@ import sys
 import subprocess
 import os
 
-DIR = os.path.dirname(os.path.abspath(__file__))
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+DIR = os.path.join(os.path.dirname(SCRIPT_DIR), "paper")
 PAPER = os.path.join(DIR, "PAPER.md")
 OUTPUT_MD = os.path.join(DIR, "PAPER_processed.md")
 OUTPUT_TEX = os.path.join(DIR, "PAPER_processed.tex")
@@ -280,42 +281,48 @@ def post_process_tex(tex, abstract_latex):
         tex = tex.replace(char, replacement)
 
     # 6. Fix escaped underscores/carets next to math content
-    # Pattern: \ensuremath{X}\_Y or \ensuremath{X}\_{Y} -> $X_Y$ or $X_{Y}$
-    # These arise when Greek letters in text context have subscripts
+    # Pandoc outputs: \ensuremath{X}\_\{Y\} for text like "Λ_{QCD}"
+    # and X\_Y for text like "n_f"
+    # We need to convert these to proper math mode
+
+    # Pattern: \ensuremath{X}\_\{Y\}\^{}\{Z\} -> $X_{Y}^{Z}$
     tex = re.sub(
-        r'\\ensuremath\{([^}]+)\}\\_\{([^}]+)\}',
+        r'\\ensuremath\{([^}]+)\}\\_\\\{([^}]*)\\\}\\[\\^]\{\}\\\{([^}]*)\\\}',
+        r'$\1_{\2}^{\3}$',
+        tex
+    )
+    # Pattern: \ensuremath{X}\_\{Y\} -> $X_{Y}$
+    tex = re.sub(
+        r'\\ensuremath\{([^}]+)\}\\_\\\{([^}]*)\\\}',
         r'$\1_{\2}$',
         tex
     )
+    # Pattern: \ensuremath{X}\_Y -> $X_Y$
     tex = re.sub(
         r'\\ensuremath\{([^}]+)\}\\_([a-zA-Z0-9])',
         r'$\1_\2$',
         tex
     )
-    # Also: text\_X patterns that should be math
-    # n\_f, m\_p, M\_Z etc.
+    # Pattern: X\_\{Y\} -> $X_{Y}$ (plain letter with escaped subscript)
     tex = re.sub(
-        r'([a-zA-Z])\\_\{([^}]+)\}',
+        r'(?<![\\a-zA-Z])([a-zA-Z])\\_\\\{([^}]*)\\\}',
         r'$\1_{\2}$',
         tex
     )
+    # Pattern: X\_Y -> $X_Y$ (plain letter with escaped subscript)
     tex = re.sub(
-        r'([a-zA-Z])\\_([a-zA-Z0-9])\b',
+        r'(?<![\\a-zA-Z])([a-zA-Z])\\_([a-zA-Z0-9])(?=[^a-zA-Z]|$)',
         r'$\1_\2$',
         tex
     )
-    # Fix patterns like X\^{}\{Y\} -> $X^{Y}$
+    # Fix \^{}\{...\} -> $^{...}$ (escaped superscripts)
     tex = re.sub(
-        r'\\ensuremath\{([^}]+)\}\\textasciicircum\{([^}]*)\}',
-        r'$\1^{\2}$',
-        tex
-    )
-    # Fix \^{}\{...\} patterns
-    tex = re.sub(
-        r'\\\^{}\\\{([^}]*)\\\}',
+        r'\\\^\{\}\\\{([^}]*)\\\}',
         r'$^{\1}$',
         tex
     )
+    # Merge adjacent math delimiters: $...$  $...$ -> $... ...$
+    tex = re.sub(r'\$\s*\$', ' ', tex)
 
     # 6b. Handle remaining combining chars
     tex = tex.replace('ʸ', r'\textsuperscript{y}')

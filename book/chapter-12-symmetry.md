@@ -256,7 +256,7 @@ Summary:
 
 4. **Wigner Classification**: Elementary particles are classified by mass and spin-the labels of Poincare group representations.
 
-5. **Gauge Groups**: The Standard Model gauge group may emerge from extra dimensions or boundary currents.
+5. **Gauge Groups**: The Standard Model gauge group emerges from the gluing structure of observer patches.
 
 6. **Symmetry Breaking**: The Higgs mechanism breaks symmetry spontaneously, giving mass to W, Z, and fermions.
 

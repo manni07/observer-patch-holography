@@ -130,9 +130,9 @@ The Tsirelson bound S = 2sqrt(2) is the maximum allowed by quantum mechanics. It
 
 This suggests a deep connection: **quantum correlations are precisely as strong as consistency allows**. Classical is too weak-it fails certain consistency tests. Super-quantum is too strong-it violates causality. Quantum sits at the sweet spot.
 
-In our model, this connects to overlap consistency. When patches on the S^2 screen overlap, observers must agree on shared observables. The correlations needed to maintain this agreement across all possible overlaps may require exactly quantum mechanics-not classical, not super-quantum.
+In our model, this connects to overlap consistency. When patches on the S^2 screen overlap, observers must agree on shared observables. The correlations needed to maintain this agreement across all possible overlaps require exactly quantum mechanics-not classical, not super-quantum.
 
-The evidence strongly favors quantum as the unique solution: classical correlations are too weak, super-quantum ones break causality. Quantum mechanics sits at the exact consistency sweet spot.
+Classical correlations are too weak, super-quantum ones break causality. Quantum mechanics sits at the exact consistency sweet spot.
 
 ## 9.5 ER = EPR: Wormholes Are Entanglement
 

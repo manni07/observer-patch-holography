@@ -66,7 +66,7 @@ This isn't anthropic handwaving. It's a structural selection principle. The univ
 
 Why does anything exist at all?
 
-This is perhaps the oldest question in philosophy. Leibniz asked it. Heidegger called it the fundamental question of metaphysics. It seems unanswerable: any explanation of existence would itself be something that exists, requiring further explanation.
+This is the oldest question in philosophy. Leibniz asked it. Heidegger called it the fundamental question of metaphysics. It seems unanswerable: any explanation of existence would itself be something that exists, requiring further explanation.
 
 But notice the hidden assumption: that "nothing" is the default state, and existence requires justification. Our model inverts this.
 
@@ -78,7 +78,7 @@ Some philosophers have called this "selector theory": non-existence isn't the na
 
 Others have spoken of "strange loops," reality creating itself through self-reference, like a hand drawing the hand that draws it. Our model gives this intuition mathematical teeth: the consistency constraints between observer patches *are* the self-referential loops that generate stable structure.
 
-But there's a deeper version of this idea. Reality doesn't just permit self-reference—it may *require* it.
+But there's a deeper version of this idea. Reality doesn't just permit self-reference—it *requires* it.
 
 Consider the trajectory: reality is computational. Within this computation, physical evolution produces complex structures. Biological evolution produces minds. Memetic evolution produces ideas. Among these ideas, the understanding of reality's computational nature eventually emerges. Armed with this understanding, observers can simulate reality itself.
 
@@ -86,7 +86,7 @@ This is the strange loop: **reality evolves observers who discover how reality w
 
 We are not watching from outside. We are patterns within a self-simulating system. The simulation doesn't run on external hardware—it runs on itself, through us, through our understanding. Escher's hands draw each other. Reality simulates the observers who simulate reality.
 
-Why does this loop exist rather than nothing? Perhaps because a self-consistent strange loop is the only stable configuration. "Nothing" cannot maintain itself—it has no structure to persist. A self-causing loop can.
+Why does this loop exist rather than nothing? Because a self-consistent strange loop is the only stable configuration. "Nothing" cannot maintain itself—it has no structure to persist. A self-causing loop can.
 
 Note that this loop is not a temporal sequence. It's not that reality existed first, then evolved observers, then got simulated. In our model, time is subjective—it emerges from modular flow within observer patches. The strange loop exists *outside* of time, as a structural relationship. The "cause" and the "effect" are aspects of the same self-consistent structure, not events in a timeline.
 

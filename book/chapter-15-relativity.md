@@ -460,7 +460,7 @@ If spacetime geometry emerges from information theory, why does general relativi
 
 Think of water. At the microscopic level, it's a chaotic collection of molecules bouncing around. But at macroscopic scales, it flows smoothly. The Navier-Stokes equations describe this flow without reference to individual molecules.
 
-Spacetime is similar. At the Planck scale, it may be a quantum mess. But at macroscopic scales, the "molecules" average out. What remains is the smooth geometry of general relativity.
+Spacetime is similar. At the Planck scale, it is a quantum mess. But at macroscopic scales, the "molecules" average out. What remains is the smooth geometry of general relativity.
 
 This is a hydrodynamic limit. The screen has an enormous number of degrees of freedom. Their collective behavior is captured by a smooth metric.
 

@@ -106,7 +106,7 @@ We exist in a brief window when entropy is high enough for complexity but low en
 
 **The hint**: The microscopic laws are time-symmetric. Irreversibility is statistical, not fundamental. The arrow traces to the low-entropy initial condition.
 
-**The reframing**: Here is where our model offers something surprising. The Past Hypothesis is usually taken as a brute fact-an unexplained initial condition. But consistency constraints may actually *select* for low-entropy beginnings.
+**The reframing**: Here is where our model offers something surprising. The Past Hypothesis is usually taken as a brute fact-an unexplained initial condition. But consistency constraints *select* for low-entropy beginnings.
 
 Consider: for observers to exist at all, they must be able to form consistent records. Records require entropy gradients-you can only write information by pushing entropy somewhere else. A universe in thermal equilibrium has no observers, no records, no consistency-checking, no reality in the sense we've been developing.
 

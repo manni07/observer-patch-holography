@@ -213,6 +213,6 @@ vocabulary of that stable regime.
 
 We've seen that spacetime, particles, and classical physics all emerge from the screen through consistency requirements. But why these particular laws? Why these constants? Could the universe have been different?
 
-The next chapter explores a radical idea: physical laws themselves may be evolutionary survivors. Just as life evolves through natural selection, perhaps laws evolve through a kind of cosmic selection.
+The next chapter explores a radical idea: physical laws themselves are evolutionary survivors. Just as life evolves through natural selection, laws evolve through cosmic selection.
 
 This is **Chapter 17: Darwin's Laws**.

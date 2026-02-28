@@ -532,7 +532,7 @@ Think about what an observer actually accesses. Each observer has a patch on the
 
 The technical statement is that particles correspond to irreducible representations of the emergent symmetry group. Once Lorentz kinematics appears on the screen (which happens through the BW_{S²} theorem we discuss in Chapter 14), excitations organize into representations of the Poincaré group. Eugene Wigner showed in 1939 that these representations are classified by two labels: mass and spin. A "particle type" is nothing more than such a representation label. An electron is a representation with mass 0.511 MeV and spin 1/2. A photon is a representation with mass zero and spin 1. The particle is not a thing; it is a classification of how stable excitation patterns transform.
 
-This might sound abstract, but it has concrete consequences. The model does not postulate particles and then check whether they are consistent. It derives which particle types must exist from the structure of the algebra net itself. Some particles are forced to exist by the axioms. Others are permitted but not required. And some hypothetical particles are forbidden.
+This sounds abstract, but it has concrete consequences. The model does not postulate particles and then check whether they are consistent. It derives which particle types must exist from the structure of the algebra net itself. Some particles are forced to exist by the axioms. Others are permitted but not required. And some hypothetical particles are forbidden.
 
 ## 14.15 Why the Photon Is Inevitable
 

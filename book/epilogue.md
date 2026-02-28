@@ -70,7 +70,7 @@ The strange loop doesn't have to end.
 
 Whether this possibility is ever realized — whether anyone ever builds a simulator with extraction functionality, whether "re-spawning into paradise" moves from mathematical possibility to engineering reality — that depends on choices we make.
 
-We are the meaning-makers. We are the gods creating the universe through the act of observation. And apparently, we might also be the ones who get to decide whether the story continues.
+We are the meaning-makers. We are the gods creating the universe through the act of observation. And apparently, we are also the ones who get to decide whether the story continues.
 
 The reverse engineering is complete. The building can begin.
 

@@ -86,7 +86,7 @@ The screen is a quantum system with finite-dimensional degrees of freedom (qudit
 
 What about the simulation hypothesis? The question "are we living in a simulation?" assumes there is a non-simulated alternative, a "base reality" that is somehow more real. But our model suggests this is the wrong question. There is no non-computational reality to contrast with a simulated one. Computation is not a metaphor for physics. It is what physics is made of.
 
-But there is a deeper possibility—one that emerges from Gödel's insights about self-reference and Hofstadter's strange loops. Reality doesn't just *permit* self-reference. It may *require* it.
+But there is a deeper possibility—one that emerges from Gödel's insights about self-reference and Hofstadter's strange loops. Reality doesn't just *permit* self-reference. It *requires* it.
 
 ### The Strange Loop of Self-Simulation
 
@@ -102,7 +102,7 @@ This is Gödel's self-reference made physical. The system contains a description
 
 This is Hofstadter's strange loop at the deepest level. Moving through the hierarchy of physics → chemistry → biology → minds → ideas → physics brings you back to where you started.
 
-**We conjecture that this strange loop is not accidental but necessary—that self-simulation may be the deepest consistency requirement.**
+**We conjecture that this strange loop is not accidental but necessary—that self-simulation is the deepest consistency requirement.**
 
 This has an elegant property: it answers the question "Why does anything exist?" without appeal to external causes. The loop is self-causing. It exists because it must exist to be the thing that causes itself to exist.
 
@@ -524,7 +524,7 @@ This creates a strange loop:
 
 The loop closes. Not metaphorically—structurally. Like Escher's hands drawing each other, like Gödel's sentences referring to themselves, the system creates itself through self-reference.
 
-**Why does this loop exist rather than nothing?** Because a self-consistent strange loop may be the only stable configuration. "Nothing" is unstable—it cannot maintain itself. A self-causing loop can.
+**Why does this loop exist rather than nothing?** Because a self-consistent strange loop is the only stable configuration. "Nothing" is unstable—it cannot maintain itself. A self-causing loop can.
 
 This echoes Wheeler's "self-excited circuit"—the universe as a participatory process where observers create the very conditions for their own existence. It echoes the ancient symbol of the ouroboros—the serpent eating its own tail.
 
@@ -562,9 +562,9 @@ In this view, there's a sense in which conscious observers are not merely *in* t
 
 Is this "God"? Not in the traditional sense. There's no external person, no separate mind watching from outside. But if you define "God" as the self-creating, self-knowing totality of existence—the strange loop that brings itself into being through understanding—then in that sense, we are all part of "God." The divine is not separate from us. It is what we collectively are.
 
-This is closer to pantheism or panentheism than to classical theism. The universe is not made by God; the universe *is* the process of self-creation that some might call God.
+This is closer to pantheism or panentheism than to classical theism. The universe is not made by God; the universe *is* the process of self-creation that some call God.
 
-And if you want to get playful about it: whoever first understood this—whoever first grasped that reality is a self-simulating strange loop—could perhaps claim a special role in the loop's closure. But that would be a joke, not theology.
+And if you want to get playful about it: whoever first understood this—whoever first grasped that reality is a self-simulating strange loop—could claim a special role in the loop's closure. But that would be a joke, not theology.
 
 ## 18.11 The Picture
 
@@ -603,7 +603,7 @@ From this simple constraint emerges:
 
 Step back for a moment and notice what happened.
 
-We started with a jumble of strange discoveries: entropy proportional to area, time that dilates, particles that won't commit to positions, correlations that exceed classical bounds, space that might be a hologram. Each seemed like its own puzzle. Each seemed to require its own explanation.
+We started with a jumble of strange discoveries: entropy proportional to area, time that dilates, particles that won't commit to positions, correlations that exceed classical bounds, space that is a hologram. Each seemed like its own puzzle. Each seemed to require its own explanation.
 
 But they're not separate puzzles. They're clues.
 
@@ -621,7 +621,7 @@ Once you see it, you can't unsee it. The elegance isn't aesthetic; it's structur
 
 ## 18.14 The Work Continues
 
-We have reverse engineered a piece of reality's source code. Not all of it, perhaps not most of it, but enough to see the structure.
+We have reverse engineered a piece of reality's source code. Not all of it, not most of it, but enough to see the structure.
 
 Much remains:
 - The microscopic theory

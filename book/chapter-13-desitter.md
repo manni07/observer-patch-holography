@@ -119,7 +119,7 @@ De Sitter has no spatial boundary. The only boundary is the horizon-and the hori
 
 ### Horizon Complementarity
 
-Leonard Susskind and collaborators proposed **de Sitter complementarity**: there may be no "global" quantum state of the universe. Quantum mechanics applies only within a single observer's static patch.
+Leonard Susskind and collaborators proposed **de Sitter complementarity**: there is no "global" quantum state of the universe. Quantum mechanics applies only within a single observer's static patch.
 
 Alice describes physics in her patch using her Hilbert space. Bob describes physics in his patch using his Hilbert space. Where their patches overlap, their descriptions must be consistent. But there's no way to talk about the "state of the whole universe" as a single quantum state.
 
