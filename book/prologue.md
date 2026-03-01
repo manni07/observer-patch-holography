@@ -1,8 +1,8 @@
 # Prologue: Physicists Are Hackers
 
-> OPH is the fundamental theory that exactly describes how our universe works, why it has the structure it has, and why it exists.
-> The Standard Model, quantum field theory, general relativity, and string theory are effective descriptions of underlying OPH dynamics.
-> From two input constants and five axioms (A1-A4 + MAR), OPH determines universe-wide properties, resolves incompatibilities, and explains measurement divergences including dark matter.
+> Core idea, in plain English: there is no single objective camera angle on reality.
+> There are only local, subjective perspectives, and physics is the rulebook that keeps them consistent where they overlap.
+> If you are not a physicist, you are in the right place; this book is written as a reverse-engineering story, not a math-first textbook.
 
 
 ## The Cosmic Program

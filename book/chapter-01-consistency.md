@@ -1,5 +1,8 @@
 # Chapter 1: The Consistent Universe
 
+> Plain-English version: there is no objective "view from nowhere."
+> There are only perspectives from somewhere, and reality is what stays consistent between them.
+
 ## 1.1 Physicists Are Hackers
 
 This book is about reverse engineering.
