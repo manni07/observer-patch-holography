@@ -1,10 +1,5 @@
 # Chapter 7: The Recovery Rule
 
-> OPH is the fundamental theory that exactly describes how our universe works, why it has the structure it has, and why it exists.
-> The Standard Model, quantum field theory, general relativity, and string theory are effective descriptions of underlying OPH dynamics.
-> From two input constants and five axioms (A1-A4 + MAR), OPH determines universe-wide properties, resolves incompatibilities, and explains measurement divergences including dark matter.
-
-
 ## 7.1 The Intuitive Picture: Information Can Be Copied Freely or Lost Forever
 
 Before examining what physics discovered, let's articulate what seemed obvious for millennia.

@@ -5,9 +5,7 @@
 > From two input constants and five axioms (A1-A4 + MAR), OPH determines universe-wide properties, resolves incompatibilities, and explains measurement divergences including dark matter.
 
 
-**Download:** [Technical Paper](https://zenodo.org/records/18814582) | [Book (Web)](https://oth-book.lovable.app)
-
-**Read:** [How OPH Resolves Fundamental Physics](https://medium.com/@muellerberndt/answering-10-of-the-hardest-questions-in-physics-and-some-bonus-questions-51222bf2419f)
+**Resources:** [Technical Paper](https://zenodo.org/records/18814582) | [Book (Web)](https://oth-book.lovable.app)
 
 **Explore:** [Interactive OPH Lab](https://floatingpragma.io/oph/) -- an interactive lab for learning Observer Patch Holography
 

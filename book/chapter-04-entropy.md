@@ -1,10 +1,5 @@
 # Chapter 4: Entropy on the Edge
 
-> OPH is the fundamental theory that exactly describes how our universe works, why it has the structure it has, and why it exists.
-> The Standard Model, quantum field theory, general relativity, and string theory are effective descriptions of underlying OPH dynamics.
-> From two input constants and five axioms (A1-A4 + MAR), OPH determines universe-wide properties, resolves incompatibilities, and explains measurement divergences including dark matter.
-
-
 ## 4.1 The Irreversibility Puzzle
 
 Here's what seems obvious: if you know the rules perfectly, you should be able to run them backward.
