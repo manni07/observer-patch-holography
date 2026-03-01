@@ -91,7 +91,7 @@ Additional structural assumptions (MaxEnt, Euclidean regularity, exponential mix
 | **[Particle Spectrum Derivation](paper/SPECTRUM_DERIVATION.md)** | End-to-end derivation from pixel area to particle masses with PDG comparison |
 | **[Technical Supplement](paper/TECHNICAL_SUPPLEMENT.md)** | Dark matter, Koide formula, baryogenesis, measurement problem, and more |
 | **[String Theory Derivation](paper/STRING_THEORY.md)** | OPH edge-sector weights = 2D Yang-Mills heat kernels → worldsheet expansion |
-| **[MiHsC Duality](paper/MIHSC_DUALITY.md)** | McCulloch's Quantised Inertia as an effective IR description of OPH |
+| **MiHsC Duality (coming soon)** | McCulloch's Quantised Inertia as an effective IR description of OPH |
 
 ## The Prediction Chain
 
