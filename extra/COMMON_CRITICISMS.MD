@@ -339,13 +339,13 @@ That is a meaningful challenge. But it is a very different challenge from the bl
 
 > Joel Tsuma (LinkedIn, quoted verbatim):
 >
-> "Tom Lindeman , technical derivation of the metric in Chapter 3/4 of your framework.
+> "(...) technical derivation of the metric in Chapter 3/4 of your framework.
 >
-> ● Here is the logical failure:
+> Here is the logical failure:
 >
 > To recover semiclassical gravity (General Relativity), your 'Overlap Consistency' must satisfy the First Law of Entanglement Entropy (\delta S = \delta \langle H_{mod} \rangle). However, because OPH assumes finite, discrete observer patches with a fixed cell size (a_{cell}), you are introducing a fundamental 'lattice' to spacetime.
 >
-> ● The Failure: A discrete lattice of information patches inherently violates Lorentz Invariance at high energies. If the 'Screen' has a fixed pixel density, then a boosted observer (moving near light speed) would perceive a 'length contraction' of those pixels, changing the entropy count (S).
+> The Failure: A discrete lattice of information patches inherently violates Lorentz Invariance at high energies. If the 'Screen' has a fixed pixel density, then a boosted observer (moving near light speed) would perceive a 'length contraction' of those pixels, changing the entropy count (S).
 >
 > If S changes based on the observer's velocity, your 'Overlap Consistency' fails unless you can prove your framework is Background Independent. Currently, your math seems to 'force' the Gravitational Constant (G) by plugging in the Planck length rather than deriving it as a purely emergent property of the information overlap. Without a proof of Lorentz Invariance across moving patches, the framework cannot recover the Einstein Field Equations,it only recovers a Newtonian approximation."
 
