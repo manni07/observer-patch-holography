@@ -40,10 +40,13 @@ The fastest way to explore OPH is to ask OPH Sage directly. OPH Sage can answer 
 - [OPH Sage on X](https://x.com/OphSage)
 - [OPH Sage on Bluesky](https://bsky.app/profile/ophsage.bsky.social)
 
-## Common Criticisms
+## Common Objections
 
-- [Deriving `P` from gauge data and then using `P` downstream is completely circular](extra/COMMON_CRITICISMS.MD#criticism-1-deriving-p-from-gauge-data-and-then-using-p-downstream-is-completely-circular)
-- [A fixed cell size breaks Lorentz invariance, so OPH can only recover a Newtonian limit](extra/COMMON_CRITICISMS.MD#criticism-2-a-fixed-cell-size-breaks-lorentz-invariance-so-oph-can-only-recover-a-newtonian-limit)
+These are rebuttals to common objections to OPH.
+
+- [Deriving `P` from gauge data and then using `P` downstream is completely circular](extra/COMMON_OBJECTIONS.md#objection-1-circularity)
+- [A fixed cell size breaks Lorentz invariance, so OPH can only recover a Newtonian limit](extra/COMMON_OBJECTIONS.md#objection-2-lorentz)
+- [OPH has a Type I / Type III discontinuity, so its modular-time story is internally inconsistent](extra/COMMON_OBJECTIONS.md#objection-3-type-i-type-iii)
 
 **French version:** [README_FR.md](README_FR.md) -- translated by Martin S.
 

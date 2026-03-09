@@ -42,10 +42,13 @@ Le moyen le plus rapide d'explorer l'OPH est de poser vos questions directement 
 - [OPH Sage sur X](https://x.com/OphSage)
 - [OPH Sage sur Bluesky](https://bsky.app/profile/ophsage.bsky.social)
 
-## Critiques courantes
+## Objections courantes
 
-- [Dériver `P` à partir des données de jauge puis réutiliser `P` en aval est complètement circulaire](extra/COMMON_CRITICISMS.MD#criticism-1-deriving-p-from-gauge-data-and-then-using-p-downstream-is-completely-circular)
-- [Une taille de cellule fixe brise l'invariance de Lorentz, donc l'OPH ne peut retrouver qu'une limite newtonienne](extra/COMMON_CRITICISMS.MD#criticism-2-a-fixed-cell-size-breaks-lorentz-invariance-so-oph-can-only-recover-a-newtonian-limit)
+Cette section regroupe des réponses aux objections courantes adressées à l'OPH.
+
+- [Dériver `P` à partir des données de jauge puis réutiliser `P` en aval est complètement circulaire](extra/COMMON_OBJECTIONS.md#objection-1-circularity)
+- [Une taille de cellule fixe brise l'invariance de Lorentz, donc l'OPH ne peut retrouver qu'une limite newtonienne](extra/COMMON_OBJECTIONS.md#objection-2-lorentz)
+- [L'OPH aurait une discontinuité Type I / Type III, donc son histoire du temps modulaire serait incohérente en interne](extra/COMMON_OBJECTIONS.md#objection-3-type-i-type-iii)
 
 **Lire :** [Comment l'OPH résout la physique fondamentale](https://medium.com/@muellerberndt/answering-10-of-the-hardest-questions-in-physics-and-some-bonus-questions-51222bf2419f)
 
