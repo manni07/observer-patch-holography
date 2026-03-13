@@ -55,12 +55,22 @@ branches quantitatives les plus fortes adossées à des suppléments numériques
 - **Source LaTeX :** [reality_as_consensus_protocol.tex](paper/reality_as_consensus_protocol.tex)
 
 Chaque PDF comporte désormais une ligne de version visible. La source partagée de version est
-[`paper/release_info.tex`](paper/release_info.tex), et les empreintes PDF courantes sont
-écrites dans [`paper/paper_release_manifest.json`](paper/paper_release_manifest.json) en lançant :
+[`paper/release_info.tex`](paper/release_info.tex). Pour toute mise à jour substantielle des
+articles, incrémentez d'abord la version partagée avant de reconstruire les PDF :
+
+```bash
+python3 tools/bump_paper_release.py
+```
+
+Après reconstruction des PDF, écrivez les empreintes courantes dans
+[`paper/paper_release_manifest.json`](paper/paper_release_manifest.json) en lançant :
 
 ```bash
 python3 tools/generate_paper_release_manifest.py
 ```
+
+Le générateur de manifeste échoue désormais si les PDF changent sans nouvelle version, ou si les
+PDF locaux n'exposent pas encore la ligne de version visible attendue.
 
 Les sources canoniques des articles se trouvent désormais dans [`paper/`](paper). L'ancien arbre de brouillons a été supprimé du dépôt.
 

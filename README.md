@@ -51,12 +51,22 @@ The strongest plausible end state is not "proof of OPH" in a metaphysical sense,
 - **LaTeX source:** [reality_as_consensus_protocol.tex](paper/reality_as_consensus_protocol.tex)
 
 Each PDF carries a visible paper release line. The shared release source is
-[`paper/release_info.tex`](paper/release_info.tex), and the current PDF hashes are written to
+[`paper/release_info.tex`](paper/release_info.tex). For every substantive paper update, bump the
+shared release before rebuilding the PDFs:
+
+```bash
+python3 tools/bump_paper_release.py
+```
+
+After rebuilding the PDFs, write the current PDF hashes to
 [`paper/paper_release_manifest.json`](paper/paper_release_manifest.json) by running:
 
 ```bash
 python3 tools/generate_paper_release_manifest.py
 ```
+
+The manifest generator now fails if the PDFs changed under the same release ID, or if the local
+PDFs do not yet expose the current visible release line.
 
 The canonical paper sources now live under [`paper/`](paper). The old draft tree has been removed from the repository.
 
