@@ -107,10 +107,10 @@ Jacobson's derivation of Einstein's equations requires that horizons have:
 The Gibbons-Hawking theorem gives us all three for de Sitter horizons. In our
 model this supplies the calibration for the area term and
 the temperature normalization. Combined with geometric modular flow on caps
-(derived under Markov + MaxEnt + symmetry + refinement) and entanglement
-equilibrium in the same scaling regime, this establishes a scaling-limit
-Einstein branch as a consequence of observer-patch consistency on the
-holographic screen.
+(recovered on the OPH geometric branch after the Markov/recoverability and
+MaxEnt refinement analysis) and entanglement equilibrium in the same scaling
+regime, this establishes a scaling-limit Einstein branch as a consequence of
+observer-patch consistency on the holographic screen.
 
 ## 13.5 The Problem of Time in De Sitter
 

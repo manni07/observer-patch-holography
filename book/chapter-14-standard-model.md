@@ -558,7 +558,7 @@ The prediction is exact: the photon mass is precisely zero. Experimental limits 
 
 The graviton emerges from a parallel chain of reasoning, but applied to spacetime geometry rather than internal gauge symmetry.
 
-In Chapter 15 we derive that spacetime geometry emerges from modular flow on the screen. The key theorem is BW_{S²}: under the conditions of collar Markov locality, MaxEnt selection with rotational invariance, and Euclidean regularity, modular flow on caps becomes geometric conformal dilation. The modular Hamiltonian of each cap equals the generator of the cap-preserving conformal transformation.
+In Chapter 15 we derive that spacetime geometry emerges from modular flow on the screen. The key theorem is BW_{S²}: once collar Markov/recoverability and the MaxEnt refinement branch are in place, BW_{S²} proves on the OPH geometric branch that modular flow on caps becomes geometric conformal dilation with the standard \(2\pi\) normalization. The modular Hamiltonian of each cap equals the generator of the cap-preserving conformal transformation.
 
 The conformal group of the two-sphere is isomorphic to the Lorentz group: Conf⁺(S²) ≅ PSL(2,ℂ) ≅ SO⁺(3,1). This is a mathematical identity. Once modular flow becomes conformal, Lorentz kinematics is automatic.
 

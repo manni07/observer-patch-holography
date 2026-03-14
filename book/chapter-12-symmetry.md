@@ -40,7 +40,7 @@ Recall our thesis: reality is the process of making observations consistent betw
 
 Consider two astronomers observing the same galaxy. One measures energy in her reference frame. The other measures energy in his frame, moving at a different velocity. Their numbers are different.
 
-But they're not inconsistent - they're related by a Lorentz transformation. In our model, Lorentz kinematics on the screen comes from geometric modular flow on caps, derived under Markov + MaxEnt structure, rotational symmetry, and a refinement limit. The symmetry tells them exactly how to translate between their observations. Lorentz invariance is the rule that makes their different measurements compatible.
+But they're not inconsistent - they're related by a Lorentz transformation. In our model, Lorentz kinematics on the screen comes from geometric modular flow on caps, recovered on the OPH geometric branch once the Markov/recoverability and MaxEnt structure is in place. The symmetry tells them exactly how to translate between their observations. Lorentz invariance is the rule that makes their different measurements compatible.
 
 Here is the reframing: **Symmetry isn't aesthetic-it's the grammar of consistency.** Without symmetry, different observers couldn't compare notes. Their measurements would be incommensurable.
 

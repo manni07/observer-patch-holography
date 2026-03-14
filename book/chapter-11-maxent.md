@@ -160,7 +160,9 @@ Here is the high-level chain we use later:
 
 1. **Markov collars** from the overlap/recovery chapters make the modular
    generator local near cap boundaries.
-2. **Symmetry and regularity** force that local modular flow to be geometric.
+2. **BW$_{S^2}$ on the OPH geometric branch** turns that localized modular
+   flow into the unique cap-preserving conformal dilation and fixes the
+   \(2\pi\) normalization.
 3. Geometric modular flow gives **Lorentz kinematics** on the screen.
 4. **Entanglement equilibrium** plus a local stress tensor yields the conditional scaling-limit Einstein branch.
    The stress tensor can be introduced via a UV CFT limit on small caps, or
@@ -253,7 +255,7 @@ In our model:
 2. This boundary is a horizon with Gibbons-Hawking temperature
 3. The modular flow of the horizon state generates time evolution
 
-In the technical paper we show that, under MaxEnt + Markov recovery on a refining patch net, rotational symmetry, and a smooth collar limit, the modular flow on spherical caps is forced to be geometric and KMS-normalized. That delivers Lorentz kinematics on the screen via Conf^+(S^2) ≃ SO^+(3,1). If any of those inputs fail, you can treat this as a bridge assumption rather than a theorem.
+In the technical paper we show that collar Markov/recoverability localizes the modular defect, the MaxEnt refinement branch supplies the quasi-local control, and then BW$_{S^2}$ proves on the OPH geometric branch that modular flow on spherical caps is geometric and KMS-normalized. That delivers Lorentz kinematics on the screen via Conf^+(S^2) ≃ SO^+(3,1). The remaining open burden is selecting that geometric branch in the scaling limit; if that fails, the Lorentz bridge remains conditional rather than automatic.
 
 ### The Speed of Light
 
@@ -275,7 +277,7 @@ The modular flow provides the time direction. Entanglement provides correlations
 
 ### Why This Matters
 
-Einstein discovered special relativity in 1905 by thinking about light and motion. Over a century later, we see it differently: in QFT, Lorentz boosts are tied to horizon thermodynamics via BW. In our model we derive the screen analog from patch consistency plus symmetry and regularity assumptions, so the Lorentz group appears as the geometry of modular flow on caps.
+Einstein discovered special relativity in 1905 by thinking about light and motion. Over a century later, we see it differently: in QFT, Lorentz boosts are tied to horizon thermodynamics via BW. In our model the screen analog appears when the OPH refinement branch enters the geometric modular class, so the Lorentz group shows up as the geometry of modular flow on caps.
 
 The laws of physics look the same to all inertial observers not because of some cosmic conspiracy, but because thermal states on wedge-shaped regions naturally evolve via boosts. The speed of light is universal not by decree, but because it's the conversion factor between temperature and acceleration built into the structure of quantum field theory.
 
@@ -289,7 +291,7 @@ The emergent time model includes both rigorous mathematical results and testable
 
 **2. KMS condition**: The modular state satisfies thermal equilibrium at β = 1 with respect to modular time. This is a theorem.
 
-**3. Bisognano-Wichmann theorem**: For a Rindler wedge in QFT, the modular Hamiltonian is exactly the Lorentz boost generator. In QFT, Lorentz kinematics is encoded in modular structure. In our model, the screen analog is derived under MaxEnt + Markov + symmetry + refinement assumptions.
+**3. Bisognano-Wichmann theorem**: For a Rindler wedge in QFT, the modular Hamiltonian is exactly the Lorentz boost generator. In QFT, Lorentz kinematics is encoded in modular structure. In our model, the screen analog is recovered conditionally on the OPH geometric branch, with collar Markov/recoverability and the MaxEnt refinement branch supplying the setup.
 
 **4. Boltzmann's H-theorem**: Under molecular chaos assumption, entropy increases with overwhelming probability. This is derivable.
 
@@ -351,7 +353,7 @@ Recap:
 
 8. **Records**: We remember the past because records require entropy flow from a low-entropy origin.
 
-9. **Bisognano-Wichmann**: In QFT wedges, Lorentz boosts are modular flow. Our screen analog follows under the Markov, symmetry, and regularity inputs.
+9. **Bisognano-Wichmann**: In QFT wedges, Lorentz boosts are modular flow. Our screen analog follows on the OPH geometric branch once the collar Markov/recoverability and MaxEnt inputs are in place.
 
 ---
 

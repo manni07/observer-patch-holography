@@ -280,16 +280,16 @@ This modular flow is what the observer experiences as time.
 Consider a cap C on the sphere S^2. In our model, in the refinement/scaling regime and under the right conditions, modular flow becomes geometric.
 
 The conditions are:
-- Markov structure in the collar around the cap boundary (Assumption F)
-- MaxEnt selection with rotationally invariant constraints (Assumptions B-C)
-- Euclidean regularity (Assumption G)
-- Modular covariance on the cap net (Assumption H)
+- collar Markov/recoverability, so the non-geometric part of the modular generator is confined to a shrinking collar around the cut
+- the MaxEnt refinement branch, which already supplies the quasi-local propagation and refinement-stability control used later in the argument
+- a controlled refinement/scaling limit
+- the geometric-branch condition: the realized cap net lies in the geometric modular class for caps and their conformal images
 
-When these hold, the modular Hamiltonian is proportional to the geometric generator of cap-preserving conformal dilations:
+When these hold, the BW$_{S^2}$ theorem identifies the modular Hamiltonian with the unique cap-preserving conformal dilation and fixes its normalization:
 
 $$K_C = 2\pi B_C$$
 
-This is the Bisognano-Wichmann result adapted to the sphere.
+This is the Bisognano-Wichmann result adapted to the sphere. In the synchronized paper ledger, the remaining burden is selecting the geometric branch in the scaling limit, not adding a separate Euclidean-regularity premise by hand once that branch is realized.
 
 ### Conformal Symmetry Is Lorentz Symmetry
 
@@ -347,11 +347,12 @@ Let's be precise about what comes from where. The derivation of Einstein's equat
 
 **What patch consistency contributes directly:**
 - No privileged observer → no preferred frame
-- Lorentz kinematics from Conf(S²) ≅ SO(3,1)
+- the overlap-compatibility structure that makes Lorentz kinematics the natural outcome once cap modular flow is geometric
 - The promotion of a scalar equation to a tensor equation (see below)
 
 **What requires additional assumptions:**
 - MaxEnt state selection
+- the OPH geometric-branch condition for caps
 - The connection between modular flow and stress-energy (the "EFT bridge")
 - The thermodynamic/entanglement equilibrium insight itself
 
@@ -369,7 +370,7 @@ Demanding the first law of thermodynamics hold for all local horizons yields Ein
 
 Our framework provides a *reason* for entanglement equilibrium and connects it to patch consistency:
 
-**MaxEnt selection (Assumption B):** The global state maximizes entropy subject to overlap consistency constraints. This is an additional assumption about how nature selects states; it's not forced by patch consistency alone.
+**MaxEnt selection:** The global state maximizes entropy subject to overlap consistency constraints. This is an additional assumption about how nature selects states; it's not forced by patch consistency alone.
 
 **Entanglement equilibrium from MaxEnt:** If the state maximizes entropy subject to constraints, then for variations preserving those constraints:
 
@@ -399,7 +400,7 @@ $$K = \int_\Sigma T_{ab} \zeta^b d\Sigma^a$$
 
 where ζ is the conformal Killing field preserving the diamond.
 
-**Route 2: Null-surface modular bridge.** Even without assuming a CFT, one can try to reconstruct null stress data from modular data on null surfaces. In the synchronized paper package this route is conditional: modular additivity, half-sided modular inclusion, endpoint differentiation on null half-lines, and the relativistic null-stress identification premise together yield a local density $T_{kk}$ for each null direction $k$. If the null-to-tensor upgrade holds for all local directions and reference states in the scaling regime, this determines a symmetric tensor $T_{ab}$ up to the usual metric term.
+**Route 2: Null-surface modular bridge.** Even without assuming a CFT, one can try to reconstruct null stress data from modular data on null surfaces. In the synchronized paper package this route is conditional: the MaxEnt branch supplies the quasi-local propagation and bounded-interval endpoint control internally, while modular additivity, half-sided modular inclusion, and the relativistic null-stress identification premise together yield a local density $T_{kk}$ for each null direction $k$. If the null-to-tensor upgrade holds for all local directions and reference states in the scaling regime, this determines a symmetric tensor $T_{ab}$ up to the usual metric term.
 
 The null-surface modular bridge (Route 2) is therefore not currently derived from A1-A4 alone. It is an explicit scaling-limit route whose extra technical premises must be verified in the intended EFT phase.
 
@@ -430,8 +431,10 @@ This should be read as the semiclassical tensor equation obtained from the first
 The derivation chain for the scaling-limit Einstein branch in OPH proceeds as:
 
 ```
-MaxEnt (Assumption B)
+MaxEnt/refinement branch
+    → branch-internal quasi-local propagation and refinement stability
     → δS_gen = 0 (entanglement equilibrium)
+    → BW_{S^2} on the OPH geometric branch gives K_C = 2π B_C
     → Conditional null-surface modular bridge (connects modular energy to stress tensor in the scaling regime)
     → δ(G_00 + Λg_00) = 8πG δT_00 in each rest frame
     → Patch consistency promotes to tensor equation in the scaling regime

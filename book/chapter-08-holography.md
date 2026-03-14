@@ -300,8 +300,9 @@ In our model:
 - Patches must be consistent (overlap agreement)
 - Consistency should look like thermodynamic equilibrium
 
-If cap modular flow is geometric (derived in the technical paper from
-MaxEnt + Markov recovery, rotational symmetry, and a refinement limit) and
+If cap modular flow is geometric (proved in the technical paper on the OPH
+geometric branch after collar Markov/recoverability and the MaxEnt refinement
+analysis) and
 the generalized entropy split from error-correction holds (area operator + bulk
 entropy), then the Jacobson chain applies. Under those conditions Einstein's
 equations emerge as the unique way for observer horizons to remain

@@ -67,8 +67,8 @@ particles have sharp mass and spin labels.
 In our model, this appears after two steps:
 
 1. **Lorentz kinematics emerges** from geometric modular flow on caps
-   ($BW_{S^2}$), derived in the technical paper under Markov + symmetry +
-   refinement inputs.
+   ($BW_{S^2}$), recovered in the technical paper on the OPH geometric branch
+   after the collar Markov/recoverability and MaxEnt refinement setup.
 2. **Localized excitations organize into representations** of this emergent
    symmetry in the EFT regime.
 
