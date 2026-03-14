@@ -31,7 +31,7 @@ The photon and graviton are forced by the axiom chain: once the admissible conne
 
 \textbf{Key conditionality.} The Lorentz/null-modular/Einstein package is a scaling-limit statement rather than a literal fixed-cutoff claim. Section 5 formulates an internal route to the null bridge, but the relativistic null-stress identification should still be read as a target regularity property of the intended EFT phase and candidate UV completions, not as a fixed-cutoff matrix-algebra theorem. The gauge group reconstruction yields \emph{a} compact group from a refinement-stable sector colimit; the explicit structural-economy selector MAR (Minimal Admissible Realization) then selects the SM gauge group \(SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6\), \(N_c = 3\), and \(N_g = 3\) once the admissible class includes one connected abelian charge factor (see §6.2 and Part II of this manuscript).
 
-\textbf{Testable predictions.} The log-integer area spectrum yields a discrete "horizon spectroscopy comb" for gravitational waves: after rescaling by remnant mass and spin, spectral features must stack at universal coordinates \(x_k = \ln k / 8\pi\). This is directly testable with public LIGO/Virgo data. We also derive Newton\textquotesingle s constant as \(G = a_{\rm cell}/4\bar{\ell}(t)\) from edge entropy density. We conclude with precision validations against lattice QCD and PDG bounds and a critical evaluation.
+\textbf{Testable continuation branches.} If the additional discrete-horizon premises of Section 5.11 are realized, the log-integer area spectrum yields a discrete "horizon spectroscopy comb" for gravitational waves: after rescaling by remnant mass and spin, spectral features stack at universal coordinates \(x_k = \ln k / 8\pi\). This is a continuation-level test rather than part of the recovered-core package. We also derive Newton\textquotesingle s constant as \(G = a_{\rm cell}/4\bar{\ell}(t)\) from edge entropy density. We conclude with precision validations against lattice QCD and PDG bounds and a critical evaluation.
 
 \textbf{Fundamental parameters.} In the current quantitative implementation the model uses two external continuous inputs characterizing the holographic screen:
 
@@ -152,7 +152,7 @@ for \(d > v_{\mathrm{LR}}|t|\), where \(\xi = O(\ell_{\mathrm{UV}})\).
 This is the standard technical handle that turns the quasi-local structure of LG into explicit support control for time-evolved operators.
 
 \begin{quote}
-\textbf{Theorem A5 (Derived approximate modular covariance).} Under R0 + Lemma 2.6 (local Gibbs) + Premise LR + collar refinement (F/MX), the modular flow \(\sigma_t^{\omega,C}\) maps \(\mathcal{A}(R)\) into a slightly thickened region algebra:
+\textbf{Theorem-local premise A5 (Approximate modular covariance).} Under R0 + Lemma 2.6 (local Gibbs) + Premise LR + collar refinement (F/MX), the modular flow \(\sigma_t^{\omega,C}\) maps \(\mathcal{A}(R)\) into a slightly thickened region algebra:
 
 \[
 \sigma_t^{\omega,C}(\mathcal{A}(R)) \subseteq \mathcal{A}(R^{+v_{\mathrm{mod}}|t|})
@@ -161,9 +161,9 @@ This is the standard technical handle that turns the quasi-local structure of LG
 
 where \(R^{+s}\) denotes the \(s\)-neighborhood thickening, \(v_{\mathrm{mod}}\) is a "modular propagation velocity" controlled by \(v_{\mathrm{LR}}\) and local norm bounds, and \(d\) is the distance from \(R\) to \(\partial C\).
 
-\textbf{Proof sketch.} The modular Hamiltonian \(K_C = -\log \rho_C\) is quasi-local by Lemma 4.1a-b (modular additivity localizes it to the collar). The Lieb-Robinson bound LR then controls support spreading under \(e^{iK_C t}\). In the double-scaling collar limit (\(\delta/\ell_{\mathrm{UV}} \to \infty\)), the thickening vanishes in macroscopic units. QED.
+\textbf{Heuristic motivation.} The modular Hamiltonian \(K_C = -\log \rho_C\) is quasi-local by Lemma 4.1a-b (modular additivity localizes it to the collar). The Lieb-Robinson bound LR then controls support spreading under \(e^{iK_C t}\). In the double-scaling collar limit (\(\delta/\ell_{\mathrm{UV}} \to \infty\)), the thickening vanishes in macroscopic units. This motivates the premise used later; it does not remove the explicit modular regularity assumptions from the synchronized dependency ledger.
 
-\textbf{Corollary (Geometric modular action in the continuum limit).} Define the induced region flow
+\textbf{Continuum-limit heuristic.} Define the induced region flow
 
 \[
 f_t^C(R) := \lim_{\ell_{\mathrm{UV}} \to 0} R^{+v_{\mathrm{mod}}|t|}.
@@ -176,7 +176,7 @@ Then \(\sigma_t^{\omega,C}(\mathcal{A}(R)) = \mathcal{A}(f_t^C(R))\) becomes exa
 \]
 \end{quote}
 
-The geometric modular action is thus a consequence of quasi-locality + Lieb-Robinson bounds, not an independent postulate.
+In the synchronized compact-note ledger, geometric modular action remains an explicit technical premise rather than a derived consequence of quasi-locality plus Lieb-Robinson bounds. The discussion above is best read as heuristic support for that premise.
 
 \textbf{Assumption I} (Refinement stability / RG consistency): There exists a family of coarse-graining channels \(\Phi_{\ell\to L}\) between UV scale \(\ell\) and IR scale \(L\) such that the MaxEnt-selected states are self-similar under refinement,
 
@@ -242,7 +242,7 @@ Canonical 5 & Minimal Admissible Realization (MAR); use: selection on admissible
 \end{longtable}
 }
 
-Derived shorthands used later include Theorem A5 (approximate modular covariance) and the EFT-bridge labels N1--N3. These are consequences or packaged hypotheses inside the technical program; none of them replace the canonical five axioms.
+Theorem-local shorthands used later include premise A5 (approximate modular covariance) and the EFT-bridge labels N1--N3. These are packaged hypotheses or alternative routes inside the technical program; none of them replace the canonical five axioms.
 
 \textbf{Master dependency map.} The completion program is organized into the following documentary nodes, mirrored in the compact note and in the supplement. The point of the table is not to maximize the number of claims called ``derived.'' It is to make explicit which results use the canonical axioms alone, which import standard mathematics, and which still rest on extra physical premises or external inputs.
 
@@ -266,7 +266,7 @@ Node & Main-manuscript output & Immediate OPH ingredients & Standard mathematics
 \textbf{D7} & Theorem 6.1: compact gauge reconstruction & Canonical 1--4 & Doplicher--Roberts / Tannaka reconstruction & rigid symmetric bosonic colimit, transportability, and fiber-functor premises & conditional structural theorem \\
 \textbf{D8} & Section 6.2: product gauge structure up to finite quotient & D7 + Canonical 5 (MAR) & compact Lie representation classification; Schur's lemma & connected admissible class, one connected abelian factor, and \([z]=0\) & realized-branch theorem \\
 \textbf{D9} & Theorem 6.13, Proposition 6.9, Theorem 6.14, Proposition 6.6: hypercharge lattice, \(N_c=3\), \(N_g=3\), and \(\mathbb Z_6\) quotient & D8 & anomaly algebra; Witten anomaly; CKM CP counting & realized one-generation/one-Higgs package and MAR admissibility premises & realized-branch theorem/corollary chain \\
-\textbf{D10} & Sections 6.17--6.19 quantitative gauge/electroweak closure & D9 + \(P\) & RG running and matching conventions recorded in the supplement & pixel closure and supplement-backed threshold conventions & calibration sector \\
+\textbf{D10} & current supplement-backed gauge/electroweak calibration closure & D9 + \(P\) & RG running and matching conventions recorded in the supplement & pixel closure and supplement-backed threshold conventions & calibration sector \\
 \textbf{D11} & Section 6.22 Higgs/top critical-surface branch & D10 & supplement-backed RG transport & critical-surface condition \(\lambda=\beta_\lambda=0\) at the matching scale & supplement-backed quantitative branch \\
 \textbf{D12} & downstream flavor, dark-sector, baryogenesis, spectroscopy, and string branches & various subsets of D6, D9, D10, and D11 & branch-specific EFT and phenomenological manipulations & explicit additional ans\"atze & phenomenological continuation / program branch \\
 \end{longtable}
@@ -783,7 +783,7 @@ Assumption F allows this structure to be used in the collar double-scaling refin
 
 \subsubsection{\texorpdfstring{4.2 Theorem: \(\mathrm{BW}_{S^2}\) from Markov locality, symmetry, regularity}{4.2 Theorem: \textbackslash mathrm\{BW\}\_\{S\^{}2\} from Markov locality, symmetry, regularity}}\label{42-theorem-mathrmbw_s2-from-markov-locality-symmetry-regularity}
 
-\textbf{Theorem 4.2 (\(\mathrm{BW}_{S^2}\) from Markov + symmetry + regularity).} Assume: (i) the collar refinement limit (Assumption F), (ii) MaxEnt selection with rotationally invariant constraints (Assumptions B-C), (iii) geometric modular action on the cap net (Theorem A5, derived from B + LR + MX), and (iv) Euclidean regularity (Assumption G). Then in the controlled refinement/scaling limit, for each cap \(C\), modular flow is the unique conformal dilation that preserves \(C\) and fixes its boundary circle, with KMS normalization \(\beta = 2\pi\). Equivalently,
+\textbf{Theorem 4.2 (\(\mathrm{BW}_{S^2}\) from Markov + symmetry + regularity).} Assume: (i) the collar refinement limit (Assumption F), (ii) MaxEnt selection with rotationally invariant constraints (Assumptions B-C), (iii) geometric modular action on the cap net (premise A5 in the synchronized ledger; see Section 1.4 for the heuristic motivation), and (iv) Euclidean regularity (Assumption G). Then in the controlled refinement/scaling limit, for each cap \(C\), modular flow is the unique conformal dilation that preserves \(C\) and fixes its boundary circle, with KMS normalization \(\beta = 2\pi\). Equivalently,
 
 \[
 K_C = 2 \pi B_C.
@@ -827,11 +827,11 @@ By Section 4.2, \(K_C = 2\pi B_C + \text{const}\), hence
 
 \subsubsection{5.2 Null-surface modular bridge}\label{52-null-surface-modular-bridge}
 
-We derive an internal route toward the stress tensor that avoids assuming a UV CFT on small caps. The key insight is that much of the "EFT bridge" package (N1--N3) can be reduced to the same Markov structure (A4), geometric modular flow (BW\(_{S^2}\)), and explicit scaling-limit regularity premises used elsewhere in the argument. In that sense the stress-tensor bridge is developed internally rather than imported wholesale, although the relativistic null-stress identification should still be read as a scaling-limit premise rather than a fixed-cutoff theorem.
+We record an internal route toward the stress tensor that avoids assuming a UV CFT on small caps. Much of the "EFT bridge" package can be tied to the same Markov structure (A4), geometric modular flow (BW\(_{S^2}\)), and explicit scaling-limit regularity premises used elsewhere in the argument. In the synchronized dependency ledger, however, the geometric modular action and the half-sided modular-inclusion step are still treated as explicit technical premises rather than as derived theorems. The discussion below should therefore be read as heuristic support or an alternative route, not as the authoritative claim path.
 
-\textbf{Theorem ladder summary.} The derivation proceeds as a chain of lemmas with explicit hypotheses:
+\textbf{Theorem ladder summary.} The stress-tensor package is organized as a chain with explicit hypotheses; where the synchronized ledger keeps a step as premise rather than theorem, that status is left explicit:
 
-\textbf{Derivation chain:}
+\textbf{Read-along chain:}
 
 \begin{itemize}
 \tightlist
@@ -844,12 +844,12 @@ We derive an internal route toward the stress tensor that avoids assuming a UV C
 \item
   N1 + N3 ⟹ density t(v,Ω) (Lemma 5.2d)
 \item
-  G + dilation ⟹ N2: translations (Cor 5.2e)
+  N2 kept explicit as the half-sided modular-inclusion premise in the scaling regime
 \item
   N2 + density ⟹ T\_kk ⟹ Einstein (Thm 5.1)
 \end{itemize}
 
-Each step is proven below with explicit hypotheses.
+Each step is discussed below with explicit hypotheses and status labels.
 
 Setup. For a small circle \(\Sigma = \partial C\), let \(\mathcal N\) be the null surface generated by null geodesics orthogonal to \(\Sigma\) in the locally Lorentzian regime implied by Section 4.2. Label null generators by angle \(\Omega\) and use affine parameter \(v\) along each generator. For an interval \(I\) along a generator, let \(K[I]\) denote the reference modular Hamiltonian for the algebra supported on that interval (or for a region \(R\) that is a union of such intervals across generators).
 
@@ -956,7 +956,7 @@ Integrating twice from \(a\) to \(+\infty\) and using the assumed vanishing of \
 \end{quote}
 
 \begin{quote}
-\textbf{Corollary 5.2e (N2 from BW\(_{S^2}\) blow-up).} N2 (half-sided modular inclusion) is derived from Theorem 4.2 via a scaling/blow-up limit, not assumed independently.
+\textbf{Corollary 5.2e (Heuristic blow-up motivation for N2).} In the synchronized dependency ledger, N2 (half-sided modular inclusion) remains an explicit scaling-limit premise. The BW\(_{S^2}\) blow-up discussion below only motivates why one might expect that premise in a geometric modular phase.
 
 \textbf{Derivation:}
 
@@ -987,7 +987,7 @@ Integrating twice from \(a\) to \(+\infty\) and using the assumed vanishing of \
   \]
 \end{enumerate}
 
-This removes N2 as an independent input; it is derived from the same BW machinery already established in Section 4. QED.
+This does not remove N2 as an independent input in the authoritative ledger; it only indicates the kind of continuum behavior that would support the premise. QED.
 \end{quote}
 
 \begin{quote}
@@ -1004,13 +1004,26 @@ In a locally Lorentzian regime, knowledge of \(T_{kk}\) for all null directions 
 
 \textbf{Lemma (Null data determine \(T_{ab}\) modulo metric term).} Let \(X_{ab}\) be symmetric. If \(X_{ab} k^a k^b = 0\) for all null \(k\) at a point, then \(X_{ab} = \phi \, g_{ab}\) for some scalar \(\phi\). Equivalently, the map \(X_{ab} \mapsto X_{kk}\) is injective on the quotient space of symmetric tensors modulo metric terms.
 
-\textbf{Proof.} Decompose \(X_{ab} = Y_{ab} + \phi \, g_{ab}\) where \(Y\) is traceless. Since \(g_{kk} = g_{ab} k^a k^b = 0\) for null \(k\), the null contractions only see \(Y_{kk}\). In local inertial coordinates, write \(k = (1, \hat{n})\) with \(\hat{n} \in S^2\). Then
+\textbf{Proof.} Decompose \(X_{ab} = Y_{ab} + \phi \, g_{ab}\) where \(Y\) is traceless. Since \(g_{kk} = g_{ab} k^a k^b = 0\) for null \(k\), the null contractions only see \(Y_{kk}\). In local inertial coordinates, write \(k = (1, \hat{n})\) with \(|\hat n| = 1\). Then
 
 \[
 Y_{kk} = Y_{00} + 2 \hat{n}^i Y_{0i} + \hat{n}^i \hat{n}^j Y_{ij}.
 \]
 
-If this vanishes for all \(\hat{n}\), each coefficient in the polynomial on \(\hat{n}\) must vanish. So \(Y_{00} = Y_{0i} = Y_{ij} = 0\), hence \(X_{ab} = \phi \, g_{ab}\). QED.
+Oddness under \(\hat n \mapsto -\hat n\) forces \(Y_{0i}=0\). Averaging the remaining relation over \(S^2\) gives
+\[
+Y_{00}+\frac13 \delta^{ij}Y_{ij}=0.
+\]
+Tracelessness of \(Y_{ab}\) gives
+\[
+-Y_{00}+\delta^{ij}Y_{ij}=0,
+\]
+so both \(Y_{00}\) and the spatial trace \(\delta^{ij}Y_{ij}\) vanish. The remaining condition is therefore
+\[
+\hat n^i \hat n^j Y_{ij}^{\mathrm{TF}}=0
+\qquad\text{for all }\hat n \in S^2,
+\]
+where \(Y_{ij}^{\mathrm{TF}}\) is the traceless spatial part. The \(\ell=2\) spherical harmonics are linearly independent, so \(Y_{ij}^{\mathrm{TF}}=0\). Hence \(Y_{ab}=0\) and therefore \(X_{ab}=\phi \, g_{ab}\). QED.
 
 \textbf{Remark.} This ambiguity is physically meaningful: null contractions \textbf{cannot see} vacuum energy / cosmological constant shifts (\(T_{ab} = \phi \, g_{ab}\)). This matches the known structure that null focusing determines \(R_{kk}\), and the Einstein equation is determined from null data only \textbf{up to} \(\Lambda g_{ab}\).
 
@@ -1094,7 +1107,7 @@ where \(g_I(v)\) is affine-covariant and vanishes at finite interval endpoints.
 
 Therefore, in the locally Lorentzian scaling regime the modular Hamiltonian is conditionally identified with a stress-tensor charge (up to controlled boundary/central terms, the explicit error operator above, and the expected \(\Lambda g_{ab}\) ambiguity).
 
-\textbf{Proof.} Premises 1-2 yield controlled null modular additivity via the Markov argument. Premise 3 yields half-sided modular inclusion since dilation maps half-lines into themselves. Premise 4 provides the half-line endpoint-differentiation formula. Corollary 5.2e and Lemma 5.2f then identify the resulting half-line density with the positive generator of null translations, and the relativistic scaling-limit premise upgrades that density to \(T_{kk}\) with the displayed error term. The null-to-tensor upgrade is exactly the preceding lemma. QED.
+\textbf{Proof.} Premises 1-2 yield controlled null modular additivity via the Markov argument. Premise 3 is the explicit half-sided modular-inclusion input N2. Premise 4 provides the half-line endpoint-differentiation formula. Corollary 5.2e and Lemma 5.2f then identify the resulting half-line density with the positive generator of null translations, and the relativistic scaling-limit premise upgrades that density to \(T_{kk}\) with the displayed error term. The null-to-tensor upgrade is exactly the preceding lemma. QED.
 
 \textbf{Gap closure status.} The theorem reduces the "EFT bridge" to screen-axiom consequences plus explicit scaling-limit regularity premises, rather than treating the whole bridge as a black-box external postulate. Specifically:
 
@@ -1102,7 +1115,7 @@ Therefore, in the locally Lorentzian scaling regime the modular Hamiltonian is c
 \item
   \textbf{N1 (null modular additivity)}: Derived from A4 (Markov on separators) applied to null strips. The additivity defect equals \(-I(I_-:I_+|J)\), which vanishes under exact Markov and is bounded by the recovery error otherwise.
 \item
-  \textbf{N2 (half-sided modular inclusion)}: Derived from geometric modular flow (BW\(_{S^2}\)). Since dilation maps \(v - v_0 \mapsto e^{-2\pi t}(v - v_0)\) sends half-lines into themselves for \(t \ge 0\), Borchers--Wiesbrock yields translation unitaries with \([K, P] = i2\pi P\).
+  \textbf{N2 (half-sided modular inclusion)}: kept as an explicit scaling-limit premise in the synchronized ledger. Corollary 5.2e records only the BW\(_{S^2}\) blow-up motivation for why such a premise may hold in a geometric modular phase.
 \item
   \textbf{N3 (endpoint regularity)}: Bounded-interval control follows from B + MX, while the half-line differentiability and asymptotic-vanishing hypotheses remain explicit scaling-limit regularity premises.
 \end{itemize}
@@ -1482,7 +1495,7 @@ Using the Hawking temperature \(T_H = \hbar c^3 / (8\pi G k_B M)\), whose \(2\pi
 
 \textbf{Structural condition: comb vs. generic discreteness.} The log-integer \emph{comb} structure requires the additional dynamical assumption that integer-multiplication transitions (d → kd) dominate. If generic transitions between arbitrary integers dominate instead, the set of ln(d\textquotesingle/d) values becomes a dense log-rational set that may appear quasi-continuous after folding in linewidths and astrophysical effects. What follows directly from the axioms is the \emph{discrete area spectrum}; the clean comb pattern is conditional on the selection rule.
 
-\textbf{established prediction (Discrete Hawking spectrum).} The Hawking emission spectrum consists of discrete lines with spacing \(\Delta E_k = k_B T_H \ln k\), where \(k\) is an integer characterizing the dominant sector transitions, instead of a continuous thermal profile.
+\textbf{Continuation-level template (Discrete Hawking spectrum).} If the additional integer-transition selection rule is realized, the Hawking emission spectrum consists of discrete lines with spacing \(\Delta E_k = k_B T_H \ln k\), where \(k\) is an integer characterizing the dominant sector transitions, instead of a continuous thermal profile.
 
 \textbf{Mass-independent fractional linewidth.} Using Page\textquotesingle s semiclassical calculation for emission power \(P(M) = p_0 \hbar c^6 / (G^2 M^2)\) with \(p_0 \approx 2 \times 10^{-4}\), the emission rate is \(\dot{N} \approx P /
 \langle E \rangle\) where \(\langle E \rangle = a \, k_B T_H\) with \(a \sim
@@ -1492,7 +1505,7 @@ Using the Hawking temperature \(T_H = \hbar c^3 / (8\pi G k_B M)\), whose \(2\pi
 \frac{\Gamma}{\Delta E_k} \approx \frac{64\pi^2 p_0}{a \ln k} \approx 3-5\%
 \]
 
-\textbf{independent of black hole mass}. This is a sharp structural prediction: emission lines are narrow (few-percent fractional width) and the fraction is mass-independent.
+\textbf{independent of black hole mass}. Within this continuation branch, the emission lines are narrow (few-percent fractional width) and the fraction is mass-independent.
 
 \textbf{Connection to quasinormal modes.} The highly-damped Schwarzschild quasinormal modes have asymptotic real part (Motl, 2002):
 
@@ -1598,9 +1611,9 @@ The comb is in principle resolvable with GBM/LAT; at TeV energies it would appea
 
 \textbf{Data availability.} Fermi GBM provides public Time-Tagged Event (TTE) burst data; Fermi LAT provides public photon event lists with documented analysis workflows. H.E.S.S. has a small public test data release.
 
-\textbf{GW horizon spectroscopy: comb prediction for Kerr remnants.}
+\textbf{GW horizon spectroscopy: conditional continuation template for Kerr remnants.}
 
-The discrete Hawking spectrum extends to gravitational wave observables. For Kerr black holes, the thermodynamic first law is \(\delta M = T_H \delta S +
+The same continuation-level discrete-horizon branch extends to gravitational wave observables. For Kerr black holes, the thermodynamic first law is \(\delta M = T_H \delta S +
 \Omega_H \delta J\), so the entropy change for absorbing a quantum with frequency \(\omega\) and azimuthal number \(m\) is:
 
 \[
@@ -1613,7 +1626,7 @@ In the edge-sector framework, \(\delta S = \ln(d'/d)\), so the discreteness cond
 \hbar(\omega - m\Omega_H) = k_B T_H \ln k, \qquad k \in \{2, 3, 4, \ldots\}
 \]
 
-This gives the \textbf{GW horizon spectroscopy comb}: discrete resonant frequencies where the horizon can efficiently absorb or emit energy.
+Under those additional discrete-horizon premises, this gives the \textbf{GW horizon spectroscopy comb}: discrete resonant frequencies where the horizon can efficiently absorb or emit energy.
 
 \textbf{Kerr line frequencies.} For a remnant with mass \(M\) and dimensionless spin \(\chi = a_*/M\), define the spin correction factor:
 
@@ -3578,7 +3591,7 @@ The SU(2) shift matches the target within 0.4\%, but the SU(3) shift is \textasc
 
 \textbf{Why this works.} The heat-kernel suppresses high-Casimir representations. The dominant sectors are (1,1), (1,2), (3,1), (3,2), and (8,1), which happen to match MSSM-like content. The Peter-Weyl second-index mechanism provides the correct multiplicity without any fitted constants.
 
-\textbf{Numerical outputs.} Using the Peter-Weyl-derived beta shifts and measured α\_em(M\_Z), sin²θ\_W(M\_Z) to fix α₁, α₂, the edge mechanism predicts:
+\textbf{Exploratory historical estimates.} Using the Peter-Weyl-derived beta shifts and measured α\_em(M\_Z), sin²θ\_W(M\_Z) to fix α₁, α₂, one obtains the following older threshold-study numbers:
 
 \begin{itemize}
 \tightlist
@@ -3589,6 +3602,8 @@ The SU(2) shift matches the target within 0.4\%, but the SU(3) shift is \textasc
 \item
   α\_U⁻¹ ≈ 24.3
 \end{itemize}
+
+These numbers record an older edge-threshold exercise rather than the current synchronized D10 closure. The authoritative D10 calibration sector is the supplement-backed fixed-point implementation summarized in Section 6.19, the compact note, and the spectrum supplement.
 
 Using 4-loop M\={S} running with n\_f = 5, this α\_s corresponds to:
 
@@ -3610,7 +3625,7 @@ Solving for M\_S that makes measured couplings consistent with piecewise running
 M_S \approx 100 \text{ TeV}, \quad M_U \approx 6.5 \times 10^{15} \text{ GeV}, \quad \alpha_U^{-1} \approx 28.3
 \]
 
-This is a directly testable prediction: the edge-mode "onset scale" is O(100 TeV), not O(100 GeV) as in conventional SUSY scenarios.
+This should be read as an exploratory threshold scenario rather than as part of the current synchronized D10 package.
 
 \textbf{What remains.} Currently M\_S ≈ 100 TeV is what the model needs to match data. To convert this into a genuine prediction requires deriving M\_S from the edge physics itself (the gap/decoupling scale of edge excitations in the collar Hamiltonian), rather than solving for it from measured α\_s. This is the sharpest remaining target for closing the precision prediction chain.
 
@@ -3710,63 +3725,38 @@ Equivalently, in nats one writes \(H_{\mathrm{center}} = \ln 6\).
 
 \textbf{Toy counting picture.} In the simple residue-sum model above, comparing naive product counting to quotient-restricted counting produces a numerical difference close to \(\log_2 6\) bits at \(M_Z\). We retain that computation only as motivation for the center-label ansatz, not as a model-independent measurement prediction.
 
-\subsubsection{6.19 Electroweak scale from dimensional transmutation}\label{619-electroweak-scale-from-dimensional-transmutation}
+\subsubsection{6.19 Electroweak scale as a calibration-sector output}\label{619-electroweak-scale-from-dimensional-transmutation}
 
-The pixel-area scale provides a route to the electroweak symmetry breaking (EWSB) scale via dimensional transmutation, paralleling the QCD chain α\_s → Λ\_QCD.
+In the synchronized D10 ledger, the electroweak scale is not presented as an independent theorem-level prediction. It belongs to the supplement-backed calibration sector: once the pixel input \(P\), the gauge-sector closure, and the printed running/matching conventions are fixed, the same fixed-point problem returns the low-energy electroweak scale and tree-level electroweak masses as consistency outputs.
 
-\textbf{Why transmutation?} Lemma 6.7 shows that refinement stability + MaxEnt forbids keeping an unprotected relevant scalar at zero without fine tuning. The Higgs mass term m²\textbar H\textbar² is exactly such a gauge-invariant relevant scalar (Δ = 2 \textless{} 4). If it were a free UV parameter, generic refinement would gap the theory. The natural resolution: the UV completion sits on a scale-invariant manifold where the Higgs mass term is not a free parameter, and the electroweak scale arises by dimensional transmutation, just as Λ\_QCD arises from α\_s.
+The authoritative scale-setting formulas of the current implementation are
+\[
+M_U=\frac{E_P}{e^{2\pi}}\,P^{1/6}\approx 2.474\times 10^{16}\,\mathrm{GeV},
+\qquad
+E_{\mathrm{cell}}=\frac{E_P}{\sqrt P}\approx 9.56\times 10^{18}\,\mathrm{GeV},
+\]
+together with
+\[
+v=E_{\mathrm{cell}}\exp\!\left(-\frac{2\pi}{\beta_{\mathrm{EW}}\alpha_U}\right),
+\qquad
+\beta_{\mathrm{EW}}=N_c+1=4,
+\]
+using the synchronized gauge-closure value \(\alpha_U^{-1}\approx 24.32\). Under the present supplement-backed conventions this gives
+\[
+v\approx 246.77\ \mathrm{GeV}.
+\]
 
-\textbf{Setup.} From the pixel-area relation (Section 5.4):
+Accordingly, \(v\), \(m_W\), and the running \(Z\)-mass relation should be read as calibration-sector consistency checks of the current implementation rather than as independent confirmations of the recovered core. Their role is to show that the present D10 closure is internally coherent once \(P\) and the printed conventions are imposed.
 
-\begin{itemize}
-\tightlist
-\item
-  a\_cell/ℓ\_p² = 1.63094
-\item
-  ξ/ℓ\_p = √1.63094 = 1.2771
-\item
-  E\_cell = E\_p / (ξ/ℓ\_p) = 9.56 × 10¹⁸ GeV
-\end{itemize}
+\subsubsection{6.20 Heavy-top heuristic and its status}\label{620-top-quark-mass-from-order-one-yukawa}
 
-\textbf{Transmutation ansatz.} Assume EWSB is triggered by an edge-sector ordering transition whose scale is set by dimensional transmutation from the UV cell scale, with a one-loop coefficient β\_EW controlled by the same edge-mode content that produces the MSSM-like beta-function shift:
+A simple order-one-Yukawa estimate,
+\[
+m_t\sim \frac{v}{\sqrt 2},
+\]
+explains why the top sector is naturally much heavier than the rest of the Yukawa spectrum, but it is not the authoritative D11 result of the synchronized package.
 
-v = E\_cell · exp(−2π / (β\_EW · α\_U))
-
-The edge-mode computation gives Δb₃ ≈ 4.00 (Section 6.17). This integer has a structural origin: β\_EW = N\_c + 1 = 4 is the number of SU(2) doublets per generation (N\_c quark doublets plus one lepton doublet). This is not a fit parameter; it is a topological/anomaly-counting integer already derived in Section 6.9 from the Witten anomaly constraint.
-
-\textbf{Computation.} Using α\_U⁻¹ = 24.32 from the unification analysis:
-
-2π / (β\_EW · α\_U) = 2π / (4 × 0.0411) = 38.21
-
-exp(−38.21) = 2.55 × 10⁻¹⁷
-
-Hence:
-
-\begin{quote}
-\textbf{Prediction (Electroweak scale): v\_pred ≈ 243.5 GeV}
-\end{quote}
-
-\textbf{Comparison to measurement.} The measured Higgs VEV is v\_obs ≈ 246.2 GeV. The prediction is \textbf{\textasciitilde1.1\% low}.
-
-\textbf{Reverse-engineering check.} Solving for the coefficient that reproduces v\_obs exactly:
-
-β\_EW = 2π / (α\_U · ln(E\_cell/v\_obs)) ≈ 4.001
-
-The coefficient demanded by Nature is β\_EW = 4 to within \textasciitilde0.03\%. This is precisely the integer that appears in the gauge-sector beta-function shift.
-
-\textbf{Structural Note.} The structural argument (N\_c + 1 doublets) provides the rationale for β\_EW = 4, and this is the same integer selected by data. The anomaly-counting route is the derivation channel.
-
-\subsubsection{6.20 Top quark mass from order-one Yukawa}\label{620-top-quark-mass-from-order-one-yukawa}
-
-If the top Yukawa is order-one (the natural MaxEnt/refinement-stability outcome for the least-suppressed Yukawa channel), then y\_t ≈ 1 and:
-
-\begin{quote}
-\textbf{Prediction (Top quark mass): m\_t ≈ v/√2 ≈ 172.2 GeV}
-\end{quote}
-
-The measured top mass is m\_t ≈ 172.7 GeV, so the prediction is \textbf{\textasciitilde0.3\% low}.
-
-\textbf{Structural Note.} This is the leading-order prediction channel for the top sector. The assumption "y\_t ≈ 1" captures the least-suppressed Yukawa mode selected by the framework.
+In the current ledger, the top/Higgs numbers belong to the critical-surface transport branch of Section 6.22. That branch, not the order-one heuristic, is the secondary quantitative output tracked by the compact note and the spectrum supplement. The present subsection should therefore be read only as motivation for why the top channel is the natural least-suppressed Yukawa mode.
 
 \subsubsection{6.21 Yukawa hierarchy from Z$_6$ defect suppression}\label{621-yukawa-hierarchy-from-zux2086-defect-suppression}
 
@@ -3790,7 +3780,7 @@ This is a minimal path length in the overlap groupoid, automatically an integer.
 
 This is a Z₆-anchored Froggatt-Nielsen texture with the small parameter ε fixed by topology rather than chosen.
 
-\textbf{Extraction of defect charges.} Using y\_f = √2 · m\_f / v\_pred and n\_f = −ln(y\_f) / ln(6):
+\textbf{Extraction of defect charges.} Using \(y_f=\sqrt2\,m_f/v\) with the synchronized calibration-sector value of \(v\) from Section 6.19, and \(n_f=-\ln(y_f)/\ln(6)\):
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}>{\RaggedRight\arraybackslash}p{0.192\textwidth}>{\RaggedRight\arraybackslash}p{0.192\textwidth}>{\RaggedRight\arraybackslash}p{0.192\textwidth}>{\RaggedRight\arraybackslash}p{0.192\textwidth}>{\RaggedRight\arraybackslash}p{0.192\textwidth}@{}}
@@ -3865,88 +3855,33 @@ This reproduces the observed hierarchy with integer charges and \textbf{no conti
 
 The mass hierarchy stops being an unexplained input and becomes discrete topological data constrained by the global gauge group structure.
 
-\textbf{Computational verification} (January 2026): The VEV formula gives v = 243.5 GeV (-1.1\% error); the reverse-engineered β\_EW = 4.00116 matches the integer 4 to 0.03\% precision.
+\textbf{Computational note} (January 2026): using the synchronized calibration-sector value \(v\approx 246.77\) GeV leaves the base-6 hierarchy pattern close to integer defect counts, but the branch remains phenomenological regardless of that small numerical shift.
 
-\subsubsection{6.22 Higgs mass from critical surface constraint}\label{622-higgs-mass-from-critical-surface-constraint}
+\subsubsection{6.22 Higgs/top critical-surface branch}\label{622-higgs-mass-from-critical-surface-constraint}
 
-The refinement-stability logic (Section 6.7) forbids unprotected relevant operators unless enforced by constraints. Applied to the Higgs sector at the UV matching scale, this yields a sharp prediction for m\_H.
+The synchronized D11 branch uses the refinement-stability condition
+\[
+\lambda(M_U)=0,\qquad \beta_\lambda(M_U)=0
+\]
+at the same unified scale as the D10 calibration sector, namely
+\[
+\mu_* = M_U \approx 2.474 \times 10^{16}\ \mathrm{GeV}.
+\]
 
-\textbf{The critical surface constraint.} Refinement stability pushes the scalar potential to a marginal stability point at the matching scale μ* = M\_U. The sharpest encoding of "marginally stable" is:
+Within the current supplement-backed implementation, one-loop \(\overline{\mathrm{MS}}\) transport of the coupled \((y_t,\lambda,g_Y,g_2,g_3)\) system from that boundary scale to \(\mu\sim m_t\) yields
+\[
+m_t^{\overline{\mathrm{MS}}}(m_t)\approx 160.6\ \mathrm{GeV},
+\qquad
+m_t^{\mathrm{pole}}\approx 171.1\ \mathrm{GeV},
+\]
+together with
+\[
+m_H=\sqrt{2\lambda(m_t)}\,v\approx 126.5\ \mathrm{GeV}.
+\]
 
-λ(M\_U) = 0, β\_λ(M\_U) = 0
+These numbers are the current synchronized D11 outputs shared with the compact note and the spectrum supplement. They add no new continuous fit once the D10 gauge trajectory and scale-setting branch are fixed, but they remain a secondary quantitative branch rather than part of the recovered-core theorem package.
 
-This is the natural MaxEnt/refinement-stability condition, rather than an arbitrary choice: the Higgs quartic sits at the critical surface where the potential is neither destabilized nor requires fine-tuned cancellations.
-
-\textbf{Derivation of the top Yukawa boundary condition.} At one loop in the SM (keeping the dominant top contribution), if λ = 0 then:
-
-β\_λ ∝ −6 y\_t⁴ + (3/8)(2g₂⁴ + (g₂² + g₁²)²)
-
-Setting β\_λ(M\_U) = 0 immediately fixes y\_t(M\_U) in terms of the gauge couplings:
-
-y\_t(M\_U) = {[}(1/16)(2g₂⁴ + (g₂² + g₁²)²){]}\^{}(1/4)
-
-This is a genuine prediction: once the matching scale is fixed, the top Yukawa boundary value is determined.
-
-\textbf{Computation.} Using the unification scale from the pixel-area pipeline:
-
-μ* = M\_U ≈ 2.08 × 10¹⁶ GeV
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Run g₁, g₂, g₃ from M\_Z up to M\_U at one loop in the SM:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    g₁(M\_U) ≈ 0.5794
-  \item
-    g₂(M\_U) ≈ 0.5213
-  \item
-    g₃(M\_U) ≈ 0.5265
-  \end{itemize}
-\item
-  From λ = 0, β\_λ = 0: y\_t(M\_U) ≈ 0.4239
-\item
-  Run (g\_i, y\_t, λ) back down to μ = M\_t ≈ 173 GeV:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    y\_t(M\_t) ≈ 0.9192
-  \item
-    λ(M\_t) ≈ 0.1290
-  \end{itemize}
-\item
-  Convert to Higgs mass using m\_H = √(2λ(M\_t)) · v:
-\end{enumerate}
-
-\begin{quote}
-\textbf{Prediction (Higgs mass): m\_H ≈ 125.08 GeV}
-\end{quote}
-
-\textbf{Comparison to measurement.} The measured Higgs mass is m\_H\^{}obs = 125.09 ± 0.24 GeV. The prediction matches to \textbf{within 0.01 GeV}, essentially exact agreement.
-
-\textbf{Significance.} This is not a fit to m\_H. It emerges from:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  The unification scale M\_U (already determined by the pixel-area gauge coupling pipeline)
-\item
-  The refinement-stability constraint λ = β\_λ = 0 at M\_U
-\end{enumerate}
-
-The Higgs mass prediction requires no new parameters beyond those already committed to in the gauge sector analysis.
-
-\textbf{Top mass from the same constraint.} The same RG evolution gives:
-
-m\_t\^{}M\={S}(M\_t) = y\_t(M\_t) · v / √2 ≈ (0.9192 × 246.22) / √2 ≈ 160.0 GeV
-
-The pole mass is higher after QCD/EW threshold corrections, consistent with the observed m\_t ≈ 172.7 GeV pole mass.
-
-\textbf{Chain summary.} The critical surface constraint closes the loop: pixel area → M\_U → (λ = 0, β\_λ = 0) → y\_t(M\_U) → RG evolution → m\_H ≈ 125 GeV.
+The critical-surface branch can therefore fail even when the electroweak calibration succeeds. Conversely, agreement here supports only the present supplement-backed D11 implementation, not the entire OPH program.
 
 \subsubsection{6.23 Rigorous derivation chain: axioms to predictions}\label{623-rigorous-derivation-chain-axioms-to-predictions}
 
@@ -4249,7 +4184,7 @@ Symmetry-protected exact zeros such as the masslessness of the photon, gluons, a
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Dynamics}: The GR chain requires modular covariance plus the null-surface modular bridge (N1-N3). The EFT bridge theorem (Section 5.2) derives N1-N3 from the canonical package together with two testable conditions: (i) null strips satisfy the recoverability hypothesis used in the collar arguments, (ii) local finite variation. Verifying these conditions in explicit UV regulators is a target for future work.
+  \textbf{Dynamics}: The GR chain requires modular covariance plus the null-surface modular bridge (N1-N3). Section 5.2 shows how much of that bridge can be tied to the canonical package and explicit scaling-limit regularity conditions, but the synchronized ledger still keeps modular covariance and the half-sided modular-inclusion step as explicit technical premises. Verifying those premises in explicit UV regulators remains a target for future work.
 \item
   \textbf{Gauge structure}: The gauge group is reconstructed from sector fusion, and the anomaly/gluing link is precise. The Selection Axiom MAR uniquely determines the SM factors, \(N_c = 3\), and \(N_g = 3\). Proposition 6.1a gives DHR transportability \(\Leftrightarrow [z]=0\). Justifying the refinement-stability selector for chirality in explicit models remains a target for future work.
 \item
@@ -4258,17 +4193,17 @@ Symmetry-protected exact zeros such as the masslessness of the photon, gluons, a
   \textbf{Loop gluing beyond central defect}: The general obstruction theory is structurally in place, but quantitative matching to EFT anomalies remains open.
 \end{itemize}
 
-\subsubsection{8.3 Novel testable predictions}\label{83-novel-testable-predictions}
+\subsubsection{8.3 Testable items and continuation templates}\label{83-novel-testable-predictions}
 
-The framework makes several predictions that are directly testable with current or near-future data:
+The framework makes several directly testable statements, together with weaker continuation-level templates that can also be confronted with data:
 
-\textbf{GW horizon spectroscopy comb (Section 5.11).} The log-integer area spectrum predicts discrete resonant frequencies for Kerr black hole horizons:
+\textbf{GW horizon spectroscopy comb (Section 5.11; continuation-level).} If the extra discrete-horizon premises of Section 5.11 hold, the log-integer area spectrum gives discrete resonant frequencies for Kerr black hole horizons:
 
 f\_\{k,m\}(M,χ) = (m Ω\_H)/(2π) + (c³ g(χ))/(16π² GM) · ln(k) for k = 2, 3, 4, ...
 
-After rescaling by remnant parameters, all events should stack at universal coordinates x\_k = ln(k)/(8π). This is checkable with public LIGO/Virgo data. Absence of coherent stacking at the predicted x\_k identifies a measurement contradiction with the log-integer area spectrum.
+After rescaling by remnant parameters, all events should stack at universal coordinates x\_k = ln(k)/(8π). This is checkable with public LIGO/Virgo data as a continuation-level test of that extra branch. Absence of coherent stacking would challenge the discrete-horizon continuation, not the recovered-core package by itself.
 
-\textbf{Discrete Hawking comb (Section 5.11).} For primordial black holes in the final evaporation stage, gamma-ray bursts should show comb structure at E\_k/E₂ = ln(k)/ln(2). Current PBH burst searches (Fermi, H.E.S.S.) can constrain this with dedicated template analysis.
+\textbf{Discrete Hawking comb (Section 5.11; continuation-level).} If the same discrete-horizon branch is realized, primordial black holes in the final evaporation stage should show comb structure at E\_k/E₂ = ln(k)/ln(2). Current PBH burst searches (Fermi, H.E.S.S.) can constrain this with dedicated template analysis.
 
 \textbf{Casimir ratio precision (Section 8.1).} Future lattice measurements of SU(3) edge-sector probabilities should confirm Δ₈/Δ₃ = 9/4 exactly, not 2.67 (dimension-only) or 5.06 (Casimir-squared). The full set of parameter-free SU(3) ratio predictions is:
 

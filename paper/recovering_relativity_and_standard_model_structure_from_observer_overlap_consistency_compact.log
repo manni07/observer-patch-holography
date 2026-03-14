@@ -369,10 +369,10 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip66
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 11.
+(release_info.tex)
+Package hyperref Info: Option `colorlinks' set `true' on input line 12.
 \c@theorem=\count297
-
-(l3backend-xetex.def
+ (l3backend-xetex.def
 File: l3backend-xetex.def 2022-02-07 L3 backend support: XeTeX
 \c__kernel_sys_dvipdfmx_version_int=\count298
 \l__color_backend_stack_int=\count299
@@ -388,31 +388,31 @@ stency_compact.aux)
 \openout1 = `recovering_relativity_and_standard_model_structure_from_observer_o
 verlap_consistency_compact.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
-6.
+7.
  (ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -471,7 +471,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: xetex.def on input line 149.
 )
-Package hyperref Info: Link coloring ON on input line 36.
+Package hyperref Info: Link coloring ON on input line 37.
  (nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (refcount.sty
@@ -481,9 +481,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count305
 )
-LaTeX Info: Redefining \ref on input line 36.
-LaTeX Info: Redefining \pageref on input line 36.
-LaTeX Info: Redefining \nameref on input line 36.
+LaTeX Info: Redefining \ref on input line 37.
+LaTeX Info: Redefining \pageref on input line 37.
+LaTeX Info: Redefining \nameref on input line 37.
 
 (recovering_relativity_and_standard_model_structure_from_observer_overlap_consi
 stency_compact.out)
@@ -494,163 +494,112 @@ stency_compact.out)
 verlap_consistency_compact.out'.
 
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
-8.
+9.
  (ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-8.
+9.
  (omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-38.
+39.
  (omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-38.
+39.
  (omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 38.
+(Font)              <12> on input line 39.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 38.
+(Font)              <8> on input line 39.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 38.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
+(Font)              <6> on input line 39.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
 
  (umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
 
 (umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
+9.
+ (t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 41.
+(Font)              <10> on input line 43.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 41.
+(Font)              <7> on input line 43.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 41.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 62.
+(Font)              <5> on input line 43.
  [1
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 72.
- [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12]
+(Font)              <10.95> on input line 64.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 74.
+ [2] [3] [4] [5]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 181
+.
+ (ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [6]
+Overfull \hbox (14.28445pt too wide) in paragraph at lines 233--234
+\T1/lmr/m/n/8 lemma/proposition 
+ []
+
+
+Overfull \hbox (9.27202pt too wide) in paragraph at lines 243--244
+[]|\T1/lmr/m/n/8 phenomenological 
+ []
+
+[7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19]
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-695.
+923.
  (ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-[13] [14] [15] [16] [17] [18]
+[20] [21] [22] [23] [24] [25] [26] [27] [28]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1069.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1069.
+(hyperref)                removing `math shift' on input line 1382.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1069.
+(hyperref)                removing `subscript' on input line 1382.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1081.
+(hyperref)                removing `math shift' on input line 1382.
+
+[29] [30]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1466.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1081.
+(hyperref)                removing `\Lambda' on input line 1466.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1081.
+(hyperref)                removing `math shift' on input line 1466.
 
-[19] [20] [21]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1262.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Lambda' on input line 1262.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1262.
-
-[22] [23]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1333.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1333.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1333.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1349.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1349.
-
-[24]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1405.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1405.
-
-[25] [26] [27]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-509.
- (t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Underfull \hbox (badness 4048) in paragraph at lines 1506--1510
-[]\T1/lmr/m/n/10.95 B. Müller, \T1/lmr/m/it/10.95 Ob-servers Are All You Need: 
-Observer-Patch Holog-ra-phy as a Fun-
- []
-
-
-Underfull \hbox (badness 6825) in paragraph at lines 1506--1510
-\T1/lmr/m/it/10.95 da-men-tal The-ory\T1/lmr/m/n/10.95 , 2026, sup-ple-men-tary
- note. [][]$\T1/lmtt/m/n/10.95 https : / / github . com / muellerberndt /
- []
-
-
-Underfull \hbox (badness 3547) in paragraph at lines 1512--1516
-[]\T1/lmr/m/n/10.95 B. Müller, \T1/lmr/m/it/10.95 Re-al-ity as a Con-sen-sus Pr
-o-to-col: The Fixed-Point Com-pu-ta-tion That
- []
-
-
-Underfull \hbox (badness 1960) in paragraph at lines 1512--1516
-\T1/lmr/m/it/10.95 Im-ple-ments Physics\T1/lmr/m/n/10.95 , 2026, sup-ple-men-ta
-ry note. [][]$\T1/lmtt/m/n/10.95 https : / / github . com / muellerberndt /
- []
-
-[28] [29]
+[31] [32] [33] [34] [35] [36] [37] [38]
 (recovering_relativity_and_standard_model_structure_from_observer_overlap_consi
 stency_compact.aux)
 Package rerunfilecheck Info: File `recovering_relativity_and_standard_model_str
 ucture_from_observer_overlap_consistency_compact.out' has not changed.
-(rerunfilecheck)             Checksum: A308C847EEDB091C09B407816E82746D;12741.
+(rerunfilecheck)             Checksum: F8E82D255210F47F484A8F5F16736F35;12957.
  )
 Output written on recovering_relativity_and_standard_model_structure_from_obser
-ver_overlap_consistency_compact.xdv (29 pages, 156816 bytes).
+ver_overlap_consistency_compact.xdv (38 pages, 226660 bytes).
