@@ -2,7 +2,7 @@
 
 ## 2.1 Hints Before the Hints
 
-Before physicists discovered that reality behaves strangely, philosophers predicted it.
+Before physicists discovered that reality behaves strangely, philosophers had already raised questions that resonate with later problems in fundamental physics.
 
 This is not a coincidence. The ancients didn't have particle accelerators or interferometers. But they had something almost as good: pure logical reasoning applied to careful observation. They asked what *must* be true if experience is to make any sense at all.
 
@@ -10,7 +10,7 @@ And they found problems. Paradoxes. Contradictions. They discovered that the int
 
 These philosophical puzzles are the original hints. They're the first cracks in the naive picture. When modern physics confirmed that reality is stranger than it appears, it was validating insights that thinkers had glimpsed millennia ago.
 
-This chapter traces those early hints. We'll see how Plato anticipated holography, how Zeno anticipated discrete spacetime, how the Skeptics anticipated quantum contextualism, and how Kant anticipated emergent space. The philosophers were reverse-engineering reality before physicists had the tools to confirm what they found.
+This chapter traces those early hints. We'll see how Plato foreshadowed holographic themes, how Zeno raised discrete-structure puzzles, how the Skeptics anticipated contextuality-like questions, and how Kant foreshadowed emergent-space ideas. The philosophers were asking questions that later physics could formulate more sharply.
 
 ### Through-line: Primacy of Perspective
 
@@ -114,7 +114,7 @@ Pyrrho's answer: we cannot say the honey is sweet or bitter "in itself." We can 
 
 ### The Physics
 
-Quantum mechanics discovered exactly this.
+Quantum mechanics later gave this kind of contextual dependence a precise physical form.
 
 The position of an electron is not a property the electron has before you measure it. Position only becomes definite when you make a position measurement. If you measure momentum instead, you get a definite momentum-but then position is undefined.
 
@@ -186,7 +186,7 @@ We don't perceive space directly. Our minds construct spatial experience from mo
 
 ### The Physics
 
-The holographic principle and emergent geometry confirm exactly this.
+The holographic principle and emergent geometry resonate with this picture.
 
 The fundamental data lives on the 2D holographic screen. This data has no spatial interpretation-it's just quantum information on a sphere. Space is *reconstructed* from this data through the pattern of entanglement.
 
@@ -226,7 +226,7 @@ The pattern is what matters. The same pattern can be realized in different subst
 
 ### The Physics
 
-Quantum field theory confirmed Aristotle.
+Quantum field theory provides a modern analogue to Aristotle's emphasis on form over material substrate.
 
 Particles are not fundamental objects. They are excitations of fields-ripples in an underlying substrate. An electron is not a tiny ball. It is a stable vibration of the electron field.
 
