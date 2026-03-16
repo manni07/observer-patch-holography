@@ -400,7 +400,7 @@ $$K = \int_\Sigma T_{ab} \zeta^b d\Sigma^a$$
 
 where ζ is the conformal Killing field preserving the diamond.
 
-**Route 2: Null-surface modular bridge.** Even without assuming a CFT, one can try to reconstruct null stress data from modular data on null surfaces. In the synchronized paper package this route is conditional: the MaxEnt branch supplies the quasi-local propagation and bounded-interval endpoint control internally, while modular additivity, half-sided modular inclusion, and the relativistic null-stress identification premise together yield a local density $T_{kk}$ for each null direction $k$. If the null-to-tensor upgrade holds for all local directions and reference states in the scaling regime, this determines a symmetric tensor $T_{ab}$ up to the usual metric term.
+**Route 2: Null-surface modular bridge.** Even without assuming a CFT, one can try to reconstruct null stress data from modular data on null surfaces. In the synchronized paper package this route is conditional but sharper than before: the MaxEnt branch now supplies the quasi-local propagation and endpoint control internally, and the fixed-cutoff bridge reaches exact-or-controlled strip additivity together with the weak tail generator on one inherited strip model. What still remains explicit are the downstream half-sided modular-inclusion and relativistic null-stress premises needed to promote that weak-tail data to a local density $T_{kk}$ for each null direction $k$. If the null-to-tensor upgrade holds for all local directions and reference states in the scaling regime, this determines a symmetric tensor $T_{ab}$ up to the usual metric term.
 
 The null-surface modular bridge (Route 2) is therefore not currently derived from A1-A4 alone. It is an explicit scaling-limit route whose extra technical premises must be verified in the intended EFT phase.
 
@@ -435,7 +435,8 @@ MaxEnt/refinement branch
     → branch-internal quasi-local propagation and refinement stability
     → δS_gen = 0 (entanglement equilibrium)
     → BW_{S^2} on the OPH geometric branch gives K_C = 2π B_C
-    → Conditional null-surface modular bridge (connects modular energy to stress tensor in the scaling regime)
+    → Conditional null-surface modular bridge through strip additivity and the weak tail generator
+    → Downstream half-sided-inclusion and null-stress premises identify the scaling-limit stress tensor
     → δ(G_00 + Λg_00) = 8πG δT_00 in each rest frame
     → Patch consistency promotes to tensor equation in the scaling regime
     → G_ab + Λg_ab = 8πG T_ab

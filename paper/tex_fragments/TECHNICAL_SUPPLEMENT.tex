@@ -221,53 +221,24 @@ where the carried remainder is controlled on bounded observables by \(r_{\mathrm
 
 \subsection{2.3 Null Modular Bridge (EFT Conditions N1-N3)}\label{23-null-modular-bridge-eft-conditions-n1-n3}
 
-This subsection states the precise control package needed before null modular data can be promoted to a bona fide translation generator. The logical order is
-\[
-\begin{aligned}
-\text{center transfer}
-&\Longrightarrow
-\text{decomposition inheritance}
-\Longrightarrow
-\text{exact-or-controlled strip additivity}
-\\
-&\Longrightarrow
-\text{endpoint-Lipschitz half-line family}
-\Longrightarrow
-\text{weak tail generator}
-\\
-&\Longrightarrow
-\text{Borchers promotion under N2}.
-\end{aligned}
-\]
+The fixed-cutoff null bridge proved at this stage stops at the weak tail generator. What is established here is: transferred cut-center data on null strips, exact-or-controlled strip additivity on one inherited strip model, and endpoint-Lipschitz control of the renormalized half-line family. What is not established here is the downstream density upgrade, the half-sided modular inclusion step, the Borchers promotion to a genuine positive translation generator, or the relativistic null-stress identification. The present condition package should therefore be read with the following split.
 
-\textbf{Condition N1 (exact or controlled four-term null modular relation).} Fix a regulated null tripartition
+\textbf{Condition N1 (null-strip center transfer and exact-or-controlled strip additivity).} For consecutive null strips
 \[
 I_-=(v_1,v_2),\qquad
 J=(v_2,v_3),\qquad
 I_+=(v_3,v_4),
 \]
-with cuts \(\Gamma_-:=\{v=v_2\}\) and \(\Gamma_+:=\{v=v_3\}\). The regulator premises R0--R1 must transfer the same compact overlap-redundancy data used for ordinary collars to these two null cuts. In a compatible type-I presentation this means
-\[
-\tilde{\mathcal H}_{I_-}
-\cong
-\bigoplus_{\alpha_-}
-W_{\alpha_-}\otimes \mathcal H_{i_-^{\alpha_-}},
-\]
+assume the two cuts inherit the same compact overlap-redundancy data as ordinary collars, so that on a compatible type-I regulator presentation
 \[
 \tilde{\mathcal H}_{J}
 \cong
 \bigoplus_{\alpha_-,\alpha_+}
 W_{\alpha_-}^{*}\otimes
 \mathcal H_{j^{\alpha_-,\alpha_+}}\otimes
-W_{\alpha_+},
+W_{\alpha_+}
 \]
-\[
-\tilde{\mathcal H}_{I_+}
-\cong
-\bigoplus_{\alpha_+}
-W_{\alpha_+}^{*}\otimes \mathcal H_{i_+^{\alpha_+}},
-\]
-with opposite sides of each cut carrying inverse transport. Hence the strip algebra has the transferred center decomposition
+and the strip algebra is the commutant of the transported cut action. Then
 \[
 \mathcal A(J)
 \cong
@@ -278,26 +249,37 @@ Z(\mathcal A(J))
 =
 \bigoplus_{\alpha_-,\alpha_+}\mathbb C\,P_{\alpha_-,\alpha_+}.
 \]
-The further factorization
+If, in addition, each multiplicity space admits an inherited split
 \[
 \mathcal H_{j^{\alpha_-,\alpha_+}}
 \cong
 \mathcal H_{j_L^{\alpha_-,\alpha_+}}
 \otimes
-\mathcal H_{j_R^{\alpha_-,\alpha_+}}
+\mathcal H_{j_R^{\alpha_-,\alpha_+}},
 \]
-is the extra decomposition-inheritance condition; it is not implied by center transfer alone.
-
-On one fixed inherited strip model, define the exact Markov set
+with \(\mathcal A(I_-\cup J)\) acting blockwise only on
+\(\mathcal H_{i_-^{\alpha_-}}\otimes \mathcal H_{j_L^{\alpha_-,\alpha_+}}\)
+and \(\mathcal A(J\cup I_+)\) acting blockwise only on
+\(\mathcal H_{j_R^{\alpha_-,\alpha_+}}\otimes \mathcal H_{i_+^{\alpha_+}}\),
+then exact Markov strip states satisfy exact four-term modular additivity on the canonical inherited model:
+\[
+\Delta K_J(\omega)
+:=
+K_{I_-\cup J\cup I_+}(\omega)-K_{I_-\cup J}(\omega)-K_{J\cup I_+}(\omega)+K_J(\omega)
+=0,
+\]
+equivalently up to a central endpoint term. For a general strip state with
+\[
+I(I_-:I_+\mid J)_\omega\le \varepsilon,
+\]
+define
 \[
 \mathfrak M_{I_-:J:I_+}
 :=
 \left\{
 \sigma:\ I(I_-:I_+\mid J)_\sigma=0
 \right\},
-\]
-and the exact-Markov modulus
-\[
+\qquad
 \delta^{\mathrm M}_{I_-:J:I_+}(\varepsilon)
 :=
 \sup\left\{
@@ -305,27 +287,13 @@ and the exact-Markov modulus
 I(I_-:I_+\mid J)_\rho\le\varepsilon
 \right\}.
 \]
-If the reference state \(\omega\) is exact Markov, then
-\[
-K_{I_-\cup J\cup I_+}(\omega)
-=
-K_{I_-\cup J}(\omega)+K_{J\cup I_+}(\omega)-K_J(\omega)+K_{\partial,J}(\omega),
-\qquad
-K_{\partial,J}(\omega)\in Z(\mathcal A(J)).
-\]
-If instead \(I(I_-:I_+\mid J)_\omega\le\varepsilon\), choose \(\widetilde\omega_J\in\mathfrak M_{I_-:J:I_+}\) with
+Choose \(\widetilde\omega_J\in \mathfrak M_{I_-:J:I_+}\) with
 \[
 \|\omega-\widetilde\omega_J\|_1
 \le
 \delta^{\mathrm M}_{I_-:J:I_+}(\varepsilon),
 \]
-define
-\[
-\Delta K_J(\eta)
-:=
-K_{I_-\cup J\cup I_+}(\eta)-K_{I_-\cup J}(\eta)-K_{J\cup I_+}(\eta)+K_J(\eta),
-\]
-and the carried defect operator
+and set
 \[
 \mathfrak D_J(\omega,\widetilde\omega_J)
 :=
@@ -339,26 +307,31 @@ K_{I_-\cup J}(\omega)+K_{J\cup I_+}(\omega)-K_J(\omega)
 +K_{\partial,J}(\widetilde\omega_J)
 +\mathfrak D_J(\omega,\widetilde\omega_J),
 \]
-where \(K_{\partial,J}(\widetilde\omega_J)\) is central. If the relevant marginals are uniformly faithful with lower spectral bound \(\lambda_\ast>0\),
+with \(K_{\partial,J}(\widetilde\omega_J)\) central. If the relevant marginals are uniformly faithful with lower spectral bound \(\lambda_\ast>0\), then
 \[
 \|\mathfrak D_J(\omega,\widetilde\omega_J)\|_\infty
 \le
-4\lambda_\ast^{-1}\,\delta^{\mathrm M}_{I_-:J:I_+}(\varepsilon).
+4\lambda_\ast^{-1}\,
+\delta^{\mathrm M}_{I_-:J:I_+}(\varepsilon).
 \]
-This is the exact-or-controlled N1 statement. The separate Fawzi--Renner comparison error is
+Independently, Fawzi--Renner recovery supplies a constructive comparison state with
 \[
-r_{\mathrm{FR}}(\varepsilon)=2\sqrt{1-e^{-\varepsilon}}\le 2\sqrt{\varepsilon}.
+r_{\mathrm{FR}}(\varepsilon)
+=
+2\sqrt{1-e^{-\varepsilon}}
+\le
+2\sqrt{\varepsilon}.
+\]
+Thus N1 is exact only at exact Markovity, or else along a controlled strip family on one fixed inherited strip model with
+\[
+\delta^{\mathrm M}_{I_-:J:I_+}(\varepsilon_J)\to 0.
 \]
 
-\textbf{Condition N2 (half-sided modular inclusion).} Null half-line algebras satisfy the half-sided modular inclusion property, either as an explicit scaling-limit premise or as the geometric blow-up form of cap modular flow near a smooth cut:
+\textbf{Condition N2 (half-sided modular inclusion).} N2 remains a separate scaling-limit premise. The only fixed-cutoff statement made here is geometric: if a later task establishes half-sided modular inclusion on the null half-line blow-up algebras, then the geometric blow-up of cap modular flow identifies its expected form
 \[
-\sigma_t^\omega(\mathcal A(v>v_0))
-\subseteq
-\mathcal A(v>v_0)
-\qquad
-(t\ge 0).
+v-v_0\mapsto e^{-2\pi t}(v-v_0).
 \]
-This is the premise that promotes the weak tail generator below to a genuine positive translation generator.
+This section does not derive N2 from strip data.
 
 \textbf{Condition N3 (endpoint-Lipschitz control and weak tail generator).} For renormalized modular Hamiltonians
 \[
@@ -400,46 +373,30 @@ For \(a<b\),
 =
 -2\pi\int_a^b \langle\psi,q(v,\Omega)\phi\rangle\,dv.
 \]
-If, in addition, \(q\) is weakly differentiable and both \(f_{\psi,\phi}(a)\) and \(q_{\psi,\phi}(a)\) vanish at \(+\infty\), then the density
+This is the end of the present fixed-cutoff bridge. The stronger assumptions
+\[
+q \ \text{weakly differentiable},
+\qquad
+f_{\psi,\phi}(a)\to 0,
+\qquad
+q_{\psi,\phi}(a)\to 0
+\quad (a\to+\infty)
+\]
+would permit the downstream density formula
 \[
 \langle\psi,p(a,\Omega)\phi\rangle
 :=
 -\partial_a\langle\psi,q(a,\Omega)\phi\rangle
 =
-\frac{1}{2\pi}\,\partial_a^2 f_{\psi,\phi}(a)
-\]
-exists distributionally and
-\[
+\frac{1}{2\pi}\,\partial_a^2 f_{\psi,\phi}(a),
+\qquad
 \langle\psi,\widetilde K_a(\Omega)\phi\rangle
 =
-2\pi\int_a^\infty (v-a)\,\langle\psi,p(v,\Omega)\phi\rangle\,dv.
+2\pi\int_a^\infty (v-a)\,\langle\psi,p(v,\Omega)\phi\rangle\,dv,
 \]
+but that density upgrade is not established here.
 
-\textbf{Consequence (translation generator and stress-tensor bridge).} Under N2, Borchers--Wiesbrock promotes the weak tail generator to a genuine one-parameter unitary group \(U(a)=e^{iaP}\) with \(P\ge 0\) and
-\[
-\Delta^{it}U(a)\Delta^{-it}=U(e^{-2\pi t}a),
-\qquad
-[K,P]=i2\pi P.
-\]
-Only after this promotion, and only with the separate relativistic scaling-limit identification premise, does the half-line density become a local null stress tensor:
-\[
-\widetilde K[(a,\infty),\Omega]
-=
-2\pi\int_a^\infty (v-a)\,T_{kk}(v,\Omega)\,dv
-+
-E^{(\eta)}_{(a,\infty),\Omega},
-\]
-with
-\[
-\eta_I
-:=
-r_{\mathrm{FR}}(\varepsilon_I)
-+
-4\lambda_\ast^{-1}\delta_I^{\mathrm M}(\varepsilon_I)
-+
-\eta_I^{\mathrm{EFT}}.
-\]
-Thus N1 and N3 provide the fixed-cutoff control statements; N2 is the separate promotion step to a genuine positive translation generator; and the final \(T_{kk}\) identification remains a scaling-limit EFT condition rather than a fixed-cutoff theorem.
+\textbf{Consequence.} The present condition package proves only the fixed-cutoff strip bridge through the weak tail generator \(q(a,\Omega)\). A genuine positive null translation generator requires the downstream Borchers--Wiesbrock step under N2, and identification with a continuum \(T_{kk}\) requires in addition the density-upgrade hypotheses and the relativistic EFT null-stress premise. Those later steps are explicit downstream burdens rather than hidden parts of N1--N3.
 \subsection{2.4 Stress Tensor Reconstruction}\label{24-stress-tensor-reconstruction}
 
 \textbf{Lemma 2.3 (Null Data Ambiguity):} If a symmetric tensor \(X_{ab}\) satisfies \(X_{ab}k^a k^b = 0\) for all null \(k\), then: \[X_{ab} = \phi \, g_{ab}\] for some scalar \(\phi\).

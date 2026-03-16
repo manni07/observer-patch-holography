@@ -82,7 +82,7 @@ The framework is intended as a candidate fundamental theory in the precise sense
 The results emphasized in this paper are ordered below by a combination of impact and defensibility.
 
 \begin{enumerate}[leftmargin=2em]
-\item A conditional Jacobson-type Einstein branch is recovered from observer-overlap modular geometry, an explicit fixed-cap generalized-entropy stationarity premise, and an explicit null-modular / null-stress scaling-limit package.
+\item A conditional Jacobson-type Einstein branch is recovered from observer-overlap modular geometry, an explicit fixed-cap generalized-entropy stationarity premise, and an explicit null-modular / null-stress scaling-limit package; in the synchronized c.10 bridge, quasi-local propagation and endpoint control are now supplied internally up to the weak-tail-generator stage, while half-sided inclusion and null-stress identification remain explicit downstream premises.
 \item The exact Standard Model gauge structure
 \[
 \frac{\SU(3)\times\SU(2)\times\U(1)}{\mathbb Z_6}
@@ -244,7 +244,7 @@ Historical labels are read as follows in the compact note and in mirrored surfac
 \end{remark}
 
 \begin{remark}
-The five axioms fix the OPH core, and in the present packaging they already internalize the quasi-local propagation and refinement-stable notion of sector persistence used by the scaling-limit and gauge branches. The cap-modular geometric action and the \(2\pi\) KMS normalization are recovered in Theorem~\ref{thm:bw} on the OPH geometric branch; what remains genuinely theorem-external is the retained nine-item technical package: the null half-sided inclusion step \textbf{T6}, the obstruction clause \textbf{T7} when transportability is invoked, the scaling-limit scope clause \textbf{T8}, fixed-cap stationarity \textbf{T9}, and the bosonic/symmetric/fiber-functor part of \textbf{T10}--\textbf{T12}, together with \textbf{T1} and \textbf{T4} where the fixed-cutoff regulator presentation and the geometric cap-modular branch hypothesis are used. In particular, the Lorentz/null-modular/Einstein and compact-gauge statements below are still scaling-limit claims rather than fixed-cutoff matrix-algebra identities.
+The five axioms fix the OPH core, and in the present packaging they already internalize the quasi-local propagation and refinement-stable notion of sector persistence used by the scaling-limit and gauge branches. On the gravity side this means the null bridge no longer imports a separate propagation or endpoint-control premise: c.10 closes the fixed-cutoff strip argument through exact-or-controlled strip additivity and the weak tail generator, while the downstream half-sided inclusion step \textbf{T6} and the scaling-limit null-stress scope clause \textbf{T8} remain explicit. The cap-modular geometric action and the \(2\pi\) KMS normalization are recovered in Theorem~\ref{thm:bw} on the OPH geometric branch; what remains genuinely theorem-external is the retained nine-item technical package: the null half-sided inclusion step \textbf{T6}, the obstruction clause \textbf{T7} when transportability is invoked, the scaling-limit scope clause \textbf{T8}, fixed-cap stationarity \textbf{T9}, and the bosonic/symmetric/fiber-functor part of \textbf{T10}--\textbf{T12}, together with \textbf{T1} and \textbf{T4} where the fixed-cutoff regulator presentation and the geometric cap-modular branch hypothesis are used. In particular, the Lorentz/null-modular/Einstein and compact-gauge statements below are still scaling-limit claims rather than fixed-cutoff matrix-algebra identities.
 \end{remark}
 
 \begin{remark}[Log convention]
@@ -965,14 +965,13 @@ By Theorem~\ref{thm:bw}, the cap modular groups are identified with the cap-pres
 
 \subsection{The null modular bridge}
 
-The gravity chain still requires a bridge from modular data to a local stress tensor, but the sharp claim boundary is now four-layered. At fixed regulator scale one can transfer the same edge-center data used in the spatial collar theorem to regulated null strips. What does not follow from that transfer alone is the left/right tensor split of the strip multiplicity spaces needed for exact splice and modular-additivity identities, nor the half-line control needed to turn strip statements into genuine translation data. The null bridge therefore separates four layers:
+The fixed-cutoff bridge needed for the gravity chain stops one step earlier than the later stress-tensor identification. At fixed regulator scale one can transfer the same cut-center data used in the spatial collar theorem to regulated null strips, and on one inherited strip model one can obtain exact or controlled four-term strip additivity together with endpoint-Lipschitz control of the renormalized half-line family. What is not proved here is the downstream density upgrade of the weak tail generator, the half-sided modular inclusion step, the Borchers promotion to a genuine positive translation generator, or the relativistic identification of the resulting density with a continuum \(T_{kk}\). The present subsection therefore establishes only the following c.10-local statements:
 \begin{enumerate}[leftmargin=2em]
-\item transferred center data at the two null cuts;
-\item an additional decomposition-inheritance hypothesis that upgrades those center sectors to the same left/right block structure used in Theorem~\ref{thm:markovcollar};
-\item exact Markovity, or a controlled exact-Markov replacement on one fixed inherited strip model, yielding an exact-or-controlled four-term strip relation with an explicit carried defect operator;
-\item endpoint-Lipschitz control for the renormalized half-line modular family, strong enough to define a weak tail generator before any Borchers promotion.
+\item null-strip center transfer and the inherited left/right split hypothesis;
+\item exact strip additivity on the exact inherited Markov model, and a carried defect operator on controlled exact-Markov replacements on one fixed strip model;
+\item endpoint-Lipschitz matrix elements for the renormalized half-line family and the resulting weak tail generator.
 \end{enumerate}
-Only after all four layers are in place does the null strip support the same HJPW factorization logic as the spatial collar branch. The later promotion of the weak tail generator to a genuine positive translation generator remains the separate half-sided modular inclusion premise \textbf{T6}, and the later identification of that generator with a continuum null stress tensor remains a separate scaling-limit premise under Assumption~\ref{ass:technical}\textbf{T8}.
+The labels \(\ref{lem:density}\), \(\ref{cor:n2}\), \(\ref{lem:translation}\), and \(\ref{thm:stress}\) are retained below only as explicit forward-reference boundaries for the downstream c.11--c.13 tasks.
 
 \begin{proposition}[Null-strip center transfer and inherited split]\label{prop:nullec}
 Fix a null generator \(\Omega\) and a regulated tripartition
@@ -1057,11 +1056,30 @@ Moreover the glued tripartition carries the block decomposition
 \otimes
 \mathcal H_{i_+^{\alpha_+}}.
 \]
-Thus the two null cuts transfer the same theorematic center data as the spatial collar branch, while the left/right split of the strip multiplicity spaces is exactly the extra decomposition-inheritance hypothesis and is not forced by center transfer alone.
+Thus the two null cuts transfer the same center data as the spatial collar branch, while the left/right split of the strip multiplicity spaces is exactly the extra decomposition-inheritance hypothesis and is not forced by center transfer alone.
 \end{proposition}
 
 \begin{proof}
-By complete reducibility of the finite-dimensional unitary actions \(\widehat K_\pm\), the displayed decompositions of the extended regulator Hilbert spaces exist. Because \(\mathcal A(J)\) is, by hypothesis, the algebra of endomorphisms commuting with the transported cut actions on \(\tilde{\mathcal H}_J\), every strip observable preserves the pair \((\alpha_-,\alpha_+)\) and acts only on the multiplicity space \(\mathcal H_{j^{\alpha_-,\alpha_+}}\). Therefore
+By complete reducibility of the finite-dimensional unitary actions \(\widehat K_\pm\), the displayed decompositions of \(\tilde{\mathcal H}_{I_-}\), \(\tilde{\mathcal H}_J\), and \(\tilde{\mathcal H}_{I_+}\) exist. Under item (iii), the strip algebra is the commutant of the transported \(\widehat K_-\times \widehat K_+\) action on
+\[
+\tilde{\mathcal H}_J
+=
+\bigoplus_{\alpha_-,\alpha_+}
+W_{\alpha_-}^{*}\otimes
+\mathcal H_{j^{\alpha_-,\alpha_+}}\otimes
+W_{\alpha_+}.
+\]
+Write an operator \(X\in \mathcal B(\tilde{\mathcal H}_J)\) in matrix form relative to that direct sum. The block
+\[
+X_{(\alpha_-,\alpha_+),(\beta_-,\beta_+)}
+\]
+intertwines
+\[
+W_{\alpha_-}^{*}\otimes W_{\alpha_+}
+\longrightarrow
+W_{\beta_-}^{*}\otimes W_{\beta_+}
+\]
+for the product action of \(\widehat K_-\times \widehat K_+\). By Schur's lemma, such an intertwiner is zero unless \((\alpha_-,\alpha_+)=(\beta_-,\beta_+)\), and when the sector pair agrees it is scalar on the representation factors. Therefore the commutant is exactly
 \[
 \mathcal A(J)
 \cong
@@ -1070,7 +1088,7 @@ By complete reducibility of the finite-dimensional unitary actions \(\widehat K_
 \]
 and the center is generated by the corresponding block projectors \(P_{\alpha_-,\alpha_+}\).
 
-For the glued tripartition, take invariants across each cut. Using the decompositions above,
+For the glued tripartition, tensor the three regulator Hilbert spaces and decompose:
 \[
 \tilde{\mathcal H}_{I_-}\otimes \tilde{\mathcal H}_{J}\otimes \tilde{\mathcal H}_{I_+}
 \cong
@@ -1085,7 +1103,7 @@ For the glued tripartition, take invariants across each cut. Using the decomposi
 \otimes
 \mathcal H_{i_+^{\alpha_+}}.
 \]
-Taking \(\widehat K_-\times\widehat K_+\)-invariants and using Schur's lemma gives
+Taking \(\widehat K_-\times\widehat K_+\)-invariants and applying Schur's lemma to each cut gives
 \[
 (W_{\alpha_-}\otimes W_{\beta_-}^{*})^{\widehat K_-}
 \cong
@@ -1110,12 +1128,14 @@ so only matching cut sectors survive and one obtains
 \mathcal H_{j^{\alpha_-,\alpha_+}}\otimes
 \mathcal H_{i_+^{\alpha_+}}.
 \]
-If item (iv) holds, substitute the factorization
-\(\mathcal H_{j^{\alpha_-,\alpha_+}}
+If item (iv) holds, substitute the chosen factorization
+\[
+\mathcal H_{j^{\alpha_-,\alpha_+}}
 \cong
 \mathcal H_{j_L^{\alpha_-,\alpha_+}}\otimes
-\mathcal H_{j_R^{\alpha_-,\alpha_+}}\)
-to obtain the displayed inherited split and the stated action of the left and right union algebras. Nothing in the Schur-lemma argument itself forces item (iv); it is the additional structural condition required to reproduce the same blockwise tensor pattern as Theorem~\ref{thm:markovcollar}.
+\mathcal H_{j_R^{\alpha_-,\alpha_+}}
+\]
+to obtain the displayed inherited split and the stated action of the left and right union algebras. Nothing in the Schur-lemma argument itself forces item (iv); it is exactly the extra structural condition required to reproduce the same blockwise tensor pattern as Theorem~\ref{thm:markovcollar}.
 \end{proof}
 
 \begin{corollary}[Exact or controlled four-term null modular relation on an inherited strip model]\label{cor:n1}
@@ -1135,7 +1155,22 @@ Fix one finite-dimensional regulated strip model satisfying Proposition~\ref{pro
 I(I_-:I_+\mid J)_\rho\le \varepsilon
 \right\}.
 \]
-If the reference state \(\omega\) is exact Markov on this inherited decomposition, then there exists a central operator
+For any state \(\eta\) on this strip model, write
+\[
+\Delta K_J(\eta)
+:=
+K_{I_-\cup J\cup I_+}(\eta)-K_{I_-\cup J}(\eta)-K_{J\cup I_+}(\eta)+K_J(\eta).
+\]
+
+If the reference state \(\omega\) is exact Markov on this inherited decomposition, then
+\[
+\Delta K_J(\omega)\in Z(\mathcal A(J)),
+\]
+and in the canonical blockwise identification of Proposition~\ref{prop:nullec} one may take
+\[
+\Delta K_J(\omega)=0.
+\]
+Equivalently, without fixing that normalization there exists a central operator
 \[
 K_{\partial,J}(\omega)\in Z(\mathcal A(J))
 \]
@@ -1144,7 +1179,7 @@ such that
 K_{I_-\cup J\cup I_+}(\omega)
 =
 K_{I_-\cup J}(\omega)+K_{J\cup I_+}(\omega)-K_J(\omega)+K_{\partial,J}(\omega).
- \]
+\]
 
 If instead \(I(I_-:I_+\mid J)_\omega\le \varepsilon\), then on this fixed strip model one may choose an exact Markov state \(\widetilde\omega_J\in \mathfrak M_{I_-:J:I_+}\) with
 \[
@@ -1152,13 +1187,7 @@ If instead \(I(I_-:I_+\mid J)_\omega\le \varepsilon\), then on this fixed strip 
 \le
 \delta^{\mathrm M}_{I_-:J:I_+}(\varepsilon).
 \]
-Define
-\[
-\Delta K_J(\eta)
-:=
-K_{I_-\cup J\cup I_+}(\eta)-K_{I_-\cup J}(\eta)-K_{J\cup I_+}(\eta)+K_J(\eta),
-\]
-and the carried defect operator
+Define the carried defect operator
 \[
 \mathfrak D_J(\omega,\widetilde\omega_J)
 :=
@@ -1183,14 +1212,14 @@ For every bounded observable \(O\) in \(\mathcal A(I_-\cup J)\) or \(\mathcal A(
 \|O\|_\infty\,
 \delta^{\mathrm M}_{I_-:J:I_+}(\varepsilon).
 \]
-If the marginals entering \(\Delta K_J\) are uniformly faithful with lower spectral bound \(\lambda_\ast>0\), then
+If the marginals entering \(\Delta K_J\) for \(\omega\) and \(\widetilde\omega_J\) are uniformly faithful with lower spectral bound \(\lambda_\ast>0\), then
 \[
 \|\mathfrak D_J(\omega,\widetilde\omega_J)\|_\infty
 \le
 4\lambda_\ast^{-1}\,
 \delta^{\mathrm M}_{I_-:J:I_+}(\varepsilon).
 \]
-Independently, the Fawzi--Renner recovery map supplies a comparison state with trace-norm error
+Independently, the Fawzi--Renner recovery map supplies a constructive comparison state with trace-norm error
 \[
 r_{\mathrm{FR}}(\varepsilon)
 =
@@ -1206,36 +1235,81 @@ In the controlled case, \(\mathfrak D_J\) is carried explicitly at each finite s
 \end{corollary}
 
 \begin{proof}
-On the inherited split of Proposition~\ref{prop:nullec}, exact Markovity is equivalent, by the HJPW structure theorem, to a blockwise factorization
+Assume first that \(\omega\) is exact Markov on the inherited split of Proposition~\ref{prop:nullec}. Then the HJPW structure theorem gives, on each sector pair \(\alpha=(\alpha_-,\alpha_+)\),
 \[
-\omega_{I_-JI_+}
+\omega_{I_-JI_+}|_\alpha
 =
-\bigoplus_{\alpha_-,\alpha_+}
-p_{\alpha_-,\alpha_+}\,
-\omega_{I_-\,j_L^{\alpha_-,\alpha_+}}^{(\alpha_-,\alpha_+)}
+p_\alpha\,
+\omega_{I_-\,j_L}^{(\alpha)}
 \otimes
-\omega_{j_R^{\alpha_-,\alpha_+}\,I_+}^{(\alpha_-,\alpha_+)},
+\omega_{j_R\,I_+}^{(\alpha)}.
 \]
-and the modular Hamiltonian is additive on each block. The only non-additive remainder is therefore the direct sum of block constants, which is central and gives \(K_{\partial,J}(\omega)\).
-
-For the controlled statement, the same compactness argument as Proposition~\ref{prop:controlledmarkov} applies verbatim on this fixed finite-dimensional strip model, with \(A,B,D\) relabeled as \(I_-,J,I_+\). The observable bound is immediate from the trace-norm estimate. If the relevant marginals are bounded below by \(\lambda_\ast\), the operator-logarithm Lipschitz estimate used earlier in Proposition~\ref{prop:approxrecover} yields
+Accordingly,
 \[
-\|\mathfrak D_J(\omega,\widetilde\omega_J)\|_\infty
-\le
-4\lambda_\ast^{-1}\,
-\|\omega-\widetilde\omega_J\|_1,
+K_{I_-\cup J\cup I_+}(\omega)\big|_\alpha
+=
+(-\log p_\alpha)\mathbf 1
++
+K_{I_-\,j_L}^{(\alpha)}\otimes \mathbf 1_{j_R I_+}
++
+\mathbf 1_{I_- j_L}\otimes K_{j_R I_+}^{(\alpha)}.
 \]
-which gives the displayed control. The Fawzi--Renner bound provides a constructive recovered comparison state but does not by itself identify an exact Markov state; that exact replacement is measured by the modulus \(\delta^{\mathrm M}_{I_-:J:I_+}\).
+Tracing over \(I_+\), \(I_-\), or both gives the marginal block formulas
+\[
+K_{I_-\cup J}(\omega)\big|_\alpha
+=
+(-\log p_\alpha)\mathbf 1
++
+K_{I_-\,j_L}^{(\alpha)}\otimes \mathbf 1_{j_R}
++
+\mathbf 1_{I_- j_L}\otimes K_{j_R}^{(\alpha)},
+\]
+\[
+K_{J\cup I_+}(\omega)\big|_\alpha
+=
+(-\log p_\alpha)\mathbf 1
++
+K_{j_L}^{(\alpha)}\otimes \mathbf 1_{j_R I_+}
++
+\mathbf 1_{j_L}\otimes K_{j_R I_+}^{(\alpha)},
+\]
+\[
+K_J(\omega)\big|_\alpha
+=
+(-\log p_\alpha)\mathbf 1
++
+K_{j_L}^{(\alpha)}\otimes \mathbf 1_{j_R}
++
+\mathbf 1_{j_L}\otimes K_{j_R}^{(\alpha)}.
+\]
+Subtracting the last three expressions from the first gives zero on every block. Thus, in the canonical blockwise identification supplied by Proposition~\ref{prop:nullec},
+\[
+\Delta K_J(\omega)=0.
+\]
+If one chooses to keep the blockwise endpoint-label bookkeeping explicit rather than absorbing those constants into the canonical identification, the remainder is a direct sum of block constants and is therefore central. This yields the stated central form with \(K_{\partial,J}(\omega)\in Z(\mathcal A(J))\).
+
+For the controlled statement, apply Proposition~\ref{prop:controlledmarkov} on this fixed finite-dimensional strip model, relabeling \(A,B,D\) there as \(I_-,J,I_+\). This yields an exact Markov replacement \(\widetilde\omega_J\in \mathfrak M_{I_-:J:I_+}\) with the displayed trace-norm bound. The identity
+\[
+\Delta K_J(\omega)=\Delta K_J(\widetilde\omega_J)+\mathfrak D_J(\omega,\widetilde\omega_J)
+\]
+is tautological, so the displayed four-term formula follows from the exact-Markov case applied to \(\widetilde\omega_J\). The observable estimate is immediate from
+\[
+\bigl|\omega(O)-\widetilde\omega_J(O)\bigr|
+\le
+\|O\|_\infty\,
+\|\omega-\widetilde\omega_J\|_1.
+\]
+Finally, Proposition~\ref{prop:modulartransport}, again relabeled \(A,B,D\mapsto I_-,J,I_+\), yields the operator-norm bound on \(\mathfrak D_J\) whenever the relevant marginals have the stated lower spectral bound. The Fawzi--Renner estimate is the same one-shot recoverability bound already used elsewhere and is independent of the exact-Markov replacement modulus.
 \end{proof}
 
 \begin{definition}[Renormalized null modular functional]
-For a null interval \(I\) on generator \(\Omega\), write
+For a null interval \(I\) on generator \(\Omega\), let \(K_\partial(I,\Omega)\) denote the central endpoint-label term singled out by Corollary~\ref{cor:n1} on the inherited strip model, or by its controlled exact-Markov replacement when that model is used as reference. Define
 \[
 \widetilde K[I,\Omega]
 :=
-K[I,\Omega]-K_\partial(I,\Omega)
+K[I,\Omega]-K_\partial(I,\Omega).
 \]
-for the full modular Hamiltonian with the central endpoint-label term removed. For a null half-line \(H_a:=(a,\infty)\), abbreviate
+For a null half-line \(H_a:=(a,\infty)\), abbreviate
 \[
 \widetilde K_a(\Omega):=\widetilde K[H_a,\Omega].
 \]
@@ -1280,27 +1354,60 @@ and for \(a<b\),
 The object \(q(a,\Omega)\) is the weak tail generator. At this stage it is not yet asserted to be positive or self-adjointly implemented.
 \end{proposition}
 
-\begin{proof}[Proof sketch]
-The bounded-interval estimate already derived from Axiom~\ref{ax:maxent} gives
+\begin{proof}
+The bounded-interval endpoint-control statement already derived from Axiom~\ref{ax:maxent} applies precisely to the renormalized family obtained after removal of the central endpoint term. Therefore, for intervals contained in one fixed compact endpoint window,
 \[
-\bigl|\langle\psi,(K[I']-K[I])\phi\rangle\bigr|
+\bigl|\langle\psi,(\widetilde K[I',\Omega]-\widetilde K[I,\Omega])\phi\rangle\bigr|
 \le
-C_{\psi,\phi}\,|I'\Delta I|.
+C_{\psi,\phi,\Omega}\,|I'\Delta I|,
 \]
-For bounded intervals \(I=(a,b)\) and \(I'=(a',b')\),
+where \(I'\Delta I\) is the symmetric difference of the two intervals. If
+\[
+I=(a,b),\qquad I'=(a',b'),
+\]
+then
 \[
 |I'\Delta I|
 \le
 |a'-a|+|b'-b|,
 \]
-which yields the displayed joint endpoint-Lipschitz bound after removal of the central endpoint term. For half-lines \(H_a=(a,\infty)\) and \(H_{a'}=(a',\infty)\), removal of the endpoint term leaves a difference supported on the bounded interval between the two endpoints, so
+which gives the displayed joint endpoint-Lipschitz bound.
+
+For half-lines \(H_a=(a,\infty)\) and \(H_{a'}=(a',\infty)\), the symmetric difference is the bounded interval between the two endpoints, so
 \[
-|H_{a'}\Delta H_a|=|a'-a|,
+|H_{a'}\Delta H_a|=|a'-a|.
 \]
-and the same argument gives the half-line estimate. Lipschitz functions on compact intervals are absolutely continuous, hence possess distributional derivatives in \(L^\infty_{\mathrm{loc}}\). The final integral identity is the fundamental theorem of calculus applied to the matrix-element function \(f_{\psi,\phi}(a)\).
+Because the central endpoint-label term has already been removed in the definition of \(\widetilde K_a\), the same endpoint-control estimate yields
+\[
+\bigl|\langle\psi,(\widetilde K_{a'}(\Omega)-\widetilde K_a(\Omega))\phi\rangle\bigr|
+\le
+C_{\psi,\phi,\Omega}\,|a'-a|.
+\]
+
+Hence, on every compact \(a\)-interval, the function
+\[
+f_{\psi,\phi}(a):=\langle\psi,\widetilde K_a(\Omega)\phi\rangle
+\]
+is Lipschitz. A Lipschitz function on a compact interval is absolutely continuous, so it has an almost-everywhere derivative in \(L^\infty\) and obeys the fundamental theorem of calculus:
+\[
+f_{\psi,\phi}(b)-f_{\psi,\phi}(a)=\int_a^b \partial_v f_{\psi,\phi}(v)\,dv.
+\]
+Define
+\[
+\langle\psi,q(v,\Omega)\phi\rangle
+:=
+-\frac{1}{2\pi}\,\partial_v f_{\psi,\phi}(v)
+\]
+distributionally. Substituting this definition into the previous identity gives
+\[
+\langle\psi,(\widetilde K_b(\Omega)-\widetilde K_a(\Omega))\phi\rangle
+=
+-2\pi\int_a^b \langle\psi,q(v,\Omega)\phi\rangle\,dv.
+\]
+This is exactly the claimed weak-tail formula.
 \end{proof}
 
-\begin{theorem}[Half-line density upgrade and second-derivative formula]\label{lem:density}
+\begin{theorem}[Downstream density-upgrade template]\label{lem:density}
 Fix a null generator \(\Omega\) and the renormalized half-line family \(\widetilde K_a(\Omega)\) of Proposition~\ref{prop:n3}. For fixed vectors \(\psi,\phi\) in a common dense domain, let
 \[
 f_{\psi,\phi}(a):=\langle\psi,\widetilde K_a(\Omega)\phi\rangle,
@@ -1335,38 +1442,10 @@ and
 =
 2\pi\int_a^\infty (v-a)\,\langle\psi,p(v,\Omega)\phi\rangle\,dv.
 \]
-Thus the weak tail generator of Proposition~\ref{prop:n3} admits a density upgrade precisely under the additional weak differentiability and tail-vanishing conditions.
+This statement is not part of the present fixed-cutoff bridge; it records the exact additional input/output package carried into the downstream density-upgrade task.
 \end{theorem}
 
-\begin{proof}
-By definition,
-\[
-q_{\psi,\phi}(a)
-=
--\frac{1}{2\pi}\,\partial_a f_{\psi,\phi}(a).
-\]
-The additional weak differentiability assumption defines \(p(a,\Omega)\) distributionally by
-\[
-\langle\psi,p(a,\Omega)\phi\rangle
-:=
--\partial_a q_{\psi,\phi}(a).
-\]
-Integrating this identity from \(a\) to \(+\infty\) and using \(q_{\psi,\phi}(a)\to 0\) gives
-\[
-q_{\psi,\phi}(a)
-=
-\int_a^\infty \langle\psi,p(v,\Omega)\phi\rangle\,dv.
-\]
-Integrating once more and using \(f_{\psi,\phi}(a)\to0\) yields
-\[
-f_{\psi,\phi}(a)
-=
-2\pi\int_a^\infty (v-a)\,\langle\psi,p(v,\Omega)\phi\rangle\,dv,
-\]
-which is the required half-line formula. The second-derivative identity is merely the definition of \(p\) rewritten in terms of \(f_{\psi,\phi}\).
-\end{proof}
-
-\begin{corollary}[Geometric form of the assumed half-sided inclusion]\label{cor:n2}
+\begin{corollary}[Geometric form of the downstream half-sided inclusion step]\label{cor:n2}
 Assume in addition the standard half-sided modular inclusion premise \textbf{T6} for the null half-line blow-up algebras,
 \[
 \sigma_t^\omega(\mathcal A(v>v_1))
@@ -1386,20 +1465,17 @@ which is the geometric realization of the assumed half-sided inclusion on null h
 Near a smooth cut, the cap dilation from Theorem~\ref{thm:bw} becomes a Rindler boost in the tangent geometry. Restricting that boost to a null generator gives the stated dilation. For \(t\ge 0\), the half-line \(v>v_0\) maps into itself, which is exactly the geometric form of the assumed half-sided inclusion.
 \end{proof}
 
-\begin{lemma}[Borchers promotion to a genuine null translation generator]\label{lem:translation}
+\begin{lemma}[Downstream Borchers promotion template]\label{lem:translation}
 Under the half-sided modular inclusion premise of Corollary~\ref{cor:n2}, the weak tail generator of Proposition~\ref{prop:n3} is promoted to a genuine one-parameter unitary group \(U(a)=e^{iaP}\) with \(P\ge 0\) such that
 \[
 \Delta^{it}U(a)\Delta^{-it}=U(e^{-2\pi t}a),
 \qquad
 [K,P]=i2\pi P.
 \]
+This lemma is a downstream Borchers--Wiesbrock step and is not proved from the fixed-cutoff strip arguments above.
 \end{lemma}
 
-\begin{proof}[Proof sketch]
-This is the Borchers--Wiesbrock consequence of half-sided modular inclusion. The modular group of the larger algebra acts by endomorphisms on the smaller one for one sign of modular time, and that structure produces a positive translation generator \(P\) whose affine scaling law is the one written above. The point of Proposition~\ref{prop:n3} is only to define the weak tail derivative prior to this promotion; positivity and unitary implementation first appear here, under \textbf{T6}.
-\end{proof}
-
-\begin{theorem}[Conditional null-stress identification from modular data]\label{thm:stress}
+\begin{theorem}[Downstream null-stress identification template]\label{thm:stress}
 Assume Axioms~\ref{ax:screen}--\ref{ax:entropy}, Assumption~\ref{ass:technical}, Proposition~\ref{prop:nullec}, the exact-or-controlled strip hypothesis of Corollary~\ref{cor:n1}, Proposition~\ref{prop:n3}, the density-upgrade hypotheses of Theorem~\ref{lem:density}, the half-sided inclusion premise \textbf{T6}, and the scaling-limit null-stress identification premise of the relativistic EFT branch. Then there exists an operator-valued distribution \(T_{kk}(v,\Omega)\) such that the renormalized modular Hamiltonian on a null half-line takes the form
 \[
 \widetilde K[(a,\infty),\Omega]
@@ -1439,15 +1515,8 @@ K[I,\Omega]
 \widetilde K[I,\Omega]+K_\partial(I,\Omega),
 \]
 with \(K_\partial\) central and boundary-supported. Knowledge of \(T_{kk}\) for all null directions reconstructs a symmetric tensor \(T_{ab}\) up to the addition of a metric term \(\phi g_{ab}\).
+This theorem is not established at the present c.10 step; it records the exact additional c.11--c.13 burden beyond the fixed-cutoff bridge proved above.
 \end{theorem}
-
-\begin{proof}[Proof sketch]
-Proposition~\ref{prop:nullec} and Corollary~\ref{cor:n1} supply the precise null-strip statement of the collar factorization package: transferred cut centers, an explicit decomposition-inheritance condition, and exact or controlled four-term modular additivity on one fixed inherited strip model, with the finite-stage failure carried by the defect operator \(\mathfrak D_J\). Proposition~\ref{prop:n3} defines the weak tail generator of the renormalized half-line family from endpoint-Lipschitz control. Theorem~\ref{lem:density} upgrades that weak generator to a density under the additional differentiability and tail assumptions. Corollary~\ref{cor:n2} and Lemma~\ref{lem:translation} then promote the weak tail generator to the genuine positive Borchers translation generator under the separate half-sided inclusion premise \textbf{T6}. In the relativistic scaling-limit branch, the null-stress identification premise upgrades the resulting density to \(T_{kk}\). The three carried remainder sources are the constructive Fawzi--Renner comparison error, the exact-Markov replacement error on the fixed strip model, and the separate EFT/scaling-limit remainder \(\eta_I^{\mathrm{EFT}}\). If bounded null intervals inherit geometric modular action, the same density transports to finite intervals with an interval-dependent affine kernel \(g_I(v)\). The ambiguity
-\[
-T_{ab}\to T_{ab}+\phi g_{ab}
-\]
-is invisible on null contractions because \(g_{ab}k^ak^b=0\).
-\end{proof}
 
 \begin{lemma}[Null data determine the stress tensor modulo a metric term]\label{lem:nullreconstruct}
 Let \(X_{ab}\) be a symmetric tensor. If
@@ -1489,12 +1558,8 @@ so both \(Y_{00}\) and the spatial trace \(\delta^{ij}Y_{ij}\) vanish. The remai
 where \(Y_{ij}^{\mathrm{TF}}\) is the traceless spatial part. The \(\ell=2\) spherical harmonics are linearly independent, so this implies \(Y_{ij}^{\mathrm{TF}}=0\). Hence \(Y_{ab}=0\) and therefore \(X_{ab}=\phi g_{ab}\).
 \end{proof}
 
-\begin{remark}
-Lemma~\ref{lem:nullreconstruct} explains why the Einstein equation derived from null modular data is determined only up to \(\Lambda g_{ab}\). The missing scalar piece is not an error term. It is the unique null-invisible component of a symmetric tensor.
-\end{remark}
-
 \begin{remark}[Claim boundary in the null bridge]
-The fixed-cutoff advance made in this subsection is the rigorous transfer of cut-center data to null strips together with the identification of the exact extra hypothesis needed to inherit the collar-type left/right split. Exact N1 then holds only for exact Markov strip states on that inherited decomposition, or along controlled families with \(\delta^{\mathrm M}_{I_-:J:I_+}(\varepsilon_J)\to 0\) on one fixed strip model. N2 remains the separate half-sided inclusion premise \textbf{T6}, and the final identification of the half-line density with a local continuum \(T_{kk}\) remains a scaling-limit EFT premise under \textbf{T8}. Thus the null bridge now uses the same theorematic center decomposition as the spatial collar branch whenever center transfer and decomposition inheritance hold, but it does not claim a fixed-cutoff proof of half-sided inclusion or of a local continuum stress tensor.
+The c.10-local bridge is now closed exactly at the weak-tail-generator stage. What has been proved here is the fixed-cutoff transfer of cut-center data to null strips, the exact-or-controlled four-term strip relation on one inherited strip model, and endpoint-Lipschitz control of the renormalized half-line family strong enough to define the weak tail generator \(q(a,\Omega)\). The density upgrade of \(q\), the half-sided modular inclusion step, the Borchers promotion to a genuine positive translation generator, and the continuum null-stress identification remain explicit downstream c.11--c.13 tasks rather than hidden proof sketches.
 \end{remark}
 \subsection{Generalized entropy and the Einstein equation}
 

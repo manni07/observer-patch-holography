@@ -46,6 +46,8 @@ dans la limite d'échelle, clôture de jauge du Modèle Standard sous le paquet 
 et trois générations sur la branche MAR réalisée, implémentation quantitative à deux entrées, et
 branches quantitatives les plus fortes adossées à des suppléments numériques.
 
+Dans l'ensemble synchronisé actuel des articles, le durcissement du pont modulaire nul a supprimé toute hypothèse séparée de propagation quasi-locale ou de contrôle des extrémités dans la route gravitationnelle à cutoff fixe : la branche MaxEnt porte désormais ces contrôles en interne jusqu'au stade du générateur de queue faible. Ce qui reste explicite sur cette route, ce sont les prémisses en aval d'inclusion modulaire à demi-côté et d'identification relativiste du stress nul.
+
 - **PDF (article compact de soumission) :** [Recovering Relativity and Standard Model Structure from Observer-Overlap Consistency](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf)
 - **Source LaTeX :** [recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.tex](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.tex)
 
