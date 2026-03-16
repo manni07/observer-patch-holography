@@ -166,8 +166,9 @@ Here is the high-level chain we use later:
 3. Geometric modular flow gives **Lorentz kinematics** on the screen.
 4. **Entanglement equilibrium** plus a local stress tensor yields the conditional scaling-limit Einstein branch.
    The stress tensor can be introduced via a UV CFT limit on small caps, or
-   built internally from null-surface modular additivity and half-sided
-   inclusions.
+   built internally from null-surface modular additivity, the derived
+   half-sided modular pair, and the resulting positive null-translation
+   generator.
 
 This chapter builds the time ingredient. The next sections show how it feeds into gravity.
 
