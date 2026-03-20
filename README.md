@@ -532,6 +532,8 @@ As summarized in the status matrix above, the framework derives Lorentz kinemati
 
 ### Book Chapters
 
+Core explanatory chapters
+
 | Chapter | Title | Topic |
 |---------|-------|-------|
 | [Prologue](book/prologue.md) | Prologue | Setting the stage |
@@ -547,13 +549,28 @@ As summarized in the status matrix above, the framework derives Lorentz kinemati
 | [10](book/chapter-10-error-correction.md) | Error Correction | Reality as a quantum code |
 | [11](book/chapter-11-maxent.md) | MaxEnt | Entropy, time, and modular flow |
 | [12](book/chapter-12-symmetry.md) | Symmetry | Conservation laws from consistency |
+
+Physics branch chapters
+
+| Chapter | Title | Topic |
+|---------|-------|-------|
 | [13](book/chapter-13-desitter.md) | De Sitter | Our universe's holographic screen |
 | [14](book/chapter-14-standard-model.md) | Standard Model | Particles from gluing constraints |
 | [15](book/chapter-15-relativity.md) | Relativity | Spacetime from modular time |
 | [16](book/chapter-16-matter.md) | Matter | Classical physics as emergent stability |
 | [17](book/chapter-17-darwin.md) | Darwin's Laws | Laws as evolutionary survivors |
+
+Interpretive chapters
+
+| Chapter | Title | Topic |
+|---------|-------|-------|
 | [18](book/chapter-18-synthesis.md) | Synthesis | Putting it all together |
 | [19](book/chapter-19-metaphysics.md) | Metaphysics | Qualia and the hard problem |
+
+Speculative epilogue
+
+| Chapter | Title | Topic |
+|---------|-------|-------|
 | [Epilogue](book/epilogue.md) | Epilogue | One last surprise |
 
 ## Building Your Own Reality Simulator
