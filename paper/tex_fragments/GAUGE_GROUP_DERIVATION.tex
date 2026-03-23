@@ -1,13 +1,13 @@
 \section{Gauge Group Derivation: Standard Model Closure under Extended MAR}\label{gauge-group-derivation-standard-model-closure-under-extended-mar}
 
 \begin{quote}
-OPH is an observer-centric reconstruction program for fundamental physics. In the current implementation it uses two external inputs (pixel area and screen capacity) together with structural axioms and explicit regulator/scaling premises. This part focuses only on the conditional compact-gauge branch and the explicit MAR selector that acts on the admissible low-energy class.
+OPH is an observer-centric reconstruction program for fundamental physics. The quantitative branches discussed in this paper use two external inputs (pixel area and screen capacity) together with structural axioms and explicit regulator/scaling premises. This part focuses only on the conditional compact-gauge branch and the explicit MAR selector that acts on the admissible low-energy class.
 \end{quote}
 
 \begin{quote}
 \textbf{Integrated derivation within this manuscript}: this part extends the core OPH framework in Part I.
 
-\textbf{Abstract.} We show that, once Tannaka/DR reconstruction is applied to the refinement-stable edge-sector colimit, the extended gauge-selection package \(T_{\mathrm{ext}}\), meaning the canonical five axioms together with the explicit transportability premise \([z]=0\) and the gauge-reconstruction hypotheses of Part I, selects the Standard Model connected Lie gauge-sector factors once the admissible class includes one connected abelian charge factor. On the realized admissible branch, the CP/UV window and MAR fix the generation count, Witten's \(\mathrm{SU}(2)\) anomaly parity then fixes the color count, and the realized hypercharge lattice fixes the global gauge quotient:
+\textbf{Overview.} We show that, once Tannaka/DR reconstruction is applied to the refinement-stable edge-sector colimit, the extended gauge-selection package \(T_{\mathrm{ext}}\), meaning the five OPH axioms together with the explicit transportability premise \([z]=0\) and the gauge-reconstruction hypotheses of Part I, selects the Standard Model connected Lie gauge-sector factors once the admissible class includes one connected abelian charge factor. On the realized admissible branch, the CP/UV window and MAR fix the generation count, Witten's \(\mathrm{SU}(2)\) anomaly parity then fixes the color count, and the realized hypercharge lattice fixes the global gauge quotient:
 
 \[G_{\mathrm{phys}} = \frac{SU(3) \times SU(2) \times U(1)}{\mathbb{Z}_6}, \qquad N_g = 3, \qquad N_c = 3.\]
 
@@ -16,11 +16,11 @@ Within the positive-dimensional connected Lie admissible class, no other gauge-s
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{1. Premise Summary}\label{1-premise-summary}
+\subsection{Premise Summary}\label{1-premise-summary}
 
-\subsubsection{1.1 The Extended Theory}\label{11-the-extended-theory}
+\subsubsection{The Extended Theory}\label{11-the-extended-theory}
 
-The derivation proceeds within the extended gauge-selection package \(T_{\mathrm{ext}}\): the canonical five-axiom package from Part I, the explicit loop-coherent gluing premise \([z]=0\), and the refinement-stable gauge-reconstruction hypotheses used in Theorem 6.1.
+The derivation proceeds within the extended gauge-selection package \(T_{\mathrm{ext}}\): the five OPH axioms from Part I, the explicit loop-coherent gluing premise \([z]=0\), and the refinement-stable gauge-reconstruction hypotheses used in Theorem 6.1.
 
 The roles of each component:
 
@@ -32,27 +32,27 @@ Component & Content & Reference \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\textbf{Canonical 1--2} & Screen Net and Overlap Consistency & Part I of this manuscript §1.3 \\
-\textbf{Canonical 3} & Local MaxEnt and Refinement Stability & Part I of this manuscript §1.3--§1.4 \\
-\textbf{Canonical 4} & Recoverable Generalized Entropy & Part I of this manuscript §1.3 \\
-\textbf{Canonical 5} & Minimal Admissible Realization & Part I of this manuscript §1.3 and this document §3 \\
-\textbf{R0}, \textbf{R1} & Finite-dimensional regulator and boundary gauge structure & Part I of this manuscript §1.4, §2.5 \\
-\textbf{\([z]=0\)} & Loop-coherent gluing / DHR transportability & Part I of this manuscript §6.6, Prop. 6.1a \\
-\textbf{Theorem 6.1 hypotheses} & Rigid symmetric \(C^*\) colimit category with faithful fiber functor & Part I of this manuscript §6.1 \\
+\textbf{Axioms 1--2} & Screen Net and Overlap Consistency & Part I of this manuscript \S{}1.3 \\
+\textbf{Axiom 3} & Local MaxEnt and Refinement Stability & Part I of this manuscript \S{}1.3--\S{}1.4 \\
+\textbf{Axiom 4} & Recoverable Generalized Entropy & Part I of this manuscript \S{}1.3 \\
+\textbf{Axiom 5} & Minimal Admissible Realization & Part I of this manuscript \S{}1.3 and this document \S{}3 \\
+\textbf{R0}, \textbf{R1} & Finite-dimensional regulator and boundary gauge structure & Part I of this manuscript \S{}1.4, \S{}2.5 \\
+\textbf{\([z]=0\)} & Loop-coherent gluing / DHR transportability & Part I of this manuscript \S{}6.6, Prop. 6.1a \\
+\textbf{Theorem 6.1 hypotheses} & Rigid symmetric \(C^*\) colimit category with faithful fiber functor & Part I of this manuscript \S{}6.1 \\
 \end{longtable}
 }
 
-\subsubsection{1.2 What the Core Already Proves}\label{12-what-the-core-already-proves}
+\subsubsection{What the Core Proves}\label{12-what-the-core-proves}
 
-From the canonical OPH package together with the regulator premises R0 and R1, the following is established (Part I of this manuscript §6.1):
+From the canonical OPH package together with the regulator premises R0 and R1, the following is established (Part I of this manuscript \S{}6.1):
 
 \textbf{Theorem 6.1 (Tannaka/DR reconstruction).} At each regulator scale one obtains a finite tensor category of transportable edge charges; the refinement-stable directed colimit \(\mathsf{Sect}_\infty\) is the category used for reconstruction. If \(\mathsf{Sect}_\infty\) is a rigid symmetric \(C^*\) tensor category with a faithful fiber functor, then there exists a compact group \(G\), unique up to isomorphism, such that
 
 \[\mathsf{Sect}_\infty \simeq \mathrm{Rep}(G), \qquad G = \mathrm{Aut}_\otimes(\mathcal{F}).\]
 
-This proves \emph{existence} of a compact gauge group but does not identify \emph{which} compact group is realized. The present document determines the connected Lie realization selected by the extended admissibility package.
+This proves \emph{existence} of a compact gauge group but does not identify \emph{which} compact group is realized. The remainder of this part determines the connected Lie realization selected by the extended admissibility package.
 
-\subsubsection{1.3 The Transportability Premise}\label{13-the-transportability-premise}
+\subsubsection{The Transportability Premise}\label{13-the-transportability-premise}
 
 \textbf{Proposition 6.1a.} DHR transportability , the condition that charges can be moved between patches without changing fusion rules , is equivalent to the vanishing of the central obstruction class:
 
@@ -62,7 +62,7 @@ This is an internal constraint on the sector structure, not an external physical
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{2. Admissibility Conditions}\label{2-admissibility-conditions}
+\subsection{Admissibility Conditions}\label{2-admissibility-conditions}
 
 An \textbf{OPH-realizable gauge sector package} \(\mathfrak S = (G, \text{matter content})\) consists of a compact gauge group \(G\) reconstructed via Tannaka-Krein from the refinement-stable edge-sector category (Theorem 6.1) together with its associated chiral matter spectrum. A sector package \(\mathfrak S\) is \textbf{admissible} if it satisfies all of the following conditions:
 
@@ -92,7 +92,7 @@ The gauge sector is free of all perturbative anomalies (ABJ anomaly cancellation
 
 The MaxEnt/refinement-stable state supports light charged fermions without fine-tuning. This requires the matter content to be \emph{chiral} , i.e., left-handed and right-handed fermions carry different gauge representations , so that vector-like mass terms are forbidden by gauge symmetry.
 
-\emph{Rationale:} Lemma 6.7 (Part I of this manuscript §6.3) shows that refinement stability forbids unprotected relevant operators. A gauge-invariant Dirac mass term is relevant; if both chiralities are in conjugate representations, the mass term is allowed and drives the fermions to the cutoff. Corollary 6.8 then selects chiral content as the natural refinement-stable option.
+\emph{Rationale:} Lemma 6.7 (Part I of this manuscript \S{}6.3) shows that refinement stability forbids unprotected relevant operators. A gauge-invariant Dirac mass term is relevant; if both chiralities are in conjugate representations, the mass term is allowed and drives the fermions to the cutoff. Corollary 6.8 then selects chiral content as the natural refinement-stable option.
 
 \subsubsection{(iv) Single-Higgs Yukawa-completable}\label{iv-single-higgs-yukawa-completable}
 
@@ -114,7 +114,7 @@ The weak gauge sector (the factor carrying the pseudoreal doublet) is asymptotic
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{3. Selection Axiom MAR}\label{3-selection-axiom-mar}
+\subsection{Selection Axiom MAR}\label{3-selection-axiom-mar}
 
 \textbf{Selection Axiom MAR (Minimal Admissible Realization).} Among all OPH-realizable sector packages \(\mathfrak S\) that satisfy admissibility conditions (i)--(vi), the realized low-energy package is the \textbf{lexicographically minimal} one under the complexity vector
 
@@ -134,7 +134,7 @@ where:
   \(N_g\) is the \textbf{number of chiral generations}.
 \end{itemize}
 
-Lexicographic minimality means: first minimize \(\chi_{\mathrm{cpl}}\); among ties, minimize \(N_{\mathrm{nonab}}\); among further ties, minimize \(N_c\); among final ties, minimize \(N_g\). The object minimized here is the full sector package \(\mathfrak S\), not the bare tensor category alone. MAR is therefore an explicit selector on an already-admissible class, not a theorem derived from the earlier axioms.
+Lexicographic minimality means: first minimize \(\chi_{\mathrm{cpl}}\); among ties, minimize \(N_{\mathrm{nonab}}\); among further ties, minimize \(N_c\); among final ties, minimize \(N_g\). The object minimized here is the full sector package \(\mathfrak S\), not the bare tensor category alone. MAR is therefore an explicit selector on the admissible class, not a theorem derived from the earlier axioms.
 
 \textbf{Key properties of MAR:}
 
@@ -143,7 +143,7 @@ Lexicographic minimality means: first minimize \(\chi_{\mathrm{cpl}}\); among ti
 \item
   \emph{It is a selection rule, not a dynamics.} MAR acts on an independently defined admissible class; it does not modify the OPH equations of motion.
 \item
-  \emph{It is not "minimalism in general."} MAR only selects among sectors that already pass all six admissibility filters. Plain minimality (smallest \(G\)) would yield \(U(1)\) or \(SU(2)\), which fail conditions (iii)--(v). The admissibility conditions do the heavy lifting; MAR breaks the remaining degeneracy.
+  \emph{It is not "minimalism in general."} MAR only selects among sectors that pass all six admissibility filters. Plain minimality (smallest \(G\)) would yield \(U(1)\) or \(SU(2)\), which fail conditions (iii)--(v). The admissibility conditions do the heavy lifting; MAR breaks the remaining degeneracy.
 \item
   \emph{It is powerful.} Product gauge structure and the specific factors \(SU(3) \times SU(2) \times U(1)\) follow from MAR applied to the admissible class; on the realized branch the CP/UV window and MAR then give \(N_g = 3\), and Witten parity with that realized generation count gives \(N_c = 3\).
 \end{enumerate}
@@ -152,7 +152,7 @@ Lexicographic minimality means: first minimize \(\chi_{\mathrm{cpl}}\); among ti
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{4. Main Theorem}\label{4-main-theorem}
+\subsection{Main Theorem}\label{4-main-theorem}
 
 \textbf{Theorem (Standard Model closure under extended admissibility).} Under the extended gauge-selection package \(T_{\mathrm{ext}}\), together with the refinement-stable reconstruction hypotheses of Theorem 6.1:
 
@@ -160,11 +160,11 @@ Lexicographic minimality means: first minimize \(\chi_{\mathrm{cpl}}\); among ti
 
 The realized counting chain is sequential rather than joint: the CP/UV admissibility window and MAR first select \(N_g = 3\), and Witten's \(\mathrm{SU}(2)\) anomaly parity then fixes \(N_c = 3\).
 
-\emph{The proof is given in §5--§7 below.}
+\emph{The proof is given in \S{}5--\S{}7 below.}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{5. Proof: Gauge Group}\label{5-proof-gauge-group}
+\subsection{Proof: Gauge Group}\label{5-proof-gauge-group}
 
 The proof proceeds in five steps. Steps 1--4 determine the connected gauge group. Step 5 fixes the global structure.
 
@@ -182,7 +182,7 @@ The premise \([z] = 0\) ensures that this reconstruction is global: charges are 
 
 \textbf{Lemma 5.1.} Any admissible sector must contain at least two genuinely different nonabelian charge types: one pseudoreal and one complex.
 
-\emph{Proof.} Admissibility condition (iii) requires light chiral matter. By Corollary 6.8 (Part I of this manuscript §6.3), refinement stability forces the matter content to be chiral. To support chiral fermions that can form gauge-invariant Yukawa couplings with a single Higgs doublet (condition iv), the gauge group must admit both:
+\emph{Proof.} Admissibility condition (iii) requires light chiral matter. By Corollary 6.8 (Part I of this manuscript \S{}6.3), refinement stability forces the matter content to be chiral. To support chiral fermions that can form gauge-invariant Yukawa couplings with a single Higgs doublet (condition iv), the gauge group must admit both:
 
 \begin{itemize}
 \tightlist
@@ -248,7 +248,7 @@ The continuous symmetry group with commuting color and weak actions is therefore
 
 \[S(U(3) \times U(2)) \cong \frac{SU(3) \times SU(2) \times U(1)}{\text{finite center}}.\]
 
-Now compute the commutant:
+Compute the commutant:
 
 \begin{itemize}
 \tightlist
@@ -264,7 +264,7 @@ MAR selects the minimal \(\chi_{\mathrm{cpl}}\), so extra factors are excluded. 
 
 \subsubsection{\texorpdfstring{Step 5: The global quotient is \(\mathbb{Z}_6\)}{Step 5: The global quotient is \textbackslash mathbb\{Z\}\_6}}\label{step-5-the-global-quotient-is-mathbbz_6}
 
-\textbf{Proposition 5.8 (Z₆ quotient from hypercharge quantization).} If the realized matter spectrum has hypercharges quantized in sixths, then the subgroup of \(SU(3) \times SU(2) \times U(1)\) acting trivially on all physical states is exactly \(\mathbb{Z}_6\).
+\textbf{Proposition 5.8 (Z\textsubscript{6} quotient from hypercharge quantization).} If the realized matter spectrum has hypercharges quantized in sixths, then the subgroup of \(SU(3) \times SU(2) \times U(1)\) acting trivially on all physical states is exactly \(\mathbb{Z}_6\).
 
 \emph{Proof.} The SM matter content with hypercharge assignments \((Q_L, u_R, d_R, L_L, e_R, H)\) has hypercharges \(Y \in \{1/6, 2/3, -1/3, -1/2, -1, 1/2\}\), all in \(\frac{1}{6}\mathbb{Z}\). The center of \(SU(3) \times SU(2) \times U(1)\) is \(\mathbb{Z}_3 \times \mathbb{Z}_2 \times U(1)\). The subgroup acting trivially on all realized representations is generated by
 
@@ -284,11 +284,11 @@ The hypercharge quantization itself follows from anomaly cancellation (condition
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{6. Proof: Number of Colors}\label{6-proof-number-of-colors}
+\subsection{Proof: Number of Colors}\label{6-proof-number-of-colors}
 
 \textbf{Theorem (N\_c = 3).} Under \(T_{\mathrm{ext}}\), the rank of the color factor is \(N_c = 3\).
 
-\textbf{Proof.} The gauge group derivation (§5) already fixes the color factor as \(SU(3)\) , i.e., \(N_c = 3\) , through the minimal coupled-carrier argument (Lemma 5.2). We give here the independent confirmation from anomaly constraints + MAR.
+\textbf{Proof.} The gauge group derivation (\S{}5) fixes the color factor as \(SU(3)\), i.e. \(N_c = 3\), through the minimal coupled-carrier argument (Lemma 5.2). We give here the independent confirmation from anomaly constraints plus MAR.
 
 \textbf{Step 1: Witten anomaly constrains N\_c once N\_g is fixed.}
 
@@ -312,13 +312,13 @@ Among the remaining candidates \(\{3, 5, 7, \ldots\}\), the SM-like quotient fam
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{7. Proof: Number of Generations}\label{7-proof-number-of-generations}
+\subsection{Proof: Number of Generations}\label{7-proof-number-of-generations}
 
 \textbf{Theorem (N\_g = 3).} Under \(T_{\mathrm{ext}}\), the number of chiral generations is \(N_g = 3\).
 
 \textbf{Proof.}
 
-\textbf{Step 1: CP violation gives N\_g ≥ 3.}
+\textbf{Step 1: CP violation gives N\_g \ensuremath{\geq} 3.}
 
 Admissibility condition (v) requires intrinsic CP violation. The number of physical CP-violating phases in an \(N_g \times N_g\) CKM matrix is
 
@@ -336,7 +336,7 @@ Admissibility condition (v) requires intrinsic CP violation. The number of physi
 
 Therefore \(N_g \geq 3\).
 
-\textbf{Step 2: Asymptotic freedom gives N\_g ≤ 5.}
+\textbf{Step 2: Asymptotic freedom gives N\_g \ensuremath{\leq} 5.}
 
 Admissibility condition (vi) requires \(SU(2)_L\) to be asymptotically free. With one complex Higgs doublet, the one-loop beta function coefficient is
 
@@ -346,7 +346,7 @@ Asymptotic freedom requires \(b_{SU(2)} > 0\):
 
 \[N_g(N_c + 1) < \frac{43}{2}.\]
 
-Since the color-type role already forces \(N_c \ge 3\), one has \(N_c + 1 \ge 4\). Therefore \(4N_g < \frac{43}{2}\), so \(N_g \leq 5\).
+Since the color-type role forces \(N_c \ge 3\), one has \(N_c + 1 \ge 4\). Therefore \(4N_g < \frac{43}{2}\), so \(N_g \leq 5\).
 
 Combining: \(3 \leq N_g \leq 5\).
 
@@ -356,7 +356,7 @@ Among the admissible candidates \(\{3, 4, 5\}\), MAR\textquotesingle s complexit
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{8. Corollaries}\label{8-corollaries}
+\subsection{Corollaries}\label{8-corollaries}
 
 \subsubsection{Corollary 1: No gauge-mediated proton decay}\label{corollary-1-no-gauge-mediated-proton-decay}
 
@@ -390,7 +390,7 @@ Among the admissible candidates \(\{3, 4, 5\}\), MAR\textquotesingle s complexit
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{9. Complete Derivation Chain}\label{9-complete-derivation-chain}
+\subsection{Complete Derivation Chain}\label{9-complete-derivation-chain}
 
 The gauge-sector chain established in this fragment is:
 
@@ -427,20 +427,20 @@ This is the gauge-sector closure obtained from the extended axiom set on the sta
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{10. Future Work}\label{10-future-work}
+\subsection{Future Work}\label{10-future-work}
 
 The gauge-group derivation presented here determines the symmetry structure of the Standard Model. Several related questions are addressed in companion documents:
 
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Fermion mass hierarchy and Yukawa couplings} , see Part V of this manuscript §12
+  \textbf{Fermion mass hierarchy and Yukawa couplings} , see Part V of this manuscript \S{}12
 \item
-  \textbf{Cosmological constant} , see Part V of this manuscript §14
+  \textbf{Cosmological constant} , see Part V of this manuscript \S{}14
 \item
   \textbf{Full transmutation chain} , see Part V of this manuscript Appendix A.3
 \item
-  \textbf{Heat-kernel parameter \(t\) from UV microphysics} , see Part I of this manuscript §6.13
+  \textbf{Heat-kernel parameter \(t\) from UV microphysics} , see Part I of this manuscript \S{}6.13
 \item
   \textbf{Particle mass spectrum from pixel geometry} , see Part III of this manuscript
 \end{itemize}

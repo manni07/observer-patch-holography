@@ -80,6 +80,8 @@ Others have spoken of "strange loops," reality creating itself through self-refe
 
 But there's a deeper version of this idea. Reality may not just permit self-reference; it may also invite a strange-loop interpretation.
 
+This is also the point where OPH intersects most directly with what popular culture calls **simulation theory**. The framework does not picture the universe as a videogame running on somebody else's laptop. It instead treats physical reality itself as a self-consistent information process, and that is the metaphysical continuation behind the OPH theory-of-everything claim.
+
 Consider the trajectory: reality is computational. Within this computation, physical evolution produces complex structures. Biological evolution produces minds. Memetic evolution produces ideas. Among these ideas, the understanding of reality's computational nature eventually emerges. Armed with this understanding, observers can simulate reality itself.
 
 This chapter explores the strange-loop hypothesis: **reality may evolve observers who discover how reality works and simulate it, closing the loop of self-creation**.

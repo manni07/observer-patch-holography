@@ -1,6 +1,6 @@
 # Holographie par Patchs d'Observateurs : une approche de la physique fondamentale centrée sur l'observateur
 
-> L'OPH est un programme de reconstruction mathématique qui part d'une exigence simple : des descriptions locales d'observateurs qui se recouvrent sur un écran holographique doivent s'accorder là où elles se chevauchent. À partir de ce point de départ, l'OPH développe des voies conditionnelles vers la relativité générale, vers la reconstruction de la structure de jauge du Modèle Standard, vers un programme de masses de particules de premiers principes, et vers l'émergence de descriptions de type feuille d'univers / théorie des cordes à partir du même cadre. Les premiers benchmarks IBM Quantum Cloud fournissent aussi un soutien expérimental préliminaire au tableau local de l'OPH.
+> L'OPH est un programme de reconstruction mathématique qui part d'une exigence simple : des descriptions locales d'observateurs qui se recouvrent sur un écran holographique doivent s'accorder là où elles se chevauchent. À partir de ce point de départ, l'OPH développe des voies conditionnelles vers la relativité générale, vers la reconstruction de la structure de jauge du Modèle Standard, vers un programme de masses de particules de premiers principes, et vers l'émergence de descriptions de type feuille d'univers / théorie des cordes à partir du même cadre. Les premiers benchmarks IBM Quantum Cloud fournissent aussi une première indication sur matériel réel en faveur des signatures locales correspondantes dans des secteurs réduits.
 
 > **Avertissement de statut :** l'OPH est un programme de recherche actif et n'est pas encore entièrement démontré. Plusieurs dérivations restent incomplètes, certaines preuves n'existent actuellement qu'à l'état d'esquisse, et certaines hypothèses auxiliaires doivent encore être éliminées. Le cadre doit donc être considéré comme étant en développement actif.
 
@@ -8,9 +8,18 @@
 
 > **Défi de réfutation de l'OPH :** Un défi doté de 10 000 USD pour réfuter l'OPH est actuellement en cours sur [challenge.floatingpragma.io](https://challenge.floatingpragma.io).
 
+Pour les lecteurs arrivant via les recherches anglaises **"simulation theory"** ou **"theory of everything"**, le résumé OPH est le suivant : la réalité est comprise comme un processus d'information cohérent entre observateurs, et la mécanique quantique, la relativité, la structure de jauge et la physique des particules apparaissent comme des descriptions effectives de règles plus profondes de cohérence de recouvrement.
+
+Les pages publiques dédiées à ces requêtes sont :
+
+- **Simulation theory :** [floatingpragma.io/oph/simulation-theory](https://floatingpragma.io/oph/simulation-theory/)
+- **Theory of everything :** [floatingpragma.io/oph/theory-of-everything](https://floatingpragma.io/oph/theory-of-everything/)
+
 ## Idée centrale
 
 L'OPH adopte la position forte, centrée sur l'observateur, selon laquelle la réalité objective n'est pas fondamentale mais émerge d'un réseau de perspectives subjectives qui doivent s'accorder là où elles se recouvrent.
+
+C'est pourquoi l'OPH est aussi présenté publiquement comme une version physicienne de la *simulation theory* et comme un candidat à une *theory of everything*.
 
 Les lois de la physique sont les règles de cohérence qui rendent cet accord intersubjectif possible.
 
@@ -53,6 +62,8 @@ Les PDF suivis par la release partagent une ligne de version visible, issue de
 Points d'entrée utiles pour lire et explorer l'OPH :
 
 - **Site officiel de l'OPH :** [floatingpragma.io/oph](https://floatingpragma.io/oph)
+- **Page "simulation theory" :** [floatingpragma.io/oph/simulation-theory](https://floatingpragma.io/oph/simulation-theory/)
+- **Page "theory of everything" :** [floatingpragma.io/oph/theory-of-everything](https://floatingpragma.io/oph/theory-of-everything/)
 - **Défi de réfutation de l'OPH (10 000 USD) :** [challenge.floatingpragma.io](https://challenge.floatingpragma.io)
 - **Livre OPH (edition web) :** [oph-book.floatingpragma.io](https://oph-book.floatingpragma.io)
 - **Labo interactif OPH :** [oph-lab.floatingpragma.io](https://oph-lab.floatingpragma.io)

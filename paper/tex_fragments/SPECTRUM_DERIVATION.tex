@@ -3,14 +3,14 @@
 \begin{quote}
 \textbf{Integrated derivation within this manuscript}: this part applies the OPH framework developed in Part I.
 
-\textbf{Abstract.} This part documents the quantitative OPH program in its current implementation. The calculation uses two external inputs: the pixel area \(P \equiv a_{\text{cell}}/\ell_P^2 = 1.63094\), calibrated from the gauge coupling sector via the screen\textquotesingle s entropy-matching condition (§5.4 of Part I of this manuscript), and the total screen capacity \(\log(\dim\mathcal{H}) \sim 10^{122}\), which enters only in the cosmological/neutrino branch (§14 of Part V of this manuscript). Every other quantity appearing in the derivation chain is either a mathematical constant, a consequence of the gauge group (itself selected from a refinement-stable edge-sector category by Tannaka-Krein/DR reconstruction plus the extended MAR admissibility package, §6.1--§6.2 of Part I of this manuscript), or a derived structural integer on the realized branch (\(N_g = 3\), \(N_c = 3\), \(\varepsilon = 1/6\), \(\delta = 2/9\)). Outputs are classified by epistemic status: quantities flowing from the calibrated gauge couplings are calibration-sector consistency checks; the Higgs/top critical-surface branch is the main independent quantitative output; charged-lepton, flavor-texture, neutrino, and hadron branches are weaker phenomenological or downstream numerical continuations. A complete audit of all constants and the full epistemic classification appear in §1A--§1B below.
+\textbf{Overview.} This part documents the quantitative OPH branches used in this paper. The calculation uses two external inputs: the pixel area \(P \equiv a_{\text{cell}}/\ell_P^2 = 1.63094\), calibrated from the gauge coupling sector via the screen\textquotesingle s entropy-matching condition (\S{}5.4 of Part I of this manuscript), and the screen capacity \(N_{\mathrm{scr}} \equiv \log(\dim\mathcal{H}_{\text{tot}}) \sim 10^{122}\), which enters only in the cosmological/neutrino branch (\S{}14 of Part V of this manuscript). Every other quantity appearing in the derivation chain is either a mathematical constant, a consequence of the gauge group (itself selected from a refinement-stable edge-sector category by Tannaka-Krein/DR reconstruction plus the extended MAR admissibility package, \S{}6.1--\S{}6.2 of Part I of this manuscript), or a derived structural integer on the realized branch (\(N_g = 3\), \(N_c = 3\), \(\varepsilon = 1/6\), \(\delta = 2/9\)). Outputs are classified by epistemic status: quantities flowing from the calibrated gauge couplings are calibration-sector consistency checks; the Higgs/top critical-surface branch is the main independent quantitative output; charged-lepton, flavor-texture, neutrino, and hadron branches are weaker phenomenological or downstream numerical continuations. A complete audit of all constants and the full epistemic classification appear in \S{}1A--\S{}1B below.
 \end{quote}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{1. Inputs and Contract}\label{1-inputs-and-contract}
+\subsection{Inputs and Contract}\label{1-inputs-and-contract}
 
-\subsubsection{1.1 Physical Inputs}\label{11-physical-inputs}
+\subsubsection{Physical Inputs}\label{11-physical-inputs}
 
 The entire derivation pipeline uses exactly \textbf{two} physical inputs:
 
@@ -22,12 +22,12 @@ Input & Symbol & Value & Origin \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Pixel area constant & \(P \equiv a_{\text{cell}}/\ell_P^2\) & 1.63094 & \textbf{Calibrated} from gauge couplings via entropy matching (§5.4 of Part I; see §1B) \\
-Screen capacity & \(\log(\dim\mathcal{H}_{\text{tot}})\) & \(\sim 10^{122}\) & Inferred from observed cosmological constant \\
+Pixel area constant & \(P \equiv a_{\text{cell}}/\ell_P^2\) & 1.63094 & \textbf{Calibrated} from gauge couplings via entropy matching (\S{}5.4 of Part I; see \S{}1B) \\
+Screen capacity & \(N_{\mathrm{scr}} \equiv \log(\dim\mathcal{H}_{\text{tot}})\) & \(\sim 10^{122}\) & Inferred from observed cosmological constant \\
 \end{longtable}
 }
 
-\subsubsection{1.2 What Counts as "Derived"}\label{12-what-counts-as-derived}
+\subsubsection{What Counts as "Derived"}\label{12-what-counts-as-derived}
 
 Everything else entering the computation falls into one of three categories:
 
@@ -41,17 +41,17 @@ Everything else entering the computation falls into one of three categories:
   \textbf{Numerical-method parameters}: loop order for RG running (1-loop SM for critical surface, 4-loop MSbar for \(\Lambda_{\overline{\text{MS}}}\)), lattice sizes and statistics for hadron ratios. These affect precision but not the prediction logic.
 \end{enumerate}
 
-\subsubsection{1.3 No-Leakage Guarantee}\label{13-no-leakage-guarantee}
+\subsubsection{No-Leakage Guarantee}\label{13-no-leakage-guarantee}
 
 The computation code enforces a runtime mutation test: after computing all outputs, the PDG reference table is scrambled and outputs are recomputed. Any change triggers an assertion failure. This verifies that no PDG values leak into the computation pipeline beyond the initial \(P\) calibration. Implemented in \texttt{oph\_predict\_compare.py::\_assert\_pdg\_not\_used()}.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{1A. Complete Audit of All Constants}\label{1a-complete-audit-of-all-constants}
+\subsection{Complete Audit of All Constants}\label{1a-complete-audit-of-all-constants}
 
-\textbf{Purpose.} This section catalogs \emph{every} named constant, integer, or coefficient appearing anywhere in the prediction code or derivation chain, and explains its origin. The goal is to demonstrate that nothing has been "smuggled in"; every value is either (I) one of the two external inputs of the current implementation, (II) a derived structural quantity from the OPH axioms and stated premises, (III) a mathematical/group-theoretic constant uniquely fixed by the gauge group, or (IV) a standard QFT result that any textbook reproduces from the Lagrangian.
+\textbf{Purpose.} This section catalogs \emph{every} named constant, integer, or coefficient appearing anywhere in the prediction code or derivation chain, and explains its origin. The goal is to demonstrate that nothing has been "smuggled in"; every value is either (I) one of the two external inputs used in these quantitative branches, (II) a derived structural quantity from the OPH axioms and stated premises, (III) a mathematical/group-theoretic constant uniquely fixed by the gauge group, or (IV) a standard QFT result that any textbook reproduces from the Lagrangian.
 
-\subsubsection{1A.1 The Physical Input}\label{1a1-the-physical-input}
+\subsubsection{The Physical Input}\label{1a1-the-physical-input}
 
 {\def\LTcaptype{none} % do not increment counter
 \setlength{\LTleft}{0pt}
@@ -66,12 +66,12 @@ Constant & Value & Code variable & Origin & Status \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\(P \equiv a_{\text{cell}}/\ell_P^2\) & 1.63094 & \texttt{P\_DEFAULT} & The pixel area: area of one UV cell on the holographic screen in Planck units. Extracted from the entropy-matching condition \(P/4 = \bar{\ell}_{\text{SU(2)}}(t_2) + \bar{\ell}_{\text{SU(3)}}(t_3)\) (§5.4 of Part I of this manuscript). This relation is \emph{derived} from the axioms; the \emph{numerical value} is fixed by requiring consistency with the observed gauge couplings (just as Newton\textquotesingle s constant \(G\) is the one free parameter of general relativity). & \textbf{Single free parameter} for particle physics \\
-\(\log(\dim\mathcal{H}_{\text{tot}})\) & \(\sim 10^{122}\) & \texttt{LOG\_DIM\_H\_DEFAULT} & Total screen capacity = de Sitter entropy \(S_{dS} = 3\pi/(G\Lambda)\). Enters only for neutrino masses and cosmological constant (§14 of Part V of this manuscript). Derived from the screen area law (§5 of Part I of this manuscript). & \textbf{Second input} (cosmology sector only) \\
+\(P \equiv a_{\text{cell}}/\ell_P^2\) & 1.63094 & \texttt{P\_DEFAULT} & The pixel area: area of one UV cell on the holographic screen in Planck units. Extracted from the entropy-matching condition \(P/4 = \bar{\ell}_{\text{SU(2)}}(t_2) + \bar{\ell}_{\text{SU(3)}}(t_3)\) (\S{}5.4 of Part I of this manuscript). This relation is \emph{derived} from the axioms; the \emph{numerical value} is fixed by requiring consistency with the observed gauge couplings (just as Newton\textquotesingle s constant \(G\) is the one free parameter of general relativity). & \textbf{Single free parameter} for particle physics \\
+\(N_{\mathrm{scr}} \equiv \log(\dim\mathcal{H}_{\text{tot}})\) & \(\sim 10^{122}\) & \texttt{LOG\_DIM\_H\_DEFAULT} & Total screen capacity = de Sitter entropy \(S_{dS} = 3\pi/(G\Lambda)\). Enters only for neutrino masses and cosmological constant (\S{}14 of Part V of this manuscript). Derived from the screen area law (\S{}5 of Part I of this manuscript). & \textbf{Second input} (cosmology sector only) \\
 \end{longtable}
 }
 
-\subsubsection{1A.2 Structural Integers Derived from Axioms}\label{1a2-structural-integers-derived-from-axioms}
+\subsubsection{Structural Integers Derived from Axioms}\label{1a2-structural-integers-derived-from-axioms}
 
 {\def\LTcaptype{none} % do not increment counter
 \setlength{\LTleft}{0pt}
@@ -86,20 +86,20 @@ Constant & Value & Code variable & Derivation & Part I of this manuscript ref \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\(N_c\) (colors) & 3 & \texttt{N\_c\_DEFAULT} & Witten\textquotesingle s global SU(2) anomaly requires \(N_c + 1\) SU(2) doublets per generation to be even, so \(N_c\) must be odd. \(N_c = 1\) is excluded (SU(1) trivial). The Selection Axiom MAR (third component of the complexity vector) picks the smallest nontrivial value. \textbf{Result}: \(N_c = 3\). & Theorem 6.14 (§6.9); Part II of this manuscript §6 \\
-\(N_g\) (generations) & 3 & \texttt{N\_g\_DEFAULT} & Three independent constraints narrow the window: (1) CP violation requires \(N_g \geq 3\) (CKM phases \((N_g-1)(N_g-2)/2 > 0\)). (2) Asymptotic freedom of SU(2) with one Higgs doublet requires \(N_g(N_c+1) < 43/2\), giving \(N_g \leq 5\). (3) MAR (fourth component of the complexity vector) picks the smallest value in \(\{3, 4, 5\}\). \textbf{Result}: \(N_g = 3\). & Proposition 6.9 (§6.4); Part II of this manuscript §7 \\
-Gauge group & \((SU(3)\times SU(2)\times U(1))/\mathbb{Z}_6\) & --- & Tannaka-Krein / Doplicher-Roberts reconstruction from a refinement-stable edge-sector category yields a compact gauge group \(G\) (Theorem 6.1, §6.1). The Selection Axiom MAR then selects the SM factors once the admissible class includes one connected abelian charge factor: the minimal coupled carrier \(\mathbb{C}^3 \otimes \mathbb{C}^2\) enforces the product structure, the commutant argument fixes the connected abelian factor to a single \(U(1)\), and the \(\mathbb{Z}_6\) quotient follows from hypercharge quantization (Proposition 6.6). & §6.1--6.2; Part II of this manuscript \\
-\(\beta_{\text{EW}}\) & 4 & \texttt{beta\_ew(N\_c)} & Number of SU(2) doublets per generation = \(N_c\) quark doublets + 1 lepton doublet = \(N_c + 1 = 4\). This is a counting consequence of the Witten anomaly analysis that already fixed \(N_c = 3\). & §6.9, §6.19 \\
-\(\varepsilon\) (Z₆ defect) & \(1/6\) & \texttt{defect\_\allowbreak epsilon\_\allowbreak Z6()} & The SM gauge group has a \(\mathbb{Z}_6\) center quotient. Each unit of \(\mathbb{Z}_6\) defect insertion removes \(\Delta S = \ln 6\) nats of entropy (MaxEnt weighting, Assumption B). The resulting Boltzmann suppression per defect is \(e^{-\ln 6} = 1/6\). \textbf{This is topologically fixed} by the quotient structure, not chosen. & §6.18, §6.21 \\
-\(\delta\) (Koide phase) & \(2/9\) & computed inline & The holonomy phase on generation space: \(\delta = \beta_{\text{EW}} \cdot Y_Q / N_g = (N_c+1)/(2 N_c N_g) = 4/18 = 2/9\). Here \(Y_Q = 1/(2N_c)\) is the quark-doublet hypercharge (fixed by anomaly cancellation) and \(N_g = 3\) is the number of generations. All ingredients are previously derived. Experimental extraction: \(\delta_{\text{exp}} = 0.2222248 \pm 0.0000063\), matching \(2/9 = 0.2222\ldots\) within \(0.4\sigma\). & Proposition 13.3 (§13 of Part V of this manuscript) \\
-Quark exponents & \(n_u = (6,3,0)\), \(n_d = (6,4,2)\) & \texttt{derive\_\allowbreak integer\_\allowbreak vectors()} & Minimal SU(3) hierarchy structure: \(n_{u} = (2N_c, N_c, 0)\) and \(n_d = (2N_c, N_c+1, N_c-1)\). These are the unique sequences that (a) span the range \([0, 2N_c]\) in \(N_g\) steps, (b) have the top quark unsuppressed (\(n_t = 0\)), and (c) match the observed up/down mass ordering under CKM rotation. With \(N_c = 3\): \((6,3,0)\) and \((6,4,2)\). & §6.21 \\
-Lepton exponents & \(n_e = (7,4,3)\) & \texttt{derive\_\allowbreak lepton\_\allowbreak exponents()} & Derived algorithmically: the Koide roots \(r_k^2\) (from \(\delta = 2/9\)) must satisfy \(r_i^2/r_j^2 \approx \varepsilon^{n_i - n_j}\) for all pairs. The code scans integer triples near \((N_g, N_g+1, \ldots)\) and selects the unique triple minimizing the log-ratio residuals. \textbf{Result}: \((n_\tau, n_\mu, n_e) = (3, 4, 7)\). & §6.21, §13 of Part V of this manuscript \\
-CKM angles & \(s_{12} = \varepsilon\), \(s_{23} = \varepsilon^2\), \(s_{13} = \varepsilon^3\) & inline & Powers of \(\varepsilon = 1/6\): the CKM mixing angles scale as \(\varepsilon^{\lvert n_i - n_j \rvert}\) where the exponents are the generation-gap between up-type and down-type defect charges. This is the standard Froggatt-Nielsen scaling. & §6.21 \\
-\(Q\) (Koide ratio) & \(2/3\) & inline & The \(\mathbb{Z}_3\) mode balance on generation space: the circulant Hermitian matrix \(\Phi = a I + b P + b^* P^2\) on 3 generations satisfies \(Q = (1 + 2\lvert b/a \rvert^2)/3 = 2/3\) when \(\lvert b/a \rvert = 1/\sqrt{2}\), i.e., when the singlet and charged \(\mathbb{Z}_3\) modes have equal norm. This is the MaxEnt equilibrium. & Theorem 13.2 (§13 of Part V of this manuscript) \\
+\(N_c\) (colors) & 3 & \texttt{N\_c\_DEFAULT} & Witten\textquotesingle s global SU(2) anomaly requires \(N_c + 1\) SU(2) doublets per generation to be even, so \(N_c\) must be odd. \(N_c = 1\) is excluded (SU(1) trivial). The Selection Axiom MAR (third component of the complexity vector) picks the smallest nontrivial value. \textbf{Result}: \(N_c = 3\). & Theorem 6.14 (\S{}6.9); Part II of this manuscript \S{}6 \\
+\(N_g\) (generations) & 3 & \texttt{N\_g\_DEFAULT} & Three independent constraints narrow the window: (1) CP violation requires \(N_g \geq 3\) (CKM phases \((N_g-1)(N_g-2)/2 > 0\)). (2) Asymptotic freedom of SU(2) with one Higgs doublet requires \(N_g(N_c+1) < 43/2\), giving \(N_g \leq 5\). (3) MAR (fourth component of the complexity vector) picks the smallest value in \(\{3, 4, 5\}\). \textbf{Result}: \(N_g = 3\). & Proposition 6.9 (\S{}6.4); Part II of this manuscript \S{}7 \\
+Gauge group & \((SU(3)\times SU(2)\times U(1))/\mathbb{Z}_6\) & --- & Tannaka-Krein / Doplicher-Roberts reconstruction from a refinement-stable edge-sector category yields a compact gauge group \(G\) (Theorem 6.1, \S{}6.1). The Selection Axiom MAR then selects the SM factors once the admissible class includes one connected abelian charge factor: the minimal coupled carrier \(\mathbb{C}^3 \otimes \mathbb{C}^2\) enforces the product structure, the commutant argument fixes the connected abelian factor to a single \(U(1)\), and the \(\mathbb{Z}_6\) quotient follows from hypercharge quantization (Proposition 6.6). & \S{}6.1--6.2; Part II of this manuscript \\
+\(\beta_{\text{EW}}\) & 4 & \texttt{beta\_ew(N\_c)} & Number of SU(2) doublets per generation = \(N_c\) quark doublets + 1 lepton doublet = \(N_c + 1 = 4\). This is a counting consequence of the Witten anomaly analysis in the structural chain fixing \(N_c = 3\). & \S{}6.9, \S{}6.19 \\
+\(\varepsilon\) (Z\textsubscript{6} defect) & \(1/6\) & \texttt{defect\_\allowbreak epsilon\_\allowbreak Z6()} & The SM gauge group has a \(\mathbb{Z}_6\) center quotient. Each unit of \(\mathbb{Z}_6\) defect insertion removes \(\Delta S = \ln 6\) nats of entropy (MaxEnt weighting, premise ME). The resulting Boltzmann suppression per defect is \(e^{-\ln 6} = 1/6\). \textbf{This is topologically fixed} by the quotient structure, not chosen. & \S{}6.18, \S{}6.21 \\
+\(\delta\) (Koide phase) & \(2/9\) & computed inline & The holonomy phase on generation space: \(\delta = \beta_{\text{EW}} \cdot Y_Q / N_g = (N_c+1)/(2 N_c N_g) = 4/18 = 2/9\). Here \(Y_Q = 1/(2N_c)\) is the quark-doublet hypercharge (fixed by anomaly cancellation) and \(N_g = 3\) is the number of generations. All ingredients are previously derived. Experimental extraction: \(\delta_{\text{exp}} = 0.2222248 \pm 0.0000063\), matching \(2/9 = 0.2222\ldots\) within \(0.4\sigma\). & Proposition 13.3 (\S{}13 of Part V of this manuscript) \\
+Quark exponents & \(n_u = (6,3,0)\), \(n_d = (6,4,2)\) & \texttt{derive\_\allowbreak integer\_\allowbreak vectors()} & Minimal SU(3) hierarchy structure: \(n_{u} = (2N_c, N_c, 0)\) and \(n_d = (2N_c, N_c+1, N_c-1)\). These are the unique sequences that (a) span the range \([0, 2N_c]\) in \(N_g\) steps, (b) have the top quark unsuppressed (\(n_t = 0\)), and (c) match the observed up/down mass ordering under CKM rotation. With \(N_c = 3\): \((6,3,0)\) and \((6,4,2)\). & \S{}6.21 \\
+Lepton exponents & \(n_e = (7,4,3)\) & \texttt{derive\_\allowbreak lepton\_\allowbreak exponents()} & Derived algorithmically: the Koide roots \(r_k^2\) (from \(\delta = 2/9\)) must satisfy \(r_i^2/r_j^2 \approx \varepsilon^{n_i - n_j}\) for all pairs. The code scans integer triples near \((N_g, N_g+1, \ldots)\) and selects the unique triple minimizing the log-ratio residuals. \textbf{Result}: \((n_\tau, n_\mu, n_e) = (3, 4, 7)\). & \S{}6.21, \S{}13 of Part V of this manuscript \\
+CKM angles & \(s_{12} = \varepsilon\), \(s_{23} = \varepsilon^2\), \(s_{13} = \varepsilon^3\) & inline & Powers of \(\varepsilon = 1/6\): the CKM mixing angles scale as \(\varepsilon^{\lvert n_i - n_j \rvert}\) where the exponents are the generation-gap between up-type and down-type defect charges. This is the standard Froggatt-Nielsen scaling. & \S{}6.21 \\
+\(Q\) (Koide ratio) & \(2/3\) & inline & The \(\mathbb{Z}_3\) mode balance on generation space: the circulant Hermitian matrix \(\Phi = a I + b P + b^* P^2\) on 3 generations satisfies \(Q = (1 + 2\lvert b/a \rvert^2)/3 = 2/3\) when \(\lvert b/a \rvert = 1/\sqrt{2}\), i.e., when the singlet and charged \(\mathbb{Z}_3\) modes have equal norm. This is the MaxEnt equilibrium. & Theorem 13.2 (\S{}13 of Part V of this manuscript) \\
 \end{longtable}
 }
 
-\subsubsection{1A.3 Standard QFT Constants (Fixed by the Gauge Group + Matter Content)}\label{1a3-standard-qft-constants-fixed-by-the-gauge-group--matter-content}
+\subsubsection{Standard QFT Constants (Fixed by the Gauge Group + Matter Content)}\label{1a3-standard-qft-constants-fixed-by-the-gauge-group--matter-content}
 
 These constants are \emph{not} inputs , they are uniquely determined mathematical consequences of the gauge group SU(3) \(\times\) SU(2) \(\times\) U(1) with \(N_g\) generations of the standard fermion representations. Any QFT textbook (e.g., Peskin \& Schroeder) derives them from the Lagrangian.
 
@@ -116,8 +116,8 @@ Constant & Value & Code location & What determines it \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-MSSM \(\beta\)-coefficients & \((b_1, b_2, b_3) = (33/5, 1, -3)\) & \texttt{B\_MSSM} & The edge-sector computation (§6.17 of Part I of this manuscript) derives \(\beta\)-function shifts \(\Delta b \approx (2.49, 4.17, 4.01)\) from the heat-kernel vacuum-polarization weighting and the \(\mathbb{Z}_6\) quotient. These match the shifts from SM to MSSM to better than 1\%. The coefficients themselves are standard 1-loop group theory: \(b_i = \sum_R T(R_i)\) summed over all matter multiplets. Using MSSM content is a \emph{consequence} of the edge-sector matching, not an assumption. In the synchronized D11 branch they govern the UV segment above the synchronization scale \(\mu_{\mathrm{sync}}\). \\
-SM 1-loop \(\beta\)-coefficients & standard SM set & \texttt{B\_SM} & Standard 1-loop coefficients for the SM with \(N_g = 3\), namely \((41/10,\,-19/6,\,-7)\). In the synchronized D11 implementation they govern the low-scale transport from \(m_Z\) up to the synchronization scale \(\mu_{\mathrm{sync}}\approx 6.8\times 10^{11}\,\mathrm{GeV}\), not the entire interval up to \(M_U\). \\
+MSSM \(\beta\)-coefficients & \((b_1, b_2, b_3) = (33/5, 1, -3)\) & \texttt{B\_MSSM} & The edge-sector computation (\S{}6.17 of Part I of this manuscript) derives \(\beta\)-function shifts \(\Delta b \approx (2.49, 4.17, 4.01)\) from the heat-kernel vacuum-polarization weighting and the \(\mathbb{Z}_6\) quotient. These match the shifts from SM to MSSM to better than 1\%. The coefficients themselves are standard 1-loop group theory: \(b_i = \sum_R T(R_i)\) summed over all matter multiplets. Using MSSM content is a \emph{consequence} of the edge-sector matching, not an assumption. In D11 they govern the UV segment above the synchronization scale \(\mu_{\mathrm{sync}}\). \\
+SM 1-loop \(\beta\)-coefficients & standard SM set & \texttt{B\_SM} & Standard 1-loop coefficients for the SM with \(N_g = 3\), namely \((41/10,\,-19/6,\,-7)\). In D11 they govern the low-scale transport from \(m_Z\) up to the synchronization scale \(\mu_{\mathrm{sync}}\approx 6.8\times 10^{11}\,\mathrm{GeV}\), not the entire interval up to \(M_U\). \\
 4-loop MSbar \(\beta\)-coefficients & \(\beta_0, \beta_1, \beta_2, \beta_3\) & \texttt{beta\_\allowbreak coeffs\_\allowbreak msbar(n\_\allowbreak f)} in \texttt{oph\_\allowbreak qcd.py} & Standard perturbative QCD: \(\beta_0 = 11 - 2n_f/3\), \(\beta_1 = 102 - 38n_f/3\), etc. These are computed from SU(3) Feynman diagrams at each loop order. The 4-loop coefficient \(\beta_3\) involves \(\zeta(3)\); all are universal in the MSbar scheme. \\
 Pole-mass conversion & \(K_2 = 13.44 - 1.04 n_l\), \(K_3 = 190.6 - 26.7 n_l + 0.65 n_l^2\) & \texttt{top\_\allowbreak pole\_\allowbreak from\_\allowbreak msbar()} & Standard 3-loop QCD relation between \(\overline{\text{MS}}\) and pole mass (Chetyrkin, Kniehl, Steinhauser 2000). These are perturbative coefficients computed from Feynman diagrams; they depend only on \(n_l\) (number of light flavors) and SU(3) group factors. \\
 Casimir eigenvalues & \(C_2(p,q)\), \(d_{(p,q)}\) & \texttt{ellbar\_\allowbreak su3()}, \texttt{ellbar\_\allowbreak su2()} & Group-theoretic: \(C_2(p,q) = \frac{1}{3}(p^2 + q^2 + pq + 3p + 3q)\) for SU(3), \(C_2(j) = j(j+1)\) for SU(2), \(d_{(p,q)} = \frac{1}{2}(p+1)(q+1)(p+q+2)\). These are properties of the Lie algebra, not physical inputs. \\
@@ -126,7 +126,7 @@ GUT normalization & \(\alpha_1 = \frac{5}{3}\alpha_Y\) & inline & The factor \(5
 \end{longtable}
 }
 
-\subsubsection{1A.4 Dimensional/Definitional Constants}\label{1a4-dimensionaldefinitional-constants}
+\subsubsection{Dimensional/Definitional Constants}\label{1a4-dimensionaldefinitional-constants}
 
 {\def\LTcaptype{none} % do not increment counter
 \setlength{\LTleft}{0pt}
@@ -141,14 +141,14 @@ Constant & Value & Code variable & Status \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\(E_P\) (Planck energy) & \(1.220890 \times 10^{19}\) GeV & \texttt{E\_PLANCK\_GEV} & \textbf{Definition}: \(E_P = \sqrt{\hbar c^5/G}\). This is a unit conversion factor, not a physical input , it converts from natural (Planck) units to GeV. In the OPH framework, \(G\) itself is derived from the pixel area via \(G = a_{\text{cell}}/(4\bar{\ell}\,\hbar/c^3)\) (§5.4 of Part I of this manuscript), so \(E_P\) is ultimately set by \(P\). \\
-\(e^{2\pi}\) in \(M_U\) formula & 535.49... & inline & The Euclidean regularity condition on the collar geometry fixes the angular period to \(2\pi\) (§5.8 of Part I of this manuscript). This is a geometric constant, not a parameter. \\
+\(E_P\) (Planck energy) & \(1.220890 \times 10^{19}\) GeV & \texttt{E\_PLANCK\_GEV} & \textbf{Definition}: \(E_P = \sqrt{\hbar c^5/G}\). This is a unit conversion factor, not a physical input , it converts from natural (Planck) units to GeV. In the OPH framework, \(G\) itself is derived from the pixel area via \(G = a_{\text{cell}}/(4\bar{\ell}\,\hbar/c^3)\) (\S{}5.4 of Part I of this manuscript), so \(E_P\) is ultimately set by \(P\). \\
+\(e^{2\pi}\) in \(M_U\) formula & 535.49... & inline & The Euclidean regularity condition on the collar geometry fixes the angular period to \(2\pi\) (\S{}5.8 of Part I of this manuscript). This is a geometric constant, not a parameter. \\
 \(\sqrt{2}\) in Yukawa & \(v/\sqrt{2}\) & inline & Standard Higgs mechanism convention: the Yukawa coupling \(y_f\) relates to the fermion mass via \(m_f = y_f v / \sqrt{2}\). This is a normalization convention, not physics. \\
 \(\Delta\rho_{\text{stage-3}}\) & \(3y_t^2/(32\pi^2)\), evaluated at \(y_t \approx 1\) & inline & Universal 1-loop custodial correction with explicit Yukawa dependence. The displayed stage-3 number uses the unit-Yukawa estimate \(y_t \approx 1\). \\
 \end{longtable}
 }
 
-\subsubsection{1A.5 Numerical-Method Parameters}\label{1a5-numerical-method-parameters}
+\subsubsection{Numerical-Method Parameters}\label{1a5-numerical-method-parameters}
 
 These affect computational precision but not the prediction logic. Changing them changes the last digits, not the physics.
 
@@ -160,18 +160,18 @@ Parameter & Value used & Effect of changing \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Loop order for RG (critical surface) & 1-loop UV-synchronized SM/MSSM piecewise transport & 2-loop running or a changed synchronization prescription shifts \(m_H\) and \(m_t\) at the GeV level \\
+Loop order for RG (critical surface) & 1-loop piecewise SM/MSSM transport & 2-loop running or a changed synchronization prescription shifts \(m_H\) and \(m_t\) at the GeV level \\
 Loop order for \(\Lambda_{\overline{\text{MS}}}\) & 4-loop MSbar & 3-loop changes \(\Lambda\) by \textasciitilde2\% \\
 RK4 step count & 2000 steps & Doubling changes nothing to displayed precision \\
-Lattice sizes (hadrons) & \(L = 2\)--\(6\) & Larger volumes needed for precision; current values are prototype \\
+Lattice sizes (hadrons) & \(L = 2\)--\(6\) & Larger volumes needed for precision; listed values are prototype runs \\
 Bisection tolerance & \(10^{-10}\) & Affects last digits of \(\alpha_U\) only \\
 Heat-kernel truncation & 200 representations & Adding more changes \(\bar{\ell}\) by \(< 10^{-12}\) \\
 \end{longtable}
 }
 
-\subsubsection{1A.6 Summary: What Is and Isn\textquotesingle t Assumed}\label{1a6-summary-what-is-and-isnt-assumed}
+\subsubsection{Summary: What Is and Isn\textquotesingle t Assumed}\label{1a6-summary-what-is-and-isnt-assumed}
 
-\textbf{Inherited from earlier Part I structural results (canonical package plus the stated gauge, heat-kernel, and refinement premises):}
+\textbf{Inherited from earlier Part I structural results (five OPH axioms plus the stated gauge, heat-kernel, and refinement premises):}
 
 \begin{itemize}
 \tightlist
@@ -224,7 +224,7 @@ Heat-kernel truncation & 200 representations & Adding more changes \(\bar{\ell}\
 \begin{itemize}
 \tightlist
 \item
-  \(P = 1.63094\) (pixel area), calibrated from the gauge coupling sector (see §1B)
+  \(P = 1.63094\) (pixel area), calibrated from the gauge coupling sector (see \S{}1B)
 \end{itemize}
 
 \textbf{Second external input (cosmology/capacity branch)}:
@@ -232,7 +232,7 @@ Heat-kernel truncation & 200 representations & Adding more changes \(\bar{\ell}\
 \begin{itemize}
 \tightlist
 \item
-  \(\log(\dim\mathcal{H}) \sim 10^{122}\) (screen capacity)
+  \(N_{\mathrm{scr}} \equiv \log(\dim\mathcal{H}_{\text{tot}}) \sim 10^{122}\) (screen capacity)
 \end{itemize}
 
 \textbf{What is NOT assumed or smuggled in}:
@@ -255,25 +255,25 @@ Heat-kernel truncation & 200 representations & Adding more changes \(\bar{\ell}\
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{1B. Calibration vs.\ Prediction: Epistemic Classification of Outputs}\label{1b-calibration-vs-prediction}
+\subsection{Calibration vs.\ Prediction: Epistemic Classification of Outputs}\label{1b-calibration-vs-prediction}
 
-This part is not the recovered core of OPH. In the master ledger of Part~I and the compact note, the recovered core is D1--D5 together with D7--D9. The present spectrum part primarily houses the current supplement-backed numerical implementation (D10--D11) and several D12 continuations. The purpose of this section is therefore not to inflate the quantitative program, but to state exactly which numbers are calibration-sector checks, which are secondary quantitative outputs, and which remain downstream or phenomenological branches.
+This part starts at the quantitative layer. D1--D5 together with D7--D9 form the recovered core; D10--D11 live here; D12 stays downstream. This section marks which numbers are calibration-sector checks, which belong to the secondary quantitative branch, and which remain phenomenological continuations.
 
-\subsubsection{1B.1 The Calibration Structure}\label{1b1-the-calibration-structure}
+\subsubsection{The Calibration Structure}\label{1b1-the-calibration-structure}
 
-The pixel area constant \(P\) is the external continuous input used by the present particle-physics implementation. In practice it is fixed through the gauge sector via the entropy-matching / pixel-constraint closure. Quantities algebraically entangled with that same closure sit in D10 and are calibration-sector consistency checks rather than independent confirmations. In this file, D10 includes the unified coupling and scale-setting branch, the running gauge couplings at \(m_Z\), \(\alpha_{\mathrm{em}}^{-1}(m_Z)\), \(\sin^2\theta_W(m_Z)\), \(v\), and the tree-level electroweak masses. Agreement there shows that the current implementation is self-consistent once \(P\) and the printed supplement-backed conventions are imposed. It does not by itself promote the whole spectrum program to theorem level.
+The pixel area constant \(P\) is the external continuous input used by the particle-physics branch. In practice it is fixed through the gauge sector via the entropy-matching / pixel-constraint closure. Quantities algebraically entangled with that same closure sit in D10 and count as calibration-sector consistency checks. In this part, D10 includes the unified coupling and scale-setting branch, the running gauge couplings at \(m_Z\), \(\alpha_{\mathrm{em}}^{-1}(m_Z)\), \(\sin^2\theta_W(m_Z)\), \(v\), and the tree-level electroweak masses. Agreement there shows internal closure once \(P\) and the printed running and matching conventions are imposed. It does not elevate the whole spectrum program to theorem level.
 
-\subsubsection{1B.2 Why ``Downstream of \(P\)'' Does Not Mean ``Recovered Core''}\label{1b2-dimensionless-independence}
+\subsubsection{Why ``Downstream of \(P\)'' Does Not Mean ``Recovered Core''}\label{1b2-dimensionless-independence}
 
 Using \(P\) to set an overall energy scale and using an output branch as a recovered-core claim are different things. The critical-surface Higgs/top branch illustrates the distinction: once the D10 trajectory is fixed, the extra condition
 \[
 \lambda(M_U)=0,\qquad \beta_\lambda(M_U)=0
 \]
-adds no new continuous fit, so its failure would challenge the D11 branch rather than the D10 calibration closure. But it is still not part of the recovered core D1--D5 plus D7--D9. By contrast, charged-lepton/Koide fits, texture exponents, neutrino estimates, proton-spin bookkeeping, and downstream hadron extractions use additional ans\"atze, capacity assumptions, or external lattice/QCD machinery. Those belong to D12 or to later downstream numerical layers and must not be read back into the core claim set.
+adds no new continuous fit, so its failure would challenge D11 while leaving the D10 calibration closure intact. It sits outside the recovered core D1--D5 plus D7--D9. Charged-lepton/Koide fits, texture exponents, neutrino estimates, proton-spin bookkeeping, and downstream hadron extractions use additional ans\"atze, capacity assumptions, or external lattice/QCD machinery. Those belong to D12 or to later downstream numerical layers and must not be read back into the core claim set.
 
-Put differently: scale-setting dependence does not erase all distinctions, but neither does it automatically elevate later numerics to theorem level. The correct sync rule is the master ledger: D10 is calibration-sector, D11 is the secondary quantitative branch, and the remaining spectrum branches are deferred continuations unless explicitly promoted elsewhere.
+The master ledger remains the guide. Scale-setting dependence does not erase these distinctions, and it does not automatically elevate later numerics to theorem level. D10 is the calibration sector, D11 the secondary quantitative branch, and the remaining spectrum branches deferred continuations unless explicitly promoted elsewhere.
 
-\subsubsection{1B.3 Classification}\label{1b3-classification}
+\subsubsection{Classification}\label{1b3-classification}
 
 {\footnotesize
 \def\LTcaptype{none}
@@ -284,25 +284,25 @@ Tier / node & Representative outputs in this part & Status rule \\
 \endhead
 \bottomrule
 \endfoot
-Phase I recovered core inherited from Parts I--II (D1--D5, D7--D9) & conditional relativity branch; compact gauge reconstruction in the bosonic branch; realized Standard Model quotient, exact hypercharges, the counting chain \(N_g=3\) then \(N_c=3\), and no gauge-mediated proton decay & These are structural or realized-branch outputs proved upstream. They are \emph{not} generated by the present spectrum numerics, even when this part reuses them. \\
+Phase I recovered core inherited from Parts I--II (D1--D5, D7--D9) & conditional relativity branch; compact gauge reconstruction in the bosonic branch; realized Standard Model quotient, exact hypercharges, the counting chain \(N_g=3\) then \(N_c=3\), and no gauge-mediated proton decay & These are structural or realized-branch outputs proved upstream. They are \emph{not} generated by the spectrum numerics in this part, even when this part reuses them. \\
 Phase II input-dependent corollary inherited from Part~I (D6) & \(\Lambda=\frac{3\pi}{G N_{\mathrm{scr}}}\) once the screen-capacity identification is adopted, together with the separate order-of-magnitude neutrino estimate tied to the same capacity input & Separate from the recovered core. It uses the second external continuous input \(N_{\mathrm{scr}}\). \\
-Phase II current implementation: calibration sector (D10) & pixel-closure gauge/electroweak consistency, \(\alpha_i(m_{Z,\text{run}})\), \(\alpha_{\mathrm{em}}^{-1}(m_{Z,\text{run}})\), \(\sin^2\theta_W(m_{Z,\text{run}})\), \(v\), \(m_W\), and the running \(Z\)-mass relation & Supplement-backed consistency checks of the current implementation. Their agreement is expected once \(P\) and the printed running/matching conventions are imposed. \\
-Phase II current implementation: secondary quantitative branch (D11) & Higgs/top critical-surface branch & Main non-calibration numerical branch of the present implementation. It adds no further continuous fit once D10 is fixed, but it remains secondary to the recovered core. \\
+Phase II calibration sector (D10) & pixel-closure gauge/electroweak consistency, \(\alpha_i(m_{Z,\text{run}})\), \(\alpha_{\mathrm{em}}^{-1}(m_{Z,\text{run}})\), \(\sin^2\theta_W(m_{Z,\text{run}})\), \(v\), \(m_W\), and the running \(Z\)-mass relation & Consistency checks of the D10 branch. Their agreement is expected once \(P\) and the printed running/matching conventions are imposed. \\
+Phase II secondary quantitative branch (D11) & Higgs/top critical-surface branch & Main non-calibration numerical branch. It adds no further continuous fit once D10 is fixed, but it remains secondary to the recovered core. \\
 Phase III deferred continuations / downstream numerical branches (D12 and beyond) & charged-lepton/Koide fits, quark-texture branches, neutrino estimates beyond the D6 boundary, downstream hadron extractions, proton-spin bookkeeping, and any use of \(\varepsilon=1/6\) or \(\delta=2/9\) as flavor ans\"atze & Failure retracts the corresponding continuation only. These branches use extra structural choices, capacity assumptions, or external numerical machinery beyond D10--D11. \\
 \end{longtable}
 }
 
-\subsubsection{1B.4 What This Part Actually Contributes}\label{1b4-what-oph-achieves}
+\subsubsection{What This Part Actually Contributes}\label{1b4-what-oph-achieves}
 
-The present spectrum part should therefore be read as follows. Its documentary center of gravity is the D10--D11 implementation layer. The gauge-sector closure and electroweak scale-setting branch are calibration-sector consistency checks. The Higgs/top critical-surface branch is the main secondary quantitative output. Charged-lepton, texture, neutrino, proton-spin, and hadronic branches remain explicitly weaker continuations.
+The documentary center of gravity here is the D10--D11 implementation layer. The gauge-sector closure and electroweak scale-setting branch are calibration-sector consistency checks. The Higgs/top critical-surface branch is the main secondary quantitative output. Charged-lepton, texture, neutrino, proton-spin, and hadronic branches remain weaker continuations.
 
-This means that quantities sometimes reused in these later branches do \emph{not} all have the same claim tier. In particular, \(\varepsilon=1/6\), \(\delta=2/9\), Koide relations, texture exponents, neutrino scales, proton-spin fits, and hadron fits should not be cited as recovered-core outputs of overlap consistency plus the stated scaling-limit and categorical premises. The correct compact summary is simpler: Parts~I--II carry the recovered relativity-plus-Standard-Model core; this part begins at the D10 implementation layer and keeps everything beyond D11 explicitly non-core.
+Quantities reused in these later branches do \emph{not} all inherit the same claim tier. In particular, \(\varepsilon=1/6\), \(\delta=2/9\), Koide relations, texture exponents, neutrino scales, proton-spin fits, and hadron fits should not be cited as recovered-core outputs of overlap consistency plus the stated scaling-limit and categorical premises. Parts~I--II carry the recovered relativity-plus-Standard-Model core; this part begins at the D10 implementation layer and keeps everything beyond D11 explicitly non-core.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{2. Stage 1: Fundamental Scales}\label{2-stage-1-fundamental-scales}
+\subsection{Stage 1: Fundamental Scales}\label{2-stage-1-fundamental-scales}
 
-\subsubsection{2.1 Unification Scale}\label{21-unification-scale}
+\subsubsection{Unification Scale}\label{21-unification-scale}
 
 The OPH framework derives a unification scale from the pixel area:
 
@@ -312,9 +312,9 @@ where \(E_P = 1.220890 \times 10^{19}\) GeV is the Planck energy. This gives:
 
 \[M_U \approx 2.474 \times 10^{16} \text{ GeV}\]
 
-\textbf{Derivation}: The factor \(e^{2\pi}\) arises from the modular geometry of the collar (the Euclidean regularity condition fixes the angular period to \(2\pi\)). The \(P^{1/6}\) factor comes from the dimensional relation between pixel area and the UV cell scale (§5.8 of Part I of this manuscript).
+\textbf{Derivation}: The factor \(e^{2\pi}\) arises from the modular geometry of the collar (the Euclidean regularity condition fixes the angular period to \(2\pi\)). The \(P^{1/6}\) factor comes from the dimensional relation between pixel area and the UV cell scale (\S{}5.8 of Part I of this manuscript).
 
-\subsubsection{2.2 Cell Energy Scale}\label{22-cell-energy-scale}
+\subsubsection{Cell Energy Scale}\label{22-cell-energy-scale}
 
 The UV cell energy is:
 
@@ -324,9 +324,9 @@ This is the natural energy scale of a single computational element on the hologr
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{3. Stage 2: Gauge Closure and the Pixel Constraint}\label{3-stage-2-gauge-closure-and-the-pixel-constraint}
+\subsection{Stage 2: Gauge Closure and the Pixel Constraint}\label{3-stage-2-gauge-closure-and-the-pixel-constraint}
 
-\subsubsection{3.1 The Heat-Kernel Entropy}\label{31-the-heat-kernel-entropy}
+\subsubsection{The Heat-Kernel Entropy}\label{31-the-heat-kernel-entropy}
 
 The edge-center completion (Theorem 2.3 of Part I of this manuscript) combined with MaxEnt yields sector probabilities of the heat-kernel form:
 
@@ -348,23 +348,23 @@ For SU(3):
 
 where \(d_{(p,q)} = \frac{1}{2}(p+1)(q+1)(p+q+2)\) and \(C_2(p,q) = \frac{1}{3}(p^2 + q^2 + pq + 3p + 3q)\).
 
-\subsubsection{3.2 The Pixel Constraint}\label{32-the-pixel-constraint}
+\subsubsection{The Pixel Constraint}\label{32-the-pixel-constraint}
 
-The generalized entropy matching (§5.4 of Part I of this manuscript) gives:
+The generalized entropy matching (\S{}5.4 of Part I of this manuscript) gives:
 
 \[\frac{P}{4} = \bar{\ell}_{\text{SU(2)}}(t_2) + \bar{\ell}_{\text{SU(3)}}(t_3)\]
 
 where \(t_i = 4\pi^2 \alpha_i\). This is the \textbf{pixel constraint}: the total edge entropy per cell must equal \(P/4\).
 
-\subsubsection{\texorpdfstring{3.3 Gauge Running and the \(\alpha_U\) Solution}{3.3 Gauge Running and the \textbackslash alpha\_U Solution}}\label{33-gauge-running-and-the-alpha_u-solution}
+\subsubsection{\texorpdfstring{Gauge Running and the \(\alpha_U\) Solution}{Gauge Running and the \textbackslash alpha\_U Solution}}\label{33-gauge-running-and-the-alpha_u-solution}
 
 At the unification scale, all three gauge couplings emerge from a single \(\alpha_U\). Running down to a scale \(\mu\) with MSSM-like \(\beta\)-function coefficients \((b_1, b_2, b_3) = (33/5, 1, -3)\):
 
 \[\alpha_i^{-1}(\mu) = \alpha_U^{-1} + \frac{b_i}{2\pi} \ln\frac{M_U}{\mu}\]
 
-\textbf{Why MSSM coefficients?} The edge-sector computation (§6.17 of Part I of this manuscript) derives \(\beta\)-function shifts \(\Delta b \approx (2.49, 4.17, 4.01)\) from the heat-kernel form, the \(\mathbb{Z}_6\) quotient structure, and the Peter-Weyl vacuum-polarization weighting. These match the MSSM shifts \((2.5, 4.17, 4.0)\) to better than 1\%. SM-only coefficients catastrophically fail (\(\alpha_s\) prediction off by 52\(\sigma\)).
+\textbf{Why MSSM coefficients?} The edge-sector computation (\S{}6.17 of Part I of this manuscript) derives \(\beta\)-function shifts \(\Delta b \approx (2.49, 4.17, 4.01)\) from the heat-kernel form, the \(\mathbb{Z}_6\) quotient structure, and the Peter-Weyl vacuum-polarization weighting. These match the MSSM shifts \((2.5, 4.17, 4.0)\) to better than 1\%. SM-only coefficients catastrophically fail (\(\alpha_s\) prediction off by 52\(\sigma\)).
 
-\subsubsection{3.4 Self-Consistent Fixed Point}\label{34-self-consistent-fixed-point}
+\subsubsection{Self-Consistent Fixed Point}\label{34-self-consistent-fixed-point}
 
 The system is solved self-consistently:
 
@@ -391,7 +391,7 @@ This yields:
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{4. Stage 3: Electroweak Observables}\label{4-stage-3-electroweak-observables}
+\subsection{Stage 3: Electroweak Observables}\label{4-stage-3-electroweak-observables}
 
 With \(\alpha_U\) and \(M_U\) determined, the gauge couplings at \(\mu = m_{Z,\text{run}}\) are fixed:
 
@@ -436,7 +436,7 @@ Observable & Predicted & PDG Value \\
 \end{longtable}
 }
 
-\subsubsection{4.1 Z Boson Pole Mass}\label{41-z-boson-pole-mass}
+\subsubsection{Z Boson Pole Mass}\label{41-z-boson-pole-mass}
 
 The tree-level \(m_{Z,\text{run}} = 91.65\) GeV is the running mass at its own scale. The physical pole mass includes the custodial correction from top-quark loops:
 
@@ -450,7 +450,7 @@ For the stage-3 numerical estimate we use \(y_t \approx 1\), giving
 
 \textbf{Why the stage-3 estimate uses \(\Delta\rho \approx 3/(32\pi^2)\).} The general one-loop custodial-symmetry-breaking contribution is \(\Delta\rho = 3y_t^2/(32\pi^2)\). The displayed stage-3 number sets \(y_t \approx 1\), requiring no knowledge of the actual top mass , only that the top Yukawa is order-one (the least-suppressed channel in the \(\mathbb{Z}_6\) texture).
 
-\subsubsection{4.2 W Boson Mass}\label{42-w-boson-mass}
+\subsubsection{W Boson Mass}\label{42-w-boson-mass}
 
 At tree level:
 
@@ -458,11 +458,11 @@ At tree level:
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{5. Stage 4: Critical Surface , Higgs and Top}\label{5-stage-4-critical-surface--higgs-and-top}
+\subsection{Stage 4: Critical Surface , Higgs and Top}\label{5-stage-4-critical-surface--higgs-and-top}
 
-\subsubsection{5.1 The Critical Surface Constraint}\label{51-the-critical-surface-constraint}
+\subsubsection{The Critical Surface Constraint}\label{51-the-critical-surface-constraint}
 
-Refinement stability (§6.3, §6.22 of Part I of this manuscript) pushes the Higgs quartic coupling to a marginal stability point at the unification scale:
+Refinement stability (\S{}6.3, \S{}6.22 of Part I of this manuscript) pushes the Higgs quartic coupling to a marginal stability point at the unification scale:
 
 \[\lambda(M_U) = 0, \quad \beta_\lambda(M_U) = 0\]
 
@@ -470,47 +470,47 @@ Setting \(\beta_\lambda = 0\) at one loop with \(\lambda = 0\) fixes the top Yuk
 
 \[y_t(M_U) = \left[\frac{1}{16}\left(2g_2^4 + (g_2^2 + g_Y^2)^2\right)\right]^{1/4}\]
 
-where \(g_Y(M_U)\) and \(g_2(M_U)\) are obtained inside the synchronized D11 transport by running the OPH-derived couplings from \(m_Z\) to a UV synchronization scale \(\mu_{\mathrm{sync}}\approx 6.8\times 10^{11}\,\mathrm{GeV}\) with SM coefficients and from \(\mu_{\mathrm{sync}}\) to \(M_U\) with the same MSSM-like coefficients used in D10. The raw all-SM appendix flow by itself lands far lower (\(m_t^{\mathrm{pole}}\approx 164.2\,\mathrm{GeV}\), \(m_H\approx 115.2\,\mathrm{GeV}\)); the synchronized D11 numbers quoted below are the UV-synchronized transport plus only order-one-GeV low-scale matching corrections.
+where \(g_Y(M_U)\) and \(g_2(M_U)\) are obtained inside the D11 transport by running the OPH-derived couplings from \(m_Z\) to a UV synchronization scale \(\mu_{\mathrm{sync}}\approx 6.8\times 10^{11}\,\mathrm{GeV}\) with SM coefficients and from \(\mu_{\mathrm{sync}}\) to \(M_U\) with the same MSSM-like coefficients used in D10. The raw all-SM appendix flow by itself lands far lower (\(m_t^{\mathrm{pole}}\approx 164.2\,\mathrm{GeV}\), \(m_H\approx 115.2\,\mathrm{GeV}\)); the D11 numbers quoted below are the piecewise transport plus only order-one-GeV low-scale matching corrections.
 
-\subsubsection{5.2 RG Evolution to Low Scales}\label{52-rg-evolution-to-low-scales}
+\subsubsection{RG Evolution to Low Scales}\label{52-rg-evolution-to-low-scales}
 
-The coupled system \((y_t, \lambda, g_Y, g_2, g_3)\) is integrated from \(M_U\) down to \(\mu \sim m_t\) using RK4. The synchronized D11 implementation uses a piecewise one-loop gauge transport:
+The coupled system \((y_t, \lambda, g_Y, g_2, g_3)\) is integrated from \(M_U\) down to \(\mu \sim m_t\) using RK4. The D11 branch uses a piecewise one-loop gauge transport:
 
 \[\alpha_i^{-1}(\mu) = \alpha_i^{-1}(m_Z) - \frac{b_i^{\text{SM}}}{2\pi}\ln(\mu/m_Z), \qquad m_Z \le \mu \le \mu_{\mathrm{sync}}\]
 
 and
 \[\alpha_i^{-1}(\mu) = \alpha_i^{-1}(\mu_{\mathrm{sync}}) - \frac{b_i^{\text{UV}}}{2\pi}\ln(\mu/\mu_{\mathrm{sync}}), \qquad \mu_{\mathrm{sync}} \le \mu \le M_U,\]
-with \(b^{\text{UV}}=(33/5,1,-3)\) and \(\mu_{\mathrm{sync}}\approx 6.8\times 10^{11}\,\mathrm{GeV}\). This Stage-4 section is the authoritative synchronized D11 implementation used for the quoted Higgs/top numbers. The compact appendix records only the low-scale SM part of the one-loop system; the numerical outputs below also use the UV synchronization, low-scale extraction, and pole-mass conventions fixed here in the synchronized supplement-backed branch.
+with \(b^{\text{UV}}=(33/5,1,-3)\) and \(\mu_{\mathrm{sync}}\approx 6.8\times 10^{11}\,\mathrm{GeV}\). This Stage-4 section is the D11 branch used for the quoted Higgs/top numbers. The appendix records only the low-scale SM part of the one-loop system; the numerical outputs below also use the UV synchronization, low-scale extraction, and pole-mass conventions fixed here.
 
-\subsubsection{5.3 Top Mass}\label{53-top-mass}
+\subsubsection{Top Mass}\label{53-top-mass}
 
-The UV-synchronized running top mass is determined self-consistently: iterate \(\mu_{\text{guess}} = y_t(\mu) \cdot v/\sqrt{2}\) until convergence:
+The running top mass is determined self-consistently: iterate \(\mu_{\text{guess}} = y_t(\mu) \cdot v/\sqrt{2}\) until convergence:
 
 \[m_t^{\overline{\text{MS}}}(m_t) \approx 160.6 \text{ GeV}\]
 
-The same UV-synchronized core gives
+The same piecewise-running core gives
 \[m_t^{\text{pole,core}} \approx 170.3 \text{ GeV}\]
 before the final low-scale matching adjustment. The pole-mass part of that core uses the standard 3-loop QCD relation:
 
 \[\frac{m_t^{\text{pole}}}{m_t^{\overline{\text{MS}}}} = 1 + \frac{4}{3}\frac{\alpha_s}{\pi} + K_2 \left(\frac{\alpha_s}{\pi}\right)^2 + K_3 \left(\frac{\alpha_s}{\pi}\right)^3\]
 
-with \(K_2 = 13.44 - 1.04 n_l\) and \(K_3 = 190.6 - 26.7 n_l + 0.65 n_l^2\) (\(n_l = 5\)). The displayed synchronized D11 output then adds a residual \(+0.84\) GeV matching correction:
+with \(K_2 = 13.44 - 1.04 n_l\) and \(K_3 = 190.6 - 26.7 n_l + 0.65 n_l^2\) (\(n_l = 5\)). The displayed D11 output then adds a residual \(+0.84\) GeV matching correction:
 
 \[m_t^{\text{pole}} \approx 171.1 \text{ GeV}\]
 
-\subsubsection{5.4 Higgs Mass}\label{54-higgs-mass}
+\subsubsection{Higgs Mass}\label{54-higgs-mass}
 
-From \(\lambda(m_t)\) obtained by the UV-synchronized RG integration one finds a core value
+From \(\lambda(m_t)\) obtained by the RG integration above one finds a core value
 \[m_H^{\text{core}} \approx 126.6 \text{ GeV}\]
-and after the residual \(-0.12\) GeV Higgs matching shift used in the synchronized implementation:
+and after the residual \(-0.12\) GeV Higgs matching shift used here:
 
 \[m_H = \sqrt{2\lambda(m_t)} \cdot v \approx 126.5 \text{ GeV}\]
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{6. Stage 5: Discrete Spectrum , Quarks and Leptons}\label{6-stage-5-discrete-spectrum--quarks-and-leptons}
+\subsection{Stage 5: Discrete Spectrum , Quarks and Leptons}\label{6-stage-5-discrete-spectrum--quarks-and-leptons}
 
-\subsubsection{\texorpdfstring{6.1 The \(\mathbb{Z}_6\) Defect Parameter}{6.1 The \textbackslash mathbb\{Z\}\_6 Defect Parameter}}\label{61-the-mathbbz_6-defect-parameter}
+\subsubsection{\texorpdfstring{The \(\mathbb{Z}_6\) Defect Parameter}{6.1 The \textbackslash mathbb\{Z\}\_6 Defect Parameter}}\label{61-the-mathbbz_6-defect-parameter}
 
 The SM global gauge group is \((SU(3) \times SU(2) \times U(1))/\mathbb{Z}_6\). The entropy deficit from the \(\mathbb{Z}_6\) quotient yields the universal suppression factor:
 
@@ -518,7 +518,7 @@ The SM global gauge group is \((SU(3) \times SU(2) \times U(1))/\mathbb{Z}_6\). 
 
 This is the base of the Froggatt-Nielsen texture: each unit of \(\mathbb{Z}_6\) defect insertion suppresses a Yukawa coupling by a factor of 6.
 
-\subsubsection{6.2 Integer Exponents (Algorithmically Derived)}\label{62-integer-exponents-algorithmically-derived}
+\subsubsection{Integer Exponents (Algorithmically Derived)}\label{62-integer-exponents-algorithmically-derived}
 
 The diagonal mass exponents are determined by the minimal SU(3) hierarchy structure with \(N_c = 3\) colors and \(N_g = 3\) generations:
 
@@ -528,7 +528,7 @@ The diagonal mass exponents are determined by the minimal SU(3) hierarchy struct
 
 \textbf{Charged leptons}: derived from the Koide phase.
 
-\subsubsection{6.3 The Koide Phase}\label{63-the-koide-phase}
+\subsubsection{The Koide Phase}\label{63-the-koide-phase}
 
 The charged lepton masses use a circulant ansatz on generation space with Koide ratio \(Q = 2/3\) (from \(\mathbb{Z}_3\) mode balance). The holonomy phase is:
 
@@ -540,11 +540,11 @@ The Koide roots are:
 
 sorted in ascending order. The lepton exponents \((n_e, n_\mu, n_\tau)\) are selected by matching ratios \(r_i^2/r_j^2 \approx \varepsilon^{n_i - n_j}\), yielding \((n_e, n_\mu, n_\tau) = (7, 4, 3)\).
 
-\subsubsection{6.4 Diagonal Quark Masses}\label{64-diagonal-quark-masses}
+\subsubsection{Diagonal Quark Masses}\label{64-diagonal-quark-masses}
 
 \[m_{u_i} = \frac{v}{\sqrt{2}} \varepsilon^{n_{u,i}}, \quad m_{d_i} = \frac{v}{\sqrt{2}} \varepsilon^{n_{d,i}}\]
 
-\subsubsection{6.5 CKM Mixing}\label{65-ckm-mixing}
+\subsubsection{CKM Mixing}\label{65-ckm-mixing}
 
 The CKM matrix is parameterized by \(\varepsilon\):
 
@@ -552,7 +552,7 @@ The CKM matrix is parameterized by \(\varepsilon\):
 
 Physical down-type masses are the singular values of \(V_{\text{CKM}} \cdot \text{diag}(m_d, m_s, m_b)\).
 
-\subsubsection{6.6 Charged Lepton Masses}\label{66-charged-lepton-masses}
+\subsubsection{Charged Lepton Masses}\label{66-charged-lepton-masses}
 
 A scale factor \(S\) is determined from the exponents \(n_e = (7, 4, 3)\) and the Koide roots by demanding internal consistency:
 
@@ -564,9 +564,9 @@ Then \(S = S_0 \cdot 2^{1/6}\) and:
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{7. Stage 6: QCD Scale and Hadron Masses}\label{7-stage-6-qcd-scale-and-hadron-masses}
+\subsection{Stage 6: QCD Scale and Hadron Masses}\label{7-stage-6-qcd-scale-and-hadron-masses}
 
-\subsubsection{\texorpdfstring{7.1 \(\Lambda_{\overline{\text{MS}}}\) from \(\alpha_s(m_{Z,\text{run}})\)}{7.1 \textbackslash Lambda\_\{\textbackslash overline\{\textbackslash text\{MS\}\}\} from \textbackslash alpha\_s(m\_\{Z,run\})}}\label{71-lambda_overlinetextms-from-alpha_sm_zrun}
+\subsubsection{\texorpdfstring{\(\Lambda_{\overline{\text{MS}}}\) from \(\alpha_s(m_{Z,\text{run}})\)}{7.1 \textbackslash Lambda\_\{\textbackslash overline\{\textbackslash text\{MS\}\}\} from \textbackslash alpha\_s(m\_\{Z,run\})}}\label{71-lambda_overlinetextms-from-alpha_sm_zrun}
 
 Given the OPH-derived \(\alpha_s(m_{Z,\text{run}}) \approx 0.1183\) (a calibration-sector output) and the quark thresholds (\(m_b\), \(m_c\) from Stage 5), the QCD scale is extracted using the standard 4-loop MSbar definition:
 
@@ -594,7 +594,7 @@ yields:
 \end{longtable}
 }
 
-\subsubsection{7.2 Hadron Masses}\label{72-hadron-masses}
+\subsubsection{Hadron Masses}\label{72-hadron-masses}
 
 Hadron masses require a nonperturbative computation of dimensionless ratios \(C_X = m_X / \Lambda^{(3)}\). These are computed by an internal lattice QCD collar calculation:
 
@@ -617,13 +617,13 @@ The lattice computation uses small volumes (\(L = 2\)--\(6\)) in the quenched ap
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{8. Stage 7: Neutrino Masses}\label{8-stage-7-neutrino-masses}
+\subsection{Stage 7: Neutrino Masses}\label{8-stage-7-neutrino-masses}
 
-\subsubsection{8.1 The Capacity Model}\label{81-the-capacity-model}
+\subsubsection{The Capacity Model}\label{81-the-capacity-model}
 
-The second OPH input , the screen capacity \(\log(\dim\mathcal{H}) \sim 10^{122}\) , enters through the cosmological constant:
+The second OPH input, the screen capacity \(N_{\mathrm{scr}} \equiv \log(\dim\mathcal{H}_{\text{tot}}) \sim 10^{122}\), enters through the cosmological constant:
 
-\[\rho_\Lambda = \frac{3}{8} \frac{M_P^4}{\log(\dim\mathcal{H})}\]
+\[\rho_\Lambda = \frac{3}{8} \frac{M_P^4}{N_{\mathrm{scr}}}\]
 
 The neutrino mass scale is anchored at \(\rho_\Lambda^{1/4}\):
 
@@ -633,11 +633,11 @@ The hierarchy uses the same \(\varepsilon = 1/6\) suppression:
 
 \[m_{\nu_2} = \varepsilon \cdot m_{\nu_3} \approx 0.50 \text{ meV}, \quad m_{\nu_1} = \varepsilon^2 \cdot m_{\nu_3} \approx 0.084 \text{ meV}\]
 
-This yields \(\Delta m_{32}^2 \approx 9.1 \times 10^{-24} \text{ GeV}^2\) and \(\Delta m_{21}^2 \approx 2.5 \times 10^{-25} \text{ GeV}^2\). These values remain well below current direct-detection bounds, but they do not yet reproduce the observed atmospheric and solar oscillation splittings.
+This yields \(\Delta m_{32}^2 \approx 9.1 \times 10^{-24} \text{ GeV}^2\) and \(\Delta m_{21}^2 \approx 2.5 \times 10^{-25} \text{ GeV}^2\). These values remain well below existing direct-detection bounds, but they do not reproduce the observed atmospheric and solar oscillation splittings.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{9. Massless Particles}\label{9-massless-particles}
+\subsection{Massless Particles}\label{9-massless-particles}
 
 The following particles are predicted to be \textbf{exactly massless} by symmetry:
 
@@ -655,15 +655,15 @@ Graviton & Diffeomorphism invariance (emergent from entanglement equilibrium) fo
 \end{longtable}
 }
 
-These are \textbf{symmetry-protected zeros}, not accidental cancellations. The gauge invariances are derived from the gluing structure (§6.1 of Part I of this manuscript) and entanglement equilibrium (§5 of Part I of this manuscript).
+These are \textbf{symmetry-protected zeros}, not accidental cancellations. The gauge invariances are derived from the gluing structure (\S{}6.1 of Part I of this manuscript) and entanglement equilibrium (\S{}5 of Part I of this manuscript).
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{10. Complete Spectrum: OPH Outputs vs PDG}\label{10-complete-spectrum-oph-outputs-vs-pdg}
+\subsection{Complete Spectrum: OPH Outputs vs PDG}\label{10-complete-spectrum-oph-outputs-vs-pdg}
 
-All outputs below use inputs \(P = 1.63094\) and \(\log(\dim\mathcal{H}) = 10^{122}\) only. PDG values are from the 2024/2025 edition. Each output is classified as \textbf{consistency check} (Tier~1, from calibration sector), \textbf{independent quantitative} (Tier~2), \textbf{phenomenological continuation / downstream branch} (Tier~3), or \textbf{structural} (Tier~4, parameter-free). See §1B for the full classification.
+All outputs below use inputs \(P = 1.63094\) and \(N_{\mathrm{scr}} \equiv \log(\dim\mathcal{H}_{\text{tot}}) \sim 10^{122}\) only. PDG values are from the 2024/2025 edition. Each output is classified as \textbf{consistency check} (Tier~1, from calibration sector), \textbf{independent quantitative} (Tier~2), \textbf{phenomenological continuation / downstream branch} (Tier~3), or \textbf{structural} (Tier~4, parameter-free). See \S{}1B for the full classification.
 
-\subsubsection{10.1 Gauge Bosons and Higgs}\label{101-gauge-bosons-and-higgs}
+\subsubsection{Gauge Bosons and Higgs}\label{101-gauge-bosons-and-higgs}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}>{\RaggedRight\arraybackslash}p{0.160\textwidth}>{\RaggedLeft\arraybackslash}p{0.160\textwidth}>{\RaggedLeft\arraybackslash}p{0.160\textwidth}>{\RaggedLeft\arraybackslash}p{0.160\textwidth}>{\RaggedRight\arraybackslash}p{0.160\textwidth}>{\RaggedRight\arraybackslash}p{0.160\textwidth}@{}}
@@ -675,13 +675,13 @@ Particle & OPH (GeV) & PDG (GeV) & Rel. Error & Tier & Error Source \\
 \endlastfoot
 \(\gamma\) & 0 & 0 & exact & Structural & Symmetry-protected; no error expected \\
 \(g\) (gluon) & 0 & 0 & exact & Structural & Symmetry-protected; no error expected \\
-\(W\) boson & 80.386 & 80.377 ± 0.012 & +0.012\% & Consistency & Flows from calibrated \(\alpha_U\) and \(v\). Tree-level only \\
-\(Z\) pole & 91.220 & 91.188 ± 0.002 & +0.035\% & Consistency & Flows from calibrated couplings. Simplified \(\Delta\rho\) \\
-\(H\) (Higgs) & 126.48 & 125.20 ± 0.11 & +1.02\% & D11 quantitative & UV-synchronized SM/MSSM transport plus residual low-scale matching after \(\lambda = \beta_\lambda = 0\) \\
+\(W\) boson & 80.386 & 80.377 \ensuremath{\pm} 0.012 & +0.012\% & Consistency & Flows from calibrated \(\alpha_U\) and \(v\). Tree-level only \\
+\(Z\) pole & 91.220 & 91.188 \ensuremath{\pm} 0.002 & +0.035\% & Consistency & Flows from calibrated couplings. Simplified \(\Delta\rho\) \\
+\(H\) (Higgs) & 126.48 & 125.20 \ensuremath{\pm} 0.11 & +1.02\% & D11 quantitative & Piecewise SM/MSSM transport plus residual low-scale matching after \(\lambda = \beta_\lambda = 0\) \\
 \end{longtable}
 }
 
-\subsubsection{10.2 Charged Leptons}\label{102-charged-leptons}
+\subsubsection{Charged Leptons}\label{102-charged-leptons}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}>{\RaggedRight\arraybackslash}p{0.160\textwidth}>{\RaggedLeft\arraybackslash}p{0.160\textwidth}>{\RaggedLeft\arraybackslash}p{0.160\textwidth}>{\RaggedLeft\arraybackslash}p{0.160\textwidth}>{\RaggedRight\arraybackslash}p{0.160\textwidth}>{\RaggedRight\arraybackslash}p{0.160\textwidth}@{}}
@@ -691,13 +691,13 @@ Particle & OPH (GeV) & PDG (GeV) & Rel. Error & Tier & Error Source \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Electron & 5.109 × 10⁻⁴ & 5.110 × 10⁻⁴ & −0.023\% & D12 continuation & Koide structure (\(Q=2/3\), \(\delta=2/9\)) plus an extra discrete-selection step; residual from QED running \\
-Muon & 0.10564 & 0.10566 & −0.022\% & D12 continuation & Same Koide branch; QED running corrections \textasciitilde0.02\%, matching the offset \\
-Tau & 1.7766 & 1.7769 ± 0.09 & −0.020\% & D12 continuation & Same origin. Uniform sign shows common scale-factor effect from QED running \\
+Electron & 5.109 \ensuremath{\times} 10\textsuperscript{-}\textsuperscript{4} & 5.110 \ensuremath{\times} 10\textsuperscript{-}\textsuperscript{4} & -0.023\% & D12 continuation & Koide structure (\(Q=2/3\), \(\delta=2/9\)) plus an extra discrete-selection step; residual from QED running \\
+Muon & 0.10564 & 0.10566 & -0.022\% & D12 continuation & Same Koide branch; QED running corrections \textasciitilde0.02\%, matching the offset \\
+Tau & 1.7766 & 1.7769 \ensuremath{\pm} 0.09 & -0.020\% & D12 continuation & Same origin. Uniform sign shows common scale-factor effect from QED running \\
 \end{longtable}
 }
 
-\subsubsection{10.3 Neutrinos}\label{103-neutrinos}
+\subsubsection{Neutrinos}\label{103-neutrinos}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}>{\RaggedRight\arraybackslash}p{0.192\textwidth}>{\RaggedLeft\arraybackslash}p{0.192\textwidth}>{\RaggedLeft\arraybackslash}p{0.192\textwidth}>{\RaggedRight\arraybackslash}p{0.192\textwidth}>{\RaggedRight\arraybackslash}p{0.192\textwidth}@{}}
@@ -707,15 +707,15 @@ Particle & OPH (GeV) & Experiment & Tier & Error Source \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\(\nu_e\) & 8.39 × 10⁻¹⁴ & \(< 8 \times 10^{-10}\) (KATRIN) & D6 estimate & Uses second input (\(\log\dim\mathcal{H}\)); consistent with direct bounds but not a completed oscillation-scale prediction \\
-\(\nu_\mu\) & 5.04 × 10⁻¹³ & \(< 8 \times 10^{-10}\) (KATRIN) & D6 estimate & Same capacity branch; below direct bounds, but not yet matched to the solar oscillation scale \\
-\(\nu_\tau\) & 3.02 × 10⁻¹² & \(< 8 \times 10^{-10}\) (KATRIN) & D6 estimate & Anchored at \(\rho_\Lambda^{1/4}\); below direct bounds, but not yet matched to the atmospheric oscillation scale \\
+\(\nu_e\) & 8.39 \ensuremath{\times} 10\textsuperscript{-}\textsuperscript{1}\textsuperscript{4} & \(< 8 \times 10^{-10}\) (KATRIN) & D6 estimate & Uses second input (\(\log\dim\mathcal{H}\)); consistent with direct bounds but not a completed oscillation-scale prediction \\
+\(\nu_\mu\) & 5.04 \ensuremath{\times} 10\textsuperscript{-}\textsuperscript{1}\textsuperscript{3} & \(< 8 \times 10^{-10}\) (KATRIN) & D6 estimate & Same capacity branch; below direct bounds, but not yet matched to the solar oscillation scale \\
+\(\nu_\tau\) & 3.02 \ensuremath{\times} 10\textsuperscript{-}\textsuperscript{1}\textsuperscript{2} & \(< 8 \times 10^{-10}\) (KATRIN) & D6 estimate & Anchored at \(\rho_\Lambda^{1/4}\); below direct bounds, but not yet matched to the atmospheric oscillation scale \\
 \end{longtable}
 }
 
-All predictions are well below the current experimental upper bound of \(\sim 0.8\) eV \(\approx 8 \times 10^{-10}\) GeV. At present this branch is better described as a low-scale capacity estimate than as a quantitative fit to oscillation data.
+All predictions are well below the experimental upper bound of \(\sim 0.8\) eV \(\approx 8 \times 10^{-10}\) GeV. This branch is better described as a low-scale capacity estimate than as a quantitative fit to oscillation data.
 
-\subsubsection{10.4 Quarks}\label{104-quarks}
+\subsubsection{Quarks}\label{104-quarks}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}>{\RaggedRight\arraybackslash}p{0.160\textwidth}>{\RaggedLeft\arraybackslash}p{0.160\textwidth}>{\RaggedLeft\arraybackslash}p{0.160\textwidth}>{\RaggedLeft\arraybackslash}p{0.160\textwidth}>{\RaggedRight\arraybackslash}p{0.160\textwidth}>{\RaggedRight\arraybackslash}p{0.160\textwidth}@{}}
@@ -725,17 +725,17 @@ Particle & OPH (GeV) & PDG (GeV) & Rel. Error & Tier & Error Source \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-up & 3.74 × 10⁻³ & 2.16 × 10⁻³ & +73\% & D12 continuation & \textbf{\(u\)-\(d\) degeneracy}: both get exponent \(n=6\). Subleading effects not included \\
-down & 3.74 × 10⁻³ & 4.70 × 10⁻³ & −20\% & D12 continuation & Same degeneracy. Geometric mean \(\sqrt{m_u m_d} \approx 3.2\) MeV closer to 3.7 MeV \\
+up & 3.74 \ensuremath{\times} 10\textsuperscript{-}\textsuperscript{3} & 2.16 \ensuremath{\times} 10\textsuperscript{-}\textsuperscript{3} & +73\% & D12 continuation & \textbf{\(u\)-\(d\) degeneracy}: both get exponent \(n=6\). Subleading effects not included \\
+down & 3.74 \ensuremath{\times} 10\textsuperscript{-}\textsuperscript{3} & 4.70 \ensuremath{\times} 10\textsuperscript{-}\textsuperscript{3} & -20\% & D12 continuation & Same degeneracy. Geometric mean \(\sqrt{m_u m_d} \approx 3.2\) MeV closer to 3.7 MeV \\
 strange & 0.1346 & 0.0935 & +44\% & D12 continuation & No scheme matching; missing Clebsch factors and CKM rotation \\
-charm & 0.808 & 1.273 & −37\% & D12 continuation & Missing RG running from \(v\) to \(m_c\) (\textasciitilde factor 1.3) and Clebsch coefficient \\
+charm & 0.808 & 1.273 & -37\% & D12 continuation & Missing RG running from \(v\) to \(m_c\) (\textasciitilde factor 1.3) and Clebsch coefficient \\
 bottom & 4.847 & 4.183 & +16\% & D12 continuation & Running from \(v\) to \(m_b\) reduces mass by \textasciitilde15\%, closing most of the gap \\
 top (texture) & 174.5 & 172.6 & +1.1\% & D12 continuation & Exponent \(n_t = 0\) (unsuppressed Yukawa); small error from \(v\) offset \\
-top (crit. surf.) & 171.1 & 172.6 & −0.87\% & D11 quantitative & UV-synchronized SM/MSSM transport plus residual pole-mass matching after \(\lambda = \beta_\lambda = 0\) \\
+top (crit. surf.) & 171.1 & 172.6 & -0.87\% & D11 quantitative & Piecewise SM/MSSM transport plus residual pole-mass matching after \(\lambda = \beta_\lambda = 0\) \\
 \end{longtable}
 }
 
-\subsubsection{\texorpdfstring{10.5 Gauge Couplings at \(m_{Z,\text{run}}\)}{10.5 Gauge Couplings at m\_Zrun}}\label{105-gauge-couplings-at-m_z}
+\subsubsection{\texorpdfstring{Gauge Couplings at \(m_{Z,\text{run}}\)}{10.5 Gauge Couplings at m\_Zrun}}\label{105-gauge-couplings-at-m_z}
 
 These are \textbf{calibration-sector consistency checks} (Tier~1). The gauge couplings at \(m_{Z,\text{run}}\) are the fixed-point values used in the entropy-matching condition and self-consistent closure procedure. Their agreement with PDG values demonstrates internal consistency, not independent predictive power.
 
@@ -747,13 +747,13 @@ Quantity & OPH & PDG & Rel. Error & Tier & Error Source \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\(\alpha_{\text{em}}^{-1}(m_{Z,\text{run}})\) & 128.31 & 127.952 ± 0.009 & +0.28\% & Consistency & Flows from calibrated \(\alpha_U\) \\
-\(\sin^2\theta_W(m_{Z,\text{run}})\) & 0.2307 & 0.23122 ± 0.00004 & −0.21\% & Consistency & Most sensitive to threshold scale \\
-\(\alpha_s(m_{Z,\text{run}})\) & 0.1183 & 0.1179 ± 0.0009 & +0.37\% & Consistency & Within 0.5\(\sigma\) of PDG \\
+\(\alpha_{\text{em}}^{-1}(m_{Z,\text{run}})\) & 128.31 & 127.952 \ensuremath{\pm} 0.009 & +0.28\% & Consistency & Flows from calibrated \(\alpha_U\) \\
+\(\sin^2\theta_W(m_{Z,\text{run}})\) & 0.2307 & 0.23122 \ensuremath{\pm} 0.00004 & -0.21\% & Consistency & Most sensitive to threshold scale \\
+\(\alpha_s(m_{Z,\text{run}})\) & 0.1183 & 0.1179 \ensuremath{\pm} 0.0009 & +0.37\% & Consistency & Within 0.5\(\sigma\) of PDG \\
 \end{longtable}
 }
 
-\subsubsection{10.6 Derived Scales}\label{106-derived-scales}
+\subsubsection{Derived Scales}\label{106-derived-scales}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}>{\RaggedRight\arraybackslash}p{0.14\textwidth}>{\RaggedLeft\arraybackslash}p{0.13\textwidth}>{\RaggedLeft\arraybackslash}p{0.13\textwidth}>{\RaggedLeft\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.13\textwidth}>{\RaggedRight\arraybackslash}p{0.27\textwidth}@{}}
@@ -764,13 +764,13 @@ Quantity & OPH Value & Reference & Agreement & Tier & Error Source \\
 \bottomrule\noalign{}
 \endlastfoot
 \(v\) (Higgs VEV) & 246.77 GeV & 246.22 GeV & +0.22\% & Consistency & Flows from calibrated \(\alpha_U\) via transmutation formula \\
-\(M_U\) & 2.47 × 10¹⁶ GeV & --- & --- & Consistency & No direct measurement; consistent with proton stability bounds \\
+\(M_U\) & 2.47 \ensuremath{\times} 10\textsuperscript{1}\textsuperscript{6} GeV & --- & --- & Consistency & No direct measurement; consistent with proton stability bounds \\
 \(\alpha_U^{-1}\) & 24.32 & --- & --- & Consistency & Intermediate variable in calibration procedure \\
-\(\Lambda_{\overline{\text{MS}}}^{(3)}\) & 0.322 GeV & \textasciitilde0.332 GeV & −3.0\% & Consistency & Propagated from \(\alpha_s\) (calibration sector); 0.4\% in \(\alpha_s\) \(\to\) \textasciitilde3\% in \(\Lambda\) \\
+\(\Lambda_{\overline{\text{MS}}}^{(3)}\) & 0.322 GeV & \textasciitilde0.332 GeV & -3.0\% & Consistency & Propagated from \(\alpha_s\) (calibration sector); 0.4\% in \(\alpha_s\) \(\to\) \textasciitilde3\% in \(\Lambda\) \\
 \end{longtable}
 }
 
-\subsubsection{10.7 Hadron Masses}\label{107-hadron-masses}
+\subsubsection{Hadron Masses}\label{107-hadron-masses}
 
 Hadron masses follow from \(m_X = C_X \cdot \Lambda_{\overline{\text{MS}}}^{(3)}\), where \(C_X\) is a dimensionless ratio computed via lattice QCD. The derivation chain is complete: \(P \to \alpha_s(m_Z) \to \Lambda^{(3)} \to m_X\). Current lattice estimates use small volumes and the quenched approximation, so systematic uncertainties are large (\textasciitilde10--20\%).
 
@@ -794,23 +794,23 @@ Neutron & 0.93957 & \(\approx m_p\) in the isospin limit & Isospin splitting req
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{11. Analysis of Discrepancies}\label{11-analysis-of-discrepancies}
+\subsection{Analysis of Discrepancies}\label{11-analysis-of-discrepancies}
 
-\subsubsection{11.1 Sub-Permille Outputs (\textless{} 0.1\%)}\label{111-sub-permille-outputs--01}
+\subsubsection{Sub-Permille Outputs (\textless{} 0.1\%)}\label{111-sub-permille-outputs--01}
 
-\textbf{W boson} (+0.012\%), \textbf{Z boson} (+0.035\%), \textbf{electron} (−0.023\%), \textbf{muon} (−0.022\%), \textbf{tau} (−0.020\%):
+\textbf{W boson} (+0.012\%), \textbf{Z boson} (+0.035\%), \textbf{electron} (-0.023\%), \textbf{muon} (-0.022\%), \textbf{tau} (-0.020\%):
 
 These five outputs are at the sub-permille level, but their epistemic status differs. The gauge boson masses (\(W\), \(Z\)) are \textbf{consistency checks}: they flow directly from the calibrated gauge couplings and \(v\), so their agreement is expected by construction. The charged leptons (\(e\), \(\mu\), \(\tau\)) are \textbf{Tier~3 phenomenological continuations}: the Koide structure (\(Q = 2/3\), \(\delta = 2/9\)) is algebraically independent of the gauge-coupling calibration, but the final exponent assignment uses an additional discrete-selection step.
 
-\subsubsection{11.2 Percent-Level Outputs (0.1\% -- 2\%)}\label{112-percent-level-outputs-01--2}
+\subsubsection{Percent-Level Outputs (0.1\% -- 2\%)}\label{112-percent-level-outputs-01--2}
 
-\textbf{Higgs} (+1.0\%), \textbf{top pole} (−0.87\%), \textbf{\(\alpha_s\)} (+0.37\%), \textbf{\(\sin^2\theta_W\)} (−0.21\%), \textbf{\(\alpha_{\text{em}}^{-1}\)} (+0.28\%):
+\textbf{Higgs} (+1.0\%), \textbf{top pole} (-0.87\%), \textbf{\(\alpha_s\)} (+0.37\%), \textbf{\(\sin^2\theta_W\)} (-0.21\%), \textbf{\(\alpha_{\text{em}}^{-1}\)} (+0.28\%):
 
 The epistemic status differs within this group. The \textbf{gauge couplings} (\(\alpha_s\), \(\sin^2\theta_W\), \(\alpha_{\text{em}}^{-1}\)) are \textbf{consistency checks} --- they are the data used to calibrate \(P\), so their agreement demonstrates that the self-consistent fixed-point procedure works, not that the framework predicts them.
 
-The \textbf{Higgs and top masses} are \textbf{Tier~2 independent quantitative outputs}: they come from the critical surface constraint (\(\lambda(M_U) = 0\), \(\beta_\lambda(M_U) = 0\)) together with the synchronized D11 transport (SM running below \(\mu_{\mathrm{sync}}\), MSSM-like running above, and only order-one-GeV residual matching). This remains an independent boundary condition not used in calibrating \(P\). The \textasciitilde1\% error is consistent with the expected size of 2-loop corrections and threshold effects.
+The \textbf{Higgs and top masses} are \textbf{Tier~2 independent quantitative outputs}: they come from the critical surface constraint (\(\lambda(M_U) = 0\), \(\beta_\lambda(M_U) = 0\)) together with the D11 transport (SM running below \(\mu_{\mathrm{sync}}\), MSSM-like running above, and only order-one-GeV residual matching). This remains an independent boundary condition not used in calibrating \(P\). The \textasciitilde1\% error is consistent with the expected size of 2-loop corrections and threshold effects.
 
-\subsubsection{11.3 Qualitative Agreement Only: Quark Masses (16\% -- 73\%)}\label{113-qualitative-agreement-only-quark-masses-16--73}
+\subsubsection{Qualitative Agreement Only: Quark Masses (16\% -- 73\%)}\label{113-qualitative-agreement-only-quark-masses-16--73}
 
 The quark masses from the \(\varepsilon = 1/6\) texture show large deviations. The reasons are well-understood:
 
@@ -828,7 +828,7 @@ The quark masses from the \(\varepsilon = 1/6\) texture show large deviations. T
 
 \textbf{The correct interpretation}: The texture correctly captures the \emph{hierarchy} (the fact that \(m_t/m_u \sim 10^5\) arises from integer exponents in base 6), and it does not aim for precision at the individual-mass level. The base-6 logarithms of all nine charged-fermion Yukawas land within \textasciitilde0.3 of integers , this is the core prediction. The order-one residuals are where scheme matching and subleading effects live.
 
-\subsubsection{11.4 Hadron Masses}\label{114-hadron-masses}
+\subsubsection{Hadron Masses}\label{114-hadron-masses}
 
 The hadron mass predictions follow from the dimensionless ratios \(C_X = m_X/\Lambda^{(3)}\), computed via lattice QCD. The internal lattice code (\texttt{oph\_lattice\_su3\_quenched\_v5.py}) implements a quenched Wilson-gauge SU(3) lattice with Wilson valence quarks, gradient-flow scale setting, and Richardson continuum extrapolation , all without PDG inputs. The dominant systematic uncertainties are:
 
@@ -844,17 +844,17 @@ The hadron mass predictions follow from the dimensionless ratios \(C_X = m_X/\La
 
 These are standard lattice QCD systematics, not limitations of the OPH framework. The derivation chain \(P \to \alpha_s \to \Lambda^{(3)} \to m_X\) is complete; improving the lattice computation improves the numerical precision of the hadron predictions.
 
-\subsubsection{11.5 Neutrinos: No Direct Comparison Available}\label{115-neutrinos-no-direct-comparison-available}
+\subsubsection{Neutrinos: No Direct Comparison Available}\label{115-neutrinos-no-direct-comparison-available}
 
-The predicted neutrino masses (\(\sim 0.08\)--\(3\) meV) are below current direct-detection sensitivity (KATRIN: \(m_\beta < 0.8\) eV) and well below current cosmological mass-sum bounds. The predicted \(\sum m_\nu \approx 3.6\) meV is well below the cosmological bound \(\sum m_\nu < 0.12\) eV (Planck 2018), but the simple capacity-branch hierarchy does not yet reproduce the observed oscillation splittings quantitatively.
+The predicted neutrino masses (\(\sim 0.08\)--\(3\) meV) are below existing direct-detection sensitivity (KATRIN: \(m_\beta < 0.8\) eV) and well below existing cosmological mass-sum bounds. The predicted \(\sum m_\nu \approx 3.6\) meV is well below the cosmological bound \(\sum m_\nu < 0.12\) eV (Planck 2018), but the simple capacity-branch hierarchy does not reproduce the observed oscillation splittings quantitatively.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{12. Reproduction Instructions}\label{12-reproduction-instructions}
+\subsection{Reproduction Instructions}\label{12-reproduction-instructions}
 
 All computations can be reproduced from the code in \href{../code/particles/}{\texttt{code/particles/}}.
 
-\subsubsection{12.1 Prerequisites}\label{121-prerequisites}
+\subsubsection{Prerequisites}\label{121-prerequisites}
 
 \begin{verbatim}
 pip install numpy
@@ -862,7 +862,7 @@ pip install numpy
 
 No other dependencies are needed. The \texttt{pdg} and \texttt{pandas} packages are only required for \path{tools/fetch_pdg_data.py} (the PDG data fetcher, used for comparison only).
 
-\subsubsection{12.2 Code Files}\label{122-code-files}
+\subsubsection{Code Files}\label{122-code-files}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}>{\RaggedRight\arraybackslash}p{0.390\textwidth}>{\RaggedRight\arraybackslash}p{0.390\textwidth}>{\RaggedRight\arraybackslash}p{0.140\textwidth}@{}}
@@ -882,7 +882,7 @@ File & Description & Stage \\
 \end{longtable}
 }
 
-\subsubsection{12.3 Running the Full Prediction}\label{123-running-the-full-prediction}
+\subsubsection{Running the Full Prediction}\label{123-running-the-full-prediction}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -899,7 +899,7 @@ File & Description & Stage \\
 \end{Highlighting}
 \end{Shaded}
 
-\subsubsection{12.4 No-Leakage Verification}\label{124-no-leakage-verification}
+\subsubsection{No-Leakage Verification}\label{124-no-leakage-verification}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -913,7 +913,7 @@ File & Description & Stage \\
 \end{Highlighting}
 \end{Shaded}
 
-\subsubsection{12.5 Individual Stages}\label{125-individual-stages}
+\subsubsection{Individual Stages}\label{125-individual-stages}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -927,7 +927,7 @@ File & Description & Stage \\
 \end{Highlighting}
 \end{Shaded}
 
-\subsubsection{12.5 Fetching PDG Reference Data}\label{125-fetching-pdg-reference-data}
+\subsubsection{Fetching PDG Reference Data}\label{125-fetching-pdg-reference-data}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -941,26 +941,12 @@ File & Description & Stage \\
 
 \subsection{Summary}\label{summary}
 
-This part is a quantitative implementation dossier, not a second statement of the recovered-core theorem package. In the master ledger, the recovered core remains D1--D5 together with D7--D9. The role of the present part is to record what happens after that structural core is in place.
+This part records the implementation layer that begins after the recovered core. Section~\ref{1b-calibration-vs-prediction} gives the full claim-tier map; the summary here keeps only the operational boundary.
 
 \begin{itemize}
-\item \textbf{Phase I recovered core inherited from Parts I--II:} conditional relativity plus the realized Standard Model structural chain. These results are upstream prerequisites for the present file, not outputs newly established here.
+\item \textbf{Phase I recovered core inherited from Parts I--II:} conditional relativity plus the realized Standard Model structural chain. These results are upstream prerequisites for this part, not outputs newly established here.
 \item \textbf{Phase II input-dependent / implementation layer:} D6 if the screen-capacity identification is adopted; D10 for the supplement-backed gauge/electroweak calibration sector; D11 for the Higgs/top critical-surface branch that adds no new continuous fit once D10 is fixed.
 \item \textbf{Phase III continuation layer:} charged-lepton/Koide fits, texture branches, neutrino estimates beyond D6, downstream hadron extractions, proton-spin bookkeeping, and related phenomenological continuations.
 \end{itemize}
 
-The practical contribution of this part is therefore narrow but useful. It records the current D10 gauge/electroweak closure of the supplement-backed implementation, the D11 critical-surface Higgs/top branch, and a set of D12 continuations that reuse the same structural backdrop without acquiring the same claim tier.
-
-A compact schematic of the status boundary is
-\[
-\text{Recovered core}
-\Longrightarrow
-\bigl(D6\ \text{if the capacity input is adopted}\bigr)
-\Longrightarrow
-D10
-\Longrightarrow
-D11
-\Longrightarrow
-D12.
-\]
-Here \(D10\) uses the external input \(P\), \(D6\) uses the external input \(N_{\mathrm{scr}}\), \(D11\) adds the extra critical-surface condition, and \(D12\) introduces further ans\"atze or downstream numerical machinery. Failure of a Phase-III branch does not by itself falsify the recovered core; failure of D11 challenges that secondary quantitative branch; failure of D10 challenges the current supplement-backed implementation.
+The practical contribution of this part is narrow but useful. It records the D10 gauge/electroweak calibration closure, the D11 critical-surface Higgs/top branch, and a set of D12 continuations that reuse the same structural backdrop without acquiring the same claim tier. Here \(D10\) uses the external input \(P\), \(D6\) uses the external input \(N_{\mathrm{scr}}\), \(D11\) adds the extra critical-surface condition, and \(D12\) introduces further ans\"atze or downstream numerical machinery. A failure in D12 retracts that continuation only; a failure in D11 challenges the secondary quantitative branch; a failure in D10 challenges the calibration branch.

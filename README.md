@@ -1,6 +1,6 @@
 # Observer Patch Holography: Simulation Theory, the Theory of Everything, and Observer-Centric Physics
 
-> OPH is a mathematical reconstruction program that starts from a simple requirement: overlapping local observer descriptions on a holographic screen must agree where they overlap. From that starting point, OPH develops conditional routes toward general relativity, toward reconstruction of the Standard Model gauge structure, toward a first-principles particle-mass program, and toward string/worldsheet descriptions emerging from the same framework. Early IBM Quantum Cloud benchmarks also provide preliminary experimental support for the local OPH picture.
+> OPH is a mathematical reconstruction program that starts from a simple requirement: overlapping local observer descriptions on a holographic screen must agree where they overlap. From that starting point, OPH develops conditional routes toward general relativity, toward reconstruction of the Standard Model gauge structure, toward a first-principles particle-mass program, and toward string/worldsheet descriptions emerging from the same framework. Early IBM Quantum Cloud benchmarks also provide preliminary real-device evidence for the corresponding local reduced-sector signatures.
 
 > **Status disclaimer:** OPH is an active research program and not yet fully proven. Several derivations remain incomplete, some proofs currently exist only as sketches, and certain auxiliary assumptions still need to be removed. The framework should therefore be regarded as under active development.
 

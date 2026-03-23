@@ -10,6 +10,8 @@ The second purpose is to reflect on what it all means — what kind of universe 
 
 ---
 
+If you came to OPH through **theory of everything** searches, this is the chapter where that claim cashes out. If you came through **simulation theory**, this is where the popular intuition gets translated into the observer-consistency machinery developed in the previous chapters.
+
 ## 18.1 The Intuitive Picture We Started With
 
 At the beginning of this book, we articulated the intuitive pictures that dominated physics for centuries:
