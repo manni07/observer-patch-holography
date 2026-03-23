@@ -76,7 +76,7 @@ Here's the key insight: the process our model describes (observer patches enforc
 
 Some philosophers have called this "selector theory": non-existence isn't the natural default that existence must overcome. Rather, undifferentiated nothing and structured something lie on a continuum, and the consistency constraints we've described are what carve out the structured regions.
 
-Others have spoken of "strange loops," reality creating itself through self-reference, like a hand drawing the hand that draws it. Our model gives this intuition mathematical teeth: the consistency constraints between observer patches *are* the self-referential loops that generate stable structure.
+Others have spoken of "strange loops," reality creating itself through self-reference, like a hand drawing the hand that draws it. The current OPH texts now give this intuition a limited mathematical foothold: they prove a theorem-usable nonempty compact convex state-and-law habitat built from overlap-consistent patch states and finite Axiom-3 law coordinates. But the closure map that would turn that habitat into a full strange-loop fixed-point theorem remains extra.
 
 But there's a deeper version of this idea. Reality may not just permit self-reference; it may also invite a strange-loop interpretation.
 

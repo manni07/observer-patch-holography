@@ -18,7 +18,7 @@ Les lois de la physique sont les règles de cohérence qui rendent cet accord in
 
 ## Articles
 
-**Observers are all you need** est l'article technique principal. Il donne l'énoncé le plus large du programme OPH et de ses branches de dérivation actuelles.
+**Observers are all you need** est l'article technique principal. Il donne l'énoncé le plus large du programme OPH et de ses branches de dérivation actuelles, et son épilogue interprétatif isole désormais un habitat OPH interne, utilisable au niveau théorème, pour les données d'état et de loi, tout en laissant explicites comme lacunes restantes la véritable application de fermeture de type strange loop et les questions de stabilité.
 
 - **PDF (article principal) :** [Observers are all you need](paper/observers_are_all_you_need.pdf)
 - **Source LaTeX :** [observers_are_all_you_need.tex](paper/observers_are_all_you_need.tex)

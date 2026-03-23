@@ -20,7 +20,7 @@ From this starting point (plus entropy and Markov constraints), OPH treats space
 
 ## Papers
 
-**Observers are all you need** is the primary technical paper. It gives the broadest current statement of the OPH program and its main derivation branches.
+**Observers are all you need** is the primary technical paper. It gives the broadest current statement of the OPH program and its main derivation branches, and its interpretive epilogue now isolates a theorem-usable OPH state-and-law habitat while keeping the actual strange-loop closure map and stability claims explicit as remaining gaps.
 
 - **PDF (main paper):** [Observers are all you need](paper/observers_are_all_you_need.pdf)
 - **LaTeX source:** [observers_are_all_you_need.tex](paper/observers_are_all_you_need.tex)

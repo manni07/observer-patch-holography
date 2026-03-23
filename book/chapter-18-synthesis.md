@@ -102,9 +102,9 @@ This is Gödel's self-reference made physical. The system contains a description
 
 This is Hofstadter's strange loop at the deepest level. Moving through the hierarchy of physics → chemistry → biology → minds → ideas → physics brings you back to where you started.
 
-**Philosophical continuation: this chapter proposes the strange-loop picture as an interpretive closure hypothesis, not as part of the recovered-core derivation.**
+**Philosophical continuation:** this chapter proposes the strange-loop picture as an interpretive closure hypothesis, not as part of the recovered-core derivation. The current OPH texts do, however, already prove a narrower internal habitat theorem: overlap-consistent patch states together with the finite Axiom-3 law coordinates form a theorem-usable nonempty compact convex sector. What remains extra is the actual closure map and the stronger observer-supporting invariant sector.
 
-This has an elegant property: it answers the question "Why does anything exist?" without appeal to external causes. The loop is self-causing. It exists because it must exist to be the thing that causes itself to exist.
+This has an elegant property: it suggests one candidate answer to the question "Why does anything exist?" without appeal to external causes. The current OPH texts now support the ambient state-and-law habitat for telling that story, but they do not yet prove the actual closure map, the stronger observer-supporting invariant sector, or stability. So the self-causing loop remains an interpretive continuation rather than a recovered-core theorem.
 
 The screen is not running on a computer external to itself. The screen *is* the computer, computing itself into existence through the observers who understand it.
 
