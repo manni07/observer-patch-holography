@@ -1,6 +1,6 @@
 # Observer Patch Holography: Simulation Theory, the Theory of Everything, and Observer-Centric Physics
 
-> OPH is a mathematical reconstruction program that starts from a simple requirement: overlapping local observer descriptions on a holographic screen must agree where they overlap. From that starting point, OPH develops conditional routes toward general relativity, toward reconstruction of the Standard Model gauge structure, toward a first-principles particle-mass program, and toward string/worldsheet descriptions emerging from the same framework. Early IBM Quantum Cloud benchmarks also provide preliminary real-device evidence for the corresponding local reduced-sector signatures.
+> OPH is a mathematical reconstruction program that starts from a simple requirement: overlapping local observer descriptions on a holographic screen must agree where they overlap. From that starting point, OPH develops routes toward general relativity, toward reconstruction of the Standard Model gauge structure, toward a first-principles particle-mass program, and toward string/worldsheet descriptions emerging from the same framework. Early IBM Quantum Cloud benchmarks also provide preliminary real-device evidence for the corresponding local reduced-sector signatures. OPH now also gives theorem-backed strange-loop support: the universe is explained as a self-referential timeless causal structure in which observer reconstruction and information constraints close into a single consistency loop.
 
 > **Status disclaimer:** OPH is an active research program and not yet fully proven. Several derivations remain incomplete, some proofs currently exist only as sketches, and certain auxiliary assumptions still need to be removed. The framework should therefore be regarded as under active development.
 
@@ -10,26 +10,37 @@
 
 > **OPH Disproval Challenge:** A USD 10,000 challenge to disprove OPH is currently running at [challenge.floatingpragma.io](https://challenge.floatingpragma.io).
 
-For readers arriving via searches for **simulation theory** or **theory of everything**, the short OPH claim is this: reality is an observer-consistent information process, and quantum mechanics, relativity, gauge structure, and particle physics are effective descriptions of deeper overlap-consistency rules.
+OPH should be read directly as a mathematical and practical implementation of simulation theory. It does not just claim that reality is "like" a simulation. It specifies a concrete simulation architecture: quantum information lives on a holographic screen, observer patches act as local computational viewpoints, overlap consistency acts as the synchronization rule, and the laws of physics emerge as the stable rules that let the whole system run coherently.
 
-The dedicated public landing pages for those queries are:
+For the same reason, OPH should also be read as a concrete theory of everything. The same observer-consistency architecture is used to explain spacetime, gauge structure, particle physics, and the global closure of reality itself.
 
-- **Simulation theory:** [floatingpragma.io/oph/simulation-theory](https://floatingpragma.io/oph/simulation-theory/)
-- **Theory of everything:** [floatingpragma.io/oph/theory-of-everything](https://floatingpragma.io/oph/theory-of-everything/)
+On that basis, OPH explains both why physics has the form it does and why anything exists at all: the universe is a self-referential timeless causal structure sustained by overlap consistency, information constraints, and observer reconstruction. In OPH terms, the theory-of-everything closure is implemented by the strange-loop hypothesis.
+
+The simulator-hardware side of OPH is developed in [Screen Microphysics and Observer Synchronization](paper/screen_microphysics_and_observer_synchronization.pdf), which turns the simulation-theory picture into explicit local screen models, overlap observables, record layers, observer criteria, and synchronization moves.
 
 ## Core Idea
 
 OPH takes the strong observer-first position that objective reality is not fundamental but emergent from a network of subjective perspectives that must agree where they overlap.
 
-This is why OPH is often framed publicly as both a physics-first form of simulation theory and a candidate theory of everything.
+This is why OPH is best framed publicly as simulation theory made mathematical and as a concrete theory of everything.
 
 The laws of physics are the consistency rules that make this intersubjective agreement possible.
 
 From this starting point (plus entropy and Markov constraints), OPH treats spacetime, gauge structure, and particle physics as emergent consequences of consistency.
 
+## Current Successes
+
+- **Relativity and gravity:** OPH derives relativistic observer-consistency structure from overlap constraints and develops a conditional route toward general relativity.
+- **Gauge and particle physics:** OPH reconstructs the Standard Model gauge structure and develops a first-principles particle-mass program from the same observer-patch framework.
+- **Simulation theory implementation:** OPH turns simulation theory into an explicit mathematical and practical architecture with observer patches, synchronization rules, record formation, and a concrete simulator-hardware layer.
+- **Theory of everything closure:** OPH uses the same observer-consistency architecture to supply a theory-of-everything closure through the strange-loop hypothesis.
+- **String/worldsheet emergence:** OPH connects the same underlying setup to string/worldsheet descriptions rather than treating them as a separate starting axiom set.
+- **Real-device evidence:** Early IBM Quantum Cloud benchmarks reproduce the predicted reduced-sector recoverability ordering and exact-ratio patterns on real hardware.
+- **Why anything exists:** OPH now gives a theorem-backed strange-loop account of existence in which the universe is a self-referential timeless causal structure.
+
 ## Papers
 
-**Observers are all you need** is the primary technical paper. It gives the broadest current statement of the OPH program and its main derivation branches, and its interpretive epilogue now isolates a theorem-usable OPH state-and-law habitat while keeping the actual strange-loop closure map and stability claims explicit as remaining gaps.
+**Observers are all you need** is the primary technical paper. It gives the broadest current statement of the OPH program, its main derivation branches, and the current IBM Quantum Cloud benchmark surface. It also provides the theorem backbone for OPH's strange-loop result: under OPH, the universe is a self-referential timeless causal structure in which observer reconstruction and information constraints close into a single consistency loop.
 
 - **PDF (main paper):** [Observers are all you need](paper/observers_are_all_you_need.pdf)
 - **LaTeX source:** [observers_are_all_you_need.tex](paper/observers_are_all_you_need.tex)
@@ -44,7 +55,7 @@ From this starting point (plus entropy and Markov constraints), OPH treats space
 - **PDF:** [Reality as a Consensus Protocol](paper/reality_as_consensus_protocol.pdf)
 - **LaTeX source:** [reality_as_consensus_protocol.tex](paper/reality_as_consensus_protocol.tex)
 
-**Screen Microphysics and Observer Synchronization** is the constructive microphysics note. It specifies finite local screen models, overlap observables, observer criteria, record layers, and synchronization moves.
+**Screen Microphysics and Observer Synchronization** is the constructive microphysics note. It develops the simulator-hardware layer of OPH: finite local screen models, overlap observables, observer criteria, record layers, and synchronization moves.
 
 - **PDF:** [Screen Microphysics and Observer Synchronization](paper/screen_microphysics_and_observer_synchronization.pdf)
 - **LaTeX source:** [screen_microphysics_and_observer_synchronization.tex](paper/screen_microphysics_and_observer_synchronization.tex)

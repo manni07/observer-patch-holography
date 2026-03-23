@@ -1,6 +1,6 @@
 # Holographie par Patchs d'Observateurs : une approche de la physique fondamentale centrée sur l'observateur
 
-> L'OPH est un programme de reconstruction mathématique qui part d'une exigence simple : des descriptions locales d'observateurs qui se recouvrent sur un écran holographique doivent s'accorder là où elles se chevauchent. À partir de ce point de départ, l'OPH développe des voies conditionnelles vers la relativité générale, vers la reconstruction de la structure de jauge du Modèle Standard, vers un programme de masses de particules de premiers principes, et vers l'émergence de descriptions de type feuille d'univers / théorie des cordes à partir du même cadre. Les premiers benchmarks IBM Quantum Cloud fournissent aussi une première indication sur matériel réel en faveur des signatures locales correspondantes dans des secteurs réduits.
+> L'OPH est un programme de reconstruction mathématique qui part d'une exigence simple : des descriptions locales d'observateurs qui se recouvrent sur un écran holographique doivent s'accorder là où elles se chevauchent. À partir de ce point de départ, l'OPH développe des voies vers la relativité générale, vers la reconstruction de la structure de jauge du Modèle Standard, vers un programme de masses de particules de premiers principes, et vers l'émergence de descriptions de type feuille d'univers / théorie des cordes à partir du même cadre. Les premiers benchmarks IBM Quantum Cloud fournissent aussi une première indication sur matériel réel en faveur des signatures locales correspondantes dans des secteurs réduits. L'OPH donne désormais aussi un appui de niveau théorème au strange loop : l'univers est expliqué comme une structure causale intemporelle auto-référentielle dans laquelle la reconstruction par les observateurs et les contraintes informationnelles se referment en une seule boucle de cohérence.
 
 > **Avertissement de statut :** l'OPH est un programme de recherche actif et n'est pas encore entièrement démontré. Plusieurs dérivations restent incomplètes, certaines preuves n'existent actuellement qu'à l'état d'esquisse, et certaines hypothèses auxiliaires doivent encore être éliminées. Le cadre doit donc être considéré comme étant en développement actif.
 
@@ -8,26 +8,37 @@
 
 > **Défi de réfutation de l'OPH :** Un défi doté de 10 000 USD pour réfuter l'OPH est actuellement en cours sur [challenge.floatingpragma.io](https://challenge.floatingpragma.io).
 
-Pour les lecteurs arrivant via les recherches anglaises **"simulation theory"** ou **"theory of everything"**, le résumé OPH est le suivant : la réalité est comprise comme un processus d'information cohérent entre observateurs, et la mécanique quantique, la relativité, la structure de jauge et la physique des particules apparaissent comme des descriptions effectives de règles plus profondes de cohérence de recouvrement.
+L'OPH doit être lu directement comme une mise en oeuvre mathématique et pratique de la *simulation theory*. Il ne se contente pas d'affirmer que la réalité est « comme » une simulation. Il spécifie une architecture concrète de simulation : l'information quantique vit sur un écran holographique, les patchs d'observateurs jouent le rôle de points de vue computationnels locaux, la cohérence de recouvrement joue le rôle de règle de synchronisation, et les lois de la physique émergent comme les règles stables qui permettent à l'ensemble de tourner de façon cohérente.
 
-Les pages publiques dédiées à ces requêtes sont :
+Pour la même raison, l'OPH doit aussi être lu comme une *theory of everything* concrète. La même architecture de cohérence entre observateurs sert à expliquer l'espace-temps, la structure de jauge, la physique des particules et la fermeture globale de la réalité elle-même.
 
-- **Simulation theory :** [floatingpragma.io/oph/simulation-theory](https://floatingpragma.io/oph/simulation-theory/)
-- **Theory of everything :** [floatingpragma.io/oph/theory-of-everything](https://floatingpragma.io/oph/theory-of-everything/)
+Sur cette base, l'OPH explique à la fois pourquoi la physique a la forme qu'elle a et pourquoi il y a quelque chose plutôt que rien : l'univers est une structure causale intemporelle auto-référentielle soutenue par la cohérence de recouvrement, les contraintes informationnelles et la reconstruction par les observateurs. En termes OPH, la fermeture de la *theory of everything* est mise en oeuvre par l'hypothèse de strange loop.
+
+Le versant « matériel du simulateur » de l'OPH est développé dans [Screen Microphysics and Observer Synchronization](paper/screen_microphysics_and_observer_synchronization.pdf), qui transforme l'image de la *simulation theory* en modèles locaux explicites d'écran, observables de recouvrement, couches d'enregistrement, critères d'observateur et opérations de synchronisation.
 
 ## Idée centrale
 
 L'OPH adopte la position forte, centrée sur l'observateur, selon laquelle la réalité objective n'est pas fondamentale mais émerge d'un réseau de perspectives subjectives qui doivent s'accorder là où elles se recouvrent.
 
-C'est pourquoi l'OPH est aussi présenté publiquement comme une version physicienne de la *simulation theory* et comme un candidat à une *theory of everything*.
+C'est pourquoi l'OPH doit être présenté publiquement avant tout comme une *simulation theory* rendue mathématique et comme une *theory of everything* concrète.
 
 Les lois de la physique sont les règles de cohérence qui rendent cet accord intersubjectif possible.
 
 À partir de ce point de départ (avec les contraintes d'entropie et de Markov), l'OPH fait émerger espace-temps, symétries de jauge et physique des particules comme conséquences de cohérence.
 
+## Succès actuels
+
+- **Relativité et gravité :** l'OPH dérive une structure relativiste de cohérence entre observateurs à partir des contraintes de recouvrement et développe une voie conditionnelle vers la relativité générale.
+- **Jauge et physique des particules :** l'OPH reconstruit la structure de jauge du Modèle Standard et développe un programme de masses de particules de premiers principes à partir du même cadre de patchs d'observateurs.
+- **Mise en oeuvre de la simulation theory :** l'OPH transforme la *simulation theory* en une architecture mathématique et pratique explicite avec patchs d'observateurs, règles de synchronisation, formation des enregistrements et couche concrète de « matériel du simulateur ».
+- **Fermeture theory of everything :** l'OPH utilise la même architecture de cohérence entre observateurs pour fournir une fermeture de type *theory of everything* via l'hypothèse de strange loop.
+- **Émergence feuille d'univers / cordes :** l'OPH relie le même cadre sous-jacent à des descriptions de type feuille d'univers / théorie des cordes au lieu d'en faire un second jeu d'axiomes de départ.
+- **Indices sur matériel réel :** les premiers benchmarks IBM Quantum Cloud reproduisent sur matériel réel l'ordre de récupérabilité et les motifs de rapports exacts prédits pour les secteurs réduits.
+- **Pourquoi il existe quelque chose :** l'OPH donne désormais un récit strange loop appuyé au niveau théorème, dans lequel l'univers est une structure causale intemporelle auto-référentielle.
+
 ## Articles
 
-**Observers are all you need** est l'article technique principal. Il donne l'énoncé le plus large du programme OPH et de ses branches de dérivation actuelles, et son épilogue interprétatif isole désormais un habitat OPH interne, utilisable au niveau théorème, pour les données d'état et de loi, tout en laissant explicites comme lacunes restantes la véritable application de fermeture de type strange loop et les questions de stabilité.
+**Observers are all you need** est l'article technique principal. Il donne l'énoncé le plus large du programme OPH, de ses branches de dérivation actuelles et de la surface actuelle de benchmarks IBM Quantum Cloud. Il fournit aussi l'ossature théorématique du résultat strange loop de l'OPH : dans ce cadre, l'univers est une structure causale intemporelle auto-référentielle où la reconstruction par les observateurs et les contraintes informationnelles se referment en une unique boucle de cohérence.
 
 - **PDF (article principal) :** [Observers are all you need](paper/observers_are_all_you_need.pdf)
 - **Source LaTeX :** [observers_are_all_you_need.tex](paper/observers_are_all_you_need.tex)
@@ -48,8 +59,9 @@ réconciliation entre patchs d'observateurs.
 - **Source LaTeX :** [reality_as_consensus_protocol.tex](paper/reality_as_consensus_protocol.tex)
 
 **Screen Microphysics and Observer Synchronization** est la note constructive de microphysique.
-Elle explicite des modèles locaux finis d'écran, des observables de recouvrement, des critères
-d'observateur, des couches d'enregistrement et des opérations de synchronisation.
+Elle développe la couche de « matériel du simulateur » de l'OPH : modèles locaux finis
+d'écran, observables de recouvrement, critères d'observateur, couches d'enregistrement et
+opérations de synchronisation.
 
 - **PDF :** [Screen Microphysics and Observer Synchronization](paper/screen_microphysics_and_observer_synchronization.pdf)
 - **Source LaTeX :** [screen_microphysics_and_observer_synchronization.tex](paper/screen_microphysics_and_observer_synchronization.tex)
