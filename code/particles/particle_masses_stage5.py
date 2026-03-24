@@ -495,16 +495,8 @@ def charged_lepton_masses(v: float, n_e: Tuple[int, int, int], N_c: int, N_g: in
     return {"e": float(me), "mu": float(mmu), "tau": float(mtau)}
 
 def lepton_spectrum(v: float, n_e: Tuple[int, int, int], N_c: int, N_g: int) -> Dict[str, float]:
-    """Charged leptons from Koide + simple neutrino placeholders."""
-    out = charged_lepton_masses(v, n_e, N_c, N_g)
-    eps = defect_epsilon_Z6()
-    vec = derive_integer_vectors(N_c=N_c, N_g=N_g, epsilon=eps)
-    out.update({
-        "nu_e": v * (eps ** 18),
-        "nu_mu": v * (eps ** 15),
-        "nu_tau": v * (eps ** 13),
-    })
-    return out
+    """Stage-5 charged-lepton surface only; neutrinos belong to a later branch."""
+    return charged_lepton_masses(v, n_e, N_c, N_g)
 
 # -----------------------------
 # Critical-surface channel (Stage-4)
@@ -932,7 +924,7 @@ def pretty_print(out: Dict[str, object]) -> None:
     print()
 
     print("Discrete texture spectrum (ε=1/6; CKM-mixed down sector):")
-    for k in ["u","c","t","d","s","b","e","mu","tau","nu_e","nu_mu","nu_tau"]:
+    for k in ["u","c","t","d","s","b","e","mu","tau"]:
         key=f"m_{k}"
         if key in out:
             print(f"  {k:5s}  {out[key]:.6e} GeV")

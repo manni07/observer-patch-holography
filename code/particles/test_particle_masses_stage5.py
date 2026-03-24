@@ -61,6 +61,11 @@ def main():
     check("mmu",          pred["m_mu"],                  PDG["mmu"],          1e-3)
     check("mtau",         pred["m_tau"],                 PDG["mtau"],         1e-3)
 
+    # Stage-5 must stay charged-sector only.
+    for k in ["m_nu_e", "m_nu_mu", "m_nu_tau"]:
+        if k in pred:
+            raise AssertionError(f"{k} leaked into Stage-5 output")
+
     print("\nAll Stage-5 regression checks passed.")
 
 if __name__ == "__main__":
