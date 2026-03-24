@@ -37,6 +37,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import pathlib
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -287,6 +288,34 @@ def compare(pred: Dict[str, Any], ref: Dict[str, float]) -> List[Row]:
     return rows
 
 
+def build_forward_artifact(
+    pred: Dict[str, Any],
+    *,
+    P: float,
+    log_dim_H: float,
+    loops: int,
+) -> Dict[str, Any]:
+    """Package the forward-only artifact separately from any reporting tables."""
+    return {
+        "inputs": {
+            "P": float(P),
+            "log_dim_H": float(log_dim_H),
+            "loops": int(loops),
+        },
+        "predictions": pred,
+    }
+
+
+def write_forward_artifact(path: str, artifact: Dict[str, Any]) -> None:
+    out_path = pathlib.Path(path)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(json.dumps(artifact, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+
+def load_forward_artifact(path: str) -> Dict[str, Any]:
+    return json.loads(pathlib.Path(path).read_text(encoding="utf-8"))
+
+
 def print_table(rows: List[Row]) -> None:
     print("\n=== OPH predictions vs PDG (validation-only) ===\n")
     hdr = f"{'quantity':<16} {'pred':>14} {'PDG':>14} {'rel.err':>12}  status  note"
@@ -383,6 +412,8 @@ def main() -> None:
     ap.add_argument("--compare", action="store_true", help="print PDG comparison")
     ap.add_argument("--json", action="store_true", help="emit JSON")
     ap.add_argument("--pdg-json", type=str, default=None, help="extend/override PDG table for reporting")
+    ap.add_argument("--forward-out", type=str, default=None, help="write the frozen forward artifact to JSON")
+    ap.add_argument("--compare-from-json", type=str, default=None, help="load a frozen forward artifact and compare without recomputing")
 
     args = ap.parse_args()
 
@@ -416,29 +447,47 @@ def main() -> None:
     if args.hadron_kappas:
         had_over["kappas"] = [float(x) for x in args.hadron_kappas.split(",") if x.strip()]
 
-    pred = build_predictions(
-        P=float(args.P),
-        log_dim_H=float(args.log_dim_H),
-        with_hadrons=bool(args.with_hadrons),
-        np_json=args.np_json,
-        loops=int(args.loops),
-        hadron_profile=str(args.hadron_profile),
-        hadron_overrides=had_over,
+    if args.compare_from_json:
+        artifact = load_forward_artifact(args.compare_from_json)
+        pred = dict(artifact["predictions"])
+        inputs = dict(artifact.get("inputs", {}))
+    else:
+        pred = build_predictions(
+            P=float(args.P),
+            log_dim_H=float(args.log_dim_H),
+            with_hadrons=bool(args.with_hadrons),
+            np_json=args.np_json,
+            loops=int(args.loops),
+            hadron_profile=str(args.hadron_profile),
+            hadron_overrides=had_over,
+        )
+        inputs = {
+            "P": float(args.P),
+            "log_dim_H": float(args.log_dim_H),
+            "loops": int(args.loops),
+        }
+
+        # no-cheat test (fast: no hadrons)
+        _assert_pdg_not_used(float(args.P), float(args.log_dim_H), int(args.loops))
+
+    artifact = build_forward_artifact(
+        pred,
+        P=float(inputs.get("P", args.P)),
+        log_dim_H=float(inputs.get("log_dim_H", args.log_dim_H)),
+        loops=int(inputs.get("loops", args.loops)),
     )
 
-    # no-cheat test (fast: no hadrons)
-    _assert_pdg_not_used(float(args.P), float(args.log_dim_H), int(args.loops))
+    if args.forward_out:
+        write_forward_artifact(args.forward_out, artifact)
 
     if args.compare:
         rows = compare(pred, ref)
         print_table(rows)
 
     if args.json:
-        print(json.dumps({
-            "inputs": {"P": float(args.P), "log_dim_H": float(args.log_dim_H), "loops": int(args.loops)},
-            "predictions": pred,
-            "pdg_reference_used_for_reporting": ref,
-        }, indent=2, sort_keys=True))
+        payload = dict(artifact)
+        payload["pdg_reference_used_for_reporting"] = ref
+        print(json.dumps(payload, indent=2, sort_keys=True))
 
 
 if __name__ == "__main__":

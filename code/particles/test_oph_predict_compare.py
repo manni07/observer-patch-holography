@@ -13,6 +13,7 @@ Run:
 from __future__ import annotations
 
 import math
+import tempfile
 
 import oph_predict_compare as pc
 
@@ -45,6 +46,18 @@ def main() -> None:
 
     # No-cheat mutation test
     pc._assert_pdg_not_used(P, H1, loops=4)
+
+    # Forward artifact freeze/load path
+    artifact = pc.build_forward_artifact(pred1, P=P, log_dim_H=H1, loops=4)
+    with tempfile.TemporaryDirectory() as tmpdir:
+        path = f"{tmpdir}/forward.json"
+        pc.write_forward_artifact(path, artifact)
+        loaded = pc.load_forward_artifact(path)
+    if loaded["inputs"]["P"] != P:
+        raise AssertionError("forward artifact did not preserve input P")
+    for k in ["m_e", "m_u", "m_nu_tau", "alpha3_at_mZrun"]:
+        if not math.isclose(float(loaded["predictions"][k]), float(pred1[k]), rel_tol=0.0, abs_tol=1e-12):
+            raise AssertionError(f"forward artifact drifted for {k}")
 
     # Hadron demo path (ultra tiny settings to keep runtime low)
     predH = pc.build_predictions(
