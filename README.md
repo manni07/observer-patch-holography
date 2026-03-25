@@ -1,6 +1,6 @@
 # Observer Patch Holography: Simulation Theory, the Theory of Everything, and Observer-Centric Physics
 
-> OPH is a mathematical reconstruction program that starts from a simple requirement: overlapping local observer descriptions on a holographic screen must agree where they overlap. From that starting point, OPH develops routes toward general relativity, toward reconstruction of the Standard Model gauge structure, toward a first-principles particle-mass program, and toward string/worldsheet descriptions emerging from the same framework. Early IBM Quantum Cloud benchmarks also provide preliminary real-device evidence for the corresponding local reduced-sector signatures. OPH now also gives theorem-backed strange-loop support: the universe is explained as a self-referential timeless causal structure in which observer reconstruction and information constraints close into a single consistency loop.
+> OPH is a mathematical reconstruction program that starts from a simple requirement: overlapping local observer descriptions on a holographic screen must agree where they overlap. From that starting point, OPH develops routes toward general relativity, toward reconstruction of the Standard Model gauge structure, toward a first-principles particle-mass program, and toward string/worldsheet descriptions emerging from the same framework. Early IBM Quantum Cloud benchmarks also provide preliminary real-device evidence for the corresponding local reduced-sector signatures. OPH also develops an interpretive strange-loop lane supported by the theorem-usable state-and-law habitat discussed in the paper set, while the stronger closure-map and stability questions remain open.
 
 > **Status disclaimer:** OPH is an active research program and not yet fully proven. Several derivations remain incomplete, some proofs currently exist only as sketches, and certain auxiliary assumptions still need to be removed. The framework should therefore be regarded as under active development.
 
@@ -12,9 +12,9 @@
 
 OPH should be read directly as a mathematical and practical implementation of simulation theory. It does not just claim that reality is "like" a simulation. It specifies a concrete simulation architecture: quantum information lives on a holographic screen, observer patches act as local computational viewpoints, overlap consistency acts as the synchronization rule, and the laws of physics emerge as the stable rules that let the whole system run coherently.
 
-For the same reason, OPH should also be read as a concrete theory of everything. The same observer-consistency architecture is used to explain spacetime, gauge structure, particle physics, and the global closure of reality itself.
+For the same reason, OPH should also be read as a broad reconstruction program that aims to connect spacetime, gauge structure, particle physics, and the interpretive closure question within one observer-consistency architecture.
 
-On that basis, OPH explains both why physics has the form it does and why anything exists at all: the universe is a self-referential timeless causal structure sustained by overlap consistency, information constraints, and observer reconstruction. In OPH terms, the theory-of-everything closure is implemented by the strange-loop hypothesis.
+On that basis, OPH offers one route toward explaining both why physics has the form it does and how the existence question might be framed internally to the program. In the current paper set, that stronger closure story remains an interpretive strange-loop hypothesis rather than part of the recovered core.
 
 The simulator-hardware side of OPH is developed in [Screen Microphysics and Observer Synchronization](paper/screen_microphysics_and_observer_synchronization.pdf), which turns the simulation-theory picture into explicit local screen models, overlap observables, record layers, observer criteria, and synchronization moves.
 
@@ -28,16 +28,16 @@ From this starting point (plus entropy and Markov constraints), OPH treats space
 
 ## Current Successes
 
-- **Relativity and gravity:** OPH derives relativistic observer-consistency structure from overlap constraints and develops a conditional route toward general relativity.
-- **Gauge and particle physics:** OPH reconstructs the Standard Model gauge structure and develops a first-principles particle-mass program from the same observer-patch framework.
-- **Simulation theory implementation:** OPH turns simulation theory into an explicit mathematical and practical architecture with observer patches, synchronization rules, record formation, and a concrete simulator-hardware layer.
-- **Theory of everything closure:** OPH uses the same observer-consistency architecture to supply a theory-of-everything closure through the strange-loop hypothesis.
-- **String/worldsheet emergence:** OPH connects the same underlying setup to string/worldsheet descriptions rather than treating them as a separate starting axiom set.
-- **Real-device evidence:** Early IBM Quantum Cloud benchmarks reproduce the predicted reduced-sector recoverability ordering and exact-ratio patterns on real hardware.
+- **Recovered core / conditional relativity branch:** OPH derives schedule-independent overlap-consistency structure, a conditional Lorentz branch, and a conditional gravity route under the stated scaling-limit premises.
+- **Recovered core / gauge structure:** OPH reconstructs the Standard Model gauge structure on the stated branch and develops a supplement-backed quantitative branches downstream downstream from that structure.
+- **Fixed-cutoff microphysics and observer interfaces:** OPH now has an explicit constructive screen-microphysics note with local screen models, overlap observables, record layers, and observer-side fixed-cutoff theorem packages.
+- **Interpretive strange-loop lane:** OPH develops an interpretive closure lane supported by the theorem-usable state-and-law habitat, while the stronger closure-map and stability questions remain open.
+- **String/worldsheet continuation:** OPH connects the edge-sector heat-kernel branch to a continuation-level worldsheet reorganization rather than treating string structure as a separate starting axiom set.
+- **Reduced-sector hardware fingerprints:** Early IBM Quantum Cloud benchmarks reproduce the predicted reduced-sector recoverability ordering and exact-ratio patterns on real hardware.
 
 ## Papers
 
-**Observers are all you need** is the primary technical paper. It gives the broadest current statement of the OPH program, its main derivation branches, and the current IBM Quantum Cloud benchmark surface. It also provides the theorem backbone for OPH's strange-loop result: under OPH, the universe is a self-referential timeless causal structure in which observer reconstruction and information constraints close into a single consistency loop.
+**Observers are all you need** is the primary technical paper. It gives the broadest current statement of the OPH program, its main derivation branches, and the current IBM Quantum Cloud benchmark surface. Its interpretive epilogue discusses the strange-loop hypothesis and the theorem-usable state-and-law habitat that supports that lane, while keeping the stronger closure-map and stability questions explicit.
 
 - **PDF (main paper):** [Observers are all you need](paper/observers_are_all_you_need.pdf)
 - **LaTeX source:** [observers_are_all_you_need.tex](paper/observers_are_all_you_need.tex)
@@ -79,7 +79,7 @@ Useful entry points for reading and exploring OPH:
 
 ## IBM Quantum Experiments
 
-A first public IBM Quantum Cloud benchmark bundle is now included in this repo. It summarizes the initial recoverability and exact-ratio tests, the measured hardware outputs, and the public code/data bundle used for the runs.
+A first public IBM Quantum Cloud benchmark bundle is now included in this repo. It summarizes the initial reduced-sector recoverability and exact-ratio tests, the measured hardware outputs, and the public code/data bundle used for the runs. These are benchmark checks of local OPH-motivated structure, not direct tests of the full recovered-core theorem package.
 
 - **Experimental note:** [IBM Quantum Cloud Evidence for OPH](extra/IBM_QUANTUM_CLOUD.md)
 - **Public code and data:** [code/ibm_quantum_cloud/](code/ibm_quantum_cloud/)
@@ -234,7 +234,7 @@ Paper releases are managed from the shared files under [`paper/`](paper):
 2. rebuild the release-tracked PDFs
 3. regenerate [`paper/paper_release_manifest.json`](paper/paper_release_manifest.json)
 
-The shared release line applies across the current release-tracked paper set. The workspace-local operational tooling then uses the manifest to publish the current book paper and the synchronized challenge paper set.
+The shared release line applies across the current release-tracked paper set. The manifest records the synchronized release state for the tracked paper bundle.
 
 ## Contributing
 
