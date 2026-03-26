@@ -6,6 +6,19 @@
 \textbf{Overview.} This part documents the quantitative OPH branches used in this paper. The calculation uses two external inputs: the pixel area \(P \equiv a_{\text{cell}}/\ell_P^2 = 1.63094\), calibrated from the gauge coupling sector via the screen\textquotesingle s entropy-matching condition (\S{}5.4 of Part I of this manuscript), and the screen capacity \(N_{\mathrm{scr}} \equiv \log(\dim\mathcal{H}_{\text{tot}}) \sim 10^{122}\), which enters only in the cosmological/neutrino branch (\S{}14 of Part V of this manuscript). Every other quantity appearing in the derivation chain is either a mathematical constant, a consequence of the gauge group (itself selected from a refinement-stable edge-sector category by Tannaka-Krein/DR reconstruction plus the extended MAR admissibility package, \S{}6.1--\S{}6.2 of Part I of this manuscript), or a derived structural integer on the realized branch (\(N_g = 3\), \(N_c = 3\), \(\varepsilon = 1/6\), \(\delta = 2/9\)). Outputs are classified by epistemic status: quantities flowing from the calibrated gauge couplings are calibration-sector consistency checks; the Higgs/top critical-surface branch is the main independent quantitative output; charged-lepton, flavor-texture, neutrino, and hadron branches are weaker phenomenological or downstream numerical continuations. A complete audit of all constants and the full epistemic classification appear in \S{}1A--\S{}1B below.
 \end{quote}
 
+\paragraph{Particle-side success boundary.}
+The successes emphasized in this part are the exact massless photon/gluon
+sectors, the electroweak calibration surface reproducing the gauge
+couplings, \(\alpha_{\rm em}\), the weak mixing angle, the Higgs vacuum
+expectation value, and the \(W/Z\) outputs, and the Higgs/top
+critical-surface branch fixed once that electroweak surface is chosen.
+Charged-lepton, quark, neutrino, and hadron continuations are documented
+separately and are not part of that success list. The companion particle
+note is maintained as the
+\href{https://github.com/FloatingPragma/observer-patch-holography/blob/main/paper/toward_a_particle_spectrum_derivation_from_observer_overlap_consistency.pdf}{companion particle note on GitHub},
+together with the
+\href{https://github.com/FloatingPragma/observer-patch-holography/tree/main/code/particles}{public particle mirror on GitHub}.
+
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{Inputs and Contract}\label{1-inputs-and-contract}
@@ -853,7 +866,7 @@ The predicted neutrino masses (\(\sim 0.08\)--\(3\) meV) are below existing dire
 \subsection{Reproduction Instructions}\label{12-reproduction-instructions}
 
 All computations can be reproduced from the code in \href{../code/particles/}{\texttt{code/particles/}}.
-The repository now ships that surface as a compact public export: a
+That public code surface is a compact export: a
 \path{code/particles/core/} compatibility backbone for the current predictor,
 the active closure-lane directories, and frozen current artifacts under
 \path{code/particles/runs/}.

@@ -27,11 +27,24 @@
     -0.5175863354681689,
     1.0
   ],
-  "generated_utc": "2026-03-25T23:51:12Z",
+  "gap_pair_reduction": {
+    "coefficient_recovery": {
+      "a_q": "(gamma21_q + gamma32_q)/2",
+      "b_q": "((1 + x2)*gamma32_q - (1 - x2)*gamma21_q) / (2*(1 - x2^2))"
+    },
+    "eigenvalue_recovery": {
+      "e1": "-(2*gamma21_q + gamma32_q)/3",
+      "e2": "(gamma21_q - gamma32_q)/3",
+      "e3": "(gamma21_q + 2*gamma32_q)/3"
+    },
+    "gamma21_q": "E_q,2 - E_q,1",
+    "gamma32_q": "E_q,3 - E_q,2"
+  },
+  "generated_utc": "2026-03-26T00:30:27Z",
   "input_kind": "ordered_branch_generator_spectral_package",
   "log_insertion_convention": "add_E_q_log_to_both_left_and_right_diagonal_logs",
   "notes": [
-    "The smallest reduced live family is not a free three-weight projector ansatz but a trace-zero quadratic evaluator on the ordered centered branch-generator operator.",
+    "The smallest reduced live family is not a free three-weight projector ansatz but the exact quadratic family forced by a simple ordered three-point spectrum plus trace-zero centering.",
     "The diagnostic witness coefficients are reference-facing only; they show the rough span the missing evaluator must generate without being promoted to theorem status."
   ],
   "ordered_family_eigenvalues": [
@@ -55,5 +68,6 @@
     "quadratic": null
   },
   "shared_norm_origin": "charged_dirac_scalarization_restriction",
-  "shared_norm_value": 0.9231656602589083
+  "shared_norm_value": 0.9231656602589083,
+  "theorem_candidate": "every self-adjoint trace-zero sector-even evaluator diagonal in the ordered projector algebra on a simple three-point spectrum is quadratic in X_ord"
 }

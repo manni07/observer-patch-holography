@@ -10,8 +10,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_INPUT = ROOT /  "runs" / "flavor" / "charged_budget_transport.json"
-DEFAULT_OUT = ROOT /  "runs" / "flavor" / "charged_mean_eigenvalue_certificate.json"
+DEFAULT_INPUT = ROOT / "runs" / "flavor" / "charged_budget_transport.json"
+DEFAULT_OUT = ROOT / "runs" / "flavor" / "charged_mean_eigenvalue_certificate.json"
 
 
 def _timestamp() -> str:
@@ -32,12 +32,14 @@ def main() -> int:
         "artifact": "charged_common_refinement_mean_eigenvalue_certificate",
         "generated_utc": _timestamp(),
         "parent_candidate": cert.get("candidate_id"),
+        "mean_invariance_subclause_id": "common_refinement_preserves_mean_eigenvalue",
         "transport_kind": cert.get("transport_kind"),
         "generator_kind": cert.get("generator_kind"),
         "refinement_pair": cert.get("refinement_pair"),
         "mean_formula": "Delta_mean(X,X';rho) = mean(family_eigenvalues(X^rho)) - mean(family_eigenvalues(X'^rho))",
         "current_family_eigenvalues": family_eigenvalues,
         "current_mean_eigenvalue": mean_value,
+        "current_centered_remainder": [float(x - mean_value) for x in family_eigenvalues] if mean_value is not None else None,
         "left_common_family_eigenvalues": None,
         "right_common_family_eigenvalues": None,
         "left_common_mean": None,
@@ -53,6 +55,7 @@ def main() -> int:
         "proof_status": "candidate_only",
         "notes": [
             "This is the smallest live constructive witness beneath charged_common_refinement_sigma_seed_equalizer.",
+            "The current best reduced family is the scalar-part subclause common_refinement_preserves_mean_eigenvalue rather than full family-eigenvalue equality.",
             "Once the mean witness closes on the same-label common-refinement package, the existing seed-defect law collapses to zero on the current family and the sector gluing norm should vanish.",
         ],
     }

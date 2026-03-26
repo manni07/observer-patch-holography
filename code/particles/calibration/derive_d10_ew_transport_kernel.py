@@ -10,8 +10,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_INPUT = ROOT /  "runs" / "calibration" / "d10_ew_observable_family.json"
-DEFAULT_OUT = ROOT /  "runs" / "calibration" / "d10_ew_transport_kernel.json"
+DEFAULT_INPUT = ROOT / "runs" / "calibration" / "d10_ew_observable_family.json"
+DEFAULT_OUT = ROOT / "runs" / "calibration" / "d10_ew_transport_kernel.json"
 
 
 def _timestamp() -> str:
@@ -33,9 +33,10 @@ def build_artifact(family: dict[str, object]) -> dict[str, object]:
         "kernel_id": "EWTransportKernel_D10",
         "active_readout_selector_candidate_id": "EWActiveReadoutSelector_D10",
         "active_readout_selector_status": "candidate_only",
-        "post_selector_missing_object": "EWSharedScalarReadoutMap_D10",
+        "post_selector_missing_object": "EWSharedScalarReadoutPackage_D10",
         "shared_scalar_readout_map_status": "candidate_only",
         "next_live_mover": "coherent_pole_effective_readout_object",
+        "shared_scalar_package_id": "Sigma_EW_D10",
         "readout_coherence_clause_id": "EWTransportReadoutCoherence_D10",
         "family_source_artifact": str(family.get("artifact")),
         "family_source_id": str(family.get("observable_family_id")),
@@ -61,6 +62,11 @@ def build_artifact(family: dict[str, object]) -> dict[str, object]:
             "delta_kappa_from": ["Pi_AA", "Pi_AZ", "Pi_ZZ"],
             "delta_rho_from": ["Pi_WW", "Pi_ZZ"],
             "delta_rW_from": ["Pi_WW", "Pi_AA", "Pi_AZ", "Pi_ZZ"],
+        },
+        "shared_scalar_package": {
+            "symbol": "Sigma_EW_D10 = (delta_alpha, delta_kappa, delta_rho, delta_rW)",
+            "zero_normalization_rule": "F_i(0; x) = x for every electroweak readout row",
+            "common_provenance_required": True,
         },
         "reported_outputs": {
             "MW_pole": "derived",
@@ -153,7 +159,7 @@ def build_artifact(family: dict[str, object]) -> dict[str, object]:
         "notes": [
             "This artifact is the exact boundary for any pole/effective electroweak family built on top of the current exact D10 running-family core.",
             "The smallest mass-moving local object is now EWActiveReadoutSelector_D10: until one coherent pole/effective family is certified, the active public quintet should remain the running-family quintet instead of mixing W_run with a Stage-3 Z-only surrogate.",
-            "Beyond that selector fallback, the next live mover is one coherent shared scalar readout map beneath EWTransportKernel_D10 rather than another per-observable family split.",
+            "Beyond that selector fallback, the next live mover is one coherent shared scalar package Sigma_EW_D10 with one zero-normalized readout family beneath EWTransportKernel_D10 rather than another per-observable family split.",
             "The smaller exact missing clause is EWTransportReadoutCoherence_D10: either W, Z, alpha_em, and sin^2(theta_W) all stay on the running family or all move together to one common pole/effective family with one shared kernel and scheme.",
             "Inside that criterion, the strictly smaller exact subclause is EWScalarProvenanceEquality_D10: delta_alpha, delta_kappa, delta_rho, and delta_rW must expose one common family source, one frozen scheme, and one origin kernel.",
             "A singleton Z-only surrogate is formally non-promotable under this artifact.",

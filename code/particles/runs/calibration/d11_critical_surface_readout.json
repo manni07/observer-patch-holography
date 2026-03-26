@@ -21,7 +21,7 @@
     "ref_surface": "code/particles/RESULTS_STATUS.md"
   },
   "exact_missing_object": "CriticalSurfaceReadoutKernel_D11",
-  "generated_utc": "2026-03-25T23:51:12Z",
+  "generated_utc": "2026-03-26T00:30:27Z",
   "jacobian": {
     "d_mH_d_lambda": 480.0,
     "d_mt_pole_d_y_t": 184.97
@@ -33,6 +33,7 @@
     "The synchronized D11 core already captures most of the numerical gain over the literal appendix flow, but mu_sync alone moves top and Higgs together and cannot do the needed top-up / Higgs-down move.",
     "The smallest constructive D11 object is a common low-scale readout vector Theta_D11_HT(mu_t) = (delta_y_t, delta_lambda) produced by one CriticalSurfaceReadoutKernel_D11, not two independent per-observable residual fits.",
     "The current diagnostic vector already lies almost exactly on a rank-one relative-core ray with kappa_HT = 16/9, so the remaining irreducible live object is the shared scalar seed sigma_D11_HT rather than a free two-component readout.",
+    "The tightest current reduced live law is the two-estimator seed equality sigma_y = sigma_lambda, leaving a tiny interval around one common sigma_D11_HT instead of a free D11 readout scalar.",
     "Until that common readout kernel closes, the honest D11 surface is the synchronized core plus one explicit shared readout-kernel burden."
   ],
   "predicted": {
@@ -52,10 +53,17 @@
     },
     "name": "CriticalSurfaceReadoutKernel_D11",
     "rank_one_residual_abs": 6.986677967422278e-06,
+    "seed_equality_law": "sigma_y = delta_y_t / y_t_core_mt = sigma_lambda = -(9/16) * delta_lambda / lambda_core_mt",
     "seed_symbol": "sigma_D11_HT(mu_t)",
     "seed_value": null,
+    "sigma_bar": 0.01256505533755541,
     "sigma_from_lambda": 0.01256854867653912,
     "sigma_from_y_t": 0.012561561998571698,
+    "sigma_half_interval": 3.493338983711139e-06,
+    "sigma_interval": [
+      0.012561561998571698,
+      0.01256854867653912
+    ],
     "status": "rank_one_candidate"
   },
   "readout_vector_symbol": "Theta_D11_HT(mu_t) = (delta_y_t(mu_t), delta_lambda(mu_t))",

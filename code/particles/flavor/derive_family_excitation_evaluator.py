@@ -12,9 +12,9 @@ import numpy as np
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_GENERATOR = ROOT /  "runs" / "flavor" / "generation_bundle_branch_generator.json"
-DEFAULT_DESCENT = ROOT /  "runs" / "flavor" / "quark_sector_descent.json"
-DEFAULT_OUT = ROOT /  "runs" / "flavor" / "family_excitation_evaluator.json"
+DEFAULT_GENERATOR = ROOT / "runs" / "flavor" / "generation_bundle_branch_generator.json"
+DEFAULT_DESCENT = ROOT / "runs" / "flavor" / "quark_sector_descent.json"
+DEFAULT_OUT = ROOT / "runs" / "flavor" / "family_excitation_evaluator.json"
 
 
 def _timestamp() -> str:
@@ -58,6 +58,7 @@ def main() -> int:
         "artifact": "oph_family_excitation_evaluator",
         "generated_utc": _timestamp(),
         "proof_status": "candidate_only",
+        "theorem_candidate": "every self-adjoint trace-zero sector-even evaluator diagonal in the ordered projector algebra on a simple three-point spectrum is quadratic in X_ord",
         "input_kind": "ordered_branch_generator_spectral_package",
         "log_insertion_convention": "add_E_q_log_to_both_left_and_right_diagonal_logs",
         "family_coordinate_kind": "affine_normalized_ordered_branch_coordinate",
@@ -66,6 +67,19 @@ def main() -> int:
         "family_coordinate_x": [float(v) for v in x.tolist()],
         "centering_mode": "trace_zero",
         "quadratic_family_formula": "E_q_log = ctr(a_q * X_ord + b_q * X_ord^2)",
+        "gap_pair_reduction": {
+            "gamma21_q": "E_q,2 - E_q,1",
+            "gamma32_q": "E_q,3 - E_q,2",
+            "eigenvalue_recovery": {
+                "e1": "-(2*gamma21_q + gamma32_q)/3",
+                "e2": "(gamma21_q - gamma32_q)/3",
+                "e3": "(gamma21_q + 2*gamma32_q)/3",
+            },
+            "coefficient_recovery": {
+                "a_q": "(gamma21_q + gamma32_q)/2",
+                "b_q": "((1 + x2)*gamma32_q - (1 - x2)*gamma21_q) / (2*(1 - x2^2))",
+            },
+        },
         "quadratic_polynomial_coeffs_u": {"linear": None, "quadratic": None},
         "quadratic_polynomial_coeffs_d": {"linear": None, "quadratic": None},
         "diagnostic_witness_coeffs_u": diagnostic_coeffs_u,
@@ -78,7 +92,7 @@ def main() -> int:
         "shared_norm_value": descent.get("g_ch"),
         "promotion_blocker_cleared": "quark_even_excitation_evaluator_missing",
         "notes": [
-            "The smallest reduced live family is not a free three-weight projector ansatz but a trace-zero quadratic evaluator on the ordered centered branch-generator operator.",
+            "The smallest reduced live family is not a free three-weight projector ansatz but the exact quadratic family forced by a simple ordered three-point spectrum plus trace-zero centering.",
             "The diagnostic witness coefficients are reference-facing only; they show the rough span the missing evaluator must generate without being promoted to theorem status.",
         ],
     }

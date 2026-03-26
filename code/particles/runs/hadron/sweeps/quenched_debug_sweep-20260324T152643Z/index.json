@@ -6,7 +6,7 @@
   "runs": [
     {
       "command": [
-        "/Users/muellerberndt/.pyenv/versions/3.13.7/bin/python3",
+        "python3",
         "code/particles/hadron/run_quenched_reference.py",
         "--out",
         "code/particles/runs/hadron/sweeps/quenched_debug_sweep-20260324T152643Z/entries/beta57_l4_t8_seed0.json",

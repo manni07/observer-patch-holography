@@ -95,7 +95,7 @@ Points d'entrée utiles pour lire et explorer l'OPH :
 
 ## Expériences IBM Quantum
 
-Un premier bundle public d'expériences IBM Quantum Cloud est maintenant inclus dans ce dépôt. Il résume les premiers tests de récupérabilité et de rapports exacts, les sorties matérielles mesurées, ainsi que le bundle public de code et de données utilisé pour ces exécutions.
+Un premier bundle public d'expériences IBM Quantum Cloud est inclus dans ce dépôt. Il résume les premiers tests de récupérabilité et de rapports exacts, les sorties matérielles mesurées, ainsi que le bundle public de code et de données utilisé pour ces exécutions.
 
 - **Note expérimentale :** [IBM Quantum Cloud Evidence for OPH](extra/IBM_QUANTUM_CLOUD.md)
 - **Code et données publics :** [code/ibm_quantum_cloud/](code/ibm_quantum_cloud/)
@@ -174,23 +174,40 @@ L'infographie suivante résume le programme actuel de reconstruction OPH, depuis
 
 *Des axiomes à une physique effective : le programme actuel de reconstruction OPH.*
 
-> **Prédictions du spectre de particules :** la dérivation adossée au dépôt, depuis l'aire de pixel jusqu'au programme de masses de particules, avec comparaison aux données PDG et contrôles d'audit, est présentée dans **[la source de dérivation du spectre](paper/tex_fragments/SPECTRUM_DERIVATION.tex)**.
+> **Prédictions du spectre de particules :** la dérivation, depuis l'aire de pixel jusqu'au programme de masses de particules, avec comparaison aux données PDG et contrôles d'audit, est présentée dans **[la source de dérivation du spectre](paper/tex_fragments/SPECTRUM_DERIVATION.tex)**.
+
+## Résultats particulaires
+
+Succès particulaires retenus :
+
+| Résultat | Sortie OPH | Référence |
+|------|------|------|
+| Masse du photon | exactement `0` | borne expérimentale `< 1e-18 eV` |
+| Masse des gluons | exactement `0` | secteur de couleur structurellement sans masse |
+| Masse du boson `W` | `80.3863 GeV` | `80.377 GeV` |
+| Masse du Higgs | `126.5 GeV` | `125.20 GeV` |
+| Masse du top | `171.1 GeV` | `172.4 GeV` |
+
+Le ledger particulaire complet, avec les lignes ouvertes et incorrectes, se trouve dans
+[la note dédiée](paper/toward_a_particle_spectrum_derivation_from_observer_overlap_consistency.pdf),
+[le ledger SVG](assets/particle_mass_derivation_graph.svg),
+et [code/particles/RESULTS_STATUS.md](code/particles/RESULTS_STATUS.md).
 
 ## Contenu du dépôt
 
-Ce dépôt est organisé autour de l'ensemble actuel des articles OPH et de leur matériel d'appui.
+Ce dépôt est organisé autour de l'ensemble des articles OPH présents dans ce dépôt et de leur matériel d'appui.
 
 - **[`paper/`](paper) :** PDF suivis par la release, notes supplémentaires, sources LaTeX et métadonnées de version. C'est le répertoire canonique de l'article principal, de l'article compact de soumission, de l'article compagnon orienté informatique, de la note de microphysique d'écran et de la note sur le programme particulaire.
 - **[`paper/tex_fragments/`](paper/tex_fragments) :** fragments de dérivation partagés utilisés par les articles longs, notamment pour la jauge, le spectre, le supplément technique et la branche cordes.
 - **[`book/`](book) :** sources Markdown du livre OPH en version web.
-- **[`code/particles/`](code/particles) :** miroir public compact du programme particulaire actif : fichiers historiques du prédicteur, répertoires de lanes actuels, artefacts figés et surfaces de statut.
+- **[`code/particles/`](code/particles) :** miroir public compact du programme particulaire actif : fichiers historiques du prédicteur, répertoires de lanes, artefacts figés et surfaces de statut.
 - **[`code/ibm_quantum_cloud/`](code/ibm_quantum_cloud) :** expériences IBM Quantum Cloud, données et utilitaires associés au matériel.
 - **[`extra/`](extra) :** notes complémentaires comme les objections courantes, la note IBM Quantum et des notes d'application.
 - **[`assets/`](assets) :** figures et diagrammes utilisés dans les articles, le README et les surfaces publiques.
 
 ## Code
 
-Le code de ce dépôt suit l'organisation de l'ensemble courant des articles plutôt qu'une API de bibliothèque stabilisée. Les points d'entrée les plus utiles sont :
+Le code de ce dépôt est organisé par lanes, artefacts et surfaces de statut liés aux articles. Les points d'entrée les plus utiles sont :
 
 | Chemin | Rôle |
 |--------|------|
@@ -223,31 +240,6 @@ note sur le programme particulaire, utilisez `python3 tools/build_tex_papers.py`
 La ligne de version est partagée à l'ensemble courant des articles suivis par la release. L'outillage
 opérationnel local à l'espace de travail utilise ensuite ce manifeste pour publier le papier du livre
 et l'ensemble synchronisé des papiers du challenge.
-
-## Statut de la dérivation particulaire
-
-![Vue d'ensemble de la dérivation particulaire OPH](assets/particle_mass_derivation_graph.svg)
-
-La frontière publique actuelle du programme particulaire est résumée dans
-[la note dédiée](paper/toward_a_particle_spectrum_derivation_from_observer_overlap_consistency.pdf)
-et dans le miroir compact sous [code/particles/](code/particles).
-
-- `D10` reste une surface de calibration liée à l'entrée de surface de pixel `P`.
-- `D11` reste une branche quantitative secondaire pour Higgs/top, pas une fermeture recovered-core.
-- Les leptons chargés, les quarks et les neutrinos disposent maintenant d'artefacts forward et de garde-fous explicites, mais restent des lanes de continuation.
-- Les hadrons restent une lane debug/systématiques dépendante de la simulation.
-
-Certaines lignes de [code/particles/RESULTS_STATUS.md](code/particles/RESULTS_STATUS.md)
-restent encore en désaccord matériel avec les masses mesurées. Ce n'est pas
-présenté comme un simple problème de précision numérique caché. En `D10` et
-`D11`, l'écart restant provient d'une fermeture de transport/lecture encore
-incomplète, pas seulement d'un `P` avec davantage de décimales. En dehors de
-`D11`, les valeurs des leptons chargés, des quarks et des neutrinos restent sur
-des lanes de continuation avec des objets dérivatifs encore ouverts pour
-l'échelle partagée, les excitations de famille et les sélecteurs/évaluateurs.
-Les lignes hadroniques sont des sorties de debug d'une lane dépendante de la
-simulation. Le travail en cours vise précisément ces objets manquants, plutôt
-que de requalifier les valeurs actuelles en prédictions closes.
 
 ## Contribuer
 

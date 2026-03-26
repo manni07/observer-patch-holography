@@ -14,7 +14,7 @@ OPH should be read directly as a mathematical and practical implementation of si
 
 For the same reason, OPH should also be read as a broad reconstruction program that aims to connect spacetime, gauge structure, particle physics, and the interpretive closure question within one observer-consistency architecture.
 
-On that basis, OPH offers one route toward explaining both why physics has the form it does and how the existence question might be framed internally to the program. In the current paper set, that stronger closure story remains an interpretive strange-loop hypothesis rather than part of the recovered core.
+On that basis, OPH offers one route toward explaining both why physics has the form it does and how the existence question might be framed internally to the program. In the paper set collected here, that stronger closure story remains an interpretive strange-loop hypothesis and is not part of the recovered core.
 
 The simulator-hardware side of OPH is developed in [Screen Microphysics and Observer Synchronization](paper/screen_microphysics_and_observer_synchronization.pdf), which turns the simulation-theory picture into explicit local screen models, overlap observables, record layers, observer criteria, and synchronization moves.
 
@@ -29,20 +29,20 @@ From this starting point (plus entropy and Markov constraints), OPH treats space
 ## Current Successes
 
 - **Recovered core / conditional relativity branch:** OPH derives schedule-independent overlap-consistency structure, a conditional Lorentz branch, and a conditional gravity route under the stated scaling-limit premises.
-- **Recovered core / gauge structure:** OPH reconstructs the Standard Model gauge structure on the stated branch and develops a supplement-backed quantitative branches downstream downstream from that structure.
-- **Fixed-cutoff microphysics and observer interfaces:** OPH now has an explicit constructive screen-microphysics note with local screen models, overlap observables, record layers, and observer-side fixed-cutoff theorem packages.
+- **Recovered core / gauge structure:** OPH reconstructs the Standard Model gauge structure on the stated branch and develops supplement-backed quantitative branches downstream from that structure.
+- **Fixed-cutoff microphysics and observer interfaces:** OPH has an explicit constructive screen-microphysics note with local screen models, overlap observables, record layers, and observer-side fixed-cutoff theorem packages.
 - **Interpretive strange-loop lane:** OPH develops an interpretive closure lane supported by the theorem-usable state-and-law habitat, while the stronger closure-map and stability questions remain open.
 - **String/worldsheet continuation:** OPH connects the edge-sector heat-kernel branch to a continuation-level worldsheet reorganization rather than treating string structure as a separate starting axiom set.
 - **Reduced-sector hardware fingerprints:** Early IBM Quantum Cloud benchmarks reproduce the predicted reduced-sector recoverability ordering and exact-ratio patterns on real hardware.
 
 ## Papers
 
-**Observers are all you need** is the primary technical paper. It gives the broadest current statement of the OPH program, its main derivation branches, and the current IBM Quantum Cloud benchmark surface. Its interpretive epilogue discusses the strange-loop hypothesis and the theorem-usable state-and-law habitat that supports that lane, while keeping the stronger closure-map and stability questions explicit.
+**Observers are all you need** is the primary technical paper. It gives the broadest technical statement of the OPH program in this repo, its main derivation branches, and the IBM Quantum Cloud benchmark surface. Its interpretive epilogue discusses the strange-loop hypothesis and the theorem-usable state-and-law habitat that supports that lane, while keeping the stronger closure-map and stability questions explicit.
 
 - **PDF (main paper):** [Observers are all you need](paper/observers_are_all_you_need.pdf)
 - **LaTeX source:** [observers_are_all_you_need.tex](paper/observers_are_all_you_need.tex)
 
-**Recovering Relativity and Standard Model Structure from Observer-Overlap Consistency** is the compact submission paper. It is the authoritative recovered-core and claim-tier surface for the current OPH paper set. It concentrates the current falsifiable core: relativity from observer-overlap consistency, the conditional gravity branch, and the gauge reconstruction program.
+**Recovering Relativity and Standard Model Structure from Observer-Overlap Consistency** is the compact submission paper. It is the authoritative recovered-core and claim-tier surface for the OPH paper set in this repo. It concentrates the falsifiable core: relativity from observer-overlap consistency, the conditional gravity branch, and the gauge reconstruction program.
 
 - **PDF (compact submission paper):** [Recovering Relativity and Standard Model Structure from Observer-Overlap Consistency](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf)
 - **LaTeX source:** [recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.tex](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.tex)
@@ -57,7 +57,7 @@ From this starting point (plus entropy and Markov constraints), OPH treats space
 - **PDF:** [Screen Microphysics and Observer Synchronization](paper/screen_microphysics_and_observer_synchronization.pdf)
 - **LaTeX source:** [screen_microphysics_and_observer_synchronization.tex](paper/screen_microphysics_and_observer_synchronization.tex)
 
-**Toward a Particle-Spectrum Derivation from Observer-Overlap Consistency** is the current particle-program note. It records the public dependency boundary for the OPH particle lane, keeps D10/D11 separate from the open charged, neutrino, and hadron continuations, and points at the compact mirrored `code/particles/` surface.
+**Toward a Particle-Spectrum Derivation from Observer-Overlap Consistency** is the particle-program note in this repo. It records the public dependency boundary for the OPH particle lane, keeps D10/D11 separate from the open charged, neutrino, and hadron continuations, and points at the compact mirrored `code/particles/` surface.
 
 - **PDF:** [Toward a Particle-Spectrum Derivation from Observer-Overlap Consistency](paper/toward_a_particle_spectrum_derivation_from_observer_overlap_consistency.pdf)
 - **LaTeX source:** [toward_a_particle_spectrum_derivation_from_observer_overlap_consistency.tex](paper/toward_a_particle_spectrum_derivation_from_observer_overlap_consistency.tex)
@@ -85,7 +85,7 @@ Useful entry points for reading and exploring OPH:
 
 ## IBM Quantum Experiments
 
-A first public IBM Quantum Cloud benchmark bundle is now included in this repo. It summarizes the initial reduced-sector recoverability and exact-ratio tests, the measured hardware outputs, and the public code/data bundle used for the runs. These are benchmark checks of local OPH-motivated structure, not direct tests of the full recovered-core theorem package.
+A first public IBM Quantum Cloud benchmark bundle is included in this repo. It summarizes the initial reduced-sector recoverability and exact-ratio tests, the measured hardware outputs, and the public code/data bundle used for the runs. These are benchmark checks of local OPH-motivated structure, not direct tests of the full recovered-core theorem package.
 
 - **Experimental note:** [IBM Quantum Cloud Evidence for OPH](extra/IBM_QUANTUM_CLOUD.md)
 - **Public code and data:** [code/ibm_quantum_cloud/](code/ibm_quantum_cloud/)
@@ -160,29 +160,46 @@ The following infographic summarizes the current OPH reconstruction program from
 
 *From axioms to effective physics: the current OPH reconstruction program. The embedded infographic should be regenerated before release because it still uses older axiom shorthand.*
 
-> **Particle Spectrum Derivation**: The repository-backed derivation from pixel area to the particle-mass program, together with comparisons against PDG data and audit checks, is documented in **[the spectrum derivation source](paper/tex_fragments/SPECTRUM_DERIVATION.tex)**.
+> **Particle Spectrum Derivation**: The derivation from pixel area to the particle-mass program, together with comparisons against PDG data and audit checks, is documented in **[the spectrum derivation source](paper/tex_fragments/SPECTRUM_DERIVATION.tex)**.
+
+## Particle Results
+
+Selected particle-side successes:
+
+| Result | OPH output | Reference |
+|------|------|------|
+| Photon mass | exactly `0` | experimental upper limit `< 1e-18 eV` |
+| Gluon mass | exactly `0` | structural massless color sector |
+| `W` boson mass | `80.3863 GeV` | `80.377 GeV` |
+| Higgs mass | `126.5 GeV` | `125.20 GeV` |
+| Top mass | `171.1 GeV` | `172.4 GeV` |
+
+The fuller particle ledger, including open and incorrect rows, is collected in
+[the particle note](paper/toward_a_particle_spectrum_derivation_from_observer_overlap_consistency.pdf),
+[the SVG ledger](assets/particle_mass_derivation_graph.svg),
+and [code/particles/RESULTS_STATUS.md](code/particles/RESULTS_STATUS.md).
 
 ## Repository Contents
 
-This repository is organized around the current OPH paper set and its supporting material.
+This repository is organized around the OPH paper set in this repo and its supporting material.
 
 - **[`paper/`](paper):** release-tracked PDFs, supplemental notes, LaTeX sources, and shared paper metadata. This is the canonical home of the main paper, the compact submission paper, the CS companion paper, the screen-microphysics note, and the particle-program note.
 - **[`paper/tex_fragments/`](paper/tex_fragments):** shared derivation fragments used by the longer papers, including the gauge, spectrum, technical-supplement, and string-theory source files.
 - **[`book/`](book):** Markdown source for the OPH Book web edition.
-- **[`code/particles/`](code/particles):** compact public export of the active particle program: `core/` compatibility modules, current closure-lane directories, frozen artifacts, and status ledgers.
+- **[`code/particles/`](code/particles):** compact public export of the active particle program: `core/` compatibility modules, closure-lane directories, frozen artifacts, and status ledgers.
 - **[`code/ibm_quantum_cloud/`](code/ibm_quantum_cloud):** IBM Quantum Cloud experiments, data, and hardware-facing utilities.
 - **[`extra/`](extra):** supporting notes such as common objections, the IBM Quantum writeup, and practical-application notes.
 - **[`assets/`](assets):** figures and diagrams used across the papers, README, and public materials.
 
 ## Code
 
-The code in this repo follows the current paper set rather than a polished package API. The main entry points are:
+The repository code is organized by paper-facing lanes, ledgers, and artifacts. The main entry points are:
 
 | Path | Purpose |
 |------|---------|
 | [code/particles/README.md](code/particles/README.md) | Map of the compact public particle mirror and its claim boundary |
 | [code/particles/RESULTS_STATUS.md](code/particles/RESULTS_STATUS.md) | Human-readable public particle-status ledger |
-| [code/particles/results_status.json](code/particles/results_status.json) | Machine-readable mirror of the current particle-status ledger |
+| [code/particles/results_status.json](code/particles/results_status.json) | Machine-readable mirror of the particle-status ledger |
 | [code/particles/core/particle_masses_paper_d10_d11.py](code/particles/core/particle_masses_paper_d10_d11.py) | Paper-synchronized D10/D11 reconstruction and transport layer |
 | [code/particles/core/oph_predict_compare.py](code/particles/core/oph_predict_compare.py) | Predictor backbone and comparison surface used by the compact export |
 | [code/particles/calibration/](code/particles/calibration) | D10/D11 calibration and exactness-audit lane |
@@ -248,29 +265,6 @@ To build every hand-authored TeX paper in the repo, including supplemental notes
 particle-program paper, run `python3 tools/build_tex_papers.py`.
 
 The shared release line applies across the current release-tracked paper set. The manifest records the synchronized release state for the tracked paper bundle.
-
-## Particle Derivation Status
-
-![OPH particle derivation graph](assets/particle_mass_derivation_graph.svg)
-
-The current public particle-program boundary is summarized in
-[the particle note](paper/toward_a_particle_spectrum_derivation_from_observer_overlap_consistency.pdf)
-and in the compact mirror under [code/particles/](code/particles).
-
-- `D10` remains a calibration-sector surface tied to the declared pixel-area input `P`.
-- `D11` remains a secondary quantitative Higgs/top branch rather than recovered-core closure.
-- Charged leptons, quarks, and neutrinos now have explicit forward artifacts and guards, but they remain continuation lanes rather than promoted theorem-level outputs.
-- Hadrons remain a simulation-dependent debug/systematics lane and are not public closure claims.
-
-Some rows in [code/particles/RESULTS_STATUS.md](code/particles/RESULTS_STATUS.md)
-still disagree materially with measured masses. That is not being treated as a
-hidden precision issue. In `D10` and `D11`, the remaining gap is a missing
-coherent transport/readout closure, not just more digits of `P`. Outside `D11`,
-the charged-lepton, quark, and neutrino numbers still sit on continuation lanes
-with unresolved shared-scale, excitation, and selector/evaluator objects. The
-hadron rows are debug outputs from a simulation-dependent lane. Further work is
-ongoing on those missing derivation objects rather than relabeling the current
-numbers as closed predictions.
 
 ## Contributing
 

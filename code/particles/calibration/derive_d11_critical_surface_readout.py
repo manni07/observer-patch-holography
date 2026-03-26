@@ -10,9 +10,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_OUT = ROOT /  "runs" / "calibration" / "d11_critical_surface_readout.json"
-DEFAULT_D10_SOURCE = ROOT /  "runs" / "calibration" / "d10_ew_observable_family.json"
-DEFAULT_RESULTS_STATUS = ROOT /  "RESULTS_STATUS.md"
+DEFAULT_OUT = ROOT / "runs" / "calibration" / "d11_critical_surface_readout.json"
+DEFAULT_D10_SOURCE = ROOT / "runs" / "calibration" / "d10_ew_observable_family.json"
+DEFAULT_RESULTS_STATUS = ROOT / "RESULTS_STATUS.md"
 
 
 def _timestamp() -> str:
@@ -60,6 +60,13 @@ def build_artifact(d10_source: Path, results_status: Path) -> dict[str, object]:
             "delta_lambda_formula": "-kappa_lambda_over_y.candidate * sigma_D11_HT * lambda_core_mt",
             "sigma_from_y_t": sigma_from_y,
             "sigma_from_lambda": -delta_lambda / (kappa_candidate * lambda_core),
+            "seed_equality_law": "sigma_y = delta_y_t / y_t_core_mt = sigma_lambda = -(9/16) * delta_lambda / lambda_core_mt",
+            "sigma_bar": 0.5 * (sigma_from_y + (-(9.0 / 16.0) * delta_lambda / lambda_core)),
+            "sigma_half_interval": 0.5 * abs((-(9.0 / 16.0) * delta_lambda / lambda_core) - sigma_from_y),
+            "sigma_interval": [
+                min(sigma_from_y, (-(9.0 / 16.0) * delta_lambda / lambda_core)),
+                max(sigma_from_y, (-(9.0 / 16.0) * delta_lambda / lambda_core)),
+            ],
             "rank_one_residual_abs": rank_one_residual_abs,
             "common_provenance": None,
             "delta_y_t_mt": None,
@@ -89,6 +96,7 @@ def build_artifact(d10_source: Path, results_status: Path) -> dict[str, object]:
             "The synchronized D11 core already captures most of the numerical gain over the literal appendix flow, but mu_sync alone moves top and Higgs together and cannot do the needed top-up / Higgs-down move.",
             "The smallest constructive D11 object is a common low-scale readout vector Theta_D11_HT(mu_t) = (delta_y_t, delta_lambda) produced by one CriticalSurfaceReadoutKernel_D11, not two independent per-observable residual fits.",
             "The current diagnostic vector already lies almost exactly on a rank-one relative-core ray with kappa_HT = 16/9, so the remaining irreducible live object is the shared scalar seed sigma_D11_HT rather than a free two-component readout.",
+            "The tightest current reduced live law is the two-estimator seed equality sigma_y = sigma_lambda, leaving a tiny interval around one common sigma_D11_HT instead of a free D11 readout scalar.",
             "Until that common readout kernel closes, the honest D11 surface is the synchronized core plus one explicit shared readout-kernel burden.",
         ],
     }

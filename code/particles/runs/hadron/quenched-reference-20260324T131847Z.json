@@ -1,6 +1,6 @@
 {
   "command": [
-    "/Users/muellerberndt/.pyenv/versions/3.13.7/bin/python3",
+    "python3",
     "code/particles/core/oph_lattice_su3_quenched_v5.py",
     "--beta",
     "5.7",
@@ -76,7 +76,7 @@
   },
   "runner": {
     "created_utc": "20260324T131849Z",
-    "cwd": "/Users/muellerberndt/Projects/oph-meta",
+    "cwd": ".",
     "script": "code/particles/hadron/run_quenched_reference.py"
   },
   "subprocess": {

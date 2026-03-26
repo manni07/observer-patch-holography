@@ -10,9 +10,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_SCALAR = ROOT /  "runs" / "neutrino" / "majorana_overlap_defect_scalar_evaluator.json"
-DEFAULT_FORWARD = ROOT /  "runs" / "neutrino" / "forward_neutrino_closure_bundle.json"
-DEFAULT_OUT = ROOT /  "runs" / "neutrino" / "defect_weighted_mu_e_family.json"
+DEFAULT_SCALAR = ROOT / "runs" / "neutrino" / "majorana_overlap_defect_scalar_evaluator.json"
+DEFAULT_FORWARD = ROOT / "runs" / "neutrino" / "forward_neutrino_closure_bundle.json"
+DEFAULT_OUT = ROOT / "runs" / "neutrino" / "defect_weighted_mu_e_family.json"
 
 
 def _timestamp() -> str:
@@ -44,6 +44,8 @@ def main() -> int:
         "kernel_choice": "1-cos",
         "base_mu_nu": mu_nu,
         "raw_defect_source": scalar.get("overlap_nonvanishing_witness_hint"),
+        "raw_edge_score_symbol": "q_e > 0",
+        "centered_log_rule": "delta_e = log(q_e) - mean_f(log(q_f))",
         "defect_log_centered": {"psi12": None, "psi23": None, "psi31": None},
         "weight_rule": "mu_e = base_mu_nu * exp(delta_e) / mean_f(exp(delta_f))",
         "edge_weights": {"psi12": None, "psi23": None, "psi31": None},
@@ -63,6 +65,7 @@ def main() -> int:
         "proof_status": "candidate_only",
         "notes": [
             "This is the first local mass-moving object that can lift the current 1-2 near-degeneracy without changing the centered selector, kernel choice, or edge-character origin candidate.",
+            "The best reduced family is a positive raw edge score q_e followed by the canonical centered-log and mean-preserving lift to mu_e.",
             "The exact theorem blocker remains on same-label overlap / edge-bundle normalization, but the smallest spectrum-moving local object is the positive overlap-defect weight normalizer that turns raw defect data into centered additive edge logs.",
         ],
     }
