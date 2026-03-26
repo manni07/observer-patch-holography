@@ -129,7 +129,7 @@ This is a significant shift from the traditional view. And it works. When you
 work out the consequences, the results are extraordinary:
 
 - **A conditional scaling-limit Einstein branch** emerges from entanglement equilibrium on the screen
-- **The Standard Model gauge structure** SU(3) x SU(2) x U(1)/Z₆ is derived rather than assumed under the extended MAR admissibility package
+- **The Standard Model gauge structure** SU(3) x SU(2) x U(1)/Z₆ is derived rather than assumed under the MAR admissibility package
 - **A dark-sector branch** becomes structurally available from modular anomalies, not new particles
 - **Why anything exists at all** is addressed through a theorem-backed strange-loop closure story: the universe is treated as a self-referential timeless causal structure supported by OPH's internal state-and-law and fixed-point machinery
 
@@ -173,7 +173,7 @@ This book reverse engineers reality from first principles.
 We start with a minimal assumption: observers exist, they have bounded
 access to information, and they must agree where their observations overlap.
 
-In the current quantitative implementation this framework uses two external continuous inputs: the pixel area $P \approx 1.63$, the geometric size of a single computational element on the holographic screen in Planck units, and the total screen capacity inferred from the observed cosmological constant. Everything else — Newton's constant, the gauge structure, and the effective spacetime branch — follows from the axioms or from stated structural conditions. Gauge-coupling calibration remains a supplement-backed non-core sector. Charged-lepton/Koide, flavor, neutrino, and related matter-sector branches are retained with weaker phenomenological or downstream numerical status. The Standard Model gauge structure is derived under the extended MAR admissibility package.
+In the current quantitative implementation this framework uses two external continuous inputs: the pixel area $P \approx 1.63$, the geometric size of a single computational element on the holographic screen in Planck units, and the total screen capacity inferred from the observed cosmological constant. Everything else — Newton's constant, the gauge structure, and the effective spacetime branch — follows from the axioms or from stated structural conditions. Gauge-coupling calibration remains a supplement-backed non-core sector. Charged-lepton/Koide, flavor, neutrino, and related matter-sector branches are retained with weaker phenomenological or downstream numerical status. The Standard Model gauge structure is derived under the MAR admissibility package.
 
 From this starting point, we derive constraints. We show how the mathematical
 structures of quantum mechanics and relativity emerge from consistency
