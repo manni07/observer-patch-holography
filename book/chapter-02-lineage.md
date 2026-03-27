@@ -338,7 +338,7 @@ But what if they are not?
 
 ### The Right Question
 
-Our framework shows a different perspective. Reality is not "like" a computation. Reality *is* computation. The screen is a quantum system processing information according to gauge constraints. Observers are patterns within that computation. The laws of physics are the rules that allow consistent information processing across patches.
+Our framework supports a different perspective. Reality is not merely compared to computation; OPH treats computation as a candidate organizing picture for reality. The screen is a quantum system processing information according to gauge constraints. Observers are patterns within that computation. The laws of physics are the rules that allow consistent information processing across patches.
 
 From this view, asking "are we in a simulation?" is like asking "is this novel written in words?" The question assumes an alternative that does not exist. There is no non-computational reality to contrast with a simulation. Computation is not a metaphor for reality. It is what reality is made of.
 
@@ -352,7 +352,7 @@ This is the strange loop: **reality evolves observers who discover how reality w
 
 We are not programs running on someone else's hardware. We are patterns within a self-simulating system. The simulation isn't run by external beings—it runs itself, through us, through our understanding, through our eventual construction of the very computational substrate that gives rise to us.
 
-This isn't proven—it remains an interpretive continuation. But it resolves the puzzle of existence in an elegant way. "Why does anything exist?" becomes "Why does the self-simulating loop close?" And the answer is: because it must. A self-consistent strange loop is the only stable configuration.
+This isn't proven—it remains an interpretive continuation. It reframes the puzzle of existence in an elegant way, but the stronger closure claim still awaits an actual OPH closure map together with uniqueness and stability inputs.
 
 Escher's hands draw each other. Reality simulates the observers who simulate reality.
 
