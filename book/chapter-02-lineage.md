@@ -296,7 +296,7 @@ But Hofstadter and others have shown something deeper: the loop doesn't just *ex
 
 We will return to this idea in Chapter 18, where we consider the possibility that reality evolves toward producing observers capable of understanding and simulating it—closing the loop of self-creation.
 
-## 2.11 Information Theory: From Metaphor to Physics
+## 2.10 Information Theory: From Metaphor to Physics
 
 The philosophical hints became physics in the 20th century.
 
@@ -352,7 +352,7 @@ This is the strange loop: **reality evolves observers who discover how reality w
 
 We are not programs running on someone else's hardware. We are patterns within a self-simulating system. The simulation isn't run by external beings—it runs itself, through us, through our understanding, through our eventual construction of the very computational substrate that gives rise to us.
 
-This isn't proven—it remains a derive. But it resolves the puzzle of existence in an elegant way. "Why does anything exist?" becomes "Why does the self-simulating loop close?" And the answer is: because it must. A self-consistent strange loop is the only stable configuration.
+This isn't proven—it remains an interpretive continuation. But it resolves the puzzle of existence in an elegant way. "Why does anything exist?" becomes "Why does the self-simulating loop close?" And the answer is: because it must. A self-consistent strange loop is the only stable configuration.
 
 Escher's hands draw each other. Reality simulates the observers who simulate reality.
 
