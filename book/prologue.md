@@ -72,6 +72,11 @@ is just... there.
 the information doesn't disappear. It's encoded on the horizon, scrambled
 but technically recoverable. The universe keeps perfect logs.
 
+**Black holes put information under pressure.** Throw something into a black
+hole, and modern quantum-gravity arguments strongly suggest the information
+is not simply lost, even though the detailed recovery story remains subtle
+and framework-dependent.
+
 **Space is a hologram.** The information needed to describe a volume
 of space can be encoded entirely on its boundary. The three-dimensional
 world is a projection from two-dimensional data.
@@ -203,7 +208,7 @@ The structure follows the logic of reverse engineering:
 3. **Test against behavior.** We catalogue predictions, both verified and
    testable. We note what identifies a measurement contradiction with the model.
 
-This model rests on established mathematics and physics, extended by four axioms and one selection principle. The results are striking: a conditional scaling-limit gravity branch, the Standard Model gauge structure, and several downstream continuation programs all emerge from the framework. Matter-sector continuations are kept explicitly separate from the recovered core. Our goal is to show you how deep the rabbit hole goes.
+This model rests on established mathematics and physics, organized around a five-axiom core together with later admissibility and branch-selection structure. The results are striking: a conditional scaling-limit gravity branch, the Standard Model gauge structure, and several downstream continuation programs all emerge from the framework. Matter-sector continuations are kept explicitly separate from the recovered core. Our goal is to show you how deep the rabbit hole goes.
 
 ## How This Book Is Organized
 
