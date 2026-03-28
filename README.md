@@ -29,7 +29,7 @@ From this starting point (plus entropy and Markov constraints), OPH treats space
 ## Current Successes
 
 - **Recovered core / conditional relativity branch:** OPH derives schedule-independent overlap-consistency structure, a conditional Lorentz branch, and a conditional gravity route under the stated scaling-limit premises.
-- **Recovered core / gauge structure:** OPH reconstructs the Standard Model gauge structure on the stated branch and develops supplement-backed quantitative branches downstream from that structure.
+- **Recovered core / gauge structure:** OPH reconstructs the Standard Model gauge structure on the stated branch and develops explicitly weaker downstream quantitative branches from that structure. The strongest current local descendant is a closed Higgs/top forward seed on the D10 gauge core, while exact \(W/Z\) closure remains a repair problem and charged-lepton, light-quark, neutrino, and hadron masses remain below recovered-core tier.
 - **Fixed-cutoff microphysics and observer interfaces:** OPH has an explicit constructive screen-microphysics note with local screen models, overlap observables, record layers, and observer-side fixed-cutoff theorem packages.
 - **Interpretive strange-loop lane:** OPH develops an interpretive closure lane supported by the theorem-usable state-and-law habitat, while the stronger closure-map and stability questions remain open.
 - **String/worldsheet continuation:** OPH connects the edge-sector heat-kernel branch to a continuation-level worldsheet reorganization rather than treating string structure as a separate starting axiom set.

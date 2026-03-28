@@ -27,7 +27,7 @@ Les lois de la physique sont les règles de cohérence qui rendent cet accord in
 ## Succès actuels
 
 - **Relativité et gravité :** l'OPH dérive une structure relativiste de cohérence entre observateurs à partir des contraintes de recouvrement et développe une voie conditionnelle vers la relativité générale.
-- **Jauge et physique des particules :** l'OPH reconstruit la structure de jauge du Modèle Standard et développe un programme de masses de particules de premiers principes à partir du même cadre de patchs d'observateurs.
+- **Jauge et physique des particules :** l'OPH reconstruit la structure de jauge du Modèle Standard et développe des branches quantitatives explicitement plus faibles à partir du même cadre de patchs d'observateurs. Le descendant local le plus fort à ce jour est une graine forward fermée pour Higgs/top sur le coeur de jauge D10, tandis que la fermeture exacte de \(W/Z\) reste un problème de réparation et que les masses des leptons chargés, des quarks légers, des neutrinos et des hadrons restent sous le niveau du coeur reconstruit.
 - **Voie vers une lecture simulation theory :** l'OPH transforme la *simulation theory* en une architecture mathématique et pratique explicite avec patchs d'observateurs, règles de synchronisation, formation des enregistrements et couche concrète de « matériel du simulateur ».
 - **Voie interprétative de strange loop :** l'OPH développe une voie de fermeture interprétative appuyée par l'habitat état-et-loi, tandis que la carte de fermeture plus forte et les questions de stabilité restent ouvertes.
 - **Émergence feuille d'univers / cordes :** l'OPH relie le même cadre sous-jacent à des descriptions de type feuille d'univers / théorie des cordes au lieu d'en faire un second jeu d'axiomes de départ.
