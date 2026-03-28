@@ -168,7 +168,7 @@ The total state is pure-perfectly known, zero entropy. But look at either qubit 
 
 How can the whole be more ordered than the parts?
 
-The answer: the parts are correlated. Measure the first qubit and get 0, the second is guaranteed to be 0. The randomness is not independent-it's perfectly anti-correlated.
+The answer: the parts are correlated. Measure the first qubit and get 0, the second is guaranteed to be 0. The randomness is not independent-it's perfectly correlated.
 
 ### Entanglement Entropy
 
