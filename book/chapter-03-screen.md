@@ -28,7 +28,7 @@ Now lower the cup into a black hole.
 
 The tea crosses the event horizon and vanishes. No one outside can ever see it again. If the tea is gone, so is its entropy. The total entropy of the observable universe has decreased.
 
-But wait. The Second Law of Thermodynamics says toital entropy never decreases. The Second Law is the rule that makes time flow in a direction. It tells you why broken glasses don't unbreak, why scrambled eggs don't unscramble, why we remember the past but not the future.
+But wait. The Second Law of Thermodynamics says total entropy never decreases. The Second Law is the rule that makes time flow in a direction. It tells you why broken glasses don't unbreak, why scrambled eggs don't unscramble, why we remember the past but not the future.
 
 If a black hole can erase entropy, the Second Law is wrong.
 
