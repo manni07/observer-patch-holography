@@ -171,11 +171,11 @@ $$R = P_A \cap P_B$$
 
 This region R is the "Looking Glass." It contains observables common to both. For reality to be consistent, **Alice and Bob must agree on the state of the Looking Glass.**
 
-Alice describes her patch with density matrix rho_A. Bob describes his with rho_B. When restricted to region R, they must see the same thing:
+In a simple finite-dimensional toy model, Alice describes her patch with density matrix rho_A and Bob describes his with rho_B. Then consistency on the overlap can be pictured as equality of the reduced descriptions on region R:
 
 $$\text{Tr}_{A \setminus R}(\rho_A) = \text{Tr}_{B \setminus R}(\rho_B)$$
 
-This says: ignore everything Alice sees that Bob can't see, and vice versa. The remaining picture must be identical.
+This is only the toy-model picture. More generally, the right statement is that the two restricted states agree on the shared overlap algebra.
 
 ### The Mathematical Translation
 
@@ -456,7 +456,7 @@ Put differently: Bell violations are the universe's compression algorithm for ma
 
 2. **Bell's Theorem**: Local hidden variables cannot reproduce quantum correlations. Nature violates Bell inequalities. Either locality or realism fails-most physicists accept that realism fails.
 
-3. **Overlap Condition**: When observers share access to a region, their density matrices must match on that region.
+3. **Overlap Condition**: When observers share access to a region, their restricted states must agree on the shared overlap algebra.
 
 4. **The Quantum Marginal Problem is QMA-Complete**: Unlike classical physics, where consistent marginals always fit together, quantum marginals might not. Checking compatibility is computationally hard.
 
