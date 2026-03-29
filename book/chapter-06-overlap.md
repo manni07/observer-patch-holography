@@ -417,15 +417,15 @@ The topology of this graph determines what kind of global structure can emerge. 
 
 ## 6.12 Testable Predictions and Verified Results
 
-The overlap consistency model makes sharp predictions that have been tested:
+The overlap consistency framework suggests several signatures and checks:
 
 **1. Bell inequality violations**: The model predicts that quantum systems violate Bell inequalities up to the Tsirelson bound ($S = 2\sqrt{2}$). This has been confirmed in hundreds of experiments, culminating in the 2015 loophole-free tests. Any violation *exceeding* the Tsirelson bound identifies a measurement contradiction with quantum mechanics.
 
-**2. Markov property on separating regions**: If patches A and C are separated by patch B (meaning any correlation between A and C must pass through B), then the conditional mutual information I(A:C|B) should be small. This "Markov fingerprint" distinguishes states that satisfy our consistency axioms from random quantum states. Numerical tests confirm this: structured states obeying our axioms show I(A:C|B) ≈ 0, while random states show I(A:C|B) > 0.
+**2. Markov property on separating regions**: If patches A and C are separated by patch B (meaning any correlation between A and C must pass through B), then the conditional mutual information I(A:C|B) should be small. Small conditional mutual information is a natural structured-state signature to inspect. In OPH-motivated numerical constructions it is often small compared with random-state baselines: structured states obeying our axioms show I(A:C|B) ≈ 0, while random states show I(A:C|B) > 0.
 
 **3. Overlap consistency given a global state**: If a global quantum state exists, then overlapping patches automatically have consistent reduced states-this is mathematically guaranteed by partial trace. We can verify this computationally for any explicitly constructed state.
 
-**4. Quantum Darwinism predictions**: Information that becomes "objective" (agreed upon by many observers) must be redundantly encoded in the environment. This predicts specific correlations between system and environment that have been confirmed in experiments with photons and superconducting qubits.
+**4. Quantum Darwinism predictions**: Information that becomes "objective" (agreed upon by many observers) must be redundantly encoded in the environment. Related redundancy signatures have been studied experimentally with photons and superconducting qubits, though the broader interpretive program remains active.
 
 **Empirical validation signatures**:
 - Bell violations exceeding the Tsirelson bound
