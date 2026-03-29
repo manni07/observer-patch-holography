@@ -75,9 +75,10 @@ CHARGED_CONTINUATION_NOTE = (
     "`sigma_source_support_extension_total_log_per_side`, with the smaller ordered source-scalar pair readback now explicit on disk. "
     "A representation-consistent absolute-scale shell is also explicit: future charged scale code must emit either "
     "`mu_e_absolute_log_candidate` or `g_e_linear_candidate` and convert exactly once via `g_e = exp(mu_e_absolute_log_candidate)`. "
+    "But the present charged theorem still fixes only the centered charged log class modulo a common shift, so the absolute scale `g_e` remains unresolved on the live theorem lane. "
     "At theorem level, the exact waiting set is sharper than a standalone eta/sigma fit: the missing burden is the charged sector-response / declaration functor that emits `C_hat_e`, then the common-refinement transport equalizer that upgrades the absolute scale from `shared_budget_only` to theorem-grade. Once `C_hat_e` exists, eta and sigma become charged spectral invariants rather than separate primitive theorem goals. "
     "A D12 continuation bridge exists under the extra assumptions A1-A3 and gives eta = -6.729586682888832 and sigma = 8.154061112725994 with near-exact centered-log shape closure, "
-    "but the theorem-grade lane still lacks emitted eta, sigma, and absolute scale."
+    "but the theorem-grade lane still lacks emitted eta, sigma, and absolute scale. On that continuation bridge the compare-only absolute target would be `g_e* = 0.04577885783568762`, equivalently `Delta_e_abs* = 3.003986333402356`, and that target is kept strictly non-promotable until the transport equalizer emits the normalization scalar on the live theorem branch."
 )
 QUARK_CONTINUATION_NOTE = (
     "Derived from the local quark chain "
@@ -91,12 +92,13 @@ QUARK_CONTINUATION_NOTE = (
     "not available at recovered-core tier. The active builder still waits on "
     "the pure-`B` payload pair "
     "`source_readback_u_log_per_side_and_source_readback_d_log_per_side`, but the broader D12 continuation branch is now scalarized: "
-    "the mass side reduces to `Delta_ud_overlap` together with the quadratic-even scalar `eta_Q_centered`, and the mixing side reduces to "
-    "gauge-fixed physical invariants `(theta_12, theta_23, theta_13, phi_cp)` of a matrix-valued same-label transport generator. On the current same-family continuation branch, the exact mass-side selector law sharpens to `Delta_ud_overlap = t1 / 5`, with `eta_Q_centered = -((1 - x2^2) / 27) * t1`; that is a real structural reduction, but `t1` itself is still not OPH-emitted. "
+    "the mass side reduces to `Delta_ud_overlap` together with the quadratic-even scalar `eta_Q_centered`, and the mixing side closes on the same D12 branch because the forward Yukawa step already emits the same-label transport unitary `V_CKM^fwd = U_u^dagger U_d`, whose principal logarithm yields the honest generator `K_CKM`. "
+    "On the current same-family continuation branch, the exact mass-side selector law sharpens to `Delta_ud_overlap = t1 / 5`, with `eta_Q_centered = -((1 - x2^2) / 27) * t1`; that is a real structural reduction, but `t1` itself is still not OPH-emitted. "
     "The strongest current exact-mean specialization gives "
     "`alpha_u = 1.0007763698011345`, `alpha_d = 1.008463281557513`, "
     "`Delta_ud_overlap = 0.14049991320632976`, `eta_Q_centered = -0.018104730181494357`, "
-    "with RMS log-mass error about `5.21e-05`, but those values remain compare-derived rather than OPH-emitted."
+    "with RMS log-mass error about `5.21e-05`, but those values remain compare-derived rather than OPH-emitted. "
+    "The remaining open burden on the D12 branch is therefore mass-side rather than CKM/CP-side."
 )
 NEUTRINO_CONTINUATION_NOTE = (
     "No public value is emitted yet. The active neutrino path is `derive_neutrino_scale_anchor.py -> "

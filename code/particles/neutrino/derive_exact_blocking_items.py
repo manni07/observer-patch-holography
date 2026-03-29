@@ -28,6 +28,7 @@ ROOT = Path(__file__).resolve().parents[2]
 FORWARD_JSON = ROOT / "particles" / "runs" / "neutrino" / "forward_neutrino_closure_bundle.json"
 CERTIFICATE_JSON = ROOT / "particles" / "runs" / "neutrino" / "same_label_scalar_certificate.json"
 PMNS_JSON = ROOT / "particles" / "runs" / "neutrino" / "pmns_from_shared_basis.json"
+CHARGED_LEFT_JSON = ROOT / "particles" / "runs" / "neutrino" / "shared_charged_lepton_left_basis.json"
 ETA_DEMO_JSON = ROOT / "particles" / "runs" / "neutrino" / "intrinsic_neutrino_eta_demo_payload.json"
 INTRINSIC_VALIDATION_JSON = ROOT / "particles" / "runs" / "neutrino" / "intrinsic_neutrino_exact_mixing_law_validation.json"
 DEFAULT_EXACT_OUT = ROOT / "particles" / "runs" / "neutrino" / "exact_blocking_items.json"
@@ -46,11 +47,13 @@ def build_exact_blockers(
     forward: dict,
     certificate: dict,
     pmns: dict,
+    charged_left: dict,
     eta_demo: dict,
     intrinsic_validation: dict,
 ) -> tuple[dict, dict]:
     same_label_present = bool(certificate.get("sufficient_for_intrinsic_mass_eigenstates"))
-    charged_basis_present = pmns.get("status") == "closed"
+    charged_basis_present = charged_left.get("status") == "closed"
+    pmns_present = pmns.get("status") == "closed"
     eta_payload = dict(eta_demo.get("eta_e") or {})
     exact_blockers = []
     if not same_label_present:
@@ -72,13 +75,27 @@ def build_exact_blockers(
             }
         )
 
+    fully_completed = same_label_present and charged_basis_present and pmns_present
     exact_payload = {
         "artifact": "oph_exact_neutrino_blocker_audit_v7",
         "generated_utc": _timestamp(),
-        "fully_completed": False,
+        "fully_completed": fully_completed,
         "reason_not_fully_completed": (
-            "The intrinsic chain is exact once the same-label scalar certificate exists, but the current snapshot still "
-            "lacks a live physical certificate and still lacks the shared charged-lepton left basis required for PMNS/public flavor rows."
+            ""
+            if fully_completed
+            else (
+                "The intrinsic chain is exact once the same-label scalar certificate exists, but the current snapshot still "
+                + (
+                    "lacks a live physical certificate"
+                    if not same_label_present
+                    else "waits on PMNS writeback from the closed intrinsic bundle"
+                )
+                + (
+                    " and still lacks the shared charged-lepton left basis required for PMNS/public flavor rows."
+                    if not charged_basis_present
+                    else "."
+                )
+            )
         ),
         "closed_theorem_chain": [
             "oph_native_scale_anchor_m_star_equals_v2_over_mu_u",
@@ -88,6 +105,8 @@ def build_exact_blockers(
             "exact_principal_selector_from_centered_eta_class",
             "exact_depressed_cubic_intrinsic_spectrum",
             "mass_eigenstate_row_policy_nu1_nu2_nu3",
+            "shape_closed_scale_invariant_left_basis",
+            "pmns_from_shared_charged_and_intrinsic_bases",
         ],
         "current_isotropic_builder_facing_class": {
             "artifact": "oph_neutrino_only_edge_constant_centered_eta_class",
@@ -134,6 +153,7 @@ def build_exact_blockers(
         "current_snapshot_scan": {
             "live_same_label_artifact_found": same_label_present,
             "live_charged_left_artifact_found": charged_basis_present,
+            "live_pmns_artifact_found": pmns_present,
         },
     }
 
@@ -143,6 +163,7 @@ def build_exact_blockers(
         "exact_remaining_blockers": [item["name"] for item in exact_blockers],
         "live_same_label_scalar_certificate_present": same_label_present,
         "shared_charged_left_basis_present": charged_basis_present,
+        "pmns_present": pmns_present,
         "same_label_proof_facing_continuous_dof_mod_common_scale": 5,
         "same_label_builder_facing_centered_eta_dof": 2,
         "charged_left_basis_artifact_dof_before_phase_quotients": 9,
@@ -155,6 +176,7 @@ def main() -> int:
     parser.add_argument("--forward", default=str(FORWARD_JSON))
     parser.add_argument("--certificate", default=str(CERTIFICATE_JSON))
     parser.add_argument("--pmns", default=str(PMNS_JSON))
+    parser.add_argument("--charged-left", default=str(CHARGED_LEFT_JSON))
     parser.add_argument("--eta-demo", default=str(ETA_DEMO_JSON))
     parser.add_argument("--intrinsic-validation", default=str(INTRINSIC_VALIDATION_JSON))
     parser.add_argument("--exact-output", default=str(DEFAULT_EXACT_OUT))
@@ -165,6 +187,7 @@ def main() -> int:
         _load_json(Path(args.forward)),
         _load_json(Path(args.certificate)),
         _load_json(Path(args.pmns)),
+        _load_json(Path(args.charged_left)),
         _load_json(Path(args.eta_demo)),
         _load_json(Path(args.intrinsic_validation)),
     )

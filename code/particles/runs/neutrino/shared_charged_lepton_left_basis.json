@@ -1,0 +1,65 @@
+{
+  "U_e_left": {
+    "imag": [
+      [
+        -1.262177448353619e-28,
+        1.7670484276950664e-28,
+        9.607463008976838e-29
+      ],
+      [
+        0.5000110374972608,
+        0.5000191798921871,
+        3.160096265962817e-05
+      ],
+      [
+        -0.5000007644016423,
+        -0.4999690161861485,
+        8.292639785496618e-06
+      ]
+    ],
+    "real": [
+      [
+        -0.5773443211759867,
+        0.5773714068945807,
+        -0.577335078880897
+      ],
+      [
+        0.28867535454908283,
+        -0.28864227795733577,
+        -0.5773404161963698
+      ],
+      [
+        0.2886663687728209,
+        -0.2886861556603846,
+        -0.5773753107402514
+      ]
+    ]
+  },
+  "artifact": "oph_shared_charged_lepton_left_basis",
+  "basis_contract": {
+    "labels": [
+      "f1",
+      "f2",
+      "f3"
+    ],
+    "orientation_preserved": true
+  },
+  "generated_utc": "2026-03-29T09:28:33Z",
+  "labels": [
+    "f1",
+    "f2",
+    "f3"
+  ],
+  "notes": [
+    "Derived from the charged shape artifact only.",
+    "Independent of the unresolved charged absolute scale.",
+    "Usable immediately by the shared-basis PMNS builder."
+  ],
+  "scale_invariance_rule": "U_e_left(g * Y_e_shape) = U_e_left(Y_e_shape) for every real g > 0",
+  "source_artifacts": [
+    "oph_charged_lepton_blind_forward",
+    "oph_flavor_observable"
+  ],
+  "status": "closed",
+  "theorem_status": "shape_closed_scale_invariant_left_basis"
+}

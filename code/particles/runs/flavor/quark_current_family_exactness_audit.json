@@ -24,7 +24,7 @@
     "proof_status": "pure_B_odd_projection_formula_closed_source_values_open",
     "smallest_constructive_missing_object": "source_readback_u_log_per_side_and_source_readback_d_log_per_side"
   },
-  "broader_honest_frontier": "oph_light_quark_isospin_overlap_defect_selector_law",
+  "broader_honest_frontier": "D12_mass_side_value_laws_Delta_ud_overlap_and_eta_Q_centered",
   "centered_ray_fit": {
     "current_centered_log_d": [
       -3.1662395259357763,
@@ -100,7 +100,7 @@
     "status": "closed_smaller_primitive"
   },
   "d12_mass_branch_and_ckm_residual": {
-    "artifact": "oph_quark_d12_mass_branch_and_ckm_residual",
+    "artifact": "oph_quark_d12_mass_branch_and_ckm_closure",
     "best_honest_one_scalar_mass_point_on_same_family": {
       "Delta_ud_overlap": 0.14039999999999997,
       "Lambda_ud_B_transport": 0.14580774897025428,
@@ -171,12 +171,16 @@
       "tau_d_log_per_side": 0.04208000856170554,
       "tau_u_log_per_side": 0.024876168553006103
     },
-    "ckm_cp_residual_generator_off_diagonal_abs": {
-      "12": 0.22551569384902148,
-      "13": 0.0034726338259466164,
-      "23": 0.04378977328572517
+    "closure_residual_fro_norm": 1.1224045809338492e-15,
+    "forward_same_label_transport_closed": true,
+    "standard_ckm_parameters": {
+      "delta_ckm": 1.7011978493658404,
+      "jarlskog": 2.875591228134216e-10,
+      "theta_12": 0.0075998034425194495,
+      "theta_13": 2.964320823052465e-05,
+      "theta_23": 0.0012874186416783878
     },
-    "status": "diagnostic_only_d12_continuation",
+    "status": "d12_continuation_ckm_cp_closed_mass_value_laws_open",
     "theorem_tier": "D12_continuation_only"
   },
   "d12_one_scalar_specialization": {
@@ -266,22 +270,22 @@
   },
   "d12_same_label_physical_invariant_bundle": {
     "artifact": "oph_generation_bundle_same_label_physical_invariant_bundle",
-    "next_single_residual_object": "same_label_left_transport_physical_invariant_value_laws",
+    "next_single_residual_object": null,
     "physical_invariants": {
-      "phi_cp": -2.6946364809227097,
-      "theta_12": 0.2256228751541542,
-      "theta_13": 0.003473054182841341,
-      "theta_23": 0.04380491981435288
+      "jarlskog": 2.875591228134216e-10,
+      "phi_cp": 1.7011978493658404,
+      "theta_12": 0.0075998034425194495,
+      "theta_13": 2.964320823052465e-05,
+      "theta_23": 0.0012874186416783878
     },
-    "proof_status": "diagnostic_invariants_written_from_target_ckm_not_OPH_derived"
+    "proof_status": "forward_same_label_transport_closed_on_D12_continuation"
   },
   "d12_scalarized_continuation_bundle": {
     "artifact": "oph_quark_scalarized_continuation_bundle",
     "honest_remaining_value_laws": [
       "Delta_ud_overlap_value_law",
       "eta_Q_centered_value_law",
-      "quark_exact_mean_split_value_law_or_carrier_repair",
-      "same_label_left_transport_physical_invariant_value_laws"
+      "quark_exact_mean_split_value_law_or_carrier_repair"
     ],
     "mass_side": {
       "B_ord": [
@@ -360,20 +364,25 @@
       "full_matrix_artifact": "oph_generation_bundle_same_label_physical_invariant_bundle",
       "gauge_fixed_physical_decomposition": {
         "chi_diagonal_imag": [
-          -0.006095179275809967,
-          -0.7300387679202932,
-          -0.3260719358139316
+          9.585939922364254e-11,
+          9.585943540185488e-11,
+          9.585698362591386e-11
         ],
-        "phi_cp": -2.6946364809227097,
-        "theta_12": 0.2256228751541542,
-        "theta_13": 0.003473054182841341,
-        "theta_23": 0.04380491981435288
+        "jarlskog": 2.875591228134216e-10,
+        "phi_K": -1.859950059797122,
+        "phi_cp": 1.7011978493658404,
+        "theta_12": 0.0075998034425194495,
+        "theta_12_K": 0.007599799911070336,
+        "theta_13": 2.964320823052465e-05,
+        "theta_13_K": 3.066523834550606e-05,
+        "theta_23": 0.0012874186416783878,
+        "theta_23_K": 0.0012873978029669681
       },
-      "physical_invariant_formula": "K_gf = i diag(chi_1,chi_2,chi_3) + theta_12(E12-E21) + theta_23(E23-E32) + theta_13(e^{i phi_cp} E13 - e^{-i phi_cp} E31)",
-      "relative_branch_rigidity": 0.00023461092057035416,
-      "same_label_generator_formula": "V_CKM = U_u^dagger @ exp(K_CKM) @ U_d"
+      "physical_invariant_formula": "V_CKM^fwd = U_u^dagger U_d, K_CKM = Log_pr(V_CKM^fwd), K_gf = i diag(chi_1,chi_2,chi_3) + theta_12(E12-E21) + theta_23(E23-E32) + theta_13(e^{i phi_cp} E13 - e^{-i phi_cp} E31)",
+      "same_label_generator_formula": "V_CKM^fwd = U_u^dagger @ U_d, K_CKM = Log_pr(V_CKM^fwd)",
+      "transport_closure_residual_fro_norm": 1.1224045809338492e-15
     },
-    "proof_status": "scalarized_bundle_not_OPH_derived"
+    "proof_status": "mixing_closed_mass_value_laws_open_on_d12_continuation"
   },
   "diagnostic_fit_promotion_allowed": false,
   "diagnostic_fit_source": "particle_reference_values.json",
@@ -400,7 +409,7 @@
     "tau_d_best_fit": 0.08831017354133808,
     "tau_u_best_fit": 0.05214018144630117
   },
-  "generated_utc": "2026-03-28T16:00:23Z",
+  "generated_utc": "2026-03-29T09:13:53Z",
   "mean_split_audit": {
     "current_log_shift_d": -2.0281337286007872,
     "current_log_shift_u": -0.16973941452778685,
@@ -438,9 +447,9 @@
     "The broader honest repair frontier is therefore a D12 light-quark isospin-breaking selector / overlap-defect scalar, even though the active local builder still waits first on the pure-B payload pair.",
     "The D12 selector-law shell is now explicit on disk: one continuation-level overlap-defect scalar `Delta_ud_overlap` would fix the light-sector pure-B payload pair by odd-budget neutrality, but that selector value is still open and not recovered-core promotable.",
     "The D12 overlap transport law is now explicit too: once the spread totals are fixed, the odd payload pair collapses to one scalar `Delta_ud_overlap` with tau_u = sigma_d * Delta / (2 (sigma_u + sigma_d)), tau_d = sigma_u * Delta / (2 (sigma_u + sigma_d)), and Lambda = sigma_u sigma_d * Delta / (2 (sigma_u + sigma_d)).",
-    "A stronger D12 continuation mass-side candidate is now explicit too: the one-scalar point Delta_ud_overlap = t1/5 gives (u,c,t) = (0.002176632493, 1.256692171439, 172.851929939314) GeV and (d,s,b) = (0.004708229529, 0.091608271273, 4.155513989985) GeV with RMS log-mass error about 1.08e-02, but CKM/CP still needs a matrix-valued left-unitary transport generator K_CKM rather than another scalar tweak.",
+    "A stronger D12 continuation mass-side candidate is now explicit too: the one-scalar point Delta_ud_overlap = t1/5 gives (u,c,t) = (0.002176632493, 1.256692171439, 172.851929939314) GeV and (d,s,b) = (0.004708229529, 0.091608271273, 4.155513989985) GeV with RMS log-mass error about 1.08e-02, and the CKM/CP lane closes on that same branch because the forward Yukawa step already emits the same-label transport unitary V_CKM^fwd = U_u^dagger U_d and its principal logarithm.",
     "The quadratic even transport is scalarized too: once the ordered-family carrier is fixed, the even residual collapses to one centered scalar eta_Q_centered with direct log formula (eta_Q_centered / 6) * (1,-2,1).",
-    "The strongest current D12 continuation bundle reduces the mass side to two value laws, Delta_ud_overlap and eta_Q_centered, while the mixing side reduces to the gauge-fixed physical invariants of the same-label left-transport generator.",
+    "The strongest current D12 continuation bundle reduces the mass side to two value laws, Delta_ud_overlap and eta_Q_centered, while the mixing side is closed by the gauge-fixed physical invariants of the forward same-label left-transport generator.",
     "There is also a stricter same-family diagnostic specialization: on the current candidate branch both mass-side continuation scalars collapse to one scalar t1, with Delta_ud_overlap = t1/5 and eta_Q_centered = -((1 - x2^2) / 27) * t1. That specialization is explicit on disk, but t1 itself is still not OPH-derived."
   ],
   "predictive_J_B_source_law_status": "missing",
@@ -485,7 +494,7 @@
   },
   "scope": "current_family_only",
   "smallest_constructive_missing_object": "source_readback_u_log_per_side_and_source_readback_d_log_per_side",
-  "smallest_exact_obstruction": "the diagonal B-mode shell is fixed, but the active quark builder still waits on the emitted tau-pair because the current mean and quadratic invariants are blind to that B-mode amplitude",
+  "smallest_exact_obstruction": "the builder-facing pure-B payload pair is still open on the active public branch, and the broader D12 continuation branch still lacks OPH-emitted value laws for Delta_ud_overlap and eta_Q_centered",
   "source_readback_payload_kind": "pure_B_light_sector_payload_pair",
   "spread_emitter_audit": {
     "sigma_d_total_log_per_side": 3.3049,

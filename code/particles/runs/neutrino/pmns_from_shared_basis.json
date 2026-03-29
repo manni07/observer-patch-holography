@@ -1,7 +1,72 @@
 {
-  "majorana_artifact": "/Users/muellerberndt/Projects/oph-meta/particles/runs/neutrino/forward_majorana_matrix.json",
-  "notes": [
-    "Physical PMNS requires a forward-derived charged-lepton left basis."
+  "basis_labels": [
+    "f1",
+    "f2",
+    "f3"
   ],
-  "status": "conditional_blocked"
+  "charged_left_artifact": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/neutrino/shared_charged_lepton_left_basis.json",
+  "majorana_artifact": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/neutrino/intrinsic_neutrino_mass_eigenstate_bundle_from_scalar_certificate.json",
+  "notes": [
+    "This artifact is exact on the live intrinsic neutrino bundle and shared charged-lepton basis."
+  ],
+  "orientation_preserved": true,
+  "pmns_abs": [
+    [
+      0.7054408012816078,
+      0.7074236673235225,
+      0.043646658494098114
+    ],
+    [
+      0.7062288227833992,
+      0.7065989852485028,
+      0.04425747299337583
+    ],
+    [
+      0.059951027990657296,
+      0.016420382344001325,
+      0.9980662529544517
+    ]
+  ],
+  "pmns_imag": [
+    [
+      -0.5832273903247025,
+      0.3949830686657583,
+      -0.04218464686908237
+    ],
+    [
+      -0.5864131756295978,
+      0.3955836828752327,
+      -0.040875698781524375
+    ],
+    [
+      0.004421045889275063,
+      -0.0015583750241443537,
+      -0.005705030393306855
+    ]
+  ],
+  "pmns_real": [
+    [
+      0.3968532918949698,
+      0.5868872298464525,
+      0.011202069729797544
+    ],
+    [
+      -0.3935463601382133,
+      -0.5854875539215852,
+      -0.01696765054099942
+    ],
+    [
+      0.05978779231901358,
+      -0.016346266350678172,
+      -0.9980499476052044
+    ]
+  ],
+  "standard_pmns_parameters": {
+    "delta_pmns": -2.6070435701394157,
+    "jarlskog": -0.000491099474128153,
+    "theta_12": 0.7868015993137272,
+    "theta_13": 0.043660528425690105,
+    "theta_23": 0.04431419146853922
+  },
+  "status": "closed"
 }

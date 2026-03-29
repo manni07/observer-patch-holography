@@ -20,6 +20,7 @@ import argparse
 import importlib.util
 import json
 import numpy as np
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -45,6 +46,7 @@ def _load_exact_eta_module():
     if spec is None or spec.loader is None:
         raise RuntimeError("could not load exact eta-map module")
     module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
     spec.loader.exec_module(module)
     return module
 
@@ -115,6 +117,11 @@ def main() -> int:
         "ordering": ordering,
         "u_nu_real": [[float(v.real) for v in row] for row in exact_map.u_left],
         "u_nu_imag": [[float(v.imag) for v in row] for row in exact_map.u_left],
+        "row_basis_labels": ["f1", "f2", "f3"],
+        "same_label_basis_contract": {
+            "labels": ["f1", "f2", "f3"],
+            "orientation_preserved": True,
+        },
         "paper_export_policy": {
             "recommended_particle_rows": ["nu1", "nu2", "nu3"],
             "flavor_rows_status": "keep_gated_until_shared_charged_lepton_left_basis_closes",

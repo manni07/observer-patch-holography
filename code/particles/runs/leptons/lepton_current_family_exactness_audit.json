@@ -1,4 +1,11 @@
 {
+  "absolute_scale_closure_status": {
+    "compare_only_delta_e_abs_star": 3.003986333402356,
+    "compare_only_g_e_star": 0.04577885783568762,
+    "current_theorem_output": "E_e_log_centered mod common shift",
+    "honest_missing_transport_scalar": "Delta_e_abs",
+    "present_chain_under_determines_g_e": true
+  },
   "absolute_scale_gap_identity": {
     "artifact": "oph_charged_absolute_scale_transport_gap_identity",
     "identity_formula": "gamma_min_common = theorem_gap_gamma",
@@ -16,6 +23,63 @@
       "mu_e_absolute_log_seed": -0.07994658034676537,
       "stored_shared_absolute_scale_raw": 0.9231656602589082
     }
+  },
+  "absolute_scale_underdetermination_theorem": {
+    "artifact": "oph_charged_absolute_scale_underdetermination_theorem",
+    "centered_sum_rule": {
+      "formula": "e_log_centered + mu_log_centered + tau_log_centered = 0",
+      "value": -6.661338147750939e-16
+    },
+    "compare_only_continuation_target": {
+      "continuation_shape_singular_values": [
+        0.011162188544790551,
+        2.3080092523535067,
+        38.816207467149106
+      ],
+      "delta_e_abs_star": 3.003986333402356,
+      "delta_formula": "Delta_e_abs_star = log(stored_shared_absolute_scale_raw / g_e_star)",
+      "forward_compare_only_masses": [
+        0.0005109922425271076,
+        0.10565802744694286,
+        1.7769616433591753
+      ],
+      "g_e_star": 0.04577885783568762,
+      "status": "compare_only_not_theorem_grade"
+    },
+    "determinant_rules": {
+      "common_shift_rule": "(m_e, m_mu, m_tau) -> exp(c) * (m_e, m_mu, m_tau)",
+      "invariants_unchanged_under_common_shift": [
+        "eta_ext",
+        "sigma_ext",
+        "gamma21",
+        "gamma32",
+        "E_e_log_centered",
+        "charged ratios"
+      ],
+      "physical_operator": "det(Y_e) = g_e^3",
+      "shape_operator": "det(Y_e_shape) = 1"
+    },
+    "minimal_new_theorem": {
+      "formula": "g_e = g_ch_shared * exp(-Delta_e_abs)",
+      "id": "charged_absolute_determinant_transport_theorem",
+      "must_be_independent_of_measured_masses": true,
+      "required_new_scalar": "Delta_e_abs",
+      "source": "charged operator C_hat_e together with the common-refinement transport equalizer"
+    },
+    "next_exact_missing_object": "charged_common_refinement_transport_equalizer",
+    "proof_status": "centered_shape_closed_absolute_scale_underdetermined",
+    "same_carrier_mass_formulas": {
+      "family_operator": "Y_e(c) = exp(c) * diag(exp(E_e_log_centered))",
+      "m_e": "g_e * exp(e_log_centered)",
+      "m_mu": "g_e * exp(mu_log_centered)",
+      "m_tau": "g_e * exp(tau_log_centered)"
+    },
+    "shared_budget_seed": {
+      "stored_shared_absolute_scale_raw": 0.9231656602589082,
+      "theorem_scope": "shared_budget_only",
+      "writeback_scope": "current_family_only"
+    },
+    "theorem_statement": "The present charged OPH chain fixes only the centered charged log class E_e_log_centered in R^3 modulo the common shift direction (1,1,1). It does not emit the absolute scalar g_e."
   },
   "active_readout_contract": {
     "eta_e_rigid_fallback": -0.809613811928119,
@@ -126,9 +190,9 @@
     },
     "mandatory_package_b": {
       "id": "charged_common_refinement_transport_equalizer",
-      "immediate_downstream_effect": "This is the honest absolute-scale bridge from the shared charged evaluator descent to the physical scale g_e.",
+      "immediate_downstream_effect": "This is the honest absolute-scale bridge from the shared charged evaluator descent to the physical scale g_e via the emitted scalar Delta_e_abs or an equivalent mu_e_absolute_log transport coordinate.",
       "linked_issue": "papers.compact.e.30-replace-koide-assisted-lepton-fitting-with-a-theorem",
-      "summary": "Derive the common-refinement transport equalizer under ordered_common_refinement_seed_rigidity so the charged absolute-scale lane upgrades from shared_budget_only to theorem-grade."
+      "summary": "Derive the common-refinement transport equalizer under ordered_common_refinement_seed_rigidity so the charged absolute-scale lane upgrades from shared_budget_only to theorem-grade and emits the determinant-normalization transport scalar."
     },
     "optional_package_c": {
       "id": "charged_holonomy_bridge_for_legacy_delta_2_over_9",
@@ -136,7 +200,7 @@
       "summary": "Retain a charged holonomy bridge only if the older delta = 2/9 D12 benchmark is kept as a theorem-grade bridge instead of a diagnostic continuation."
     }
   },
-  "generated_utc": "2026-03-29T06:39:03Z",
+  "generated_utc": "2026-03-29T10:25:14Z",
   "notes": [
     "The current charged-lepton builder now exposes the two-scalar ordered-gap family in formula form plus one common shift.",
     "A common shift rescales all three masses together and cannot fix a large hierarchy mismatch.",
@@ -146,10 +210,12 @@
     "The full two-scalar support-extension completion law is now explicit on disk; the live same-carrier primitive is the eta source-readback, followed by the sigma endpoint-ratio breaker.",
     "The stronger same-carrier source-scalar pair readback is also now explicit on disk, collecting those eta and sigma invariants into one ordered primitive beneath the full completion shell.",
     "At theorem level, eta and sigma are no longer the deepest honest waiting set. The live builder still exposes eta then sigma as the first same-carrier residuals, but the paper-facing exact burden is to derive the charged sector-response functor C_hat_e and then the common-refinement transport equalizer for the absolute scale.",
+    "The present charged theorem determines only the centered charged log class modulo a common additive shift, so g_e remains unresolved on the live theorem lane.",
     "The eta-only extension acts at fixed current span, so it preserves the endpoint ratio tau/e and can only move the middle state against that fixed endpoint pair.",
     "A rigid eta candidate can be written from the current ordered-gap ratio alone, but it lands far from the charged targets; the remaining charged burden then shifts to the still-open total source span.",
     "A D12 continuation bridge is now explicit too: under the extra assumptions A1-A3 it emits eta = -6.729586682888832 and sigma = 8.154061112725994, with centered-log residual norm about 2.13e-05 against charged references, but the required absolute scale remains compare-only and therefore nonpromotable.",
-    "The current-family absolute-scale restore candidate is also cleaner now: the common gap subtracted from log(g_e_raw) matches the emitted overlap-edge theorem gap gamma on the current family, so mu_e_absolute_log_candidate = log(g_e_raw) - gamma_gap is explicit even though the charged hierarchy still remains blocked first on eta then sigma."
+    "The current-family absolute-scale restore candidate is also cleaner now: the common gap subtracted from log(g_e_raw) matches the emitted overlap-edge theorem gap gamma on the current family, so mu_e_absolute_log_candidate = log(g_e_raw) - gamma_gap is explicit even though the charged hierarchy still remains blocked first on eta then sigma.",
+    "The D12 continuation bridge remains compare-only on the absolute side: it would need g_e_star = 0.04577885783568762, equivalently Delta_e_abs_star = 3.003986333402356, but that value is not OPH-emitted."
   ],
   "ordered_gap_ratio_current": 0.31788218782492417,
   "ordered_gap_ratio_reference": 1.8890082165302142,

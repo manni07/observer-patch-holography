@@ -20,6 +20,7 @@ def test_exact_blocking_items_reports_isotropy_and_live_missing_objects() -> Non
         forward = tmp / "forward.json"
         certificate = tmp / "certificate.json"
         pmns = tmp / "pmns.json"
+        charged_left = tmp / "charged_left.json"
         eta_demo = tmp / "eta_demo.json"
         intrinsic = tmp / "intrinsic.json"
         exact_out = tmp / "exact.json"
@@ -48,6 +49,7 @@ def test_exact_blocking_items_reports_isotropy_and_live_missing_objects() -> Non
             encoding="utf-8",
         )
         pmns.write_text(json.dumps({"status": "open"}, indent=2) + "\n", encoding="utf-8")
+        charged_left.write_text(json.dumps({"status": "open"}, indent=2) + "\n", encoding="utf-8")
         eta_demo.write_text(
             json.dumps({"eta_e": {"psi12": 0.1, "psi23": -0.2, "psi31": 0.1}}, indent=2) + "\n",
             encoding="utf-8",
@@ -75,6 +77,8 @@ def test_exact_blocking_items_reports_isotropy_and_live_missing_objects() -> Non
                 str(certificate),
                 "--pmns",
                 str(pmns),
+                "--charged-left",
+                str(charged_left),
                 "--eta-demo",
                 str(eta_demo),
                 "--intrinsic-validation",
@@ -103,3 +107,84 @@ def test_exact_blocking_items_reports_isotropy_and_live_missing_objects() -> Non
             "live_same_label_scalar_certificate",
             "shared_charged_lepton_left_basis",
         ]
+
+
+def test_exact_blocking_items_close_when_certificate_basis_and_pmns_are_live() -> None:
+    with tempfile.TemporaryDirectory(prefix="oph_neutrino_blockers_closed_") as tmpdir:
+        tmp = pathlib.Path(tmpdir)
+        forward = tmp / "forward.json"
+        certificate = tmp / "certificate.json"
+        pmns = tmp / "pmns.json"
+        charged_left = tmp / "charged_left.json"
+        eta_demo = tmp / "eta_demo.json"
+        intrinsic = tmp / "intrinsic.json"
+        exact_out = tmp / "exact.json"
+        summary_out = tmp / "summary.json"
+
+        forward.write_text(
+            json.dumps(
+                {
+                    "masses_gev_sorted": [2.38e-12, 2.42e-12, 2.58e-12],
+                    "delta_m21_sq_gev2": 1.7e-25,
+                    "delta_m31_sq_gev2": 1.0e-24,
+                    "ordering_phase_certified": "normal_like_collective_dominance",
+                },
+                indent=2,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        certificate.write_text(
+            json.dumps({"artifact": "oph_neutrino_same_label_scalar_certificate", "sufficient_for_intrinsic_mass_eigenstates": True}, indent=2)
+            + "\n",
+            encoding="utf-8",
+        )
+        pmns.write_text(json.dumps({"status": "closed"}, indent=2) + "\n", encoding="utf-8")
+        charged_left.write_text(json.dumps({"status": "closed"}, indent=2) + "\n", encoding="utf-8")
+        eta_demo.write_text(
+            json.dumps({"eta_e": {"psi12": 0.1, "psi23": -0.2, "psi31": 0.1}}, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        intrinsic.write_text(
+            json.dumps(
+                {
+                    "collective_vector_actual_aligned": True,
+                    "solar_split_actual_gev2": 5.690121167370743e-26,
+                    "delta_m31_actual_gev2": 9.798023388600230e-25,
+                },
+                indent=2,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+
+        subprocess.run(
+            [
+                sys.executable,
+                str(SCRIPT),
+                "--forward",
+                str(forward),
+                "--certificate",
+                str(certificate),
+                "--pmns",
+                str(pmns),
+                "--charged-left",
+                str(charged_left),
+                "--eta-demo",
+                str(eta_demo),
+                "--intrinsic-validation",
+                str(intrinsic),
+                "--exact-output",
+                str(exact_out),
+                "--summary-output",
+                str(summary_out),
+            ],
+            check=True,
+            cwd=ROOT,
+        )
+
+        exact_payload = json.loads(exact_out.read_text(encoding="utf-8"))
+        summary_payload = json.loads(summary_out.read_text(encoding="utf-8"))
+        assert exact_payload["fully_completed"] is True
+        assert exact_payload["exact_blockers"] == []
+        assert summary_payload["exact_remaining_blockers"] == []

@@ -12,8 +12,8 @@ OPH-derived inputs: the local isotropic neutrino forward bundle plus a payload
 carrying the centered same-label eta-class or any scale-equivalent positive
 family.
 
-Output: the strongest current exact neutrino artifact beneath the still-open
-proof-facing eta-emission and shared charged-basis closures.
+Output: the strongest current exact neutrino artifact once a centered same-label
+eta-class is supplied.
 """
 
 from __future__ import annotations
@@ -31,7 +31,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_ISOTROPIC = ROOT / "particles" / "runs" / "neutrino" / "forward_neutrino_closure_bundle.json"
-DEFAULT_PAYLOAD = ROOT / "particles" / "runs" / "neutrino" / "intrinsic_neutrino_eta_demo_payload.json"
+DEFAULT_PAYLOAD = ROOT / "particles" / "runs" / "neutrino" / "same_label_scalar_certificate.json"
 DEFAULT_OUT = ROOT / "particles" / "runs" / "neutrino" / "intrinsic_neutrino_exact_eta_map.json"
 EDGE_ORDER = ("psi12", "psi23", "psi31")
 
@@ -240,6 +240,7 @@ def main() -> int:
         omega=omega,
         eta=eta,
     )
+    payload_is_live_certificate = bool(payload.get("sufficient_for_intrinsic_mass_eigenstates"))
 
     actual_phase = _phase_vector_from_matrix(exact_map.majorana)
     for idx, reference in enumerate(exact_map.psi):
@@ -255,9 +256,9 @@ def main() -> int:
         "generated_utc": _timestamp(),
         "theorem_surface_status": "intrinsic_builder_complete_exact",
         "builder_facing_exact_object": "centered_log_pullback_class_[log_q_e]",
-        "proof_facing_residual_object": "realized_arrow_pullback_from_flavor_gap_and_defect_certificates",
-        "public_flavor_rows_gate": "blocked_pending_proof_facing_eta_emission_and_shared_charged_lepton_left_basis",
-        "pmns_status": "blocked_pending_shared_charged_lepton_left_basis",
+        "proof_facing_residual_object": None if payload_is_live_certificate else "realized_arrow_pullback_from_flavor_gap_and_defect_certificates",
+        "public_flavor_rows_gate": "pmns_and_flavor_rows_formed_downstream_from_shared_charged_basis" if payload_is_live_certificate else "blocked_pending_proof_facing_eta_emission_and_shared_charged_lepton_left_basis",
+        "pmns_status": "not_formed_here",
         "payload_source": str(Path(args.payload)),
         "payload_kind": "eta_e" if payload.get("eta_e") else "q_or_mu_equivalent_payload",
         "isotropic_reference_bundle": str(Path(args.isotropic)),
@@ -334,7 +335,11 @@ def main() -> int:
         "notes": [
             "This artifact closes the intrinsic builder-facing neutrino chain exactly from the centered eta-class.",
             "Once eta_e is emitted at the flavor boundary, no further selector ambiguity remains on the principal branch.",
-            "The remaining honest blockers are proof-facing eta provenance and the shared charged-lepton left basis required for PMNS.",
+            (
+                "The proof-facing eta provenance is supplied directly by the live same-label scalar certificate; PMNS is formed downstream from the shared charged-lepton left basis."
+                if payload_is_live_certificate
+                else "The remaining honest blockers are proof-facing eta provenance and the shared charged-lepton left basis required for PMNS."
+            ),
         ],
     }
 

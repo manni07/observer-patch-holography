@@ -46,7 +46,7 @@ particle spectrum is finished.
 
 - **Exact structural outputs already on the current surface:** photon, gluons, graviton.
 - **Current strongest quantitative rows:** \(W\) boson and \(Z\) boson on the closed target-free electroweak calibration theorem, plus the Higgs boson and top quark on the Higgs/top critical stage.
-- **Still unfinished:** the broader quark family remains continuation-level; charged leptons and flavor-labeled neutrinos remain open theorem/closure fronts; and hadrons are execution-bound because promotable rows require real nonperturbative production computation and systematics rather than theorem-only completion.
+- **Still unfinished:** the broader quark family remains continuation-level; the charged-lepton lane has its centered shape closed but its absolute normalization still open because the determinant-normalization transport scalar has not yet been emitted; flavor-labeled neutrinos remain an open branch-repair problem; and hadrons are execution-bound because promotable rows require real nonperturbative production computation and systematics rather than theorem-only completion.
 
 As a program target, OPH aims to recover the familiar low-energy effective-action form from a compact axiom set, explicit bridge premises, and minimal external inputs:
 
@@ -85,7 +85,7 @@ At full completion, OPH aims to:
 - **PDF (compact submission paper):** [Recovering Relativity and Standard Model Structure from Observer-Overlap Consistency](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf)
 - **LaTeX source:** [recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.tex](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.tex)
 
-**Deriving the Particle Zoo from Observer Consistency** is the particle-spectrum status paper. It records the closed target-free electroweak \(W/Z\) theorem after fixing the shared calibration scale \(P\), tracks the current Higgs/top and quark outputs, keeps the charged-lepton and neutrino theorem frontiers explicit, and marks hadrons as execution-bound rather than paper-derived output rows.
+**Deriving the Particle Zoo from Observer Consistency** is the particle-spectrum status paper. It records the closed target-free electroweak \(W/Z\) theorem after fixing the shared calibration scale \(P\), tracks the current Higgs/top and quark outputs, states explicitly that the charged-lepton lane fixes only the centered log class until the determinant-normalization transport scalar is emitted, keeps the neutrino branch-repair frontier explicit, and marks hadrons as execution-bound rather than paper-derived output rows.
 
 - **PDF:** [Deriving the Particle Zoo from Observer Consistency](paper/deriving_the_particle_zoo_from_observer_consistency.pdf)
 - **LaTeX source:** [deriving_the_particle_zoo_from_observer_consistency.tex](paper/deriving_the_particle_zoo_from_observer_consistency.tex)

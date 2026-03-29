@@ -9,10 +9,10 @@ Mathematics: two-scalar mass branch on the ordered family plus gauge-fixed
 physical invariant decomposition of the same-label left-transport generator.
 
 OPH-derived inputs: the D12 overlap transport law, the quadratic-even scalar
-shell, and the current compare-derived CKM/CP continuation analysis.
+shell, and the forward-emitted D12 same-label transport closure.
 
 Output: one diagnostic bundle summarizing the strongest current D12
-continuation math and the exact remaining value laws.
+continuation math and the exact remaining mass-side value laws.
 """
 
 from __future__ import annotations
@@ -46,7 +46,7 @@ def main() -> int:
         "artifact": "oph_quark_scalarized_continuation_bundle",
         "generated_utc": _timestamp(),
         "scope": "D12_continuation_only",
-        "proof_status": "scalarized_bundle_not_OPH_derived",
+        "proof_status": "mixing_closed_mass_value_laws_open_on_d12_continuation",
         "mass_side": {
             "selector_scalar_name": "Delta_ud_overlap",
             "odd_transport_scalar_name": "Lambda_ud_B_transport",
@@ -98,20 +98,22 @@ def main() -> int:
         },
         "mixing_side": {
             "full_matrix_artifact": physical["artifact"],
-            "same_label_generator_formula": "V_CKM = U_u^dagger @ exp(K_CKM) @ U_d",
-            "gauge_fixed_physical_decomposition": dict(physical["physical_invariants"], **physical["diagonal_phase_bookkeeping"]),
+            "same_label_generator_formula": "V_CKM^fwd = U_u^dagger @ U_d, K_CKM = Log_pr(V_CKM^fwd)",
+            "gauge_fixed_physical_decomposition": dict(
+                physical["physical_invariants"],
+                **physical["generator_invariants"],
+            ),
             "physical_invariant_formula": physical["physical_invariant_formula"],
-            "relative_branch_rigidity": physical["relative_branch_rigidity"],
+            "transport_closure_residual_fro_norm": physical["closure_residual_fro_norm"],
         },
         "honest_remaining_value_laws": [
             "Delta_ud_overlap_value_law",
             "eta_Q_centered_value_law",
             "quark_exact_mean_split_value_law_or_carrier_repair",
-            "same_label_left_transport_physical_invariant_value_laws",
         ],
         "notes": [
             "The D12 quark mass branch reduces to two scalar laws, Delta_ud_overlap and eta_Q_centered, once the current ordered-family carrier is fixed.",
-            "The CKM/CP side reduces to gauge-fixed physical invariants, but their values are still compare-derived rather than OPH-emitted.",
+            "The CKM/CP side closes on the D12 continuation branch because the same-label transport unitary is emitted directly by the forward Yukawa step and its principal logarithm exists uniquely on the standard gauge representative.",
             "This bundle is diagnostic only and does not alter the live public quark rows.",
         ],
     }

@@ -106,7 +106,7 @@ def main() -> int:
         "notes": [
             "This artifact does not claim that t1 is already OPH-emitted.",
             "It records that the strongest same-family D12 diagnostic specialization collapses both mass-side continuation scalars to one parameter t1.",
-            "CKM/CP still requires a matrix-valued same-label left-transport value law even on this one-scalar specialization branch.",
+            "On this branch CKM/CP closes once the forward Yukawas are emitted; the remaining open burden is the value law for t1 itself and the mass-side continuation scalars it controls.",
         ],
     }
 

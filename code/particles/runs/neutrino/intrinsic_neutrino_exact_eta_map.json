@@ -8,152 +8,152 @@
     "trace_h_fixed_gev2": 1.82154777711059e-23
   },
   "builder_facing_exact_object": "centered_log_pullback_class_[log_q_e]",
-  "cubic_root_audit_max_abs_gev2": 1.3775324423698682e-40,
+  "cubic_root_audit_max_abs_gev2": 3.6734198463196485e-40,
   "cubic_roots_closed_form_gev2_sorted": [
-    -3.4556785017790924e-25,
-    -2.8866663850420305e-25,
-    6.342344886821124e-25
+    -3.977645123985106e-25,
+    -2.1886592962860684e-25,
+    6.166304420271174e-25
   ],
-  "delta_m21_sq_gev2": 5.69012116737067e-26,
-  "delta_m31_sq_gev2": 9.798023388600222e-25,
-  "delta_m32_sq_gev2": 9.229011271863155e-25,
-  "determinant_audit_abs_gev3": 1.0691104721317373e-50,
+  "delta_m21_sq_gev2": 1.788985827699037e-25,
+  "delta_m31_sq_gev2": 1.0143949544256282e-24,
+  "delta_m32_sq_gev2": 8.354963716557245e-25,
+  "determinant_audit_abs_gev3": 1.6036628712291962e-49,
   "determinant_direct_complex_gev3": {
-    "imag": -3.789008865070864e-38,
-    "real": 1.490219913945074e-35
+    "imag": -3.260199333788387e-38,
+    "real": 1.490378935586662e-35
   },
   "determinant_formula_complex_gev3": {
-    "imag": -3.789008865070867e-38,
-    "real": 1.490219913945075e-35
+    "imag": -3.260199333788423e-38,
+    "real": 1.490378935586678e-35
   },
   "eta_e": {
-    "psi12": 0.13631072512014578,
-    "psi23": -0.18362987264261327,
-    "psi31": 0.0473191475224675
+    "psi12": 0.44581837072004404,
+    "psi23": 0.07130912844682058,
+    "psi31": -0.5171274991668646
   },
   "exact_cubic_invariants": {
-    "cubic_argument_clamped": 0.9879722015289257,
+    "cubic_argument_clamped": 0.8785943678736976,
     "d_trace_shift_gev2": 6.071825923701966e-24,
     "depressed_cubic": "lambda^3 - P lambda - 2Q = 0 for H - d I",
-    "p_invariant_gev4": 3.024994769478794e-49,
-    "q_invariant_gev6": 3.1633684951864947e-74
+    "p_invariant_gev4": 2.931760022551886e-49,
+    "q_invariant_gev6": 2.6841028959275748e-74
   },
-  "generated_utc": "2026-03-28T12:20:38Z",
+  "generated_utc": "2026-03-29T09:30:13Z",
   "h_shift_eigenvalues_gev2_sorted": [
-    -3.4556785017790933e-25,
-    -2.886666385042032e-25,
-    6.342344886821124e-25
+    -3.977645123985104e-25,
+    -2.188659296286065e-25,
+    6.1663044202711775e-25
   ],
   "intrinsic_mass_eigenstates": {
-    "nu_1": 2.3929601069646055e-12,
-    "nu_2": 2.4048200109774875e-12,
-    "nu_3": 2.589606227283229e-12
+    "nu_1": 2.3820288435078732e-12,
+    "nu_2": 2.4192891505715804e-12,
+    "nu_3": 2.5862050123161317e-12
   },
-  "isotropic_reference_bundle": "/Users/muellerberndt/Projects/oph-meta/particles/runs/neutrino/forward_neutrino_closure_bundle.json",
+  "isotropic_reference_bundle": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/neutrino/forward_neutrino_closure_bundle.json",
   "majorana_matrix_imag": [
     [
       0.0,
-      3.62152984386938e-14,
-      3.95859087765673e-14
+      2.3879247940073687e-14,
+      6.254933870648842e-14
     ],
     [
-      3.62152984386938e-14,
+      2.3879247940073687e-14,
       0.0,
-      4.9870130488327104e-14
+      3.472705398770328e-14
     ],
     [
-      3.95859087765673e-14,
-      4.9870130488327104e-14,
+      6.254933870648842e-14,
+      3.472705398770328e-14,
       0.0
     ]
   ],
   "majorana_matrix_real": [
     [
       2.4617526608923523e-12,
-      6.699501701388786e-14,
-      6.506024878547633e-14
+      7.23163996857647e-14,
+      4.3444911935412785e-14
     ],
     [
-      6.699501701388786e-14,
+      7.23163996857647e-14,
       2.4617526608923523e-12,
-      5.755736469620556e-14
+      6.77784026591799e-14
     ],
     [
-      6.506024878547633e-14,
-      5.755736469620556e-14,
+      4.3444911935412785e-14,
+      6.77784026591799e-14,
       2.4617526608923523e-12
     ]
   ],
   "mass_audit_max_abs_gev": 4.0389678347315804e-28,
   "masses_from_h_eigvalsh_gev_sorted": [
-    2.3929601069646055e-12,
-    2.404820010977487e-12,
-    2.589606227283229e-12
+    2.3820288435078732e-12,
+    2.4192891505715804e-12,
+    2.586205012316132e-12
   ],
   "masses_gev_sorted": [
-    2.3929601069646055e-12,
-    2.4048200109774875e-12,
-    2.589606227283229e-12
+    2.3820288435078732e-12,
+    2.4192891505715804e-12,
+    2.5862050123161317e-12
   ],
   "mu_e_normalized": {
-    "psi12": 1.1359138093161434,
-    "psi23": 0.8248917177918058,
-    "psi31": 1.0391944728920506
+    "psi12": 1.4497002945360173,
+    "psi23": 0.9968525629695345,
+    "psi31": 0.5534471424944483
   },
   "notes": [
     "This artifact closes the intrinsic builder-facing neutrino chain exactly from the centered eta-class.",
     "Once eta_e is emitted at the flavor boundary, no further selector ambiguity remains on the principal branch.",
-    "The remaining honest blockers are proof-facing eta provenance and the shared charged-lepton left basis required for PMNS."
+    "The proof-facing eta provenance is supplied directly by the live same-label scalar certificate; PMNS is formed downstream from the shared charged-lepton left basis."
   ],
   "ordering_phase_certified": "normal_like_collective_dominance",
   "payload_kind": "eta_e",
-  "payload_source": "/Users/muellerberndt/Projects/oph-meta/particles/runs/neutrino/intrinsic_neutrino_eta_demo_payload.json",
-  "pmns_status": "blocked_pending_shared_charged_lepton_left_basis",
-  "proof_facing_residual_object": "realized_arrow_pullback_from_flavor_gap_and_defect_certificates",
-  "public_flavor_rows_gate": "blocked_pending_proof_facing_eta_emission_and_shared_charged_lepton_left_basis",
+  "payload_source": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/neutrino/same_label_scalar_certificate.json",
+  "pmns_status": "not_formed_here",
+  "proof_facing_residual_object": null,
+  "public_flavor_rows_gate": "pmns_and_flavor_rows_formed_downstream_from_shared_charged_basis",
   "selector_common_scale_invariant": true,
   "selector_equation": "sum_e arcsin(lam / mu_e) = Omega on the principal branch",
   "selector_point_absolute": {
-    "psi12": 0.4955721853371236,
-    "psi23": 0.7139625069784418,
-    "psi31": 0.5466095844750258
+    "psi12": 0.31893255645006824,
+    "psi23": 0.4734879499188133,
+    "psi31": 0.9637237704217095
   },
-  "selector_scale_free_multiplier": 0.5401668626807498,
+  "selector_scale_free_multiplier": 0.4545580596512337,
   "selector_sum_check": 1.7561442767905913,
-  "splitting_ratio_r": 0.05807417416446461,
+  "splitting_ratio_r": 0.1763598901881367,
   "theorem_surface_status": "intrinsic_builder_complete_exact",
   "u_nu_left_imag": [
     [
-      -1.6438778566864417e-16,
-      0.0004061635967231781,
-      -8.843701081884807e-17
+      -0.004407603353743034,
+      0.0012571804388628366,
+      0.00404832076952888
     ],
     [
-      -0.0014982675730882361,
-      0.0005438678670870882,
-      0.001638792127921667
+      -1.295333292535467e-19,
+      0.0014339845078543544,
+      1.05853712582875e-16
     ],
     [
-      -0.0012440719242596187,
-      1.1795891385530245e-16,
-      0.0021901965013139935
+      -0.003286837379116839,
+      1.1544134905109202e-16,
+      0.005790882859117473
     ]
   ],
   "u_nu_left_real": [
     [
-      0.8012642716475088,
-      -0.07489863147628815,
-      0.5936039058288775
+      -0.490860999841411,
+      -0.6674425090765509,
+      0.5599451576192574
     ],
     [
-      -0.4856268532762567,
-      -0.6609401453558333,
-      0.5721183945621706
+      0.7784758016929949,
+      -0.04744157274726579,
+      0.6258775176040008
     ],
     [
-      -0.34948295214146763,
-      0.7466912738869153,
-      0.5659571211566764
+      -0.39115300682195736,
+      0.7431461211892576,
+      0.5428524939532446
     ]
   ]
 }

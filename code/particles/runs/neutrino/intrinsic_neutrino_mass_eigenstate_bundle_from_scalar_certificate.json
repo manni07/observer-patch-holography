@@ -1,0 +1,167 @@
+{
+  "a_gev": 2.4617526608923523e-12,
+  "artifact": "oph_intrinsic_neutrino_mass_eigenstate_bundle",
+  "completion_scope": "intrinsic_mass_eigenstates_only",
+  "cubic_invariants": {
+    "P": 2.931760022551886e-49,
+    "Q": 2.6841028959275748e-74,
+    "cubic_roots": [
+      -3.977645123985106e-25,
+      -2.1886592962860684e-25,
+      6.166304420271174e-25
+    ],
+    "d": 6.071825923701966e-24,
+    "equation": "lambda^3 - P lambda - 2Q = 0 for eigenvalues of H - d I",
+    "spectral_crosscheck_max_abs_residual_gev2": 7.346839692639297e-40
+  },
+  "delta_m21_sq_gev2": 1.788985827699037e-25,
+  "delta_m31_sq_gev2": 1.0143949544256282e-24,
+  "delta_m32_sq_gev2": 8.354963716557245e-25,
+  "eta_e": {
+    "psi12": 0.4458183707200445,
+    "psi23": 0.07130912844682102,
+    "psi31": -0.5171274991668642
+  },
+  "generated_utc": "2026-03-29T09:29:19Z",
+  "majorana_matrix_imag": [
+    [
+      0.0,
+      2.3879247940073687e-14,
+      6.254933870648842e-14
+    ],
+    [
+      2.3879247940073687e-14,
+      0.0,
+      3.472705398770328e-14
+    ],
+    [
+      6.254933870648842e-14,
+      3.472705398770328e-14,
+      0.0
+    ]
+  ],
+  "majorana_matrix_real": [
+    [
+      2.4617526608923523e-12,
+      7.23163996857647e-14,
+      4.3444911935412785e-14
+    ],
+    [
+      7.23163996857647e-14,
+      2.4617526608923523e-12,
+      6.77784026591799e-14
+    ],
+    [
+      4.3444911935412785e-14,
+      6.77784026591799e-14,
+      2.4617526608923523e-12
+    ]
+  ],
+  "mass_eigenstates": [
+    {
+      "mass_gev": 2.3820288435078732e-12,
+      "mass_sq_gev2": 5.674061411303455e-24,
+      "state": "nu1"
+    },
+    {
+      "mass_gev": 2.4192891505715804e-12,
+      "mass_sq_gev2": 5.852959994073359e-24,
+      "state": "nu2"
+    },
+    {
+      "mass_gev": 2.5862050123161317e-12,
+      "mass_sq_gev2": 6.688456365729083e-24,
+      "state": "nu3"
+    }
+  ],
+  "masses_gev_sorted": [
+    2.3820288435078732e-12,
+    2.4192891505715804e-12,
+    2.5862050123161317e-12
+  ],
+  "masses_sq_gev2_sorted": [
+    5.674061411303455e-24,
+    5.852959994073359e-24,
+    6.688456365729083e-24
+  ],
+  "mu_e_normalized": {
+    "psi12": 0.03873422208374146,
+    "psi23": 0.026634683530340906,
+    "psi31": 0.014787432002180275
+  },
+  "not_completed_items": [
+    "live_physical_scalar_certificate_if_demo_only",
+    "shared_charged_lepton_left_basis_for_pmns"
+  ],
+  "notes": [
+    "This bundle is exact once the same-label scalar certificate is given.",
+    "It does not by itself close PMNS or flavor-labeled neutrino rows."
+  ],
+  "omega": 1.7561442767905913,
+  "ordering": "normal_like_collective_dominance",
+  "paper_export_policy": {
+    "flavor_rows_status": "keep_gated_until_shared_charged_lepton_left_basis_closes",
+    "pmns_status": "not_formed_here",
+    "recommended_particle_rows": [
+      "nu1",
+      "nu2",
+      "nu3"
+    ]
+  },
+  "rho_gev": 7.615694417250985e-14,
+  "row_basis_labels": [
+    "f1",
+    "f2",
+    "f3"
+  ],
+  "same_label_basis_contract": {
+    "labels": [
+      "f1",
+      "f2",
+      "f3"
+    ],
+    "orientation_preserved": true
+  },
+  "selector_lambda": 0.4545580596512337,
+  "selector_point_absolute": {
+    "psi12": 0.31893255645006824,
+    "psi23": 0.4734879499188133,
+    "psi31": 0.9637237704217096
+  },
+  "source_isotropic": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/neutrino/forward_neutrino_closure_bundle.json",
+  "source_scalar_certificate": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/neutrino/same_label_scalar_certificate.json",
+  "u_nu_imag": [
+    [
+      -0.004407603353743034,
+      0.0012571804388628366,
+      0.00404832076952888
+    ],
+    [
+      -1.295333292535467e-19,
+      0.0014339845078543544,
+      1.05853712582875e-16
+    ],
+    [
+      -0.003286837379116839,
+      1.1544134905109202e-16,
+      0.005790882859117473
+    ]
+  ],
+  "u_nu_real": [
+    [
+      -0.490860999841411,
+      -0.6674425090765509,
+      0.5599451576192574
+    ],
+    [
+      0.7784758016929949,
+      -0.04744157274726579,
+      0.6258775176040008
+    ],
+    [
+      -0.39115300682195736,
+      0.7431461211892576,
+      0.5428524939532446
+    ]
+  ]
+}

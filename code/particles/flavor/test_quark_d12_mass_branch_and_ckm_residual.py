@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the D12 quark mass-branch and CKM residual artifact."""
+"""Validate the D12 quark mass-branch and CKM closure artifact."""
 
 from __future__ import annotations
 
@@ -14,13 +14,14 @@ SCRIPT = ROOT / "particles" / "flavor" / "derive_quark_d12_mass_branch_and_ckm_r
 OUTPUT = ROOT / "particles" / "runs" / "flavor" / "quark_d12_mass_branch_and_ckm_residual.json"
 
 
-def test_quark_d12_diagnostic_branch_stays_continuation_only() -> None:
+def test_quark_d12_ckm_transport_closes_on_d12_continuation_branch() -> None:
     subprocess.run([sys.executable, str(SCRIPT)], check=True, cwd=ROOT)
     payload = json.loads(OUTPUT.read_text(encoding="utf-8"))
 
-    assert payload["artifact"] == "oph_quark_d12_mass_branch_and_ckm_residual"
-    assert payload["status"] == "diagnostic_only_d12_continuation"
+    assert payload["artifact"] == "oph_quark_d12_mass_branch_and_ckm_closure"
+    assert payload["status"] == "d12_continuation_ckm_cp_closed_mass_value_laws_open"
     assert payload["public_promotion_allowed"] is False
     assert payload["candidate_mass_branch_from_t1_over_5"]["Delta_ud_overlap"] > 0.0
-    assert payload["ckm_cp_residual_generator"]["off_diagonal_abs"]["12"] > 0.2
-
+    assert payload["forward_same_label_transport"]["principal_log_exists_uniquely"] is True
+    assert payload["same_label_transport_generator"]["generator_invariants"]["theta_12_K"] > 0.0
+    assert payload["closure_residual"]["fro_norm"] < 1.0e-12

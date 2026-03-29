@@ -7,7 +7,9 @@
     "same_label_scalar_certificate_sufficiency",
     "exact_principal_selector_from_centered_eta_class",
     "exact_depressed_cubic_intrinsic_spectrum",
-    "mass_eigenstate_row_policy_nu1_nu2_nu3"
+    "mass_eigenstate_row_policy_nu1_nu2_nu3",
+    "shape_closed_scale_invariant_left_basis",
+    "pmns_from_shared_charged_and_intrinsic_bases"
   ],
   "current_isotropic_builder_facing_class": {
     "artifact": "oph_neutrino_only_edge_constant_centered_eta_class",
@@ -39,12 +41,13 @@
     "why_not_proof_facing": "The isotropic neutrino-only bundle determines only the zero centered class. It does not determine the proof-facing overlap/gap certificate."
   },
   "current_snapshot_scan": {
-    "live_charged_left_artifact_found": false,
-    "live_same_label_artifact_found": false
+    "live_charged_left_artifact_found": true,
+    "live_pmns_artifact_found": true,
+    "live_same_label_artifact_found": true
   },
   "demo_intrinsic_result_summary": {
-    "delta_m21_sq_gev2": 5.690121167370743e-26,
-    "delta_m31_sq_gev2": 9.79802338860023e-25,
+    "delta_m21_sq_gev2": 1.7889858276990296e-25,
+    "delta_m31_sq_gev2": 1.0143949544256274e-24,
     "masses_gev_sorted": [
       2.3929601069646055e-12,
       2.4048200109774875e-12,
@@ -64,26 +67,13 @@
     "same_label_builder_facing_centered_eta_dof": 2,
     "same_label_proof_facing_continuous_dof_mod_common_scale": 5
   },
-  "exact_blockers": [
-    {
-      "current_snapshot_status": "absent",
-      "kind": "proof_facing_source_object",
-      "name": "live_same_label_scalar_certificate",
-      "required_contract": "oph_same_label_scalar_certificate_required_contract"
-    },
-    {
-      "current_snapshot_status": "absent",
-      "kind": "pmns_and_public_flavor_row_object",
-      "name": "shared_charged_lepton_left_basis",
-      "required_contract": "oph_shared_charged_left_basis_required_contract"
-    }
-  ],
-  "fully_completed": false,
-  "generated_utc": "2026-03-29T06:38:09Z",
+  "exact_blockers": [],
+  "fully_completed": true,
+  "generated_utc": "2026-03-29T09:29:28Z",
   "neutrino_only_isotropy_obstruction": {
     "closed": true,
     "first_honest_solar_mover": "realized_arrow_pullback_from_flavor_gap_and_defect_certificates",
     "statement": "The current forward neutrino bundle is exactly S_3-isotropic, so neutrino-only same-label readback stays edge-constant and cannot open the solar 1-2 split."
   },
-  "reason_not_fully_completed": "The intrinsic chain is exact once the same-label scalar certificate exists, but the current snapshot still lacks a live physical certificate and still lacks the shared charged-lepton left basis required for PMNS/public flavor rows."
+  "reason_not_fully_completed": ""
 }

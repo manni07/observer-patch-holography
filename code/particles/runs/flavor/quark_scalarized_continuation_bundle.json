@@ -1,11 +1,10 @@
 {
   "artifact": "oph_quark_scalarized_continuation_bundle",
-  "generated_utc": "2026-03-28T15:42:53Z",
+  "generated_utc": "2026-03-29T09:13:43Z",
   "honest_remaining_value_laws": [
     "Delta_ud_overlap_value_law",
     "eta_Q_centered_value_law",
-    "quark_exact_mean_split_value_law_or_carrier_repair",
-    "same_label_left_transport_physical_invariant_value_laws"
+    "quark_exact_mean_split_value_law_or_carrier_repair"
   ],
   "mass_side": {
     "B_ord": [
@@ -84,24 +83,29 @@
     "full_matrix_artifact": "oph_generation_bundle_same_label_physical_invariant_bundle",
     "gauge_fixed_physical_decomposition": {
       "chi_diagonal_imag": [
-        -0.006095179275809967,
-        -0.7300387679202932,
-        -0.3260719358139316
+        9.585939922364254e-11,
+        9.585943540185488e-11,
+        9.585698362591386e-11
       ],
-      "phi_cp": -2.6946364809227097,
-      "theta_12": 0.2256228751541542,
-      "theta_13": 0.003473054182841341,
-      "theta_23": 0.04380491981435288
+      "jarlskog": 2.875591228134216e-10,
+      "phi_K": -1.859950059797122,
+      "phi_cp": 1.7011978493658404,
+      "theta_12": 0.0075998034425194495,
+      "theta_12_K": 0.007599799911070336,
+      "theta_13": 2.964320823052465e-05,
+      "theta_13_K": 3.066523834550606e-05,
+      "theta_23": 0.0012874186416783878,
+      "theta_23_K": 0.0012873978029669681
     },
-    "physical_invariant_formula": "K_gf = i diag(chi_1,chi_2,chi_3) + theta_12(E12-E21) + theta_23(E23-E32) + theta_13(e^{i phi_cp} E13 - e^{-i phi_cp} E31)",
-    "relative_branch_rigidity": 0.00023461092057035416,
-    "same_label_generator_formula": "V_CKM = U_u^dagger @ exp(K_CKM) @ U_d"
+    "physical_invariant_formula": "V_CKM^fwd = U_u^dagger U_d, K_CKM = Log_pr(V_CKM^fwd), K_gf = i diag(chi_1,chi_2,chi_3) + theta_12(E12-E21) + theta_23(E23-E32) + theta_13(e^{i phi_cp} E13 - e^{-i phi_cp} E31)",
+    "same_label_generator_formula": "V_CKM^fwd = U_u^dagger @ U_d, K_CKM = Log_pr(V_CKM^fwd)",
+    "transport_closure_residual_fro_norm": 1.1224045809338492e-15
   },
   "notes": [
     "The D12 quark mass branch reduces to two scalar laws, Delta_ud_overlap and eta_Q_centered, once the current ordered-family carrier is fixed.",
-    "The CKM/CP side reduces to gauge-fixed physical invariants, but their values are still compare-derived rather than OPH-emitted.",
+    "The CKM/CP side closes on the D12 continuation branch because the same-label transport unitary is emitted directly by the forward Yukawa step and its principal logarithm exists uniquely on the standard gauge representative.",
     "This bundle is diagnostic only and does not alter the live public quark rows."
   ],
-  "proof_status": "scalarized_bundle_not_OPH_derived",
+  "proof_status": "mixing_closed_mass_value_laws_open_on_d12_continuation",
   "scope": "D12_continuation_only"
 }

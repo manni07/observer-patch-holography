@@ -23,6 +23,7 @@ ENDPOINT_RATIO_BREAKER_JSON = ROOT / "particles" / "runs" / "leptons" / "charged
 SOURCE_SCALAR_PAIR_READBACK_JSON = ROOT / "particles" / "runs" / "leptons" / "charged_sector_local_support_extension_source_scalar_pair_readback.json"
 CHARGED_D12_CONTINUATION_JSON = ROOT / "particles" / "runs" / "leptons" / "charged_d12_continuation_followup.json"
 ABSOLUTE_SCALE_GAP_IDENTITY_JSON = ROOT / "particles" / "runs" / "leptons" / "charged_absolute_scale_transport_gap_identity.json"
+ABSOLUTE_SCALE_UNDERDETERMINATION_JSON = ROOT / "particles" / "runs" / "leptons" / "charged_absolute_scale_underdetermination_theorem.json"
 DEFAULT_OUT = ROOT / "particles" / "runs" / "leptons" / "lepton_current_family_exactness_audit.json"
 
 
@@ -53,6 +54,7 @@ def main() -> int:
     parser.add_argument("--source-scalar-pair-readback", default=str(SOURCE_SCALAR_PAIR_READBACK_JSON))
     parser.add_argument("--charged-d12-continuation", default=str(CHARGED_D12_CONTINUATION_JSON))
     parser.add_argument("--absolute-scale-gap-identity", default=str(ABSOLUTE_SCALE_GAP_IDENTITY_JSON))
+    parser.add_argument("--absolute-scale-underdetermination", default=str(ABSOLUTE_SCALE_UNDERDETERMINATION_JSON))
     parser.add_argument("--output", default=str(DEFAULT_OUT))
     args = parser.parse_args()
 
@@ -111,6 +113,12 @@ def main() -> int:
     absolute_scale_gap_identity = (
         json.loads(absolute_scale_gap_identity_path.read_text(encoding="utf-8"))
         if absolute_scale_gap_identity_path.exists()
+        else None
+    )
+    absolute_scale_underdetermination_path = Path(args.absolute_scale_underdetermination)
+    absolute_scale_underdetermination = (
+        json.loads(absolute_scale_underdetermination_path.read_text(encoding="utf-8"))
+        if absolute_scale_underdetermination_path.exists()
         else None
     )
 
@@ -325,6 +333,25 @@ def main() -> int:
             "typed_restore_formulas": absolute_scale_gap_identity.get("typed_restore_formulas"),
             "typed_restore_values": absolute_scale_gap_identity.get("typed_restore_values"),
         },
+        "absolute_scale_underdetermination_theorem": None if absolute_scale_underdetermination is None else {
+            "artifact": absolute_scale_underdetermination.get("artifact"),
+            "proof_status": absolute_scale_underdetermination.get("proof_status"),
+            "theorem_statement": absolute_scale_underdetermination.get("theorem_statement"),
+            "same_carrier_mass_formulas": absolute_scale_underdetermination.get("same_carrier_mass_formulas"),
+            "centered_sum_rule": absolute_scale_underdetermination.get("centered_sum_rule"),
+            "determinant_rules": absolute_scale_underdetermination.get("determinant_rules"),
+            "shared_budget_seed": absolute_scale_underdetermination.get("shared_budget_seed"),
+            "compare_only_continuation_target": absolute_scale_underdetermination.get("compare_only_continuation_target"),
+            "next_exact_missing_object": absolute_scale_underdetermination.get("next_exact_missing_object"),
+            "minimal_new_theorem": absolute_scale_underdetermination.get("minimal_new_theorem"),
+        },
+        "absolute_scale_closure_status": None if absolute_scale_underdetermination is None else {
+            "present_chain_under_determines_g_e": True,
+            "current_theorem_output": "E_e_log_centered mod common shift",
+            "compare_only_g_e_star": absolute_scale_underdetermination.get("compare_only_continuation_target", {}).get("g_e_star"),
+            "compare_only_delta_e_abs_star": absolute_scale_underdetermination.get("compare_only_continuation_target", {}).get("delta_e_abs_star"),
+            "honest_missing_transport_scalar": absolute_scale_underdetermination.get("minimal_new_theorem", {}).get("required_new_scalar"),
+        },
         "exact_waiting_set": {
             "mandatory_package_a": {
                 "id": "charged_sector_response_pushforward_to_C_hat_e",
@@ -335,8 +362,8 @@ def main() -> int:
             "mandatory_package_b": {
                 "id": "charged_common_refinement_transport_equalizer",
                 "linked_issue": "papers.compact.e.30-replace-koide-assisted-lepton-fitting-with-a-theorem",
-                "summary": "Derive the common-refinement transport equalizer under ordered_common_refinement_seed_rigidity so the charged absolute-scale lane upgrades from shared_budget_only to theorem-grade.",
-                "immediate_downstream_effect": "This is the honest absolute-scale bridge from the shared charged evaluator descent to the physical scale g_e.",
+                "summary": "Derive the common-refinement transport equalizer under ordered_common_refinement_seed_rigidity so the charged absolute-scale lane upgrades from shared_budget_only to theorem-grade and emits the determinant-normalization transport scalar.",
+                "immediate_downstream_effect": "This is the honest absolute-scale bridge from the shared charged evaluator descent to the physical scale g_e via the emitted scalar Delta_e_abs or an equivalent mu_e_absolute_log transport coordinate.",
             },
             "optional_package_c": {
                 "id": "charged_holonomy_bridge_for_legacy_delta_2_over_9",
@@ -390,6 +417,11 @@ def main() -> int:
             "The full two-scalar support-extension completion law is now explicit on disk; the live same-carrier primitive is the eta source-readback, followed by the sigma endpoint-ratio breaker.",
             "The stronger same-carrier source-scalar pair readback is also now explicit on disk, collecting those eta and sigma invariants into one ordered primitive beneath the full completion shell.",
             "At theorem level, eta and sigma are no longer the deepest honest waiting set. The live builder still exposes eta then sigma as the first same-carrier residuals, but the paper-facing exact burden is to derive the charged sector-response functor C_hat_e and then the common-refinement transport equalizer for the absolute scale.",
+            (
+                "The present charged theorem determines only the centered charged log class modulo a common additive shift, so g_e remains unresolved on the live theorem lane."
+                if absolute_scale_underdetermination is not None
+                else "No explicit charged absolute-scale underdetermination theorem is attached to this audit yet."
+            ),
             "The eta-only extension acts at fixed current span, so it preserves the endpoint ratio tau/e and can only move the middle state against that fixed endpoint pair.",
             "A rigid eta candidate can be written from the current ordered-gap ratio alone, but it lands far from the charged targets; the remaining charged burden then shifts to the still-open total source span.",
             (
@@ -401,6 +433,11 @@ def main() -> int:
                 "The current-family absolute-scale restore candidate is also cleaner now: the common gap subtracted from log(g_e_raw) matches the emitted overlap-edge theorem gap gamma on the current family, so mu_e_absolute_log_candidate = log(g_e_raw) - gamma_gap is explicit even though the charged hierarchy still remains blocked first on eta then sigma."
                 if absolute_scale_gap_identity is not None
                 else "No current-family charged absolute-scale gap identity is attached to this audit."
+            ),
+            (
+                "The D12 continuation bridge remains compare-only on the absolute side: it would need g_e_star = 0.04577885783568762, equivalently Delta_e_abs_star = 3.003986333402356, but that value is not OPH-emitted."
+                if absolute_scale_underdetermination is not None
+                else "No compare-only charged absolute-scale target is attached to this audit."
             ),
         ],
     }

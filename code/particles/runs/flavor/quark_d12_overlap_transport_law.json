@@ -20,7 +20,7 @@
     "tau_sum_half_delta_identity": 0.0,
     "tau_u_log_per_side": 0.024876168553006103
   },
-  "generated_utc": "2026-03-28T16:00:23Z",
+  "generated_utc": "2026-03-29T09:13:53Z",
   "input_kind": "closed_spread_totals_plus_one_scalar_overlap_selector",
   "next_single_residual_object": "Delta_ud_overlap",
   "notes": [

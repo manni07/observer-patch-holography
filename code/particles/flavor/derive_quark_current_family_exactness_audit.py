@@ -261,9 +261,11 @@ def main() -> int:
             "theorem_tier": d12_mass_branch.get("theorem_tier"),
             "candidate_mass_branch_from_t1_over_5": d12_mass_branch.get("candidate_mass_branch_from_t1_over_5"),
             "best_honest_one_scalar_mass_point_on_same_family": d12_mass_branch.get("best_honest_one_scalar_mass_point_on_same_family"),
-            "ckm_cp_residual_generator_off_diagonal_abs": (
-                d12_mass_branch.get("ckm_cp_residual_generator", {}).get("off_diagonal_abs")
+            "forward_same_label_transport_closed": (
+                d12_mass_branch.get("closure_residual", {}).get("fro_norm") is not None
             ),
+            "standard_ckm_parameters": d12_mass_branch.get("standard_ckm_parameters"),
+            "closure_residual_fro_norm": d12_mass_branch.get("closure_residual", {}).get("fro_norm"),
         },
         "d12_overlap_transport_law": None if d12_overlap_law is None else {
             "artifact": d12_overlap_law.get("artifact"),
@@ -307,19 +309,15 @@ def main() -> int:
         "recovered_core_no_go_for_nonzero_light_quark_pure_b_selector": True,
         "recovered_core_no_go_basis": "March 28, 2026 final-wave consolidation against the OPH tier ledger in the uploaded corpus",
         "active_builder_smallest_missing_object": "source_readback_u_log_per_side_and_source_readback_d_log_per_side",
-        "broader_honest_frontier": (
-            d12_selector.get("artifact")
-            if d12_selector is not None
-            else "D12_light_quark_isospin_breaking_selector_or_overlap_defect_scalar"
-        ),
+        "broader_honest_frontier": "D12_mass_side_value_laws_Delta_ud_overlap_and_eta_Q_centered",
         "predictive_J_B_source_law_status": (
             j_b_evaluator.get("predictive_J_B_source_law_status")
             if j_b_evaluator is not None
             else "missing"
         ),
         "smallest_exact_obstruction": (
-            "the diagonal B-mode shell is fixed, "
-            "but the active quark builder still waits on the emitted tau-pair because the current mean and quadratic invariants are blind to that B-mode amplitude"
+            "the builder-facing pure-B payload pair is still open on the active public branch, "
+            "and the broader D12 continuation branch still lacks OPH-emitted value laws for Delta_ud_overlap and eta_Q_centered"
         ),
         "smallest_constructive_missing_object": (
             "source_readback_u_log_per_side_and_source_readback_d_log_per_side"
@@ -342,7 +340,7 @@ def main() -> int:
                 else "No D12 overlap transport law is attached to this audit."
             ),
             (
-                "A stronger D12 continuation mass-side candidate is now explicit too: the one-scalar point Delta_ud_overlap = t1/5 gives (u,c,t) = (0.002176632493, 1.256692171439, 172.851929939314) GeV and (d,s,b) = (0.004708229529, 0.091608271273, 4.155513989985) GeV with RMS log-mass error about 1.08e-02, but CKM/CP still needs a matrix-valued left-unitary transport generator K_CKM rather than another scalar tweak."
+                "A stronger D12 continuation mass-side candidate is now explicit too: the one-scalar point Delta_ud_overlap = t1/5 gives (u,c,t) = (0.002176632493, 1.256692171439, 172.851929939314) GeV and (d,s,b) = (0.004708229529, 0.091608271273, 4.155513989985) GeV with RMS log-mass error about 1.08e-02, and the CKM/CP lane closes on that same branch because the forward Yukawa step already emits the same-label transport unitary V_CKM^fwd = U_u^dagger U_d and its principal logarithm."
                 if d12_mass_branch is not None
                 else "No D12 quark mass-branch followup is attached to this audit."
             ),
@@ -352,7 +350,7 @@ def main() -> int:
                 else "No scalarized D12 quadratic-even transport shell is attached to this audit."
             ),
             (
-                "The strongest current D12 continuation bundle reduces the mass side to two value laws, Delta_ud_overlap and eta_Q_centered, while the mixing side reduces to the gauge-fixed physical invariants of the same-label left-transport generator."
+                "The strongest current D12 continuation bundle reduces the mass side to two value laws, Delta_ud_overlap and eta_Q_centered, while the mixing side is closed by the gauge-fixed physical invariants of the forward same-label left-transport generator."
                 if scalarized_bundle is not None
                 else "No scalarized D12 continuation bundle is attached to this audit."
             ),

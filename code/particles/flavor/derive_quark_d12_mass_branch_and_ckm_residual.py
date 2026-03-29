@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
-"""Analyze the strongest current D12 quark mass branch and CKM residual.
+"""Analyze the strongest current D12 quark mass branch and CKM closure.
 
 Chain role: keep the honest D12 quark continuation program explicit without
 promoting the light-quark selector value to recovered-core status.
 
 Mathematics: apply a one-scalar D12 light-quark overlap selector candidate to
-the current forward Yukawas, evaluate the resulting mass branch, and compute the
-matrix-valued left-unitary residual generator needed to reach the target CKM
-surface while preserving that mass branch.
+the current forward Yukawas, evaluate the resulting mass branch, and read off
+the same-label left-transport unitary `V_CKM^fwd = U_u^dagger U_d` together
+with its principal anti-Hermitian logarithm.
 
 OPH-derived inputs: the current forward Yukawa artifact, the quark exactness
 audit, and the already-emitted spread package.
 
-Output: a diagnostic continuation artifact carrying the best current D12
-mass-side candidate and the explicit remaining CKM/CP generator residual.
+Output: a D12 continuation artifact carrying the strongest current mass-side
+candidate, the honest forward CKM transport unitary, its principal generator,
+and the remaining mass-side value-law burden.
 """
 
 from __future__ import annotations
@@ -46,6 +47,13 @@ def _complex_matrix(payload: dict[str, Any]) -> np.ndarray:
     return np.asarray(payload["real"], dtype=float) + 1j * np.asarray(payload["imag"], dtype=float)
 
 
+def _encode_complex_matrix(matrix: np.ndarray) -> dict[str, Any]:
+    return {
+        "real": np.real(matrix).tolist(),
+        "imag": np.imag(matrix).tolist(),
+    }
+
+
 def _left_diag(matrix: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
     hermitian = matrix @ matrix.conjugate().T
     eig_vals, eig_vecs = np.linalg.eigh(hermitian)
@@ -59,11 +67,83 @@ def _jarlskog(v_ckm: np.ndarray) -> float:
     return float(np.imag(v_ckm[0, 0] * v_ckm[1, 1] * np.conjugate(v_ckm[0, 1]) * np.conjugate(v_ckm[1, 0])))
 
 
+def _matrix_exp(matrix: np.ndarray) -> np.ndarray:
+    eig_vals, eig_vecs = np.linalg.eig(matrix)
+    return eig_vecs @ np.diag(np.exp(eig_vals)) @ np.linalg.inv(eig_vecs)
+
+
 def _principal_unitary_log(matrix: np.ndarray) -> np.ndarray:
     eig_vals, eig_vecs = np.linalg.eig(matrix)
     phases = np.angle(eig_vals)
     log_diag = np.diag(1j * phases)
-    return eig_vecs @ log_diag @ np.linalg.inv(eig_vecs)
+    raw = eig_vecs @ log_diag @ np.linalg.inv(eig_vecs)
+    return 0.5 * (raw - raw.conjugate().T)
+
+
+def _standard_ckm_gauge_fix(v_ckm: np.ndarray) -> dict[str, Any]:
+    """Choose a standard representative with V_ud, V_us, V_cs, V_cb, V_tb real-positive."""
+    row_phases = np.zeros(3, dtype=float)
+    col_phases = np.zeros(3, dtype=float)
+    row_phases[0] = float(np.angle(v_ckm[0, 0]))
+    col_phases[1] = float(row_phases[0] - np.angle(v_ckm[0, 1]))
+    col_phases[2] = float(np.angle(v_ckm[1, 1]) + col_phases[1] - np.angle(v_ckm[1, 2]))
+    row_phases[1] = float(np.angle(v_ckm[1, 2]) + col_phases[2])
+    row_phases[2] = float(np.angle(v_ckm[2, 2]) + col_phases[2])
+    left = np.diag(np.exp(-1j * row_phases))
+    right = np.diag(np.exp(1j * col_phases))
+    return {
+        "matrix": left @ v_ckm @ right,
+        "row_phase_radians": row_phases.tolist(),
+        "col_phase_radians": col_phases.tolist(),
+        "conditions": [
+            "V_ud real-positive",
+            "V_us real-positive",
+            "V_cs real-positive",
+            "V_cb real-positive",
+            "V_tb real-positive",
+        ],
+    }
+
+
+def _generator_gauge_fix(generator: np.ndarray, matrix: np.ndarray) -> dict[str, Any]:
+    """Diagonal-conjugate so K_12 and K_23 are real-positive."""
+    phase_shifts = np.zeros(3, dtype=float)
+    phase_shifts[1] = float(-np.angle(generator[0, 1]))
+    stage = np.diag(np.exp(-1j * phase_shifts)) @ generator @ np.diag(np.exp(1j * phase_shifts))
+    phase_shifts[2] = float(phase_shifts[1] - np.angle(stage[1, 2]))
+    left = np.diag(np.exp(-1j * phase_shifts))
+    right = np.diag(np.exp(1j * phase_shifts))
+    return {
+        "matrix": left @ generator @ right,
+        "matrix_surface": left @ matrix @ right,
+        "phase_shifts_radians": phase_shifts.tolist(),
+    }
+
+
+def _standard_ckm_parameters(v_ckm: np.ndarray) -> dict[str, float]:
+    s13 = min(1.0, max(0.0, float(abs(v_ckm[0, 2]))))
+    c13 = math.sqrt(max(0.0, 1.0 - s13 * s13))
+    s12 = min(1.0, max(0.0, float(abs(v_ckm[0, 1]) / c13)))
+    s23 = min(1.0, max(0.0, float(abs(v_ckm[1, 2]) / c13)))
+    theta_12 = math.asin(s12)
+    theta_23 = math.asin(s23)
+    theta_13 = math.asin(s13)
+    c12 = math.sqrt(max(0.0, 1.0 - s12 * s12))
+    c23 = math.sqrt(max(0.0, 1.0 - s23 * s23))
+    numerator = (s12 * s23) ** 2 + (c12 * c23 * s13) ** 2 - float(abs(v_ckm[2, 0])) ** 2
+    denominator = 2.0 * s12 * s23 * c12 * c23 * s13
+    cos_delta = max(-1.0, min(1.0, numerator / denominator))
+    delta = math.acos(cos_delta)
+    jarlskog = _jarlskog(v_ckm)
+    if jarlskog < 0.0:
+        delta = 2.0 * math.pi - delta
+    return {
+        "theta_12": theta_12,
+        "theta_23": theta_23,
+        "theta_13": theta_13,
+        "delta_ckm": delta,
+        "jarlskog": jarlskog,
+    }
 
 
 def _apply_delta(delta_value: float, y_u: np.ndarray, y_d: np.ndarray, sigma_u: float, sigma_d: float) -> dict[str, Any]:
@@ -86,6 +166,7 @@ def _apply_delta(delta_value: float, y_u: np.ndarray, y_d: np.ndarray, sigma_u: 
         "m_d": [float(value) for value in m_d.tolist()],
         "abs_V_CKM": np.abs(v_ckm).tolist(),
         "jarlskog": _jarlskog(v_ckm),
+        "V_CKM_forward": v_ckm,
         "U_u_left": u_left,
         "U_d_left": d_left,
     }
@@ -97,7 +178,7 @@ def _rms_log_error(m_u: list[float], m_d: list[float], target_u: np.ndarray, tar
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Build the D12 quark mass-branch and CKM residual artifact.")
+    parser = argparse.ArgumentParser(description="Build the D12 quark mass-branch and CKM closure artifact.")
     parser.add_argument("--forward", default=str(FORWARD_JSON))
     parser.add_argument("--audit", default=str(AUDIT_JSON))
     parser.add_argument("--delta-overlap-candidate", type=float, default=0.6695617711471163 / 5.0)
@@ -121,66 +202,85 @@ def main() -> int:
         payload = _apply_delta(float(delta_value), y_u, y_d, sigma_u, sigma_d)
         err = _rms_log_error(payload["m_u"], payload["m_d"], target_u, target_d)
         if best is None or err < best["rms_log_error_vs_reference_targets"]:
-            best = {key: value for key, value in payload.items() if key not in {"U_u_left", "U_d_left"}}
+            best = {
+                key: value
+                for key, value in payload.items()
+                if key not in {"U_u_left", "U_d_left", "V_CKM_forward"}
+            }
             best["rms_log_error_vs_reference_targets"] = err
 
-    s12, s13, s23, delta_phase = 0.22501, 0.003732, 0.04183, 1.147
-    c12 = math.sqrt(1.0 - s12 * s12)
-    c13 = math.sqrt(1.0 - s13 * s13)
-    c23 = math.sqrt(1.0 - s23 * s23)
-    v_target = np.asarray(
-        [
-            [c12 * c13, s12 * c13, s13 * np.exp(-1j * delta_phase)],
-            [
-                -s12 * c23 - c12 * s23 * s13 * np.exp(1j * delta_phase),
-                c12 * c23 - s12 * s23 * s13 * np.exp(1j * delta_phase),
-                s23 * c13,
-            ],
-            [
-                s12 * s23 - c12 * c23 * s13 * np.exp(1j * delta_phase),
-                -c12 * s23 - s12 * c23 * s13 * np.exp(1j * delta_phase),
-                c23 * c13,
-            ],
-        ],
-        dtype=complex,
-    )
-
-    u_left = candidate["U_u_left"]
-    d_left = candidate["U_d_left"]
-    generator_input = u_left @ v_target @ d_left.conjugate().T
-    k_ckm = _principal_unitary_log(generator_input)
+    v_forward = candidate["V_CKM_forward"]
+    standard_gauge = _standard_ckm_gauge_fix(v_forward)
+    v_standard = standard_gauge["matrix"]
+    eigenphase_radians = [float(value) for value in np.angle(np.linalg.eigvals(v_standard)).tolist()]
+    k_principal = _principal_unitary_log(v_standard)
+    generator_gauge = _generator_gauge_fix(k_principal, v_standard)
+    k_ckm = generator_gauge["matrix"]
+    v_generator_surface = generator_gauge["matrix_surface"]
+    generator_invariants = {
+        "theta_12_K": float(abs(k_ckm[0, 1])),
+        "theta_23_K": float(abs(k_ckm[1, 2])),
+        "theta_13_K": float(abs(k_ckm[0, 2])),
+        "phi_K": float(np.angle(k_ckm[0, 2])),
+        "chi_diagonal_imag": [float(value) for value in np.imag(np.diag(k_ckm)).tolist()],
+    }
+    standard_parameters = _standard_ckm_parameters(v_standard)
+    closure_residual = float(np.linalg.norm(_matrix_exp(k_ckm) - v_generator_surface, ord="fro"))
 
     result = {
-        "artifact": "oph_quark_d12_mass_branch_and_ckm_residual",
+        "artifact": "oph_quark_d12_mass_branch_and_ckm_closure",
         "generated_utc": _timestamp(),
-        "status": "diagnostic_only_d12_continuation",
+        "status": "d12_continuation_ckm_cp_closed_mass_value_laws_open",
         "public_promotion_allowed": False,
         "theorem_tier": "D12_continuation_only",
-        "candidate_selector_value_source": "uploaded_lane5_d12_continuation_t1_over_5_candidate",
+        "candidate_selector_value_source": "same_family_specialization_delta_ud_overlap_equals_t1_over_5",
         "candidate_mass_branch_from_t1_over_5": {
-            key: value for key, value in candidate.items() if key not in {"U_u_left", "U_d_left"}
+            key: value
+            for key, value in candidate.items()
+            if key not in {"U_u_left", "U_d_left", "V_CKM_forward"}
         },
         "best_honest_one_scalar_mass_point_on_same_family": best,
-        "ckm_cp_residual_generator": {
-            "definition": "K_CKM = log(U_u_left(candidate) @ V_CKM_target @ U_d_left(candidate)^dagger)",
+        "forward_same_label_transport": {
+            "definition": "V_CKM^fwd = U_u_left(candidate)^dagger @ U_d_left(candidate)",
+            "standard_rephasing_gauge": {
+                "conditions": standard_gauge["conditions"],
+                "row_phase_radians": standard_gauge["row_phase_radians"],
+                "col_phase_radians": standard_gauge["col_phase_radians"],
+            },
+            "V_CKM_forward_standard_gauge": _encode_complex_matrix(v_standard),
+            "abs_V_CKM": np.abs(v_standard).tolist(),
+            "eigenphase_principal_strip_radians": eigenphase_radians,
+            "principal_log_exists_uniquely": all(abs(value) < math.pi for value in eigenphase_radians),
+            "jarlskog": standard_parameters["jarlskog"],
+        },
+        "same_label_transport_generator": {
+            "definition": "K_CKM = Log_pr(V_CKM^fwd)",
+            "generator_gauge_convention": "diagonal conjugation chosen so that K_12 and K_23 are real-positive",
+            "generator_gauge_phase_radians": generator_gauge["phase_shifts_radians"],
+            "V_CKM_generator_gauge": _encode_complex_matrix(v_generator_surface),
             "real": np.real(k_ckm).tolist(),
             "imag": np.imag(k_ckm).tolist(),
             "abs": np.abs(k_ckm).tolist(),
-            "off_diagonal_abs": {
-                "12": float(abs(k_ckm[0, 1])),
-                "13": float(abs(k_ckm[0, 2])),
-                "23": float(abs(k_ckm[1, 2])),
-            },
-            "off_diagonal_phase_radians": {
-                "12": float(np.angle(k_ckm[0, 1])),
-                "13": float(np.angle(k_ckm[0, 2])),
-                "23": float(np.angle(k_ckm[1, 2])),
-            },
+            "generator_invariants": generator_invariants,
+        },
+        "standard_ckm_parameters": standard_parameters,
+        "closure_residual": {
+            "definition": "||exp(K_CKM) - V_CKM^fwd||_F on the generator-gauge surface",
+            "fro_norm": closure_residual,
+        },
+        "remaining_open_objects": [
+            "Delta_ud_overlap_value_law",
+            "eta_Q_centered_value_law",
+            "quark_exact_mean_split_value_law_or_carrier_repair",
+        ],
+        "debug_only_target_seeded_generator": {
+            "status": "retired",
+            "reason": "the honest same-label transport unitary is emitted directly by the forward Yukawa step and no target CKM seed is needed",
         },
         "notes": [
             "This artifact records the strongest current D12 continuation candidate for the light-quark split without overriding the recovered-core no-go.",
-            "The mass-side candidate materially improves the light sector, but CKM and CP remain badly under-produced on this one-scalar family.",
-            "The strongest smaller constructive object for CKM/CP is therefore a matrix-valued left-unitary transport generator rather than another scalar selector guess.",
+            "On the D12 continuation branch the CKM/CP lane closes honestly once the forward Yukawa step is reached, because the same-label transport unitary is already V_CKM^fwd = U_u^dagger U_d.",
+            "The remaining open burden on this branch is mass-side rather than transport-side: the OPH-emitted value laws for Delta_ud_overlap and eta_Q_centered are still missing, and the current t1/5 continuation branch remains quantitatively far from the physical CKM matrix.",
         ],
     }
 

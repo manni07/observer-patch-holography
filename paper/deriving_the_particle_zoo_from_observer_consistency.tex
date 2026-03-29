@@ -54,7 +54,9 @@ target-free source-only theorem that emits the \(W\) boson and \(Z\) boson; the 
 stage yields the Higgs boson and top quark;
 and the quark branch emits continuation-level rows for the up quark, down quark, strange quark,
 charm quark, and bottom quark. Charged leptons and flavor-labeled neutrinos remain
-open, while hadrons remain execution-bound. The purpose of the paper is therefore not to claim full closure, but to give a concise
+open for different reasons: the charged lane fixes the centered hierarchy but not the absolute
+normalization, while the neutrino continuation branch closes numerically but remains on a
+quantitatively wrong physical branch. Hadrons remain execution-bound. The purpose of the paper is therefore not to claim full closure, but to give a concise
 end-to-end derivation map from observer-consistency axioms and \(P\) to the reported particle
 outputs while marking every remaining closure object explicitly.
 \end{abstract}
@@ -402,8 +404,8 @@ Structural carriers & structural & gauge/gravity structural theorems & photon, g
 Electroweak bosons & calibration & electroweak calibration stage & \(W\) boson, \(Z\) boson & no open mass-side blocker on the active calibration surface \\
 Higgs/top stage & secondary quantitative & Higgs/top critical stage & Higgs boson, top quark & presentation-level rigor and synchronization of the closed forward seed \\
 Quark family & continuation & forward Yukawa derivation & up, down, strange, charm, bottom quarks & two-scalar overlap law, same-label physical invariants, Yukawa dictionary, CKM/CP closure \\
-Charged leptons & continuation & ordered-log and support-extension derivation & no promoted masses & \(\eta\) source readback, \(\sigma\) support-extension scalar, absolute scale \(g_e\), excitation dictionary \\
-Neutrinos & continuation & intrinsic Majorana eta-chain & no promoted masses & same-label scalar certificate and shared charged-lepton basis \\
+Charged leptons & continuation & ordered-log and support-extension derivation & no promoted masses & centered charged shape is closed, but the determinant-normalization transport scalar \(\Delta_e^{\mathrm{abs}}\) remains open; theorem-grade waiting set is \(\widehat C_e\) then the common-refinement transport equalizer \\
+Neutrinos & continuation & intrinsic Majorana eta-chain and PMNS continuation closure & no promoted masses & numerical continuation branch closes, but branch repair is needed to reach physical PMNS angles and mass splittings \\
 Hadrons & execution-bound nonperturbative continuation & stable-channel correlator and readout derivation & no paper-derived hadron masses & backend correlator dump, executed unquenching, and production systematics \\
 \bottomrule
 \end{tabular}
@@ -440,17 +442,17 @@ Electroweak calibration & \(W\) boson & calibration & \(80.37700001539531~\mathr
 Electroweak calibration & \(Z\) boson & calibration & \(91.18797807794321~\mathrm{GeV}\) from the same closed theorem on the calibrated D10 source basis & same closed target-free electroweak theorem as the \(W\) row \\
 Higgs/top critical stage & Higgs boson & secondary quantitative & \(125.218922~\mathrm{GeV}\) & present a proof package for the closed one-scalar forward seed \\
 Quark family & top quark & secondary quantitative & \(172.388646~\mathrm{GeV}\) from the Higgs/top critical stage & same one-scalar seed proof package as the Higgs row \\
-Quark family & up quark & overlap continuation & reported value \(0.00228766~\mathrm{GeV}\); stronger two-scalar candidate \(0.00215992~\mathrm{GeV}\) & derive the value laws for \(\Delta_{ud}^{\mathrm{overlap}}\), \(\eta_Q^{\mathrm{centered}}\), and the CKM generator \(K_{\mathrm{CKM}}\) \\
-Quark family & down quark & overlap continuation & reported value \(0.00512144~\mathrm{GeV}\); stronger two-scalar candidate \(0.00470005~\mathrm{GeV}\) & same overlap-continuation value laws plus \(K_{\mathrm{CKM}}\) frontier \\
-Quark family & strange quark & overlap continuation & reported value \(0.0916111~\mathrm{GeV}\); stronger two-scalar candidate \(0.0935045~\mathrm{GeV}\) & same overlap-continuation value laws plus \(K_{\mathrm{CKM}}\) frontier \\
-Quark family & charm quark & overlap continuation & reported value \(1.256692~\mathrm{GeV}\); stronger two-scalar candidate \(1.272939~\mathrm{GeV}\) & same overlap-continuation value laws plus \(K_{\mathrm{CKM}}\) frontier \\
-Quark family & bottom quark & overlap continuation & reported value \(3.820118~\mathrm{GeV}\); stronger two-scalar candidate \(4.182754~\mathrm{GeV}\) & same overlap-continuation value laws plus \(K_{\mathrm{CKM}}\) frontier \\
-Charged leptons & electron & continuation gap & \(n/a\); continuation pair \((\eta,\sigma)=(-6.72959,\,8.15406)\) with near-exact centered-log shape closure and typed absolute-scale shell \(\mu_e^{\mathrm{abs}} \mapsto g_e=e^{\mu_e^{\mathrm{abs}}}\) & emit the charged sector-response functor \(\widehat C_e\), then the common-refinement transport equalizer, then the induced \(\eta,\sigma,g_e\) writeback \\
-Charged leptons & muon & continuation gap & \(n/a\); same continuation bridge as the electron row & same \(\widehat C_e \rightarrow\) equalizer \(\rightarrow (\eta,\sigma,g_e)\) closure chain \\
-Charged leptons & tau lepton & continuation gap & \(n/a\); same continuation bridge as the electron row & same \(\widehat C_e \rightarrow\) equalizer \(\rightarrow (\eta,\sigma,g_e)\) closure chain \\
-Neutrinos & \(\nu_e\) & continuation gap & \(n/a\); intrinsic eigenmasses \((2.393,\,2.4048,\,2.5896)\times 10^{-12}~\mathrm{GeV}\) are exact once the same-label scalar certificate is fixed & emit the live same-label scalar certificate and the shared charged-lepton left basis \\
-Neutrinos & \(\nu_\mu\) & continuation gap & \(n/a\); same intrinsic eta-demo branch as above & same eta-emission plus charged-basis frontier \\
-Neutrinos & \(\nu_\tau\) & continuation gap & \(n/a\); same intrinsic eta-demo branch as above & same eta-emission plus charged-basis frontier \\
+Quark family & up quark & overlap continuation & reported value \(0.00228766~\mathrm{GeV}\); stronger two-scalar candidate \(0.00215992~\mathrm{GeV}\) & derive the value laws for \(\Delta_{ud}^{\mathrm{overlap}}\) and \(\eta_Q^{\mathrm{centered}}\); CKM/CP transport already closes on the D12 branch \\
+Quark family & down quark & overlap continuation & reported value \(0.00512144~\mathrm{GeV}\); stronger two-scalar candidate \(0.00470005~\mathrm{GeV}\) & same overlap-continuation value laws; CKM/CP transport already closes on the D12 branch \\
+Quark family & strange quark & overlap continuation & reported value \(0.0916111~\mathrm{GeV}\); stronger two-scalar candidate \(0.0935045~\mathrm{GeV}\) & same overlap-continuation value laws; CKM/CP transport already closes on the D12 branch \\
+Quark family & charm quark & overlap continuation & reported value \(1.256692~\mathrm{GeV}\); stronger two-scalar candidate \(1.272939~\mathrm{GeV}\) & same overlap-continuation value laws; CKM/CP transport already closes on the D12 branch \\
+Quark family & bottom quark & overlap continuation & reported value \(3.820118~\mathrm{GeV}\); stronger two-scalar candidate \(4.182754~\mathrm{GeV}\) & same overlap-continuation value laws; CKM/CP transport already closes on the D12 branch \\
+Charged leptons & electron & continuation gap & \(n/a\); continuation pair \((\eta,\sigma)=(-6.72959,\,8.15406)\) gives near-exact centered-log shape closure, but the absolute scale remains underdetermined; compare-only target \(g_e^\star=0.0457789\), equivalently \(\Delta_e^{\mathrm{abs},\star}=3.00398633\) & emit the charged sector-response functor \(\widehat C_e\), then the common-refinement transport equalizer, then the induced determinant-normalization scalar \(\Delta_e^{\mathrm{abs}}\) and absolute scale \(g_e\) \\
+Charged leptons & muon & continuation gap & \(n/a\); same centered-shape closure and absolute-scale underdetermination as the electron row & same \(\widehat C_e \rightarrow\) equalizer \(\rightarrow \Delta_e^{\mathrm{abs}} \rightarrow g_e\) closure chain \\
+Charged leptons & tau lepton & continuation gap & \(n/a\); same centered-shape closure and absolute-scale underdetermination as the electron row & same \(\widehat C_e \rightarrow\) equalizer \(\rightarrow \Delta_e^{\mathrm{abs}} \rightarrow g_e\) closure chain \\
+Neutrinos & \(\nu_e\) & continuation branch-repair gap & \(n/a\); live continuation branch emits \(\theta_{12}=0.78680\), \(\theta_{23}=0.04431\), \(\theta_{13}=0.04366\), \(\Delta m_{21}^2=1.789\times10^{-25}\,\mathrm{GeV}^2\), \(\Delta m_{31}^2=1.014\times10^{-24}\,\mathrm{GeV}^2\), but these are far from the physical oscillation pattern & repair the flavor-side realized-arrow pullback and, if necessary, the intrinsic neutrino ansatz so the emitted branch reaches the physical PMNS/splitting regime \\
+Neutrinos & \(\nu_\mu\) & continuation branch-repair gap & \(n/a\); same live continuation branch as the electron-neutrino row & same branch-repair frontier \\
+Neutrinos & \(\nu_\tau\) & continuation branch-repair gap & \(n/a\); same live continuation branch as the electron-neutrino row & same branch-repair frontier \\
 Hadrons & proton & execution-bound & not a paper-derived proton row; surrogate finest-ensemble \(N_{\mathrm{iso}}\) candidate \(0.938960210578~\mathrm{GeV}\) and production geometry summary with 3 ensembles / 6 cfg & replace the surrogate bridge with the backend correlator dump from real production execution and production systematics \\
 Hadrons & neutron & execution-bound & not a paper-derived neutron row & production unquenched execution plus isospin-resolved hadron systematics \\
 Hadrons & neutral pion proxy & execution-bound & not a paper-derived pion row; surrogate finest-ensemble \(\pi_{\mathrm{iso}}\) candidate \(0.135039383836~\mathrm{GeV}\) & replace the surrogate bridge with the backend correlator dump from real production execution and production systematics \\
@@ -1305,31 +1307,57 @@ and RMS log-mass error
 Those values are not promoted as OPH-forward laws; they are the strongest current diagnostic
 specialization of the two-scalar continuation family.
 
-The mixing side is also reduced more sharply than before. A gauge-fixed same-label left-transport
-generator carries the physical invariant shell
+The mixing side is closed on the same D12 continuation branch. Once the forward Yukawa step emits
+the ordered same-label left eigenframes \(U_u\) and \(U_d\), the canonical transport unitary is
 \[
-(\theta_{12},\theta_{23},\theta_{13},\phi_{\mathrm{CP}})
-=
-(0.2256228751541542,\ 0.04380491981435288,\ 0.003473054182841341,\ -2.6946364809227097),
+V_{\mathrm{CKM}}^{\mathrm{fwd}} = U_u^\dagger U_d.
 \]
-with relative branch rigidity
-\[
-2.3461092057035416\times10^{-4}.
-\]
-Equivalently,
+After a diagonal rephasing gauge choice that makes \(V_{ud},V_{us},V_{cs},V_{cb},V_{tb}\)
+real-positive, the principal unitary logarithm exists uniquely, and after one further diagonal
+conjugation the generator takes the gauge-fixed form
 \[
 K_{\mathrm{CKM}}^{\mathrm{gf}}
 =
 i\,\mathrm{diag}(\chi_1,\chi_2,\chi_3)
-+ \theta_{12}(E_{12}-E_{21})
-+ \theta_{23}(E_{23}-E_{32})
-+ \theta_{13}\bigl(e^{i\phi_{\mathrm{CP}}}E_{13}-e^{-i\phi_{\mathrm{CP}}}E_{31}\bigr).
++ \theta_{12}^{(K)}(E_{12}-E_{21})
++ \theta_{23}^{(K)}(E_{23}-E_{32})
++ \theta_{13}^{(K)}\bigl(e^{i\phi_K}E_{13}-e^{-i\phi_K}E_{31}\bigr).
 \]
-These invariants are compare-derived diagnostics, not emitted OPH laws. This is why the honest
-quark frontier is split in two:
+On the current \(t_1/5\) branch this yields the invariant package
+\[
+\bigl(\theta_{12}^{(K)},\theta_{23}^{(K)},\theta_{13}^{(K)},\phi_K\bigr)
+=
+\bigl(0.007599799911069969,\ 0.001287397802967049,\ 3.0665238345096405\times 10^{-5},\ -1.85995254938665\bigr),
+\]
+\[
+\chi =
+\bigl(9.58567591\times 10^{-11},\ -1.91714078\times 10^{-10},\ 9.58570190\times 10^{-11}\bigr).
+\]
+The standard CKM angles and phase of the emitted matrix are
+\[
+\bigl(\theta_{12}^{\mathrm{CKM}},\theta_{23}^{\mathrm{CKM}},\theta_{13}^{\mathrm{CKM}},\delta_{\mathrm{CKM}}\bigr)
+=
+\bigl(0.00759980344251945,\ 0.0012874186416783875,\ 2.9643208230524648\times 10^{-5},\ 1.7011978493658415\bigr),
+\]
+\[
+J = 2.8755912280868794\times 10^{-10},
+\qquad
+\|\exp(K_{\mathrm{CKM}}^{\mathrm{gf}})-V_{\mathrm{CKM}}^{\mathrm{fwd}}\|_F
+\approx 5.6\times 10^{-16}.
+\]
+Equivalently, the same transport can be written as
+\[
+K_{\mathrm{CKM}}^{\mathrm{gf}}
+=
+i\,\mathrm{diag}(\chi_1,\chi_2,\chi_3)
++ \theta_{12}^{(K)}(E_{12}-E_{21})
++ \theta_{23}^{(K)}(E_{23}-E_{32})
++ \theta_{13}^{(K)}\bigl(e^{i\phi_K}E_{13}-e^{-i\phi_K}E_{31}\bigr).
+\]
+So the honest quark frontier is split in two:
 \begin{enumerate}[leftmargin=2em]
-\item a continuation-level selector/value law for \(\Delta_{ud}^{\mathrm{overlap}}\); and
-\item a generation-bundle / same-label left-transport generator that upgrades the mass branch to full CKM/CP closure.
+\item continuation-level value laws for \(\Delta_{ud}^{\mathrm{overlap}}\) and \(\eta_Q^{\mathrm{centered}}\); and
+\item the quantitative question of whether the current D12 continuation branch, despite being transport-closed, lands near the physical CKM matrix.
 \end{enumerate}
 
 \subsection{First generation: up quark and down quark}
@@ -1362,7 +1390,7 @@ Three open fronts remain visible and should be written exactly that way in the p
 \begin{enumerate}[leftmargin=2em]
 \item the Yukawa/excitation dictionary is not yet closed;
 \item the builder-facing pure-\(B\) payload pair beneath the reported quark values is still open;
-\item the broader honest overlap-continuation frontier consists of the two mass-side value laws \(\Delta_{ud}^{\mathrm{overlap}}\) and \(\eta_Q^{\mathrm{centered}}\) together with the matrix-valued CKM/CP transport generator \(K_{\mathrm{CKM}}\).
+\item the broader honest overlap-continuation frontier consists of the two mass-side value laws \(\Delta_{ud}^{\mathrm{overlap}}\) and \(\eta_Q^{\mathrm{centered}}\), while CKM/CP transport is already closed on the current D12 branch.
 \end{enumerate}
 
 So the correct headline for quarks is not ``fully derived.'' It is: quarks are the only matter
@@ -1448,10 +1476,53 @@ The visible scalar order remains
 \quad\text{then}\quad
 \sigma_{\mathrm{ext}},
 \]
-and the charged absolute scale \(g_e\) remains unresolved. But these are no longer the deepest
-theorem objects. Once \(\widehat C_e\) exists, \(\eta_{\mathrm{ext}}\) and
-\(\sigma_{\mathrm{ext}}\) become charged spectral invariants rather than separate primitive goals,
-and the absolute-scale burden is pushed to the common-refinement transport equalizer.
+and the charged absolute scale \(g_e\) remains unresolved. Builder-facing code therefore still
+exposes \(\eta_{\mathrm{ext}}\) and then \(\sigma_{\mathrm{ext}}\) as the first same-carrier
+residuals, but the theorem-grade waiting set is sharper than that surface suggests. Once
+\(\widehat C_e\) exists, \(\eta_{\mathrm{ext}}\) and \(\sigma_{\mathrm{ext}}\) become charged
+spectral invariants rather than separate primitive goals, and the absolute-scale burden is pushed
+to the common-refinement transport equalizer.
+
+\begin{theorem}[Charged absolute-scale underdetermination]
+Let
+\[
+E_e^{\mathrm{centered}}
+=
+\bigl(e_{\log,\mathrm{centered}},\mu_{\log,\mathrm{centered}},\tau_{\log,\mathrm{centered}}\bigr)
+\]
+be the centered charged log triple emitted from the charged source pair
+\((\eta_{\mathrm{ext}},\sigma_{\mathrm{ext}})\). Then for every \(c\in\mathbb R\),
+\[
+Y_e(c):=\exp(c)\,\mathrm{diag}\!\bigl(e^{E_e^{\mathrm{centered}}}\bigr)
+\]
+has the same charged spectral invariants
+\[
+\eta_{\mathrm{ext}},\qquad \sigma_{\mathrm{ext}},\qquad \gamma_{21},\qquad \gamma_{32},
+\]
+the same centered log vector, and the same ratio data. Only the absolute masses scale:
+\[
+(m_e,m_\mu,m_\tau)\longmapsto e^c\,(m_e,m_\mu,m_\tau).
+\]
+Hence the present charged OPH chain determines only the quotient class
+\[
+E_e^{\mathrm{centered}}\in \mathbb R^3/\langle(1,1,1)\rangle,
+\]
+not the absolute scalar \(g_e=e^c\).
+\end{theorem}
+
+The proof is immediate from the centered sum rule
+\[
+e_{\log,\mathrm{centered}}+\mu_{\log,\mathrm{centered}}+\tau_{\log,\mathrm{centered}}=0,
+\]
+which implies
+\[
+\det Y_e^{\mathrm{shape}}=1,
+\qquad
+\det Y_e = g_e^3.
+\]
+All emitted charged invariants depend only on differences of log entries, so a common shift in the
+\((1,1,1)\) direction leaves them unchanged. This is the exact reason the charged lane remains open:
+the present theorem surface fixes the centered shape, not the absolute normalization.
 
 One important code-level and mathematical cleanup is already complete: the charged absolute-scale
 lane is explicitly typed. The charged scale is a linear quantity
@@ -1474,6 +1545,12 @@ g_e^{\mathrm{cand}} = e^{\mu_{e,\mathrm{cand}}^{\mathrm{abs}}}=0.682281983802798
 \]
 This is a representation-consistency shell only, not a charged-mass theorem. It fixes the
 linear-vs-log coordinate discipline while leaving the true emitted value law for \(g_e\) open.
+The smallest honest theorem object beyond this shell is therefore not another ad hoc scalar fit for
+\(g_e\), but the determinant-normalization transport scalar \(\Delta_e^{\mathrm{abs}}\) emitted by
+the common-refinement transport equalizer, with
+\[
+g_e = g_{\mathrm{ch}}^{\mathrm{shared}}\,e^{-\Delta_e^{\mathrm{abs}}}.
+\]
 
 \paragraph{Strongest continuation bridge.}
 There is, however, a sharper continuation-level bridge than the paper had before.  Assume:
@@ -1526,17 +1603,53 @@ scale. The compare-only common scale required for exact absolute masses is
 \[
 g_e^\star = 0.04577885783568762.
 \]
+Equivalently, relative to the stored shared-budget seed
+\[
+g_{\mathrm{ch}}^{\mathrm{shared}} = 0.9231656602589082,
+\]
+the missing determinant-normalization transport scalar would have to take the compare-only value
+\[
+\Delta_e^{\mathrm{abs},\star}
+=
+\log\!\frac{g_{\mathrm{ch}}^{\mathrm{shared}}}{g_e^\star}
+=
+3.003986333402356.
+\]
 This identifies the remaining unresolved objects sharply: the shape bridge is almost solved on
 the continuation branch, but the theorem-grade derivation still lacks the charged operator
 \(\widehat C_e\), the common-refinement transport equalizer, and therefore the emitted
-\(\eta_{\mathrm{ext}}\), \(\sigma_{\mathrm{ext}}\), and \(g_e\) they would induce.
+\(\eta_{\mathrm{ext}}\), \(\sigma_{\mathrm{ext}}\), \(\Delta_e^{\mathrm{abs}}\), and \(g_e\)
+they would induce.
 
 \section{Neutrino Family Derivation}
 
 The neutrino derivation is the strongest positive continuation result after the Higgs/top critical stage.
-The flavor rows are still \(n/a\) because the proof-facing same-label pullback package and
-the shared charged-lepton left basis remain open. But once the centered same-label eta-class is
-given, the intrinsic neutrino mass-eigenstate branch is exact.
+The flavor rows are still \(n/a\), but the open boundary is no longer a missing downstream
+matrix product. On the current continuation branch, the same-label scalar certificate,
+the intrinsic mass-eigenstate bundle, the shared charged-lepton left basis, and the PMNS matrix
+all close numerically. The problem is instead that this emitted branch is quantitatively wrong:
+it does not land near the observed PMNS angles or mass splittings, so the honest remaining burden
+is branch repair rather than another missing readout shell.
+
+The live continuation branch emits
+\[
+\theta_{12}=0.7868015993137272,\qquad
+\theta_{23}=0.04431419146853922,\qquad
+\theta_{13}=0.043660528425690105,
+\]
+\[
+\delta_{\mathrm{PMNS}}=-2.6070435701394157,\qquad
+J=-4.91099474128153\times 10^{-4},
+\]
+and intrinsic splittings
+\[
+\Delta m_{21}^2=1.788985827699037\times 10^{-25}\ \mathrm{GeV}^2,
+\qquad
+\Delta m_{31}^2=1.0143949544256282\times 10^{-24}\ \mathrm{GeV}^2.
+\]
+These outputs are exact on the present continuation branch, but they are far from the physical
+oscillation pattern. The neutrino lane therefore remains unpromoted not because the downstream map
+is incomplete, but because the emitted branch is the wrong one.
 
 The current neutrino-only forward branch is also understood much more sharply than before. On the
 live same-label neutrino-only branch, the centered eta-class is exactly \(S_3\)-isotropic, so the
@@ -1818,16 +1931,23 @@ are not yet flavor-labeled OPH rows.
 
 \subsection{Honest remaining blockers}
 
-The exact remaining objects are:
+The honest remaining task is no longer ``emit PMNS from the shared basis.'' That downstream map is
+already exact on the current continuation branch. The real remaining burden is to repair the branch
+that feeds that map so the emitted neutrino observables move into the physical regime. Concretely,
+the continuation branch still needs:
 \begin{enumerate}
-\item the live same-label scalar certificate, preferably the full
-\((g_e,\omega_e)\) or \((g_e,d_e)\) package and at minimum the centered eta-class itself. At
-proof-facing level this is a five-dimensional continuous family modulo one common scale; at
-builder-facing level it compresses to the centered eta-class, i.e. two continuous degrees of
-freedom; and
-\item the shared charged-lepton left basis needed to form physical PMNS mixing. At artifact level
-this is a nine-parameter unitary object before phase quotients.
+\item a repaired flavor-side realized-arrow pullback whose same-label overlap/gap data do not
+collapse onto the present nonphysical anisotropy pattern;
+\item a repaired same-label scalar certificate, or equivalent repaired centered eta-class, derived
+from that improved flavor-side pullback; and
+\item if the flavor-side repair is not enough by itself, the smallest intrinsic-theta or
+Majorana-ansatz repair that breaks the present \(\theta_{12}\approx 45^\circ\) trap while keeping
+the intrinsic map exact.
 \end{enumerate}
+
+So the open neutrino problem is a branch-selection and branch-repair problem. The current emitted
+certificate and PMNS machinery are useful because they show exactly where the present continuation
+branch fails; they are not yet promotable neutrino predictions.
 
 \section{Hadrons, QCD, and the Emergence of Ordinary Matter}
 
