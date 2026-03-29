@@ -260,11 +260,12 @@ LANES: List[Dict[str, Any]] = [
             "generator. But the current D12 sheet is now a strict no-go for the physical CKM shell: same-sheet "
             "rephasing cannot change the CKM invariants, and the emitted angles are too small. So the exact next "
             "quark object is not a continuous mass scalar but one discrete relative sheet selector "
-            "`quark_relative_sheet_selector`; only after branch selection does a selected-branch mass-side scale law "
+            "`quark_relative_sheet_selector`; the current local surface is formally insufficient because it exposes only one "
+            "reference-sheet representative and no finite `sigma_ud_orbit`. Only after branch selection does a selected-branch mass-side scale law "
             "become relevant."
         ),
-        "tasks_text": "Open task: emit one discrete `quark_relative_sheet_selector` that leaves the wrong-branch D12 no-go class. After the physical branch is selected, derive a selected-branch intrinsic mass-side scale law independent of target masses and independent of CKM/CP. CKM/CP transport closure on the current D12 sheet is already explicit.",
-        "prediction_surface": "Local forward quark Yukawa surface on the public table, with CKM/CP transport closed on the current D12 sheet, the light-quark mass side reduced to the emitted one-parameter ray `D12_ud_mass_ray`, and the physical branch still waiting on one discrete relative-sheet selector. The top row is carried by D11, not this lane.",
+        "tasks_text": "Open task: emit a finite `sigma_ud_orbit` and then one discrete `quark_relative_sheet_selector` that leaves the wrong-branch D12 no-go class. After the physical branch is selected, derive a selected-branch intrinsic mass-side scale law independent of target masses and independent of CKM/CP. CKM/CP transport closure on the current D12 sheet is already explicit.",
+        "prediction_surface": "Local forward quark Yukawa surface on the public table, with CKM/CP transport closed on the current D12 sheet, the light-quark mass side reduced to the emitted one-parameter ray `D12_ud_mass_ray`, and the physical branch still waiting on an emitted finite `sigma_ud_orbit` plus one discrete relative-sheet selector. The top row is carried by D11, not this lane.",
         "particles": ["up_quark", "down_quark", "strange_quark", "charm_quark", "bottom_quark"],
         "tasks": [
             "papers.compact.e.29-derive-the-yukawa-excitation-dictionary",
@@ -275,7 +276,7 @@ LANES: List[Dict[str, Any]] = [
     {
         "key": "neutrinos",
         "title": "Neutrinos",
-        "summary": "The neutrino lane now includes the repaired weighted-cycle branch: PMNS and hierarchy are physically repaired, while one positive absolute normalization scalar remains open.",
+        "summary": "The neutrino lane now includes the repaired weighted-cycle branch: PMNS and hierarchy are physically repaired, while the absolute spectrum remains a one-parameter positive family until one normalization scalar is emitted.",
         "takeaway": "The mixing pattern is basically in the right place now. What is still missing is one final number that sets the overall absolute neutrino mass scale.",
         "logic": (
             "The lane derives m_star = v^2 / mu_u from the D10 core, builds the family-response tensor, the "
@@ -287,8 +288,8 @@ LANES: List[Dict[str, Any]] = [
             "lands in the physical PMNS window and the correct splitting hierarchy. The remaining open burden is only one "
             "positive absolute neutrino normalization scalar; the downstream PMNS and hierarchy map are otherwise closed."
         ),
-        "tasks_text": "Open task: emit the final positive absolute neutrino normalization scalar. The weighted-cycle repair already closes the PMNS pattern and hierarchy; public flavor rows stay hidden only because the absolute scale is not theorem-grade yet.",
-        "prediction_surface": "Repaired weighted-cycle neutrino branch with PMNS and hierarchy closure; public flavor rows remain hidden until the final positive normalization scalar is emitted.",
+        "tasks_text": "Open task: emit the final positive absolute neutrino normalization scalar. The weighted-cycle repair already closes the PMNS pattern and hierarchy; the remaining no-go is pure positive rescaling non-identifiability, so the branch currently emits only the one-parameter family `m_i = lambda_nu * mhat_i`, `Delta m^2_ij = lambda_nu^2 * Delta_hat_ij`.",
+        "prediction_surface": "Repaired weighted-cycle neutrino branch with PMNS and hierarchy closure; public flavor rows remain hidden until the final positive normalization scalar is emitted and the one-parameter absolute family collapses to one theorem-grade spectrum.",
         "particles": ["electron_neutrino", "muon_neutrino", "tau_neutrino"],
         "tasks": [
             "papers.compact.e.32-derive-neutrino-masses-from-screen-capacity-as-a-theorem",

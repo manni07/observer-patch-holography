@@ -100,7 +100,8 @@ QUARK_CONTINUATION_NOTE = (
     "with RMS log-mass error about `5.21e-05`, but those values remain compare-derived rather than OPH-emitted. "
     "The retained same-family numerical point on the emitted ray is sample-only: `t1_sample = ray_modulus = 0.6695617711471163`, giving `Delta_ud_overlap = 0.13391235422942327` and `eta_Q_centered = -0.018155152181872827`. "
     "But the current D12 sheet is now an explicit no-go for the physical CKM shell: same-sheet rephasing leaves CKM invariants frozen, and the emitted angles undershoot the comparison shell by factors about `29.68`, `34.02`, and `117.06`. "
-    "The exact next quark object is therefore one discrete `quark_relative_sheet_selector`; only after the physical branch is selected does the mass-side scale question remain, via a selected-branch intrinsic scale law independent of target masses and independent of CKM/CP."
+    "The current local surface is formally insufficient to identify that selector: only one reference-sheet representative is emitted, while no finite `Sigma_ud` orbit or `sigma -> CKM` evaluator is exposed. "
+    "So the exact next quark object is one discrete `quark_relative_sheet_selector`, and the minimal solver extension is an emitted finite `sigma_ud_orbit` carrying per-candidate CKM tuples. Only after the physical branch is selected does the mass-side scale question remain, via a selected-branch intrinsic scale law independent of target masses and independent of CKM/CP."
 )
 NEUTRINO_CONTINUATION_NOTE = (
     "No public value is emitted yet. The active neutrino path is `derive_neutrino_scale_anchor.py -> "
@@ -113,6 +114,7 @@ NEUTRINO_CONTINUATION_NOTE = (
     "The strongest honest repaired branch on disk is therefore the shared-basis weighted cycle lift: using the live same-label scalar certificate `(gap_e, overlap_sq_e)`, the live flavor cocycle invariants `gamma` and `eps`, and the live selector phases, it emits the repaired edge law `w_e = q_e^(1 + gamma + eps)` with diagonal load `chi = 1 + eps`. "
     "That repaired branch lands in the current PDG oscillation window at the dimensionless pattern level, with `theta12 = 33.9756 deg`, `theta23 = 49.7785 deg`, `theta13 = 8.64594 deg`, `delta = 307.818 deg`, and `J = -0.02652`; its predicted splitting ratio is `Delta m21^2 / Delta m32^2 = 0.0316024`. "
     "But one overall positive neutrino normalization remains open on the live theorem lane, so absolute neutrino masses and absolute `Delta m^2` values are still compare-only unless an external atmospheric anchor is supplied. "
+    "The sharpened no-go statement is that the repaired weighted-cycle branch emits only the one-parameter absolute family `m_i = lambda_nu * mhat_i`, `Delta m^2_ij = lambda_nu^2 * Delta_hat_ij`; all PMNS data and dimensionless hierarchy ratios are unchanged across that family, so no unique theorem-grade absolute spectrum exists yet. "
     "With the compare-only anchor `Delta m32^2 = 2.433e-3 eV^2`, the repaired branch gives `m = (0.01730, 0.01940, 0.05300) eV` and `Delta m21^2 = 7.689e-5 eV^2`. These rows therefore remain unpromoted as exact OPH mass predictions until that single normalization scalar is emitted."
 )
 HADRON_CONTINUATION_NOTE = (

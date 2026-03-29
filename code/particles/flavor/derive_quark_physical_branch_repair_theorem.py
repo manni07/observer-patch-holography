@@ -100,6 +100,22 @@ def main() -> int:
             "sheet_status": "single_local_reference_sheet_only",
             "local_solver_limit": "no_finite_relative_sheet_class_enumeration_exposed",
         },
+        "insufficiency_theorem": {
+            "id": "D12_relative_sheet_non_identifiability",
+            "statement": (
+                "From the presently emitted D12 quark-side data alone there is no sound function that can recover "
+                "the finite set Sigma_ud, the selector sigma_ud, or the selected-branch CKM invariants. The current "
+                "surface exposes only one evaluated reference-sheet representative, while same-sheet rephasing is "
+                "already known to leave the CKM invariants frozen."
+            ),
+            "proof_obstruction": [
+                "only one D12 reference-sheet representative is exposed",
+                "Sigma_ud is not exposed as a finite enumerable set",
+                "no relative-sheet evaluator sigma->CKM invariants is exposed",
+                "same-sheet rephasing cannot change CKM invariants",
+                "mass-side branch choice is excluded from CKM repair",
+            ],
+        },
         "comparison_shell": {
             "theta_12": TARGET_THETA_12,
             "theta_23": TARGET_THETA_23,
@@ -147,6 +163,28 @@ def main() -> int:
                 "secondary_tiebreaker": "J(sigma)",
             },
         },
+        "minimal_solver_extension": {
+            "id": "sigma_ud_orbit",
+            "definition": "full finite relative-sheet orbit over the present D12 reference representative",
+            "must_emit": "sigma_ud_orbit.elements = [{sigma_id, canonical_token, ckm}]",
+            "selection_rule_kind": "ckm_log_shell_loss",
+            "selection_rule": {
+                "loss_function": (
+                    "sum_a [log(theta_a(sigma) / theta_a_star)]^2 for a in {12,23,13}"
+                ),
+                "shell": {
+                    "theta_12": TARGET_THETA_12,
+                    "theta_23": TARGET_THETA_23,
+                    "theta_13": TARGET_THETA_13,
+                },
+                "tiebreak": [
+                    "abs_log_error_theta13",
+                    "abs_log_error_theta23",
+                    "abs_log_error_theta12",
+                    "canonical_sigma_id",
+                ],
+            },
+        },
         "relative_sheet_scan": {
             "status": "not_available_from_current_local_solver",
             "reason": (
@@ -158,6 +196,7 @@ def main() -> int:
         "notes": [
             "This artifact sharpens the quark CKM boundary: the current D12 sheet is transport-closed but wrong-branch.",
             "The exact next object is discrete rather than continuous: one relative up/down sheet selector sigma_ud.",
+            "The current surface is formally insufficient to identify sigma_ud; the minimal extension is a finite sigma_ud orbit with per-candidate CKM tuples.",
             "Mass-side scale fixing remains a separate issue after the physical branch is selected; no scalar t1 can repair CKM on the present sheet.",
         ],
     }

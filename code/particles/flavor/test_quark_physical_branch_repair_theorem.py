@@ -25,5 +25,7 @@ def test_quark_physical_branch_repair_theorem_marks_current_d12_sheet_as_no_go()
     assert payload["current_d12_sheet"]["quark_relative_sheet_selector"] is None
     assert payload["minimal_branch_shift_repair_theorem"]["must_emit"] == "quark_relative_sheet_selector"
     assert payload["relative_sheet_scan"]["status"] == "not_available_from_current_local_solver"
+    assert payload["insufficiency_theorem"]["id"] == "D12_relative_sheet_non_identifiability"
+    assert payload["minimal_solver_extension"]["id"] == "sigma_ud_orbit"
     assert payload["physical_shell_mismatch"]["undershoot_factors"]["theta_12"] > 1.0
     assert payload["current_sheet_invariants"]["jarlskog_fraction_of_max_allowed_by_current_angles"] > 0.9
