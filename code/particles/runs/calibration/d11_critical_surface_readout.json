@@ -23,7 +23,7 @@
     "pole_ratio_core": 1.06007492,
     "y_t_core_mt": 0.92046435
   },
-  "d10_source_artifact": "/Users/muellerberndt/Projects/oph-meta/particles/runs/calibration/d10_ew_observable_family.json",
+  "d10_source_artifact": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/calibration/d10_ew_observable_family.json",
   "diagnostic_required_to_current_refs": {
     "delta_lambda_mt": -0.00294158,
     "delta_mH_gev": -1.42263,
@@ -31,7 +31,7 @@
     "delta_y_t_mt": 0.01156247,
     "ref_mH_gev": 125.2,
     "ref_mt_pole_gev": 172.4,
-    "ref_surface": "/Users/muellerberndt/Projects/oph-meta/particles/RESULTS_STATUS.md"
+    "ref_surface": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/RESULTS_STATUS.md"
   },
   "exact_missing_object": "D11FixedRayWedgeVanishing",
   "exact_missing_object_scope": "legacy_diagnostic_sidecar_only",
@@ -54,7 +54,7 @@
     "wedge_value": -1.5051272943336635e-06
   },
   "forward_path_closed_by": "forward_seed_promotion_certificate",
-  "generated_utc": "2026-03-28T01:13:00Z",
+  "generated_utc": "2026-03-29T13:33:53Z",
   "jacobian": {
     "d_mH_d_lambda": 480.0,
     "d_mt_pole_d_y_t": 184.97
@@ -194,7 +194,7 @@
     "w_HT": -6.986677967422278e-06
   },
   "readout_vector_symbol": "Theta_D11_HT(mu_t) = (delta_y_t(mu_t), delta_lambda(mu_t))",
-  "results_status_surface": "/Users/muellerberndt/Projects/oph-meta/particles/RESULTS_STATUS.md",
+  "results_status_surface": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/RESULTS_STATUS.md",
   "transport_family": "sm_below_sync__mssm_like_gauge_above_sync",
   "upstream_missing_forward_artifact": null
 }

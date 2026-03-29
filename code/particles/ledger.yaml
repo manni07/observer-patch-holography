@@ -93,12 +93,12 @@ entries:
       ["papers.compact.e.31-derive-quark-textures-ckm-mixing-and-cp-from-overlap-defects"]
   - id: continuation.neutrinos.d6_estimate
     output_keys: ["m_nu_e", "m_nu_mu", "m_nu_tau", "rho_Lambda_1_4"]
-    label: "D6 capacity-level neutrino estimate"
+    label: "Repaired weighted-cycle neutrino continuation"
     tier: continuation
-    branch: D6
-    oph_derived_piece: "capacity input relation only"
+    branch: repair
+    oph_derived_piece: "same-label scalar certificate plus shared-basis weighted-cycle repair"
     borrowed_qft_piece: null
-    extra_ansatz: "simple epsilon hierarchy anchored at rho_Lambda^(1/4)"
+    extra_ansatz: "one positive absolute normalization scalar still open"
     blocked_by:
       ["papers.compact.e.32-derive-neutrino-masses-from-screen-capacity-as-a-theorem", "particles.e.32b-close-neutrino-splittings-and-mixing"]
   - id: open.neutrinos.full_sector

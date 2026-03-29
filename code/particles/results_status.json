@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-03-29T13:11:41Z",
+  "generated_utc": "2026-03-29T13:41:31Z",
   "inputs": {
     "P": 1.63094,
     "hadron_profile": "serious",
@@ -174,14 +174,14 @@
       "particle_id": "electron_neutrino",
       "prediction_display_gev": "n/a",
       "prediction_key": "m_nu_e",
-      "prediction_surface": "particles_gap",
+      "prediction_surface": "local_neutrino_repaired_branch_waiting_absolute_scale",
       "prediction_value_gev": null,
       "reference_display": "not directly measured",
       "reference_kind": "not_directly_measured",
       "reference_source_url": "https://pdg.lbl.gov/2025/reviews/contents_sports.html",
       "reference_value_gev": null,
       "status": "continuation",
-      "status_label": "D6 capacity-level neutrino estimate"
+      "status_label": "Repaired weighted-cycle neutrino continuation"
     },
     {
       "delta_display": "n/a",
@@ -191,14 +191,14 @@
       "particle_id": "muon_neutrino",
       "prediction_display_gev": "n/a",
       "prediction_key": "m_nu_mu",
-      "prediction_surface": "particles_gap",
+      "prediction_surface": "local_neutrino_repaired_branch_waiting_absolute_scale",
       "prediction_value_gev": null,
       "reference_display": "not directly measured",
       "reference_kind": "not_directly_measured",
       "reference_source_url": "https://pdg.lbl.gov/2025/reviews/contents_sports.html",
       "reference_value_gev": null,
       "status": "continuation",
-      "status_label": "D6 capacity-level neutrino estimate"
+      "status_label": "Repaired weighted-cycle neutrino continuation"
     },
     {
       "delta_display": "n/a",
@@ -208,14 +208,14 @@
       "particle_id": "tau_neutrino",
       "prediction_display_gev": "n/a",
       "prediction_key": "m_nu_tau",
-      "prediction_surface": "particles_gap",
+      "prediction_surface": "local_neutrino_repaired_branch_waiting_absolute_scale",
       "prediction_value_gev": null,
       "reference_display": "not directly measured",
       "reference_kind": "not_directly_measured",
       "reference_source_url": "https://pdg.lbl.gov/2025/reviews/contents_sports.html",
       "reference_value_gev": null,
       "status": "continuation",
-      "status_label": "D6 capacity-level neutrino estimate"
+      "status_label": "Repaired weighted-cycle neutrino continuation"
     },
     {
       "delta_display": "0.0001276635174 (+5.910e-02)",
@@ -327,6 +327,7 @@
       "d11_forward_seed": true,
       "hadrons_enabled": false,
       "neutrino_local_candidate": false,
+      "neutrino_repaired_branch": true,
       "quark_forward_candidate": true
     },
     "public_surface_kind": "particles_native_candidate_or_gap_surface",

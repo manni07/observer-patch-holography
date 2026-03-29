@@ -37,6 +37,7 @@ D10_SOURCE_TRANSPORT_READOUT = ROOT / "particles" / "runs" / "calibration" / "d1
 D11_FORWARD_SEED = ROOT / "particles" / "runs" / "calibration" / "d11_forward_seed.json"
 FORWARD_CHARGED_LEPTONS = ROOT / "particles" / "runs" / "leptons" / "forward_charged_leptons.json"
 FORWARD_NEUTRINO_BUNDLE = ROOT / "particles" / "runs" / "neutrino" / "forward_neutrino_closure_bundle.json"
+NEUTRINO_EXACT_BLOCKERS = ROOT / "particles" / "runs" / "neutrino" / "exact_blocking_items.json"
 PUBLIC_SURFACE_KIND = "particles_native_candidate_or_gap_surface"
 P_DEFAULT = 1.63094
 LOG_DIM_H_DEFAULT = 1.0e122
@@ -425,11 +426,22 @@ def _neutrino_public_candidate_allowed(bundle: Dict[str, Any]) -> bool:
     return bool(bundle.get("public_surface_candidate_allowed", False))
 
 
+def _neutrino_repaired_branch_waiting_absolute_scale(blockers: Dict[str, Any]) -> bool:
+    status = dict(blockers.get("live_continuation_branch_status", {}))
+    return (
+        status.get("status") == "physically_repaired_up_to_one_positive_scale"
+        and bool(status.get("same_label_scalar_certificate_present"))
+        and bool(status.get("shared_charged_left_basis_present"))
+        and bool(status.get("repair_artifact_present"))
+    )
+
+
 def build_surface_state(*, with_hadrons: bool) -> Dict[str, Any]:
     d10_active = False
     d11_active = False
     charged_active = False
     neutrino_active = False
+    neutrino_repaired_branch = False
     quark_active = False
 
     if D10_SOURCE_TRANSPORT_READOUT.exists():
@@ -447,6 +459,9 @@ def build_surface_state(*, with_hadrons: bool) -> Dict[str, Any]:
     if FORWARD_NEUTRINO_BUNDLE.exists():
         bundle = json.loads(FORWARD_NEUTRINO_BUNDLE.read_text(encoding="utf-8"))
         neutrino_active = _neutrino_public_candidate_allowed(bundle)
+    if NEUTRINO_EXACT_BLOCKERS.exists():
+        blockers = json.loads(NEUTRINO_EXACT_BLOCKERS.read_text(encoding="utf-8"))
+        neutrino_repaired_branch = _neutrino_repaired_branch_waiting_absolute_scale(blockers)
 
     if FORWARD_YUKAWAS.exists() and QUARK_SECTOR_MEAN_SPLIT.exists():
         forward = json.loads(FORWARD_YUKAWAS.read_text(encoding="utf-8"))
@@ -461,6 +476,7 @@ def build_surface_state(*, with_hadrons: bool) -> Dict[str, Any]:
             "d11_forward_seed": d11_active,
             "charged_local_candidate": charged_active,
             "neutrino_local_candidate": neutrino_active,
+            "neutrino_repaired_branch": neutrino_repaired_branch,
             "quark_forward_candidate": quark_active,
             "hadrons_enabled": with_hadrons,
         },
@@ -530,6 +546,8 @@ def prediction_surface_for_row(row_spec: Dict[str, Any], surface_state: Dict[str
         return "local_charged_public_candidate"
     if particle_id in {"electron_neutrino", "muon_neutrino", "tau_neutrino"} and active.get("neutrino_local_candidate"):
         return "local_neutrino_public_candidate"
+    if particle_id in {"electron_neutrino", "muon_neutrino", "tau_neutrino"} and active.get("neutrino_repaired_branch"):
+        return "local_neutrino_repaired_branch_waiting_absolute_scale"
     if particle_id in {
         "up_quark",
         "down_quark",
@@ -611,6 +629,7 @@ def render_markdown(
         f"`D11={surface_state['active_local_public_candidates']['d11_forward_seed']}` | "
         f"`charged={surface_state['active_local_public_candidates']['charged_local_candidate']}` | "
         f"`neutrinos={surface_state['active_local_public_candidates']['neutrino_local_candidate']}` | "
+        f"`neutrino_repaired={surface_state['active_local_public_candidates']['neutrino_repaired_branch']}` | "
         f"`quarks={surface_state['active_local_public_candidates']['quark_forward_candidate']}` | "
         f"`hadrons_enabled={surface_state['active_local_public_candidates']['hadrons_enabled']}`",
         "",

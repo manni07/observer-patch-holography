@@ -1,6 +1,6 @@
 # Particle Results Status
 
-Generated: `2026-03-29T13:11:41Z`
+Generated: `2026-03-29T13:41:31Z`
 
 Inputs: `P=1.63094` | `log_dim_H=1e+122` | `loops=4` | `with_hadrons=False` | `hadron_profile=suppressed`
 
@@ -8,7 +8,7 @@ Public Surface: `particles_native_candidate_or_gap_surface`
 
 Surface Policy: `local_candidate_or_gap_only`
 
-Active Local Public Candidates: `D10=True` | `D11=True` | `charged=False` | `neutrinos=False` | `quarks=True` | `hadrons_enabled=False`
+Active Local Public Candidates: `D10=True` | `D11=True` | `charged=False` | `neutrinos=False` | `neutrino_repaired=True` | `quarks=True` | `hadrons_enabled=False`
 
 This table is a `/particles`-native audit surface. If a sector has no live local public candidate yet, the value is reported as `n/a`; legacy fallback predictors are not used.
 

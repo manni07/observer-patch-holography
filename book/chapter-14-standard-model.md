@@ -547,7 +547,7 @@ The most important synchronization point for this chapter is that OPH does **not
 | Higgs/top stage | Secondary quantitative | Higgs boson and top quark are emitted on the closed one-scalar forward seed |
 | Quark family | Continuation | Continuation-level rows are emitted for up, down, strange, charm, and bottom; CKM/CP is closed on the current D12 sheet, but that sheet is a strict no-go for the physical quark branch, so the next object is a discrete relative-sheet selector and only then a mass-side scale law |
 | Charged leptons | Continuation gap | No promoted charged-lepton masses yet |
-| Flavor-labeled neutrinos | Continuation gap | No promoted flavor rows yet; the live continuation branch closes numerically but lands on the wrong PMNS/splitting pattern, so branch repair remains open |
+| Flavor-labeled neutrinos | Continuation gap | No promoted flavor rows yet; the repaired weighted-cycle branch already lands in the observed PMNS/hierarchy window, and the honest remaining blocker is one positive absolute normalization scalar before absolute masses and absolute \(\Delta m^2\) become theorem-grade |
 | Hadrons | Execution-bound | No paper-derived hadron masses yet; real production correlator dumps and production systematics are still required |
 
 ## 14.15 Why the Photon Is Inevitable

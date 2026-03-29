@@ -34,6 +34,19 @@ def test_d10_and_d11_public_candidate_policy_is_explicit() -> None:
     assert module._d11_public_seed_allowed(d11) is True
 
 
+def test_neutrino_repaired_branch_policy_is_explicit() -> None:
+    module = _load_module()
+    blockers = {
+        "live_continuation_branch_status": {
+            "status": "physically_repaired_up_to_one_positive_scale",
+            "same_label_scalar_certificate_present": True,
+            "shared_charged_left_basis_present": True,
+            "repair_artifact_present": True,
+        }
+    }
+    assert module._neutrino_repaired_branch_waiting_absolute_scale(blockers) is True
+
+
 def test_quark_public_forward_policy_uses_explicit_surface_gate() -> None:
     module = _load_module()
     forward = {
@@ -57,12 +70,37 @@ def test_surface_state_exposes_particles_native_policy_and_local_public_candidat
         "d11_forward_seed",
         "charged_local_candidate",
         "neutrino_local_candidate",
+        "neutrino_repaired_branch",
         "quark_forward_candidate",
         "hadrons_enabled",
     }
     assert active["charged_local_candidate"] is False
     assert active["neutrino_local_candidate"] is False
+    assert active["neutrino_repaired_branch"] is True
     assert active["hadrons_enabled"] is False
+
+
+def test_neutrino_rows_get_repaired_branch_surface_before_absolute_scale() -> None:
+    module = _load_module()
+    surface = module.prediction_surface_for_row(
+        {
+            "particle_id": "electron_neutrino",
+            "group": "Leptons",
+        },
+        {
+            "active_local_public_candidates": {
+                "d10_mass_pair": False,
+                "d11_forward_seed": False,
+                "charged_local_candidate": False,
+                "neutrino_local_candidate": False,
+                "neutrino_repaired_branch": True,
+                "quark_forward_candidate": False,
+                "hadrons_enabled": False,
+            }
+        },
+        with_hadrons=False,
+    )
+    assert surface == "local_neutrino_repaired_branch_waiting_absolute_scale"
 
 
 def test_top_note_uses_preserved_sidecar_value() -> None:

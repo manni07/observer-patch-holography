@@ -24,8 +24,8 @@
     }
   },
   "forward_path_closed": true,
-  "forward_seed_artifact": "/Users/muellerberndt/Projects/oph-meta/particles/runs/calibration/d11_forward_seed.json",
-  "generated_utc": "2026-03-28T06:44:43Z",
+  "forward_seed_artifact": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/calibration/d11_forward_seed.json",
+  "generated_utc": "2026-03-29T13:33:53Z",
   "mass_readout_consequence": {
     "mH_formula": "mH_core_gev + d_mH_d_lambda * delta_lambda_mt",
     "mH_gev": 125.21892206026347,
@@ -50,7 +50,7 @@
   },
   "sigma_D11_HT": 0.012495107198783639,
   "smallest_predictive_missing_object": null,
-  "source_forward_seed_artifact": "/Users/muellerberndt/Projects/oph-meta/particles/runs/calibration/d11_forward_seed.json",
+  "source_forward_seed_artifact": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/calibration/d11_forward_seed.json",
   "status": "closed",
   "theta_formula": {
     "delta_lambda_mt": "-(16/9) * sigma_D11_HT * lambda_core_mt",
