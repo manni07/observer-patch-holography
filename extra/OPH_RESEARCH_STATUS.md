@@ -103,7 +103,7 @@ That question is worth asking because the edge-sector weights already take the h
 
 ## Microphysics and Quantum Hardware
 
-One reason OPH is easier to take seriously today than it was a few years ago is that it now has a concrete microphysical reference architecture. The OPH Screen Microphysics Paper [5](#ref-5) spells out a finite gauge-register model with patch observables, overlap observables, typed readout packets, mismatch syndromes, repair instruments, record layers, and observer criteria. This is no longer just a philosophical sketch about observers and holography.
+OPH has a concrete microphysical reference architecture. The OPH Screen Microphysics Paper [5](#ref-5) spells out a finite gauge-register model with patch observables, overlap observables, typed readout packets, mismatch syndromes, repair instruments, record layers, and observer criteria. This is no longer just a philosophical sketch about observers and holography.
 
 That has opened the door to hardware-facing tests. The IBM benchmark bundle already contains reduced-sector runs on real quantum hardware, including recoverability benchmarks and exact-ratio tests in small abelian and nonabelian cases. These are early benchmarks, so one should keep the claims modest. Their importance is simpler than that. They show that OPH has become concrete enough to formulate microphysical questions that can actually be simulated and measured.
 
