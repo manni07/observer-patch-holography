@@ -339,9 +339,9 @@ Let's trace the logic explicitly.
 3. Entanglement patterns on the screen determine both entropy and geometry
 4. The consistency process that makes observations agree costs energy and generates entropy
 5. The arrow of time is a necessary condition for observers to exist at all
-6. The Past principle is not an arbitrary input; it's selected by consistency constraints
+6. The Past principle may be structurally favored by consistency constraints, even though the specific low-entropy beginning is not yet derived from OPH alone
 
-The universe had to start in a special state for any of this to work. But this isn't an unexplained miracle. Consistency constraints require observers, observers require records, records require entropy gradients, and entropy gradients require a low-entropy past. The model doesn't just explain why the Past principle is necessary; it shows the Past principle is itself a consequence of observer-based consistency.
+The universe had to start in a special state for any of this to work. But this need not be left as an unexplained miracle. Consistency constraints require observers, observers require records, records require entropy gradients, and entropy gradients require a low-entropy past. OPH therefore offers a consistency-based reason to view the Past principle as structurally motivated, even though the exact initial condition is not yet derived from the framework alone.
 
 ## 4.11 Summary: The Entropy Budget
 
@@ -349,7 +349,7 @@ The universe had to start in a special state for any of this to work. But this i
 
 2. **The Second Law is statistics**: High-entropy states dominate because there are more of them.
 
-3. **The arrow of time is cosmological**: It traces to the low-entropy Big Bang-but this isn't arbitrary. Consistency constraints select for low-entropy beginnings because observers need entropy gradients to form records.
+3. **The arrow of time is cosmological**: It traces to the low-entropy Big Bang. OPH offers a consistency-based reason to regard such low-entropy beginnings as structurally important because observers need entropy gradients to form records.
 
 4. **Information is physical**: Landauer's principle says erasing a bit costs energy.
 
