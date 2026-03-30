@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-30T08:50:20.298362Z",
+  "generated_at": "2026-03-30T08:56:01.235584Z",
   "papers": {
     "deriving_the_particle_zoo_from_observer_consistency": {
       "pdf_path": "paper/deriving_the_particle_zoo_from_observer_consistency.pdf",
-      "sha256": "8d252bde490792d5c197b5c9c4b2563c613621dd47c8b6e779cd42f663897b0f",
-      "size_bytes": 246537
+      "sha256": "33ef75672bd7b2d5e4d9ac5cb50387450eaa7e38291ddb334b8fdcb0f5841f28",
+      "size_bytes": 246542
     },
     "observers_are_all_you_need": {
       "pdf_path": "paper/observers_are_all_you_need.pdf",
