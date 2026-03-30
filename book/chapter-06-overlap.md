@@ -419,7 +419,7 @@ The topology of this graph determines what kind of global structure can emerge. 
 
 The overlap consistency framework suggests several signatures and checks:
 
-**1. Bell inequality violations**: The model predicts that quantum systems violate Bell inequalities up to the Tsirelson bound ($S = 2\sqrt{2}$). This has been confirmed in hundreds of experiments, culminating in the 2015 loophole-free tests. Any violation *exceeding* the Tsirelson bound identifies a measurement contradiction with quantum mechanics.
+**1. Bell inequality violations**: The model predicts that suitable entangled quantum systems can violate Bell inequalities, but never beyond the Tsirelson bound ($S = 2\sqrt{2}$). This has been confirmed in hundreds of experiments, culminating in the 2015 loophole-free tests. Any violation *exceeding* the Tsirelson bound identifies a measurement contradiction with quantum mechanics.
 
 **2. Markov property on separating regions**: If patches A and C are separated by patch B (meaning any correlation between A and C must pass through B), then the conditional mutual information I(A:C|B) should be small. Small conditional mutual information is a natural structured-state signature to inspect. In OPH-motivated numerical constructions it is often small compared with random-state baselines: structured states obeying our axioms show I(A:C|B) ≈ 0, while random states show I(A:C|B) > 0.
 
