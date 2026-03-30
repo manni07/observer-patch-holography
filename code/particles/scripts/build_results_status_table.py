@@ -139,6 +139,7 @@ NEUTRINO_CONTINUATION_NOTE = (
     "But one overall positive neutrino normalization remains open on the live theorem lane, so absolute neutrino masses and absolute `Delta m^2` values are still compare-only unless an external atmospheric anchor is supplied. "
     "The sharpened no-go statement is that the repaired weighted-cycle branch emits only the one-parameter absolute family `m_i = lambda_nu * mhat_i`, `Delta m^2_ij = lambda_nu^2 * Delta_hat_ij`; all PMNS data and dimensionless hierarchy ratios are unchanged across that family, so no unique theorem-grade absolute spectrum exists yet. "
     "A compare-only single-scale fit sharpens that boundary further: fitting `lambda_nu` against PDG 2025 central splittings gives a good one-parameter oscillation match, but exact simultaneous central-value closure is impossible on the current repaired branch because the fixed ratio `Delta_hat_21 / Delta_hat_32 = 0.0316024` sits about `2.87%` above the representative PDG central ratio. The weighted least-squares fit gives `lambda_nu = 1.78358`, `m = (0.01730, 0.01939, 0.05299) eV`, with residuals about `+1.00 sigma` on `Delta m21^2` and `-0.32 sigma` on `Delta m32^2`. "
+    "A separate compare-only law-space audit records stronger candidate exponent laws, including a midpoint-normalized candidate that lands essentially on the representative central splitting ratio while keeping the PMNS angles in the physical window, but those candidates remain unpromoted until their coefficients are emitted by the theorem surface rather than inferred from comparison. "
     "With the compare-only anchor `Delta m32^2 = 2.433e-3 eV^2`, the repaired branch gives `m = (0.01730, 0.01940, 0.05300) eV` and `Delta m21^2 = 7.689e-5 eV^2`. These rows therefore remain unpromoted as exact OPH mass predictions until that single normalization scalar is emitted."
 )
 HADRON_CONTINUATION_NOTE = (
@@ -154,8 +155,13 @@ HADRON_CONTINUATION_NOTE = (
     "`backend_correlator_dump.production.json`."
 )
 UV_BW_PREMISE_BOUNDARY = {
-    "status": "open_final_no_go_on_current_corpus",
-    "remaining_object": "controlled_bw_scaling_branch_theorem",
+    "status": "open_with_implementable_two_step_extension_chain",
+    "remaining_object": "scaling_limit_cap_pair_extraction_theorem",
+    "follow_on_object": "ordered_null_cut_pair_rigidity_theorem",
+    "remaining_chain": [
+        "scaling_limit_cap_pair_extraction_theorem",
+        "ordered_null_cut_pair_rigidity_theorem",
+    ],
     "current_internalized_scope": (
         "Axiom-3 plus the fixed-cutoff collar/MaxEnt package internalize local Gibbs form, quasi-local propagation, "
         "endpoint-Lipschitz interval control, and refinement-stable branch persistence."
@@ -166,13 +172,17 @@ UV_BW_PREMISE_BOUNDARY = {
         "or that it lands in the Bisognano-Wichmann geometric modular class from internal premises alone; the limit cap algebra may be non-type-I."
     ),
     "statement": (
-        "For each round cap C on the realized refinement-stable Axiom-3 branch, derive a controlled scaling-limit cap pair "
-        "(A_infty(C), omega_infty^C) with vanishing carried collar errors and geometric modular automorphism group "
-        "sigma_t^{omega_infty^C} = alpha_{lambda_C(2 pi t)}, without assuming type-I survival or a surviving cap density matrix."
+        "Next exact object: for each round cap C on the realized refinement-stable Axiom-3 branch, extract a controlled scaling-limit cap pair "
+        "(A_infty(C), omega_infty^C) as a local weak-* limit of transported cap marginals, with vanishing carried collar errors and without assuming "
+        "type-I survival or a surviving cap density matrix."
     ),
-    "candidate_extension_status": "unpromoted_extension_candidate",
+    "follow_on_statement": (
+        "Follow-on exact object: on any extracted scaling-limit round-cap pair, ordered null cut-pair data rigidify the residual cap-preserving conformal "
+        "freedom to the unique BW hyperbolic subgroup lambda_C(s), after which the modular KMS normalization fixes s = 2 pi t."
+    ),
+    "candidate_extension_status": "two_step_chain_identified_unproved",
     "candidate_extension_route": (
-        "Combine scaling-limit extraction of cap pairs by local weak-* compactness on transported cap marginals with ordered null cut-pair rigidity that collapses the residual cap-preserving conformal freedom to the unique BW hyperbolic subgroup."
+        "Step 1: scaling-limit cap-pair extraction by local weak-* compactness on transported cap marginals. Step 2: ordered null cut-pair rigidity that collapses the residual cap-preserving conformal freedom to the unique BW hyperbolic subgroup."
     ),
     "candidate_extension_target": "sigma_t^{omega_infty^C} = alpha_{lambda_C(2 pi t)}",
 }
@@ -881,10 +891,13 @@ def render_markdown(
                 "## Premise Boundaries",
                 "",
                 f"- `uv_bw_internalization`: `{uv_boundary['status']}`",
-                f"- Remaining object: `{uv_boundary['remaining_object']}`",
+                f"- Next exact object: `{uv_boundary['remaining_object']}`",
+                f"- Follow-on object: `{uv_boundary['follow_on_object']}`",
+                f"- Remaining chain: `{uv_boundary['remaining_chain'][0]}` -> `{uv_boundary['remaining_chain'][1]}`",
                 f"- Internalized scope: {uv_boundary['current_internalized_scope']}",
                 f"- Why still open: {uv_boundary['reason_current_corpus_fails']}",
                 f"- Exact theorem object: {uv_boundary['statement']}",
+                f"- Follow-on theorem object: {uv_boundary['follow_on_statement']}",
                 f"- Candidate extension status: `{uv_boundary['candidate_extension_status']}`",
                 f"- Candidate extension route: {uv_boundary['candidate_extension_route']}",
                 f"- Candidate extension target: `{uv_boundary['candidate_extension_target']}`",

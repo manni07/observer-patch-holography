@@ -25,6 +25,7 @@ CHARGED_D12_CONTINUATION_JSON = ROOT / "particles" / "runs" / "leptons" / "charg
 ABSOLUTE_SCALE_GAP_IDENTITY_JSON = ROOT / "particles" / "runs" / "leptons" / "charged_absolute_scale_transport_gap_identity.json"
 ABSOLUTE_SCALE_UNDERDETERMINATION_JSON = ROOT / "particles" / "runs" / "leptons" / "charged_absolute_scale_underdetermination_theorem.json"
 GENERATION_BUNDLE_JSON = ROOT / "particles" / "runs" / "flavor" / "generation_bundle_branch_generator.json"
+END_TO_END_IMPOSSIBILITY_JSON = ROOT / "particles" / "runs" / "leptons" / "charged_end_to_end_impossibility_theorem.json"
 DEFAULT_OUT = ROOT / "particles" / "runs" / "leptons" / "lepton_current_family_exactness_audit.json"
 
 
@@ -57,6 +58,7 @@ def main() -> int:
     parser.add_argument("--absolute-scale-gap-identity", default=str(ABSOLUTE_SCALE_GAP_IDENTITY_JSON))
     parser.add_argument("--absolute-scale-underdetermination", default=str(ABSOLUTE_SCALE_UNDERDETERMINATION_JSON))
     parser.add_argument("--generation-bundle", default=str(GENERATION_BUNDLE_JSON))
+    parser.add_argument("--end-to-end-impossibility", default=str(END_TO_END_IMPOSSIBILITY_JSON))
     parser.add_argument("--output", default=str(DEFAULT_OUT))
     args = parser.parse_args()
 
@@ -127,6 +129,12 @@ def main() -> int:
     generation_bundle = (
         json.loads(generation_bundle_path.read_text(encoding="utf-8"))
         if generation_bundle_path.exists()
+        else None
+    )
+    end_to_end_impossibility_path = Path(args.end_to_end_impossibility)
+    end_to_end_impossibility = (
+        json.loads(end_to_end_impossibility_path.read_text(encoding="utf-8"))
+        if end_to_end_impossibility_path.exists()
         else None
     )
 
@@ -362,6 +370,13 @@ def main() -> int:
             "compare_only_delta_e_abs_star": absolute_scale_underdetermination.get("compare_only_continuation_target", {}).get("delta_e_abs_star"),
             "hard_reject": absolute_scale_underdetermination.get("hard_reject"),
             "honest_missing_transport_scalar": absolute_scale_underdetermination.get("minimal_new_theorem", {}).get("required_new_scalar"),
+        },
+        "end_to_end_closure_decision": None if end_to_end_impossibility is None else {
+            "artifact": end_to_end_impossibility.get("artifact"),
+            "verdict": end_to_end_impossibility.get("verdict"),
+            "closure_now": end_to_end_impossibility.get("closure_now"),
+            "exact_irreducible_chain": end_to_end_impossibility.get("exact_irreducible_chain"),
+            "theorem_forbid_emit_now": end_to_end_impossibility.get("theorem_forbid_emit_now"),
         },
         "charged_sector_response_operator_candidate": None if generation_bundle is None else {
             "name": generation_bundle.get("charged_sector_response_operator_candidate", {}).get("name", "C_hat_e^{cand}"),

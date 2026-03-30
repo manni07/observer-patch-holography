@@ -883,6 +883,16 @@ stages:
             "particles.e.32b-close-neutrino-splittings-and-mixing",
             "particles.neutrino.33-record-single-scale-central-value-mismatch"
           ]
+      - id: particles.neutrino.35-add-dimensionless-law-candidate-audit
+        title: "Record compare-only candidate weighted-cycle laws for the repaired dimensionless neutrino branch"
+        status: completed
+        owner_lane: local_code
+        depends_on: ["particles.neutrino.34-resolve-fixed-hierarchy-ratio-mismatch-beyond-lambda-nu"]
+      - id: particles.neutrino.36-derive-or-refute-midpoint-normalized-weighted-cycle-law
+        title: "Derive or refute the midpoint-normalized weighted-cycle exponent law beneath the repaired neutrino branch"
+        status: in_progress
+        owner_lane: local_code
+        depends_on: ["particles.neutrino.35-add-dimensionless-law-candidate-audit"]
   - id: stage-6
     title: "Hadron branch (deferred, execution-bound)"
     status: deferred

@@ -300,6 +300,7 @@ def main() -> int:
         ),
         "notes": [
             "The repaired weighted-cycle branch closes PMNS angles and the neutrino splitting hierarchy from live OPH artifacts.",
+            "Sharper compare-only law-space audits can be used diagnostically, but they are not promoted unless their coefficients are emitted by the live corpus rather than inferred from comparison.",
             "The theorem-grade repaired branch is scale-free: it emits PMNS observables, J, the hierarchy ratio, and one symbolic positive absolute family parameterized by lambda_nu > 0.",
             "Absolute neutrino masses and absolute delta m^2 values still require one overall positive normalization; the atmospheric-anchored numbers are hard-separated compare-only outputs.",
             "This artifact supersedes the old isotropic continuation branch as the strongest honest neutrino branch on disk.",

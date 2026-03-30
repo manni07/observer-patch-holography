@@ -271,6 +271,32 @@
     "same_support_transverse_coeff_closed": true,
     "smallest_constructive_missing_object": "oph_charged_sector_local_minimal_source_support_extension_emitter"
   },
+  "end_to_end_closure_decision": {
+    "artifact": "oph_charged_end_to_end_impossibility_theorem",
+    "closure_now": false,
+    "exact_irreducible_chain": [
+      {
+        "effect_on_fill": "theorem_grade_C_hat_e",
+        "id": "oph_generation_bundle_branch_generator_splitting",
+        "smallest_missing_clause": "compression_descendant_commutator_vanishes_or_is_uniformly_quadratic_small_after_central_split"
+      },
+      {
+        "effect_on_fill": "g_e_Delta_e_abs_and_public_charged_masses",
+        "id": "charged_absolute_anchor_A_ch",
+        "required_contract": "A_ch(logm + c*(1,1,1)) = A_ch(logm) + c"
+      }
+    ],
+    "theorem_forbid_emit_now": [
+      "theorem_grade_C_hat_e",
+      "A_ch",
+      "g_e",
+      "Delta_e_abs",
+      "m_e",
+      "m_mu",
+      "m_tau"
+    ],
+    "verdict": "no_current_corpus_end_to_end_closure"
+  },
   "exact_waiting_set": {
     "mandatory_package_a": {
       "blocked_candidate_object": "C_hat_e^{cand}",
@@ -299,7 +325,7 @@
       "summary": "Retain a charged holonomy bridge only if the older delta = 2/9 D12 benchmark is kept as a theorem-grade bridge instead of a diagnostic continuation."
     }
   },
-  "generated_utc": "2026-03-30T00:40:27Z",
+  "generated_utc": "2026-03-30T06:11:57Z",
   "notes": [
     "The current charged-lepton builder now exposes the two-scalar ordered-gap family in formula form plus one common shift.",
     "A common shift rescales all three masses together and cannot fix a large hierarchy mismatch.",

@@ -19,6 +19,7 @@ PAIR_READBACK_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_sector_l
 ENDPOINT_RATIO_BREAKER_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_sector_local_support_extension_endpoint_ratio_breaker.py"
 ABSOLUTE_SCALE_GAP_IDENTITY_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_absolute_scale_transport_gap_identity.py"
 ABSOLUTE_SCALE_UNDERDETERMINATION_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_absolute_scale_underdetermination_theorem.py"
+END_TO_END_IMPOSSIBILITY_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_end_to_end_impossibility_theorem.py"
 AUDIT_SCRIPT = ROOT / "particles" / "leptons" / "derive_lepton_current_family_exactness_audit.py"
 OUTPUT = ROOT / "particles" / "runs" / "leptons" / "lepton_current_family_exactness_audit.json"
 
@@ -33,6 +34,7 @@ def test_lepton_exactness_audit_identifies_common_shift_as_insufficient() -> Non
     subprocess.run([sys.executable, str(ENDPOINT_RATIO_BREAKER_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(ABSOLUTE_SCALE_GAP_IDENTITY_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(ABSOLUTE_SCALE_UNDERDETERMINATION_SCRIPT)], check=True, cwd=ROOT)
+    subprocess.run([sys.executable, str(END_TO_END_IMPOSSIBILITY_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(AUDIT_SCRIPT)], check=True, cwd=ROOT)
 
     payload = json.loads(OUTPUT.read_text(encoding="utf-8"))
@@ -61,6 +63,9 @@ def test_lepton_exactness_audit_identifies_common_shift_as_insufficient() -> Non
     assert payload["absolute_scale_closure_status"]["charged_absolute_equalizer_status"] == "NO_GO_COMMON_SHIFT"
     assert payload["absolute_scale_closure_status"]["honest_missing_transport_scalar"] == "A_ch"
     assert payload["absolute_scale_closure_status"]["hard_reject"]["g_e"] == 0.6822819838027987
+    assert payload["end_to_end_closure_decision"]["artifact"] == "oph_charged_end_to_end_impossibility_theorem"
+    assert payload["end_to_end_closure_decision"]["verdict"] == "no_current_corpus_end_to_end_closure"
+    assert payload["end_to_end_closure_decision"]["closure_now"] is False
     assert payload["charged_sector_response_operator_candidate"]["name"] == "C_hat_e^{cand}"
     assert payload["charged_sector_response_operator_candidate"]["smallest_missing_clause"] == "compression_descendant_commutator_vanishes_or_is_uniformly_quadratic_small_after_central_split"
     assert payload["charged_sector_response_operator_candidate"]["latent_in_flavor_chain"] is True

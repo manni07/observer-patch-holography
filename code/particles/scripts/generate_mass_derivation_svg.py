@@ -285,7 +285,10 @@ LANES: List[Dict[str, Any]] = [
             "bundle. The old selector-law branch is S3-isotropic and is now explicitly ruled out for the physical "
             "atmospheric scale by the exact cap `max |Delta m^2| <= 8 a rho`. The repaired live branch instead uses the "
             "same-label scalar certificate together with the flavor cocycle invariants `gamma` and `eps` to emit a "
-            "weighted-cycle law `w_e = q_e^(1 + gamma + eps)` with diagonal load `chi = 1 + eps`. That repaired branch "
+            "weighted-cycle law `w_e = q_e^(1 + gamma + eps/(1+eps)) = q_e^(1 + gamma + eps/chi)` with diagonal load "
+            "`chi = 1 + eps`. This is the promoted minimal replacement because the raw defect/gap ratio is already "
+            "carried by the diagonal load, so the exponent uses the bounded defect share instead of counting the raw "
+            "defect twice. That repaired branch "
             "lands in the physical PMNS window and the correct splitting hierarchy. No hidden discrete branch remains on that repaired lane; the remaining open burden is only one "
             "positive absolute neutrino normalization scalar, so the downstream PMNS and hierarchy map are otherwise closed."
         ),

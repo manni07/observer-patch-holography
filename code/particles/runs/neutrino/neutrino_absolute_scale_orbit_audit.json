@@ -4,20 +4,20 @@
     "current_compare_only_anchor": {
       "adapter_formula": "lambda_nu_cmp = sqrt(Delta m32^2_anchor / Delta_hat_32)",
       "adapter_status": "hard_separated_compare_only_adapter",
-      "delta_m21_sq_eV2": 7.688870300464483e-05,
-      "delta_m31_sq_eV2": 0.0025098887030046446,
+      "delta_m21_sq_eV2": 7.509357690325038e-05,
+      "delta_m31_sq_eV2": 0.0025080935769032503,
       "delta_m32_sq_eV2": 0.002433,
       "delta_m32_sq_input_eV2": 0.002433,
-      "lambda_nu_cmp": 1.784113126943906,
-      "m0": 1.784113126943906,
+      "lambda_nu_cmp": 1.7322048288587917,
+      "m0": 1.7322048288587917,
       "masses_eV": [
-        0.0173038239577873,
-        0.01939873775704849,
-        0.05300293413167556
+        0.01741657965275618,
+        0.019453298530173517,
+        0.05302292734001067
       ],
       "normalization_kind": "atmospheric_anchor",
       "status": "compare_only",
-      "sum_masses_eV": 0.08970549584651136
+      "sum_masses_eV": 0.08989280552294036
     },
     "external_anchor_disallowed": {
       "name": "atmospheric_delta_m32_sq",
@@ -29,7 +29,7 @@
       "forbidden_feedback": "compare_only_anchor_must_not_feed_back_into_theorem_state_or_lambda_nu_emission"
     }
   },
-  "generated_utc": "2026-03-30T05:00:54Z",
+  "generated_utc": "2026-03-30T06:15:20Z",
   "next_breaking_contract": "one_OPH_theorem_fixing_lambda_nu_from_an_internal_dimensionful_invariant_without_oscillation_data",
   "no_hidden_discrete_branch": {
     "closed_discrete_witnesses": [
@@ -111,20 +111,20 @@
       "compare_only_atmospheric_anchor": {
         "adapter_formula": "lambda_nu_cmp = sqrt(Delta m32^2_anchor / Delta_hat_32)",
         "adapter_status": "hard_separated_compare_only_adapter",
-        "delta_m21_sq_eV2": 7.688870300464483e-05,
-        "delta_m31_sq_eV2": 0.0025098887030046446,
+        "delta_m21_sq_eV2": 7.509357690325038e-05,
+        "delta_m31_sq_eV2": 0.0025080935769032503,
         "delta_m32_sq_eV2": 0.002433,
         "delta_m32_sq_input_eV2": 0.002433,
-        "lambda_nu_cmp": 1.784113126943906,
-        "m0": 1.784113126943906,
+        "lambda_nu_cmp": 1.7322048288587917,
+        "m0": 1.7322048288587917,
         "masses_eV": [
-          0.0173038239577873,
-          0.01939873775704849,
-          0.05300293413167556
+          0.01741657965275618,
+          0.019453298530173517,
+          0.05302292734001067
         ],
         "normalization_kind": "atmospheric_anchor",
         "status": "compare_only",
-        "sum_masses_eV": 0.08970549584651136
+        "sum_masses_eV": 0.08989280552294036
       },
       "exact_blockers": [
         {
