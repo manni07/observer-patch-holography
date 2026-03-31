@@ -204,13 +204,13 @@ This is a deep shift in perspective. Instead of thinking about space as a fixed 
 
 ## 3.6 Why a Sphere?
 
-The screen is always (approximately) spherical. This is not an arbitrary choice-it follows from causality.
+In the symmetric cases used to motivate this construction, the screen is naturally modeled as (approximately) spherical. This is not an arbitrary choice-it follows from causal light-cone geometry in those cases.
 
 Light travels at the same speed in all directions. If you stand at a point and wait, the light that can reach you from a time $t$ ago forms a sphere of radius $ct$ around you.
 
 Your past light cone-the set of events that could have influenced you-has spherical cross-sections. Your future light cone also has spherical cross-sections.
 
-The sphere is a consequence of the geometry of causality.
+In those symmetric light-cone constructions, the sphere is a consequence of the geometry of causality.
 
 ### The Cosmic Microwave Background
 
