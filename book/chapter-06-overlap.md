@@ -80,7 +80,7 @@ This means one of Einstein's assumptions must be wrong:
 1. **Locality**: Distant events can't influence each other faster than light
 2. **Realism**: Particles have definite properties even when not measured
 
-Many physicists read the Bell results as strong pressure against naive local realism, but the exact interpretive lesson remains contested. The alternative-accepting faster-than-light influences-would wreck the causal structure of the universe.
+Many physicists read the Bell results as strong pressure against naive local realism, but the exact interpretive lesson remains contested. The alternative is to accept a deeper nonlocal structure or preferred causal bookkeeping, which many physicists regard as a high explanatory cost.
 
 **This is the hint**: Quantum correlations exceed what any local hidden variable theory permits. The intuitive picture of pre-existing properties carried from a common past is experimentally contradicted.
 
