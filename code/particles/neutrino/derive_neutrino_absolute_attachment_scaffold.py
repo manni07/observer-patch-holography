@@ -50,6 +50,8 @@ def build_artifact(bridge: dict[str, Any], bridge_candidate: dict[str, Any], the
             "closed_normalizer_artifact": bridge_candidate.get("closed_normalizer_artifact"),
             "exact_next_theorem_object": bridge_candidate.get("exact_next_theorem_object"),
             "strictly_smaller_missing_clause": bridge_candidate.get("strictly_smaller_missing_clause"),
+            "exact_residual_moduli_space": "R_{>0}",
+            "one_additional_positive_bridge_invariant_is_necessary_and_sufficient": True,
         },
         "extension_contract": {
             "input_objects": [
@@ -79,6 +81,10 @@ def build_artifact(bridge: dict[str, Any], bridge_candidate: dict[str, Any], the
             "D_nu_formula": theorem_object["theorem_object"]["D_nu_formula"],
             "p_nu_formula": theorem_object["theorem_object"]["p_nu_formula"],
         },
+        "notes": [
+            "The residual absolute ambiguity above the closed normalizer is exactly the positive rescaling orbit.",
+            "The current corpus therefore needs one and only one positive bridge invariant above qbar_e before lambda_nu can be emitted theorem-grade.",
+        ],
     }
 
 

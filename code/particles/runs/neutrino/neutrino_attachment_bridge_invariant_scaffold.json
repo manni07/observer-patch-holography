@@ -13,12 +13,18 @@
     ]
   },
   "exact_missing_object": "oph_neutrino_attachment_bridge_invariant",
-  "generated_utc": "2026-03-30T23:44:14Z",
+  "exact_residual_moduli_space": "R_{>0}",
+  "generated_utc": "2026-03-31T02:21:50Z",
+  "immediate_theorem_gate": null,
+  "no_hidden_discrete_branch": true,
   "notes": [
     "The normalized same-label overlap-defect weight section is already emitted below this object.",
-    "This scaffold isolates the remaining positive scalar attachment content above qbar_e and below lambda_nu."
+    "This scaffold isolates the remaining positive scalar attachment content above qbar_e and below lambda_nu.",
+    "The remaining residual quotient is exactly one-dimensional, so there is no second hidden continuous object and no hidden discrete neutrino branch on this lane."
   ],
+  "one_additional_positive_bridge_invariant_is_necessary_and_sufficient": true,
   "public_promotion_allowed": false,
+  "residual_attachment_quotient_theorem": "After fixing the closed weighted-cycle scale-free branch, the closed PMNS observables, the scale-free masses/splittings, the D10 amplitude anchor m_star, and the closed normalized same-label overlap-defect weight section qbar_e, the remaining absolute family is exactly m_i = lambda_nu * mhat_i and Delta m^2_ij = lambda_nu^2 * Delta_hat_ij with lambda_nu > 0.",
   "residual_invariant_symbol": "I_nu",
   "status": "minimal_constructive_extension"
 }

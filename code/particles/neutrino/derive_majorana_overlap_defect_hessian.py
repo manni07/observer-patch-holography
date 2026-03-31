@@ -94,12 +94,12 @@ def main() -> int:
         "isotropic_branch_status": "local_quadratic_germ_closed",
         "nonisotropic_formula_status": "open",
         "proof_status": "local_quadratic_germ_closed",
-        "oph_origin_status": "missing_scalar_evaluator",
-        "upstream_missing_object": "oph_majorana_overlap_defect_scalar_evaluator",
+        "oph_origin_status": "closed_on_current_isotropic_branch",
+        "upstream_missing_object": "oph_neutrino_attachment_bridge_invariant",
         "primitive_metric_source": "oph_overlap_defect_candidate",
         "notes": [
             "This artifact now records the local quadratic action-germ/Hessian class on the affine Majorana lift.",
-            "The remaining OPH-only burden is the intrinsic scalar evaluator that fixes the exact scale and finite-angle/nonisotropic continuation.",
+            "On the current isotropic branch the centered edge-norm theorem closes the finite-angle scalar side; the remaining OPH-only burden is the positive attachment bridge invariant above the closed normalizer, together with any future nonisotropic continuation.",
         ],
     }
 

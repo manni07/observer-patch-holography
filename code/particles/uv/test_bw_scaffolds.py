@@ -33,7 +33,11 @@ def test_scaling_limit_cap_pair_extraction_scaffold() -> None:
     assert payload["exact_missing_object"] == "scaling_limit_cap_pair_extraction"
     assert payload["precise_missing_object_name"] == "canonical_scaling_cap_pair_realization_from_transported_cap_marginals"
     assert payload["theorem_contract_name"] == "conditional_scaling_limit_cap_pair_extraction_theorem"
-    assert "projectively_compatible_transported_cap_marginal_family" in payload["missing_input_witnesses"]
+    assert "projectively_compatible_transported_cap_marginal_family" in payload["fills_contract_witnesses"]
+    assert payload["remaining_missing_emitted_witness"] == "vanishing_carried_collar_schedule_on_fixed_local_collars"
+    assert payload["remaining_missing_emitted_witness_formula"].startswith("eta_{n,m,delta} = r_FR")
+    assert payload["smaller_remaining_raw_datum"] == "fixed_local_collar_markov_faithfulness_datum"
+    assert payload["missing_input_witnesses"] == ["vanishing_carried_collar_schedule_on_fixed_local_collars"]
     assert payload["follow_on_object"]["id"] == "ordered_null_cut_pair_rigidity"
 
 

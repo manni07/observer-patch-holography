@@ -28,7 +28,7 @@
     "psi23": 0.000957040214227042,
     "psi31": 0.000957040214227042
   },
-  "generated_utc": "2026-03-27T13:18:50Z",
+  "generated_utc": "2026-03-31T02:21:11Z",
   "isotropic_branch_status": "local_quadratic_germ_closed",
   "longitudinal_null_certificate": {
     "drops_on_residual_plane": true,
@@ -42,9 +42,9 @@
   "nonisotropic_formula_status": "open",
   "notes": [
     "This artifact now records the local quadratic action-germ/Hessian class on the affine Majorana lift.",
-    "The remaining OPH-only burden is the intrinsic scalar evaluator that fixes the exact scale and finite-angle/nonisotropic continuation."
+    "On the current isotropic branch the centered edge-norm theorem closes the finite-angle scalar side; the remaining OPH-only burden is the positive attachment bridge invariant above the closed normalizer, together with any future nonisotropic continuation."
   ],
-  "oph_origin_status": "missing_scalar_evaluator",
+  "oph_origin_status": "closed_on_current_isotropic_branch",
   "oph_scalar_action_kind": "local_quadratic_action_germ",
   "primitive_metric_source": "oph_overlap_defect_candidate",
   "proof_status": "local_quadratic_germ_closed",
@@ -70,9 +70,9 @@
     "status": "closed_equal_split"
   },
   "source_artifacts": {
-    "action_germ": "/Users/muellerberndt/Projects/oph-meta/particles/runs/neutrino/majorana_overlap_defect_action_germ.json",
-    "family": "/Users/muellerberndt/Projects/oph-meta/particles/runs/neutrino/family_response_tensor.json",
-    "lift": "/Users/muellerberndt/Projects/oph-meta/particles/runs/neutrino/majorana_holonomy_lift.json"
+    "action_germ": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/neutrino/majorana_overlap_defect_action_germ.json",
+    "family": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/neutrino/family_response_tensor.json",
+    "lift": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/neutrino/majorana_holonomy_lift.json"
   },
-  "upstream_missing_object": "oph_majorana_overlap_defect_scalar_evaluator"
+  "upstream_missing_object": "oph_neutrino_attachment_bridge_invariant"
 }

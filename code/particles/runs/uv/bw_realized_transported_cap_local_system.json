@@ -1,0 +1,68 @@
+{
+  "artifact": "oph_realized_transported_cap_local_system",
+  "asymptotic_transport_equivalence_certificate": {
+    "equivalence_statement": "Admissible transport choices differ only by the derived boundary recharting/gauge action, so they define one OPH-stable local *-isomorphism class on the quotient test system.",
+    "scope": "reference_chart_transport_class",
+    "status": "packaged"
+  },
+  "fills_contract_witnesses": [
+    "reference_cap_local_test_system",
+    "projectively_compatible_transported_cap_marginal_family",
+    "asymptotic_transport_equivalence_certificate"
+  ],
+  "generated_utc": "2026-03-31T02:22:20Z",
+  "next_exact_object": {
+    "id": "canonical_scaling_cap_pair_realization_from_transported_cap_marginals",
+    "remaining_witness": "vanishing_carried_collar_schedule_on_fixed_local_collars"
+  },
+  "notes": [
+    "This artifact is constructive but not yet the realized scaling-limit cap pair.",
+    "It packages the prelimit transported cap-local system at the quotient/local *-isomorphism level only.",
+    "The only remaining emitted witness for cap-pair promotion is the vanishing carried-collar schedule on fixed local collar models."
+  ],
+  "projectively_compatible_transported_cap_marginal_family": {
+    "compatibility": [
+      "isotony of the directed local family",
+      "projective restriction compatibility",
+      "channel composition along the realized refinement chain"
+    ],
+    "construction": "For n \u2265 m, define \u03c9_{n\u2192m}^{(\u03c7)}(X) = \u03c9_{\u2113_n}(\u03c4_{n\u2192m}^{(\u03c7)}(X)), where \u03c4_{n\u2192m}^{(\u03c7)} is refinement inclusion plus admissible recharting into the fixed reference chart.",
+    "status": "packaged"
+  },
+  "promotion_boundary": {
+    "closed_here": [
+      "reference_cap_local_test_system",
+      "projectively_compatible_transported_cap_marginal_family",
+      "asymptotic_transport_equivalence_certificate"
+    ],
+    "not_closed_here": [
+      "canonical_scaling_cap_pair_realization_from_transported_cap_marginals",
+      "ordered_null_cut_pair_rigidity"
+    ]
+  },
+  "public_promotion_allowed": false,
+  "reference_cap_local_test_system": {
+    "construction": "Fix one reference cut presentation/chart along the cap boundary and use rational matrix-coefficient cap-local subalgebras on supported local regions s \u2282 C as the directed test family T_{m,s} \u2282 A_m(s).",
+    "equivalence_level": "quotient_or_local_star_isomorphism_class",
+    "kind": "countable_directed_reference_test_family",
+    "status": "packaged"
+  },
+  "remaining_missing_emitted_witness": "vanishing_carried_collar_schedule_on_fixed_local_collars",
+  "remaining_missing_witness_contract": {
+    "for_fixed_models": "every fixed local collar model (m, delta)",
+    "formula": "eta_{n,m,delta} = r_FR(epsilon_{n,m,delta}) + 4 * lambda_{*,n,m,delta}^{-1} * delta^M_{m,delta}(epsilon_{n,m,delta}) -> 0",
+    "id": "vanishing_carried_collar_schedule_on_fixed_local_collars",
+    "meaning": "Carried-collar remainder schedules vanish along the realized refinement chain after transport to one fixed collar model."
+  },
+  "role": "Package the quotient/local *-isomorphism-level transported cap-local system that the scaling-limit cap-pair extraction theorem uses as input.",
+  "smaller_remaining_raw_datum": {
+    "components": [
+      "epsilon_{n,m,delta} = I(A_{m,delta}:D_{m,delta}|B_{m,delta})_{omega_{n->m}} -> 0",
+      "exists lambda_bar_{m,delta} > 0 with lambda_{*,n,m,delta} >= lambda_bar_{m,delta} eventually"
+    ],
+    "id": "fixed_local_collar_markov_faithfulness_datum",
+    "role": "raw fixed-local-collar datum that implies the eta schedule once emitted"
+  },
+  "source_scaffold_artifact": "oph_bw_scaling_limit_cap_pair_extraction_scaffold",
+  "status": "constructed_prelimit_system_one_emitted_witness_still_missing"
+}

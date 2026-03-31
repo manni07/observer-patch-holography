@@ -27,6 +27,11 @@ stages:
         status: completed
         owner_lane: local_docs
         depends_on: ["particles.audit.03-add-uv-bw-internalization-scaffold"]
+      - id: particles.audit.05-emit-uv-prelimit-cap-local-system
+        title: "Emit the realized transported cap-local prelimit system so the UV/BW extraction route carries three closed witnesses and one remaining emitted witness"
+        status: completed
+        owner_lane: local_code
+        depends_on: ["particles.audit.03-add-uv-bw-internalization-scaffold"]
       - id: particles.validation.01-frozen-forward-blind-harness
         title: "Separate forward prediction artifacts from compare-only validation"
         status: completed
@@ -859,9 +864,14 @@ stages:
         depends_on: ["particles.neutrino.22-add-bundle-descent-candidate-fields"]
       - id: particles.neutrino.24-close-same-label-overlap-nonvanishing-certificate
         title: "Close the same-label overlap-nonvanishing certificate needed to normalize the edge lifts"
-        status: in_progress
-        owner_lane: pro_neutrino
+        status: completed
+        owner_lane: local_code
         depends_on: ["particles.neutrino.23-reduce-phase-cocycle-route-to-overlap-nonvanishing"]
+      - id: particles.neutrino.24a-close-same-label-phase-cocycle-theorem
+        title: "Close the normalized same-label phase-cocycle theorem beneath the finite-angle scalar route"
+        status: completed
+        owner_lane: local_code
+        depends_on: ["particles.neutrino.24-close-same-label-overlap-nonvanishing-certificate"]
       - id: particles.neutrino.25-add-overlap-nonvanishing-witness-hint
         title: "Record the current local witness hint for overlap nonvanishing from the exported flavor gap/defect fields"
         status: completed
@@ -940,9 +950,9 @@ stages:
             "particles.neutrino.32-add-compare-only-single-scale-fit-surface"
           ]
       - id: particles.neutrino.38-close-majorana-overlap-defect-scalar-evaluator
-        title: "Close the finite-angle Majorana overlap-defect scalar evaluator that would attach the D10 amplitude sector to the weighted-cycle branch and emit lambda_nu"
-        status: in_progress
-        owner_lane: pro_neutrino
+        title: "Close the finite-angle Majorana overlap-defect scalar evaluator on the current isotropic branch and advance the remaining gap to the positive bridge invariant"
+        status: completed
+        owner_lane: local_code
         depends_on:
           [
             "particles.neutrino.37-record-lambda-nu-bridge-candidate",
@@ -991,12 +1001,20 @@ stages:
           ]
       - id: particles.neutrino.43-add-attachment-bridge-invariant-scaffold
         title: "Track the residual neutrino attachment bridge invariant above the closed normalizer and below lambda_nu"
-        status: in_progress
+        status: completed
         owner_lane: local_code
         depends_on:
           [
             "particles.neutrino.41-sharpen-normalized-attachment-section",
             "particles.neutrino.42-audit-simple-attachment-normalizers"
+          ]
+      - id: particles.neutrino.44-record-one-dimensional-attachment-quotient
+        title: "Record that the residual neutrino absolute ambiguity above the closed normalizer is exactly one-dimensional and therefore needs one bridge invariant"
+        status: completed
+        owner_lane: local_code
+        depends_on:
+          [
+            "particles.neutrino.43-add-attachment-bridge-invariant-scaffold"
           ]
   - id: stage-6
     title: "Hadron branch (deferred, execution-bound)"

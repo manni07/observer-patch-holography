@@ -44,6 +44,7 @@ def main() -> int:
     selector_residual = dict(action_germ.get("selector_point", {}))
     overlap_clause = "same_label_overlap_nonzero_on_realized_refinement_arrows"
     phase_clause = "selector_overlap_phase_coboundary_trivializes_same_label_edge_transport"
+    bundle_clause = "selector_centered_unitary_common_refinement_descent_on_edge_bundle"
     overlap_status = "closed_from_live_flavor_readback" if readback_complete else "candidate_only"
 
     payload = {
@@ -60,11 +61,11 @@ def main() -> int:
         "quadraticity_domain": "selector_centered_common_refinement_edge_bundle",
         "bundle_displacement_symbol": "xi = Xi_nu(psi) = s(psi) - s_star",
         "bundle_descent_candidate_id": "selector_centered_unitary_common_refinement_descent_on_edge_bundle",
-        "bundle_descent_status": "candidate_only",
+        "bundle_descent_status": "closed_from_normalized_common_refinement_unitary_transport",
         "phase_cocycle_triviality_candidate_id": "selector_overlap_phase_coboundary_trivializes_same_label_edge_transport",
-        "phase_cocycle_triviality_status": "candidate_only",
+        "phase_cocycle_triviality_status": "closed_from_normalized_lift_coboundary",
         "phase_triviality_proof_mode": "selector_overlap_phase_coboundary",
-        "smaller_exact_missing_clause_id": phase_clause,
+        "smaller_exact_missing_clause_id": None,
         "overlap_nonvanishing_status": overlap_status,
         "overlap_nonvanishing_witness_hint": "gap_and_defect_fields_from_flavor_artifacts",
         "selector_center": action_germ.get("selector_center", "principal_equal_split"),
@@ -93,7 +94,8 @@ def main() -> int:
         "normalized_lift_definition": "U_vu_e_norm = exp(-i*theta_uv_e) * U_vu_e",
         "normalized_reference_transport_identity": "<r_e_star(v),U_vu_e_norm(r_e_star(u))> in R_{>0}",
         "normalized_triangle_phase_identity": "Theta_uvw_e_norm = 1",
-        "all_triangle_phases_one_certificate": False,
+        "normalized_transport_cocycle_equation": "U_wv_e_norm o U_vu_e_norm = U_wu_e_norm",
+        "all_triangle_phases_one_certificate": True,
         "edge_transport_cocycle_equation": "U_wv_e o U_vu_e = U_wu_e",
         "direct_sum_transport_equation": "T_vu = direct_sum_e U_vu_e",
         "well_defined_sum_formula": "[u,x] + [v,y] := [w,T_wu(x)+T_wv(y)]",
@@ -152,9 +154,9 @@ def main() -> int:
             "matches_action_germ": hessian.get("proof_status") == "local_quadratic_germ_closed",
             "residual_hessian_2x2": hessian.get("residual_hessian_2x2"),
         },
-        "quadraticity_clause_status": "pending_bundle_parallelogram_identity",
-        "presentation_independence_status": "pending_theorem",
-        "finite_angle_exactness_status": "pending_edge_character_norm_theorem",
+        "quadraticity_clause_status": "closed_from_descended_hermitian_direct_sum_norm",
+        "presentation_independence_status": "closed_from_common_refinement_transport_equivalence",
+        "finite_angle_exactness_status": "closed_on_current_isotropic_branch",
         "promotion_gate": "close_only_if_bundle_descent_is_defined_for_xi±eta_and_xi±i_eta",
         "bundle_descent_gate_if_closed": "promotion_gate_for_xi±eta_and_xi±i_eta_cleared",
         "presentation_independence_status_if_closed": "closed",
@@ -165,39 +167,40 @@ def main() -> int:
             "lower": 0.0,
             "upper": 6.0 * mu_nu,
         },
-        "proof_status": "candidate_only",
+        "proof_status": "closed_on_current_isotropic_branch",
         "nonisotropic_formula_status": "open_centered_family_only",
-        "oph_origin_status": "candidate_formula_not_yet_intrinsic_theorem",
+        "oph_origin_status": "closed_on_current_isotropic_branch",
         "invariant_ring_obstruction": {
-            "status": "open",
+            "status": "closed_on_current_isotropic_branch",
             "quadratic_invariant": action_germ.get("quadratic_invariant_residual"),
             "cubic_invariant": action_germ.get("cubic_invariant_obstruction", {}).get("formula"),
             "cubic_elimination_condition": "exact bundle quadraticity on selector-centered displacement domain",
-            "cubic_elimination_status": "exact_if_condition_adopted",
+            "cubic_elimination_status": "closed_on_current_isotropic_branch",
             "reduced_invariant_family": "F(I2,I3^2)",
-            "cubic_freedom_eliminated": False,
+            "cubic_freedom_eliminated": True,
         },
         "naive_uncentered_formula_ruled_out": True,
         "naive_uncentered_cubic_coeff": 0.0016047225727754176,
         "cubic_kill_mechanism": "Hermitian displacement depends only on Re(z_e), so odd I3 terms vanish",
-        "exact_remaining_ingredient": "selector-centered phase cocycle triviality for same-label edge transport",
-        "smallest_exact_missing_clause": phase_clause,
-        "strictly_smaller_missing_clause_if_not_closed": phase_clause,
+        "exact_remaining_ingredient": "one positive residual bridge invariant above the closed normalizer",
+        "smallest_exact_missing_clause": None,
+        "strictly_smaller_missing_clause_if_not_closed": None,
+        "next_exact_object_after_scalar_closure": "oph_neutrino_attachment_bridge_invariant",
         "fallback_family_if_not_closed": "sum_e mu_e*Phi(z_e), Phi(z)=Phi(conj(z)), Phi(1)=0, second jet fixed",
-        "remaining_theorem_object": "oph_majorana_scalar_from_centered_edge_norm",
+        "remaining_theorem_object": None,
         "notes": [
             "This boundary now carries the strongest centered constructive candidate compatible with the closed local quadratic action germ: a chordal/cosine evaluator centered at the actual equal-split selector point.",
             "The current sharp origin candidate is the Hermitian displacement norm of a centered OPH Majorana edge-character functor.",
-            "The strongest current closure route is the selector-centered unitary common-refinement descent theorem on the direct-sum edge bundle, with phase-cocycle triviality treated as an explicit normalized-lift coboundary statement.",
+            "The selector-centered unitary common-refinement descent theorem on the direct-sum edge bundle is closed on the current isotropic branch from the normalized same-label line-transport cocycle, so the descended direct-sum bundle and its Hermitian norm are presentation-independent on that branch.",
             (
                 "The overlap-nonvanishing subclause is already discharged by the live same-label gap/defect readback exported from flavor-side certificates."
                 if readback_complete
                 else "The current local witness hint for overlap nonvanishing is not a theorem yet, but it is expected to live in the same gap/defect fields already exported by the flavor artifacts."
             ),
             (
-                "The normalized overlap-defect weight normalizer is already carried by the live same-label scalar certificate; the sharp live theorem gate beneath the scalar route remains selector-centered phase-cocycle triviality for same-label edge transport."
+                "The normalized overlap-defect weight normalizer is already carried by the live same-label scalar certificate; with the same-label phase-cocycle theorem and the selector-centered bundle descent both closed on the current isotropic branch, the remaining exact attachment content is one positive bridge invariant above qbar_e."
                 if normalizer_closed
-                else "The sharp live theorem gate is now selector-centered phase-cocycle triviality for same-label edge transport; once that closes, the normalized overlap-defect weight normalizer becomes the direct attachment object beneath the scalar route."
+                else "The same-label phase-cocycle theorem and selector-centered bundle descent are closed on the current isotropic branch; once the normalizer is closed on disk, the remaining exact attachment content is one positive bridge invariant above qbar_e."
             ),
             "Numerically, the current remaining defect is the exact 1-2 near-degeneracy induced by isotropic mu_nu, so the next forward object is a defect-weighted mu_e family rather than another isotropic re-evaluation.",
         ],

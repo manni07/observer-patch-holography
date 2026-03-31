@@ -11,12 +11,17 @@
   ],
   "collar_corollary": "Exact fixed-cutoff collar splice and additivity identities pass to the extracted pair whenever they are used only through carried-collar remainders that vanish on fixed local collar models.",
   "exact_missing_object": "scaling_limit_cap_pair_extraction",
+  "fills_contract_witnesses": [
+    "reference_cap_local_test_system",
+    "projectively_compatible_transported_cap_marginal_family",
+    "asymptotic_transport_equivalence_certificate"
+  ],
   "final_target": "sigma_t^{omega_infty^C} = alpha_{lambda_C(2 pi t)}",
   "follow_on_object": {
     "id": "ordered_null_cut_pair_rigidity",
     "role": "Collapse the residual cap-preserving conformal freedom on the realized limit pair to the unique BW hyperbolic subgroup."
   },
-  "generated_utc": "2026-03-30T23:44:35Z",
+  "generated_utc": "2026-03-31T02:22:20Z",
   "goal": "Extract a canonical scaling-limit cap pair (A_infty(C), omega_infty^C) from transported cap marginals along the realized refinement-stable branch.",
   "input_contract": {
     "must_not_assume": [
@@ -31,14 +36,14 @@
     ]
   },
   "missing_input_witnesses": [
-    "reference_cap_local_test_system",
-    "projectively_compatible_transported_cap_marginal_family",
-    "asymptotic_transport_equivalence_certificate",
     "vanishing_carried_collar_schedule_on_fixed_local_collars"
   ],
   "notes": [
     "This is the first half of the UV/BW internalization route.",
-    "The compactness/extraction theorem itself is not the missing proof; the current corpus still lacks the emitted transported-family witness satisfying this contract.",
+    "The local quotient/prelimit transported cap-local system can already be packaged from the current corpus at the reference-chart and asymptotic transport-equivalence level.",
+    "The compactness/extraction theorem itself is not the missing proof; the current remaining blocker is one emitted carried-collar witness satisfying the vanishing schedule on fixed local collar models.",
+    "The sharp current contract for that witness is eta_{n,m,delta} = r_FR(epsilon_{n,m,delta}) + 4 * lambda_{*,n,m,delta}^{-1} * delta^M_{m,delta}(epsilon_{n,m,delta}) -> 0 on every fixed local collar model.",
+    "That combined schedule reduces one level lower to a fixed-local-collar Markov/faithfulness datum: collarwise CMI vanishing plus an eventual positive lower spectral bound.",
     "It does not by itself prove the BW automorphism law."
   ],
   "output_certificate": {
@@ -49,8 +54,23 @@
     "typeI_required": false
   },
   "precise_missing_object_name": "canonical_scaling_cap_pair_realization_from_transported_cap_marginals",
+  "prelimit_realized_system_artifact": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/uv/bw_realized_transported_cap_local_system.json",
   "public_promotion_allowed": false,
-  "status": "candidate_route_not_promoted",
+  "remaining_missing_emitted_witness": "vanishing_carried_collar_schedule_on_fixed_local_collars",
+  "remaining_missing_emitted_witness_components": [
+    "r_FR(epsilon_{n,m,delta})",
+    "lambda_{*,n,m,delta}",
+    "delta^M_{m,delta}(epsilon_{n,m,delta})"
+  ],
+  "remaining_missing_emitted_witness_domain": "every fixed local collar model",
+  "remaining_missing_emitted_witness_formula": "eta_{n,m,delta} = r_FR(epsilon_{n,m,delta}) + 4 * lambda_{*,n,m,delta}^{-1} * delta^M_{m,delta}(epsilon_{n,m,delta}) -> 0",
+  "schedule_reduction_theorem": "For each fixed local collar model, the eta_{n,m,delta} vanishing schedule follows once the collarwise conditional mutual information vanishes and the faithful lower spectral bound is eventually uniform.",
+  "smaller_remaining_raw_datum": "fixed_local_collar_markov_faithfulness_datum",
+  "smaller_remaining_raw_datum_components": [
+    "epsilon_{n,m,delta} = I(A_{m,delta}:D_{m,delta}|B_{m,delta})_{omega_{n->m}} -> 0",
+    "exists lambda_bar_{m,delta} > 0 with lambda_{*,n,m,delta} >= lambda_bar_{m,delta} eventually"
+  ],
+  "status": "constructive_prelimit_system_one_emitted_witness_still_missing",
   "theorem_assumptions": [
     "countable directed cap-local test system in one fixed reference chart",
     "transported pullback states on each fixed local cap algebra",

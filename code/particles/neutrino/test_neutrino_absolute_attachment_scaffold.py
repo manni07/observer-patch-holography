@@ -20,8 +20,11 @@ def test_neutrino_absolute_attachment_scaffold_contract() -> None:
     assert payload["current_no_go"]["current_candidate_interface_artifact"] == "oph_majorana_overlap_defect_scalar_evaluator"
     assert payload["current_no_go"]["closed_normalizer_artifact"] == "oph_same_label_overlap_defect_weight_normalizer"
     assert payload["current_no_go"]["exact_next_theorem_object"] == "oph_neutrino_attachment_bridge_invariant"
-    assert payload["current_no_go"]["strictly_smaller_missing_clause"] == "selector_overlap_phase_coboundary_trivializes_same_label_edge_transport"
+    assert payload["current_no_go"]["strictly_smaller_missing_clause"] is None
     assert payload["extension_contract"]["must_emit"].startswith("lambda_nu")
     stack = payload["extension_contract"]["current_theorem_stack"]
     assert stack[0]["id"] == "oph_same_label_overlap_defect_weight_normalizer"
     assert stack[1]["id"] == "selector_overlap_phase_coboundary_trivializes_same_label_edge_transport"
+    assert stack[1]["status"] == "closed_from_normalized_lift_coboundary"
+    assert stack[2]["id"] == "selector_centered_unitary_common_refinement_descent_on_edge_bundle"
+    assert stack[2]["status"] == "closed_from_normalized_common_refinement_unitary_transport"

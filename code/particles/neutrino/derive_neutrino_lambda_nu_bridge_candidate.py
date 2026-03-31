@@ -55,9 +55,12 @@ def build_payload(
         )
         / float(compare_fit["reference_central_values"]["delta_m32_sq_sigma_eV2"]),
     }
-    phase_clause = scalar_evaluator["strictly_smaller_missing_clause_if_not_closed"]
+    phase_clause = scalar_evaluator["phase_cocycle_triviality_candidate_id"]
+    smaller_clause = scalar_evaluator["strictly_smaller_missing_clause_if_not_closed"]
+    bundle_clause = scalar_evaluator["bundle_descent_candidate_id"]
     normalizer_id = scalar_evaluator["attachment_normalizer_candidate_id"]
     bridge_invariant_id = "oph_neutrino_attachment_bridge_invariant"
+    scalar_theorem_id = scalar_evaluator.get("remaining_theorem_object") or scalar_evaluator["theorem_candidate_id"]
     return {
         "artifact": "oph_neutrino_lambda_nu_bridge_candidate",
         "generated_utc": _timestamp(),
@@ -73,7 +76,7 @@ def build_payload(
         "current_candidate_interface_artifact": "oph_majorana_overlap_defect_scalar_evaluator",
         "closed_normalizer_artifact": normalizer.get("artifact"),
         "exact_next_theorem_object": bridge_invariant_id,
-        "strictly_smaller_missing_clause": phase_clause,
+        "strictly_smaller_missing_clause": smaller_clause,
         "bridge_ansatz": "lambda_nu = m_star_eV * F_nu",
         "bridge_factor_schema": "F_nu = F_nu(qbar, I_nu)",
         "where_F_nu_should_come_from": (
@@ -88,11 +91,16 @@ def build_payload(
             },
             {
                 "id": phase_clause,
-                "status": "open_clause",
-                "role": "selector-centered phase-cocycle triviality gate beneath the finite-angle scalar interface",
+                "status": scalar_evaluator["phase_cocycle_triviality_status"],
+                "role": "same-label normalized-lift phase-cocycle theorem beneath the finite-angle scalar interface",
             },
             {
-                "id": scalar_evaluator["remaining_theorem_object"],
+                "id": bundle_clause,
+                "status": scalar_evaluator["bundle_descent_status"],
+                "role": "selector-centered common-refinement edge-bundle descent theorem already closed above the same-label phase-cocycle layer",
+            },
+            {
+                "id": scalar_theorem_id,
                 "status": scalar_evaluator["proof_status"],
                 "role": "parent finite-angle centered edge-norm theorem furnishing the scalar side of the attachment route",
             },
@@ -152,13 +160,13 @@ def build_payload(
         "next_theorem_if_this_route_is_right": {
             "id": bridge_invariant_id,
             "current_status": "open",
-            "promotion_gate": scalar_evaluator["phase_cocycle_triviality_candidate_id"],
-            "smallest_missing_clause": phase_clause,
+            "promotion_gate": None,
+            "smallest_missing_clause": smaller_clause,
         },
         "notes": [
             "This bridge candidate does not claim lambda_nu is already emitted.",
             "It packages the strongest current local interface between the emitted D10 amplitude scale and the emitted weighted-cycle theorem object.",
-            "The normalized overlap-defect weight section is already closed from the live same-label scalar certificate; the remaining attachment gap sits above qbar_e.",
+            "The normalized overlap-defect weight section is already closed from the live same-label scalar certificate, and the finite-angle centered edge-norm theorem is closed on the current isotropic branch; the remaining attachment gap sits above qbar_e as one positive bridge invariant.",
             "The closed-form gamma-over-sqrt-ratio numerology is retained only as a refuted compare-only audit target; it is incompatible with the exact positive-rescaling no-go.",
         ],
     }

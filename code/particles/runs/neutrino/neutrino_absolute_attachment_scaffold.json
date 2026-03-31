@@ -1,6 +1,6 @@
 {
   "artifact": "oph_neutrino_absolute_attachment_scaffold",
-  "generated_utc": "2026-03-30T23:44:14Z",
+  "generated_utc": "2026-03-31T02:21:50Z",
   "status": "minimal_constructive_extension",
   "public_promotion_allowed": false,
   "exact_missing_object": "neutrino_weighted_cycle_absolute_attachment",
@@ -29,7 +29,9 @@
     "current_candidate_interface_artifact": "oph_majorana_overlap_defect_scalar_evaluator",
     "closed_normalizer_artifact": "oph_same_label_overlap_defect_weight_normalizer",
     "exact_next_theorem_object": "oph_neutrino_attachment_bridge_invariant",
-    "strictly_smaller_missing_clause": "selector_overlap_phase_coboundary_trivializes_same_label_edge_transport"
+    "strictly_smaller_missing_clause": null,
+    "exact_residual_moduli_space": "R_{>0}",
+    "one_additional_positive_bridge_invariant_is_necessary_and_sufficient": true
   },
   "extension_contract": {
     "input_objects": [
@@ -57,13 +59,18 @@
       },
       {
         "id": "selector_overlap_phase_coboundary_trivializes_same_label_edge_transport",
-        "role": "selector-centered phase-cocycle triviality gate beneath the finite-angle scalar interface",
-        "status": "open_clause"
+        "role": "same-label normalized-lift phase-cocycle theorem beneath the finite-angle scalar interface",
+        "status": "closed_from_normalized_lift_coboundary"
+      },
+      {
+        "id": "selector_centered_unitary_common_refinement_descent_on_edge_bundle",
+        "role": "selector-centered common-refinement edge-bundle descent theorem already closed above the same-label phase-cocycle layer",
+        "status": "closed_from_normalized_common_refinement_unitary_transport"
       },
       {
         "id": "oph_majorana_scalar_from_centered_edge_norm",
         "role": "parent finite-angle centered edge-norm theorem furnishing the scalar side of the attachment route",
-        "status": "candidate_only"
+        "status": "closed_on_current_isotropic_branch"
       },
       {
         "id": "oph_neutrino_attachment_bridge_invariant",
@@ -81,5 +88,9 @@
     "name": "p_nu_gamma_eps_midpoint_law",
     "D_nu_formula": "D_nu = (chi_nu + 1 + gamma_half) / 2 = 1 + eps/2 + gamma/4",
     "p_nu_formula": "p_nu(gamma, eps) = 1 + gamma + eps / D_nu"
-  }
+  },
+  "notes": [
+    "The residual absolute ambiguity above the closed normalizer is exactly the positive rescaling orbit.",
+    "The current corpus therefore needs one and only one positive bridge invariant above qbar_e before lambda_nu can be emitted theorem-grade."
+  ]
 }

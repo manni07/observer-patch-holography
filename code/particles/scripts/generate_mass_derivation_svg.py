@@ -279,7 +279,7 @@ LANES: List[Dict[str, Any]] = [
     {
         "key": "neutrinos",
         "title": "Neutrinos",
-        "summary": "The neutrino lane now includes the repaired weighted-cycle branch: PMNS and hierarchy are physically repaired, while the absolute spectrum remains a one-parameter positive family until one normalization scalar is emitted.",
+        "summary": "The neutrino lane closes the weighted-cycle PMNS/hierarchy branch and the normalized overlap-defect weight section. The absolute spectrum remains a one-parameter positive family until one bridge invariant and the final normalization scalar are emitted.",
         "takeaway": "The mixing pattern is basically in the right place now. What is still missing is one final number that sets the overall absolute neutrino mass scale.",
         "logic": (
             "The lane derives m_star = v^2 / mu_u from the D10 core, builds the family-response tensor, the "
@@ -291,11 +291,11 @@ LANES: List[Dict[str, Any]] = [
             "one-dimensional affine segment, the balanced selector and the least-distortion selector coincide exactly at "
             "the midpoint, so `D_nu = (chi + 1 + gamma_half) / 2` and the repaired edge law becomes "
             "`w_e = q_e^(1 + gamma + eps / D_nu)`. That repaired branch "
-            "lands in the physical PMNS window and the correct splitting hierarchy. No hidden discrete branch remains on that repaired lane; the remaining open burden is only one "
-            "positive absolute neutrino normalization scalar, so the downstream PMNS and hierarchy map are otherwise closed."
+            "lands in the physical PMNS window and the correct splitting hierarchy. The normalized same-label overlap-defect weight section `qbar_e` is already closed below the absolute attachment problem. "
+            "No hidden discrete branch remains on that repaired lane; once the normalizer is fixed, the residual quotient is exactly the positive rescaling orbit, so the remaining burden is one bridge invariant above `qbar_e` and then the final positive absolute neutrino normalization scalar."
         ),
-        "tasks_text": "Open task: emit the final positive absolute neutrino normalization scalar. The weighted-cycle repair already closes the PMNS pattern and hierarchy, and the no-hidden-discrete-branch audit says the only remaining freedom is the positive rescaling orbit `m_i = lambda_nu * mhat_i`, `Delta m^2_ij = lambda_nu^2 * Delta_hat_ij`.",
-        "prediction_surface": "Repaired weighted-cycle neutrino branch with PMNS and hierarchy closure; public flavor rows remain hidden until the final positive normalization scalar is emitted and the one-parameter absolute family collapses to one theorem-grade spectrum.",
+        "tasks_text": "Open task: emit the positive bridge invariant above `qbar_e` and then the final positive absolute neutrino normalization scalar. The weighted-cycle branch and closed normalizer already force the remaining residual family to `m_i = lambda_nu * mhat_i`, `Delta m^2_ij = lambda_nu^2 * Delta_hat_ij` with no hidden discrete branch.",
+        "prediction_surface": "Weighted-cycle neutrino branch with PMNS/hierarchy closure and a closed normalized overlap-defect weight section; public flavor rows remain hidden until the bridge invariant and the final positive normalization scalar collapse the one-parameter absolute family to one theorem-grade spectrum.",
         "particles": ["electron_neutrino", "muon_neutrino", "tau_neutrino"],
         "tasks": [
             "papers.compact.e.32-derive-neutrino-masses-from-screen-capacity-as-a-theorem",
@@ -1269,7 +1269,7 @@ def build_svg(results: Dict[str, Any], tasks: Dict[str, Dict[str, Any]]) -> str:
         "Start with the OPH axioms plus the declared live scalar P and the extra input surface used by the neutrino estimate lane.",
         "Then read each lane from top to bottom: what the lane already does, what is still missing, what prediction surface it produces, and which particle rows are currently publishable.",
         f"The badge reports {closedish} of {total_rows} tracked rows above continuation / simulation status. In plain terms: those are the rows that are already beyond the merely exploratory stage.",
-        "The broader UV/BW premise boundary still sits above the particle lanes. The sharpest internal extension route there is a scaling-limit cap-pair extraction theorem followed by ordered null cut-pair rigidity.",
+        "The broader UV/BW premise boundary still sits above the particle lanes. Three cap-pair extraction witnesses are already explicit on disk; the single remaining emitted witness is the vanishing carried-collar schedule on fixed local collar models, after which ordered null cut-pair rigidity remains.",
     ]
     scaffold_h = estimate_box_height(
         title="How to read the mass derivation chart",

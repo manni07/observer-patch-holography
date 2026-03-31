@@ -10,13 +10,18 @@
     },
     {
       "id": "selector_overlap_phase_coboundary_trivializes_same_label_edge_transport",
-      "role": "selector-centered phase-cocycle triviality gate beneath the finite-angle scalar interface",
-      "status": "open_clause"
+      "role": "same-label normalized-lift phase-cocycle theorem beneath the finite-angle scalar interface",
+      "status": "closed_from_normalized_lift_coboundary"
+    },
+    {
+      "id": "selector_centered_unitary_common_refinement_descent_on_edge_bundle",
+      "role": "selector-centered common-refinement edge-bundle descent theorem already closed above the same-label phase-cocycle layer",
+      "status": "closed_from_normalized_common_refinement_unitary_transport"
     },
     {
       "id": "oph_majorana_scalar_from_centered_edge_norm",
       "role": "parent finite-angle centered edge-norm theorem furnishing the scalar side of the attachment route",
-      "status": "candidate_only"
+      "status": "closed_on_current_isotropic_branch"
     },
     {
       "id": "oph_neutrino_attachment_bridge_invariant",
@@ -44,17 +49,17 @@
     "name": "m_star"
   },
   "exact_next_theorem_object": "oph_neutrino_attachment_bridge_invariant",
-  "generated_utc": "2026-03-30T23:44:34Z",
+  "generated_utc": "2026-03-31T02:22:19Z",
   "next_theorem_if_this_route_is_right": {
     "current_status": "open",
     "id": "oph_neutrino_attachment_bridge_invariant",
-    "promotion_gate": "selector_overlap_phase_coboundary_trivializes_same_label_edge_transport",
-    "smallest_missing_clause": "selector_overlap_phase_coboundary_trivializes_same_label_edge_transport"
+    "promotion_gate": null,
+    "smallest_missing_clause": null
   },
   "notes": [
     "This bridge candidate does not claim lambda_nu is already emitted.",
     "It packages the strongest current local interface between the emitted D10 amplitude scale and the emitted weighted-cycle theorem object.",
-    "The normalized overlap-defect weight section is already closed from the live same-label scalar certificate; the remaining attachment gap sits above qbar_e.",
+    "The normalized overlap-defect weight section is already closed from the live same-label scalar certificate, and the finite-angle centered edge-norm theorem is closed on the current isotropic branch; the remaining attachment gap sits above qbar_e as one positive bridge invariant.",
     "The closed-form gamma-over-sqrt-ratio numerology is retained only as a refuted compare-only audit target; it is incompatible with the exact positive-rescaling no-go."
   ],
   "public_promotion_allowed": false,
@@ -73,7 +78,7 @@
     }
   },
   "status": "candidate_interface_not_promoted",
-  "strictly_smaller_missing_clause": "selector_overlap_phase_coboundary_trivializes_same_label_edge_transport",
+  "strictly_smaller_missing_clause": null,
   "target_free_closed_form_candidates": [
     {
       "delta_m_sq_eV2": {

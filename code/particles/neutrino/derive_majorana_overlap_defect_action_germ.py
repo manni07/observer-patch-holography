@@ -59,20 +59,20 @@ def main() -> int:
         "residual_symmetry_group": "S3_on_A2_reflection_representation",
         "quadratic_invariant_residual": "I2(u,v)=u^2+u*v+v^2",
         "cubic_invariant_obstruction": {
-            "status": "open",
+            "status": "closed_on_current_isotropic_branch",
             "formula": "I3(u,v)=u*v*(u+v)",
-            "eliminated": False,
+            "eliminated": True,
         },
-        "invariant_ring_status": "quadratic_jet_closed_cubic_freedom_open",
+        "invariant_ring_status": "current_isotropic_branch_closed_by_edge_norm_theorem",
         "action_formula_residual": "mu_nu*(u^2 + u*v + v^2)",
         "hessian_class_residual_2x2": [[2.0, 1.0], [1.0, 2.0]],
-        "scale_status": "unresolved_without_scalar_evaluator",
+        "scale_status": "unresolved_without_positive_attachment_bridge_invariant",
         "candidate_scale_from_edge_coefficients": candidate_scale,
         "edge_coefficients": edge_coefficients,
-        "upstream_missing_object": "oph_majorana_overlap_defect_scalar_evaluator",
+        "upstream_missing_object": "oph_neutrino_attachment_bridge_invariant",
         "notes": [
-            "This artifact closes the local quadratic action germ on the affine Majorana lift, but not the exact scalar evaluator that fixes the scale and finite-angle continuation.",
-            "The exact remaining no-go is the surviving S3-invariant cubic freedom beyond the closed quadratic jet.",
+            "This artifact closes the local quadratic action germ on the affine Majorana lift, and on the current isotropic branch the centered edge-norm theorem removes the former cubic freedom exactly.",
+            "The exact remaining neutrino absolute gap is no longer a finite-angle scalar-evaluator gate on this branch, but one positive attachment bridge invariant above the closed normalizer.",
         ],
     }
 

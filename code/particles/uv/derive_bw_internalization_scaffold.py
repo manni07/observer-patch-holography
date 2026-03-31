@@ -18,6 +18,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_OUT = ROOT / "particles" / "runs" / "uv" / "bw_internalization_scaffold.json"
+PRELIMIT_SYSTEM = ROOT / "particles" / "runs" / "uv" / "bw_realized_transported_cap_local_system.json"
 
 
 @dataclass(frozen=True)
@@ -48,6 +49,18 @@ def build_artifact() -> dict[str, object]:
         "remaining_object": "canonical_scaling_cap_pair_realization_from_transported_cap_marginals",
         "follow_on_object": "independent_bw_rigidity_on_realized_limit",
         "dominant_pressure_point": "scaling_limit_cap_pair_extraction",
+        "filled_contract_witnesses": [
+            "reference_cap_local_test_system",
+            "projectively_compatible_transported_cap_marginal_family",
+            "asymptotic_transport_equivalence_certificate",
+        ],
+        "prelimit_system_artifact": str(PRELIMIT_SYSTEM),
+        "remaining_missing_emitted_witness": "vanishing_carried_collar_schedule_on_fixed_local_collars",
+        "remaining_missing_emitted_witness_formula": (
+            "eta_{n,m,delta} = r_FR(epsilon_{n,m,delta}) + "
+            "4 * lambda_{*,n,m,delta}^{-1} * delta^M_{m,delta}(epsilon_{n,m,delta}) -> 0"
+        ),
+        "smaller_remaining_raw_datum": "fixed_local_collar_markov_faithfulness_datum",
         "remaining_objects": [
             "canonical_scaling_cap_pair_realization_from_transported_cap_marginals",
             "independent_bw_rigidity_on_realized_limit",
@@ -55,13 +68,18 @@ def build_artifact() -> dict[str, object]:
         "current_internalized_scope": (
             "Axiom-3 plus the fixed-cutoff collar/MaxEnt package internalize local Gibbs form, "
             "quasi-local propagation, endpoint-Lipschitz interval control, and refinement-stable "
-            "branch persistence."
+            "branch persistence. The current corpus also packages the reference cap-local test system, "
+            "the projectively compatible transported cap marginal family, and the asymptotic transport-equivalence certificate."
         ),
         "reason_current_corpus_fails": (
-            "The current corpus still lacks a canonical scaling-limit observer cap algebra/state "
-            "realization from transported cap marginals, and all theorem-grade null geometric "
-            "action currently on disk is downstream of the BW branch itself, so the missing BW "
-            "rigidity theorem cannot be proved non-circularly from current premises."
+            "The current corpus already packages the reference cap-local test system, the projectively "
+            "compatible transported cap marginal family, and the asymptotic transport-equivalence certificate. "
+            "What is still missing is one emitted vanishing carried-collar schedule on fixed local collar models; "
+            "without that witness the canonical scaling-limit observer cap algebra/state realization is not promoted. "
+            "That combined witness itself reduces one level lower to a fixed-local-collar Markov/faithfulness datum: "
+            "collarwise CMI vanishing plus an eventual positive lower spectral bound. "
+            "Without either emitted schedule or emitted raw datum, all theorem-grade null geometric action currently "
+            "on disk remains downstream of the BW branch itself."
         ),
         "statement": (
             "First exact object: starting from a projectively compatible extracted family of "
@@ -76,18 +94,25 @@ def build_artifact() -> dict[str, object]:
             "sigma_t^{omega_infty^C} = alpha_{lambda_C(2 pi t)} without reusing consequences "
             "already downstream of the BW branch."
         ),
-        "candidate_extension_status": "candidate_route_not_promoted",
+        "candidate_extension_status": "constructive_prelimit_system_one_emitted_witness_still_missing",
         "candidate_extension_route": (
-            "Step 1: scaling-limit cap-pair extraction by local weak-* compactness on transported "
-            "cap marginals. Step 2: ordered null cut-pair rigidity that collapses the residual "
+            "Step 1: finish the scaling-limit cap-pair extraction contract by emitting the vanishing "
+            "carried-collar schedule on fixed local collar models above the already-emitted realized "
+            "transported cap-local system, which already packages the reference test system, projective "
+            "transported marginal family, and asymptotic transport-equivalence "
+            "certificate. The sharp schedule contract is eta_{n,m,delta} = r_FR(epsilon_{n,m,delta}) + "
+            "4 * lambda_{*,n,m,delta}^{-1} * delta^M_{m,delta}(epsilon_{n,m,delta}) -> 0 on every fixed "
+            "local collar model. Step 2: ordered null cut-pair rigidity that collapses the residual "
             "cap-preserving conformal freedom to the unique BW hyperbolic subgroup."
         ),
         "candidate_extension_target": "sigma_t^{omega_infty^C} = alpha_{lambda_C(2 pi t)}",
         "canonical_code_scaffolds": [
+            "code/particles/uv/derive_bw_realized_transported_cap_local_system.py",
             "code/particles/uv/derive_bw_scaling_limit_cap_pair_extraction_scaffold.py",
             "code/particles/uv/derive_bw_ordered_cut_pair_rigidity_scaffold.py",
         ],
         "canonical_artifacts": [
+            "code/particles/runs/uv/bw_realized_transported_cap_local_system.json",
             "code/particles/runs/uv/bw_scaling_limit_cap_pair_extraction_scaffold.json",
             "code/particles/runs/uv/bw_ordered_cut_pair_rigidity_scaffold.json",
         ],
@@ -137,6 +162,7 @@ def build_artifact() -> dict[str, object]:
             "The correct target is an automorphism theorem on the realized scaling-limit cap pair; no type-I survival is assumed.",
         ],
         "source_code_scaffolds": {
+            "realized_transported_cap_local_system": "code/particles/uv/derive_bw_realized_transported_cap_local_system.py",
             "scaling_limit_cap_pair_extraction": "code/particles/uv/derive_bw_scaling_limit_cap_pair_extraction_scaffold.py",
             "ordered_cut_pair_rigidity": "code/particles/uv/derive_bw_ordered_cut_pair_rigidity_scaffold.py",
         },

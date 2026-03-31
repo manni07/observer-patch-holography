@@ -25,6 +25,7 @@ def _load_json(path: Path) -> dict[str, Any]:
 
 
 def build_payload(normalizer: dict[str, Any], bridge_candidate: dict[str, Any]) -> dict[str, Any]:
+    smaller_gate = bridge_candidate.get("strictly_smaller_missing_clause")
     return {
         "artifact": "oph_neutrino_attachment_bridge_invariant_scaffold",
         "generated_utc": _timestamp(),
@@ -34,6 +35,10 @@ def build_payload(normalizer: dict[str, Any], bridge_candidate: dict[str, Any]) 
         "closed_lower_object": normalizer.get("artifact"),
         "bridge_factor_schema": bridge_candidate.get("bridge_factor_schema"),
         "residual_invariant_symbol": "I_nu",
+        "exact_residual_moduli_space": "R_{>0}",
+        "no_hidden_discrete_branch": True,
+        "one_additional_positive_bridge_invariant_is_necessary_and_sufficient": True,
+        "immediate_theorem_gate": smaller_gate,
         "contract": {
             "must_emit": "one positive residual bridge invariant I_nu or a collapse theorem removing it",
             "must_imply": "lambda_nu = m_star_eV * F_nu(qbar, I_nu)",
@@ -44,9 +49,16 @@ def build_payload(normalizer: dict[str, Any], bridge_candidate: dict[str, Any]) 
             ],
         },
         "collapse_alternative": "prove_F_nu_equals_F_nu(qbar)_with_no_residual_invariant",
+        "residual_attachment_quotient_theorem": (
+            "After fixing the closed weighted-cycle scale-free branch, the closed PMNS observables, "
+            "the scale-free masses/splittings, the D10 amplitude anchor m_star, and the closed normalized "
+            "same-label overlap-defect weight section qbar_e, the remaining absolute family is exactly "
+            "m_i = lambda_nu * mhat_i and Delta m^2_ij = lambda_nu^2 * Delta_hat_ij with lambda_nu > 0."
+        ),
         "notes": [
             "The normalized same-label overlap-defect weight section is already emitted below this object.",
             "This scaffold isolates the remaining positive scalar attachment content above qbar_e and below lambda_nu.",
+            "The remaining residual quotient is exactly one-dimensional, so there is no second hidden continuous object and no hidden discrete neutrino branch on this lane.",
         ],
     }
 

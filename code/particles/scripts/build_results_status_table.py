@@ -32,6 +32,7 @@ DEFAULT_MD_OUT = ROOT / "particles" / "RESULTS_STATUS.md"
 DEFAULT_JSON_OUT = ROOT / "particles" / "results_status.json"
 DEFAULT_FORWARD_OUT = ROOT / "particles" / "runs" / "status" / "status_table_forward_current.json"
 UV_BW_SCAFFOLD = ROOT / "particles" / "runs" / "uv" / "bw_internalization_scaffold.json"
+UV_BW_PRELIMIT_SYSTEM = ROOT / "particles" / "runs" / "uv" / "bw_realized_transported_cap_local_system.json"
 UV_BW_CAP_PAIR_SCAFFOLD = ROOT / "particles" / "runs" / "uv" / "bw_scaling_limit_cap_pair_extraction_scaffold.json"
 UV_BW_RIGIDITY_SCAFFOLD = ROOT / "particles" / "runs" / "uv" / "bw_ordered_cut_pair_rigidity_scaffold.json"
 FORWARD_YUKAWAS = ROOT / "particles" / "runs" / "flavor" / "forward_yukawas.json"
@@ -142,11 +143,11 @@ NEUTRINO_CONTINUATION_NOTE = (
     "No hidden discrete branch remains on that weighted-cycle lane: the remaining freedom is purely the positive rescaling orbit `lambda_nu > 0`. "
     "Here `lambda_nu` is the single positive normalization scalar that turns the theorem-grade scale-free normal form `mhat_i` and `Delta_hat_ij` into absolute masses and absolute splittings via `m_i = lambda_nu * mhat_i` and `Delta m^2_ij = lambda_nu^2 * Delta_hat_ij`. "
     "The sharper formulation of the remaining gap is an absolute-attachment theorem from the D10 amplitude sector to that weighted-cycle scale-free normal form; the naive direct attachment `lambda_nu = m_star_eV` is diagnostic-only and undershoots the atmospheric scale badly. "
-    "The sharpest current local interface candidate for that attachment is the Majorana overlap-defect scalar evaluator, but it is still candidate-only and not theorem-grade. The realized same-label gap/defect readback beneath that route is already complete from live flavor overlap and spectral-gap certificates, so the remaining neutrino gap is no longer a missing pullback payload. The normalized overlap-defect weight section `oph_same_label_overlap_defect_weight_normalizer` is already closed from the live same-label scalar certificate. The remaining exact attachment object is therefore a positive bridge invariant above that normalizer, while the immediate theorem gate on the finite-angle scalar route stays selector-centered phase-cocycle triviality on same-label edge transport. "
+    "The sharpest current local interface for that attachment is the Majorana overlap-defect scalar route. The realized same-label gap/defect readback beneath that route is already complete from live flavor overlap and spectral-gap certificates, so the remaining neutrino gap is no longer a missing pullback payload. The normalized overlap-defect weight section `oph_same_label_overlap_defect_weight_normalizer` is already closed from the live same-label scalar certificate, and the same-label phase-cocycle theorem together with the selector-centered common-refinement bundle descent are closed on the current isotropic branch. The remaining exact attachment object is therefore a positive bridge invariant above that normalizer. "
     "So that one overall positive neutrino normalization remains open on the live theorem lane, and absolute neutrino masses and absolute `Delta m^2` values are still compare-only unless an external atmospheric anchor is supplied. "
-    "The sharpened no-go statement is therefore that the current weighted-cycle branch emits only the one-parameter absolute family `m_i = lambda_nu * mhat_i`, `Delta m^2_ij = lambda_nu^2 * Delta_hat_ij`; all PMNS data and dimensionless hierarchy ratios are unchanged across that family, so no unique theorem-grade absolute spectrum exists yet. "
+    "The sharpened no-go statement is therefore that the current weighted-cycle branch emits only the one-parameter absolute family `m_i = lambda_nu * mhat_i`, `Delta m^2_ij = lambda_nu^2 * Delta_hat_ij`; all PMNS data and dimensionless hierarchy ratios are unchanged across that family, so no unique theorem-grade absolute spectrum exists yet. Once the closed normalizer is fixed, the residual quotient is exactly one-dimensional, so one and only one positive bridge invariant remains above `qbar_e`. "
     "A compare-only single-scale fit shows how sharp that remaining gap is: fitting `lambda_nu` against PDG 2025 central splittings gives `lambda_nu = 1.72390`, `m = (0.01746, 0.01948, 0.05308) eV`, `Delta m21^2 = 7.48982e-5 eV^2`, and `Delta m32^2 = 2.43801e-3 eV^2`, with residuals about `-9.02e-4 sigma` on `Delta m21^2` and `+2.84e-4 sigma` on `Delta m32^2`. "
-    "The sharpest current constructive bridge is not a direct scale pick but the Majorana overlap-defect scalar-evaluator route: `lambda_nu = m_star_eV * F_nu`, where the still-unemitted positive factor `F_nu` would come from the exact finite-angle scalar evaluator on the selected weighted-cycle branch. A tempting closed-form numerology `lambda_nu = gamma / sqrt(Delta_hat_21 / Delta_hat_32)` is explicitly ruled out as theorem-grade by the same positive-rescaling no-go, because both `gamma` and `Delta_hat_21 / Delta_hat_32` are orbit invariants on the scale-free family. "
+    "The sharpest current constructive bridge is not a direct scale pick but the Majorana overlap-defect scalar route: `lambda_nu = m_star_eV * F_nu(qbar, I_nu)`, where the finite-angle scalar side is closed on the current isotropic branch and the still-unemitted positive factor is carried only by the residual bridge invariant above the closed normalizer. A tempting closed-form numerology `lambda_nu = gamma / sqrt(Delta_hat_21 / Delta_hat_32)` is explicitly ruled out as theorem-grade by the same positive-rescaling no-go, because both `gamma` and `Delta_hat_21 / Delta_hat_32` are orbit invariants on the scale-free family. "
     "A separate compare-only load-segment audit records nearby alternative selectors on the same positive segment; the geometric mean gives the smallest raw representative central-ratio error, but the promoted theorem branch is the arithmetic midpoint because it is the unique balanced/least-distortion selector on that one-dimensional affine segment. "
     "With the hard-separated compare-only atmospheric anchor `Delta m32^2 = 2.438e-3 eV^2`, the same branch gives `m = (0.01746, 0.01948, 0.05308) eV`, `Delta m21^2 = 7.48981e-5 eV^2`, and `Delta m31^2 = 2.51290e-3 eV^2`; relative to the representative PDG 2025 central values, the solar and atmospheric residuals are only about `-9.02e-4 sigma` and `+2.84e-4 sigma`. These rows therefore remain unpromoted as exact OPH mass predictions only because that single normalization scalar is still missing."
 )
@@ -813,6 +814,7 @@ def build_rows(
 def build_premise_boundaries() -> Dict[str, Any]:
     uv_boundary = json.loads(UV_BW_SCAFFOLD.read_text(encoding="utf-8"))["public_status_boundary"]
     uv_boundary["canonical_scaffold_artifacts"] = [
+        str(UV_BW_PRELIMIT_SYSTEM),
         str(UV_BW_CAP_PAIR_SCAFFOLD),
         str(UV_BW_RIGIDITY_SCAFFOLD),
     ]
@@ -882,6 +884,10 @@ def render_markdown(
                 f"- First theorem object: {uv_boundary['statement']}",
                 f"- Second theorem object: {uv_boundary['follow_on_statement']}",
                 f"- Candidate extension status: `{uv_boundary['candidate_extension_status']}`",
+                f"- Filled witnesses already on disk: `{uv_boundary['filled_contract_witnesses'][0]}`, `{uv_boundary['filled_contract_witnesses'][1]}`, `{uv_boundary['filled_contract_witnesses'][2]}`",
+                f"- Remaining emitted witness: `{uv_boundary['remaining_missing_emitted_witness']}`",
+                f"- Remaining witness formula: `{uv_boundary['remaining_missing_emitted_witness_formula']}`",
+                f"- Smaller raw datum beneath that witness: `{uv_boundary['smaller_remaining_raw_datum']}`",
                 f"- Candidate extension route: {uv_boundary['candidate_extension_route']}",
                 f"- Candidate extension target: `{uv_boundary['candidate_extension_target']}`",
                 "",

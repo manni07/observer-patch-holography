@@ -79,7 +79,7 @@
     }
   ],
   "fully_completed": false,
-  "generated_utc": "2026-03-30T23:44:14Z",
+  "generated_utc": "2026-03-31T02:21:50Z",
   "live_continuation_branch_status": {
     "absolute_scale_no_go": {
       "absolute_amplitude_bridge_summary": {
@@ -107,7 +107,7 @@
         "allowed_formula": "lambda_nu_cmp = sqrt(Delta m32^2_anchor / Delta_hat_32)",
         "forbidden_feedback": "compare_only_anchor_must_not_feed_back_into_theorem_state_or_lambda_nu_emission"
       },
-      "immediate_theorem_gate": "selector_overlap_phase_coboundary_trivializes_same_label_edge_transport",
+      "immediate_theorem_gate": null,
       "minimal_missing_object": "neutrino_weighted_cycle_absolute_attachment",
       "proof_obstruction": "positive_rescaling_nonidentifiability",
       "scale_free_dm2_normal_form_eV2": {
