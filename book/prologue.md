@@ -3,13 +3,8 @@
 > Core idea, in plain English: there is no single objective camera angle on reality.
 > There are only local, subjective perspectives, and physics is the rulebook that keeps them consistent where they overlap.
 > If you are not a physicist, you are in the right place; this book is written as a reverse-engineering story, not a math-first textbook.
->
-> Companion video course (third-party): Sriharsha Karamchati has published a chapter-by-chapter OPH playlist on YouTube:
-> https://www.youtube.com/playlist?list=PLff0tYtg64Egc2sTtKgThcPRNRdR6i83O
->
-> Official OPH memecoin: [TEO on BaseScan](https://basescan.org/token/0xd2a7055317D0c7b316319cDadaE592D0644A0b07), [DexScreener](https://dexscreener.com/base/0xba55cdae026b9dd63fcb50e82094d61472948e44527ca4791033497469228049), [Buy on Uniswap](https://app.uniswap.org/swap?outputCurrency=0xd2a7055317D0c7b316319cDadaE592D0644A0b07&chain=base). It is purely speculative, has no promised return, and no announced utility at this time. DYOR.
 
-If you arrived here through searches for **simulation theory** or **theory of everything**, this book is the long-form OPH answer to both. It presents OPH as a concrete route toward a simulation-theory reading: reality is modeled as an observer-consistent information process with a specific architecture of holographic screens, observer patches, and overlap-consistency rules. It also presents OPH as a theory-of-everything program: quantum mechanics, relativity, gauge structure, and particle physics appear as effective descriptions of deeper overlap-consistency rules, while the strange-loop idea remains an interpretive extension outside the recovered core.
+Whether your interest begins with **simulation theory** or with the hope of a **theory of everything**, this book is the long-form OPH answer to both. It presents OPH as a concrete route toward a simulation-theory reading: reality is modeled as an observer-consistent information process with a specific architecture of holographic screens, observer patches, and overlap-consistency rules. It also presents OPH as a theory-of-everything program: quantum mechanics, relativity, gauge structure, and particle physics appear as effective descriptions of deeper overlap-consistency rules, while the strange-loop idea remains an interpretive extension outside the recovered core.
 
 ## The Cosmic Program
 
