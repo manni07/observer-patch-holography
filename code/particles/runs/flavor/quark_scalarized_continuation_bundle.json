@@ -1,8 +1,7 @@
 {
   "artifact": "oph_quark_scalarized_continuation_bundle",
-  "generated_utc": "2026-03-29T12:42:14Z",
+  "generated_utc": "2026-04-01T00:32:15Z",
   "honest_remaining_value_laws": [
-    "D12_ud_mass_ray",
     "intrinsic_scale_law_D12",
     "quark_exact_mean_split_value_law_or_carrier_repair"
   ],

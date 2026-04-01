@@ -19,6 +19,14 @@ PAIR_READBACK_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_sector_l
 ENDPOINT_RATIO_BREAKER_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_sector_local_support_extension_endpoint_ratio_breaker.py"
 ABSOLUTE_SCALE_GAP_IDENTITY_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_absolute_scale_transport_gap_identity.py"
 ABSOLUTE_SCALE_UNDERDETERMINATION_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_absolute_scale_underdetermination_theorem.py"
+TRACE_LIFT_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_uncentered_trace_lift_scaffold.py"
+DETERMINANT_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_determinant_line_section_extension.py"
+ANCHOR_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_absolute_anchor_section.py"
+COCYCLE_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_uncentered_trace_lift_cocycle_reduction.py"
+DESCENT_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_mu_physical_descent_reduction.py"
+NO_GO_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_centered_operator_mu_phys_no_go.py"
+ROUTE_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_post_promotion_absolute_closure_route.py"
+FRONTIER_FACTORIZATION_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_absolute_frontier_factorization.py"
 END_TO_END_IMPOSSIBILITY_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_end_to_end_impossibility_theorem.py"
 AUDIT_SCRIPT = ROOT / "particles" / "leptons" / "derive_lepton_current_family_exactness_audit.py"
 OUTPUT = ROOT / "particles" / "runs" / "leptons" / "lepton_current_family_exactness_audit.json"
@@ -34,6 +42,14 @@ def test_lepton_exactness_audit_identifies_common_shift_as_insufficient() -> Non
     subprocess.run([sys.executable, str(ENDPOINT_RATIO_BREAKER_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(ABSOLUTE_SCALE_GAP_IDENTITY_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(ABSOLUTE_SCALE_UNDERDETERMINATION_SCRIPT)], check=True, cwd=ROOT)
+    subprocess.run([sys.executable, str(TRACE_LIFT_SCRIPT)], check=True, cwd=ROOT)
+    subprocess.run([sys.executable, str(DETERMINANT_SCRIPT)], check=True, cwd=ROOT)
+    subprocess.run([sys.executable, str(ANCHOR_SCRIPT)], check=True, cwd=ROOT)
+    subprocess.run([sys.executable, str(COCYCLE_SCRIPT)], check=True, cwd=ROOT)
+    subprocess.run([sys.executable, str(DESCENT_SCRIPT)], check=True, cwd=ROOT)
+    subprocess.run([sys.executable, str(NO_GO_SCRIPT)], check=True, cwd=ROOT)
+    subprocess.run([sys.executable, str(ROUTE_SCRIPT)], check=True, cwd=ROOT)
+    subprocess.run([sys.executable, str(FRONTIER_FACTORIZATION_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(END_TO_END_IMPOSSIBILITY_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(AUDIT_SCRIPT)], check=True, cwd=ROOT)
 
@@ -62,14 +78,52 @@ def test_lepton_exactness_audit_identifies_common_shift_as_insufficient() -> Non
     assert payload["absolute_scale_closure_status"]["present_chain_under_determines_g_e"] is True
     assert payload["absolute_scale_closure_status"]["charged_absolute_equalizer_status"] == "NO_GO_COMMON_SHIFT"
     assert payload["absolute_scale_closure_status"]["honest_missing_transport_scalar"] == "A_ch"
+    assert payload["absolute_scale_closure_status"]["honest_post_promotion_single_slot"] == "refinement_stable_uncentered_trace_lift"
+    assert payload["absolute_scale_closure_status"]["honest_post_promotion_internal_carrier"] == (
+        "scalar_affine_cocycle_primitive"
+    )
+    assert payload["absolute_scale_closure_status"]["honest_post_promotion_exact_descended_scalar"] == (
+        "charged_physical_affine_scalar_mu"
+    )
+    assert payload["absolute_scale_closure_status"]["promotion_only_centered_operator_no_go"] == (
+        "charged_centered_operator_cannot_emit_mu_phys"
+    )
+    assert payload["absolute_scale_closure_status"]["absolute_frontier_factorization_artifact"] == "oph_charged_absolute_frontier_factorization"
     assert payload["absolute_scale_closure_status"]["hard_reject"]["g_e"] == 0.6822819838027987
+    assert payload["trace_lift_cocycle_reduction"]["artifact"] == "oph_charged_uncentered_trace_lift_cocycle_reduction"
+    assert payload["trace_lift_cocycle_reduction"]["single_slot_preserved"] == "refinement_stable_uncentered_trace_lift"
+    assert payload["trace_lift_cocycle_reduction"]["irreducible_new_degree_of_freedom"] == (
+        "scalar affine cocycle primitive mu"
+    )
+    assert payload["trace_lift_physical_descent"]["artifact"] == "oph_charged_mu_physical_descent_reduction"
+    assert payload["trace_lift_physical_descent"]["exact_smaller_missing_object"] == (
+        "charged_physical_affine_scalar_mu"
+    )
+    assert payload["centered_operator_mu_no_go"]["artifact"] == "oph_charged_centered_operator_mu_phys_no_go"
+    assert payload["centered_operator_mu_no_go"]["theorem_id"] == "charged_centered_operator_cannot_emit_mu_phys"
+    assert payload["absolute_frontier_factorization"]["artifact"] == "oph_charged_absolute_frontier_factorization"
+    assert payload["absolute_frontier_factorization"]["current_surface_missing_object"] == "charged_absolute_anchor_A_ch"
+    assert payload["absolute_frontier_factorization"]["post_promotion_single_slot"] == "refinement_stable_uncentered_trace_lift"
+    assert payload["absolute_frontier_factorization"]["post_promotion_internal_carrier"] == (
+        "scalar_affine_cocycle_primitive"
+    )
+    assert payload["absolute_frontier_factorization"]["post_promotion_exact_descended_scalar"] == (
+        "charged_physical_affine_scalar_mu"
+    )
+    assert payload["absolute_frontier_factorization"]["promotion_only_no_go"] == (
+        "charged_centered_operator_cannot_emit_mu_phys"
+    )
     assert payload["end_to_end_closure_decision"]["artifact"] == "oph_charged_end_to_end_impossibility_theorem"
     assert payload["end_to_end_closure_decision"]["verdict"] == "no_current_corpus_end_to_end_closure"
     assert payload["end_to_end_closure_decision"]["closure_now"] is False
+    assert payload["end_to_end_closure_decision"]["post_promotion_route_artifact"] == "oph_charged_post_promotion_absolute_closure_route"
+    assert payload["end_to_end_closure_decision"]["exact_irreducible_chain"][1]["id"] == "refinement_stable_uncentered_trace_lift"
+    assert payload["end_to_end_closure_decision"]["induced_after_irreducible_chain"]["charged_absolute_anchor"]["id"] == "charged_absolute_anchor_A_ch"
     assert payload["charged_sector_response_operator_candidate"]["name"] == "C_hat_e^{cand}"
     assert payload["charged_sector_response_operator_candidate"]["smallest_missing_clause"] == "compression_descendant_commutator_vanishes_or_is_uniformly_quadratic_small_after_central_split"
     assert payload["charged_sector_response_operator_candidate"]["latent_in_flavor_chain"] is True
     assert payload["red_team_branch_verdict"]["smallest_missing_theorem_object"] == "oph_generation_bundle_branch_generator_splitting"
+    assert payload["red_team_branch_verdict"]["post_promotion_single_slot"] == "refinement_stable_uncentered_trace_lift"
     waiting = payload["exact_waiting_set"]
     assert waiting["mandatory_package_a"]["id"] == "charged_sector_response_pushforward_to_C_hat_e"
     assert waiting["mandatory_package_a"]["status"] == "blocked_by_upstream_promotion_theorem"

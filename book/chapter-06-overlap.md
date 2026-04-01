@@ -141,7 +141,7 @@ Think of it like attention. If you're having a deeply intimate conversation with
 
 ### The Consistency Filter
 
-Now here is the reframing: **Bell-violating correlations are not treated here as a bug, but as a structural feature that may help an observer-consistency framework remain viable.**
+Now here is the reframing: **Bell-violating correlations are treated here as a structural feature that may help an observer-consistency framework remain viable.**
 
 Imagine the space of all possible local states-all assignments of density matrices to patches. This space is enormous. Most assignments are inconsistent; different patches disagree on overlaps.
 
@@ -198,7 +198,7 @@ In practice, overlap requires more than just spatial coincidence. Two astronomer
 
 The overlap becomes useful only when they agree on the translation between their frames. Agreement always includes some shared dictionary.
 
-This is why physics uses standardized units, coordinate systems, and calibration procedures. These aren't arbitrary conventions-they're the protocols that make overlap possible.
+Physics uses standardized units, coordinate systems, and calibration procedures because they are the protocols that make overlap possible.
 
 ### Overlap Has a Cost
 
@@ -298,7 +298,7 @@ But each observable appears once in a row and once in a column. So the product o
 
 +1 does not equal -1. Contradiction.
 
-No consistent value assignment exists. The values depend on context-which other measurements you're performing simultaneously. This is **contextuality**, and it's not a feature of our ignorance but a feature of reality.
+No consistent value assignment exists. The values depend on context, on which other measurements you're performing simultaneously. This is **contextuality**, and it is a feature of reality rather than a feature of our ignorance.
 
 ## 6.8 Wigner's Friend: Consistency Between Nested Observers
 

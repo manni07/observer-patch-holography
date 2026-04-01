@@ -26,6 +26,21 @@ ABSOLUTE_SCALE_GAP_IDENTITY_JSON = ROOT / "particles" / "runs" / "leptons" / "ch
 ABSOLUTE_SCALE_UNDERDETERMINATION_JSON = ROOT / "particles" / "runs" / "leptons" / "charged_absolute_scale_underdetermination_theorem.json"
 GENERATION_BUNDLE_JSON = ROOT / "particles" / "runs" / "flavor" / "generation_bundle_branch_generator.json"
 END_TO_END_IMPOSSIBILITY_JSON = ROOT / "particles" / "runs" / "leptons" / "charged_end_to_end_impossibility_theorem.json"
+POST_PROMOTION_ROUTE_JSON = (
+    ROOT / "particles" / "runs" / "leptons" / "charged_post_promotion_absolute_closure_route.json"
+)
+ABSOLUTE_FRONTIER_FACTORIZATION_JSON = (
+    ROOT / "particles" / "runs" / "leptons" / "charged_absolute_frontier_factorization.json"
+)
+TRACE_LIFT_COCYCLE_REDUCTION_JSON = (
+    ROOT / "particles" / "runs" / "leptons" / "charged_uncentered_trace_lift_cocycle_reduction.json"
+)
+TRACE_LIFT_PHYSICAL_DESCENT_JSON = (
+    ROOT / "particles" / "runs" / "leptons" / "charged_mu_physical_descent_reduction.json"
+)
+CENTERED_OPERATOR_MU_NO_GO_JSON = (
+    ROOT / "particles" / "runs" / "leptons" / "charged_centered_operator_mu_phys_no_go.json"
+)
 DEFAULT_OUT = ROOT / "particles" / "runs" / "leptons" / "lepton_current_family_exactness_audit.json"
 
 
@@ -58,6 +73,11 @@ def main() -> int:
     parser.add_argument("--absolute-scale-gap-identity", default=str(ABSOLUTE_SCALE_GAP_IDENTITY_JSON))
     parser.add_argument("--absolute-scale-underdetermination", default=str(ABSOLUTE_SCALE_UNDERDETERMINATION_JSON))
     parser.add_argument("--generation-bundle", default=str(GENERATION_BUNDLE_JSON))
+    parser.add_argument("--post-promotion-route", default=str(POST_PROMOTION_ROUTE_JSON))
+    parser.add_argument("--absolute-frontier-factorization", default=str(ABSOLUTE_FRONTIER_FACTORIZATION_JSON))
+    parser.add_argument("--trace-lift-cocycle-reduction", default=str(TRACE_LIFT_COCYCLE_REDUCTION_JSON))
+    parser.add_argument("--trace-lift-physical-descent", default=str(TRACE_LIFT_PHYSICAL_DESCENT_JSON))
+    parser.add_argument("--centered-operator-mu-no-go", default=str(CENTERED_OPERATOR_MU_NO_GO_JSON))
     parser.add_argument("--end-to-end-impossibility", default=str(END_TO_END_IMPOSSIBILITY_JSON))
     parser.add_argument("--output", default=str(DEFAULT_OUT))
     args = parser.parse_args()
@@ -129,6 +149,36 @@ def main() -> int:
     generation_bundle = (
         json.loads(generation_bundle_path.read_text(encoding="utf-8"))
         if generation_bundle_path.exists()
+        else None
+    )
+    post_promotion_route_path = Path(args.post_promotion_route)
+    post_promotion_route = (
+        json.loads(post_promotion_route_path.read_text(encoding="utf-8"))
+        if post_promotion_route_path.exists()
+        else None
+    )
+    absolute_frontier_factorization_path = Path(args.absolute_frontier_factorization)
+    absolute_frontier_factorization = (
+        json.loads(absolute_frontier_factorization_path.read_text(encoding="utf-8"))
+        if absolute_frontier_factorization_path.exists()
+        else None
+    )
+    trace_lift_cocycle_reduction_path = Path(args.trace_lift_cocycle_reduction)
+    trace_lift_cocycle_reduction = (
+        json.loads(trace_lift_cocycle_reduction_path.read_text(encoding="utf-8"))
+        if trace_lift_cocycle_reduction_path.exists()
+        else None
+    )
+    trace_lift_physical_descent_path = Path(args.trace_lift_physical_descent)
+    trace_lift_physical_descent = (
+        json.loads(trace_lift_physical_descent_path.read_text(encoding="utf-8"))
+        if trace_lift_physical_descent_path.exists()
+        else None
+    )
+    centered_operator_mu_no_go_path = Path(args.centered_operator_mu_no_go)
+    centered_operator_mu_no_go = (
+        json.loads(centered_operator_mu_no_go_path.read_text(encoding="utf-8"))
+        if centered_operator_mu_no_go_path.exists()
         else None
     )
     end_to_end_impossibility_path = Path(args.end_to_end_impossibility)
@@ -370,12 +420,91 @@ def main() -> int:
             "compare_only_delta_e_abs_star": absolute_scale_underdetermination.get("compare_only_continuation_target", {}).get("delta_e_abs_star"),
             "hard_reject": absolute_scale_underdetermination.get("hard_reject"),
             "honest_missing_transport_scalar": absolute_scale_underdetermination.get("minimal_new_theorem", {}).get("required_new_scalar"),
+            "honest_post_promotion_single_slot": (
+                post_promotion_route.get("post_promotion_single_slot", {}).get("id")
+                if post_promotion_route is not None
+                else None
+            ),
+            "honest_post_promotion_internal_carrier": (
+                post_promotion_route.get("post_promotion_single_slot", {}).get("internal_carrier")
+                if post_promotion_route is not None
+                else None
+            ),
+            "honest_post_promotion_exact_descended_scalar": (
+                post_promotion_route.get("post_promotion_single_slot", {}).get("exact_descended_scalar", {}).get("id")
+                if post_promotion_route is not None
+                else None
+            ),
+            "promotion_only_centered_operator_no_go": (
+                post_promotion_route.get("promotion_only_no_go", {}).get("theorem_id")
+                if post_promotion_route is not None
+                else None
+            ),
+            "absolute_frontier_factorization_artifact": (
+                absolute_frontier_factorization.get("artifact")
+                if absolute_frontier_factorization is not None
+                else None
+            ),
+        },
+        "trace_lift_cocycle_reduction": None if trace_lift_cocycle_reduction is None else {
+            "artifact": trace_lift_cocycle_reduction.get("artifact"),
+            "status": trace_lift_cocycle_reduction.get("status"),
+            "single_slot_preserved": trace_lift_cocycle_reduction.get("single_slot_preserved"),
+            "irreducible_new_degree_of_freedom": trace_lift_cocycle_reduction.get(
+                "matrix_vs_scalar_content", {}
+            ).get("irreducible_new_degree_of_freedom"),
+            "pairwise_difference_rule": trace_lift_cocycle_reduction.get("scalar_cocycle_contract", {}).get(
+                "pairwise_difference_rule"
+            ),
+            "primitive_required_on_fill": trace_lift_cocycle_reduction.get("scalar_cocycle_contract", {}).get(
+                "primitive_required_on_fill"
+            ),
+        },
+        "trace_lift_physical_descent": None if trace_lift_physical_descent is None else {
+            "artifact": trace_lift_physical_descent.get("artifact"),
+            "status": trace_lift_physical_descent.get("status"),
+            "exact_smaller_missing_object": trace_lift_physical_descent.get("exact_smaller_missing_object"),
+            "forced_refinement_identity_mode": trace_lift_physical_descent.get("forced_vanishing", {}).get(
+                "on_same_physical_Y_e"
+            ),
+        },
+        "centered_operator_mu_no_go": None if centered_operator_mu_no_go is None else {
+            "artifact": centered_operator_mu_no_go.get("artifact"),
+            "status": centered_operator_mu_no_go.get("status"),
+            "theorem_id": centered_operator_mu_no_go.get("no_go_theorem", {}).get("id"),
+            "forbidden_target": centered_operator_mu_no_go.get("target_scalar", {}).get("id"),
+            "trace_zero_by_construction": centered_operator_mu_no_go.get("input_surface", {}).get(
+                "trace_zero_by_construction"
+            ),
+        },
+        "absolute_frontier_factorization": None if absolute_frontier_factorization is None else {
+            "artifact": absolute_frontier_factorization.get("artifact"),
+            "status": absolute_frontier_factorization.get("status"),
+            "current_surface_missing_object": absolute_frontier_factorization.get("current_surface_layer", {}).get("exact_missing_object"),
+            "post_promotion_single_slot": absolute_frontier_factorization.get("post_promotion_layer", {}).get("irreducible_single_slot", {}).get("id"),
+            "post_promotion_internal_carrier": absolute_frontier_factorization.get("post_promotion_layer", {}).get(
+                "irreducible_single_slot", {}
+            ).get("internal_carrier"),
+            "post_promotion_exact_descended_scalar": absolute_frontier_factorization.get(
+                "frontier_ledger", {}
+            ).get("post_promotion_exact_descended_scalar"),
+            "promotion_only_no_go": absolute_frontier_factorization.get("post_promotion_layer", {}).get(
+                "promotion_only_no_go", {}
+            ).get("theorem_id"),
+            "reduction_theorem_id": absolute_frontier_factorization.get("frontier_ledger", {}).get("reduction_theorem_id"),
+            "theorem_statement": absolute_frontier_factorization.get("theorem_statement"),
         },
         "end_to_end_closure_decision": None if end_to_end_impossibility is None else {
             "artifact": end_to_end_impossibility.get("artifact"),
             "verdict": end_to_end_impossibility.get("verdict"),
             "closure_now": end_to_end_impossibility.get("closure_now"),
             "exact_irreducible_chain": end_to_end_impossibility.get("exact_irreducible_chain"),
+            "induced_after_irreducible_chain": end_to_end_impossibility.get("induced_after_irreducible_chain"),
+            "post_promotion_route_artifact": (
+                post_promotion_route.get("artifact")
+                if post_promotion_route is not None
+                else None
+            ),
             "theorem_forbid_emit_now": end_to_end_impossibility.get("theorem_forbid_emit_now"),
         },
         "charged_sector_response_operator_candidate": None if generation_bundle is None else {
@@ -451,6 +580,11 @@ def main() -> int:
                 else None
             ),
             "next_exact_object_after_that": "refinement_stable_uncentered_trace_lift",
+            "post_promotion_single_slot": (
+                post_promotion_route.get("post_promotion_single_slot", {}).get("id")
+                if post_promotion_route is not None
+                else None
+            ),
             "next_exact_object_after_that_if_closed": "charged_absolute_anchor_A_ch",
             "do_not_promote": [
                 "eta_source_support_extension_log_per_side",
@@ -507,6 +641,9 @@ def main() -> int:
             "The full two-scalar support-extension completion law is now explicit on disk; the live same-carrier primitive is the eta source-readback, followed by the sigma endpoint-ratio breaker.",
             "The stronger same-carrier source-scalar pair readback is also now explicit on disk, collecting those eta and sigma invariants into one ordered primitive beneath the full completion shell.",
             "At theorem level, eta and sigma are no longer the deepest honest waiting set. The live builder still exposes eta then sigma as the first same-carrier residuals, but the paper-facing exact burden is first to promote the latent candidate C_hat_e^{cand} by closing the branch-generator splitting theorem, then to restore the lost affine mode through a refinement-stable uncentered trace lift of the charged response, from which the determinant-line section and the affine absolute coordinate A_ch are induced.",
+            "That post-promotion lift slot is now reduced more sharply too: after centered promotion the only remaining ambiguity is a scalar affine cocycle primitive mu on the refinement family, not an extra matrix-valued theorem beyond the uncentered trace lift.",
+            "And because the lift is already required to be refinement-stable on theorem-grade physical Y_e, that primitive descends further to one physical affine scalar mu_phys(Y_e).",
+            "A sharper impossibility theorem is now on disk too: even a future theorem-grade centered C_hat_e cannot emit mu_phys(Y_e) by itself, because centered operator data stays common-shift invariant.",
             (
                 "The charged sector-response operator remains undeclared: only the latent candidate C_hat_e^{cand} is on disk, and its promotion is blocked by the upstream theorem oph_generation_bundle_branch_generator_splitting together with the smaller clause compression_descendant_commutator_vanishes_or_is_uniformly_quadratic_small_after_central_split."
                 if generation_bundle is not None

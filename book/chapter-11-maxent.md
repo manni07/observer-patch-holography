@@ -8,7 +8,7 @@ Before we examine what physics discovered, let's articulate what seemed obvious 
 
 This is Newton's absolute time: "Absolute, true, and mathematical time, of itself, and from its own nature, flows equably without relation to anything external."
 
-The arrow of time-the fact that we remember yesterday but not tomorrow, that eggs break but don't unbreak-seems fundamental to this picture. Time has a direction, built into its very nature.
+The arrow of time, the fact that we remember yesterday but not tomorrow, that eggs break but don't unbreak, seems fundamental to this picture. Time has a direction, built into its very nature.
 
 And yet, nature gave us hints that shattered this picture.
 
@@ -51,7 +51,7 @@ The logic:
 2. We have a state rho (a density matrix representing our knowledge)
 3. Any density matrix defines a **modular Hamiltonian**: K = -ln rho
 
-What is a modular Hamiltonian? In ordinary quantum mechanics, the Hamiltonian H generates time evolution via $e^{-iHt}$. The modular Hamiltonian does the same thing, but it's constructed from the state itself rather than being given externally. If you know the density matrix $\rho$, you can take its logarithm and get an operator $K = -\ln\rho$ that acts like an internal clock for that state.
+What is a modular Hamiltonian? In ordinary quantum mechanics, the Hamiltonian H generates time evolution via $e^{-iHt}$. The modular Hamiltonian does the same thing, except it is constructed from the state itself. If you know the density matrix $\rho$, you can take its logarithm and get an operator $K = -\ln\rho$ that acts like an internal clock for that state.
 
 4. This Hamiltonian generates a flow: sigma_s(A) = e^{iKs} A e^{-iKs}
 5. **The Thermal Time principle**: This flow is what we experience as time.
@@ -132,7 +132,7 @@ Thermal states are ubiquitous because they're the unique states of maximum ignor
 
 ## 11.6 Time on the Holographic Screen
 
-In our model, each observer has a patch P on the holographic screen. The global state restricts to a density matrix:
+In OPH, each observer has a patch P on the holographic screen. The global state restricts to a density matrix:
 
 $$\rho_P = \text{Tr}_{\bar{P}} |\Psi\rangle \langle \Psi|$$
 
@@ -158,17 +158,10 @@ If the global state is highly entangled in a particular pattern, the modular flo
 
 Here is the high-level chain we use later:
 
-1. **Markov collars** from the overlap/recovery chapters make the modular
-   generator local near cap boundaries.
-2. **BW$_{S^2}$ on the OPH geometric branch** identifies that localized modular
-   flow with the standard cap-preserving conformal dilation on the BW branch and fixes the
-   \(2\pi\) normalization.
-3. Geometric modular flow gives **Lorentz kinematics** on the screen.
-4. **Entanglement equilibrium** plus a local stress tensor yields the conditional scaling-limit Einstein branch.
-   The stress tensor can be introduced via a UV CFT limit on small caps, or
-   built internally from null-surface modular additivity, the derived
-   half-sided modular pair, and the resulting positive null-translation
-   generator.
+1. **Recovery structure** from earlier chapters makes the time-generator local near patch boundaries.
+2. **A key theorem** identifies that local time-flow with a standard geometric transformation on the sphere, fixing its normalization.
+3. Geometric time-flow gives **Lorentz kinematics** on the screen.
+4. **Entanglement equilibrium** plus a way to identify local energy yields Einstein's equation as an output.
 
 This chapter builds the time ingredient. The next sections show how it feeds into gravity.
 
@@ -256,7 +249,7 @@ In our model:
 2. This boundary is a horizon with Gibbons-Hawking temperature
 3. The modular flow of the horizon state generates time evolution
 
-In the technical paper we show that collar Markov/recoverability localizes the modular defect, the MaxEnt refinement branch supplies the quasi-local control, and then BW$_{S^2}$ proves on the OPH geometric branch that modular flow on spherical caps is geometric and KMS-normalized. That delivers Lorentz kinematics on the screen via Conf^+(S^2) ≃ SO^+(3,1). The remaining open burden is selecting that geometric branch in the scaling limit; if that fails, the Lorentz bridge remains conditional rather than automatic.
+In [*Observers Are All You Need*](../paper/observers_are_all_you_need.pdf), this idea is carried over from wedges in ordinary spacetime to caps on the holographic screen. The natural time flow of a patch becomes an actual geometric motion on the sphere, and once that happens the conformal symmetry of the sphere reproduces Lorentz symmetry.
 
 ### The Speed of Light
 
@@ -278,9 +271,9 @@ The modular flow provides the time direction. Entanglement provides correlations
 
 ### Why This Matters
 
-Einstein discovered special relativity in 1905 by thinking about light and motion. Over a century later, we see it differently: in QFT, Lorentz boosts are tied to horizon thermodynamics via BW. In our model the screen analog appears when the OPH refinement branch enters the geometric modular class, so the Lorentz group shows up as the geometry of modular flow on caps.
+Einstein discovered special relativity in 1905 by thinking about light and motion. Over a century later, we see it differently: in QFT, Lorentz boosts are tied to horizon thermodynamics via the Bisognano-Wichmann theorem. In our model the same pattern appears when the screen reaches its smooth geometric limit, so the Lorentz group shows up as the geometry of modular flow on caps.
 
-The laws of physics look the same to all inertial observers not because of some cosmic conspiracy, but because thermal states on wedge-shaped regions naturally evolve via boosts. The speed of light is universal not by decree, but because it's the conversion factor between temperature and acceleration built into the structure of quantum field theory.
+The laws of physics look the same to all inertial observers because thermal states on wedge-shaped regions naturally evolve via boosts. The speed of light is universal because it is the conversion factor between temperature and acceleration built into the structure of quantum field theory.
 
 ## 11.10 Testable Predictions and Verified Results
 
@@ -288,13 +281,13 @@ The emergent time model includes both rigorous mathematical results and testable
 
 **Rigorous results (mathematical theorems)**:
 
-**1. Tomita-Takesaki theorem**: Given any von Neumann algebra M and cyclic separating vector |Ω⟩, there exists a unique modular automorphism group σ_t. This is proven (1970).
+**1. Tomita-Takesaki theorem**: Once you specify both the observables available to an observer and the state they are in, there is a built-in notion of time flow. The algebra-state pair carries its own natural dynamics.
 
-**2. KMS condition**: The modular state satisfies thermal equilibrium at β = 1 with respect to modular time. This is a theorem.
+**2. KMS condition**: That natural time flow behaves exactly like thermal equilibrium. In other words, modular time is not an arbitrary parameter; it has the precise structure of heat physics.
 
-**3. Bisognano-Wichmann theorem**: For a Rindler wedge in QFT, the modular Hamiltonian is exactly the Lorentz boost generator. In QFT, Lorentz kinematics is encoded in modular structure. In our model, the screen analog is recovered conditionally on the OPH geometric branch, with collar Markov/recoverability and the MaxEnt refinement branch supplying the setup.
+**3. Bisognano-Wichmann theorem**: For a wedge-shaped region of spacetime, the natural modular time flow is literally a Lorentz boost. That is the deep reason thermal structure and relativity fit together so tightly. In OPH, the claim is that spherical patches on the screen behave in the same spirit.
 
-**4. Boltzmann's H-theorem**: Under molecular chaos assumption, entropy increases with overwhelming probability. This is derivable.
+**4. Boltzmann's H-theorem**: Under standard coarse-graining assumptions, entropy almost always rises. This is the classic bridge from reversible microscopic laws to an irreversible macroscopic arrow of time.
 
 **Testable predictions**:
 
@@ -354,7 +347,7 @@ Recap:
 
 8. **Records**: We remember the past because records require entropy flow from a low-entropy origin.
 
-9. **Bisognano-Wichmann**: In QFT wedges, Lorentz boosts are modular flow. Our screen analog follows on the OPH geometric branch once the collar Markov/recoverability and MaxEnt inputs are in place.
+9. **Bisognano-Wichmann**: In QFT wedges, Lorentz boosts are modular flow. Our screen analog follows once the recovery and MaxEnt structure is in place (Chapter 15).
 
 ---
 

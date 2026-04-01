@@ -33,6 +33,7 @@ DEFAULT_SEQUENCE_EVALUATION = ROOT / "particles" / "runs" / "hadron" / "stable_c
 DEFAULT_SURROGATE_BRIDGE = ROOT / "particles" / "runs" / "hadron" / "hadron_surrogate_execution_bridge_status.json"
 DEFAULT_GEOMETRY_SUMMARY = ROOT / "particles" / "runs" / "hadron" / "production_geometry_summary.json"
 DEFAULT_CLOSURE_REPORT = ROOT / "particles" / "runs" / "hadron" / "hadron_production_closure_validation_report.json"
+DEFAULT_READINESS_REPORT = ROOT / "particles" / "runs" / "hadron" / "hadron_production_readiness_report.json"
 DEFAULT_OUT = ROOT / "particles" / "runs" / "hadron" / "current_hadron_lane_audit.json"
 
 
@@ -49,9 +50,14 @@ def classify_pipeline(
     surrogate_bridge: dict[str, Any] | None,
     geometry_summary: dict[str, Any] | None,
     closure_report: dict[str, Any] | None,
+    readiness_report: dict[str, Any] | None,
 ) -> dict[str, Any]:
     blockers: list[str] = []
     stable_channels_ready = bool((closure_report or {}).get("public_unsuppression_ready"))
+    publication_bundle_ready = (
+        True if readiness_report is None else bool(readiness_report.get("publication_bundle_ready"))
+    )
+    publicly_ready = stable_channels_ready and publication_bundle_ready
     next_missing_object = full_unquenched.get("next_missing_object")
     population_status = ((full_unquenched.get("population_contract") or {}).get("status"))
     sequence_status = None if sequence_population is None else sequence_population.get("status")
@@ -60,9 +66,16 @@ def classify_pipeline(
     contraction_status = None if contraction_plan is None else contraction_plan.get("status")
     contraction_ready = contraction_status in {"closed", "formula_closed"}
 
-    if stable_channels_ready:
+    if publicly_ready:
         blockers.extend(["finite_volume_resonance_and_spectrum_readout"])
         effective_next_missing_object = "rho_resonance_extraction"
+    elif stable_channels_ready and not publication_bundle_ready:
+        blockers.extend(["production_backend_publication_provenance"])
+        effective_next_missing_object = (
+            readiness_report.get("smallest_backend_residual_object")
+            if readiness_report is not None
+            else "publication-complete backend manifest provenance on the seeded family"
+        )
     elif evaluation_status == "awaiting_measure_evaluation" or payload_status == "law_closed_waiting_measure_realization":
         blockers.extend(
             [
@@ -107,7 +120,9 @@ def classify_pipeline(
     return {
         "lane_status": (
             "stable_channel_public_ready"
-            if stable_channels_ready
+            if publicly_ready
+            else "stable_channel_numeric_closure_waiting_publication_bundle"
+            if stable_channels_ready and not publication_bundle_ready
             else "assembly_in_progress"
             if blockers
             else "closure_candidate"
@@ -136,6 +151,12 @@ def classify_pipeline(
             "production_closure_grade": (
                 closure_report.get("closure_grade") if closure_report is not None else None
             ),
+            "publication_bundle_ready": publication_bundle_ready,
+            "smallest_backend_residual_object": (
+                readiness_report.get("smallest_backend_residual_object")
+                if readiness_report is not None
+                else None
+            ),
         },
     }
 
@@ -149,6 +170,7 @@ def build_audit(
     surrogate_bridge: dict[str, Any] | None,
     geometry_summary: dict[str, Any] | None,
     closure_report: dict[str, Any] | None,
+    readiness_report: dict[str, Any] | None,
     references: dict[str, Any],
 ) -> dict[str, Any]:
     classification = classify_pipeline(
@@ -160,9 +182,14 @@ def build_audit(
         surrogate_bridge,
         geometry_summary,
         closure_report,
+        readiness_report,
     )
     seeded = (full_unquenched.get("population_contract") or {}).get("status") == "predictive_ensemble_seeded_candidate"
     stable_channels_ready = bool((closure_report or {}).get("public_unsuppression_ready"))
+    publication_bundle_ready = (
+        True if readiness_report is None else bool(readiness_report.get("publication_bundle_ready"))
+    )
+    public_ready = stable_channels_ready and publication_bundle_ready
     sequence_status = None if sequence_population is None else sequence_population.get("status")
     payload_status = None if cfg_source_payload is None else cfg_source_payload.get("status")
     evaluation_status = None if sequence_evaluation is None else sequence_evaluation.get("status")
@@ -178,10 +205,12 @@ def build_audit(
         "current_frontier": list(classification.get("current_frontier", [])),
         "smallest_constructive_missing_object": classification.get("smallest_constructive_missing_object"),
         "public_status_surface_policy": {
-            "include_hadrons_by_default": stable_channels_ready,
+            "include_hadrons_by_default": public_ready,
             "reason": (
                 "stable_channels_ready_rho_pending"
-                if stable_channels_ready
+                if public_ready
+                else "stable_channels_ready_publication_bundle_incomplete"
+                if stable_channels_ready and not publication_bundle_ready
                 else "hadron_pipeline_not_closed"
             ),
         },
@@ -194,8 +223,21 @@ def build_audit(
         "pipeline_classification": classification,
         "promotion_verdict": (
             "stable_channels_ready_rho_pending"
-            if stable_channels_ready
+            if public_ready
+            else "stable_channels_ready_waiting_publication_bundle"
+            if stable_channels_ready and not publication_bundle_ready
             else "suppress_from_public_surface"
+        ),
+        "production_backend_readiness": (
+            None
+            if readiness_report is None
+            else {
+                "artifact": readiness_report.get("artifact"),
+                "publication_bundle_ready": readiness_report.get("publication_bundle_ready"),
+                "smallest_backend_residual_object": readiness_report.get("smallest_backend_residual_object"),
+                "backend_manifest_publication_status": readiness_report.get("backend_manifest_publication_status"),
+                "production_dump_status": readiness_report.get("production_dump_status"),
+            }
         ),
         "surrogate_execution_bridge": (
             None
@@ -330,7 +372,10 @@ def build_audit(
             "The current hadron pipeline is anchored on the unquenched correlator producer, the stable-channel readout, and the rho scattering readout.",
             (
                 "The seeded stable-channel branch now has executed cfg/source arrays, forward-window certificates, and published statistical/systematic fields, so `pi_iso` and `N_iso` are promotable while `rho` remains a separate scattering task."
-                if stable_channels_ready
+                if public_ready
+                else
+                "The seeded stable-channel branch is numerically closed, but the publication bundle is still incomplete, so the public surface stays suppressed until backend provenance is publication-complete."
+                if stable_channels_ready and not publication_bundle_ready
                 else
                 "The ensemble seed is now fixed from Lambda_MSbar^(3) and the quark descendants; the sequence-emission and jackknife evaluation laws are fixed too, so the next local move is realizing the per-ensemble stable-channel cfg/source payload arrays on that family."
                 if measure_realization_open and not schedule_emitted
@@ -343,7 +388,10 @@ def build_audit(
             ),
             (
                 "Stable-channel public unsuppression is now driven by the closure validator rather than another theorem-only artifact."
-                if stable_channels_ready
+                if public_ready
+                else
+                "The closure validator is necessary but no longer sufficient on its own: publication also requires a provenance-complete backend manifest bundle."
+                if stable_channels_ready and not publication_bundle_ready
                 else
                 "The runtime receipt `(N_therm, N_sep)` is the emitted execution-and-systematics contract. With that contract explicit, the first honest live residual object is the production backend correlator dump on the seeded 2+1 family."
                 if measure_realization_open
@@ -353,6 +401,11 @@ def build_audit(
                 "A separate surrogate HMC/RHMC execution bridge is now recorded too: it closes the receipt/writeback/evaluation/convergence/systematics path on the emitted schema, but it is diagnostic only and does not replace production unquenched execution."
                 if surrogate_bridge is not None
                 else "No surrogate execution-bridge diagnostic is attached to this audit."
+            ),
+            (
+                "The backend readiness report now sharpens the backend-side residual further: after the filled receipt, the live publication boundary is a production bundle with publication-complete manifest provenance plus real correlator arrays, not just an unnamed dump."
+                if readiness_report is not None
+                else "No backend readiness report is attached to this audit."
             ),
             "The runtime receipt should now be treated as an execution-and-systematics contract: once it is filled, the honest remaining work is executed unquenching, array writeback, and published continuum/volume/chiral/statistical budgets.",
             "After the evaluator is populated, the next stable-channel theorem is forward-window convergence of the ground-state extraction.",
@@ -371,6 +424,7 @@ def main() -> int:
     parser.add_argument("--surrogate-bridge", default=str(DEFAULT_SURROGATE_BRIDGE))
     parser.add_argument("--geometry-summary", default=str(DEFAULT_GEOMETRY_SUMMARY))
     parser.add_argument("--closure-report", default=str(DEFAULT_CLOSURE_REPORT))
+    parser.add_argument("--readiness-report", default=str(DEFAULT_READINESS_REPORT))
     parser.add_argument("--output", default=str(DEFAULT_OUT))
     args = parser.parse_args()
 
@@ -417,6 +471,12 @@ def main() -> int:
         if closure_report_path.exists()
         else None
     )
+    readiness_report_path = pathlib.Path(args.readiness_report)
+    readiness_report = (
+        json.loads(readiness_report_path.read_text(encoding="utf-8"))
+        if readiness_report_path.exists()
+        else None
+    )
     references = json.loads(REFERENCE_JSON.read_text(encoding="utf-8"))["entries"]
     audit = build_audit(
         full_unquenched,
@@ -427,6 +487,7 @@ def main() -> int:
         surrogate_bridge,
         geometry_summary,
         closure_report,
+        readiness_report,
         references,
     )
 

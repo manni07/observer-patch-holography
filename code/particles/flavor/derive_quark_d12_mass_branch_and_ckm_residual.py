@@ -29,6 +29,8 @@ from typing import Any
 
 import numpy as np
 
+from sigma_ud_orbit_provider import load_sigma_ud_singleton_uniqueness_witness
+
 
 ROOT = Path(__file__).resolve().parents[2]
 FORWARD_JSON = ROOT / "particles" / "runs" / "flavor" / "forward_yukawas.json"
@@ -240,6 +242,8 @@ def main() -> int:
     }
     standard_parameters = _standard_ckm_parameters(v_standard)
     closure_residual = float(np.linalg.norm(_matrix_exp(k_ckm) - v_generator_surface, ord="fro"))
+    uniqueness = load_sigma_ud_singleton_uniqueness_witness()
+    selector_value = uniqueness.get("selected_sigma") if bool(uniqueness.get("theorem_grade_select")) else None
     theta_12 = standard_parameters["theta_12"]
     theta_23 = standard_parameters["theta_23"]
     theta_13 = standard_parameters["theta_13"]
@@ -252,7 +256,7 @@ def main() -> int:
         "public_promotion_allowed": False,
         "theorem_tier": "D12_continuation_only",
         "branch_key": ["D12", None],
-        "quark_relative_sheet_selector": None,
+        "quark_relative_sheet_selector": selector_value,
         "current_sheet_status": "single_local_reference_sheet_only",
         "physical_branch_status": "current_d12_sheet_is_strict_no_go_for_physical_ckm_shell",
         "sample_selector_value_source": "sample_same_family_point_on_D12_ud_mass_ray",
@@ -323,12 +327,18 @@ def main() -> int:
             "definition": "||exp(K_CKM) - V_CKM^fwd||_F on the generator-gauge surface",
             "fro_norm": closure_residual,
         },
-        "remaining_open_objects": [
-            "quark_relative_sheet_selector",
-            "D12_ud_mass_ray",
-            "intrinsic_scale_law_D12",
-            "quark_exact_mean_split_value_law_or_carrier_repair",
-        ],
+        "remaining_open_objects": (
+            [
+                "intrinsic_scale_law_D12",
+                "quark_exact_mean_split_value_law_or_carrier_repair",
+            ]
+            if selector_value is not None
+            else [
+                "quark_relative_sheet_selector",
+                "intrinsic_scale_law_D12",
+                "quark_exact_mean_split_value_law_or_carrier_repair",
+            ]
+        ),
         "debug_only_target_seeded_generator": {
             "status": "retired",
             "reason": "the honest same-label transport unitary is emitted directly by the forward Yukawa step and no target CKM seed is needed",
@@ -338,7 +348,11 @@ def main() -> int:
             "On the D12 continuation branch the CKM/CP lane closes honestly once the forward Yukawa step is reached, because the same-label transport unitary is already V_CKM^fwd = U_u^dagger U_d.",
             "But the current D12 sheet is not the physical quark branch: same-sheet rephasing leaves CKM invariants frozen, and the emitted angles on this sheet undershoot the comparison shell substantially.",
             "The only finite local scan on disk is a same-sheet Delta_ud_overlap scan against reference targets; it is comparison-only and cannot be repurposed as a Sigma_ud orbit scan.",
-            "The exact next object is therefore one discrete quark_relative_sheet_selector; mass-side scale fixing on the selected branch remains a separate issue after that branch shift.",
+            (
+                "The solver-side same-label left-handed orbit now closes to the singleton sigma_ref, so the exact next object is the intrinsic scale law on D12_ud_mass_ray; that selected branch still inherits the current CKM-shell no-go."
+                if selector_value is not None
+                else "The exact next object is therefore one discrete quark_relative_sheet_selector; mass-side scale fixing on the selected branch remains a separate issue after that branch shift."
+            ),
         ],
     }
 

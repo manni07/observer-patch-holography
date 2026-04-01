@@ -43,7 +43,7 @@ main, et non comme une affirmation selon laquelle tout le spectre observé serai
 
 - **Sorties structurelles exactes déjà présentes sur la surface actuelle :** photon, gluons, graviton.
 - **Lignes quantitatives actuellement les plus fortes :** bosons \(W\) et \(Z\) sur le théorème fermé de calibration électrofaible sans cible gelée, plus boson de Higgs et quark top sur l'étage critique Higgs/top. La branche neutrino pondérée reproduit aussi très précisément la hiérarchie d'oscillation une fois l'ancre atmosphérique compare-only fournie.
-- **Toujours inachevé :** la famille plus large des quarks reste au niveau continuation et la feuille quark actuelle est maintenant connue comme une mauvaise branche stricte pour la coquille CKM physique, si bien que le prochain objet exact est un sélecteur discret de feuille relative avant toute loi d'échelle de masse sur la branche choisie ; la voie des leptons chargés ferme déjà la forme centrée mais laisse encore ouverte la normalisation absolue faute de scalaire de transport de normalisation déterminant ; la branche neutrino pondérée actuelle reproduit le motif physique PMNS/hiérarchie mais laisse encore ouverte une unique scalaire positive de normalisation absolue ; et les hadrons sont liés à l'exécution, car des lignes promouvables exigent un calcul non perturbatif de production et un contrôle systématique réel, pas seulement une fermeture symbolique supplémentaire.
+- **Toujours inachevé :** la famille plus large des quarks reste au niveau continuation et la feuille quark actuelle est maintenant connue comme une mauvaise branche stricte pour la coquille CKM physique, mais le sélecteur local de même étiquette est désormais fermé sur le singleton `sigma_ref`, de sorte que la branche choisie est fixée tout en restant la mauvaise branche D12 ; le prochain objet exact est donc la loi d'échelle intrinsèque sur le rayon de masse D12 déjà émis, et non plus un nouveau théorème de sélection ; la voie des leptons chargés ferme déjà la forme centrée mais laisse encore ouverte la normalisation absolue, la frontière vivante passant par la promotion de `C_hat_e^{cand}` puis par la fermeture affine physique `A_ch = mu_phys(Y_e)` dont découlent canoniquement la remontée non centrée, la ligne déterminant et l'ancre affine ; la branche neutrino pondérée actuelle reproduit le motif physique PMNS/hiérarchie, ne laisse plus de branche discrète cachée supplémentaire, et attend encore la loi de pont résiduelle `B_nu`, dont la fenêtre compare-only actuelle contenant la cible est `[6.69600, 6.71040]` ; et les hadrons sont liés à l'exécution, car des lignes promouvables exigent un calcul non perturbatif de production et un contrôle systématique réel, pas seulement une fermeture symbolique supplémentaire.
 
 Le tableau ci-dessous contient les résultats les plus forts à ce stade. Les notes de statut / réserve sont placées juste après pour garder les colonnes de comparaison lisibles dans les différents rendus markdown.
 
@@ -105,18 +105,20 @@ supérieure.
 **Deriving the Particle Zoo from Observer Consistency** est l'article de statut sur le spectre de
 particules. Il enregistre le théorème fermé de calibration électrofaible pour \(W/Z\) après
 fixation de l'échelle commune \(P\), suit les sorties actuelles pour Higgs/top et plusieurs
-quarks, précise explicitement que la feuille quark actuelle est fermée du côté transport mais
-reste une mauvaise branche pour la coquille CKM physique et attend donc d'abord l'orbite finie
-relative de même étiquette ainsi que le provider/evaluator qui l'expose, avant tout sélecteur
-discret et toute loi d'échelle de masse sur la branche choisie, explique que la voie des leptons
+quarks, précise explicitement que la feuille quark actuelle est fermée du côté transport et que le
+sélecteur local de même étiquette se ferme désormais sur `sigma_ref`, ce qui fixe la branche
+choisie tout en laissant intacte la mauvaise coquille CKM physique ; le prochain objet exact n'est
+donc plus un nouveau sélecteur discret mais la loi d'échelle intrinsèque sur le rayon de masse D12
+déjà émis, traite le dictionnaire partagé d'excitation comme la base probatoire commune des voies
+de saveur plutôt que comme l'objet manquant suivant, explique que la voie des leptons
 chargés ne fixe pour l'instant que la classe de logs centrés tant que `C_hat_e^{cand}` n'est pas promu par le
-théorème de branch-generator splitting et que la remontée de trace non centrée sous la route via la
-ligne déterminant ne s'est pas refermée, enregistre la branche neutrino
+théorème de branch-generator splitting et que la fermeture affine physique `A_ch = mu_phys(Y_e)`,
+dont découlent canoniquement la remontée non centrée, la ligne déterminant et l'ancre affine, n'a pas été émise, enregistre la branche neutrino
 pondérée actuelle avec `theta12 = 34.2259°`, `theta23 = 49.7228°`, `theta13 = 8.68636°`,
 `delta = 305.581°` et `Delta m21^2 / Delta m32^2 = 0.03072111`, compare ces nombres directement
 à la surface oscillatoire PDG, explique que la section normalisée des poids de défaut de
 recouvrement est déjà fermée tandis que le spectre neutrino absolu attend encore le scalaire de pont résiduel
-`B_nu`, qui induit ensuite `lambda_nu` après la factorisation exacte `q_mean^p_nu`, et indique que les hadrons restent
+`B_nu`, avec fenêtre compare-only actuelle `[6.69600, 6.71040]`, qui induit ensuite `lambda_nu` après la factorisation exacte `q_mean^p_nu`, et indique que les hadrons restent
 liés à l'exécution plutôt qu'à des lignes de sortie déjà dérivées dans l'article.
 
 - **PDF :** [Deriving the Particle Zoo from Observer Consistency](paper/deriving_the_particle_zoo_from_observer_consistency.pdf)

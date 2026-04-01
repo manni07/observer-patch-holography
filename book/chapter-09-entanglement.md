@@ -130,7 +130,7 @@ The Tsirelson bound S = 2sqrt(2) is the maximum allowed by quantum mechanics. It
 
 This shows a deep connection: **quantum correlations are precisely as strong as consistency allows**. Classical is too weak-it fails certain consistency tests. Super-quantum is too strong-it violates causality. Quantum sits at the sweet spot.
 
-In our model, this connects to overlap consistency. When patches on the S^2 screen overlap, observers must agree on shared observables. The correlations needed to maintain this agreement across all possible overlaps require exactly quantum mechanics-not classical, not super-quantum.
+In OPH, this connects to overlap consistency. When patches on the S^2 screen overlap, observers must agree on shared observables. The correlations needed to maintain this agreement across all possible overlaps require exactly quantum mechanics-not classical, not super-quantum.
 
 Classical correlations are too weak, super-quantum ones break causality. Quantum mechanics sits at the exact consistency sweet spot.
 
@@ -236,7 +236,7 @@ The answer involves **decoherence** and **quantum Darwinism**.
 
 When a quantum system interacts with its environment, certain "pointer states" become stable-states that can be copied into the environment without being destroyed. The environment measures them repeatedly, storing redundant records.
 
-Classical facts are quantum information that got copied everywhere. You look at a chair. I look at the same chair. We agree-not because we're accessing the chair directly, but because we're both sampling redundant records in the environment.
+Classical facts are quantum information that got copied everywhere. You look at a chair. I look at the same chair. We agree because we're both sampling redundant records in the environment.
 
 This is error correction as a law of physics. Reality stabilizes itself through redundancy.
 

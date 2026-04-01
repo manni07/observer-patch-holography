@@ -12,34 +12,37 @@ import argparse
 import json
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
 
-
-ROOT = Path(__file__).resolve().parents[2]
-UNDERDETERMINATION_JSON = (
-    ROOT / "particles" / "runs" / "leptons" / "charged_absolute_scale_underdetermination_theorem.json"
+from charged_absolute_route_common import (
+    ANCHOR_SECTION_JSON,
+    GENERATION_BUNDLE_JSON,
+    TRACE_LIFT_COCYCLE_JSON,
+    TRACE_LIFT_PHYSICAL_DESCENT_JSON,
+    TRACE_LIFT_JSON,
+    UNDERDETERMINATION_JSON,
+    anchor_hard_rejections,
+    anchor_input_contract,
+    artifact_ref,
+    charged_waiting_set,
+    load_json,
 )
-AUDIT_JSON = ROOT / "particles" / "runs" / "leptons" / "lepton_current_family_exactness_audit.json"
-DEFAULT_OUT = ROOT / "particles" / "runs" / "leptons" / "charged_absolute_anchor_section.json"
+
+DEFAULT_OUT = ANCHOR_SECTION_JSON
 
 
 def _timestamp() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-
-def _load_json(path: Path) -> dict[str, Any]:
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
 def main() -> int:
     parser = argparse.ArgumentParser(description="Build the charged absolute-anchor section scaffold.")
     parser.add_argument("--underdetermination", default=str(UNDERDETERMINATION_JSON))
-    parser.add_argument("--audit", default=str(AUDIT_JSON))
+    parser.add_argument("--generation-bundle", default=str(GENERATION_BUNDLE_JSON))
     parser.add_argument("--output", default=str(DEFAULT_OUT))
     args = parser.parse_args()
 
-    underdetermination = _load_json(Path(args.underdetermination))
-    audit = _load_json(Path(args.audit))
+    underdetermination = load_json(Path(args.underdetermination))
+    generation_bundle = load_json(Path(args.generation_bundle))
+    current_status = charged_waiting_set(generation_bundle)
 
     artifact = {
         "artifact": "oph_charged_absolute_anchor_section",
@@ -52,21 +55,9 @@ def main() -> int:
         "upstream_prerequisite": {
             "required_theorem": "oph_generation_bundle_branch_generator_splitting",
             "required_clause": "compression_descendant_commutator_vanishes_or_is_uniformly_quadratic_small_after_central_split",
-            "current_status": audit.get("exact_waiting_set", {}),
+            "current_status": current_status,
         },
-        "input_contract": {
-            "must_use": [
-                "theorem-grade charged sector-response artifact after C_hat_e promotion",
-                "lepton_current_family_exactness_audit.json",
-            ],
-            "must_not_use": [
-                "measured charged masses",
-                "compare-only D12 continuation targets",
-                "PMNS or CKM target fits",
-                "shared-budget seed alone",
-                "centered-shape-only functionals",
-            ],
-        },
+        "input_contract": anchor_input_contract(),
         "covariance_contract": "A_ch(logm + c*(1,1,1)) = A_ch(logm) + c",
         "required_new_scalar": "A_ch",
         "derived_quantities_on_fill": {
@@ -74,24 +65,17 @@ def main() -> int:
             "Delta_e_abs": "log(g_ch_shared) - A_ch",
         },
         "induced_by_exact_smaller_object": "refinement_stable_uncentered_trace_lift",
+        "induced_by_exact_smaller_object_artifact": artifact_ref(TRACE_LIFT_JSON),
+        "same_slot_scalarization_artifact": artifact_ref(TRACE_LIFT_COCYCLE_JSON),
+        "exact_descended_scalar_artifact": artifact_ref(TRACE_LIFT_PHYSICAL_DESCENT_JSON),
         "induced_formula_on_fill": "A_ch = (1/3) * log(det(Y_e)) = (1/3) * tr(log Y_e)",
-        "hard_rejections": {
-            "common_shift_invariant_functionals": "cannot emit A_ch because they satisfy F(logm + c*(1,1,1)) = F(logm)",
-            "gamma_min_restore_pick": {
-                "g_e": 0.6822819838027987,
-                "Delta_e_abs": 0.30236566025890826,
-                "status": "invalid_orbit_pick",
-            },
-            "d12_compare_only_target": {
-                "g_e_star": underdetermination["compare_only_continuation_target"]["g_e_star"],
-                "Delta_e_abs_star": underdetermination["compare_only_continuation_target"]["delta_e_abs_star"],
-                "status": "compare_only_not_theorem",
-            },
-        },
+        "hard_rejections": anchor_hard_rejections(underdetermination),
         "notes": [
             "This scaffold exists to package the exact future contract for the charged absolute anchor.",
             "Promotion of C_hat_e^cand is upstream and necessary, but not sufficient: it promotes theorem-grade centered data, not the affine common-shift breaker itself.",
             "Any candidate A_ch must exhibit the affine +c covariance explicitly, not merely reproduce one preferred numerical representative.",
+            "Inside the post-promotion lift slot, A_ch is the scalar primitive mu rather than an independent extra theorem beyond the uncentered trace lift.",
+            "Because that lift is already required to be refinement-stable on theorem-grade physical Y_e, the primitive further descends to one physical affine scalar mu_phys(Y_e).",
             "Once a refinement-stable uncentered trace lift exists on theorem-grade physical Y_e or an equivalent determinant line, A_ch is induced rather than independent.",
         ],
     }

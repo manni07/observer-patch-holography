@@ -12,7 +12,8 @@ This script packages the current charged-lane verdict in one place:
 
 So the current charged lane cannot be closed end-to-end on the live corpus.
 The exact irreducible chain is the promotion theorem for ``C_hat_e`` followed
-by the affine-covariant absolute anchor ``A_ch``.
+by one refinement-stable uncentered trace lift, from which the determinant-line
+section and affine-covariant absolute anchor ``A_ch`` are induced.
 """
 
 from __future__ import annotations
@@ -33,6 +34,7 @@ UNDERDETERMINATION_JSON = (
 ANCHOR_SECTION_JSON = ROOT / "particles" / "runs" / "leptons" / "charged_absolute_anchor_section.json"
 GENERATOR_JSON = ROOT / "particles" / "runs" / "flavor" / "generation_bundle_branch_generator.json"
 TRANSFER_JSON = ROOT / "particles" / "runs" / "flavor" / "charged_central_split_transfer_extension.json"
+ROUTE_JSON = ROOT / "particles" / "runs" / "leptons" / "charged_post_promotion_absolute_closure_route.json"
 DEFAULT_OUT = ROOT / "particles" / "runs" / "leptons" / "charged_end_to_end_impossibility_theorem.json"
 
 
@@ -51,6 +53,7 @@ def build_artifact(
     anchor_section: dict[str, Any],
     generator: dict[str, Any],
     transfer: dict[str, Any],
+    route: dict[str, Any],
 ) -> dict[str, Any]:
     charged_candidate = dict(generator["charged_sector_response_operator_candidate"])
     promotion_gate = dict(generator["promotion_gate"])
@@ -70,7 +73,9 @@ def build_artifact(
             "common shift; the latent operator C_hat_e^{cand} remains undeclared because "
             "oph_generation_bundle_branch_generator_splitting is still open; and even the "
             "minimal central-split transfer extension would only promote theorem-grade "
-            "centered operator data, not the affine-covariant absolute anchor A_ch. "
+            "centered operator data. Beyond that promotion step, the sharpened post-promotion "
+            "frontier is one refinement-stable uncentered trace lift, from which the "
+            "determinant-line section and the affine-covariant absolute anchor A_ch are induced. "
             "Therefore no theorem-grade g_e, Delta_e_abs, or charged masses are emitted "
             "on the current corpus."
         ),
@@ -107,6 +112,7 @@ def build_artifact(
             ),
             "local_numeric_margin_if_extension_proved": transfer["local_numeric_promotion_test"],
         },
+        "promotion_only_absolute_no_go": route.get("promotion_only_no_go"),
         "absolute_anchor_no_go": {
             "current_theorem_output": underdetermination["theorem_emit"]["meaning"],
             "common_shift_no_go_id": underdetermination["no_go_theorem"]["id"],
@@ -121,18 +127,8 @@ def build_artifact(
             ),
             "hard_rejections": anchor_section["hard_rejections"],
         },
-        "exact_irreducible_chain": [
-            {
-                "id": charged_candidate["declaration_missing_theorem"],
-                "smallest_missing_clause": charged_candidate["smallest_missing_clause"],
-                "effect_on_fill": "theorem_grade_C_hat_e",
-            },
-            {
-                "id": anchor_section["exact_missing_object"],
-                "required_contract": anchor_section["covariance_contract"],
-                "effect_on_fill": "g_e_Delta_e_abs_and_public_charged_masses",
-            },
-        ],
+        "exact_irreducible_chain": route["exact_irreducible_chain"],
+        "induced_after_irreducible_chain": route["induced_once_post_promotion_slot_exists"],
         "future_symbolic_forward_surface": {
             "if_A_ch_exists": {
                 "g_e": "exp(A_ch)",
@@ -154,7 +150,10 @@ def build_artifact(
         "notes": [
             "This is stronger than a blocker audit: it rules out end-to-end charged closure on the present corpus.",
             "The exact minimal operator-side extension is the central_split_quadratic_commutator_transfer theorem.",
-            "The exact irreducible absolute object beyond the present scaffolds is charged_absolute_anchor_A_ch.",
+            "Even after that promotion step, centered operator data alone still cannot emit mu_phys(Y_e); the post-promotion centered-operator-only route is now explicitly ruled out.",
+            "The sharpened post-promotion single slot is the refinement-stable uncentered trace lift, not a separate determinant-line trivialization theorem.",
+            "Inside that slot the scalar cocycle primitive descends further to one physical affine scalar mu_phys(Y_e) once refinement stability on theorem-grade physical Y_e is imposed.",
+            "The determinant-line section and charged absolute anchor A_ch are induced once that trace lift exists on theorem-grade physical Y_e.",
             "Measured charged masses and compare-only D12 absolute targets remain forbidden from theorem artifacts.",
         ],
     }
@@ -168,6 +167,7 @@ def main() -> int:
     parser.add_argument("--anchor-section", default=str(ANCHOR_SECTION_JSON))
     parser.add_argument("--generator", default=str(GENERATOR_JSON))
     parser.add_argument("--transfer", default=str(TRANSFER_JSON))
+    parser.add_argument("--route", default=str(ROUTE_JSON))
     parser.add_argument("--output", default=str(DEFAULT_OUT))
     args = parser.parse_args()
 
@@ -178,6 +178,7 @@ def main() -> int:
         _load_json(Path(args.anchor_section)),
         _load_json(Path(args.generator)),
         _load_json(Path(args.transfer)),
+        _load_json(Path(args.route)),
     )
 
     out_path = Path(args.output)

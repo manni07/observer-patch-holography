@@ -4,7 +4,7 @@
     "stable_channel_sequence_evaluation",
     "stable_channel_cfg_source_measure_payload"
   ],
-  "generated_utc": "2026-03-29T06:08:47Z",
+  "generated_utc": "2026-04-01T00:30:53Z",
   "latest_external_hints": [
     {
       "source": "e131_hadron_binding_emitter_push.response.md",
@@ -52,6 +52,7 @@
     "The ensemble seed is now fixed from Lambda_MSbar^(3) and the quark descendants; the sequence-emission and jackknife evaluation laws are fixed too, so the next local move is executing the fixed RHMC/HMC support schedule and writing the resulting per-ensemble stable-channel cfg/source payload arrays.",
     "The runtime receipt `(N_therm, N_sep)` is the emitted execution-and-systematics contract. With that contract explicit, the first honest live residual object is the production backend correlator dump on the seeded 2+1 family.",
     "A separate surrogate HMC/RHMC execution bridge is now recorded too: it closes the receipt/writeback/evaluation/convergence/systematics path on the emitted schema, but it is diagnostic only and does not replace production unquenched execution.",
+    "The backend readiness report now sharpens the backend-side residual further: after the filled receipt, the live publication boundary is a production bundle with publication-complete manifest provenance plus real correlator arrays, not just an unnamed dump.",
     "The runtime receipt should now be treated as an execution-and-systematics contract: once it is filled, the honest remaining work is executed unquenching, array writeback, and published continuum/volume/chiral/statistical budgets.",
     "After the evaluator is populated, the next stable-channel theorem is forward-window convergence of the ground-state extraction.",
     "The public table should stay suppressed until that pipeline emits stable-channel masses on its own path."
@@ -78,11 +79,59 @@
       "population_status": "predictive_ensemble_seeded_candidate",
       "production_closure_grade": "execution_incomplete",
       "production_geometry_summary_artifact": "oph_hadron_production_geometry_summary",
+      "publication_bundle_ready": false,
       "sequence_evaluation_status": "awaiting_measure_evaluation",
       "sequence_population_status": "law_closed_waiting_measure_evaluation",
+      "smallest_backend_residual_object": "production backend export bundle on the seeded family with publication-complete manifest provenance and real correlator arrays",
       "stable_theorem_after_population": "StableChannelForwardWindowConvergence",
       "surrogate_execution_bridge_status": "surrogate_hmc_execution_bridge_complete"
     }
+  },
+  "production_backend_readiness": {
+    "artifact": "oph_hadron_production_readiness_report",
+    "backend_manifest_publication_status": {
+      "manifest_present": false,
+      "missing_or_placeholder_paths": [
+        "profile_id",
+        "backend.family",
+        "backend.name",
+        "backend.version",
+        "backend.git_commit",
+        "backend.run_id",
+        "backend.build_id",
+        "backend.machine",
+        "solvers.rhmc_strange.rational_coefficients",
+        "integrator",
+        "boundary_conditions",
+        "sources",
+        "contractions"
+      ],
+      "populated_paths": [],
+      "publication_complete": false,
+      "required_paths": [
+        "profile_id",
+        "backend.family",
+        "backend.name",
+        "backend.version",
+        "backend.git_commit",
+        "backend.run_id",
+        "backend.build_id",
+        "backend.machine",
+        "solvers.rhmc_strange.rational_coefficients",
+        "integrator",
+        "boundary_conditions",
+        "sources",
+        "contractions"
+      ]
+    },
+    "production_dump_status": {
+      "all_required_arrays_finite": false,
+      "dump_present": false,
+      "missing_or_nonfinite_arrays": [],
+      "production_execution": false
+    },
+    "publication_bundle_ready": false,
+    "smallest_backend_residual_object": "production backend export bundle on the seeded family with publication-complete manifest provenance and real correlator arrays"
   },
   "production_geometry_summary": {
     "artifact": "oph_hadron_production_geometry_summary",

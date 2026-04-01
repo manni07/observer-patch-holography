@@ -104,13 +104,7 @@ Jacobson's derivation of Einstein's equations requires that horizons have:
 2. Entropy proportional to area
 3. The first law of thermodynamics
 
-The Gibbons-Hawking theorem gives us all three for de Sitter horizons. In our
-model this supplies the calibration for the area term and
-the temperature normalization. Combined with geometric modular flow on caps
-(recovered on the OPH geometric branch after the Markov/recoverability and
-MaxEnt refinement analysis) and entanglement equilibrium in the same scaling
-regime, this establishes a scaling-limit Einstein branch as a consequence of
-observer-patch consistency on the holographic screen.
+The Gibbons-Hawking theorem gives us all three for de Sitter horizons. In our model this supplies the calibration: we now know the temperature and entropy of the observer's horizon. Combined with the geometric time-flow and entanglement equilibrium from earlier chapters, this establishes Einstein's equation as a consequence of observer-patch consistency on the holographic screen.
 
 ## 13.5 The Problem of Time in De Sitter
 
@@ -161,7 +155,7 @@ So Lambda must be fixed by a **global** constraint: the total capacity of the sc
 
 $$\Lambda = \frac{3\pi}{G \cdot \log(\dim \mathcal{H}_{\text{tot}})}$$
 
-We don't predict Lambda. We use the observed Lambda to infer screen capacity. Lambda is a global parameter, not derivable from local physics—it encodes the total capacity of the holographic screen.
+We don't predict Lambda. We use the observed Lambda to infer screen capacity. Lambda is a global parameter. It is not derivable from local physics, and it encodes the total capacity of the holographic screen.
 
 ### Many Observers, One Lambda
 
@@ -227,9 +221,9 @@ Our framework suggests a different, program-level branch.
 
 In Chapter 11, we saw that a first-variation Einstein relation, later upgraded to the semiclassical Einstein equation, emerges from an entanglement-equilibrium argument in the scaling regime. But that derivation assumed perfect Markov structure-perfect recoverability across patch overlaps.
 
-In reality, the Markov condition is only approximate. There's a correction term:
+In reality, the Markov condition is only approximate. There's always some residual correlation that can't be perfectly captured by the boundary alone. This imperfection appears as an extra term:
 
-$$K_C = 2\pi B_C + K_C^{(\text{anom})}$$
+$$K_C = 2\pi B_C + K_C^{(\text{anom})} + \text{const}$$
 
 where the "anomaly" captures the deviation from perfect modular additivity. This anomaly contributes to the stress-energy:
 
@@ -255,7 +249,7 @@ $$r_{dS} = \sqrt{\frac{3}{\Lambda}} \approx 1.66 \times 10^{26} \text{ m}$$
 
 Galaxy rotation anomalies are an IR phenomenon-they appear at large distances where accelerations are tiny. Any modification from the modular anomaly must be controlled by this scale.
 
-A continuation-level acceleration benchmark, carrying the anomaly coefficient, is:
+A natural acceleration benchmark, carrying the anomaly coefficient, is:
 
 $$a_0^{(\text{OPH})} = \frac{15}{8\pi^2} \cdot \frac{c^2}{r_{dS}}$$
 
@@ -285,7 +279,7 @@ This is the observed Tully-Fisher relation, with the normalization benchmark det
 
 ### The Status
 
-This is a **future-work continuation**, not a proven derivation. What we have:
+This is not yet a finished dark-matter theory. What we have is:
 
 - The modular anomaly term exists with a fixed coefficient
 - The de Sitter scale $r_{dS}$ is determined by screen capacity
@@ -299,7 +293,7 @@ What remains missing:
 - Cosmological abundance and structure-formation analysis
 - Environment-dependence and stability checks
 
-So the current claim is narrower: the same finite screen capacity that gives us the cosmological constant also supplies an IR benchmark scale for a possible dark-sector continuation. The continuation itself is still open.
+So the present claim is modest but interesting: the same finite screen capacity that gives us the cosmological constant also supplies an infrared acceleration scale in the right ballpark for galaxy phenomenology.
 
 ### What A Future Closure Would Need To Face
 

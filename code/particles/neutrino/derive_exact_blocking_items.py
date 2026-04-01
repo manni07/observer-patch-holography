@@ -35,6 +35,7 @@ REPAIR_JSON = ROOT / "particles" / "runs" / "neutrino" / "neutrino_weighted_cycl
 AMPLITUDE_BRIDGE_JSON = ROOT / "particles" / "runs" / "neutrino" / "neutrino_weighted_cycle_absolute_amplitude_bridge.json"
 BRIDGE_CANDIDATE_JSON = ROOT / "particles" / "runs" / "neutrino" / "neutrino_lambda_nu_bridge_candidate.json"
 IRREDUCIBILITY_JSON = ROOT / "particles" / "runs" / "neutrino" / "neutrino_attachment_irreducibility_theorem.json"
+BRIDGE_SCALAR_CORRIDOR_JSON = ROOT / "particles" / "runs" / "neutrino" / "neutrino_attachment_bridge_scalar_corridor.json"
 DEFAULT_EXACT_OUT = ROOT / "particles" / "runs" / "neutrino" / "exact_blocking_items.json"
 DEFAULT_SUMMARY_OUT = ROOT / "particles" / "runs" / "neutrino" / "current_snapshot_blocker_summary.json"
 
@@ -58,6 +59,7 @@ def build_exact_blockers(
     amplitude_bridge: dict | None,
     bridge_candidate: dict | None,
     irreducibility: dict | None,
+    bridge_scalar_corridor: dict | None,
 ) -> tuple[dict, dict]:
     same_label_present = bool(certificate.get("sufficient_for_intrinsic_mass_eigenstates"))
     charged_basis_present = charged_left.get("status") == "closed"
@@ -311,18 +313,37 @@ def build_exact_blockers(
                     "sharper_attachment_object": (
                         bridge_candidate.get("exact_next_theorem_object") if bridge_candidate else None
                     ),
+                    "smallest_exact_missing_object": (
+                        irreducibility.get("reduced_remaining_object") if irreducibility else None
+                    ),
                     "current_attached_stack_irreducibility_theorem": (
                         {
                             "artifact": irreducibility.get("artifact"),
                             "status": irreducibility.get("status"),
                             "statement": irreducibility.get("theorem", {}).get("statement"),
                             "remaining_object": irreducibility.get("remaining_object"),
+                            "reduced_remaining_object": irreducibility.get("reduced_remaining_object"),
                         }
                         if irreducibility
                         else None
                     ),
                     "immediate_theorem_gate": (
                         bridge_candidate.get("strictly_smaller_missing_clause") if bridge_candidate else None
+                    ),
+                    "compare_only_bridge_scalar_corridor": (
+                        {
+                            "artifact": bridge_scalar_corridor.get("artifact"),
+                            "status": bridge_scalar_corridor.get("status"),
+                            "primary_cross_route_corridor": bridge_scalar_corridor.get("primary_cross_route_corridor"),
+                            "strongest_target_containing_bridge_scalar_corridor": bridge_scalar_corridor.get(
+                                "strongest_target_containing_bridge_scalar_corridor"
+                            ),
+                            "shortlist_route_consensus_window": bridge_scalar_corridor.get("shortlist_route_consensus_window"),
+                            "exact_reduced_correction_scalar": bridge_scalar_corridor.get("exact_reduced_correction_scalar"),
+                            "bridge_correction_candidate_audit": bridge_scalar_corridor.get("bridge_correction_candidate_audit"),
+                        }
+                        if bridge_scalar_corridor
+                        else None
                     ),
                     "absolute_amplitude_bridge_summary": (
                         {
@@ -358,6 +379,18 @@ def build_exact_blockers(
         "same_label_proof_facing_continuous_dof_mod_common_scale": 5,
         "same_label_builder_facing_centered_eta_dof": 2,
         "charged_left_basis_artifact_dof_before_phase_quotients": 9,
+        "strongest_compare_only_bridge_scalar_corridor": (
+            {
+                "artifact": bridge_scalar_corridor.get("artifact"),
+                "primary_cross_route_corridor": bridge_scalar_corridor.get("primary_cross_route_corridor"),
+                "strongest_target_containing_bridge_scalar_corridor": bridge_scalar_corridor.get(
+                    "strongest_target_containing_bridge_scalar_corridor"
+                ),
+                "shortlist_route_consensus_window": bridge_scalar_corridor.get("shortlist_route_consensus_window"),
+            }
+            if bridge_scalar_corridor
+            else None
+        ),
     }
     return exact_payload, summary_payload
 
@@ -374,6 +407,7 @@ def main() -> int:
     parser.add_argument("--amplitude-bridge", default=str(AMPLITUDE_BRIDGE_JSON))
     parser.add_argument("--bridge-candidate", default=str(BRIDGE_CANDIDATE_JSON))
     parser.add_argument("--irreducibility", default=str(IRREDUCIBILITY_JSON))
+    parser.add_argument("--bridge-scalar-corridor", default=str(BRIDGE_SCALAR_CORRIDOR_JSON))
     parser.add_argument("--exact-output", default=str(DEFAULT_EXACT_OUT))
     parser.add_argument("--summary-output", default=str(DEFAULT_SUMMARY_OUT))
     args = parser.parse_args()
@@ -389,6 +423,7 @@ def main() -> int:
         _load_json(Path(args.amplitude_bridge)) if Path(args.amplitude_bridge).exists() else None,
         _load_json(Path(args.bridge_candidate)) if Path(args.bridge_candidate).exists() else None,
         _load_json(Path(args.irreducibility)) if Path(args.irreducibility).exists() else None,
+        _load_json(Path(args.bridge_scalar_corridor)) if Path(args.bridge_scalar_corridor).exists() else None,
     )
 
     exact_out = Path(args.exact_output)

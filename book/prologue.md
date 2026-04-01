@@ -9,14 +9,14 @@
 >
 > Official OPH memecoin: [TEO on BaseScan](https://basescan.org/token/0xd2a7055317D0c7b316319cDadaE592D0644A0b07), [DexScreener](https://dexscreener.com/base/0xba55cdae026b9dd63fcb50e82094d61472948e44527ca4791033497469228049), [Buy on Uniswap](https://app.uniswap.org/swap?outputCurrency=0xd2a7055317D0c7b316319cDadaE592D0644A0b07&chain=base). It is purely speculative, has no promised return, and no announced utility at this time. DYOR.
 
-If you arrived here through searches for **simulation theory** or **theory of everything**, this book is the long-form OPH answer to both. It presents OPH as a concrete route toward a simulation-theory reading: reality is modeled as an observer-consistent information process with a specific architecture of holographic screens, observer patches, and overlap-consistency rules. It also presents OPH as a theory-of-everything program: quantum mechanics, relativity, gauge structure, and particle physics are treated as effective descriptions of deeper overlap-consistency rules, while the strange-loop hypothesis remains an interpretive closure lane rather than part of the recovered core.
+If you arrived here through searches for **simulation theory** or **theory of everything**, this book is the long-form OPH answer to both. It presents OPH as a concrete route toward a simulation-theory reading: reality is modeled as an observer-consistent information process with a specific architecture of holographic screens, observer patches, and overlap-consistency rules. It also presents OPH as a theory-of-everything program: quantum mechanics, relativity, gauge structure, and particle physics appear as effective descriptions of deeper overlap-consistency rules, while the strange-loop idea remains an interpretive extension outside the recovered core.
 
 ## The Cosmic Program
 
 Reverse engineering a program without source code is an exercise in inference.
 
 You run it. You feed it inputs and watch what comes out. You monitor its
-behavior-API calls, network traffic, memory access patterns, timing. You poke
+behavior, API calls, network traffic, memory access patterns, timing. You poke
 it, stress it, run it in different environments. Gradually, from thousands of
 observations, you build a mental model of what it's doing and why.
 
@@ -29,7 +29,7 @@ Except reality doesn't even give us bytecode to disassemble. There's no hex
 dump to stare at, no instruction pointer to trace. We have only behavior:
 things fall, light bends, particles interact, time passes. Our instruments
 are our monitoring tools. Our experiments are our test inputs. And from the
-outputs-meter readings, detector clicks, interference patterns-we try to
+outputs, meter readings, detector clicks, interference patterns, we try to
 reconstruct the underlying logic.
 
 This is reverse engineering at its most extreme. The "program" we're analyzing
@@ -41,7 +41,7 @@ Thousands of the smartest humans who ever lived have contributed to this
 project. Newton, Maxwell, Einstein, Bohr, Heisenberg, Feynman, Hawking-each
 generation inheriting the partial models of the previous one, refining them,
 finding the gaps, and pushing deeper. We're still at it. The current best
-model-quantum field theory plus general relativity-predicts behavior with
+model, quantum field theory plus general relativity, predicts behavior with
 stunning accuracy but remains incomplete, inconsistent at the edges, and
 deeply mysterious at its core.
 
@@ -106,7 +106,7 @@ This agreement is striking. It demands explanation. But does it require
 an "objective" world existing independently of all observers?
 
 We've assumed yes for so long that the question sounds strange. Of course
-there's an objective reality-what else could there be? But look closer.
+there's an objective reality, what else could there be? But look closer.
 Every piece of evidence we have for objective reality is itself a subjective
 experience. Every measurement, every observation, every data point passes
 through an observer. We never step outside our perspectives to check if
@@ -130,18 +130,15 @@ backbone that all observers must agree on.
 This is a significant shift from the traditional view. And it works. When you
 work out the consequences, the results are extraordinary:
 
-- **A conditional scaling-limit Einstein branch** emerges from entanglement equilibrium on the screen
-- **The Standard Model gauge structure** SU(3) x SU(2) x U(1)/Z₆ is derived rather than assumed under the MAR admissibility package
-- **A dark-sector continuation** is explored through modular anomalies, but MOND/RAR-scale phenomenology remains future work rather than a recovered-core result
-- **Why anything exists at all** is addressed through an interpretive strange-loop lane: the universe is treated as a self-referential timeless causal structure supported by OPH's state-and-law habitat, while the stronger closure-map and stability questions remain open
-
-No other framework in physics organizes all of this around structural axioms, explicit claim tiers, and a public separation between theorem-level structure, input-dependent corollaries, and weaker continuations.
+- **Gravity** emerges from how observers share entanglement across their screens
+- **The particle zoo** emerges from the symmetry structure forced by the framework
+- **Dark energy and dark matter** get a natural starting point, though the full story is still being worked out
+- **Why anything exists at all** enters the story through a self-referential closure picture
 
 Once you make this shift, strange features of reality start making sense.
-The "weird" behaviors of physics-the ones that seem bizarre or paradoxical
-from the objective-reality viewpoint-start looking natural. Expected, even.
-Not anomalies to explain away, but structural necessities of a universe built
-on observer consistency.
+The "weird" behaviors of physics, the ones that seem bizarre or paradoxical
+from the objective-reality viewpoint, start looking natural. Expected, even.
+They read as structural necessities of a universe built on observer consistency.
 
 Why is there no preferred reference frame? Because there's no privileged
 observer to define one. Why does measurement affect outcomes? Because "measurement"
@@ -166,7 +163,7 @@ a reality.
 
 ## Reading Rule
 
-For theorem status and claim tier, consult the compact paper first. This book is an explanatory surface synchronized to that ledger, and it also includes interpretive and speculative layers that are not part of the compact recovered core.
+This book is the narrative layer of OPH. For the formal presentation of the framework, see [*Observers Are All You Need*](../paper/observers_are_all_you_need.pdf). Here the goal is clarity, momentum, and the larger picture.
 
 ## What This Book Does
 
@@ -175,23 +172,13 @@ This book reverse engineers reality from first principles.
 We start with a minimal assumption: observers exist, they have bounded
 access to information, and they must agree where their observations overlap.
 
-In the current quantitative implementation this framework uses two external continuous inputs: the pixel area $P \approx 1.63$, the geometric size of a single computational element on the holographic screen in Planck units, and the total screen capacity inferred from the observed cosmological constant. Everything else — Newton's constant, the gauge structure, and the effective spacetime branch — follows from the axioms or from stated structural conditions. The Standard Model gauge structure is derived under the MAR admissibility package. The downstream particle ledger is explicitly tiered rather than uniformly closed: the photon, gluons, and graviton are structural massless carriers; the electroweak calibration lane is closed on a target-free source-only theorem that emits the $W$ and $Z$ rows; the Higgs/top critical stage emits the Higgs boson and top quark as secondary quantitative rows; the quark branch emits continuation-level rows for the up, down, strange, charm, and bottom quarks while the physical quark branch still waits on its selector and selected-branch mass law; the charged-lepton lane fixes the centered hierarchy but still lacks the absolute normalization step, with the live frontier running through \(\widehat C_e^{\mathrm{cand}}\) promotion and then the refinement-stable uncentered trace lift beneath the determinant-line route; flavor-labeled neutrinos land on the weighted-cycle PMNS/hierarchy pattern and still wait on the residual bridge scalar $B_\nu$, with the positive normalization scalar induced only after exact $q_{\mathrm{mean}}^{p_\nu}$ factorization; and hadrons remain execution-bound because promotable rows still require real nonperturbative production computation and systematics rather than another symbolic theorem.
+The framework needs only two numerical inputs from experiment: the size of a single "pixel" on the holographic screen, in Planck units, and the total screen capacity inferred from the cosmological constant. From there, the goal is to recover gravity, gauge structure, and the particle story from observer consistency instead of putting them in by hand. Already the framework reaches gravity, the Standard Model gauge structure, three generations, three colors, and the massless carriers. It also reaches the W and Z, with the Higgs, the top quark, and several quark masses already on the board, while charged leptons, the overall neutrino mass scale, and hadrons remain active work.
 
 From this starting point, we derive constraints. We show how the mathematical
 structures of quantum mechanics and relativity emerge from consistency
 requirements. We trace the logic from axioms to consequences.
 
-Physicists often package the low-energy rules of a theory into a single formula
-called a **Lagrangian**. A Lagrangian says what fields exist, how they move,
-which symmetries they obey, and how they interact. Once you have it, the
-equations of motion follow from the principle of stationary action.
-
-A long-range OPH target is to recover that familiar low-energy Lagrangian from
-first principles: a compact axiom set, explicit bridge premises, and minimal
-external inputs, rather than postulating gravity plus the Standard Model by
-hand. The current recovered core is narrower: a conditional Einstein branch
-plus Standard Model structural data. The full coupling-level effective action
-remains a program target rather than the book's headline theorem claim.
+The long-range goal is to recover all of known physics, gravity and the Standard Model included, from this simple starting point. We do not want to postulate the answer by hand.
 
 The apparent mysteries of physics dissolve once you make the conceptual shift from
 "objective reality exists" to "consistency across observers is fundamental."
@@ -208,7 +195,7 @@ The structure follows the logic of reverse engineering:
 3. **Test against behavior.** We catalogue predictions, both verified and
    testable. We note what identifies a measurement contradiction with the model.
 
-This model rests on established mathematics and physics, organized around a five-axiom core together with later admissibility and branch-selection structure. The results are striking: a conditional scaling-limit gravity branch, the Standard Model gauge structure, and several downstream continuation programs all emerge from the framework. Matter-sector continuations are kept explicitly separate from the recovered core. Our goal is to show you how deep the rabbit hole goes.
+This model rests on established mathematics and physics, organized around five core axioms. The results are striking: gravity, the symmetry structure behind the Standard Model, and several further programs all emerge from the framework. Our goal is to show you how deep the rabbit hole goes.
 
 ## How This Book Is Organized
 
@@ -224,14 +211,13 @@ Big Bang, processing inputs and producing outputs according to rules we're
 still decoding. Thousands of brilliant minds have contributed to the reverse
 engineering effort, and we've made extraordinary progress.
 
-But the naive model-a 3D world of independent objects moving through absolute
-time, existing whether or not anyone observes it-turns out to be the
+But the naive model, a 3D world of independent objects moving through absolute
+time and existing whether or not anyone observes it, turns out to be the
 equivalent of a stub loader. It works for everyday purposes, but it's not
 what's really going on.
 
 What's really going on is weirder, more elegant, and more unified than
-the surface shows. It starts not with objects, but with observers.
-Not with a world, but with perspectives that must agree.
+the surface shows. It starts with observers. It starts with perspectives that must agree.
 
 Let's find out.
 

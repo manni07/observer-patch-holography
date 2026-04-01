@@ -73,9 +73,22 @@
       "tau_u_log_per_side": 0.024876168553006103
     }
   },
-  "generated_utc": "2026-03-31T10:46:48Z",
+  "emitted_same_family_ray": {
+    "artifact": "oph_quark_d12_mass_ray",
+    "emitted_object": {
+      "carrier": [
+        "Delta_ud_overlap",
+        "eta_Q_centered"
+      ],
+      "id": "D12_ud_mass_ray",
+      "ray_modulus_equals_t1": true,
+      "ray_parameter": "ray_modulus",
+      "unresolved_coordinate": "ray_modulus"
+    },
+    "proof_status": "same_family_mass_ray_emitted_modulus_open"
+  },
+  "generated_utc": "2026-04-01T00:32:15Z",
   "honest_remaining_value_laws": [
-    "D12_ud_mass_ray",
     "intrinsic_scale_law_D12",
     "quark_exact_mean_split_value_law_or_carrier_repair"
   ],
@@ -91,9 +104,9 @@
     ],
     "unique_intersection_with": "D12_ud_mass_ray"
   },
-  "next_exact_missing_object": "D12_ud_mass_ray",
+  "next_exact_missing_object": "intrinsic_scale_law_D12",
   "no_go_theorem": {
-    "conclusion": "The present D12 mass-side branch determines only the one-parameter ray D12_ud_mass_ray and does not yet emit a theorem-grade intrinsic scale law that selects a unique ray_modulus.",
+    "conclusion": "The present D12 mass-side branch already emits the one-parameter ray D12_ud_mass_ray, but it does not yet emit a theorem-grade intrinsic scale law that selects a unique ray_modulus on that emitted ray.",
     "forbidden_promotions": [
       "target_mass_backsolve_as_intrinsic_scale_law_D12",
       "compare_derived_exact_mean_specialization_as_OPH_emitted"
@@ -101,30 +114,34 @@
     "id": "quark_d12_same_family_mass_side_scale_underdetermination"
   },
   "notes": [
-    "This artifact sharpens the current D12 mass-side status: the current branch emits the same-family mass ray, not a distinguished modulus on that ray.",
+    "This artifact sharpens the current D12 mass-side status after the ray itself is emitted: the remaining exact frontier is the intrinsic scale law on that ray, not the ray object.",
     "The retained numerical same-family point uses t1_sample = ray_modulus = 0.6695617711471163 and is sample-only, not theorem-grade emission.",
     "It does not by itself prove that the present D12 continuation branch is the physically correct quark branch.",
     "The physical-branch question remains separate from the mass-side no-go recorded here."
   ],
-  "proof_status": "same_family_mass_side_ray_closed_scale_fixing_law_open",
+  "proof_status": "same_family_mass_ray_emitted_intrinsic_scale_open",
   "public_promotion_allowed": false,
   "remaining_object": {
-    "id": "D12_ud_mass_ray",
-    "ray_modulus_equals_t1": true,
+    "id": "intrinsic_scale_law_D12",
+    "must_intersect": "D12_ud_mass_ray",
     "unresolved_coordinate": "ray_modulus"
   },
   "same_family_ray": {
     "ordered_family_coordinate_x2": -0.5175863354681689,
     "ray_direction_values": {
       "delta_ud_overlap_per_ray_modulus": 0.2,
-      "eta_q_centered_per_delta_ud_overlap": -0.1355748861734504,
-      "eta_q_centered_per_ray_modulus": -0.02711497723469008
+      "eta_q_centered_per_delta_ud_overlap": -0.13557488617345037,
+      "eta_q_centered_per_ray_modulus": -0.027114977234690075
     },
     "ray_formulas": {
       "Delta_ud_overlap": "ray_modulus / 5",
+      "Lambda_ud_B_transport": "sigma_u_total_log_per_side * sigma_d_total_log_per_side * (ray_modulus / 5) / (2 * (sigma_u_total_log_per_side + sigma_d_total_log_per_side))",
       "eta_Q_centered": "-((1 - x2^2) / 27) * ray_modulus",
       "eta_Q_centered_from_Delta_ud_overlap": "-(5 * (1 - x2^2) / 27) * Delta_ud_overlap",
-      "kappa_Q": "-ray_modulus / 54"
+      "kappa_Q": "-ray_modulus / 54",
+      "quadratic_even_log_formula_direct": "((-((1 - x2^2) / 27) * ray_modulus) / 6) * (1, -2, 1)",
+      "tau_d_log_per_side": "sigma_u_total_log_per_side * (ray_modulus / 5) / (2 * (sigma_u_total_log_per_side + sigma_d_total_log_per_side))",
+      "tau_u_log_per_side": "sigma_d_total_log_per_side * (ray_modulus / 5) / (2 * (sigma_u_total_log_per_side + sigma_d_total_log_per_side))"
     },
     "ray_name": "D12_ud_mass_ray",
     "ray_parameter": "ray_modulus"
@@ -152,5 +169,5 @@
     }
   },
   "scope": "D12_continuation_only",
-  "theorem_statement": "On the present same-family D12 continuation branch, the mass-side deformation is reduced to the one-parameter ray (Delta_ud_overlap, eta_Q_centered) = ray_modulus * (1/5, -((1 - x2^2) / 27)). Equivalently eta_Q_centered = -(5 * (1 - x2^2) / 27) * Delta_ud_overlap. The current OPH chain emits the ray but not a theorem-grade intrinsic scale-fixing law that would select one unique point on it."
+  "theorem_statement": "On the present same-family D12 continuation branch, the mass-side deformation already emits the one-parameter ray D12_ud_mass_ray. Equivalently eta_Q_centered = -(5 * (1 - x2^2) / 27) * Delta_ud_overlap along that ray. The current OPH chain still does not emit a theorem-grade intrinsic scale-fixing law that would select one unique point on it."
 }

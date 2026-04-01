@@ -38,6 +38,7 @@ NORMALIZER_JSON = ROOT / "particles" / "runs" / "neutrino" / "same_label_overlap
 SCALAR_JSON = ROOT / "particles" / "runs" / "neutrino" / "majorana_overlap_defect_scalar_evaluator.json"
 COMPARE_JSON = ROOT / "particles" / "runs" / "neutrino" / "neutrino_compare_only_scale_fit.json"
 ABSOLUTE_SCAFFOLD_JSON = ROOT / "particles" / "runs" / "neutrino" / "neutrino_absolute_attachment_scaffold.json"
+CORRECTION_AUDIT_JSON = ROOT / "particles" / "runs" / "neutrino" / "neutrino_bridge_correction_candidate_audit.json"
 DEFAULT_OUT = ROOT / "particles" / "runs" / "neutrino" / "neutrino_attachment_irreducibility_theorem.json"
 
 
@@ -104,6 +105,7 @@ def build_payload(
     scalar: dict[str, Any],
     compare: dict[str, Any],
     absolute_scaffold: dict[str, Any],
+    correction_audit: dict[str, Any] | None,
 ) -> dict[str, Any]:
     q = {key: float(val) for key, val in normalizer["q_e"].items()}
     qbar = {key: float(val) for key, val in normalizer["qbar_e"].items()}
@@ -184,6 +186,36 @@ def build_payload(
     compare_bridge_factor = float(compare["fits"]["weighted_least_squares"]["lambda_nu"]) / float(
         absolute_scaffold["current_no_go"]["direct_attachment_diagnostic"]["m_star_eV"]
     )
+    reduced_proxy_object = (
+        None
+        if correction_audit is None
+        else {
+            "artifact": correction_audit.get("artifact"),
+            **(correction_audit.get("emitted_proxy_route") or {}),
+        }
+    )
+    reduced_remaining_object = (
+        {
+            "name": "one_positive_neutrino_bridge_correction_invariant",
+            "symbol": "C_nu",
+            "status": "irreducible_on_current_corpus",
+            "definition": None if correction_audit is None else (correction_audit.get("exact_target_scalar") or {}).get("definition"),
+            "bridge_reconstruction": None
+            if correction_audit is None
+            else (correction_audit.get("exact_target_scalar") or {}).get("bridge_reconstruction"),
+            "exact_residual_moduli_space": "R_{>0}",
+            "equivalence_theorem": (
+                "Because the proxy P_nu is already internal to the current attached stack and strictly positive on the live branch, "
+                "the current stack emits B_nu if and only if it emits C_nu := B_nu / P_nu."
+            ),
+            "must_break": "the remaining positive correction orbit above the internal emitted proxy P_nu",
+            "compare_only_target": None
+            if correction_audit is None
+            else (correction_audit.get("current_compare_only_target") or {}).get("value"),
+        }
+        if correction_audit is not None
+        else None
+    )
 
     return {
         "artifact": "oph_neutrino_attachment_irreducibility_theorem",
@@ -211,6 +243,20 @@ def build_payload(
                 "The collapse alternative F_nu = F_nu(qbar) is not derivable from the present attached stack, "
                 "because the entire current stack is constant on the exact one-parameter family A_nu in R_{>0}."
             ),
+            "reduced_exact_factorization": (
+                None
+                if correction_audit is None
+                else [
+                    (correction_audit.get("exact_target_scalar") or {}).get("bridge_reconstruction"),
+                    "P_nu is a positive scalar already internal to the current attached stack.",
+                    "Therefore the current stack emits B_nu if and only if it emits C_nu.",
+                ]
+            ),
+            "reduced_sharpened_conclusion": (
+                None
+                if correction_audit is None
+                else "After factoring out the internal positive proxy P_nu, one positive reduced bridge correction invariant C_nu remains irreducible on the current corpus."
+            ),
         },
         "inputs_used": {
             "repair_artifact": repair["artifact"],
@@ -237,6 +283,7 @@ def build_payload(
             "current_centered_scalar_bound": scalar["bounded_scalar_range_if_closed"],
             "compare_only_bridge_factor_required_by_weighted_fit": compare_bridge_factor,
         },
+        "internal_positive_proxy_object": reduced_proxy_object,
         "factorization_validation": {
             "raw_vs_factored_cycle_matrix_max_abs_error": float(
                 np.max(np.abs(cycle_raw - q_scale * cycle_bar))
@@ -278,9 +325,11 @@ def build_payload(
             ],
             "must_break": "the current positive common-homogeneity between the D10 amplitude anchor and the weighted-cycle normal form",
         },
+        "reduced_remaining_object": reduced_remaining_object,
         "notes": [
             "This result does not promote compare-only neutrino masses.",
             "It sharpens the frontier by proving that the present attached stack itself cannot collapse the remaining one-dimensional amplitude orbit.",
+            "Because the residual-amplitude proxy P_nu is already internal to the current stack, the same irreducibility transfers exactly to the reduced correction invariant C_nu = B_nu / P_nu.",
             "Any honest closure must adjoin one new positive non-homogeneous bridge invariant, or a new theorem external to the current attached stack that fixes the same parameter exactly.",
         ],
     }
@@ -294,6 +343,7 @@ def main() -> int:
     parser.add_argument("--scalar", type=Path, default=SCALAR_JSON)
     parser.add_argument("--compare", type=Path, default=COMPARE_JSON)
     parser.add_argument("--absolute-scaffold", type=Path, default=ABSOLUTE_SCAFFOLD_JSON)
+    parser.add_argument("--correction-audit", type=Path, default=CORRECTION_AUDIT_JSON)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUT)
     args = parser.parse_args()
 
@@ -304,6 +354,7 @@ def main() -> int:
         scalar=_load_json(args.scalar),
         compare=_load_json(args.compare),
         absolute_scaffold=_load_json(args.absolute_scaffold),
+        correction_audit=_load_json(args.correction_audit) if args.correction_audit.exists() else None,
     )
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")

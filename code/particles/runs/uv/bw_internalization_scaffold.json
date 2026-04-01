@@ -1,6 +1,6 @@
 {
   "artifact": "oph_uv_bw_internalization_scaffold",
-  "generated_utc": "2026-03-31T02:08:02Z",
+  "generated_utc": "2026-04-01T00:30:28Z",
   "status": "minimal_constructive_extension",
   "public_promotion_allowed": false,
   "current_boundary": "T1_plus_T3_external_scaling_limit_branch",
@@ -31,34 +31,81 @@
     "status": "open_split_after_candidate_projective_route",
     "remaining_object": "canonical_scaling_cap_pair_realization_from_transported_cap_marginals",
     "follow_on_object": "independent_bw_rigidity_on_realized_limit",
-    "dominant_pressure_point": "scaling_limit_cap_pair_extraction",
+    "dominant_pressure_point": "carried_collar_two_term_frontier",
     "filled_contract_witnesses": [
       "reference_cap_local_test_system",
       "projectively_compatible_transported_cap_marginal_family",
       "asymptotic_transport_equivalence_certificate"
     ],
-    "prelimit_system_artifact": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/uv/bw_realized_transported_cap_local_system.json",
+    "prelimit_system_artifact": "code/particles/runs/uv/bw_realized_transported_cap_local_system.json",
     "remaining_missing_emitted_witness": "vanishing_carried_collar_schedule_on_fixed_local_collars",
+    "remaining_missing_emitted_witness_artifact": "code/particles/runs/uv/bw_carried_collar_schedule_scaffold.json",
     "remaining_missing_emitted_witness_formula": "eta_{n,m,delta} = r_FR(epsilon_{n,m,delta}) + 4 * lambda_{*,n,m,delta}^{-1} * delta^M_{m,delta}(epsilon_{n,m,delta}) -> 0",
+    "actual_solver_missing_emitted_witnesses": [
+      {
+        "id": "constructive_recovery_remainder_vanishing",
+        "artifact": "code/particles/runs/uv/bw_fixed_local_collar_constructive_recovery_scaffold.json",
+        "role": "markov_side_recovery_term"
+      },
+      {
+        "id": "fixed_local_collar_faithful_modular_defect_vanishing",
+        "artifact": "code/particles/runs/uv/bw_fixed_local_collar_faithful_modular_defect_scaffold.json",
+        "role": "faithfulness_weighted_modular_term"
+      }
+    ],
+    "derived_remaining_input_witness": {
+      "id": "vanishing_carried_collar_schedule_on_fixed_local_collars",
+      "artifact": "code/particles/runs/uv/bw_carried_collar_schedule_scaffold.json"
+    },
+    "derived_remaining_input_witness_closure_theorem": "If the constructive recovery remainder and the faithful modular-defect term both vanish on every fixed local collar model, then the carried-collar schedule follows by termwise addition of the two nonnegative remainders.",
     "smaller_remaining_raw_datum": "fixed_local_collar_markov_faithfulness_datum",
+    "smaller_remaining_raw_datum_artifact": "code/particles/runs/uv/bw_fixed_local_collar_markov_faithfulness_datum.json",
+    "local_intermediate_witness_chain": [
+      {
+        "id": "constructive_recovery_remainder_vanishing",
+        "artifact": "code/particles/runs/uv/bw_fixed_local_collar_constructive_recovery_scaffold.json"
+      },
+      {
+        "id": "fixed_local_collar_exact_markov_modulus_vanishing",
+        "artifact": "code/particles/runs/uv/bw_fixed_local_collar_exact_markov_modulus_scaffold.json"
+      },
+      {
+        "id": "fixed_local_collar_faithful_modular_defect_vanishing",
+        "artifact": "code/particles/runs/uv/bw_fixed_local_collar_faithful_modular_defect_scaffold.json"
+      },
+      {
+        "id": "vanishing_carried_collar_schedule_on_fixed_local_collars",
+        "artifact": "code/particles/runs/uv/bw_carried_collar_schedule_scaffold.json"
+      }
+    ],
     "remaining_objects": [
       "canonical_scaling_cap_pair_realization_from_transported_cap_marginals",
       "independent_bw_rigidity_on_realized_limit"
     ],
     "current_internalized_scope": "Axiom-3 plus the fixed-cutoff collar/MaxEnt package internalize local Gibbs form, quasi-local propagation, endpoint-Lipschitz interval control, and refinement-stable branch persistence. The current corpus also packages the reference cap-local test system, the projectively compatible transported cap marginal family, and the asymptotic transport-equivalence certificate.",
-    "reason_current_corpus_fails": "The current corpus already packages the reference cap-local test system, the projectively compatible transported cap marginal family, and the asymptotic transport-equivalence certificate. What is still missing is one emitted vanishing carried-collar schedule on fixed local collar models; without that witness the canonical scaling-limit observer cap algebra/state realization is not promoted. That combined witness itself reduces one level lower to a fixed-local-collar Markov/faithfulness datum: collarwise CMI vanishing plus an eventual positive lower spectral bound. Without either emitted schedule or emitted raw datum, all theorem-grade null geometric action currently on disk remains downstream of the BW branch itself.",
+    "reason_current_corpus_fails": "The current corpus already packages the reference cap-local test system, the projectively compatible transported cap marginal family, and the asymptotic transport-equivalence certificate. What is still missing is the two-term carried-collar emitted frontier on fixed local collar models; without those lower witnesses that generate the schedule the canonical scaling-limit observer cap algebra/state realization is not promoted. That combined witness itself reduces one level lower to a fixed-local-collar Markov/faithfulness datum: collarwise CMI vanishing plus an eventual positive lower spectral bound. Inside that datum, the constructive recovery witness, the exact-Markov comparison modulus, and the faithful modular-defect term are now split as separate lower local scaffolds. Without either emitted schedule or emitted raw datum, all theorem-grade null geometric action currently on disk remains downstream of the BW branch itself.",
     "statement": "First exact object: starting from a projectively compatible extracted family of transported cap marginals on fixed reference type-I regulator cap algebras, realize a canonical scaling-limit observer cap pair (A_infty(C), omega_infty^C) without assuming type-I survival.",
     "follow_on_statement": "Second exact object: on that realized limit pair, prove from internal OPH premises alone that ordered null cut-pair data rigidify the residual cap-preserving conformal freedom to the unique BW hyperbolic subgroup lambda_C(s), so sigma_t^{omega_infty^C} = alpha_{lambda_C(2 pi t)} without reusing consequences already downstream of the BW branch.",
-    "candidate_extension_status": "constructive_prelimit_system_one_emitted_witness_still_missing",
-    "candidate_extension_route": "Step 1: finish the scaling-limit cap-pair extraction contract by emitting the vanishing carried-collar schedule on fixed local collar models above the already-emitted realized transported cap-local system, which already packages the reference test system, projective transported marginal family, and asymptotic transport-equivalence certificate. The sharp schedule contract is eta_{n,m,delta} = r_FR(epsilon_{n,m,delta}) + 4 * lambda_{*,n,m,delta}^{-1} * delta^M_{m,delta}(epsilon_{n,m,delta}) -> 0 on every fixed local collar model. Step 2: ordered null cut-pair rigidity that collapses the residual cap-preserving conformal freedom to the unique BW hyperbolic subgroup.",
+    "candidate_extension_status": "constructive_prelimit_system_two_lower_emitted_witnesses_still_missing",
+    "candidate_extension_route": "Step 1: finish the scaling-limit cap-pair extraction contract by emitting the carried-collar two-term frontier on fixed local collar models above the already-emitted realized transported cap-local system, which already packages the reference test system, projective transported marginal family, and asymptotic transport-equivalence certificate. The sharp schedule contract is generated once the two emitted term witnesses r_FR(epsilon_{n,m,delta}) -> 0 and 4 * lambda_{*,n,m,delta}^{-1} * delta^M_{m,delta}(epsilon_{n,m,delta}) -> 0 both close on every fixed local collar model. Step 2: ordered null cut-pair rigidity that collapses the residual cap-preserving conformal freedom to the unique BW hyperbolic subgroup.",
     "candidate_extension_target": "sigma_t^{omega_infty^C} = alpha_{lambda_C(2 pi t)}",
     "canonical_code_scaffolds": [
       "code/particles/uv/derive_bw_realized_transported_cap_local_system.py",
+      "code/particles/uv/derive_bw_fixed_local_collar_markov_faithfulness_datum.py",
+      "code/particles/uv/derive_bw_fixed_local_collar_constructive_recovery_scaffold.py",
+      "code/particles/uv/derive_bw_fixed_local_collar_exact_markov_modulus_scaffold.py",
+      "code/particles/uv/derive_bw_fixed_local_collar_faithful_modular_defect_scaffold.py",
+      "code/particles/uv/derive_bw_carried_collar_schedule_scaffold.py",
       "code/particles/uv/derive_bw_scaling_limit_cap_pair_extraction_scaffold.py",
       "code/particles/uv/derive_bw_ordered_cut_pair_rigidity_scaffold.py"
     ],
     "canonical_artifacts": [
       "code/particles/runs/uv/bw_realized_transported_cap_local_system.json",
+      "code/particles/runs/uv/bw_fixed_local_collar_markov_faithfulness_datum.json",
+      "code/particles/runs/uv/bw_fixed_local_collar_constructive_recovery_scaffold.json",
+      "code/particles/runs/uv/bw_fixed_local_collar_exact_markov_modulus_scaffold.json",
+      "code/particles/runs/uv/bw_fixed_local_collar_faithful_modular_defect_scaffold.json",
+      "code/particles/runs/uv/bw_carried_collar_schedule_scaffold.json",
       "code/particles/runs/uv/bw_scaling_limit_cap_pair_extraction_scaffold.json",
       "code/particles/runs/uv/bw_ordered_cut_pair_rigidity_scaffold.json"
     ],
@@ -77,11 +124,17 @@
   "notes": [
     "This scaffold promotes the UV/BW extension route to a canonical local artifact without claiming current-corpus closure.",
     "The current pressure point is the first object, not the symbolic rigidity calculation: the realized scaling-limit cap pair is still missing.",
+    "The local carried-collar side is now decomposed one level further into constructive recovery, exact-Markov comparison convergence, and faithful modular-defect vanishing, with the eta schedule treated as the derived combination witness.",
     "The symbolic test certifies the rigidity shape of the ordered cut-pair argument, but not the existence of the realized scaling-limit cap pair.",
     "The correct target is an automorphism theorem on the realized scaling-limit cap pair; no type-I survival is assumed."
   ],
   "source_code_scaffolds": {
     "realized_transported_cap_local_system": "code/particles/uv/derive_bw_realized_transported_cap_local_system.py",
+    "fixed_local_collar_markov_faithfulness_datum": "code/particles/uv/derive_bw_fixed_local_collar_markov_faithfulness_datum.py",
+    "fixed_local_collar_constructive_recovery": "code/particles/uv/derive_bw_fixed_local_collar_constructive_recovery_scaffold.py",
+    "fixed_local_collar_exact_markov_modulus": "code/particles/uv/derive_bw_fixed_local_collar_exact_markov_modulus_scaffold.py",
+    "fixed_local_collar_faithful_modular_defect": "code/particles/uv/derive_bw_fixed_local_collar_faithful_modular_defect_scaffold.py",
+    "carried_collar_schedule": "code/particles/uv/derive_bw_carried_collar_schedule_scaffold.py",
     "scaling_limit_cap_pair_extraction": "code/particles/uv/derive_bw_scaling_limit_cap_pair_extraction_scaffold.py",
     "ordered_cut_pair_rigidity": "code/particles/uv/derive_bw_ordered_cut_pair_rigidity_scaffold.py"
   }

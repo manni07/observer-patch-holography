@@ -313,3 +313,9 @@ def test_exact_blocking_items_reduce_to_one_absolute_normalization_after_repair(
         assert summary_payload["exact_remaining_blockers"] == [
             "one_positive_neutrino_mass_normalization_scalar"
         ]
+        corridor = summary_payload["strongest_compare_only_bridge_scalar_corridor"]
+        assert corridor["strongest_target_containing_bridge_scalar_corridor"]["contains_compare_only_target"] is True
+        assert corridor["strongest_target_containing_bridge_scalar_corridor"]["relative_half_width"] < corridor["primary_cross_route_corridor"]["relative_half_width"]
+        reduced = exact_payload["live_continuation_branch_status"]["absolute_scale_no_go"]["smallest_exact_missing_object"]
+        assert reduced["symbol"] == "C_nu"
+        assert reduced["status"] == "irreducible_on_current_corpus"

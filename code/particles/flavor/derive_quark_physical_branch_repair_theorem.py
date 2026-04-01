@@ -29,6 +29,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from sigma_ud_orbit_provider import (
+    load_emitted_reference_sheet_evaluation,
+    load_sigma_ud_singleton_uniqueness_witness,
+)
+
 
 ROOT = Path(__file__).resolve().parents[2]
 D12_BRANCH_JSON = ROOT / "particles" / "runs" / "flavor" / "quark_d12_mass_branch_and_ckm_residual.json"
@@ -66,6 +71,9 @@ def main() -> int:
 
     branch = _load_json(Path(args.branch))
     local_basis_orbit = _load_json(LOCAL_BASIS_ORBIT_JSON) if LOCAL_BASIS_ORBIT_JSON.exists() else None
+    reference_sheet = load_emitted_reference_sheet_evaluation()
+    uniqueness = load_sigma_ud_singleton_uniqueness_witness()
+    selector_value = uniqueness.get("selected_sigma") if bool(uniqueness.get("theorem_grade_select")) else None
     standard = dict(branch["standard_ckm_parameters"])
 
     theta_12 = float(standard["theta_12"])
@@ -98,24 +106,66 @@ def main() -> int:
         "current_d12_sheet": {
             "branch_label": "D12",
             "branch_key": ["D12", None],
-            "quark_relative_sheet_selector": None,
+            "quark_relative_sheet_selector": selector_value,
             "sheet_status": "single_local_reference_sheet_only",
-            "local_solver_limit": "no_finite_relative_sheet_class_enumeration_exposed",
+            "local_solver_limit": (
+                "same_label_left_handed_local_orbit_singleton_closed"
+                if bool(uniqueness.get("theorem_grade_select"))
+                else (
+                    "singleton_reference_sheet_only_distinct_relative_sheet_unemitted"
+                    if reference_sheet.get("available")
+                    else "no_finite_relative_sheet_class_enumeration_exposed"
+                )
+            ),
+            "local_orbit_uniqueness_theorem": (
+                {
+                    "proof_status": uniqueness["proof_status"],
+                    "selection_reason": uniqueness["selection_reason"],
+                    "scope": uniqueness["scope"],
+                }
+                if bool(uniqueness.get("available"))
+                else "no_finite_relative_sheet_class_enumeration_exposed"
+            ),
+            "emitted_same_label_left_reference_sheet": (
+                {
+                    "sigma_id": reference_sheet["sigma_id"],
+                    "canonical_token": reference_sheet["canonical_token"],
+                    "coverage_status": reference_sheet["coverage_status"],
+                    "ckm_invariants": reference_sheet["ckm_invariants"],
+                }
+                if reference_sheet.get("available")
+                else None
+            ),
         },
         "insufficiency_theorem": {
-            "id": "D12_relative_sheet_non_identifiability",
+            "id": (
+                "D12_local_selector_closure_still_wrong_branch"
+                if bool(uniqueness.get("theorem_grade_select"))
+                else "D12_relative_sheet_non_identifiability"
+            ),
             "statement": (
-                "From the presently emitted D12 quark-side data alone there is no sound function that can recover "
-                "the finite set Sigma_ud, the selector sigma_ud, or the selected-branch CKM invariants. The current "
-                "surface exposes only one evaluated reference-sheet representative, while same-sheet rephasing is "
-                "already known to leave the CKM invariants frozen."
+                "On the emitted local solver surface, sigma_ud closes to sigma_ref and the selected-branch CKM invariants are exactly the current D12 sheet invariants. Those invariants still miss the physical shell, so local branch repair is impossible on the present corpus."
+                if bool(uniqueness.get("theorem_grade_select"))
+                else "From the presently emitted D12 quark-side data alone there is no sound function that can recover the finite set Sigma_ud, the selector sigma_ud, or the selected-branch CKM invariants. The current surface exposes only one evaluated same-label left-handed reference-sheet representative, while same-sheet rephasing is already known to leave the CKM invariants frozen."
             ),
             "proof_obstruction": [
-                "only one D12 reference-sheet representative is exposed",
-                "Sigma_ud is not exposed as a finite enumerable set",
-                "no relative-sheet evaluator sigma->CKM invariants is exposed",
-                "same-sheet rephasing cannot change CKM invariants",
-                "mass-side branch choice is excluded from CKM repair",
+                *(
+                    [
+                        "the emitted local same-label left-handed orbit is the singleton {sigma_ref}",
+                        "the selected-branch invariants equal the current D12 same-sheet invariants",
+                        "those invariants remain far below the physical CKM shell",
+                        "mass-side scale fixing cannot repair CKM on the selected singleton branch",
+                    ]
+                    if bool(uniqueness.get("theorem_grade_select"))
+                    else [
+                        "only one D12 same-label left-handed reference-sheet representative is exposed",
+                        "no distinct same-label left-handed relative-sheet class beyond that reference representative is exposed",
+                        "Sigma_ud is not exposed as a finite enumerable orbit with non-reference classes",
+                        "no relative-sheet evaluator sigma->CKM invariants is exposed",
+                        "same-sheet rephasing cannot change CKM invariants",
+                        "mass-side branch choice is excluded from CKM repair",
+                    ]
+                ),
             ],
         },
         "comparison_shell": {
@@ -155,9 +205,17 @@ def main() -> int:
             "must_emit": "quark_relative_sheet_selector",
             "definition": "sigma_ud in Sigma_ud",
             "selector_domain": "left_handed_same_label_relative_sheet_orbit_only",
-            "branch_key_after_repair": ["D12", "sigma_ud"],
+            "branch_key_after_repair": (
+                selector_value["branch_key"] if selector_value is not None else ["D12", "sigma_ud"]
+            ),
             "must_not_use_compare_fit_masses": True,
             "must_not_use_same_sheet_rephasing": True,
+            "selection_status": (
+                "closed_to_reference_singleton_by_uniqueness_theorem"
+                if selector_value is not None
+                else "value_open"
+            ),
+            "selected_value": selector_value,
             "selection_rule": {
                 "loss_function": (
                     "(theta_12(sigma)-0.2256)^2 + (theta_23(sigma)-0.0438)^2 + "
@@ -170,6 +228,25 @@ def main() -> int:
             "id": "sigma_ud_orbit",
             "definition": "full finite left-handed relative-sheet orbit over the ordered same-label D12 reference representative",
             "must_emit": "sigma_ud_orbit.elements = [{sigma_id, canonical_token, ckm}]",
+            "currently_emitted_reference_sheet_count": 1 if reference_sheet.get("available") else 0,
+            "status": (
+                "closed_to_reference_singleton"
+                if selector_value is not None
+                else "open_distinct_relative_sheet_or_uniqueness_theorem_missing"
+            ),
+            "smallest_remaining_object": (
+                "intrinsic_scale_law_D12"
+                if selector_value is not None
+                else (
+                    "one additional non-reference same-label left-handed relative-sheet evaluation, or an intrinsic uniqueness theorem proving the emitted reference singleton is the full orbit"
+                    if reference_sheet.get("available")
+                    else "first same-label left-handed relative-sheet evaluation"
+                )
+            ),
+            "selected_sigma": selector_value,
+            "next_exact_object_after_orbit_closure": (
+                "intrinsic_scale_law_D12" if selector_value is not None else None
+            ),
             "selection_rule_kind": "ckm_log_shell_loss",
             "selection_rule": {
                 "loss_function": (
@@ -188,6 +265,7 @@ def main() -> int:
                 ],
             },
         },
+        "local_orbit_uniqueness_theorem": uniqueness,
         "local_basis_orbit_diagnostic": (
             {
                 "status": "available_from_current_corpus",
@@ -221,17 +299,54 @@ def main() -> int:
             "why_disqualified": "The only finite scan currently exposed in local code is a same-sheet target-mass comparison scan over Delta_ud_overlap. It neither enumerates Sigma_ud nor emits a relative-sheet sigma->CKM evaluator, so it cannot honestly serve as branch repair.",
         },
         "relative_sheet_scan": {
-            "status": "not_available_from_current_local_solver",
-            "reason": (
-                "The current local solver exposes only the evaluated D12 reference-sheet representative and does "
-                "not expose a finite set Sigma_ud of relative sheet classes to enumerate."
+            "status": (
+                "singleton_closed_by_uniqueness_theorem"
+                if selector_value is not None
+                else (
+                    "reference_sheet_singleton_only_not_selector_ready"
+                    if reference_sheet.get("available")
+                    else "not_available_from_current_local_solver"
+                )
             ),
-            "selector_value": None,
+            "reason": (
+                "The emitted local solver orbit is now closed and its unique selector value is sigma_ref."
+                if selector_value is not None
+                else (
+                    "The current local solver emits the D12 reference-sheet left-handed evaluation in orbit schema, but it still does not expose any distinct same-label relative-sheet class beyond that singleton."
+                    if reference_sheet.get("available")
+                    else "The current local solver exposes only the evaluated D12 reference-sheet representative and does not expose a finite set Sigma_ud of relative sheet classes to enumerate."
+                )
+            ),
+            "available_elements": (
+                [
+                    {
+                        "sigma_id": reference_sheet["sigma_id"],
+                        "canonical_token": reference_sheet["canonical_token"],
+                        "coverage_status": reference_sheet["coverage_status"],
+                        "ckm_invariants": reference_sheet["ckm_invariants"],
+                    }
+                ]
+                if reference_sheet.get("available")
+                else []
+            ),
+            "selector_value": selector_value,
         },
         "notes": [
             "This artifact sharpens the quark CKM boundary: the current D12 sheet is transport-closed but wrong-branch.",
-            "The exact next object is discrete rather than continuous: one relative up/down sheet selector sigma_ud.",
-            "The current surface is formally insufficient to identify sigma_ud; the minimal extension is a finite left-handed same-label sigma_ud orbit with per-candidate CKM tuples.",
+            (
+                "The emitted local same-label left-handed orbit now closes to sigma_ref, so the discrete selector is no longer open on the current solver surface."
+                if selector_value is not None
+                else "The exact next object is discrete rather than continuous: one relative up/down sheet selector sigma_ud."
+            ),
+            (
+                "That closure is negative for branch repair: sigma_ref is just the current D12 reference sheet, so the selected branch still misses the physical CKM shell and the next honest object is the intrinsic D12 scale law on the emitted mass ray."
+                if selector_value is not None
+                else (
+                    "The current surface is formally insufficient to identify sigma_ud; after exposing the D12 reference singleton honestly, the smaller exact blocker is one additional non-reference same-label left-handed sheet evaluation or an intrinsic uniqueness theorem."
+                    if reference_sheet.get("available")
+                    else "The current surface is formally insufficient to identify sigma_ud; the minimal extension is a finite left-handed same-label sigma_ud orbit with per-candidate CKM tuples."
+                )
+            ),
             "The only finite local scan on disk is a same-sheet Delta_ud_overlap scan against reference targets; it is comparison-only and cannot be repurposed as a Sigma_ud scan.",
             "A smaller finite local basis orbit is already extractable from the current forward Yukawa surface, but it is diagnostic-only because its nontrivial elements leave the ordered same-label left-eigenframe domain.",
             "Mass-side scale fixing remains a separate issue after the physical branch is selected; no scalar t1 can repair CKM on the present sheet.",

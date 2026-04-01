@@ -32,6 +32,22 @@
     "relative_error": 0.00045284897467005544,
     "value": 6.699825740519345
   },
+  "best_family_assisted_compare_only_candidate": {
+    "complexity": 3,
+    "exponents": [
+      -0.5,
+      -1.0,
+      -0.5
+    ],
+    "formula": "gamma^-0.5 * doublet_center_over_mstar^-1 * heavy_light_gap_over_mstar^-0.5",
+    "keys": [
+      "gamma",
+      "doublet_center_over_mstar",
+      "heavy_light_gap_over_mstar"
+    ],
+    "relative_error": 0.0005445029288468986,
+    "value": 6.693146681168985
+  },
   "excluded_trivial_scalars_from_search": {
     "sum_qbar": {
       "reason": "The closed qbar_e normalizer fixes sum_qbar = 3 exactly, so it is a trivial normalization constant rather than a bridge signal.",
@@ -479,7 +495,13 @@
       "value": 6.996900200580784
     }
   ],
-  "generated_utc": "2026-03-31T10:46:52Z",
+  "family_assisted_scale_keys": [
+    "base_mu_over_mstar",
+    "doublet_center_over_mstar",
+    "heavy_light_gap_over_mstar",
+    "solar_response_over_mstar"
+  ],
+  "generated_utc": "2026-04-01T00:24:05Z",
   "hard_guard": {
     "reason": "This search runs only on low-complexity residual monomials. It does not prove that the current corpus emits the residual amplitude bridge, and it must not be turned into a theorem-grade lambda_nu or A_nu law without an honest OPH derivation.",
     "status": "do_not_promote"
@@ -529,6 +551,168 @@
     "source": "weighted_least_squares_compare_only_scale_fit_after_exact_q_mean_factorization",
     "value": 6.696793104628337
   },
+  "top_family_assisted_candidates": [
+    {
+      "complexity": 3,
+      "exponents": [
+        -0.5,
+        -1.0,
+        -0.5
+      ],
+      "formula": "gamma^-0.5 * doublet_center_over_mstar^-1 * heavy_light_gap_over_mstar^-0.5",
+      "keys": [
+        "gamma",
+        "doublet_center_over_mstar",
+        "heavy_light_gap_over_mstar"
+      ],
+      "relative_error": 0.0005445029288468986,
+      "value": 6.693146681168985
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -0.5,
+        -2.0,
+        0.5
+      ],
+      "formula": "I_nu^-0.5 * doublet_center_over_mstar^-2 * solar_response_over_mstar^0.5",
+      "keys": [
+        "I_nu",
+        "doublet_center_over_mstar",
+        "solar_response_over_mstar"
+      ],
+      "relative_error": 0.0005847136926809044,
+      "value": 6.692877398003009
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -1.0,
+        -1.0,
+        0.5
+      ],
+      "formula": "gamma^-1 * doublet_center_over_mstar^-1 * solar_response_over_mstar^0.5",
+      "keys": [
+        "gamma",
+        "doublet_center_over_mstar",
+        "solar_response_over_mstar"
+      ],
+      "relative_error": 0.000621616529366835,
+      "value": 6.7009559419159235
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -0.5,
+        -1.0,
+        2.0
+      ],
+      "formula": "sum_defect^-0.5 * sum_gap^-1 * doublet_center_over_mstar^2",
+      "keys": [
+        "sum_defect",
+        "sum_gap",
+        "doublet_center_over_mstar"
+      ],
+      "relative_error": 0.001157641076643224,
+      "value": 6.7045455874080355
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -2.0,
+        2.0,
+        -2.0
+      ],
+      "formula": "I_nu^-2 * doublet_center_over_mstar^2 * solar_response_over_mstar^-2",
+      "keys": [
+        "I_nu",
+        "doublet_center_over_mstar",
+        "solar_response_over_mstar"
+      ],
+      "relative_error": 0.0015527520591701914,
+      "value": 6.707191563911385
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -0.5,
+        2.0,
+        -1.0
+      ],
+      "formula": "ratio_hat^-0.5 * gamma^2 * heavy_light_gap_over_mstar^-1",
+      "keys": [
+        "ratio_hat",
+        "gamma",
+        "heavy_light_gap_over_mstar"
+      ],
+      "relative_error": 0.0016495892579849098,
+      "value": 6.707840062596679
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -1.0,
+        -1.0,
+        -0.5
+      ],
+      "formula": "doublet_center_over_mstar^-1 * heavy_light_gap_over_mstar^-1 * solar_response_over_mstar^-0.5",
+      "keys": [
+        "doublet_center_over_mstar",
+        "heavy_light_gap_over_mstar",
+        "solar_response_over_mstar"
+      ],
+      "relative_error": 0.0017092633972406708,
+      "value": 6.685346521295702
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        0.5,
+        -2.0,
+        0.5
+      ],
+      "formula": "I_nu^0.5 * gamma^-2 * solar_response_over_mstar^0.5",
+      "keys": [
+        "I_nu",
+        "gamma",
+        "solar_response_over_mstar"
+      ],
+      "relative_error": 0.001829402835411669,
+      "value": 6.709044236922109
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -1.0,
+        -2.0,
+        -0.5
+      ],
+      "formula": "ratio_hat^-1 * sum_gap^-2 * solar_response_over_mstar^-0.5",
+      "keys": [
+        "ratio_hat",
+        "sum_gap",
+        "solar_response_over_mstar"
+      ],
+      "relative_error": 0.001960366661032314,
+      "value": 6.683664934690192
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -2.0,
+        -1.0,
+        -1.0
+      ],
+      "formula": "chi^-2 * sum_gap^-1 * heavy_light_gap_over_mstar^-1",
+      "keys": [
+        "chi",
+        "sum_gap",
+        "heavy_light_gap_over_mstar"
+      ],
+      "relative_error": 0.00205734457086775,
+      "value": 6.710570715564368
+    }
+  ],
   "top_single_factor_candidates": [
     {
       "complexity": 1,
@@ -955,5 +1139,5 @@
       "value": 7.09538110013145
     }
   ],
-  "working_observation": "After stripping off the exact q_mean^p_nu homogeneity, the residual compare-only target A_nu_star / m_star is numerically much smaller and cleaner than the raw bridge factor lambda_nu / m_star. On the core residual scalar pool the strongest simple clue is sqrt(I_nu) * sqrt(ratio_hat) / sum_defect. On the extended pool that also includes defect-weighted mu_e family scales normalized by m_star, no stronger low-complexity clue survives after the trivial closed normalizer `sum_qbar = 3` is removed from the search. So the extended pool does not yet beat the core clue `sqrt(I_nu) * sqrt(ratio_hat) / sum_defect`. Both remain compare-only audit signals."
+  "working_observation": "After stripping off the exact q_mean^p_nu homogeneity, the residual compare-only target A_nu_star / m_star is numerically much smaller and cleaner than the raw bridge factor lambda_nu / m_star. On the core residual scalar pool the strongest simple clue is sqrt(I_nu) * sqrt(ratio_hat) / sum_defect. On the extended pool that also includes defect-weighted mu_e family scales normalized by m_star, the strongest genuinely family-assisted clue is `gamma^-0.5 * doublet_center_over_mstar^-1 * heavy_light_gap_over_mstar^-0.5`. It lands very close to the same target but still does not beat the core clue `sqrt(I_nu) * sqrt(ratio_hat) / sum_defect`. Both remain compare-only audit signals."
 }

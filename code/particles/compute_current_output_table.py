@@ -35,27 +35,15 @@ EXCLUDE_NAMES = {
     "HADRON_SYSTEMATICS_STATUS.md",
 }
 
-CURRENT_QUARK_FORWARD = {
-    "artifact": "oph_forward_yukawas",
-    "public_surface_candidate_allowed": True,
-    "source_mode": "factorized_descent",
-    "singular_values_u": [
-        0.002287663517422587,
-        1.2566920642121726,
-        172.38864559527133,
-    ],
-    "singular_values_d": [
-        0.005121438948009003,
-        0.0916111424053981,
-        3.82011787992005,
-    ],
-}
-
-CURRENT_QUARK_MEAN_SPLIT = {
-    "artifact": "oph_quark_sector_mean_split",
-    "active_candidate": "ordered_affine_mean_readout_candidate",
-}
-CURATED_NEUTRINO_REPAIR_SRC = CODE_ROOT / "runs" / "neutrino" / "neutrino_weighted_cycle_repair.json"
+RUNTIME_SURFACED_ARTIFACTS = (
+    Path("runs/flavor/forward_yukawas.json"),
+    Path("runs/flavor/quark_sector_mean_split.json"),
+    Path("runs/leptons/forward_charged_leptons.json"),
+    Path("runs/neutrino/forward_neutrino_closure_bundle.json"),
+    Path("runs/neutrino/exact_blocking_items.json"),
+    Path("runs/neutrino/neutrino_weighted_cycle_repair.json"),
+    Path("runs/neutrino/neutrino_lambda_nu_bridge_candidate.json"),
+)
 
 GROUP_ORDER = ["Bosons", "Leptons", "Quarks", "Hadrons"]
 STATUS_COLORS = {
@@ -116,23 +104,28 @@ def _copy_outputs(work_particles: Path, current_dir: Path) -> None:
         shutil.copy2(src, dst)
 
 
-def _seed_curated_quark_surface(work_particles: Path) -> None:
-    flavor_dir = work_particles / "runs" / "flavor"
-    flavor_dir.mkdir(parents=True, exist_ok=True)
-    (flavor_dir / "forward_yukawas.json").write_text(
-        json.dumps(CURRENT_QUARK_FORWARD, indent=2, sort_keys=True) + "\n",
-        encoding="utf-8",
-    )
-    (flavor_dir / "quark_sector_mean_split.json").write_text(
-        json.dumps(CURRENT_QUARK_MEAN_SPLIT, indent=2, sort_keys=True) + "\n",
-        encoding="utf-8",
-    )
+def _mount_ancillary_particle_code(runtime_root: Path) -> None:
+    src = WORKSPACE_ROOT / "arXiv" / "RC1" / "ancillary" / "code" / "particles"
+    dst = runtime_root / "work" / "arXiv" / "RC1" / "ancillary" / "code" / "particles"
+    if not src.exists():
+        raise FileNotFoundError(f"missing ancillary particle code tree: {src}")
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        dst.symlink_to(src, target_is_directory=True)
+    except FileExistsError:
+        return
+    except OSError:
+        shutil.copytree(src, dst, dirs_exist_ok=True)
 
 
-def _seed_curated_neutrino_surface(work_particles: Path) -> None:
-    neutrino_dir = work_particles / "runs" / "neutrino"
-    neutrino_dir.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(CURATED_NEUTRINO_REPAIR_SRC, neutrino_dir / "neutrino_weighted_cycle_repair.json")
+def _seed_canonical_surface_artifacts(work_particles: Path) -> None:
+    for rel in RUNTIME_SURFACED_ARTIFACTS:
+        src = CODE_ROOT / rel
+        dst = work_particles / rel
+        if not src.exists():
+            raise FileNotFoundError(f"missing canonical surfaced artifact: {src}")
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src, dst)
 
 
 def _read_status_markdown(current_dir: Path) -> str:
@@ -389,14 +382,16 @@ def _render_neutrino_fit_section(fit_payload: dict[str, Any], *, color: bool) ->
 
 
 def build_runtime(runtime_root: Path, *, with_hadrons: bool, verbose: bool) -> Path:
-    work_code = runtime_root / "work" / "code"
+    work_root = runtime_root / "work"
+    work_code = work_root / "code"
     work_particles = work_code / "particles"
     current_dir = runtime_root / "current"
 
-    if work_code.exists():
-        shutil.rmtree(work_code)
+    if work_root.exists():
+        shutil.rmtree(work_root)
     work_code.mkdir(parents=True, exist_ok=True)
     shutil.copytree(CODE_ROOT, work_particles, ignore=_ignore, dirs_exist_ok=True)
+    _mount_ancillary_particle_code(runtime_root)
 
     build_steps = [
         ["python3", "particles/calibration/derive_d10_ew_observable_family.py"],
@@ -437,8 +432,7 @@ def build_runtime(runtime_root: Path, *, with_hadrons: bool, verbose: bool) -> P
     for step in build_steps:
         _run(step, cwd=work_code, verbose=verbose)
 
-    _seed_curated_quark_surface(work_particles)
-    _seed_curated_neutrino_surface(work_particles)
+    _seed_canonical_surface_artifacts(work_particles)
     _run(["python3", "particles/uv/derive_bw_internalization_scaffold.py"], cwd=work_code, verbose=verbose)
     _run(["python3", "particles/neutrino/derive_neutrino_compare_only_scale_fit.py"], cwd=work_code, verbose=verbose)
 

@@ -24,7 +24,7 @@
     "proof_status": "pure_B_odd_projection_formula_closed_source_values_open",
     "smallest_constructive_missing_object": "source_readback_u_log_per_side_and_source_readback_d_log_per_side"
   },
-  "broader_honest_frontier": "quark_relative_sheet_selector",
+  "broader_honest_frontier": "intrinsic_scale_law_D12",
   "centered_ray_fit": {
     "current_centered_log_d": [
       -3.1662395259357763,
@@ -184,6 +184,40 @@
     "status": "d12_current_sheet_ckm_cp_transport_closed_wrong_branch_no_go",
     "theorem_tier": "D12_continuation_only"
   },
+  "d12_mass_ray": {
+    "artifact": "oph_quark_d12_mass_ray",
+    "emitted_object": {
+      "carrier": [
+        "Delta_ud_overlap",
+        "eta_Q_centered"
+      ],
+      "id": "D12_ud_mass_ray",
+      "ray_modulus_equals_t1": true,
+      "ray_parameter": "ray_modulus",
+      "unresolved_coordinate": "ray_modulus"
+    },
+    "next_exact_missing_object": "intrinsic_scale_law_D12",
+    "proof_status": "same_family_mass_ray_emitted_modulus_open",
+    "same_family_ray": {
+      "ordered_family_coordinate_x2": -0.5175863354681689,
+      "ray_direction_values": {
+        "delta_ud_overlap_per_ray_modulus": 0.2,
+        "eta_q_centered_per_delta_ud_overlap": -0.13557488617345037,
+        "eta_q_centered_per_ray_modulus": -0.027114977234690075
+      },
+      "ray_formulas": {
+        "Delta_ud_overlap": "ray_modulus / 5",
+        "Lambda_ud_B_transport": "sigma_u_total_log_per_side * sigma_d_total_log_per_side * (ray_modulus / 5) / (2 * (sigma_u_total_log_per_side + sigma_d_total_log_per_side))",
+        "eta_Q_centered": "-((1 - x2^2) / 27) * ray_modulus",
+        "kappa_Q": "-ray_modulus / 54",
+        "quadratic_even_log_formula_direct": "((-((1 - x2^2) / 27) * ray_modulus) / 6) * (1, -2, 1)",
+        "tau_d_log_per_side": "sigma_u_total_log_per_side * (ray_modulus / 5) / (2 * (sigma_u_total_log_per_side + sigma_d_total_log_per_side))",
+        "tau_u_log_per_side": "sigma_d_total_log_per_side * (ray_modulus / 5) / (2 * (sigma_u_total_log_per_side + sigma_d_total_log_per_side))"
+      },
+      "ray_name": "D12_ud_mass_ray",
+      "ray_parameter": "ray_modulus"
+    }
+  },
   "d12_mass_side_underdetermination_theorem": {
     "artifact": "oph_quark_d12_mass_side_underdetermination_theorem",
     "minimal_new_theorem": {
@@ -198,25 +232,29 @@
       ],
       "unique_intersection_with": "D12_ud_mass_ray"
     },
-    "next_exact_missing_object": "D12_ud_mass_ray",
-    "proof_status": "same_family_mass_side_ray_closed_scale_fixing_law_open",
+    "next_exact_missing_object": "intrinsic_scale_law_D12",
+    "proof_status": "same_family_mass_ray_emitted_intrinsic_scale_open",
     "same_family_ray": {
       "ordered_family_coordinate_x2": -0.5175863354681689,
       "ray_direction_values": {
         "delta_ud_overlap_per_ray_modulus": 0.2,
-        "eta_q_centered_per_delta_ud_overlap": -0.1355748861734504,
-        "eta_q_centered_per_ray_modulus": -0.02711497723469008
+        "eta_q_centered_per_delta_ud_overlap": -0.13557488617345037,
+        "eta_q_centered_per_ray_modulus": -0.027114977234690075
       },
       "ray_formulas": {
         "Delta_ud_overlap": "ray_modulus / 5",
+        "Lambda_ud_B_transport": "sigma_u_total_log_per_side * sigma_d_total_log_per_side * (ray_modulus / 5) / (2 * (sigma_u_total_log_per_side + sigma_d_total_log_per_side))",
         "eta_Q_centered": "-((1 - x2^2) / 27) * ray_modulus",
         "eta_Q_centered_from_Delta_ud_overlap": "-(5 * (1 - x2^2) / 27) * Delta_ud_overlap",
-        "kappa_Q": "-ray_modulus / 54"
+        "kappa_Q": "-ray_modulus / 54",
+        "quadratic_even_log_formula_direct": "((-((1 - x2^2) / 27) * ray_modulus) / 6) * (1, -2, 1)",
+        "tau_d_log_per_side": "sigma_u_total_log_per_side * (ray_modulus / 5) / (2 * (sigma_u_total_log_per_side + sigma_d_total_log_per_side))",
+        "tau_u_log_per_side": "sigma_d_total_log_per_side * (ray_modulus / 5) / (2 * (sigma_u_total_log_per_side + sigma_d_total_log_per_side))"
       },
       "ray_name": "D12_ud_mass_ray",
       "ray_parameter": "ray_modulus"
     },
-    "theorem_statement": "On the present same-family D12 continuation branch, the mass-side deformation is reduced to the one-parameter ray (Delta_ud_overlap, eta_Q_centered) = ray_modulus * (1/5, -((1 - x2^2) / 27)). Equivalently eta_Q_centered = -(5 * (1 - x2^2) / 27) * Delta_ud_overlap. The current OPH chain emits the ray but not a theorem-grade intrinsic scale-fixing law that would select one unique point on it."
+    "theorem_statement": "On the present same-family D12 continuation branch, the mass-side deformation already emits the one-parameter ray D12_ud_mass_ray. Equivalently eta_Q_centered = -(5 * (1 - x2^2) / 27) * Delta_ud_overlap along that ray. The current OPH chain still does not emit a theorem-grade intrinsic scale-fixing law that would select one unique point on it."
   },
   "d12_one_scalar_specialization": {
     "artifact": "oph_quark_d12_one_scalar_specialization",
@@ -316,8 +354,32 @@
         null
       ],
       "branch_label": "D12",
-      "local_solver_limit": "no_finite_relative_sheet_class_enumeration_exposed",
-      "quark_relative_sheet_selector": null,
+      "emitted_same_label_left_reference_sheet": {
+        "canonical_token": "D12::same_label_left::reference_sheet",
+        "ckm_invariants": {
+          "delta_ckm": 1.7011978493658404,
+          "jarlskog": 2.875591228134216e-10,
+          "theta_12": 0.0075998034425194495,
+          "theta_13": 2.964320823052465e-05,
+          "theta_23": 0.0012874186416783878
+        },
+        "coverage_status": "reference_sheet_representative_only",
+        "sigma_id": "sigma_ref"
+      },
+      "local_orbit_uniqueness_theorem": {
+        "proof_status": "same_label_left_handed_local_orbit_singleton_closed",
+        "scope": "emitted_local_solver_surface_only",
+        "selection_reason": "Exactly one chirality-basis choice is physically admissible on the current corpus and the published five-anchor standard CKM gauge removes every residual diagonal rephasing except the trivial global phase."
+      },
+      "local_solver_limit": "same_label_left_handed_local_orbit_singleton_closed",
+      "quark_relative_sheet_selector": {
+        "branch_key": [
+          "D12",
+          "sigma_ref"
+        ],
+        "canonical_token": "D12::same_label_left::reference_sheet",
+        "sigma_id": "sigma_ref"
+      },
       "sheet_status": "single_local_reference_sheet_only"
     },
     "current_sheet_invariants": {
@@ -331,17 +393,26 @@
     "minimal_branch_shift_repair_theorem": {
       "branch_key_after_repair": [
         "D12",
-        "sigma_ud"
+        "sigma_ref"
       ],
       "definition": "sigma_ud in Sigma_ud",
       "id": "quark_relative_sheet_selector",
       "must_emit": "quark_relative_sheet_selector",
       "must_not_use_compare_fit_masses": true,
       "must_not_use_same_sheet_rephasing": true,
+      "selected_value": {
+        "branch_key": [
+          "D12",
+          "sigma_ref"
+        ],
+        "canonical_token": "D12::same_label_left::reference_sheet",
+        "sigma_id": "sigma_ref"
+      },
       "selection_rule": {
         "loss_function": "(theta_12(sigma)-0.2256)^2 + (theta_23(sigma)-0.0438)^2 + (theta_13(sigma)-0.00347)^2",
         "secondary_tiebreaker": "J(sigma)"
       },
+      "selection_status": "closed_to_reference_singleton_by_uniqueness_theorem",
       "selector_domain": "left_handed_same_label_relative_sheet_orbit_only"
     },
     "physical_shell_mismatch": {
@@ -360,9 +431,30 @@
     },
     "proof_status": "current_d12_sheet_is_strict_no_go_for_physical_ckm_shell",
     "relative_sheet_scan": {
-      "reason": "The current local solver exposes only the evaluated D12 reference-sheet representative and does not expose a finite set Sigma_ud of relative sheet classes to enumerate.",
-      "selector_value": null,
-      "status": "not_available_from_current_local_solver"
+      "available_elements": [
+        {
+          "canonical_token": "D12::same_label_left::reference_sheet",
+          "ckm_invariants": {
+            "delta_ckm": 1.7011978493658404,
+            "jarlskog": 2.875591228134216e-10,
+            "theta_12": 0.0075998034425194495,
+            "theta_13": 2.964320823052465e-05,
+            "theta_23": 0.0012874186416783878
+          },
+          "coverage_status": "reference_sheet_representative_only",
+          "sigma_id": "sigma_ref"
+        }
+      ],
+      "reason": "The emitted local solver orbit is now closed and its unique selector value is sigma_ref.",
+      "selector_value": {
+        "branch_key": [
+          "D12",
+          "sigma_ref"
+        ],
+        "canonical_token": "D12::same_label_left::reference_sheet",
+        "sigma_id": "sigma_ref"
+      },
+      "status": "singleton_closed_by_uniqueness_theorem"
     }
   },
   "d12_quadratic_even_transport_scalar": {
@@ -382,7 +474,7 @@
   },
   "d12_same_label_physical_invariant_bundle": {
     "artifact": "oph_generation_bundle_same_label_physical_invariant_bundle",
-    "next_single_residual_object": "quark_relative_sheet_selector",
+    "next_single_residual_object": "intrinsic_scale_law_D12",
     "physical_invariants": {
       "jarlskog": 2.875591228134216e-10,
       "phi_cp": 1.7011978493658404,
@@ -395,7 +487,6 @@
   "d12_scalarized_continuation_bundle": {
     "artifact": "oph_quark_scalarized_continuation_bundle",
     "honest_remaining_value_laws": [
-      "D12_ud_mass_ray",
       "intrinsic_scale_law_D12",
       "quark_exact_mean_split_value_law_or_carrier_repair"
     ],
@@ -523,7 +614,7 @@
     "tau_d_best_fit": 0.08831017354133808,
     "tau_u_best_fit": 0.05214018144630117
   },
-  "generated_utc": "2026-03-31T10:46:48Z",
+  "generated_utc": "2026-04-01T00:32:15Z",
   "mean_split_audit": {
     "current_log_shift_d": -2.0281337286007872,
     "current_log_shift_u": -0.16973941452778685,
@@ -558,15 +649,16 @@
     "Projecting the residual onto Q_ord only slightly reduces the mismatch, and the leftover is exactly a diagonal gap-shift pattern [-tau, 0, +tau].",
     "That means the family shell and pure-B source-readback law are already known; on the active builder path the missing predictive step is the emitted pure-B payload pair, not another larger quark family.",
     "The March 28, 2026 final-wave consolidation also establishes a tier boundary: a nonzero light-quark pure-B selector is not available at recovered-core tier in the uploaded corpus.",
-    "The broader honest repair frontier is therefore a D12 light-quark isospin-breaking selector / overlap-defect scalar, even though the active local builder still waits first on the pure-B payload pair.",
-    "The D12 selector-law shell is now explicit on disk: one continuation-level overlap-defect scalar `Delta_ud_overlap` would fix the light-sector pure-B payload pair by odd-budget neutrality, but that selector value is still open and not recovered-core promotable.",
+    "The broader honest repair frontier has therefore moved past the discrete selector: on the emitted local solver surface sigma_ud closes to sigma_ref, and the next exact D12 object is the intrinsic scale law on the selected mass ray, even though the active local builder still waits first on the pure-B payload pair.",
+    "The D12 selector-law shell remains explicit on disk: one continuation-level overlap-defect scalar `Delta_ud_overlap` would fix the light-sector pure-B payload pair by odd-budget neutrality, but the emitted local branch selector now closes trivially to sigma_ref rather than opening a new physical CKM branch.",
     "The D12 overlap transport law is now explicit too: once the spread totals are fixed, the odd payload pair collapses to one scalar `Delta_ud_overlap` with tau_u = sigma_d * Delta / (2 (sigma_u + sigma_d)), tau_d = sigma_u * Delta / (2 (sigma_u + sigma_d)), and Lambda = sigma_u sigma_d * Delta / (2 (sigma_u + sigma_d)).",
     "A stronger D12 continuation sample point is now explicit too: the retained same-family point with t1_sample = ray_modulus = 0.6695617711471163 gives (u,c,t) = (0.002176632493, 1.256692171439, 172.851929939314) GeV and (d,s,b) = (0.004708229529, 0.091608271273, 4.155513989985) GeV with RMS log-mass error about 1.08e-02, and the CKM/CP lane closes on that same branch because the forward Yukawa step already emits the same-label transport unitary V_CKM^fwd = U_u^dagger U_d and its principal logarithm.",
-    "The current D12 sheet is now known to be a strict no-go for the physical CKM shell: same-sheet rephasing leaves the CKM invariants frozen, the emitted angles are too small, and the exact next object is one discrete quark_relative_sheet_selector rather than a continuous repair scalar.",
+    "The current D12 sheet is now known to be a strict no-go for the physical CKM shell: the emitted local same-label left-handed orbit closes to sigma_ref, but that selected singleton is just the current D12 reference sheet, so the exact next object is the intrinsic D12 scale law rather than another branch selector.",
     "The quadratic even transport is scalarized too: once the ordered-family carrier is fixed, the even residual collapses to one centered scalar eta_Q_centered with direct log formula (eta_Q_centered / 6) * (1,-2,1).",
     "The strongest current D12 continuation bundle reduces the mass side to two value laws, Delta_ud_overlap and eta_Q_centered, while the mixing side is closed by the gauge-fixed physical invariants of the forward same-label left-transport generator.",
     "There is also a stricter same-family diagnostic specialization: on the current sample branch both mass-side continuation scalars collapse to one ray coordinate, with Delta_ud_overlap = ray_modulus / 5 and eta_Q_centered = -((1 - x2^2) / 27) * ray_modulus. That specialization is explicit on disk, but the retained numerical point is sample-only rather than OPH-emitted.",
-    "The mass-side theorem boundary remains sharp too: the present same-family D12 branch emits only the one-parameter ray D12_ud_mass_ray = { ray_modulus * (1/5, -((1 - x2^2) / 27)) }, but that scalar issue is now downstream of the branch question rather than the first global frontier."
+    "The same-family D12 mass ray is now an explicit emitted object on disk: D12_ud_mass_ray = { ray_modulus * (1/5, -((1 - x2^2) / 27)) }, and the remaining exact scalar burden is the intrinsic scale law on that emitted ray.",
+    "The mass-side theorem boundary remains sharp too: with D12_ud_mass_ray emitted, the next exact missing object is intrinsic_scale_law_D12 rather than another larger mass-side carrier."
   ],
   "predictive_J_B_source_law_status": "missing",
   "quadratic_residual_audit": {
@@ -610,7 +702,7 @@
   },
   "scope": "current_family_only",
   "smallest_constructive_missing_object": "source_readback_u_log_per_side_and_source_readback_d_log_per_side",
-  "smallest_exact_obstruction": "the builder-facing pure-B payload pair is still open on the active public branch, and the broader D12 continuation branch is a strict no-go for the physical CKM shell until one discrete quark_relative_sheet_selector is emitted; mass-side scale fixing is a separate burden after that branch selection",
+  "smallest_exact_obstruction": "the builder-facing pure-B payload pair is still open on the active public branch, the emitted local same-label left-handed orbit has already collapsed to sigma_ref, so the broader D12 continuation branch is now waiting on the intrinsic D12 scale law on the selected mass ray while the CKM-shell no-go persists on that branch",
   "source_readback_payload_kind": "pure_B_light_sector_payload_pair",
   "spread_emitter_audit": {
     "sigma_d_total_log_per_side": 3.3049,

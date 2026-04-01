@@ -8,10 +8,28 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
+from bw_collar_honesty import (
+    CARRIED_SCHEDULE_FORMULA,
+    CMI_COMPONENT,
+    FAITHFUL_COMPONENT,
+    build_local_honesty_gate,
+    build_local_obligation_ledger,
+    build_schedule_term_frontier,
+)
+
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_OUT = ROOT / "particles" / "runs" / "uv" / "bw_scaling_limit_cap_pair_extraction_scaffold.json"
 PRELIMIT_SYSTEM = ROOT / "particles" / "runs" / "uv" / "bw_realized_transported_cap_local_system.json"
+RAW_DATUM = ROOT / "particles" / "runs" / "uv" / "bw_fixed_local_collar_markov_faithfulness_datum.json"
+CARRIED_SCHEDULE = ROOT / "particles" / "runs" / "uv" / "bw_carried_collar_schedule_scaffold.json"
+CONSTRUCTIVE_RECOVERY = (
+    ROOT / "particles" / "runs" / "uv" / "bw_fixed_local_collar_constructive_recovery_scaffold.json"
+)
+EXACT_MARKOV_MODULUS = ROOT / "particles" / "runs" / "uv" / "bw_fixed_local_collar_exact_markov_modulus_scaffold.json"
+FAITHFUL_MODULAR_DEFECT = (
+    ROOT / "particles" / "runs" / "uv" / "bw_fixed_local_collar_faithful_modular_defect_scaffold.json"
+)
 
 
 def _timestamp() -> str:
@@ -26,14 +44,16 @@ def build_payload() -> dict[str, object]:
     ]
     remaining_witness = "vanishing_carried_collar_schedule_on_fixed_local_collars"
     smaller_raw_datum = "fixed_local_collar_markov_faithfulness_datum"
-    remaining_formula = (
-        "eta_{n,m,delta} = r_FR(epsilon_{n,m,delta}) + "
-        "4 * lambda_{*,n,m,delta}^{-1} * delta^M_{m,delta}(epsilon_{n,m,delta}) -> 0"
+    remaining_formula = CARRIED_SCHEDULE_FORMULA
+    schedule_term_frontier = build_schedule_term_frontier(
+        constructive_recovery_artifact=str(CONSTRUCTIVE_RECOVERY),
+        faithful_modular_defect_artifact=str(FAITHFUL_MODULAR_DEFECT),
+        carried_schedule_artifact=str(CARRIED_SCHEDULE),
     )
     return {
         "artifact": "oph_bw_scaling_limit_cap_pair_extraction_scaffold",
         "generated_utc": _timestamp(),
-        "status": "constructive_prelimit_system_one_emitted_witness_still_missing",
+        "status": "constructive_prelimit_system_two_lower_emitted_witnesses_still_missing",
         "public_promotion_allowed": False,
         "exact_missing_object": "scaling_limit_cap_pair_extraction",
         "precise_missing_object_name": "canonical_scaling_cap_pair_realization_from_transported_cap_marginals",
@@ -56,6 +76,7 @@ def build_payload() -> dict[str, object]:
         },
         "fills_contract_witnesses": filled_witnesses,
         "remaining_missing_emitted_witness": remaining_witness,
+        "remaining_missing_emitted_witness_artifact": str(CARRIED_SCHEDULE),
         "remaining_missing_emitted_witness_formula": remaining_formula,
         "remaining_missing_emitted_witness_components": [
             "r_FR(epsilon_{n,m,delta})",
@@ -64,14 +85,65 @@ def build_payload() -> dict[str, object]:
         ],
         "remaining_missing_emitted_witness_domain": "every fixed local collar model",
         "smaller_remaining_raw_datum": smaller_raw_datum,
+        "smaller_remaining_raw_datum_artifact": str(RAW_DATUM),
         "smaller_remaining_raw_datum_components": [
-            "epsilon_{n,m,delta} = I(A_{m,delta}:D_{m,delta}|B_{m,delta})_{omega_{n->m}} -> 0",
-            "exists lambda_bar_{m,delta} > 0 with lambda_{*,n,m,delta} >= lambda_bar_{m,delta} eventually",
+            CMI_COMPONENT,
+            FAITHFUL_COMPONENT,
         ],
+        "intermediate_witness_chain": [
+            {
+                "id": "constructive_recovery_remainder_vanishing",
+                "artifact": str(CONSTRUCTIVE_RECOVERY),
+            },
+            {
+                "id": "fixed_local_collar_exact_markov_modulus_vanishing",
+                "artifact": str(EXACT_MARKOV_MODULUS),
+            },
+            {
+                "id": "fixed_local_collar_faithful_modular_defect_vanishing",
+                "artifact": str(FAITHFUL_MODULAR_DEFECT),
+            },
+            {
+                "id": remaining_witness,
+                "artifact": str(CARRIED_SCHEDULE),
+            },
+        ],
+        "schedule_term_witnesses": [
+            {
+                "id": "constructive_recovery_remainder_vanishing",
+                "artifact": str(CONSTRUCTIVE_RECOVERY),
+                "role": "markov_side_recovery_term",
+            },
+            {
+                "id": "fixed_local_collar_faithful_modular_defect_vanishing",
+                "artifact": str(FAITHFUL_MODULAR_DEFECT),
+                "role": "faithfulness_weighted_modular_term",
+            },
+        ],
+        "actual_solver_missing_emitted_witnesses": schedule_term_frontier["missing_emitted_witnesses"],
+        "derived_remaining_input_witness": schedule_term_frontier["derived_parent_witness"],
+        "derived_remaining_input_witness_closure_theorem": schedule_term_frontier["closure_theorem"],
+        "remaining_witness_obligation_ledger": build_local_obligation_ledger(
+            constructive_recovery_artifact=str(CONSTRUCTIVE_RECOVERY),
+            exact_markov_artifact=str(EXACT_MARKOV_MODULUS),
+            faithful_modular_defect_artifact=str(FAITHFUL_MODULAR_DEFECT),
+            carried_schedule_artifact=str(CARRIED_SCHEDULE),
+        ),
+        "remaining_witness_honesty_gate": build_local_honesty_gate(
+            carried_schedule_artifact=str(CARRIED_SCHEDULE),
+            constructive_recovery_artifact=str(CONSTRUCTIVE_RECOVERY),
+            exact_markov_artifact=str(EXACT_MARKOV_MODULUS),
+            faithful_modular_defect_artifact=str(FAITHFUL_MODULAR_DEFECT),
+            include_prelimit_system_artifact=str(PRELIMIT_SYSTEM),
+        ),
+        "remaining_witness_term_frontier": schedule_term_frontier,
         "schedule_reduction_theorem": (
             "For each fixed local collar model, the eta_{n,m,delta} vanishing schedule follows once the collarwise conditional mutual information vanishes and the faithful lower spectral bound is eventually uniform."
         ),
-        "missing_input_witnesses": [remaining_witness],
+        "missing_input_witnesses": [
+            "constructive_recovery_remainder_vanishing",
+            "fixed_local_collar_faithful_modular_defect_vanishing",
+        ],
         "prelimit_realized_system_artifact": str(PRELIMIT_SYSTEM),
         "theorem_assumptions": [
             "countable directed cap-local test system in one fixed reference chart",
@@ -110,9 +182,11 @@ def build_payload() -> dict[str, object]:
         "notes": [
             "This is the first half of the UV/BW internalization route.",
             "The local quotient/prelimit transported cap-local system can already be packaged from the current corpus at the reference-chart and asymptotic transport-equivalence level.",
-            "The compactness/extraction theorem itself is not the missing proof; the current remaining blocker is one emitted carried-collar witness satisfying the vanishing schedule on fixed local collar models.",
-            "The sharp current contract for that witness is eta_{n,m,delta} = r_FR(epsilon_{n,m,delta}) + 4 * lambda_{*,n,m,delta}^{-1} * delta^M_{m,delta}(epsilon_{n,m,delta}) -> 0 on every fixed local collar model.",
+            "The compactness/extraction theorem itself is not the missing proof; the current remaining blocker is the two-term carried-collar emitted frontier beneath the derived eta schedule.",
+            "The carried schedule itself is now recorded as theorem-generated from those two term witnesses: r_FR(epsilon_{n,m,delta}) -> 0 and 4 * lambda_{*,n,m,delta}^{-1} * delta^M_{m,delta}(epsilon_{n,m,delta}) -> 0.",
             "That combined schedule reduces one level lower to a fixed-local-collar Markov/faithfulness datum: collarwise CMI vanishing plus an eventual positive lower spectral bound.",
+            "Inside that raw datum, the constructive recovery witness, the exact-Markov comparison modulus, and the faithful modular-defect term are now split as separate lower local scaffolds.",
+            "The artifact now also carries a machine-readable honesty gate so prelimit transport packaging cannot be mistaken for the missing emitted collar schedule.",
             "It does not by itself prove the BW automorphism law.",
         ],
     }

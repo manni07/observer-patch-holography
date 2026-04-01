@@ -103,6 +103,21 @@ def test_neutrino_rows_get_repaired_branch_surface_before_absolute_scale() -> No
     assert surface == "local_neutrino_repaired_branch_waiting_absolute_scale"
 
 
+def test_premise_boundaries_use_repo_stable_artifact_refs() -> None:
+    module = _load_module()
+    uv = module.build_premise_boundaries()["uv_bw_internalization"]
+    assert uv["prelimit_system_artifact"] == "code/particles/runs/uv/bw_realized_transported_cap_local_system.json"
+    assert uv["remaining_missing_emitted_witness_artifact"] == (
+        "code/particles/runs/uv/bw_carried_collar_schedule_scaffold.json"
+    )
+    assert uv["smaller_remaining_raw_datum_artifact"] == (
+        "code/particles/runs/uv/bw_fixed_local_collar_markov_faithfulness_datum.json"
+    )
+    assert uv["neutrino_local_bridge_candidate_context"] == (
+        "code/particles/runs/neutrino/neutrino_lambda_nu_bridge_candidate.json"
+    )
+
+
 def test_top_note_uses_preserved_sidecar_value() -> None:
     module = _load_module()
     updated = module.apply_local_candidate_overrides(

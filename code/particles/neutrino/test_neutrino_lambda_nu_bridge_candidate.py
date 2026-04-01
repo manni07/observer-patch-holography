@@ -10,11 +10,15 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
+CORRECTION_SCRIPT = ROOT / "particles" / "neutrino" / "derive_neutrino_bridge_correction_candidate_audit.py"
+CORRIDOR_SCRIPT = ROOT / "particles" / "neutrino" / "derive_neutrino_attachment_bridge_scalar_corridor.py"
 SCRIPT = ROOT / "particles" / "neutrino" / "derive_neutrino_lambda_nu_bridge_candidate.py"
 OUTPUT = ROOT / "particles" / "runs" / "neutrino" / "neutrino_lambda_nu_bridge_candidate.json"
 
 
 def test_neutrino_lambda_nu_bridge_candidate() -> None:
+    subprocess.run([sys.executable, str(CORRECTION_SCRIPT)], check=True, capture_output=True, text=True)
+    subprocess.run([sys.executable, str(CORRIDOR_SCRIPT)], check=True, capture_output=True, text=True)
     completed = subprocess.run(
         [sys.executable, str(SCRIPT), "--output", str(OUTPUT)],
         check=True,
@@ -59,6 +63,23 @@ def test_neutrino_lambda_nu_bridge_candidate() -> None:
     assert stack[5]["id"] == "neutrino_weighted_cycle_absolute_attachment"
     assert payload["compare_only_bridge_factor"]["F_nu_star"] > 1.0
     assert payload["compare_only_residual_amplitude_ratio"]["B_nu_star"] > 1.0
+    smallest = payload["smallest_exact_missing_object"]
+    assert smallest["symbol"] == "C_nu"
+    assert smallest["status"] == "irreducible_on_current_corpus"
+    reduced = payload["smaller_exact_object_above_emitted_proxy"]
+    assert reduced["symbol"] == "C_nu"
+    assert reduced["compare_only_target"] > 0.99
+    assert reduced["compare_only_target"] < 1.01
+    corridor = payload["strongest_compare_only_bridge_scalar_corridor"]
+    assert corridor["artifact"] == "oph_neutrino_attachment_bridge_scalar_corridor"
+    assert corridor["primary_cross_route_corridor"]["contains_compare_only_target"] is True
+    assert corridor["strongest_target_containing_bridge_scalar_corridor"]["contains_compare_only_target"] is True
+    assert corridor["strongest_target_containing_bridge_scalar_corridor"]["relative_half_width"] < corridor["primary_cross_route_corridor"]["relative_half_width"]
+    assert corridor["shortlist_route_consensus_window"]["narrowing_vs_primary_cross_route_corridor"]["is_narrower"] is True
+    assert corridor["shortlist_route_consensus_window"]["contains_compare_only_target"] is False
+    assert corridor["bridge_correction_candidate_audit"]["artifact"] == "oph_neutrino_bridge_correction_candidate_audit"
+    assert corridor["top_candidate_envelope"]["relative_half_width"] < 0.004
+    assert corridor["family_assisted_route"]["route_id"] == "defect_family_assisted_residual_route"
     assert payload["current_attached_stack_irreducibility_theorem"]["artifact"] == "oph_neutrino_attachment_irreducibility_theorem"
     closed_form = payload["target_free_closed_form_candidates"][0]
     assert closed_form["name"] == "gamma_over_sqrt_ratio_hat"

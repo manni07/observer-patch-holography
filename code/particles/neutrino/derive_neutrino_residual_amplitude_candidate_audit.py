@@ -31,6 +31,12 @@ COMPARE_FIT_JSON = ROOT / "particles" / "runs" / "neutrino" / "neutrino_compare_
 SCALE_ANCHOR_JSON = ROOT / "particles" / "runs" / "neutrino" / "neutrino_scale_anchor.json"
 DEFECT_FAMILY_JSON = ROOT / "particles" / "runs" / "neutrino" / "defect_weighted_mu_e_family.json"
 DEFAULT_OUT = ROOT / "particles" / "runs" / "neutrino" / "neutrino_residual_amplitude_candidate_audit.json"
+EXTENDED_SCALE_KEYS = (
+    "base_mu_over_mstar",
+    "doublet_center_over_mstar",
+    "heavy_light_gap_over_mstar",
+    "solar_response_over_mstar",
+)
 
 
 def _timestamp() -> str:
@@ -58,7 +64,7 @@ def _formula_string(keys: tuple[str, ...], exponents: tuple[float, ...]) -> str:
     return " * ".join(pieces)
 
 
-def _search_candidates(values: dict[str, float], target_ratio: float) -> tuple[dict[str, Any], list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
+def _rank_candidates(values: dict[str, float], target_ratio: float) -> list[dict[str, Any]]:
     exponent_choices = (-2.0, -1.0, -0.5, 0.5, 1.0, 2.0)
     candidates: list[dict[str, Any]] = []
     for width in (1, 2, 3):
@@ -77,12 +83,7 @@ def _search_candidates(values: dict[str, float], target_ratio: float) -> tuple[d
                     }
                 )
     candidates.sort(key=lambda item: (item["relative_error"], item["complexity"]))
-    return (
-        candidates[0],
-        [item for item in candidates if item["complexity"] == 1][:10],
-        [item for item in candidates if item["complexity"] == 2][:10],
-        [item for item in candidates if item["complexity"] == 3][:10],
-    )
+    return candidates
 
 
 def build_payload(
@@ -147,10 +148,20 @@ def build_payload(
     search_core_pool.pop("sum_qbar", None)
     search_extended_pool.pop("sum_qbar", None)
 
-    best_core, top_single, top_double, top_triple = _search_candidates(search_core_pool, target_ratio)
-    best_extended, extended_top_single, extended_top_double, extended_top_triple = _search_candidates(
-        search_extended_pool, target_ratio
-    )
+    core_ranked = _rank_candidates(search_core_pool, target_ratio)
+    extended_ranked = _rank_candidates(search_extended_pool, target_ratio)
+    best_core = core_ranked[0]
+    top_single = [item for item in core_ranked if item["complexity"] == 1][:10]
+    top_double = [item for item in core_ranked if item["complexity"] == 2][:10]
+    top_triple = [item for item in core_ranked if item["complexity"] == 3][:10]
+    best_extended = extended_ranked[0]
+    extended_top_single = [item for item in extended_ranked if item["complexity"] == 1][:10]
+    extended_top_double = [item for item in extended_ranked if item["complexity"] == 2][:10]
+    extended_top_triple = [item for item in extended_ranked if item["complexity"] == 3][:10]
+    family_assisted = [
+        item for item in extended_ranked if any(key in EXTENDED_SCALE_KEYS for key in item["keys"])
+    ]
+    best_family_assisted = family_assisted[0]
 
     return {
         "artifact": "oph_neutrino_residual_amplitude_candidate_audit",
@@ -181,21 +192,23 @@ def build_payload(
         },
         "best_compare_only_candidate": best_core,
         "best_extended_compare_only_candidate": best_extended,
+        "family_assisted_scale_keys": list(EXTENDED_SCALE_KEYS),
+        "best_family_assisted_compare_only_candidate": best_family_assisted,
         "top_single_factor_candidates": top_single,
         "top_two_factor_candidates": top_double,
         "top_three_factor_candidates": top_triple,
         "extended_top_single_factor_candidates": extended_top_single,
         "extended_top_two_factor_candidates": extended_top_double,
         "extended_top_three_factor_candidates": extended_top_triple,
+        "top_family_assisted_candidates": family_assisted[:10],
         "working_observation": (
             "After stripping off the exact q_mean^p_nu homogeneity, the residual compare-only target "
             "A_nu_star / m_star is numerically much smaller and cleaner than the raw bridge factor "
             "lambda_nu / m_star. On the core residual scalar pool the strongest simple clue is "
             "sqrt(I_nu) * sqrt(ratio_hat) / sum_defect. On the extended pool that also includes "
-            "defect-weighted mu_e family scales normalized by m_star, no stronger low-complexity clue survives "
-            "after the trivial closed normalizer `sum_qbar = 3` is removed from the search. So the extended "
-            "pool does not yet beat the core clue `sqrt(I_nu) * sqrt(ratio_hat) / sum_defect`. Both remain "
-            "compare-only audit signals."
+            "defect-weighted mu_e family scales normalized by m_star, the strongest genuinely family-assisted clue is "
+            f"`{best_family_assisted['formula']}`. It lands very close to the same target but still does not beat the core clue "
+            "`sqrt(I_nu) * sqrt(ratio_hat) / sum_defect`. Both remain compare-only audit signals."
         ),
         "hard_guard": {
             "status": "do_not_promote",

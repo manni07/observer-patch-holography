@@ -75,6 +75,12 @@ def build_payload(
         "sum_mu_eta2": float(sum(a * (b * b) for a, b in zip(mu, eta))),
     }
     exponent_choices = (-3.0, -2.0, -1.0, -0.5, 0.5, 1.0, 2.0, 3.0)
+    q_mean_to_p_nu = float(
+        (bridge_candidate.get("residual_amplitude_parameterization") or {}).get("q_mean_to_p_nu")
+    )
+    target_bridge_scalar = float(
+        (bridge_candidate.get("compare_only_residual_amplitude_ratio") or {}).get("B_nu_star")
+    )
 
     candidates: list[dict[str, Any]] = []
     for width in (1, 2):
@@ -98,6 +104,19 @@ def build_payload(
     two_factor = [item for item in candidates if item["complexity"] == 2][:10]
     best_simple = min(candidates, key=lambda item: (item["relative_error"], item["complexity"]))
     best_overall = min(candidates, key=lambda item: item["relative_error"])
+    converted_ranked = sorted(
+        (
+            {
+                **item,
+                "converted_formula": f"({item['formula']}) * q_mean^p_nu",
+                "q_mean_to_p_nu": q_mean_to_p_nu,
+                "converted_value": item["value"] * q_mean_to_p_nu,
+                "converted_relative_error": abs(item["value"] * q_mean_to_p_nu - target_bridge_scalar) / target_bridge_scalar,
+            }
+            for item in candidates
+        ),
+        key=lambda item: (item["converted_relative_error"], item["complexity"]),
+    )
 
     return {
         "artifact": "oph_neutrino_attachment_normalizer_candidate_audit",
@@ -115,14 +134,27 @@ def build_payload(
             "exponents": list(exponent_choices),
             "objective": "minimize relative error to F_nu_star",
         },
+        "exact_bridge_scalar_conversion": {
+            "definition": "B_nu = F_nu * q_mean^p_nu",
+            "source": "weighted_cycle_attachment_irreducibility_after_full_attached_stack",
+            "q_mean_to_p_nu": q_mean_to_p_nu,
+        },
+        "converted_target_bridge_scalar": {
+            "name": "B_nu_star",
+            "value": target_bridge_scalar,
+            "source": "exact_q_mean_factorization_applied_to_F_nu_star",
+        },
         "best_simple_symmetric_candidate": best_simple,
         "best_overall_symmetric_candidate": best_overall,
         "top_single_factor_candidates": single_factor,
         "top_two_factor_candidates": two_factor,
+        "best_bridge_scalar_candidate_after_exact_q_mean_factorization": converted_ranked[0],
+        "top_bridge_scalar_candidates_after_exact_q_mean_factorization": converted_ranked[:10],
         "working_observation": (
             "The live attachment-normalizer surface has a simple symmetric clue: the best two-factor "
             "candidate on the current branch is close to an inverse defect-sum times inverse square-root "
-            "hierarchy ratio. This is compare-only research output and not a theorem-grade lambda_nu law."
+            "hierarchy ratio. After the exact q_mean^p_nu factorization this same route lands in the "
+            "live compare-only B_nu corridor, but it still stays strictly below a theorem-grade attachment law."
         ),
         "hard_guard": {
             "status": "do_not_promote",

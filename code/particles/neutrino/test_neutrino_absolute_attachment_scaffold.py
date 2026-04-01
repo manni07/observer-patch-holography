@@ -4,14 +4,20 @@
 from __future__ import annotations
 
 import json
+import subprocess
+import sys
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
+CORRECTION_SCRIPT = ROOT / "particles" / "neutrino" / "derive_neutrino_bridge_correction_candidate_audit.py"
+CORRIDOR_SCRIPT = ROOT / "particles" / "neutrino" / "derive_neutrino_attachment_bridge_scalar_corridor.py"
 OUTPUT = ROOT / "particles" / "runs" / "neutrino" / "neutrino_absolute_attachment_scaffold.json"
 
 
 def test_neutrino_absolute_attachment_scaffold_contract() -> None:
+    subprocess.run([sys.executable, str(CORRECTION_SCRIPT)], check=True, capture_output=True, text=True)
+    subprocess.run([sys.executable, str(CORRIDOR_SCRIPT)], check=True, capture_output=True, text=True)
     payload = json.loads(OUTPUT.read_text(encoding="utf-8"))
     assert payload["artifact"] == "oph_neutrino_absolute_attachment_scaffold"
     assert payload["status"] == "minimal_constructive_extension"
@@ -23,6 +29,17 @@ def test_neutrino_absolute_attachment_scaffold_contract() -> None:
     assert payload["current_no_go"]["strictly_smaller_missing_clause"] is None
     assert payload["current_no_go"]["corrected_bridge_parameterization"] == "lambda_nu = (m_star_eV / q_mean^p_nu) * B_nu"
     assert payload["current_no_go"]["residual_amplitude_parameterization"]["definition"] == "B_nu = lambda_nu * q_mean^p_nu / m_star_eV"
+    reduced = payload["current_no_go"]["smaller_exact_object_above_emitted_proxy"]
+    assert reduced["symbol"] == "C_nu"
+    assert reduced["compare_only_target"] > 0.99
+    assert reduced["compare_only_target"] < 1.01
+    corridor = payload["current_no_go"]["strongest_compare_only_bridge_scalar_corridor"]
+    assert corridor["artifact"] == "oph_neutrino_attachment_bridge_scalar_corridor"
+    assert corridor["primary_cross_route_corridor"]["contains_compare_only_target"] is True
+    assert corridor["strongest_target_containing_bridge_scalar_corridor"]["contains_compare_only_target"] is True
+    assert corridor["strongest_target_containing_bridge_scalar_corridor"]["relative_half_width"] < corridor["primary_cross_route_corridor"]["relative_half_width"]
+    assert corridor["bridge_correction_candidate_audit"]["artifact"] == "oph_neutrino_bridge_correction_candidate_audit"
+    assert corridor["shortlist_route_consensus_window"]["narrowing_vs_primary_cross_route_corridor"]["is_narrower"] is True
     assert payload["extension_contract"]["must_emit"].startswith("lambda_nu")
     stack = payload["extension_contract"]["current_theorem_stack"]
     assert stack[0]["id"] == "oph_same_label_overlap_defect_weight_normalizer"

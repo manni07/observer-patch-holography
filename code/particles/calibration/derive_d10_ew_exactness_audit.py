@@ -29,6 +29,7 @@ TARGET_FREEZE_SPLIT_JSON = ROOT / "particles" / "runs" / "calibration" / "d10_ew
 MINIMAL_CONDITIONAL_JSON = ROOT / "particles" / "runs" / "calibration" / "d10_ew_minimal_conditional_theorem.json"
 TARGET_EMITTER_JSON = ROOT / "particles" / "runs" / "calibration" / "d10_ew_target_emitter_candidate.json"
 TARGET_FREE_REPAIR_JSON = ROOT / "particles" / "runs" / "calibration" / "d10_ew_target_free_repair_value_law.json"
+FORWARD_TRANSMUTATION_JSON = ROOT / "particles" / "runs" / "calibration" / "d10_ew_forward_transmutation_certificate.json"
 DEFAULT_OUT = ROOT / "particles" / "runs" / "calibration" / "d10_ew_exactness_audit.json"
 
 
@@ -117,6 +118,7 @@ def main() -> int:
     parser.add_argument("--minimal-conditional-promotion", default=str(MINIMAL_CONDITIONAL_JSON))
     parser.add_argument("--target-emitter", default=str(TARGET_EMITTER_JSON))
     parser.add_argument("--target-free-repair", default=str(TARGET_FREE_REPAIR_JSON))
+    parser.add_argument("--forward-transmutation", default=str(FORWARD_TRANSMUTATION_JSON))
     parser.add_argument("--output", default=str(DEFAULT_OUT))
     args = parser.parse_args()
 
@@ -194,6 +196,12 @@ def main() -> int:
     target_free_repair = (
         json.loads(target_free_repair_path.read_text(encoding="utf-8"))
         if target_free_repair_path.exists()
+        else None
+    )
+    forward_transmutation_path = Path(args.forward_transmutation)
+    forward_transmutation = (
+        json.loads(forward_transmutation_path.read_text(encoding="utf-8"))
+        if forward_transmutation_path.exists()
         else None
     )
 
@@ -445,6 +453,15 @@ def main() -> int:
             "coherent_emitted_quintet": target_free_repair.get("coherent_emitted_quintet"),
             "compare_only_validation_against_frozen_surface": target_free_repair.get("compare_only_validation_against_frozen_surface"),
         },
+        "forward_transmutation_certificate": None if forward_transmutation is None else {
+            "artifact": forward_transmutation.get("artifact"),
+            "status": forward_transmutation.get("status"),
+            "object_id": forward_transmutation.get("object_id"),
+            "notation_split": forward_transmutation.get("notation_split"),
+            "forward_core_solution": forward_transmutation.get("forward_core_solution"),
+            "source_only_reconstruction": forward_transmutation.get("source_only_reconstruction"),
+            "forward_checks": forward_transmutation.get("forward_checks"),
+        },
         "exact_closure_beyond_current_carrier": None if exact_closure is None else {
             "artifact": exact_closure.get("artifact"),
             "status": exact_closure.get("status"),
@@ -620,6 +637,11 @@ def main() -> int:
                 "The broader D10 geometry is historically the repair branch beyond the present current carrier. That branch remains explicit, but the public electroweak theorem surface is now the target-free source-only repair law."
                 if target_free_closed
                 else "The broader D10 geometry is still the repair branch beyond the present current carrier, but on one frozen authoritative target pair the coherent repair law is already explicit and exact."
+            ),
+            (
+                "The forward transmutation certificate now records the non-circular P -> alpha_U -> t map explicitly and separates the calibration beta_ratio_EW from the transmutation counting factor beta_transmutation_EW = N_c + 1."
+                if forward_transmutation is not None
+                else "No explicit forward transmutation certificate is attached to this audit."
             ),
             "The current-carrier exact pair remains a distinct object from the public repaired pair; they should not be conflated in audits or status surfaces.",
             (

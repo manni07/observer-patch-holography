@@ -30,6 +30,8 @@ So the first promotable outputs on the current branch are isospin-symmetric
   [derive_current_hadron_lane_audit.py](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/hadron/derive_current_hadron_lane_audit.py)
 - production validator:
   [validate_production_hadron_closure.py](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/hadron/validate_production_hadron_closure.py)
+- one-shot production writeback:
+  [run_production_backend_writeback.py](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/hadron/run_production_backend_writeback.py)
 
 ## Active Artifacts
 
@@ -38,11 +40,33 @@ So the first promotable outputs on the current branch are isospin-symmetric
 - [stable_channel_sequence_evaluation.json](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/hadron/stable_channel_sequence_evaluation.json)
 - [current_hadron_lane_audit.json](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/hadron/current_hadron_lane_audit.json)
 - [hadron_production_closure_validation_report.json](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/hadron/hadron_production_closure_validation_report.json)
+- [hadron_production_readiness_report.json](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/hadron/hadron_production_readiness_report.json)
 - [HADRON_SYSTEMATICS_STATUS.md](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/HADRON_SYSTEMATICS_STATUS.md)
 
 ## Canonical Execution Path
 
 From `reverse-engineering-reality/code/particles`:
+
+One-shot path once the backend export exists:
+
+```bash
+python3 hadron/run_production_backend_writeback.py \
+  --sequence-population runs/hadron/stable_channel_sequence_population.json \
+  --receipt runs/hadron/runtime_schedule_receipt_N_therm_and_N_sep.json \
+  --payload runs/hadron/stable_channel_cfg_source_measure_payload.json \
+  --backend-bundle /path/to/backend_bundle_or_inline_backend_input.json \
+  --n-therm 2048 \
+  --n-sep 512 \
+  --schedule-provenance "external_runtime_commit"
+```
+
+Backend-side readiness report from the current local state:
+
+```bash
+python3 hadron/derive_hadron_production_readiness_report.py
+```
+
+Expanded manual path:
 
 ```bash
 python3 hadron/derive_runtime_schedule_receipt_n_therm_and_n_sep.py \

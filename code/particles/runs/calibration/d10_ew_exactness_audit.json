@@ -162,6 +162,54 @@
       "running_sin2_forces_family_escape": true
     }
   },
+  "forward_transmutation_certificate": {
+    "artifact": "oph_d10_ew_forward_transmutation_certificate",
+    "forward_checks": {
+      "alpha1_fixed_point_residual": 0.0,
+      "alpha2_fixed_point_residual": 0.0,
+      "alpha3_fixed_point_residual": 0.0,
+      "alpha_u_source_vs_core_residual": 0.0,
+      "mz_fixed_point_residual_gev": 0.0,
+      "pixel_residual": -5.551115123125783e-17,
+      "t_transmutation_source_vs_core_residual": 0.0,
+      "t_unified_source_vs_core_residual": 0.0,
+      "v_fixed_point_residual_gev": 0.0,
+      "v_source_vs_core_residual_gev": 0.0
+    },
+    "forward_core_solution": {
+      "alpha_u": 0.04112498041477454,
+      "mz_run_gev": 91.65246028560671,
+      "t1_mz_run": 0.6666326298888638,
+      "t2_mz_run": 1.3335192143600498,
+      "t3_mz_run": 4.67176653937017,
+      "t_transmutation": 38.195673552967165,
+      "t_unified": 1.6235491507854898,
+      "v_report_gev": 246.76711732749683
+    },
+    "notation_split": {
+      "beta_ratio_EW": {
+        "formula": "(alpha2_mz - alphaY_mz) / (alpha2_mz + alphaY_mz)",
+        "role": "existing_calibration_source_ratio",
+        "value": 0.5385291530498766
+      },
+      "beta_transmutation_EW": {
+        "formula": "N_c + 1",
+        "role": "paper_e25_transmutation_counting_factor",
+        "value": 4
+      }
+    },
+    "object_id": "EWForwardTransmutationCertificate_D10",
+    "source_only_reconstruction": {
+      "alpha2_mz": 0.03377843630219015,
+      "alphaY_mz": 0.010131601067241624,
+      "alpha_u_from_source": 0.04112498041477454,
+      "eta_source": 0.022147000871961295,
+      "t_transmutation_from_source": 38.195673552967165,
+      "t_unified_from_source": 1.6235491507854898,
+      "v_from_source_transmutation_gev": 246.76711732749683
+    },
+    "status": "closed_forward_p_to_t_map"
+  },
   "freeze_once_coherent_repair_summary": {
     "compare_only_validation_against_target_free_surface": {
       "delta_MW_gev": 1.5395315244859376e-08,
@@ -179,13 +227,14 @@
     "stricter_still_open_object": "EWTargetFreeRepairValueLaw_D10",
     "target_free_predictive_emission_closed": false
   },
-  "generated_utc": "2026-03-31T10:46:45Z",
+  "generated_utc": "2026-04-01T00:23:56Z",
   "notes": [
     "This audit computes a purely inverse reference-W/Z slice for diagnosis only; that slice is not a predictive artifact and is not emitted by the live D10 source-pair builder.",
     "Any coherent family matching those reference W/Z values forces sin2(theta_W) = 1 - (MW/MZ)^2, so the current mixed reference surface cannot be hit exactly by one simple tree-level family.",
     "On the fixed-eta current family, the reference W and Z masses already point to nearly the same sigma_EW, but that sigma_EW is incompatible with the running alpha_em^-1 target and the running sin^2(theta_W) target is not even admissible on that one-parameter slice.",
     "The carrier-level selector, split exact-closure law, fiberwise tree law, exact current-carrier mass chart, freeze-once coherent repair law, and target-free source-only repair theorem are all closed. Exact public W/Z now come from the target-free theorem, while the frozen authoritative repair surface is retained only as compare-only validation.",
     "The broader D10 geometry is historically the repair branch beyond the present current carrier. That branch remains explicit, but the public electroweak theorem surface is now the target-free source-only repair law.",
+    "The forward transmutation certificate now records the non-circular P -> alpha_U -> t map explicitly and separates the calibration beta_ratio_EW from the transmutation counting factor beta_transmutation_EW = N_c + 1.",
     "The current-carrier exact pair remains a distinct object from the public repaired pair; they should not be conflated in audits or status surfaces.",
     "No stricter D10 electroweak mass-side theorem object remains open on the active Phase II calibration surface.",
     "The earlier source-only D10 split is retained historically on disk: the underdetermination theorem, the minimal conditional route through ColorBalancedQuadraticRepairDescent_D10, and the former candidate EWTargetEmitter_D10 all sit beneath the promoted target-free theorem."

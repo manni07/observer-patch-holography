@@ -99,8 +99,9 @@ python3 scripts/generate_mass_derivation_svg.py
 
 ## One-Shot CLI Table
 
-For a disposable runtime rebuild that prints the current particle status table
-directly in the terminal:
+For a disposable runtime rebuild that re-runs the active D10/D11/UV builders,
+stages the current canonical flavor/lepton/neutrino public-surface artifacts,
+and prints the resulting particle status table directly in the terminal:
 
 ```bash
 python3 compute_current_output_table.py

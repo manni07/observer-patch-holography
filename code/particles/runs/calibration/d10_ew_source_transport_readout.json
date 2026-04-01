@@ -86,6 +86,54 @@
     "sigma_minus_eta_from_mZ_mW": "(mZ^2 - mW^2) / (pi * v_inherited^2 * alphaY_mz) - 1",
     "sigma_plus_eta_from_mW": "mW^2 / (pi * v_inherited^2 * alpha2_mz) - 1"
   },
+  "forward_transmutation_certificate": {
+    "forward_checks": {
+      "alpha1_fixed_point_residual": 0.0,
+      "alpha2_fixed_point_residual": 0.0,
+      "alpha3_fixed_point_residual": 0.0,
+      "alpha_u_source_vs_core_residual": 0.0,
+      "mz_fixed_point_residual_gev": 0.0,
+      "pixel_residual": -5.551115123125783e-17,
+      "t_transmutation_source_vs_core_residual": 0.0,
+      "t_unified_source_vs_core_residual": 0.0,
+      "v_fixed_point_residual_gev": 0.0,
+      "v_source_vs_core_residual_gev": 0.0
+    },
+    "forward_core_solution": {
+      "alpha_u": 0.04112498041477454,
+      "mz_run_gev": 91.65246028560671,
+      "t1_mz_run": 0.6666326298888638,
+      "t2_mz_run": 1.3335192143600498,
+      "t3_mz_run": 4.67176653937017,
+      "t_transmutation": 38.195673552967165,
+      "t_unified": 1.6235491507854898,
+      "v_report_gev": 246.76711732749683
+    },
+    "notation_split": {
+      "beta_ratio_EW": {
+        "formula": "(alpha2_mz - alphaY_mz) / (alpha2_mz + alphaY_mz)",
+        "role": "existing_calibration_source_ratio",
+        "value": 0.5385291530498766
+      },
+      "beta_transmutation_EW": {
+        "formula": "N_c + 1",
+        "role": "paper_e25_transmutation_counting_factor",
+        "value": 4
+      }
+    },
+    "source_only_reconstruction": {
+      "alpha2_mz": 0.03377843630219015,
+      "alphaY_mz": 0.010131601067241624,
+      "alpha_u_from_source": 0.04112498041477454,
+      "eta_source": 0.022147000871961295,
+      "t_transmutation_from_source": 38.195673552967165,
+      "t_unified_from_source": 1.6235491507854898,
+      "v_from_source_transmutation_gev": 246.76711732749683
+    }
+  },
+  "forward_transmutation_certificate_artifact": "oph_d10_ew_forward_transmutation_certificate",
+  "forward_transmutation_certificate_object_id": "EWForwardTransmutationCertificate_D10",
+  "forward_transmutation_certificate_status": "closed_forward_p_to_t_map",
   "freeze_once_chart_coordinates": {
     "delta_n_dagger": 0.00023463639031113336,
     "tau2_w_anchor": -0.00023116268316325517
@@ -114,7 +162,7 @@
     "source_label": "PDG 2025 API"
   },
   "freeze_once_target_free_residual_object": "EWTargetFreeRepairValueLaw_D10",
-  "generated_utc": "2026-03-31T10:46:46Z",
+  "generated_utc": "2026-04-01T00:23:58Z",
   "mass_pair_predictive_candidate": {
     "MW_pole": 80.37700001539531,
     "MZ_pole": 91.18797807794321,
@@ -185,7 +233,8 @@
     "The compact point records the same family on the fixed-eta slice eta_EW = alpha_u * cos(2*theta_W0) with free sigma_EW; the no-new-parameter point is sigma_EW = -eta_EW.",
     "A closed split exactness law now restores alpha_em^-1 and sin^2(theta_W) through a derived source-normalized hypercharge readout on the same selected carrier point.",
     "No stricter D10 W/Z mass-side object remains open on the active Phase II calibration surface.",
-    "The earlier target-free D10 split remains visible historically on disk: the source-only underdetermination theorem, the minimal conditional route through ColorBalancedQuadraticRepairDescent_D10, and the stronger source-only candidate EWTargetEmitter_D10 are all retained as promoted/superseded scaffolding beneath the active theorem."
+    "The earlier target-free D10 split remains visible historically on disk: the source-only underdetermination theorem, the minimal conditional route through ColorBalancedQuadraticRepairDescent_D10, and the stronger source-only candidate EWTargetEmitter_D10 are all retained as promoted/superseded scaffolding beneath the active theorem.",
+    "The forward transmutation certificate `EWForwardTransmutationCertificate_D10` records the non-circular P -> alpha_U -> t map explicitly and keeps the source-ratio beta_ratio_EW separate from the transmutation counting factor beta_transmutation_EW = N_c + 1."
   ],
   "one_scalar_reduction_certificate": {
     "candidate_A_n_EW": 1.0010611100702254,

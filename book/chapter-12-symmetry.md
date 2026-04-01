@@ -40,13 +40,13 @@ Recall our thesis: reality is the process of making observations consistent betw
 
 Consider two astronomers observing the same galaxy. One measures energy in her reference frame. The other measures energy in his frame, moving at a different velocity. Their numbers are different.
 
-But they're not inconsistent - they're related by a Lorentz transformation. In our model, Lorentz kinematics on the screen comes from geometric modular flow on caps, recovered on the OPH geometric branch once the Markov/recoverability and MaxEnt structure is in place. The symmetry tells them exactly how to translate between their observations. Lorentz invariance is the rule that makes their different measurements compatible.
+But they're not inconsistent. They're related by a Lorentz transformation. In OPH, this symmetry emerges from how modular time-flow works on the screen, as we saw in the previous chapters. The symmetry tells them exactly how to translate between their observations. Lorentz invariance is the rule that makes their different measurements compatible.
 
 Here is the reframing: **Symmetry isn't aesthetic-it's the grammar of consistency.** Without symmetry, different observers couldn't compare notes. Their measurements would be incommensurable.
 
 ### The Overlap Algebra
 
-In our model, observers have patches with algebras of observables. When patches overlap, observers must agree on the overlap region.
+In OPH, observers have patches with algebras of observables. When patches overlap, observers must agree on the overlap region.
 
 Conservation laws are the simplest form of this agreement. If I measure total energy in my region and you measure total energy in your region, and our regions overlap, then we must agree on the energy in the overlap-because energy is conserved.
 
@@ -133,7 +133,7 @@ A conserved current on the screen creates a gauge boson in the bulk.
 
 ### Our Route: Gauge Group from Gluing
 
-In this book we take a different route. The gauge group is not assumed in advance. A refinement-stable category of transportable edge sectors is reconstructed from how edge charges fuse when you glue patches, and Tannaka-Krein/Doplicher-Roberts reconstruction yields some compact gauge group. Axiom 5 (MAR, Minimal Admissible Realization) then acts on admissible sector packages, not on the bare category alone. Within the positive-dimensional connected Lie admissible class, and once the admissible class includes one connected abelian charge factor, MAR selects $SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$; the CP/UV admissibility window and MAR then fix three generations, and Witten parity with that realized generation count fixes three colors.
+In this book we take a different route. The gauge group is not assumed in advance. Instead, we look at what happens when you glue observer patches together: the charges that live on the edges between patches fuse in specific ways, and a reconstruction theorem lets you work backward from those fusion rules to the symmetry group behind them. A minimality principle then selects the smallest realization that still satisfies all the consistency constraints, and the answer turns out to be exactly $SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$, the Standard Model gauge group. The same logic also fixes three generations of matter and three colors.
 
 ## 12.8 Symmetry Breaking
 
@@ -161,7 +161,7 @@ When the Higgs field settles to a non-zero value:
 
 The underlying symmetry SU(2) times U(1) breaks to U(1)_{em}.
 
-In our model, symmetry breaking corresponds to the screen "freezing" into a specific configuration. We live in a frozen shard of a more symmetric world.
+In OPH, symmetry breaking corresponds to the screen "freezing" into a specific configuration. We live in a frozen shard of a more symmetric world.
 
 ## 12.9 CPT: The Unbreakable Symmetry
 
@@ -213,13 +213,13 @@ The symmetry-consistency model includes both rigorous mathematical results and t
 
 **Rigorous results (mathematical theorems)**:
 
-**1. Noether's theorem is rigorous**: Given any continuous symmetry of the action, there exists a conserved current. This is a mathematical theorem, not a heuristic or an approximation. It's been proven in every formulation of classical and quantum field theory.
+**1. Noether's theorem is rigorous**: Every continuous symmetry gives a conserved quantity. Time symmetry gives energy conservation. Space symmetry gives momentum conservation. The theorem is the formal statement that symmetry is physics, not decoration.
 
 **2. SO(3) symmetry on S²**: The sphere S² has isometry group SO(3). This is pure mathematics. If the holographic screen is a sphere, rotational symmetry is automatic.
 
-**3. Spinor structure exists on S²**: The sphere admits a spin structure, allowing half-integer spin representations. This is a topological fact.
+**3. Spinor structure exists on S²**: The sphere can support the kind of mathematical objects needed for half-integer spin. That is why spin-1/2 matter is not alien to a sphere-based picture.
 
-**4. Wigner classification**: Particles in relativistic quantum mechanics are classified by irreducible representations of the Poincaré group-labeled by mass and spin. This is a mathematical classification theorem.
+**4. Wigner classification**: Once relativity is in place, particles are classified by how they transform under spacetime symmetry. Their mass and spin are the labels of that symmetry class.
 
 **Testable predictions**:
 

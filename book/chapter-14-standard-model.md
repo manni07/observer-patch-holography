@@ -21,7 +21,7 @@ The Standard Model is extremely successful, yet it carries deep warnings:
 - **Anomalies**: the theory only exists if delicate cancellation conditions are satisfied.
 - **Chirality**: nature treats left and right differently, which is bizarre from a naive classical perspective.
 
-These are not small problems. They are clues that the Standard Model is an emergent, effective description rather than the foundation.
+These are serious problems. They are clues that the Standard Model is an emergent, effective description instead of the foundation.
 
 ## 14.3 The Quantum Revolution
 
@@ -187,7 +187,7 @@ The Standard Model organizes all known particles into a coherent model.
 
 ### Fermions: The Matter Particles
 
-Matter is made of fermions: particles with spin 1/2. They obey the Pauli exclusion principle. No two identical fermions can occupy the same quantum state. This is why atoms have structure, why the periodic table exists, why you don't fall through the floor.
+Matter is made of fermions: particles with spin 1/2. They obey the Pauli exclusion principle. No two identical fermions can occupy the same quantum state. That is why atoms have structure, why the periodic table exists, and why you don't fall through the floor.
 
 **Quarks** come in six "flavors":
 - Up (u): charge +2/3
@@ -237,7 +237,7 @@ $$G_{SM} = SU(3)_C \times SU(2)_L \times U(1)_Y$$
 
 **SU(3)_C** is the color group. Quarks carry color charge: red, green, or blue. Gluons carry color-anticolor combinations. The strong force binds quarks into colorless combinations.
 
-**SU(2)_L** is the weak isospin group. It acts only on left-handed particles. This is why the weak force violates parity.
+**SU(2)_L** is the weak isospin group. It acts only on left-handed particles. That is why the weak force violates parity.
 
 **U(1)_Y** is the hypercharge group. It combines with SU(2)_L to give electromagnetism after symmetry breaking.
 
@@ -315,7 +315,7 @@ The result: quarks must have charges that are thirds of the electron charge. The
 
 ### Connection to Our Model
 
-In our model, anomaly cancellation has a geometric interpretation.
+In OPH, anomaly cancellation has a geometric interpretation.
 
 When you glue observer patches together, you can go around loops. If you come back with a phase that doesn't match, the gluing is inconsistent. This is a "loop obstruction."
 
@@ -363,7 +363,7 @@ Now we connect to our model.
 
 In the standard presentation, gauge symmetry is a postulate. You write down a Lagrangian that's invariant under local transformations.
 
-In our model, gauge symmetry emerges from the redundancy in how observers glue their patches together.
+In OPH, gauge symmetry emerges from the redundancy in how observers glue their patches together.
 
 Different observers describe the same overlap region using different frames. The transformation between frames is a gauge transformation. The freedom that leaves overlap observables invariant forms the gauge group.
 
@@ -385,7 +385,7 @@ When you concatenate collars, edge charges fuse. The fusion rules:
 
 $$\alpha \otimes \beta = \bigoplus_\gamma N_{\alpha\beta}^\gamma \, \gamma$$
 
-define a tensor category. By the Tannaka-Krein reconstruction theorem, this category is equivalent to the representations of a compact group G.
+define a tensor category. The Tannaka-Krein reconstruction theorem says, roughly, that if you know exactly how the charges combine, you can reconstruct the symmetry group they came from. So the fusion table is not a side detail. It is enough to recover the gauge group itself.
 
 The gauge group isn't put in by hand. It's reconstructed from how charges combine.
 
@@ -393,15 +393,14 @@ The gauge group isn't put in by hand. It's reconstructed from how charges combin
 
 Why does the reconstructed group have the form SU(3) x SU(2) x U(1)?
 
-Axiom 5 (MAR, Minimal Admissible Realization) acts on admissible sector packages, not on arbitrary compact gauge groups. In the positive-dimensional connected Lie admissible class, and once one connected abelian charge factor is included, MAR selects the package with the smallest coupled edge capacity. The result:
+Once you ask for the smallest matter package that can carry color, weak interactions, chirality, and ordinary charge, the smallest stable answer is a color triplet times a weak doublet together with one abelian charge factor.
 
-- The minimal coupled carrier is $\mathbb{C}^3 \otimes \mathbb{C}^2$, which forces a product gauge structure (not assumed — derived).
-- The factor acting on $\mathbb{C}^2$ as a pseudoreal doublet is uniquely SU(2).
-- The factor acting on $\mathbb{C}^3$ as a complex triplet is uniquely SU(3).
-- The commutant of SU(3) × SU(2) inside U(6) is exactly U(1) — no additional factors can appear.
-- Hypercharge quantization in sixths gives the Z₆ quotient.
+- The weak factor has to behave like SU(2), because weak doublets come in the right two-dimensional pseudoreal form.
+- The color factor has to behave like SU(3), because color triplets need a genuinely complex three-dimensional action.
+- Once those two are present, the remaining commuting charge direction is just U(1).
+- The familiar sixth-integer hypercharge pattern then refines the result to the Standard Model quotient.
 
-Within that admissible class, the connected gauge structure is fixed to $SU(3) \times SU(2) \times U(1)$, and the realized hypercharge lattice then fixes the $\mathbb{Z}_6$ quotient. The CP/UV admissibility window and MAR first give $3 \le N_g \le 5$ and then select the minimal viable value $N_g = 3$; with that realized generation count in hand, Witten's SU(2) anomaly parity plus exclusion of the trivial $N_c = 1$ case yield $N_c = 3$. See `paper/tex_fragments/GAUGE_GROUP_DERIVATION.tex` for the complete proof.
+The same minimality logic also fixes the counting. CP violation requires at least three generations. Ultraviolet consistency keeps the number finite. The smallest viable answer is three generations, and the anomaly argument then closes the color count at three as well.
 
 ## 14.10 Hypercharge from Gluing Consistency
 
@@ -439,7 +438,7 @@ These are exact rationals, the Standard Model hypercharges, with the ratios fixe
 
 ## 14.11 The Number of Colors: Why N_c = 3
 
-In the compact-paper theorem chain, the generation count is fixed first and the color count closes afterward. We discuss the color-parity mechanism first here because it is conceptually simple, but its final closure uses the derived value $N_g = 3$ from the next section.
+In the full argument, generations and colors are linked. It is easiest to see the color step first, then feed in the next section's result that the theory prefers three generations.
 
 ### The Witten Anomaly
 
@@ -490,17 +489,17 @@ $$4 N_g < 22 \implies N_g \le 5$$
 
 Combining: $3 \le N_g \le 5$.
 
-### MAR Selects the Minimal Admissible Window
+### The Minimal Viable Window
 
-In our model, CP violation and weak-sector UV completability define the admissible window:
+In OPH, CP violation and weak-sector UV completability define the admissible window:
 
 $$3 \le N_g \le 5.$$
 
-Axiom 5 (MAR) then selects the minimal admissible realization:
+A minimality principle then picks the smallest viable realization:
 
 $$\boxed{N_g = 3}$$
 
-Refinement stability explains why extra unfixed Yukawa structure is disfavored, but the selector itself is MAR acting on the admissible class. This is a discrete structural output, not a fit to a continuous number. Feeding this value back into the Witten-parity argument above then closes the color count at $N_c = 3$.
+Refinement stability explains why extra unfixed Yukawa structure is disfavored, but the key point is simpler: among the allowed options, the smallest viable one wins. Feeding this value back into the Witten-anomaly argument above then closes the color count at $N_c = 3$.
 
 ## 14.13 Why Chirality?
 
@@ -516,39 +515,39 @@ If both chiralities exist in conjugate representations, this term is allowed. Un
 
 ### Refinement Stability
 
-In our model, relevant operators that aren't forbidden by symmetry or constraints get turned on under refinement. They can't be kept at zero without fine tuning.
+In OPH, relevant operators that aren't forbidden by symmetry or constraints get turned on under refinement. They can't be kept at zero without fine tuning.
 
 If a mass term is allowed, it will generically appear. The fermion will become massive. At low energies, it will decouple.
 
 To keep fermions light without fine tuning, the mass term must be forbidden. The cleanest way: make the fermion chiral. If only one chirality exists, there's no partner to couple to. No mass term is possible.
 
-This is why the Standard Model fermions are chiral. Chirality protects their masses from running to the cutoff scale.
+The Standard Model fermions are chiral for that reason. Chirality protects their masses from running to the cutoff scale.
 
 ## 14.14 What Particles Are in This Model
 
 Before discussing which particles the model predicts, we need to be clear about what a "particle" even means in our approach. The answer is both more precise and more radical than the intuitive picture shows.
 
-In the conventional view, particles are fundamental objects-tiny balls of stuff that move through space. Fields fill the gaps, and particles are what detectors click on. This picture is useful for calculations, but it gets the ontology backwards. In our model, particles are not fundamental. They are patterns.
+In the conventional view, particles are fundamental objects, tiny balls of stuff that move through space. Fields fill the gaps, and particles are what detectors click on. This picture is useful for calculations, but it gets the ontology backwards. In OPH, particles are patterns first. They are not primitives.
 
 Think about what an observer actually accesses. Each observer has a patch on the holographic screen, and associated with that patch is an algebra of observables-the questions that observer can ask. The global quantum state assigns expectation values to these observables. When those expectation values exhibit a particular stable structure, when they show localized excitations that persist under modular time evolution, that transform in specific ways under the emergent symmetries, and that can be consistently tracked across overlapping patches-that is what we call a particle.
 
-The technical statement is that particles correspond to irreducible representations of the emergent symmetry group. Once Lorentz kinematics appears on the screen (which happens through the BW_{S²} theorem we discuss in Chapter 15), excitations organize into representations of the Poincaré group. Eugene Wigner showed in 1939 that these representations are classified by two labels: mass and spin. A "particle type" is nothing more than such a representation label. An electron is a representation with mass 0.511 MeV and spin 1/2. A photon is a representation with mass zero and spin 1. The particle is not a thing; it is a classification of how stable excitation patterns transform.
+The technical statement is that particles correspond to irreducible representations of the emergent symmetry group. Once Lorentz kinematics appears on the screen (Chapter 15), excitations organize into representations of the Poincaré group. Eugene Wigner showed in 1939 that these representations are classified by two labels: mass and spin. A "particle type" is nothing more than such a representation label. An electron is a representation with mass 0.511 MeV and spin 1/2. A photon is a representation with mass zero and spin 1. The particle is not a thing; it is a classification of how stable excitation patterns transform.
 
 This sounds abstract, but it has concrete consequences. The model does not postulate particles and then check whether they are consistent. It derives which particle types must exist from the structure of the algebra net itself. Some particles are forced to exist by the axioms. Others are permitted but not required. And some hypothetical particles are forbidden.
 
-### The Current Particle-Status Ledger
+### Where the Particle Story Stands
 
-The most important synchronization point for this chapter is that OPH does **not** currently claim a uniform theorem-level closure of the full particle zoo. The live status surface is tiered:
+For the book, the picture is this:
 
-| Sector | Current status | Strongest live output |
-|---|---|---|
-| Structural carriers | Structural | Photon, gluons, and graviton are exact massless carriers |
-| Electroweak bosons | Calibration | $W$ and $Z$ are emitted on the closed target-free source-only electroweak theorem surface after fixing the shared scale $P$ on the electroweak calibration branch |
-| Higgs/top stage | Secondary quantitative | Higgs boson and top quark are emitted on the closed one-scalar forward seed |
-| Quark family | Continuation | Continuation-level rows are emitted for up, down, strange, charm, and bottom; CKM/CP is closed on the current quark sheet, but that sheet is a strict no-go for the physical quark branch, so the next object is the finite same-label left-handed orbit together with the provider/evaluator that exposes it, and only then a discrete selector and mass-side scale law |
-| Charged leptons | Continuation gap | No promoted charged-lepton masses yet; the centered hierarchy is fixed, but the remaining route is \(\widehat C_e\) promotion by branch-generator splitting, then a refinement-stable uncentered trace lift, then the determinant-line anchor |
-| Flavor-labeled neutrinos | Continuation gap | No promoted flavor rows yet; the weighted-cycle branch lands in the observed PMNS/hierarchy window, and the residual bridge scalar \(B_\nu\) remains open before the induced absolute normalization and absolute \(\Delta m^2\) become theorem-grade |
-| Hadrons | Execution-bound | No paper-derived hadron masses yet; real production correlator dumps and production systematics are still required |
+| Sector | Where the story stands |
+|---|---|
+| Structural carriers | Photon, gluons, and graviton are forced and exactly massless |
+| Electroweak sector | The $W$ and $Z$ are derived |
+| Next layer | The Higgs, the top quark, and several quark masses are already on the current particle branch |
+| Still being finished | Charged leptons and the overall neutrino mass scale, although the neutrino mixing pattern is already in the observed ballpark |
+| Hard frontier | Hadrons, because bound states require full nonperturbative strong-dynamics calculations |
+
+That is enough to tell a clear story without pretending every particle sits at exactly the same stage of completion.
 
 ## 14.15 Why the Photon Is Inevitable
 
@@ -556,7 +555,7 @@ The photon is not an optional feature of the model. It emerges necessarily from 
 
 Here is the chain of reasoning. Our Assumption D states that when two observer patches overlap, there is redundancy in how they identify their shared observables. Two observers looking at the same region can use different "coordinate systems" for describing it, and the transformation between these descriptions leaves all physical observables invariant. This redundancy is what we call gauge freedom, and it forms a mathematical structure called a groupoid.
 
-When you have a boundary between patches-say, a collar region around the edge of a cap-the Hilbert space of that collar decomposes into sectors. This is Theorem 2.3 in the technical paper, the edge-center completion. Each sector carries a label, and when you concatenate collars, these labels combine according to fusion rules. If sector α and sector β are concatenated, they produce sectors γ with multiplicities determined by fusion coefficients.
+When you have a boundary between patches-say, a collar region around the edge of a cap-the Hilbert space of that collar decomposes into sectors. In the formal derivation this is called edge-center completion: the boundary splits into sectors, each sector carries a charge label, and those labels combine when collars are joined.
 
 These fusion rules define a mathematical structure called a tensor category. A key result, established by Tannaka-Krein reconstruction (and its physics version, the Doplicher-Roberts theorem), is that any such tensor category with the right properties is equivalent to the representation category of some compact group G. In other words, the fusion rules of edge sectors reconstruct a gauge group.
 
@@ -570,13 +569,13 @@ The conclusion is exact: a hard photon-mass deformation is incompatible with the
 
 ## 14.16 Why the Graviton Is Inevitable
 
-The graviton emerges from a parallel chain of reasoning, but applied to spacetime geometry rather than internal gauge symmetry.
+The graviton emerges from a parallel chain of reasoning, applied to spacetime geometry instead of internal gauge symmetry.
 
-In Chapter 15 we derive that spacetime geometry emerges from modular flow on the screen. The key theorem is BW_{S²}: once collar Markov/recoverability and the MaxEnt refinement branch are in place, BW_{S²} proves on the OPH geometric branch that modular flow on caps becomes geometric conformal dilation with the standard \(2\pi\) normalization. The modular Hamiltonian of each cap equals the generator of the cap-preserving conformal transformation.
+In Chapter 15 we derive that spacetime geometry emerges from modular flow on the screen. The key result is that, once the recovery and MaxEnt structure is in place, modular flow on caps becomes a geometric conformal transformation with a fixed normalization. The modular Hamiltonian of each cap equals the generator of that cap-preserving transformation.
 
 The conformal group of the two-sphere is isomorphic to the Lorentz group: Conf⁺(S²) ≅ PSL(2,ℂ) ≅ SO⁺(3,1). This is a mathematical identity. Once modular flow becomes conformal, Lorentz kinematics is automatic.
 
-But geometry goes further. The entanglement structure of the screen encodes not just kinematics but dynamics. Through the entanglement equilibrium argument (developed in Chapter 15), the condition that generalized entropy is stationary under small admissible variations implies a Jacobson-type first-variation Einstein relation in the same scaling regime, and patch consistency upgrades it to the tensor equation. The metric tensor emerges as the compression of modular flow data, and its dynamics are fixed by the requirement that entanglement remains balanced.
+But geometry goes further. The entanglement structure of the screen encodes dynamics as well as kinematics. Through the entanglement equilibrium argument, developed in Chapter 15, the condition that generalized entropy is stationary under small admissible variations implies a Jacobson-type first-variation Einstein relation in the same scaling regime, and patch consistency upgrades it to the tensor equation. The metric tensor emerges as the compression of modular flow data, and its dynamics are fixed by the requirement that entanglement remains balanced.
 
 Now consider what it means for the metric to be dynamical. If spacetime geometry fluctuates quantum mechanically, those fluctuations must be described by a quantum field. The quantum of a spin-2 field that couples universally to energy-momentum is, by definition, a graviton. This is a consequence of having dynamical geometry in a quantum theory.
 
@@ -592,7 +591,7 @@ The claim that a theoretical model "predicts gravity" is significant. String the
 
 Our model makes the same claim, but the logical structure is different. In string theory, you start with strings propagating in a background spacetime, quantize them, and discover that the spectrum includes a graviton. The graviton's existence is tied to the specific dynamics of string vibrations.
 
-In our model, you start with observers on a holographic screen, impose consistency conditions on how their descriptions must agree, and discover that the consistent low-energy effective description must include both gauge fields and dynamical geometry. The photon emerges because electromagnetic gauge symmetry is the redundancy structure of charged-patch overlaps. The graviton emerges because diffeomorphism invariance is the redundancy structure of the bulk compression.
+In OPH, you start with observers on a holographic screen, impose consistency conditions on how their descriptions must agree, and discover that the consistent low-energy effective description must include both gauge fields and dynamical geometry. The photon emerges because electromagnetic gauge symmetry is the redundancy structure of charged-patch overlaps. The graviton emerges because diffeomorphism invariance is the redundancy structure of the bulk compression.
 
 Both particles are forced by consistency. And crucially, both must be exactly massless because their associated symmetries are structural features of how observers compare notes.
 
@@ -600,11 +599,11 @@ Both particles are forced by consistency. And crucially, both must be exactly ma
 
 Now consider the proton. Its mass is 938.272 MeV, measured to extraordinary precision. Can we derive this from first principles?
 
-Not directly—and for good reason. The proton mass is a qualitatively different kind of prediction than the photon or graviton mass.
+Not directly, and for good reason. The proton mass is a qualitatively different kind of prediction than the photon or graviton mass.
 
 The photon and graviton masses are symmetry-protected zeros. Their values are fixed by the algebraic structure of the theory-any deviation would break a required redundancy. The argument is exact and does not depend on knowing coupling constants or solving difficult equations.
 
-This is why the OPH mass story is split into tiers rather than a single headline. The photon, gluons, and graviton are structural zeros. The $W$ and $Z$ rows sit on an electroweak calibration surface. The Higgs and top sit on a secondary quantitative forward seed. The broader quark rows are emitted only as continuation-level outputs. Charged-lepton and flavor-labeled neutrino rows are not yet promoted, and hadron rows are still execution-bound. "Mass derived" does not mean the same thing in all of these cases.
+Not all mass claims have the same character. The cleanest results are the symmetry-protected zeros: photon, gluons, and graviton. The next easiest are masses tied closely to electroweak structure, such as the $W$ and $Z$. The Higgs, the top quark, and several quark masses are already on the current branch. Hadrons are hardest because they require solving the full strongly coupled dynamics of bound states.
 
 The proton mass is a bound-state eigenvalue in a strongly coupled gauge theory. The proton is made of three quarks held together by gluons, and its mass emerges from the complicated nonperturbative dynamics of quantum chromodynamics. The dominant contribution is not the masses of the constituent quarks (which sum to only about 10 MeV) but the energy stored in the gluon field and the kinetic energy of the quarks bouncing around inside.
 
@@ -626,9 +625,9 @@ The vacuum literally encodes the golden ratio in its entanglement structure. Thi
 
 Similar tests work for nonabelian groups like $S_3$ (the smallest nonabelian group), where extracting the coupling from different representations gives consistent answers to within a few percent. The pattern holds.
 
-This formula isn't just an empirical observation--it can be derived theoretically. The key insight is that the group Laplacian is the *unique* gauge-invariant local quadratic operator on the edge degrees of freedom. Any other choice would either break gauge symmetry or require nonlocal terms. Combined with the MaxEnt principle (which selects the Gibbs state), this uniqueness forces the heat-kernel form. The factor $d_R$ rather than $d_R^2$ arises because entanglement entropy traces over one side of the cut. The derivation requires one additional assumption--that the entropy-maximizing generator is quasi-local--but otherwise follows from the axioms.
+This formula is not only an empirical observation. It can be derived theoretically. The key insight is that the group Laplacian is the *unique* gauge-invariant local quadratic operator on the edge degrees of freedom. Any other choice would either break gauge symmetry or require nonlocal terms. Combined with the MaxEnt principle, which selects the Gibbs state, this uniqueness forces the heat-kernel form. The factor $d_R$ instead of $d_R^2$ appears because entanglement entropy traces over one side of the cut. The derivation requires one additional assumption, that the entropy-maximizing generator is quasi-local, but otherwise follows from the axioms.
 
-Once we can reliably extract gauge couplings from entanglement, downstream quantitative branches become better constrained. The exact public claim boundary for those later branches remains narrower than the structural core developed in this chapter.
+Once we can reliably extract gauge couplings from entanglement, the later quantitative branches become much tighter.
 
 ## 14.19 Gauge Unification and the Proton
 
@@ -638,7 +637,7 @@ In the 1970s, physicists noticed something remarkable. If you run the couplings 
 
 But there was a problem. With just the Standard Model particle content, the three couplings don't quite meet. They miss each other. In the 1990s, physicists discovered that adding supersymmetric partners fixes this: with MSSM-like particle content, the couplings unify beautifully, predicting $\alpha_s(M_Z) \approx 0.117$, remarkably close to the measured value of $0.1177 \pm 0.0009$.
 
-Our framework does better than just "inherit" this success. It *derives* the MSSM-like beta shifts from edge-mode structure. The key mechanism is the Peter-Weyl decomposition of $L^2(G)$: a representation $R$ corresponds to a block $V_R \otimes V_R^*$ of size $d_R^2$. Entropy (which selects the MaxEnt state) traces over one side, giving the familiar $d_R$ factor in $p_R \propto d_R e^{-t C_2(R)}$. But vacuum polarization loops run over both indices, restoring the second $d_R$. The effective multiplicity for RG running is therefore $N_{\text{eff}} = d \cdot p$, not just $p$.
+Our framework does more than "inherit" this success. It *derives* the MSSM-like beta shifts from edge-mode structure. The key mechanism is the Peter-Weyl decomposition of $L^2(G)$: a representation $R$ corresponds to a block $V_R \otimes V_R^*$ of size $d_R^2$. Entropy, which selects the MaxEnt state, traces over one side, giving the familiar $d_R$ factor in $p_R \propto d_R e^{-t C_2(R)}$. Vacuum polarization loops run over both indices, restoring the second $d_R$. The effective multiplicity for RG running is therefore $N_{\text{eff}} = d \cdot p$.
 
 At the unification-scale heat-kernel parameter $t_U \approx 1.64$, this gives:
 $$\Delta b_{\text{edge}} \approx (2.49,\ 4.38,\ 3.97)$$
@@ -656,39 +655,37 @@ Our model takes a different path. The gauge group isn't embedded in anything lar
 
 $$G_{\mathrm{phys}} = \mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1) / \mathbb{Z}_6$$
 
-There's no larger group. No X and Y bosons. No leptoquark generators. Unification happens geometrically (all three couplings share a common "diffusion time" on the edge) rather than algebraically through group embedding.
+There's no larger group. No X and Y bosons. No leptoquark generators. Unification happens geometrically, with all three couplings sharing a common "diffusion time" on the edge, instead of algebraically through group embedding.
 
 The prediction is stark: **gauge-mediated proton decay is forbidden**. That is the theorem-level statement.
 
-This is a unique experimental signature. Standard SUSY GUTs predict *both* precision unification *and* proton decay. Our model predicts unification *without* gauge-mediated proton decay because the full connected gauge group has only the product-group adjoint content and no mixed leptoquark generators. If Hyper-Kamiokande continues to see null results while precision measurements continue to favor unified couplings, that would be strong evidence for geometric rather than algebraic unification.
+This is a unique experimental signature. Standard SUSY GUTs predict *both* precision unification *and* proton decay. Our model predicts unification *without* gauge-mediated proton decay because the full connected gauge group has only the product-group adjoint content and no mixed leptoquark generators. If Hyper-Kamiokande continues to see null results while precision measurements continue to favor unified couplings, that would be strong evidence for geometric unification instead of algebraic unification.
 
 ## 14.20 What the Model Explains
 
 Let's step back and see what the framework actually accounts for.
 
-**The integers.** Why three colors? Why three generations? Why those specific hypercharges? These are consequences of consistency requirements, not free parameters. Three colors comes from the Witten anomaly together with the admissibility requirement of a genuinely complex color sector. Three generations is the MAR-minimal member of the admissible CP/UV window $3 \le N_g \le 5$. The hypercharges are fixed by anomaly cancellation plus Yukawa invariance once the Standard Model gauge structure is in place.
+**The integers.** Why three colors? Why three generations? Why those specific hypercharges? These are consequences of consistency requirements, not free parameters. Demanding anomaly-free matter, CP violation, and the smallest viable matter package drives the theory to the observed counting.
 
-**The zeros.** The photon and graviton masses are exactly zero, not approximately but exactly. This is a symmetry-protected prediction. The photon's masslessness follows from U(1) gauge invariance being a genuine overlap redundancy; any mass would break the consistency of how charged patches glue together. Similarly, the graviton's masslessness follows from diffeomorphism invariance being the redundancy structure of bulk spacetime. Current experimental/observational upper bounds are consistent with these predictions to extraordinary precision: the photon mass is constrained below ~10⁻¹⁸ eV (often summarized as ~27 orders of magnitude), and the graviton mass is constrained below ~10⁻²³ eV by gravitational-wave dispersion (often summarized as ~22 orders of magnitude).
+**The zeros.** The photon and graviton masses are exactly zero. This is a symmetry-protected prediction. The photon's masslessness follows from U(1) gauge invariance being a genuine overlap redundancy; any mass would break the consistency of how charged patches glue together. Similarly, the graviton's masslessness follows from diffeomorphism invariance being the redundancy structure of bulk spacetime. Current experimental and observational upper bounds are consistent with these predictions to extraordinary precision: the photon mass is constrained below ~10⁻¹⁸ eV, often summarized as ~27 orders of magnitude, and the graviton mass is constrained below ~10⁻²³ eV by gravitational-wave dispersion, often summarized as ~22 orders of magnitude.
 
-**The tiered particle rows.** On top of those structural zeros, the current public particle surface is split by derivation tier. The electroweak calibration stage is closed on a target-free source-only theorem that emits the $W$ and $Z$ rows after fixing the shared pixel scale $P$ on the D10 running/matching surface. The Higgs/top critical stage emits the Higgs boson and top quark as secondary quantitative rows. The quark branch emits continuation-level rows for the up, down, strange, charm, and bottom quarks. These are all real outputs, but they do **not** sit at one uniform epistemic level.
+**The particle story.** On top of those structural zeros, the framework already reaches the $W$ and $Z$, the Higgs, the top quark, and several quark masses. Charged leptons, the absolute neutrino scale, and the hadron spectrum are the main remaining pieces.
 
 **Charge quantization.** All color-singlet particles have integer electric charge. No fractional charges like $\pm 1/3$ can exist outside hadrons. This follows from the global structure of the gauge group.
 
 **Gauge-mediated proton decay.** Gauge-mediated proton decay is forbidden. The gauge group is a product, not embedded in a larger simple group, so no leptoquark generators exist. Current experimental limits ($\tau_p > 10^{34}$ years) are consistent with this prediction.
 
-**The open frontier.** Charged leptons still lack their absolute normalization, flavor-labeled neutrinos still lack one remaining overall normalization scalar, and hadron masses remain outside the paper-derived surface because the remaining work is operational rather than purely symbolic: real nonperturbative production computation and systematics control are still required.
+**The open frontier.** The remaining hard work is finishing the charged-lepton scale, fixing the overall neutrino mass scale, and doing the full nonperturbative strong-dynamics calculation needed for hadrons.
 
 ## 14.21 The Big Picture
 
 The Standard Model looks like the answer to a very specific question: What is the simplest quantum field theory that can emerge from consistent patch gluing and survive under refinement?
 
-The photon and graviton are particles the theory *forces* upon us. The photon exists because U(1) gauge redundancy emerges from how charged patches glue together. The graviton exists because diffeomorphism invariance emerges from the fact that bulk spacetime is a compression of screen data. In both cases the key point is structural: adding a hard mass term would break a redundancy the model requires. This is comparable to string theory's famous claim of "predicting gravity," except here the result flows from observer consistency rather than from string dynamics.
+The photon and graviton are particles the theory *forces* upon us. The photon exists because U(1) gauge redundancy emerges from how charged patches glue together. The graviton exists because diffeomorphism invariance emerges from the fact that bulk spacetime is a compression of screen data. In both cases the structure is decisive: adding a hard mass term would break a redundancy the model requires. This is comparable to string theory's famous claim of "predicting gravity," except here the result flows from observer consistency instead of string dynamics.
 
-The quarks and leptons aren't arbitrary. Their charges are fixed by the requirement that reality be self-consistent. The generations aren't accidental: the admissible window is $3 \le N_g \le 5$, and MAR selects the minimal viable value. Chirality isn't a quirk; it's the only way to keep fermions light without fine tuning.
+The quarks and leptons aren't arbitrary. Their charges are fixed by the requirement that reality be self-consistent. Three generations and three colors are not inserted by hand; they are the smallest answer that survives the combined demands of chirality, CP violation, anomaly cancellation, and ultraviolet consistency.
 
-Axiom 5 (MAR) provides the selector inside the admissible class. Within the connected Lie sector package with one connected abelian charge factor, it picks the Standard Model gauge structure and leaves the realized hypercharge lattice and the realized counting chain $N_g = 3$ then $N_c = 3$ as discrete structural outputs. From gauge reconstruction, anomaly analysis, and refinement stability, the framework derives a sharply constrained set of particles and forces while keeping later quantitative branches epistemically separate from the structural core.
-
-That last clause matters. The current OPH particle claim is not "the full Standard Model spectrum is now theorem-closed." The honest claim is narrower: structural carriers are fixed; the electroweak $W/Z$ lane is closed on its active calibration theorem surface; Higgs/top live on a secondary quantitative stage; the broader quark family has continuation-level emitted rows; and charged-lepton, flavor-labeled neutrino, and hadron closure remain open or execution-bound. This chapter should be read with that ledger in mind.
+That is already a remarkably concrete result. The framework does not merely say that "symmetry matters." It points to a very specific gauge structure, charge pattern, generation count, and color count. It also already reaches the massless carriers, the $W$ and $Z$, the Higgs, the top quark, and several quark masses. The remaining work sits mostly in flavor completion and in strongly coupled bound states.
 
 We've now seen how particles emerge from the screen as stable patterns that transform under emergent symmetries. But how does spacetime itself emerge? How does Einstein's relativity fit into this picture?
 

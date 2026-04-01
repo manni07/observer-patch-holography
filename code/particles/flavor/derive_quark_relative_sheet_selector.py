@@ -57,6 +57,13 @@ def build_artifact(repair: dict[str, Any], orbit: dict[str, Any]) -> dict[str, A
         sigma_value = None
         selection_status = "ambiguous_theorem_witnesses"
         reason = "More than one orbit element claims theorem-grade selection; no value emitted."
+    elif len(elements) == 1:
+        sigma_value = None
+        selection_status = "singleton_reference_sheet_not_promoted"
+        reason = (
+            "The current solver emits one D12 reference-sheet orbit element, but no theorem-grade uniqueness or "
+            "selection witness identifies that singleton as sigma_ud."
+        )
     else:
         sigma_value = None
         selection_status = "not_emitted_from_current_corpus"
@@ -100,6 +107,7 @@ def build_artifact(repair: dict[str, Any], orbit: dict[str, Any]) -> dict[str, A
         "notes": [
             "This is the exact next theorem-side object even when the selector value remains open.",
             "This script refuses to convert compare-only CKM-shell ranking into a theorem-grade selection.",
+            "A singleton reference-sheet orbit element is still not enough unless the solver also emits an intrinsic uniqueness witness.",
             "Once a theorem-grade orbit witness exists, rerunning this script will emit sigma_ud directly.",
         ],
     }
@@ -125,4 +133,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

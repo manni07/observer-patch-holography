@@ -66,7 +66,7 @@ Heisenberg started with observations (spectral lines) and reverse-engineered the
 
 ### Why Non-Commutativity Is Not Arbitrary
 
-Here is the OPH reading developed in this chapter: non-commutativity is not just a bizarre quantum quirk, but part of what makes overlap consistency nontrivial.
+Here is the OPH reading developed in this chapter: non-commutativity is part of what makes overlap consistency nontrivial.
 
 Consider the overlap condition. When two observers compare notes, they must agree on their shared observables. In a commutative world-where all measurements are compatible-this consistency is trivial. You could assign pre-existing values to everything, and agreement would be automatic.
 
@@ -74,7 +74,7 @@ But the Quantum Marginal Problem shows this doesn't work. Pairwise-consistent ma
 
 Here's the deeper point: **non-commutativity is what makes consistency hard, and hard consistency is what makes physics non-trivial.** If measurements all commuted, any random assignment would satisfy the overlap conditions. There would be no constraints, no laws, no structure. The universe would be arbitrary.
 
-Non-commutativity creates a tension between local freedom and global consistency. That tension is resolved by specific patterns of entanglement-and those patterns are what we call physical law. OPH interprets quantum non-commutativity as deeply connected to the difficulty of global consistency, rather than treating it as an arbitrary extra feature.
+Non-commutativity creates a tension between local freedom and global consistency. That tension is resolved by specific patterns of entanglement, and those patterns are what we call physical law. OPH interprets quantum non-commutativity as deeply connected to the difficulty of global consistency instead of treating it as an arbitrary extra feature.
 
 ## 5.3 The Order of Questions
 
@@ -279,11 +279,11 @@ John von Neumann classified operator algebras into types. This classification re
 
 ### Why Type III Matters
 
-Type III algebras have strange properties. In particular, they do not admit the simple finite-trace density-matrix picture familiar from finite systems. Horizon-restricted examples make this vivid because the restricted state is thermal/KMS-like.
+Type III algebras have strange properties. They don't admit the simple density-matrix picture familiar from finite quantum systems. This matters because the algebra of any bounded spacetime region, including the region around a horizon, turns out to be Type III.
 
-The Unruh effect is a standard illustration. An accelerating observer perceives the vacuum as a thermal bath on the wedge algebra, which in AQFT is Type III rather than a finite-dimensional Type I system.
+The Unruh effect is a vivid illustration. An accelerating observer perceives empty space as a warm bath of particles. This happens precisely because the accelerating observer's algebra is Type III: restricting attention to one patch of spacetime automatically turns a pure global state into a thermal local state.
 
-This also connects to holography. A global pure state can induce mixed local states when attention is restricted to a subregion, and the local algebraic description is subtler than the finite-dimensional textbook picture.
+This connects directly to holography. When you restrict your view to a subregion, the local description is fundamentally subtler than the textbook finite-system picture.
 
 ## 5.10 Modular Flow: Time from Algebra
 

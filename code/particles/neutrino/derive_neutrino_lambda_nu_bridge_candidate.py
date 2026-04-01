@@ -18,6 +18,7 @@ NORMALIZER = ROOT / "particles" / "runs" / "neutrino" / "same_label_overlap_defe
 THEOREM_OBJECT = ROOT / "particles" / "runs" / "neutrino" / "neutrino_weighted_cycle_theorem_object.json"
 IRREDUCIBILITY = ROOT / "particles" / "runs" / "neutrino" / "neutrino_attachment_irreducibility_theorem.json"
 DEFECT_WEIGHTED_FAMILY = ROOT / "particles" / "runs" / "neutrino" / "defect_weighted_mu_e_family.json"
+BRIDGE_SCALAR_CORRIDOR = ROOT / "particles" / "runs" / "neutrino" / "neutrino_attachment_bridge_scalar_corridor.json"
 DEFAULT_OUT = ROOT / "particles" / "runs" / "neutrino" / "neutrino_lambda_nu_bridge_candidate.json"
 
 
@@ -38,6 +39,7 @@ def build_payload(
     theorem_object: dict[str, Any],
     irreducibility: dict[str, Any] | None,
     defect_weighted_family: dict[str, Any],
+    bridge_scalar_corridor: dict[str, Any] | None,
 ) -> dict[str, Any]:
     m_star_eV = float(scale_anchor["anchors"]["m_star_gev"]) * 1.0e9
     lambda_cmp = float(compare_fit["fits"]["weighted_least_squares"]["lambda_nu"])
@@ -115,6 +117,10 @@ def build_payload(
         "where_B_nu_should_come_from": (
             "One positive non-homogeneous attachment scalar above the present emitted stack, equivalently a theorem that fixes A_nu / m_star after the exact q_mean^p_nu factorization."
         ),
+        "smallest_exact_missing_object": None if irreducibility is None else irreducibility.get("reduced_remaining_object"),
+        "smaller_exact_object_above_emitted_proxy": (
+            None if bridge_scalar_corridor is None else bridge_scalar_corridor.get("exact_reduced_correction_scalar")
+        ),
         "best_constructive_subbridge_object": {
             "artifact": defect_weighted_family["artifact"],
             "status": defect_weighted_family["proof_status"],
@@ -185,6 +191,29 @@ def build_payload(
             "B_nu_star": residual_amplitude_ratio,
             "interpretation": "After exact q_mean^p_nu factorization, this is the size of the remaining compare-only non-homogeneous attachment scalar.",
         },
+        "strongest_compare_only_bridge_scalar_corridor": (
+            None
+            if bridge_scalar_corridor is None
+            else {
+                "artifact": bridge_scalar_corridor.get("artifact"),
+                "status": bridge_scalar_corridor.get("status"),
+                "primary_cross_route_corridor": bridge_scalar_corridor.get("primary_cross_route_corridor"),
+                "strongest_target_containing_bridge_scalar_corridor": bridge_scalar_corridor.get(
+                    "strongest_target_containing_bridge_scalar_corridor"
+                ),
+                "shortlist_route_consensus_window": bridge_scalar_corridor.get("shortlist_route_consensus_window"),
+                "bridge_correction_candidate_audit": bridge_scalar_corridor.get("bridge_correction_candidate_audit"),
+                "top_candidate_envelope": {
+                    "interval": (bridge_scalar_corridor.get("top_candidate_envelope") or {}).get("interval"),
+                    "relative_half_width": (bridge_scalar_corridor.get("top_candidate_envelope") or {}).get(
+                        "relative_half_width"
+                    ),
+                },
+                "family_assisted_route": (
+                    (bridge_scalar_corridor.get("primary_route_representatives") or [None, None, None])[2]
+                ),
+            }
+        ),
         "target_free_closed_form_candidates": [
             {
                 "name": "gamma_over_sqrt_ratio_hat",
@@ -231,6 +260,11 @@ def build_payload(
             "The current attached stack cannot collapse that bridge factor to a qbar-only law; the exact irreducibility theorem proves one positive bridge invariant remains external to the attached stack itself.",
             "The previously proposed selected-point scalar I_nu^(wc) = 0.5 * sum_e qbar_e * |z_e(psi_wc) - 1|^2 is itself already fixed by the emitted qbar_e, psi_wc, and psi* data, so it cannot be the missing bridge-external scalar.",
             "The best constructive local object beneath that bridge is the defect-weighted same-label edge family q_e = sqrt(g_e * d_e), whose induced mu_e anisotropy is already real and sizable but still does not by itself emit the final bridge scalar.",
+            "The sharpest current compare-only narrowing is now a cross-route corridor for B_nu that fuses the converted symmetric-normalizer route, the core residual route, and the best defect-family-assisted residual route.",
+            "Relative to the best emitted residual-amplitude proxy sqrt(I_nu * ratio_hat) / sum_defect, the remaining exact bridge can also be written as a near-unity positive correction scalar C_nu on the live branch.",
+            "That reduced correction invariant C_nu is now the smallest exact missing object on this lane: because the proxy P_nu is already internal to the current stack, emitting C_nu is exactly equivalent to emitting B_nu.",
+            "Direct auditing of C_nu yields a narrower target-containing induced B_nu corridor than the old three-route B_nu corridor itself, but that sharpening remains compare-only.",
+            "A stricter shortlist-consensus window is available inside the already-admitted route families; it is narrower than the primary target-containing corridor but remains a route-agreement diagnostic rather than an emitted law.",
             "The exact remaining scalar is better parameterized as B_nu := lambda_nu * q_mean^p_nu / m_star_eV, equivalently A_nu / m_star_eV.",
             "The closed-form gamma-over-sqrt-ratio numerology is retained only as a refuted compare-only audit target; it is incompatible with the exact positive-rescaling no-go.",
         ],
@@ -246,6 +280,7 @@ def main() -> int:
     parser.add_argument("--theorem-object", default=str(THEOREM_OBJECT))
     parser.add_argument("--irreducibility", default=str(IRREDUCIBILITY))
     parser.add_argument("--defect-weighted-family", default=str(DEFECT_WEIGHTED_FAMILY))
+    parser.add_argument("--bridge-scalar-corridor", default=str(BRIDGE_SCALAR_CORRIDOR))
     parser.add_argument("--output", default=str(DEFAULT_OUT))
     args = parser.parse_args()
 
@@ -257,6 +292,7 @@ def main() -> int:
         theorem_object=_load_json(Path(args.theorem_object)),
         irreducibility=_load_json(Path(args.irreducibility)) if Path(args.irreducibility).exists() else None,
         defect_weighted_family=_load_json(Path(args.defect_weighted_family)),
+        bridge_scalar_corridor=_load_json(Path(args.bridge_scalar_corridor)) if Path(args.bridge_scalar_corridor).exists() else None,
     )
     out_path = Path(args.output)
     out_path.parent.mkdir(parents=True, exist_ok=True)

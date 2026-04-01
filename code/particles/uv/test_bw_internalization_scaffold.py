@@ -21,6 +21,40 @@ def test_bw_internalization_scaffold_contract() -> None:
     boundary = payload["public_status_boundary"]
     assert boundary["remaining_object"] == "canonical_scaling_cap_pair_realization_from_transported_cap_marginals"
     assert boundary["follow_on_object"] == "independent_bw_rigidity_on_realized_limit"
+    assert boundary["dominant_pressure_point"] == "carried_collar_two_term_frontier"
+    assert boundary["candidate_extension_status"] == "constructive_prelimit_system_two_lower_emitted_witnesses_still_missing"
+    assert (
+        boundary["remaining_missing_emitted_witness_artifact"]
+        == "code/particles/runs/uv/bw_carried_collar_schedule_scaffold.json"
+    )
+    assert [entry["id"] for entry in boundary["actual_solver_missing_emitted_witnesses"]] == [
+        "constructive_recovery_remainder_vanishing",
+        "fixed_local_collar_faithful_modular_defect_vanishing",
+    ]
+    assert boundary["derived_remaining_input_witness"]["id"] == "vanishing_carried_collar_schedule_on_fixed_local_collars"
+    assert [entry["id"] for entry in boundary["local_intermediate_witness_chain"]] == [
+        "constructive_recovery_remainder_vanishing",
+        "fixed_local_collar_exact_markov_modulus_vanishing",
+        "fixed_local_collar_faithful_modular_defect_vanishing",
+        "vanishing_carried_collar_schedule_on_fixed_local_collars",
+    ]
+    assert [entry["artifact"] for entry in boundary["local_intermediate_witness_chain"]] == [
+        "code/particles/runs/uv/bw_fixed_local_collar_constructive_recovery_scaffold.json",
+        "code/particles/runs/uv/bw_fixed_local_collar_exact_markov_modulus_scaffold.json",
+        "code/particles/runs/uv/bw_fixed_local_collar_faithful_modular_defect_scaffold.json",
+        "code/particles/runs/uv/bw_carried_collar_schedule_scaffold.json",
+    ]
+    assert "code/particles/uv/derive_bw_fixed_local_collar_constructive_recovery_scaffold.py" in boundary[
+        "canonical_code_scaffolds"
+    ]
+    assert "code/particles/uv/derive_bw_fixed_local_collar_exact_markov_modulus_scaffold.py" in boundary[
+        "canonical_code_scaffolds"
+    ]
+    assert "code/particles/uv/derive_bw_carried_collar_schedule_scaffold.py" in boundary["canonical_code_scaffolds"]
+    assert "code/particles/runs/uv/bw_fixed_local_collar_constructive_recovery_scaffold.json" in boundary[
+        "canonical_artifacts"
+    ]
+    assert "code/particles/runs/uv/bw_carried_collar_schedule_scaffold.json" in boundary["canonical_artifacts"]
     rigidity = boundary["symbolic_ordered_cut_pair_rigidity_test"]
     assert rigidity["status"] == "pass"
     assert rigidity["solution_dimension"] == 1

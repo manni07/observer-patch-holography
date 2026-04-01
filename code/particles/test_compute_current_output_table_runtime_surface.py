@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+"""Guard the disposable runtime status surface against public-surface drift."""
+
+from __future__ import annotations
+
+import importlib.util
+import json
+import pathlib
+
+
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+SCRIPT = ROOT / "particles" / "compute_current_output_table.py"
+
+
+def _load_module():
+    spec = importlib.util.spec_from_file_location("compute_current_output_table", SCRIPT)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"unable to load {SCRIPT}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def test_runtime_surface_preserves_repaired_neutrino_rows_and_canonical_refs(tmp_path: pathlib.Path) -> None:
+    module = _load_module()
+    current_dir = module.build_runtime(tmp_path / "runtime", with_hadrons=False, verbose=False)
+
+    payload = json.loads((current_dir / "results_status.json").read_text(encoding="utf-8"))
+    active = payload["surface_state"]["active_local_public_candidates"]
+    uv = payload["premise_boundaries"]["uv_bw_internalization"]
+    markdown = (current_dir / "RESULTS_STATUS.md").read_text(encoding="utf-8")
+
+    assert active["neutrino_repaired_branch"] is True
+    assert payload["comparison_rows"]
+    assert payload["inputs"]["hadron_profile"] == "suppressed"
+    assert uv["prelimit_system_artifact"] == "code/particles/runs/uv/bw_realized_transported_cap_local_system.json"
+    assert uv["remaining_missing_emitted_witness_artifact"] == (
+        "code/particles/runs/uv/bw_carried_collar_schedule_scaffold.json"
+    )
+    assert uv["smaller_remaining_raw_datum_artifact"] == (
+        "code/particles/runs/uv/bw_fixed_local_collar_markov_faithfulness_datum.json"
+    )
+    assert uv["neutrino_local_bridge_candidate_context"] == (
+        "code/particles/runs/neutrino/neutrino_lambda_nu_bridge_candidate.json"
+    )
+    assert "## Neutrino Oscillation Comparison" in markdown

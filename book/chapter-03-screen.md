@@ -460,6 +460,6 @@ But we haven't yet explained dynamics. The screen we've described is static-it e
 
 The answer involves entropy again, but now entropy's role in dynamics. The Second Law says entropy increases. But why? And what does this have to do with the screen?
 
-In the next chapter, we explore the edge of the screen-the boundary conditions that govern what can happen. We will see how entropy growth is not just a statistical tendency but a geometric constraint, built into the structure of horizons themselves.
+In the next chapter, we explore the edge of the screen, the boundary conditions that govern what can happen. We will see how entropy growth is a geometric constraint built into the structure of horizons themselves, not only a statistical tendency.
 
 The reverse engineering continues in Chapter 4: Entropy on the Edge.

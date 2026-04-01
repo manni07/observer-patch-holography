@@ -1,5 +1,17 @@
 {
+  "absolute_frontier_factorization": {
+    "artifact": "oph_charged_absolute_frontier_factorization",
+    "current_surface_missing_object": "charged_absolute_anchor_A_ch",
+    "post_promotion_exact_descended_scalar": "charged_physical_affine_scalar_mu",
+    "post_promotion_internal_carrier": "scalar_affine_cocycle_primitive",
+    "post_promotion_single_slot": "refinement_stable_uncentered_trace_lift",
+    "promotion_only_no_go": "charged_centered_operator_cannot_emit_mu_phys",
+    "reduction_theorem_id": "charged_determinant_line_reduces_to_uncentered_trace_lift",
+    "status": "layered_frontier_factorization_closed",
+    "theorem_statement": "The current charged absolute no-go and the sharpened post-promotion route solve different layers of the lane. The current layer identifies the absent affine coordinate A_ch on the common-shift quotient surface. After centered promotion, the absolute tail reduces canonically to one refinement-stable uncentered trace lift, which then induces the determinant-line section, A_ch, and the absolute charged outputs. Therefore the honest charged absolute frontier is layered rather than a single bare A_ch slot."
+  },
   "absolute_scale_closure_status": {
+    "absolute_frontier_factorization_artifact": "oph_charged_absolute_frontier_factorization",
     "charged_absolute_equalizer_status": "NO_GO_COMMON_SHIFT",
     "compare_only_delta_e_abs_star": 3.003986333402356,
     "compare_only_g_e_star": 0.04577885783568762,
@@ -10,7 +22,11 @@
       "reason": "common-shift orbit pick; not theorem-grade; does not land on physical charged masses"
     },
     "honest_missing_transport_scalar": "A_ch",
-    "present_chain_under_determines_g_e": true
+    "honest_post_promotion_exact_descended_scalar": "charged_physical_affine_scalar_mu",
+    "honest_post_promotion_internal_carrier": "scalar_affine_cocycle_primitive",
+    "honest_post_promotion_single_slot": "refinement_stable_uncentered_trace_lift",
+    "present_chain_under_determines_g_e": true,
+    "promotion_only_centered_operator_no_go": "charged_centered_operator_cannot_emit_mu_phys"
   },
   "absolute_scale_gap_identity": {
     "artifact": "oph_charged_absolute_scale_transport_gap_identity",
@@ -151,6 +167,13 @@
     },
     "target_sigma_total_log_per_side": 8.15403156601825
   },
+  "centered_operator_mu_no_go": {
+    "artifact": "oph_charged_centered_operator_mu_phys_no_go",
+    "forbidden_target": "charged_physical_affine_scalar_mu",
+    "status": "promotion_only_absolute_scalar_no_go",
+    "theorem_id": "charged_centered_operator_cannot_emit_mu_phys",
+    "trace_zero_by_construction": true
+  },
   "charged_d12_continuation_followup": {
     "artifact": "oph_charged_d12_continuation_followup",
     "centered_log_residual_norm": 2.1278651760358518e-05,
@@ -281,11 +304,35 @@
         "smallest_missing_clause": "compression_descendant_commutator_vanishes_or_is_uniformly_quadratic_small_after_central_split"
       },
       {
-        "effect_on_fill": "g_e_Delta_e_abs_and_public_charged_masses",
-        "id": "charged_absolute_anchor_A_ch",
-        "required_contract": "A_ch(logm + c*(1,1,1)) = A_ch(logm) + c"
+        "artifact": "oph_charged_uncentered_trace_lift_scaffold",
+        "effect_on_fill": "induce_determinant_line_section_A_ch_and_absolute_charged_outputs",
+        "exact_descended_scalar": "charged_physical_affine_scalar_mu",
+        "id": "refinement_stable_uncentered_trace_lift",
+        "internal_carrier": "scalar_affine_cocycle_primitive",
+        "required_contract": "one theorem-grade uncentered lift C_tilde_e = C_hat_e + mu I on physical Y_e or an equivalent determinant-line presentation"
       }
     ],
+    "induced_after_irreducible_chain": {
+      "absolute_outputs": {
+        "Delta_e_abs": "log(g_ch_shared) - A_ch",
+        "g_e": "exp(A_ch)",
+        "masses": "exp(A_ch + centered_log_i)"
+      },
+      "charged_absolute_anchor": {
+        "artifact": "oph_charged_absolute_anchor_section",
+        "artifact_ref": "code/particles/runs/leptons/charged_absolute_anchor_section.json",
+        "covariance_contract": "A_ch(logm + c*(1,1,1)) = A_ch(logm) + c",
+        "derived_formula": "A_ch = (1/3) * log(det(Y_e)) = (1/3) * tr(log Y_e)",
+        "id": "charged_absolute_anchor_A_ch"
+      },
+      "determinant_line_section": {
+        "artifact": "oph_charged_determinant_line_section_extension",
+        "artifact_ref": "code/particles/runs/leptons/charged_determinant_line_section_extension.json",
+        "id": "charged_determinant_line_section",
+        "reduction_theorem_id": "charged_determinant_line_reduces_to_uncentered_trace_lift"
+      }
+    },
+    "post_promotion_route_artifact": "oph_charged_post_promotion_absolute_closure_route",
     "theorem_forbid_emit_now": [
       "theorem_grade_C_hat_e",
       "A_ch",
@@ -332,7 +379,7 @@
       "summary": "Retain a charged holonomy bridge only if the older delta = 2/9 D12 benchmark is kept as a theorem-grade bridge instead of a diagnostic continuation."
     }
   },
-  "generated_utc": "2026-03-31T10:46:50Z",
+  "generated_utc": "2026-04-01T00:28:58Z",
   "notes": [
     "The current charged-lepton builder now exposes the two-scalar ordered-gap family in formula form plus one common shift.",
     "A common shift rescales all three masses together and cannot fix a large hierarchy mismatch.",
@@ -342,6 +389,9 @@
     "The full two-scalar support-extension completion law is now explicit on disk; the live same-carrier primitive is the eta source-readback, followed by the sigma endpoint-ratio breaker.",
     "The stronger same-carrier source-scalar pair readback is also now explicit on disk, collecting those eta and sigma invariants into one ordered primitive beneath the full completion shell.",
     "At theorem level, eta and sigma are no longer the deepest honest waiting set. The live builder still exposes eta then sigma as the first same-carrier residuals, but the paper-facing exact burden is first to promote the latent candidate C_hat_e^{cand} by closing the branch-generator splitting theorem, then to restore the lost affine mode through a refinement-stable uncentered trace lift of the charged response, from which the determinant-line section and the affine absolute coordinate A_ch are induced.",
+    "That post-promotion lift slot is now reduced more sharply too: after centered promotion the only remaining ambiguity is a scalar affine cocycle primitive mu on the refinement family, not an extra matrix-valued theorem beyond the uncentered trace lift.",
+    "And because the lift is already required to be refinement-stable on theorem-grade physical Y_e, that primitive descends further to one physical affine scalar mu_phys(Y_e).",
+    "A sharper impossibility theorem is now on disk too: even a future theorem-grade centered C_hat_e cannot emit mu_phys(Y_e) by itself, because centered operator data stays common-shift invariant.",
     "The charged sector-response operator remains undeclared: only the latent candidate C_hat_e^{cand} is on disk, and its promotion is blocked by the upstream theorem oph_generation_bundle_branch_generator_splitting together with the smaller clause compression_descendant_commutator_vanishes_or_is_uniformly_quadratic_small_after_central_split.",
     "On the live corpus, the commutator-transfer bridge proves neither exact vanishing nor uniform quadratic smallness after the central split; only the desired conditional bridge is recorded.",
     "The present charged theorem determines only the centered charged log class modulo a common additive shift, so no theorem-grade g_e, Delta_e_abs, or charged absolute equalizer exists on the live theorem lane.",
@@ -365,6 +415,7 @@
     ],
     "next_exact_object_after_that": "refinement_stable_uncentered_trace_lift",
     "next_exact_object_after_that_if_closed": "charged_absolute_anchor_A_ch",
+    "post_promotion_single_slot": "refinement_stable_uncentered_trace_lift",
     "smallest_missing_clause": "compression_descendant_commutator_vanishes_or_is_uniformly_quadratic_small_after_central_split",
     "smallest_missing_theorem_object": "oph_generation_bundle_branch_generator_splitting",
     "smallest_wrong_frontier": [
@@ -468,6 +519,20 @@
     ],
     "sigma_readback_invariant_name": "J_endpoint_e_tau_support_extension",
     "status": "closed_smaller_primitive"
+  },
+  "trace_lift_cocycle_reduction": {
+    "artifact": "oph_charged_uncentered_trace_lift_cocycle_reduction",
+    "irreducible_new_degree_of_freedom": "scalar affine cocycle primitive mu",
+    "pairwise_difference_rule": "C_tilde_e(r') - C_tilde_e(r) = delta(r,r') I",
+    "primitive_required_on_fill": "exists mu(r) with delta(r,r') = mu(r') - mu(r)",
+    "single_slot_preserved": "refinement_stable_uncentered_trace_lift",
+    "status": "conditional_scalar_cocycle_reduction"
+  },
+  "trace_lift_physical_descent": {
+    "artifact": "oph_charged_mu_physical_descent_reduction",
+    "exact_smaller_missing_object": "charged_physical_affine_scalar_mu",
+    "forced_refinement_identity_mode": "delta(r,r') = 0 for refinement representatives of the same physical Y_e",
+    "status": "exact_descended_scalar_reduction"
   },
   "two_scalar_on_current_sigma_audit": {
     "best_centered_log_on_current_sigma": [

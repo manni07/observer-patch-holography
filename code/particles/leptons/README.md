@@ -46,9 +46,40 @@ These scripts do **not** claim charged leptons are already theorem-level. They
 give the `e30` closure lane a concrete local home under `/particles`, and they
 keep the ordered-shape/hierarchy problem separate from absolute-scale closure.
 
-Current live blocker:
+Current same-carrier constructive blocker:
 
 - `eta_source_support_extension_log_per_side`
+
+Current theorem-facing absolute route:
+
+- `oph_generation_bundle_branch_generator_splitting`
+- `refinement_stable_uncentered_trace_lift`
+- then the determinant-line section and `A_ch` are induced rather than independent
+
+The post-promotion lift slot has now been reduced further in carrier type:
+
+- `oph_charged_uncentered_trace_lift_cocycle_reduction`
+  This keeps the single-slot frontier unchanged while making its exact content
+  explicit: after centered promotion, the remaining ambiguity is only a scalar
+  affine cocycle primitive `mu`, with `C_tilde_e = C_hat_e + mu I`,
+  `s_det = 3 mu`, and `A_ch = mu`.
+
+- `oph_charged_mu_physical_descent_reduction`
+  This shrinks that description one step further under the same refinement-
+  stability contract already required by the lift: on theorem-grade physical
+  `Y_e`, the refinement cocycle vanishes and the exact residual object is one
+  physical affine scalar `mu_phys(Y_e)`.
+
+- `oph_charged_centered_operator_mu_phys_no_go`
+  This closes the false post-promotion shortcut: even a theorem-grade centered
+  `C_hat_e` cannot emit `mu_phys(Y_e)` by itself, because centered operator
+  data is still invariant under the common-shift action that `mu_phys` breaks.
+
+Layered frontier ledger now on disk:
+
+- `oph_charged_absolute_frontier_factorization`
+  This separates the current-surface missing affine object `A_ch` from the
+  strictly smaller post-promotion single slot `refinement_stable_uncentered_trace_lift`.
 
 Smaller same-carrier primitive already on disk:
 
@@ -59,6 +90,11 @@ Smaller same-carrier primitive already on disk:
 That is the first charged scalar that actually leaves the exhausted current
 support and changes the hierarchy. Until it is emitted, the forward charged
 artifact remains a structured gap surface rather than a promotable prediction.
+
+The theorem-facing absolute tail is sharper than that same-carrier frontier.
+Once the latent centered charged operator is promoted, the honest post-promotion
+single slot is the refinement-stable uncentered trace lift. The determinant-line
+section and affine absolute anchor `A_ch` then follow as induced data.
 
 Additional guards:
 

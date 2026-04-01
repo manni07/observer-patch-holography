@@ -8,10 +8,25 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
+from bw_collar_honesty import (
+    build_local_honesty_gate,
+    build_local_obligation_ledger,
+    build_schedule_term_frontier,
+)
+
 
 ROOT = Path(__file__).resolve().parents[2]
 EXTRACTION_SCAFFOLD = ROOT / "particles" / "runs" / "uv" / "bw_scaling_limit_cap_pair_extraction_scaffold.json"
 DEFAULT_OUT = ROOT / "particles" / "runs" / "uv" / "bw_realized_transported_cap_local_system.json"
+RAW_DATUM = ROOT / "particles" / "runs" / "uv" / "bw_fixed_local_collar_markov_faithfulness_datum.json"
+CARRIED_SCHEDULE = ROOT / "particles" / "runs" / "uv" / "bw_carried_collar_schedule_scaffold.json"
+CONSTRUCTIVE_RECOVERY = (
+    ROOT / "particles" / "runs" / "uv" / "bw_fixed_local_collar_constructive_recovery_scaffold.json"
+)
+EXACT_MARKOV_MODULUS = ROOT / "particles" / "runs" / "uv" / "bw_fixed_local_collar_exact_markov_modulus_scaffold.json"
+FAITHFUL_MODULAR_DEFECT = (
+    ROOT / "particles" / "runs" / "uv" / "bw_fixed_local_collar_faithful_modular_defect_scaffold.json"
+)
 
 
 def _timestamp() -> str:
@@ -28,10 +43,16 @@ def build_payload(extraction_scaffold: dict[str, object]) -> dict[str, object]:
     remaining_formula = str(extraction_scaffold.get("remaining_missing_emitted_witness_formula", ""))
     smaller_raw_datum = str(extraction_scaffold.get("smaller_remaining_raw_datum", ""))
     smaller_raw_components = list(extraction_scaffold.get("smaller_remaining_raw_datum_components", []))
+    intermediate_witness_chain = list(extraction_scaffold.get("intermediate_witness_chain", []))
+    term_frontier = build_schedule_term_frontier(
+        constructive_recovery_artifact=str(CONSTRUCTIVE_RECOVERY),
+        faithful_modular_defect_artifact=str(FAITHFUL_MODULAR_DEFECT),
+        carried_schedule_artifact=str(CARRIED_SCHEDULE),
+    )
     return {
         "artifact": "oph_realized_transported_cap_local_system",
         "generated_utc": _timestamp(),
-        "status": "constructed_prelimit_system_one_emitted_witness_still_missing",
+        "status": "constructed_prelimit_system_two_lower_emitted_witnesses_still_missing",
         "public_promotion_allowed": False,
         "role": (
             "Package the quotient/local *-isomorphism-level transported cap-local system "
@@ -72,6 +93,7 @@ def build_payload(extraction_scaffold: dict[str, object]) -> dict[str, object]:
         },
         "remaining_missing_witness_contract": {
             "id": remaining,
+            "artifact": str(CARRIED_SCHEDULE),
             "formula": remaining_formula,
             "for_fixed_models": "every fixed local collar model (m, delta)",
             "meaning": (
@@ -81,9 +103,40 @@ def build_payload(extraction_scaffold: dict[str, object]) -> dict[str, object]:
         },
         "smaller_remaining_raw_datum": {
             "id": smaller_raw_datum,
+            "artifact": str(RAW_DATUM),
             "components": smaller_raw_components,
             "role": "raw fixed-local-collar datum that implies the eta schedule once emitted",
         },
+        "remaining_witness_decomposition": intermediate_witness_chain,
+        "schedule_term_witnesses": [
+            {
+                "id": "constructive_recovery_remainder_vanishing",
+                "artifact": str(CONSTRUCTIVE_RECOVERY),
+                "role": "markov_side_recovery_term",
+            },
+            {
+                "id": "fixed_local_collar_faithful_modular_defect_vanishing",
+                "artifact": str(FAITHFUL_MODULAR_DEFECT),
+                "role": "faithfulness_weighted_modular_term",
+            },
+        ],
+        "actual_solver_missing_emitted_witnesses": term_frontier["missing_emitted_witnesses"],
+        "derived_remaining_input_witness": term_frontier["derived_parent_witness"],
+        "derived_remaining_input_witness_closure_theorem": term_frontier["closure_theorem"],
+        "remaining_witness_obligation_ledger": build_local_obligation_ledger(
+            constructive_recovery_artifact=str(CONSTRUCTIVE_RECOVERY),
+            exact_markov_artifact=str(EXACT_MARKOV_MODULUS),
+            faithful_modular_defect_artifact=str(FAITHFUL_MODULAR_DEFECT),
+            carried_schedule_artifact=str(CARRIED_SCHEDULE),
+        ),
+        "remaining_witness_honesty_gate": build_local_honesty_gate(
+            carried_schedule_artifact=str(CARRIED_SCHEDULE),
+            constructive_recovery_artifact=str(CONSTRUCTIVE_RECOVERY),
+            exact_markov_artifact=str(EXACT_MARKOV_MODULUS),
+            faithful_modular_defect_artifact=str(FAITHFUL_MODULAR_DEFECT),
+            include_prelimit_system_artifact=str(DEFAULT_OUT),
+        ),
+        "remaining_witness_term_frontier": term_frontier,
         "promotion_boundary": {
             "closed_here": [
                 "reference_cap_local_test_system",
@@ -102,7 +155,10 @@ def build_payload(extraction_scaffold: dict[str, object]) -> dict[str, object]:
         "notes": [
             "This artifact is constructive but not yet the realized scaling-limit cap pair.",
             "It packages the prelimit transported cap-local system at the quotient/local *-isomorphism level only.",
-            "The only remaining emitted witness for cap-pair promotion is the vanishing carried-collar schedule on fixed local collar models.",
+            "The carried-collar witness now comes with a finer lower local family: constructive recovery, exact-Markov comparison convergence, faithful modular-defect vanishing, then the full eta schedule.",
+            "The actual emitted solver frontier is the two-term pair beneath the derived eta schedule, not the schedule viewed as a separate primitive target.",
+            "The honesty gate makes explicit that this prelimit package is still insufficient on its own for cap-pair promotion.",
+            "The remaining emitted witnesses for cap-pair promotion are the constructive-recovery and faithful modular-defect terms on fixed local collar models.",
         ],
     }
 

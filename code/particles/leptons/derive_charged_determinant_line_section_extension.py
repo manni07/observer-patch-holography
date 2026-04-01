@@ -14,26 +14,31 @@ import argparse
 import json
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
+
+from charged_absolute_route_common import (
+    DETERMINANT_LINE_JSON,
+    TRACE_LIFT_COCYCLE_JSON,
+    TRACE_LIFT_PHYSICAL_DESCENT_JSON,
+    TRACE_LIFT_JSON,
+    UNDERDETERMINATION_JSON,
+    anchor_hard_rejections,
+    anchor_input_contract,
+    artifact_ref,
+    load_json,
+)
 
 
 ROOT = Path(__file__).resolve().parents[2]
-ANCHOR_SECTION_JSON = ROOT / "particles" / "runs" / "leptons" / "charged_absolute_anchor_section.json"
 CENTRAL_SPLIT_EXTENSION_JSON = (
     ROOT / "particles" / "runs" / "flavor" / "charged_central_split_transfer_extension.json"
 )
-DEFAULT_OUT = ROOT / "particles" / "runs" / "leptons" / "charged_determinant_line_section_extension.json"
+DEFAULT_OUT = DETERMINANT_LINE_JSON
 
 
 def _timestamp() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-
-def _load_json(path: Path) -> dict[str, Any]:
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
-def build_artifact(anchor_section: dict[str, Any], transfer_extension: dict[str, Any]) -> dict[str, Any]:
+def build_artifact(underdetermination: dict, transfer_extension: dict) -> dict:
     return {
         "artifact": "oph_charged_determinant_line_section_extension",
         "generated_utc": _timestamp(),
@@ -42,9 +47,12 @@ def build_artifact(anchor_section: dict[str, Any], transfer_extension: dict[str,
         "extension_kind": "determinant_line_section",
         "exact_missing_object": "charged_determinant_line_section",
         "exact_smaller_missing_object": "refinement_stable_uncentered_trace_lift",
+        "exact_smaller_missing_object_artifact": artifact_ref(TRACE_LIFT_JSON),
         "section_induced_by_exact_smaller_object": True,
         "extra_trivialization_required": False,
         "extra_metric_compatibility_required": False,
+        "same_slot_scalarization_artifact": artifact_ref(TRACE_LIFT_COCYCLE_JSON),
+        "exact_descended_scalar_artifact": artifact_ref(TRACE_LIFT_PHYSICAL_DESCENT_JSON),
         "upstream_prerequisites": {
             "promotion_theorem": "oph_generation_bundle_branch_generator_splitting",
             "promotion_effect": "theorem_grade_C_hat_e",
@@ -85,12 +93,14 @@ def build_artifact(anchor_section: dict[str, Any], transfer_extension: dict[str,
             "A section of that line is exactly the affine object needed to break the quotient symmetry.",
             "This packages the charged absolute anchor as a determinant-torsor coordinate rather than an abstract free scalar.",
         ],
-        "input_contract": anchor_section.get("input_contract"),
-        "hard_rejections": anchor_section.get("hard_rejections"),
+        "input_contract": anchor_input_contract(),
+        "hard_rejections": anchor_hard_rejections(underdetermination),
         "notes": [
             "This is a constructive extension route, not a theorem hidden in the current corpus.",
             "Promoting C_hat_e^cand is still upstream and necessary, but the determinant-line section is induced only after the uncentered trace lift exists on the promoted surface.",
             "The smaller exact missing object beneath this section is the refinement-stable uncentered trace lift that keeps the determinant coordinate canonical across the live refinement family.",
+            "Inside that single slot, the only new post-promotion content is the scalar identity-mode cocycle primitive mu; no extra matrix-valued theorem sits between the lift and this section.",
+            "Once refinement stability is imposed on theorem-grade physical Y_e, even that primitive descends to one physical affine scalar mu_phys(Y_e).",
             "Therefore the determinant-line section is not an additional independent blocker once that lift exists.",
         ],
     }
@@ -98,14 +108,14 @@ def build_artifact(anchor_section: dict[str, Any], transfer_extension: dict[str,
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Build the charged determinant-line section extension scaffold.")
-    parser.add_argument("--anchor-section", default=str(ANCHOR_SECTION_JSON))
+    parser.add_argument("--underdetermination", default=str(UNDERDETERMINATION_JSON))
     parser.add_argument("--transfer-extension", default=str(CENTRAL_SPLIT_EXTENSION_JSON))
     parser.add_argument("--output", default=str(DEFAULT_OUT))
     args = parser.parse_args()
 
-    anchor_section = _load_json(Path(args.anchor_section))
-    transfer_extension = _load_json(Path(args.transfer_extension))
-    payload = build_artifact(anchor_section, transfer_extension)
+    underdetermination = load_json(Path(args.underdetermination))
+    transfer_extension = load_json(Path(args.transfer_extension))
+    payload = build_artifact(underdetermination, transfer_extension)
 
     out_path = Path(args.output)
     out_path.parent.mkdir(parents=True, exist_ok=True)

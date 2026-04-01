@@ -145,7 +145,7 @@ Events with ds^2 < 0 (more time separation than space separation) are "timelike 
 
 Events with ds^2 > 0 (more space separation than time separation) are "spacelike separated." Nothing can travel between them. They are causally disconnected.
 
-The light cone is the same for all observers. This is why causality is preserved even when simultaneity is not.
+The light cone is the same for all observers. That is why causality is preserved even when simultaneity is not.
 
 ## 15.5 Evidence for Special Relativity
 
@@ -277,19 +277,15 @@ This modular flow is what the observer experiences as time.
 
 ### Geometric Modular Flow on Caps
 
-Consider a cap C on the sphere S^2. In our model, in the refinement/scaling regime and under the right conditions, modular flow becomes geometric.
+Consider a cap C on the sphere S^2. The key claim is that, in the right smooth limit, the cap's natural thermal time stops being an abstract algebraic flow and becomes an actual geometric motion on the sphere. The spherical version of the Bisognano-Wichmann story says, roughly, that the cap's built-in "heat time" is the same thing as a boost-like conformal motion on that cap:
 
-The conditions are:
-- collar Markov/recoverability, so the non-geometric part of the modular generator is confined to a shrinking collar around the cut
-- the MaxEnt refinement branch, which already supplies the quasi-local propagation and refinement-stability control used later in the argument
-- a controlled refinement/scaling limit
-- the geometric-branch condition: the realized cap net lies in the geometric modular class for caps and their conformal images
+$$\sigma_t^{\omega_C} = \alpha_{\lambda_C(2\pi t)}$$
 
-When these hold, the BW$_{S^2}$ theorem identifies the modular Hamiltonian with the standard cap-preserving conformal dilation supplied by the BW geometric branch and fixes its normalization:
+The modular Hamiltonian becomes proportional to a geometric boost generator:
 
-$$K_C = 2\pi B_C$$
+$$K_C = 2\pi B_C + \text{const}$$
 
-This is the Bisognano-Wichmann result adapted to the sphere. In the synchronized paper ledger, the remaining burden is the continuum lift itself: exhibiting an explicit microscopic refinement whose scaling limit lands in the geometric modular phase, not adding some separate Euclidean-regularity premise by hand once that branch is realized.
+The remaining task is to show this geometric phase emerging directly from an explicit microscopic screen model.
 
 ### Conformal Symmetry Is Lorentz Symmetry
 
@@ -331,7 +327,7 @@ The substrate (the qubits) is not in spacetime. Spacetime emerges from how patch
 
 Why is there a maximum speed, and why is it the same for everyone?
 
-In our model, information propagates on the screen. The modular flow determines the rate of propagation. The conformal structure of S^2 determines the causal structure.
+In OPH, information propagates on the screen. The modular flow determines the rate of propagation. The conformal structure of S^2 determines the causal structure.
 
 The speed of light c is the conversion factor between modular time and geometric distance. It's universal because the conformal structure of the sphere is unique.
 
@@ -343,18 +339,7 @@ Special relativity emerges from the conformal structure of the screen. What abou
 
 ### What Patch Consistency Does (and Doesn't) Give Us
 
-Let's be precise about what comes from where. The derivation of Einstein's equations uses several ingredients, and patch consistency is only one of them.
-
-**What patch consistency contributes directly:**
-- No privileged observer → no preferred frame
-- the overlap-compatibility structure that makes Lorentz kinematics the natural outcome once cap modular flow is geometric
-- The promotion of a scalar equation to a tensor equation (see below)
-
-**What requires additional assumptions:**
-- MaxEnt state selection
-- the OPH geometric-branch condition for caps
-- The connection between modular flow and stress-energy (the "EFT bridge")
-- The thermodynamic/entanglement equilibrium insight itself
+Patch consistency does two crucial jobs here. First, it forbids any preferred observer or preferred frame. Second, once each observer gets the same local thermodynamic relation in their own rest frame, patch consistency forces those local relations to fit together into a full tensor equation. To reach Einstein's equation, we also need the maximum-entropy state choice and a bridge from modular energy to ordinary stress-energy.
 
 ### Jacobson's Insight (1995, 2016)
 
@@ -386,7 +371,7 @@ The first law relates entropy variation to modular energy:
 
 $$\delta S_C = \delta \langle K_C \rangle$$
 
-With geometric modular flow (K_C = 2π B_C), this becomes:
+On the special type-I realization where one may write \(K_C = 2\pi B_C + \text{const}\), this becomes:
 
 $$\delta S_C = 2\pi \delta \langle B_C \rangle$$
 
@@ -400,9 +385,7 @@ $$K = \int_\Sigma T_{ab} \zeta^b d\Sigma^a$$
 
 where ζ is the conformal Killing field preserving the diamond.
 
-**Route 2: Null-surface modular bridge.** Even without assuming a CFT, one can try to reconstruct null stress data from modular data on null surfaces. In the synchronized paper package this route is conditional but sharper than before: the MaxEnt branch now supplies the quasi-local propagation and endpoint control internally, the fixed-cutoff bridge reaches exact-or-controlled strip additivity together with the weak tail generator on one inherited strip model, and the geometric blow-up argument derives the half-sided modular pair and the resulting positive null-translation generator. What still remains explicit are the downstream density-upgrade and relativistic null-stress premises needed to promote that weak-tail data to a local density $T_{kk}$ for each null direction $k$. If the null-to-tensor upgrade holds for all local directions and reference states in the scaling regime, this determines a symmetric tensor $T_{ab}$ up to the usual metric term.
-
-The null-surface modular bridge (Route 2) is therefore not currently derived from A1-A4 alone. It is an explicit scaling-limit route whose extra technical premises must be verified in the intended EFT phase.
+**Route 2: Null-surface modular bridge.** Even without assuming a CFT, one can try to reconstruct stress-energy data from modular data on light-ray surfaces. This route is more ambitious: it builds the stress tensor from internal modular structure rather than importing it from an external field theory. The derivation has made progress. It reaches a positive energy generator on null surfaces. But the final steps that promote this to a full local stress tensor still require extra technical assumptions that haven't been derived from the core axioms alone.
 
 ### The Einstein Equation
 
@@ -424,31 +407,26 @@ Here's the distinctive contribution of our framework: Different observers throug
 
 $$G_{ab} + \Lambda g_{ab} = 8\pi G \langle T_{ab} \rangle$$
 
-This should be read as the semiclassical tensor equation obtained from the first-variation relation in the local Lorentzian scaling regime. Patch consistency promotes the rest-frame relation, but the scalar relation itself comes from MaxEnt plus the EFT bridge, not from patch consistency alone, and the null-stress identification should be read as a target regularity property of the intended EFT phase rather than a literal fixed-cutoff theorem.
+This is the semiclassical Einstein equation, obtained by combining the thermodynamic argument with patch consistency in the scaling regime.
 
 ### The Derivation Chain
 
-The derivation chain for the scaling-limit Einstein branch in OPH proceeds as:
+The logic flows like this:
 
-```
-MaxEnt/refinement branch
-    → branch-internal quasi-local propagation and refinement stability
-    → δS_gen = 0 (entanglement equilibrium)
-    → BW_{S^2} on the OPH geometric branch gives K_C = 2π B_C
-    → Conditional null-surface modular bridge through strip additivity, the weak tail generator, and the derived positive null translation
-    → Downstream density-upgrade and null-stress premises identify the scaling-limit stress tensor
-    → δ(G_00 + Λg_00) = 8πG δT_00 in each rest frame
-    → Patch consistency promotes to tensor equation in the scaling regime
-    → G_ab + Λg_ab = 8πG T_ab
-```
+1. MaxEnt selects the equilibrium state among overlap-consistent configurations
+2. Entanglement equilibrium ($\delta S_{\text{gen}} = 0$) gives a thermodynamic relation for each observer's rest frame
+3. Geometric modular flow on the sphere connects modular energy to physical energy
+4. A stress-tensor bridge (via CFT or the null-surface route) identifies the energy content
+5. Each observer gets Einstein's equation in their own rest frame
+6. Patch consistency forces all these rest-frame equations to be compatible, promoting them to the full tensor equation
 
-MaxEnt + Jacobson's thermodynamic insight provide the scalar equation. Our framework provides the *reason* for MaxEnt (it's how nature selects among overlap-consistent states) and uses patch consistency to promote the result to the full tensor equation once the scaling-limit bridge assumptions are in place.
+Our framework provides the *reason* for MaxEnt (it's how nature selects among overlap-consistent states) and uses patch consistency to promote the result to the full tensor equation.
 
 ### Classical Mechanics from Emergent GR
 
 Once the semiclassical Einstein branch is established, classical mechanics follows automatically in the same regime.
 
-**Conservation laws.** The contracted Bianchi identity is geometric: $\nabla^a G_{ab} = 0$. Combined with the Einstein equation in the scaling regime, this implies stress-energy conservation: $\nabla^a T_{ab} = 0$. Energy and momentum are conserved not because we postulate them, but because the geometry demands it.
+**Conservation laws.** The contracted Bianchi identity is geometric: $\nabla^a G_{ab} = 0$. Combined with the Einstein equation in the scaling regime, this implies stress-energy conservation: $\nabla^a T_{ab} = 0$. Energy and momentum are conserved because the geometry demands it.
 
 **Geodesic motion.** For pressureless matter ("dust"), $T^{ab} = \rho u^a u^b$. Conservation gives $\nabla_a(\rho u^a u^b) = 0$. Working this out yields the geodesic equation: $u^a \nabla_a u^b = 0$. Free particles follow the straightest paths through curved spacetime. This is not an additional postulate. It follows from the Einstein equation in the same effective regime.
 
@@ -508,7 +486,7 @@ This is like asking "what happens to temperature below one molecule?" The questi
 
 The "cosmological constant problem" assumes quantum field theory is fundamental. QFT predicts vacuum energy 10^120 times larger than observed. Something must cancel it.
 
-In our model, QFT is not fundamental. It's an effective description that emerges from the screen. The cosmological constant Lambda is fixed by the reference curvature built into the screen structure. The Gibbons-Hawking entropy S = A/(4G) sets the scale.
+In OPH, QFT is not fundamental. It's an effective description that emerges from the screen. The cosmological constant Lambda is fixed by the reference curvature built into the screen structure. The Gibbons-Hawking entropy S = A/(4G) sets the scale.
 
 The "problem" exists only if you compute vacuum energy using QFT and assume that calculation is fundamental. We don't. The screen determines Lambda directly through the entanglement equilibrium condition. QFT vacuum fluctuations are emergent phenomena, not fundamental contributions to the stress tensor.
 
@@ -516,17 +494,17 @@ The observed small value of Lambda isn't a fine-tuning miracle. It's simply what
 
 ### Black Hole Information: Resolved by Construction
 
-In our model, information is always on the screen. That's where the fundamental data lives. The bulk, including black hole interiors, is emergent.
+In OPH, information is always on the screen. That's where the fundamental data lives. The bulk, including black hole interiors, is emergent.
 
 When matter falls into a black hole, its information was always on the horizon screen. It gets scrambled, redistributed across screen degrees of freedom. When the black hole evaporates, the information comes out in the Hawking radiation because it never left the screen.
 
-There's no "information paradox" because the paradox assumes information can be in the bulk independently of the screen. In our model, this assumption is false. The bulk is a compressed description of screen data. Information can't be "lost" in the bulk because the bulk isn't where information fundamentally lives.
+There's no "information paradox" because the paradox assumes information can be in the bulk independently of the screen. In OPH, this assumption is false. The bulk is a compressed description of screen data. Information can't be "lost" in the bulk because the bulk isn't where information fundamentally lives.
 
 The detailed dynamics of how information gets scrambled and unscrambled on the screen is complex. But there's no paradox, no violation of unitarity. The screen evolution is unitary by construction.
 
 ## 15.12 Dark Sector: A Program-Level Modular-Anomaly Branch
 
-This is not a closed theorem on the same footing as Lorentz kinematics or the conditional scaling-limit Einstein derivation. It is a structurally motivated phenomenology branch.
+This section is more speculative than the gravity and Lorentz results above. It's a structurally motivated direction, not a closed derivation.
 
 ### The Problem
 
@@ -553,21 +531,15 @@ The anomaly sector is dark by construction:
 - It doesn't interact with normal matter except through gravity
 - It's collisionless (no self-interaction that would cause clumping)
 
-This gives the anomaly sector the right structural profile for a dark component, but it is not yet a closed dark-matter theorem.
+This gives the anomaly sector the right structural profile for a dark component.
 
 ### The MOND Scale
 
-OPH connects this anomaly to the cosmological constant Λ. The only available large-scale length is the de Sitter radius. From this, the branch singles out:
+The framework connects this anomaly to the cosmological constant. The only available large-scale length is the de Sitter radius, and from this the branch singles out a characteristic acceleration:
 
 $$a_0 = \frac{15}{8\pi^2} c^2 \sqrt{\frac{\Lambda}{3}} \approx 1.0 \times 10^{-10} \text{ m/s}^2$$
 
-This lands near the empirical MOND acceleration scale. That numerical proximity motivates the continuation, but it does not yet derive a galaxy law.
-
-A MOND-like interpolation such as $g \sim \sqrt{a_0 \cdot g_b}$ at low acceleration can be used as a continuation ansatz, where $g_b$ is the Newtonian prediction from baryons. The repo does not currently derive that interpolation from the OPH core.
-
-### What Remains Open
-
-The branch suggests one possible way MOND-like galaxy scaling and a collisionless dark component could coexist, but the detailed galaxy response law, lensing sector, cluster phenomenology, Bullet-Cluster behavior, cosmological abundance, and environment dependence are still open derivation targets. What is currently established is narrower: the anomaly term contributes additional gravitational stress, the de Sitter scale supplies an IR acceleration benchmark, and a dark-sector interpretation remains a future-work continuation rather than a theorem-level result.
+This lands remarkably close to the empirical MOND acceleration scale, the threshold below which galaxy rotation curves deviate from Newtonian predictions. The numerical coincidence is suggestive, but the full galaxy-dynamics story, including rotation curves, lensing, and cluster behavior, remains open work.
 
 ## 15.14 Reverse Engineering Summary
 

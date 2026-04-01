@@ -16,7 +16,7 @@ ORBIT_SCRIPT = ROOT / "particles" / "flavor" / "derive_quark_sigma_ud_orbit.py"
 SELECTOR_SCRIPT = ROOT / "particles" / "flavor" / "derive_quark_relative_sheet_selector.py"
 
 
-def test_empty_orbit_keeps_selector_value_open() -> None:
+def test_reference_singleton_orbit_emits_sigma_ref_when_uniqueness_theorem_closes() -> None:
     with tempfile.TemporaryDirectory(prefix="oph_quark_selector_") as tmpdir:
         tmp = pathlib.Path(tmpdir)
         repair_out = tmp / "repair.json"
@@ -40,8 +40,11 @@ def test_empty_orbit_keeps_selector_value_open() -> None:
             cwd=ROOT,
         )
         payload = json.loads(selector_out.read_text(encoding="utf-8"))
-        assert payload["selection_status"] == "not_emitted_from_current_corpus"
-        assert payload["quark_relative_sheet_selector"]["value"] is None
+        assert payload["selection_status"] == "theorem_grade_value_emitted"
+        assert payload["quark_relative_sheet_selector"]["value"]["sigma_id"] == "sigma_ref"
+        assert payload["quark_relative_sheet_selector"]["value"]["canonical_token"] == "D12::same_label_left::reference_sheet"
+        assert payload["debug_best_candidate"]["sigma_id"] == "sigma_ref"
+        assert payload["debug_best_candidate_promotable"] is False
 
 
 def test_theorem_witness_selects_exactly_one_sigma() -> None:
@@ -145,4 +148,3 @@ def test_debug_ranking_is_never_promoted() -> None:
         payload = json.loads(selector_out.read_text(encoding="utf-8"))
         assert payload["debug_best_candidate_promotable"] is False
         assert payload["quark_relative_sheet_selector"]["value"] is None
-

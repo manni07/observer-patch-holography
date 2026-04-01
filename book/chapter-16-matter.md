@@ -28,7 +28,7 @@ Quantum physics breaks the intuitive picture in three ways:
    created or destroyed. "Particle" is not a permanent object but a
    long-lived excitation of a field.
 
-3. **Energy is not just fuel.** It is a generator of time evolution, and it
+3. **Energy is more than fuel.** It is a generator of time evolution, and it
    is tied to symmetry. In relativity, energy and momentum are components of a
    single object, and mass is energy at rest.
 
@@ -38,17 +38,13 @@ work so well?"
 
 ## 16.3 The First-Principles Reframing: Matter as Stable Patterns
 
-In our model, **matter is a stable pattern in the screen data**.
+In OPH, **matter is a stable pattern in the screen data**.
 
 Think of the screen as a high-resolution, quantum information canvas. Most
 patterns are noisy and ephemeral. Some are stable: they survive overlap
 consistency, persist under modular time, and can be tracked across patches.
 Those stable patterns are what we call **particles**.
-That ontological statement should not be confused with a claim that the full
-quantitative particle zoo is already uniformly theorem-closed in OPH. The
-current public particle-status surface remains tiered across structural,
-calibration, secondary quantitative, continuation, and execution-bound rows
-as summarized in Chapter 14.
+That's the conceptual picture. The detailed particle story is richer: the framework already fixes the gauge structure and several prominent particles, while the more delicate masses are still being filled in.
 
 The key reframing is:
 
@@ -66,14 +62,13 @@ emergent EFT.
 
 In ordinary physics, a particle is defined by symmetry. Wigner showed that
 "particle types" are **irreducible representations of the Poincare group**,
-classified by mass and spin. This is not just a definition; it explains why
+classified by mass and spin. This is more than a definition; it explains why
 particles have sharp mass and spin labels.
 
-In our model, this appears after two steps:
+In OPH, this appears after two steps:
 
-1. **Lorentz kinematics emerges** from geometric modular flow on caps
-   ($BW_{S^2}$), recovered in the technical paper on the OPH geometric branch
-   after the collar Markov/recoverability and MaxEnt refinement setup.
+1. **Lorentz kinematics emerges** from geometric modular flow on the screen
+   (as derived in Chapter 15).
 2. **Localized excitations organize into representations** of this emergent
    symmetry in the EFT regime.
 
@@ -95,9 +90,9 @@ classes, not fundamental objects.
 
 ## 16.5 What Is Energy?
 
-Energy is not just a number. It is the generator of time evolution.
+Energy is more than a number. It is the generator of time evolution.
 
-In our model, time is **modular flow**. The generator of modular flow is
+In OPH, time is **modular flow**. The generator of modular flow is
 the modular Hamiltonian:
 
 $$K = -\log \rho.$$
@@ -122,18 +117,18 @@ Classical motion can be described in two equivalent ways:
 - **Force laws**: $F = ma$.
 - **Variational laws**: trajectories extremize an action.
 
-Both are effective descriptions. In our model, motion is a property of
+Both are effective descriptions. In OPH, motion is a property of
 stable patterns moving under modular flow, observed consistently across
 patches. Forces describe how those patterns interact within the emergent EFT.
 
-The key point is that **locality and consistency constrain motion**. Overlaps
+**Locality and consistency constrain motion.** Overlaps
 force observers to agree on what happened. The Markov structure enforces local
 relations between neighboring regions. These requirements leave very little
 freedom in the form of effective equations of motion.
 
-The target low-energy Lagrangian and its couplings are organized by the EFT
-bridge and the gauge-sector structure derived from MAR (see Chapter 14), but
-full coupling-level recovery remains part of the broader program.
+The broad shape of the low-energy laws is set by the same consistency
+structure that gives us gauge symmetry in Chapter 14. The exact
+coupling-by-coupling story is part of the continuing program.
 
 ## 16.7 Why the Principle of Least Action Appears
 
@@ -158,7 +153,7 @@ Euler-Lagrange equations:
 $$\frac{d}{dt}\left(\frac{\partial L}{\partial \dot q}\right) = \frac{\partial L}{\partial q}.$$
 
 So the "least action" rule is not a separate law. It is the classical limit
-of quantum consistency. In our model, the effective action is part of the EFT
+of quantum consistency. In OPH, the effective action is part of the EFT
 bridge. Once the bridge is in place, least action follows automatically.
 
 Historically it is called "least" action, but what really survives is
@@ -174,7 +169,7 @@ Classical physics is an **emergent approximation** that appears when:
 
 ### Why Decoherence Is Required by Consistency
 
-Decoherence is crucial-but our model shows it's not just a physical process that happens to occur. It's **required by consistency**.
+Decoherence is crucial. In this framework it is **required by consistency**, not treated as a lucky accident.
 
 Here's why. The overlap condition demands that observers agree on shared observables. But quantum mechanics permits states that are superpositions-"both A and B." If macroscopic objects remained in superposition, different observers accessing different environmental fragments would get contradictory information.
 
@@ -216,7 +211,7 @@ into stable patterns, when modular time becomes geometric, and when overlap
 consistency enforces locality. Particles, energy, and motion are the emergent
 vocabulary of that stable regime.
 
-**Why classical physics emerges**: The overlap condition demands that observers agree on shared observables. Decoherence-the rapid entanglement of macroscopic objects with their environments-is not just a physical accident. It's required by consistency. Only pointer states that get redundantly copied into the environment can be consistently shared across patches. Classical facts are quantum states that pass the consistency filter. The deterministic, objective world of everyday experience is the public face of a quantum reality too fragile to be broadly shared.
+**Why classical physics emerges**: The overlap condition demands that observers agree on shared observables. Decoherence, the rapid entanglement of macroscopic objects with their environments, is required by consistency. Only pointer states that get redundantly copied into the environment can be consistently shared across patches. Classical facts are quantum states that pass the consistency filter. The deterministic, objective world of everyday experience is the public face of a quantum reality too fragile to be broadly shared.
 
 We've seen that spacetime, particles, and classical physics all emerge from the screen through consistency requirements. But why these particular laws? Why these constants? Could the universe have been different?
 

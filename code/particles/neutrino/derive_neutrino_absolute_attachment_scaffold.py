@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[2]
 BRIDGE_JSON = ROOT / "particles" / "runs" / "neutrino" / "neutrino_weighted_cycle_absolute_amplitude_bridge.json"
 BRIDGE_CANDIDATE_JSON = ROOT / "particles" / "runs" / "neutrino" / "neutrino_lambda_nu_bridge_candidate.json"
 THEOREM_OBJECT_JSON = ROOT / "particles" / "runs" / "neutrino" / "neutrino_weighted_cycle_theorem_object.json"
+BRIDGE_SCALAR_CORRIDOR_JSON = ROOT / "particles" / "runs" / "neutrino" / "neutrino_attachment_bridge_scalar_corridor.json"
 DEFAULT_OUT = ROOT / "particles" / "runs" / "neutrino" / "neutrino_absolute_attachment_scaffold.json"
 
 
@@ -31,7 +32,12 @@ def _load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def build_artifact(bridge: dict[str, Any], bridge_candidate: dict[str, Any], theorem_object: dict[str, Any]) -> dict[str, Any]:
+def build_artifact(
+    bridge: dict[str, Any],
+    bridge_candidate: dict[str, Any],
+    theorem_object: dict[str, Any],
+    bridge_scalar_corridor: dict[str, Any] | None,
+) -> dict[str, Any]:
     diagnostic = dict(bridge["direct_scale_anchor_attachment_diagnostic"])
     return {
         "artifact": "oph_neutrino_absolute_attachment_scaffold",
@@ -54,6 +60,23 @@ def build_artifact(bridge: dict[str, Any], bridge_candidate: dict[str, Any], the
             "one_additional_positive_bridge_invariant_is_necessary_and_sufficient": True,
             "corrected_bridge_parameterization": bridge_candidate.get("bridge_ansatz"),
             "residual_amplitude_parameterization": bridge_candidate.get("residual_amplitude_parameterization"),
+            "smaller_exact_object_above_emitted_proxy": (
+                None if bridge_scalar_corridor is None else bridge_scalar_corridor.get("exact_reduced_correction_scalar")
+            ),
+            "strongest_compare_only_bridge_scalar_corridor": (
+                None
+                if bridge_scalar_corridor is None
+                else {
+                    "artifact": bridge_scalar_corridor.get("artifact"),
+                    "status": bridge_scalar_corridor.get("status"),
+                    "primary_cross_route_corridor": bridge_scalar_corridor.get("primary_cross_route_corridor"),
+                    "strongest_target_containing_bridge_scalar_corridor": bridge_scalar_corridor.get(
+                        "strongest_target_containing_bridge_scalar_corridor"
+                    ),
+                    "shortlist_route_consensus_window": bridge_scalar_corridor.get("shortlist_route_consensus_window"),
+                    "bridge_correction_candidate_audit": bridge_scalar_corridor.get("bridge_correction_candidate_audit"),
+                }
+            ),
         },
         "extension_contract": {
             "input_objects": [
@@ -85,6 +108,8 @@ def build_artifact(bridge: dict[str, Any], bridge_candidate: dict[str, Any], the
         },
         "notes": [
             "The residual absolute ambiguity above the closed normalizer is exactly the positive rescaling orbit.",
+            "Relative to the best emitted residual-amplitude proxy, the remaining bridge can also be tracked as a near-unity correction scalar C_nu on the live branch.",
+            "Direct C_nu auditing yields a narrower target-containing induced B_nu window than the old direct bridge corridor, but it remains compare-only and cannot be promoted.",
             "The current corpus therefore needs one and only one positive non-homogeneous attachment scalar above the present emitted stack before lambda_nu can be emitted theorem-grade.",
         ],
     }
@@ -95,14 +120,19 @@ def main() -> None:
     parser.add_argument("--bridge", type=Path, default=BRIDGE_JSON)
     parser.add_argument("--bridge-candidate", type=Path, default=BRIDGE_CANDIDATE_JSON)
     parser.add_argument("--theorem-object", type=Path, default=THEOREM_OBJECT_JSON)
+    parser.add_argument("--bridge-scalar-corridor", type=Path, default=BRIDGE_SCALAR_CORRIDOR_JSON)
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
     args = parser.parse_args()
 
     bridge = _load_json(args.bridge)
     bridge_candidate = _load_json(args.bridge_candidate)
     theorem_object = _load_json(args.theorem_object)
+    bridge_scalar_corridor = _load_json(args.bridge_scalar_corridor) if args.bridge_scalar_corridor.exists() else None
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    args.out.write_text(json.dumps(build_artifact(bridge, bridge_candidate, theorem_object), indent=2) + "\n", encoding="utf-8")
+    args.out.write_text(
+        json.dumps(build_artifact(bridge, bridge_candidate, theorem_object, bridge_scalar_corridor), indent=2) + "\n",
+        encoding="utf-8",
+    )
 
 
 if __name__ == "__main__":

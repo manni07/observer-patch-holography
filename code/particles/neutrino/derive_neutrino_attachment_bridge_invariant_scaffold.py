@@ -15,6 +15,7 @@ NORMALIZER = ROOT / "particles" / "runs" / "neutrino" / "same_label_overlap_defe
 BRIDGE_CANDIDATE = ROOT / "particles" / "runs" / "neutrino" / "neutrino_lambda_nu_bridge_candidate.json"
 IRREDUCIBILITY = ROOT / "particles" / "runs" / "neutrino" / "neutrino_attachment_irreducibility_theorem.json"
 DEFECT_WEIGHTED_FAMILY = ROOT / "particles" / "runs" / "neutrino" / "defect_weighted_mu_e_family.json"
+BRIDGE_SCALAR_CORRIDOR = ROOT / "particles" / "runs" / "neutrino" / "neutrino_attachment_bridge_scalar_corridor.json"
 DEFAULT_OUT = ROOT / "particles" / "runs" / "neutrino" / "neutrino_attachment_bridge_invariant_scaffold.json"
 
 
@@ -31,6 +32,7 @@ def build_payload(
     bridge_candidate: dict[str, Any],
     irreducibility: dict[str, Any] | None,
     defect_weighted_family: dict[str, Any],
+    bridge_scalar_corridor: dict[str, Any] | None,
 ) -> dict[str, Any]:
     smaller_gate = bridge_candidate.get("strictly_smaller_missing_clause")
     return {
@@ -88,6 +90,28 @@ def build_payload(
             "raw_edge_score_rule": defect_weighted_family["raw_edge_score_rule"],
             "mu_family_rule": "mu_e = mu_nu * exp(eta_e) / mean_f(exp(eta_f))",
         },
+        "smallest_exact_missing_object": (
+            None if irreducibility is None else irreducibility.get("reduced_remaining_object")
+        ),
+        "smaller_exact_object_above_emitted_proxy": (
+            None
+            if bridge_scalar_corridor is None
+            else bridge_scalar_corridor.get("exact_reduced_correction_scalar")
+        ),
+        "strongest_compare_only_bridge_scalar_corridor": (
+            None
+            if bridge_scalar_corridor is None
+            else {
+                "artifact": bridge_scalar_corridor.get("artifact"),
+                "status": bridge_scalar_corridor.get("status"),
+                "primary_cross_route_corridor": bridge_scalar_corridor.get("primary_cross_route_corridor"),
+                "strongest_target_containing_bridge_scalar_corridor": bridge_scalar_corridor.get(
+                    "strongest_target_containing_bridge_scalar_corridor"
+                ),
+                "shortlist_route_consensus_window": bridge_scalar_corridor.get("shortlist_route_consensus_window"),
+                "bridge_correction_candidate_audit": bridge_scalar_corridor.get("bridge_correction_candidate_audit"),
+            }
+        ),
         "residual_attachment_quotient_theorem": (
             "After fixing the closed weighted-cycle scale-free branch, the closed PMNS observables, "
             "the scale-free masses/splittings, the D10 amplitude anchor m_star, and the closed normalized "
@@ -102,6 +126,10 @@ def build_payload(
             "The current attached stack does not collapse the bridge factor to a qbar-only law; the irreducibility theorem shows one positive bridge invariant remains genuinely external to that attached stack.",
             "The selected-point scalar I_nu^(wc) is diagnostic-only on the present corpus because it is already internal to the emitted stack and therefore cannot be the missing bridge-external scalar.",
             "The best constructive local object beneath the bridge is the defect-weighted same-label edge family, but that object still sits below the irreducible positive bridge scalar B_nu rather than replacing it.",
+            "Factoring through the best emitted residual-amplitude proxy exposes a smaller exact correction scalar C_nu, so the remaining open bridge can also be tracked as a near-unity positive factor above the live proxy.",
+            "Because that proxy is already internal to the current stack, the reduced correction invariant C_nu is now the smallest exact missing object on the lane.",
+            "Direct C_nu auditing now induces a narrower target-containing B_nu window than the old direct bridge corridor, but that sharpening remains compare-only and does not collapse the irreducibility theorem.",
+            "The shortlist-consensus window is narrower than the primary target-containing corridor, but it remains a route-agreement diagnostic and not a theorem-grade emission of B_nu.",
             "The exact remaining scalar is better parameterized as B_nu := lambda_nu * q_mean^p_nu / m_star_eV, equivalently A_nu / m_star_eV.",
         ],
     }
@@ -113,6 +141,7 @@ def main() -> int:
     parser.add_argument("--bridge-candidate", default=str(BRIDGE_CANDIDATE))
     parser.add_argument("--irreducibility", default=str(IRREDUCIBILITY))
     parser.add_argument("--defect-weighted-family", default=str(DEFECT_WEIGHTED_FAMILY))
+    parser.add_argument("--bridge-scalar-corridor", default=str(BRIDGE_SCALAR_CORRIDOR))
     parser.add_argument("--output", default=str(DEFAULT_OUT))
     args = parser.parse_args()
 
@@ -121,6 +150,7 @@ def main() -> int:
         bridge_candidate=_load_json(Path(args.bridge_candidate)),
         irreducibility=_load_json(Path(args.irreducibility)) if Path(args.irreducibility).exists() else None,
         defect_weighted_family=_load_json(Path(args.defect_weighted_family)),
+        bridge_scalar_corridor=_load_json(Path(args.bridge_scalar_corridor)) if Path(args.bridge_scalar_corridor).exists() else None,
     )
     out_path = Path(args.output)
     out_path.parent.mkdir(parents=True, exist_ok=True)

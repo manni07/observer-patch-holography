@@ -24,6 +24,7 @@ FACTORIZATION_SCRIPT = ROOT / "particles" / "calibration" / "derive_d10_ew_w_anc
 MINIMAL_CONDITIONAL_SCRIPT = ROOT / "particles" / "calibration" / "derive_d10_ew_minimal_conditional_promotion.py"
 TARGET_EMITTER_SCRIPT = ROOT / "particles" / "calibration" / "derive_d10_ew_target_emitter_candidate.py"
 TARGET_FREE_REPAIR_SCRIPT = ROOT / "particles" / "calibration" / "derive_d10_ew_target_free_repair_value_law.py"
+FORWARD_TRANSMUTATION_SCRIPT = ROOT / "particles" / "calibration" / "derive_d10_ew_forward_transmutation_certificate.py"
 AUDIT_SCRIPT = ROOT / "particles" / "calibration" / "derive_d10_ew_exactness_audit.py"
 OUTPUT = ROOT / "particles" / "runs" / "calibration" / "d10_ew_exactness_audit.json"
 
@@ -43,6 +44,7 @@ def test_d10_exactness_audit_records_mass_ratio_identity_obstruction() -> None:
     subprocess.run([sys.executable, str(MINIMAL_CONDITIONAL_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(TARGET_EMITTER_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(TARGET_FREE_REPAIR_SCRIPT)], check=True, cwd=ROOT)
+    subprocess.run([sys.executable, str(FORWARD_TRANSMUTATION_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(READOUT_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(AUDIT_SCRIPT)], check=True, cwd=ROOT)
 
@@ -83,3 +85,7 @@ def test_d10_exactness_audit_records_mass_ratio_identity_obstruction() -> None:
     assert payload["target_free_source_only_underdetermination"]["status"] == "superseded_by_target_free_repair_theorem"
     assert payload["target_free_source_only_candidate"]["object_id"] == "EWTargetEmitter_D10"
     assert payload["target_free_source_only_candidate"]["status"] == "promoted"
+    transmutation = payload["forward_transmutation_certificate"]
+    assert transmutation["object_id"] == "EWForwardTransmutationCertificate_D10"
+    assert transmutation["notation_split"]["beta_transmutation_EW"]["value"] == 4
+    assert abs(transmutation["forward_checks"]["pixel_residual"]) < 1.0e-15

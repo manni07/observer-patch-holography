@@ -62,7 +62,7 @@ Now we reverse engineer. Why does nature encode bulk physics on boundaries?
 
 Before the physics, there was a microscope problem.
 
-In 1947, Dennis Gabor was trying to improve electron microscopes. He devised a trick to record the full wave information-not just brightness but also phase.
+In 1947, Dennis Gabor was trying to improve electron microscopes. He devised a trick to record the full wave information, including phase as well as brightness.
 
 Split a light beam into two parts. One beam hits the target and scatters. The other goes straight to the film. When they meet on the film, they interfere, creating patterns of bright and dark fringes. The interference pattern encodes phase.
 
@@ -80,7 +80,7 @@ This maps onto our observer story. Each observer patch contains a partial pictur
 
 Here is the reframing: **Boundaries are consistency ledgers where observers compare notes.**
 
-In our model, reality emerges from the agreement of observer patches. But where do observers compare notes? They need a shared ledger-a common reference where their descriptions must match.
+In OPH, reality emerges from the agreement of observer patches. But where do observers compare notes? They need a shared ledger-a common reference where their descriptions must match.
 
 The boundary serves exactly this role. It's where the bookkeeping lives. Each observer's patch includes a region of the boundary. When patches overlap, the boundary values must agree. The bulk emerges as the most consistent story that fits all the boundary data.
 
@@ -300,15 +300,13 @@ In our model:
 - Patches must be consistent (overlap agreement)
 - Consistency should look like thermodynamic equilibrium
 
-If cap modular flow is geometric (proved in the technical paper on the OPH
-geometric branch after collar Markov/recoverability and the MaxEnt refinement
-analysis) and
-the generalized entropy split from error-correction holds (area operator + bulk
-entropy), then the Jacobson chain applies. Under those conditions Einstein's
+If modular flow on caps is geometric (as shown in later chapters) and
+the entropy splits into an area piece plus a bulk piece (from the error-correction structure),
+then Jacobson's thermodynamic argument applies. Under those conditions, Einstein's
 equations emerge as the unique way for observer horizons to remain
 thermodynamically consistent.
 
-This is why 4D spacetime geometry works so well: it's the thermodynamic equilibrium of horizon entropy. The geometry we observe is the most probable configuration, the one that maximizes entropy subject to matter constraints.
+This is why 4D spacetime geometry works so well: it is the thermodynamic equilibrium of horizon entropy. The geometry we observe is the most probable configuration, the one that maximizes entropy subject to matter constraints.
 
 ## 8.13 What We Borrow from AdS/CFT (and What We Don't)
 
@@ -350,7 +348,7 @@ In de Sitter, each observer has their **own horizon**. Different observers have 
 - **Overlapping horizons**: Nearby observers share most of their horizon; their descriptions must agree on the overlap
 - **No global description needed**: We don't require a global boundary theory-just local patches and consistency conditions
 
-This is why we're **not proposing dS/CFT**. A hypothetical dS/CFT would posit a CFT at future infinity dual to de Sitter bulk physics. We're proposing something weaker but more concrete:
+For that reason, we're **not proposing dS/CFT**. A hypothetical dS/CFT would posit a CFT at future infinity dual to de Sitter bulk physics. We're proposing something weaker and more concrete:
 
 **Observer-patch consistency on cosmological horizons, combined with entanglement equilibrium, yields semiclassical gravity in the bulk.**
 
@@ -368,7 +366,7 @@ The distinction has practical consequences:
 | Cosmological constant | Negative (AdS) | Positive (de Sitter) |
 | What's fundamental | Both bulk and boundary | Only the screen |
 
-Think of AdS/CFT as a **proof of concept**: it shows that boundaries can encode bulks with gravity. We take that lesson and apply it differently-not as a duality, but as emergence from observer consistency.
+Think of AdS/CFT as a **proof of concept**: it shows that boundaries can encode bulks with gravity. We take that lesson and apply it differently, as emergence from observer consistency rather than as a duality.
 
 The finite horizon in de Sitter provides a natural cutoff, a finite Hilbert space (~exp(10^122) dimensions), and observer-dependence built in from the start. These aren't bugs to be fixed-they're features that make the observer-centric approach natural.
 
@@ -393,7 +391,7 @@ This is a fundamental fork in the road:
 
 **The key insight**: de Sitter horizons are not a problem to be solved. They're the feature that makes observer-patch holography natural. Each observer has their own horizon, their own patch of screen, and consistency conditions on the overlaps.
 
-The cosmological constant appears not as something we predict from local physics, but as a **global capacity parameter**-the total number of degrees of freedom on the screen. From the observed Lambda, we infer the screen capacity: about 10^122 bits. This is the "size" of reality, just as the pixel area is its "resolution."
+The cosmological constant appears as a **global capacity parameter**, the total number of degrees of freedom on the screen, rather than as something predicted from local physics. From the observed Lambda, we infer the screen capacity: about 10^122 bits. This is the "size" of reality, just as the pixel area is its "resolution."
 
 This sidesteps the "unsolved problem" entirely. We're not trying to build a global boundary theory at infinity. We're building local patch descriptions that must agree on overlaps. The bulk emerges from that agreement, with Lambda as the one global parameter that all overlapping descriptions share.
 

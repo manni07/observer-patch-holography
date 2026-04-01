@@ -10,11 +10,15 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
+CORRECTION_SCRIPT = ROOT / "particles" / "neutrino" / "derive_neutrino_bridge_correction_candidate_audit.py"
+CORRIDOR_SCRIPT = ROOT / "particles" / "neutrino" / "derive_neutrino_attachment_bridge_scalar_corridor.py"
 SCRIPT = ROOT / "particles" / "neutrino" / "derive_neutrino_attachment_bridge_invariant_scaffold.py"
 OUTPUT = ROOT / "particles" / "runs" / "neutrino" / "neutrino_attachment_bridge_invariant_scaffold.json"
 
 
 def test_neutrino_attachment_bridge_invariant_scaffold() -> None:
+    subprocess.run([sys.executable, str(CORRECTION_SCRIPT)], check=True, capture_output=True, text=True)
+    subprocess.run([sys.executable, str(CORRIDOR_SCRIPT)], check=True, capture_output=True, text=True)
     completed = subprocess.run(
         [sys.executable, str(SCRIPT), "--output", str(OUTPUT)],
         check=True,
@@ -36,4 +40,18 @@ def test_neutrino_attachment_bridge_invariant_scaffold() -> None:
     assert constructive["artifact"] == "oph_defect_weighted_majorana_edge_weight_family"
     assert constructive["status"] == "closed_constructive_subbridge_object"
     assert constructive["raw_edge_score_rule"] == "q_e = sqrt(gap_e * defect_e)"
+    smallest = payload["smallest_exact_missing_object"]
+    assert smallest["symbol"] == "C_nu"
+    assert smallest["status"] == "irreducible_on_current_corpus"
+    reduced = payload["smaller_exact_object_above_emitted_proxy"]
+    assert reduced["symbol"] == "C_nu"
+    assert reduced["compare_only_target"] > 0.99
+    assert reduced["compare_only_target"] < 1.01
+    corridor = payload["strongest_compare_only_bridge_scalar_corridor"]
+    assert corridor["artifact"] == "oph_neutrino_attachment_bridge_scalar_corridor"
+    assert corridor["primary_cross_route_corridor"]["contains_compare_only_target"] is True
+    assert corridor["strongest_target_containing_bridge_scalar_corridor"]["contains_compare_only_target"] is True
+    assert corridor["strongest_target_containing_bridge_scalar_corridor"]["relative_half_width"] < corridor["primary_cross_route_corridor"]["relative_half_width"]
+    assert corridor["bridge_correction_candidate_audit"]["artifact"] == "oph_neutrino_bridge_correction_candidate_audit"
+    assert corridor["shortlist_route_consensus_window"]["narrowing_vs_primary_cross_route_corridor"]["is_narrower"] is True
     assert "B_nu = lambda_nu * q_mean^p_nu / m_star_eV" in payload["residual_attachment_quotient_theorem"]

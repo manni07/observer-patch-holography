@@ -109,7 +109,6 @@ def main() -> int:
             "transport_closure_residual_fro_norm": physical["closure_residual_fro_norm"],
         },
         "honest_remaining_value_laws": [
-            "D12_ud_mass_ray",
             "intrinsic_scale_law_D12",
             "quark_exact_mean_split_value_law_or_carrier_repair",
         ],

@@ -18,6 +18,14 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from sigma_ud_orbit_provider import (
+    build_emitted_reference_sheet_orbit_elements,
+    build_sigma_ud_provider_frontier,
+    load_already_local_diagnostic_orbit,
+    load_sigma_ud_singleton_uniqueness_witness,
+    load_transport_frame_diagnostic_orbit,
+)
+
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_OUT = ROOT / "particles" / "runs" / "flavor" / "quark_sigma_ud_orbit.json"
@@ -99,28 +107,80 @@ def main() -> int:
     parser.add_argument("--output", default=str(DEFAULT_OUT))
     args = parser.parse_args()
 
-    elements = _load_elements(Path(args.elements_json) if args.elements_json else None)
+    elements = (
+        _load_elements(Path(args.elements_json))
+        if args.elements_json
+        else build_emitted_reference_sheet_orbit_elements()
+    )
     debug_ranking = _rank_elements(elements) if elements else []
+    provider_frontier = build_sigma_ud_provider_frontier()
+    already_local_diagnostic_orbit = load_already_local_diagnostic_orbit()
+    diagnostic_transport_frame_orbit = load_transport_frame_diagnostic_orbit()
+    singleton_uniqueness = load_sigma_ud_singleton_uniqueness_witness()
+    default_singleton = bool(provider_frontier.get("emitted_reference_sheet")) and not args.elements_json
+    singleton_closed = bool(singleton_uniqueness.get("theorem_grade_select")) and default_singleton
 
     artifact = {
         "artifact": "oph_quark_sigma_ud_orbit",
         "generated_utc": _timestamp(),
-        "status": "missing_solver_side_orbit" if not elements else "candidate_orbit_elements_supplied",
+        "status": (
+            "missing_solver_side_orbit"
+            if not elements
+            else (
+                "same_label_left_handed_local_orbit_singleton_closed"
+                if singleton_closed
+                else (
+                    "reference_sheet_singleton_emitted_orbit_incomplete"
+                    if default_singleton
+                    else "candidate_orbit_elements_supplied"
+                )
+            )
+        ),
         "public_promotion_allowed": False,
-        "exact_missing_object": "sigma_ud_orbit",
+        "exact_missing_object": (
+            None
+            if singleton_closed
+            else (
+                "first_distinct_same_label_left_handed_relative_sheet_evaluation"
+                if default_singleton
+                else "sigma_ud_orbit"
+            )
+        ),
+        "orbit_completion_target": "sigma_ud_orbit",
         "exact_missing_solver_interface": "sigma_ud_orbit_provider_interface",
         "exact_missing_provider_methods": [
             "enumerate_relative_sheets_d12()",
             "evaluate_relative_sheet(token)",
         ],
         "concrete_provider_scaffold": "code/particles/flavor/sigma_ud_orbit_provider.py",
+        "provider_frontier": provider_frontier,
         "orbit_kind": "finite_relative_sheet_orbit",
         "branch_key": ["D12", "sigma_ud"],
+        "elements_origin": (
+            "reference_sheet_singleton_provider"
+            if default_singleton
+            else ("external_elements_json" if args.elements_json else "no_provider_output")
+        ),
         "selector_status": (
             "quark_relative_sheet_selector_not_emittable_without_orbit"
             if not elements
-            else "selection_rule_still_open_target_free"
+            else (
+                "quark_relative_sheet_selector_closed_to_reference_singleton"
+                if singleton_closed
+                else (
+                    "quark_relative_sheet_selector_not_emittable_without_distinct_relative_sheet"
+                    if default_singleton
+                    else "selection_rule_still_open_target_free"
+                )
+            )
         ),
+        "next_exact_object_after_orbit_closure": (
+            "intrinsic_scale_law_D12" if singleton_closed else None
+        ),
+        "selected_sigma": (
+            singleton_uniqueness.get("selected_sigma") if singleton_closed else None
+        ),
+        "singleton_uniqueness_theorem": singleton_uniqueness,
         "input_contract": {
             "must_use": [
                 "forward_yukawas.json",
@@ -142,26 +202,16 @@ def main() -> int:
             "ckm_invariants",
         ],
         "elements": elements,
-        "diagnostic_transport_frame_orbit": {
-            "status": "compare_only_not_sector_attached",
-            "gauge_invariant_self_overlap_symbol": "F0^dagger F1",
-            "best_self_overlap_ckm_invariants": {
-                "theta_12": 0.05303513965374758,
-                "theta_23": 0.03505328791223491,
-                "theta_13": 0.004481306693226461,
-                "delta_ckm": 5.816877568635481,
-                "jarlskog": -3.735348679914088e-06,
-            },
-            "debug_log_shell_loss": {
-                "current_same_sheet": 44.39864816128614,
-                "best_self_overlap": 2.2111875588521643,
-            },
-            "why_not_promotable": (
-                "The gauge-invariant transport-frame self-overlap improves the compare-only CKM shell loss, but once sector-attached mixed branches are restored the residual objectwise-U(1) orbit moves CKM moduli, so no physical same-label left-handed Sigma_ud element is emitted."
-            ),
-        },
-        "theorem_grade_selection": None,
-        "selection_rule_status": "open_target_free_rule_unemitted",
+        "already_local_diagnostic_orbit": already_local_diagnostic_orbit,
+        "diagnostic_transport_frame_orbit": diagnostic_transport_frame_orbit,
+        "theorem_grade_selection": (
+            singleton_uniqueness.get("selected_sigma") if singleton_closed else None
+        ),
+        "selection_rule_status": (
+            "closed_by_singleton_uniqueness_theorem"
+            if singleton_closed
+            else "open_target_free_rule_unemitted"
+        ),
         "debug_compare_shell_ranking": {
             "promotable": False,
             "kind": "ckm_log_shell_loss",
@@ -178,7 +228,9 @@ def main() -> int:
             "must_not_promote_selector": True,
         },
         "selection_gate": {
-            "quark_relative_sheet_selector": None,
+            "quark_relative_sheet_selector": (
+                singleton_uniqueness.get("selected_sigma") if singleton_closed else None
+            ),
             "may_emit_only_if": [
                 "orbit collapses to one intrinsic canonical token",
                 "or an intrinsic non-target selection theorem is proved",
@@ -188,9 +240,26 @@ def main() -> int:
             "This scaffold exists to make the missing finite solver object explicit.",
             "The current D12 sheet is transport-closed but wrong-branch; same-sheet changes cannot move CKM invariants to the physical shell.",
             "Branch selection is discrete here. A continuous scalar cannot replace orbit exposure.",
-            "A representative-level transport-frame diagnostic orbit can be extracted from the common-refinement line-lift data, and its gauge-invariant self-overlap F0^dagger F1 already gives a much better compare-only CKM shell loss than the current same-sheet branch; but that signal is not sector-attached and its mixed branches remain gauge-dependent under the residual objectwise-U(1) quotient, so it is not an emitted Sigma_ud element.",
-            "On the current live corpus the more immediate implementation gap is the first non-empty provider output itself: no same-label left-handed Sigma_ud enumerator or sigma-to-CKM evaluator is emitted yet.",
-            "The provider interface has been widened to the full left-handed evaluation schema expected by this artifact; what is still missing is a real implementation that can populate those fields from emitted same-label transport data.",
+            "The common-refinement line-lift now feeds a derived transport-frame diagnostic orbit artifact rather than a hardcoded note. Its self-overlap F0^dagger F1 is a real already-local compare-only witness, but it is still not a sector-attached Sigma_ud element.",
+            (
+                "The emitted local same-label left-handed orbit now closes to the singleton sigma_ref because only L/L survives the chirality admissibility check and the published five-anchor standard CKM gauge fixes the remaining diagonal rephasing to the trivial global phase."
+                if singleton_closed
+                else (
+                    "The current live corpus now emits one real same-label left-handed D12 reference-sheet evaluation in the full orbit-element schema."
+                    if default_singleton
+                    else "On the current live corpus the more immediate implementation gap is the first non-empty provider output itself: no same-label left-handed Sigma_ud enumerator or sigma-to-CKM evaluator is emitted yet."
+                )
+            ),
+            (
+                "That closes the solver-side sigma_ud orbit and shifts the exact next object to the selected-branch intrinsic scale law on D12_ud_mass_ray."
+                if singleton_closed
+                else (
+                    "That honest singleton does not close Sigma_ud: the smaller exact blocker is now one additional non-reference same-label left-handed sheet evaluation, or an intrinsic uniqueness theorem proving the singleton is the full orbit."
+                    if default_singleton
+                    else "The provider interface has been widened to the full left-handed evaluation schema expected by this artifact; what is still missing is a real implementation that can populate those fields from emitted same-label transport data."
+                )
+            ),
+            "The already-local chirality-basis orbit is now threaded in explicitly as a diagnostic exclusion surface, so future solver work cannot mistake it for Sigma_ud.",
             "If elements is empty, the artifact records the honest frontier rather than inventing Sigma_ud.",
             "If elements are supplied, the debug ranking remains comparison-only and cannot be promoted.",
         ],

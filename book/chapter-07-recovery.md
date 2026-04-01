@@ -210,7 +210,7 @@ The answer is yes, and Petz constructed the explicit procedure-now called the **
 
 $$R_{B \to BC}(\sigma) = \rho_{BC}^{1/2} (\rho_B^{-1/2} \sigma \rho_B^{-1/2} \otimes I_C) \rho_{BC}^{1/2}$$
 
-Don't worry about the formula's details. The key point is that this is a physical operation-something you could implement with a quantum computer. Given only B's state sigma, the Petz map outputs a state on BC that correctly reproduces all correlations with A.
+Don't worry about the formula's details. This is a physical operation, something you could implement with a quantum computer. Given only B's state sigma, the Petz map outputs a state on BC that correctly reproduces all correlations with A.
 
 Think of it like calibrating a distorted photograph. The original image (BC) got scrambled into a noisy version (B alone). The Petz map knows what the original "should" look like (from the reference state rho_BC) and applies the inverse distortion.
 

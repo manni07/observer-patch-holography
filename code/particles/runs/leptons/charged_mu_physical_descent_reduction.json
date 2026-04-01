@@ -1,0 +1,63 @@
+{
+  "artifact": "oph_charged_mu_physical_descent_reduction",
+  "descent_contract": {
+    "canonical_readout_on_fill": {
+      "affine_anchor": "A_ch(Y_e) = mu_phys(Y_e)",
+      "determinant_line_section": "s_det(Y_e) = 3 * mu_phys(Y_e)",
+      "uncentered_trace_lift": "C_tilde_e(Y_e) = C_hat_e(Y_e) + mu_phys(Y_e) I"
+    },
+    "descended_scalar": "exists unique mu_phys(Y_e) with mu(r) = mu_phys(Y_e) on every refinement representative r",
+    "exact_smaller_missing_object": "charged_physical_affine_scalar_mu",
+    "forced_refinement_identity_mode": "delta(r,r') = 0 for refinement representatives of the same physical Y_e",
+    "precondition": "theorem-grade centered promotion plus refinement stability on theorem-grade physical Y_e"
+  },
+  "do_not_claim_now": [
+    "theorem-grade mu_phys(Y_e) on the live corpus",
+    "theorem-grade determinant-line section on the live corpus",
+    "theorem-grade A_ch on the live corpus"
+  ],
+  "equivalent_presentations_on_fill": {
+    "affine_anchor": {
+      "artifact": "oph_charged_absolute_anchor_section",
+      "artifact_ref": "code/particles/runs/leptons/charged_absolute_anchor_section.json",
+      "formula": "A_ch(Y_e) = mu_phys(Y_e)"
+    },
+    "descended_scalar": "mu_phys(Y_e)",
+    "determinant_line_section": {
+      "artifact": "oph_charged_determinant_line_section_extension",
+      "artifact_ref": "code/particles/runs/leptons/charged_determinant_line_section_extension.json",
+      "formula": "s_det(Y_e) = 3 * mu_phys(Y_e)"
+    },
+    "uncentered_trace_lift": {
+      "artifact": "oph_charged_uncentered_trace_lift_scaffold",
+      "artifact_ref": "code/particles/runs/leptons/charged_uncentered_trace_lift_scaffold.json",
+      "formula": "C_tilde_e(Y_e) = C_hat_e(Y_e) + mu_phys(Y_e) I"
+    }
+  },
+  "exact_smaller_missing_object": "charged_physical_affine_scalar_mu",
+  "exact_smaller_missing_object_kind": "single_affine_scalar_on_theorem_grade_physical_Y_e",
+  "forced_vanishing": {
+    "on_same_physical_Y_e": "delta(r,r') = 0 for refinement representatives of the same physical Y_e",
+    "reason": "refinement stability identifies all refinement representatives of the same physical operator",
+    "refinement_pair_rule_before_descent": "C_tilde_e(r') - C_tilde_e(r) = delta(r,r') I"
+  },
+  "generated_utc": "2026-04-01T00:28:58Z",
+  "input_scalarization_artifact_ref": "code/particles/runs/leptons/charged_uncentered_trace_lift_cocycle_reduction.json",
+  "larger_missing_object": "refinement_stable_uncentered_trace_lift",
+  "larger_missing_object_artifact_ref": "code/particles/runs/leptons/charged_uncentered_trace_lift_scaffold.json",
+  "notes": [
+    "This sharpens the post-promotion frontier only under the same refinement-stability contract already required by the lift scaffold.",
+    "It does not promote current-corpus closure or bypass the upstream C_hat_e promotion theorem."
+  ],
+  "public_promotion_allowed": false,
+  "reduction_theorem": {
+    "id": "charged_refinement_stable_mu_descends_to_physical_scalar",
+    "statement": "Assume theorem-grade C_hat_e is promoted on theorem-grade physical Y_e and that an uncentered lift C_tilde_e = C_hat_e + mu I is refinement-stable on that physical surface. Then the refinement identity-mode cocycle vanishes on every pair of refinement representatives of the same physical Y_e, so mu descends to a unique physical scalar mu_phys(Y_e). Conversely, any such mu_phys defines the uncentered lift, determinant-line section, and affine anchor by C_tilde_e = C_hat_e + mu_phys I, s_det = 3 mu_phys, and A_ch = mu_phys."
+  },
+  "status": "exact_descended_scalar_reduction",
+  "why_this_is_smaller": [
+    "The family-wise scalar primitive mu(r) is only needed before refinement stability is imposed.",
+    "Once the lift is required to live on theorem-grade physical Y_e, the refinement cocycle is forced to vanish.",
+    "The remaining exact burden is therefore one physical affine scalar, not a refinement-family primitive."
+  ]
+}

@@ -22,6 +22,7 @@ FACTORIZATION_SCRIPT = ROOT / "particles" / "calibration" / "derive_d10_ew_w_anc
 MINIMAL_CONDITIONAL_SCRIPT = ROOT / "particles" / "calibration" / "derive_d10_ew_minimal_conditional_promotion.py"
 TARGET_EMITTER_SCRIPT = ROOT / "particles" / "calibration" / "derive_d10_ew_target_emitter_candidate.py"
 TARGET_FREE_REPAIR_SCRIPT = ROOT / "particles" / "calibration" / "derive_d10_ew_target_free_repair_value_law.py"
+FORWARD_TRANSMUTATION_SCRIPT = ROOT / "particles" / "calibration" / "derive_d10_ew_forward_transmutation_certificate.py"
 READOUT_SCRIPT = ROOT / "particles" / "calibration" / "derive_d10_ew_source_transport_readout.py"
 OUTPUT = ROOT / "particles" / "runs" / "calibration" / "d10_ew_source_transport_readout.json"
 
@@ -40,6 +41,7 @@ def test_d10_source_transport_readout_uses_predictive_seed_trial() -> None:
     subprocess.run([sys.executable, str(MINIMAL_CONDITIONAL_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(TARGET_EMITTER_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(TARGET_FREE_REPAIR_SCRIPT)], check=True, cwd=ROOT)
+    subprocess.run([sys.executable, str(FORWARD_TRANSMUTATION_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(READOUT_SCRIPT)], check=True, cwd=ROOT)
 
     payload = json.loads(OUTPUT.read_text(encoding="utf-8"))
@@ -64,6 +66,8 @@ def test_d10_source_transport_readout_uses_predictive_seed_trial() -> None:
     assert payload["broader_honest_repair_frontier"] is None
     assert payload["exact_pdg_wz_frontier"] == "EWTargetFreeRepairValueLaw_D10"
     assert payload["target_free_repair_value_law_status"] == "closed"
+    assert payload["forward_transmutation_certificate_status"] == "closed_forward_p_to_t_map"
+    assert payload["forward_transmutation_certificate_object_id"] == "EWForwardTransmutationCertificate_D10"
     assert payload["exact_closure_emitted_quintet"]["alpha_em_eff_inv"] > 0.0
     assert payload["selected_population_point"]["tau_2"] == 0.0
     assert payload["quartet_atomicity"]["all_four_readouts_share_one_population_point"] is True
@@ -88,3 +92,7 @@ def test_d10_source_transport_readout_uses_predictive_seed_trial() -> None:
     assert target_free_split["strongest_source_only_candidate"] == "EWTargetEmitter_D10"
     assert payload["minimal_conditional_promotion_status"] == "historical_split_superseded_by_target_free_repair_theorem"
     assert payload["target_emitter_candidate_status"] == "historical_candidate_promoted_to_theorem"
+    transmutation = payload["forward_transmutation_certificate"]
+    assert transmutation["notation_split"]["beta_ratio_EW"]["value"] == 0.5385291530498766
+    assert transmutation["notation_split"]["beta_transmutation_EW"]["value"] == 4
+    assert abs(transmutation["forward_checks"]["pixel_residual"]) < 1.0e-15

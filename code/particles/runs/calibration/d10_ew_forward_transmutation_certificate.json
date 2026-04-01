@@ -1,0 +1,74 @@
+{
+  "artifact": "oph_d10_ew_forward_transmutation_certificate",
+  "family_source_id": "d10_running_tree",
+  "forward_checks": {
+    "alpha1_fixed_point_residual": 0.0,
+    "alpha2_fixed_point_residual": 0.0,
+    "alpha3_fixed_point_residual": 0.0,
+    "alpha_u_source_vs_core_residual": 0.0,
+    "mz_fixed_point_residual_gev": 0.0,
+    "pixel_residual": -5.551115123125783e-17,
+    "t_transmutation_source_vs_core_residual": 0.0,
+    "t_unified_source_vs_core_residual": 0.0,
+    "v_fixed_point_residual_gev": 0.0,
+    "v_source_vs_core_residual_gev": 0.0
+  },
+  "forward_core_solution": {
+    "alpha_u": 0.04112498041477454,
+    "mz_run_gev": 91.65246028560671,
+    "t1_mz_run": 0.6666326298888638,
+    "t2_mz_run": 1.3335192143600498,
+    "t3_mz_run": 4.67176653937017,
+    "t_transmutation": 38.195673552967165,
+    "t_unified": 1.6235491507854898,
+    "v_report_gev": 246.76711732749683
+  },
+  "generated_utc": "2026-04-01T00:23:58Z",
+  "notation_split": {
+    "beta_ratio_EW": {
+      "formula": "(alpha2_mz - alphaY_mz) / (alpha2_mz + alphaY_mz)",
+      "role": "existing_calibration_source_ratio",
+      "value": 0.5385291530498766
+    },
+    "beta_transmutation_EW": {
+      "formula": "N_c + 1",
+      "role": "paper_e25_transmutation_counting_factor",
+      "value": 4
+    }
+  },
+  "notes": [
+    "The calibration lane previously exposed alpha_U numerically but not the transmutation parameters t_U and t_tr as first-class artifacts.",
+    "This certificate separates the source-ratio beta_ratio_EW from the paper's transmutation counting factor beta_transmutation_EW = N_c + 1 so the two roles are not conflated.",
+    "Low-energy gauge observables remain compare-only outputs of the forward D10 branch, not inputs that fix alpha_U, t_U, or t_tr."
+  ],
+  "object_id": "EWForwardTransmutationCertificate_D10",
+  "oph_inputs": {
+    "e_cell_gev": 9.559992342952581e+18,
+    "mu_u_gev": 2.4736039148648396e+16,
+    "p": 1.63094,
+    "realized_color_count": 3
+  },
+  "proof_gate": "P_to_alphaU_to_t_without_low_energy_readback",
+  "source_only_reconstruction": {
+    "alpha2_mz": 0.03377843630219015,
+    "alphaY_mz": 0.010131601067241624,
+    "alpha_u_from_source": 0.04112498041477454,
+    "eta_source": 0.022147000871961295,
+    "t_transmutation_from_source": 38.195673552967165,
+    "t_unified_from_source": 1.6235491507854898,
+    "v_from_source_transmutation_gev": 246.76711732749683
+  },
+  "source_pair_artifact": "oph_d10_ew_source_transport_pair",
+  "status": "closed_forward_p_to_t_map",
+  "theorem": {
+    "formulas": {
+      "alpha_u_from_source": "eta_source / beta_ratio_EW",
+      "pixel_constraint": "ellbar_SU2(t2_mz_run) + ellbar_SU3(t3_mz_run) = P / 4",
+      "t_transmutation": "2 * pi / (beta_transmutation_EW * alpha_U)",
+      "t_unified": "4 * pi^2 * alpha_U",
+      "v_from_transmutation": "E_cell(P) * exp(-t_transmutation)"
+    },
+    "name": "EWForwardTransmutationCertificate_D10",
+    "statement": "On the realized D10 branch, the OPH input P fixes alpha_U through the pixel-closure equation, which then fixes both the unified diffusion time t_U = 4*pi^2*alpha_U and the dimensional-transmutation exponent t_tr = 2*pi / ((N_c + 1) * alpha_U). Once the source-only basis (alpha2_mz, alphaY_mz, eta_source, v_report) has been emitted on that same branch, it reconstructs the same alpha_U through alpha_U = eta_source / beta_ratio_EW. No measured low-energy coupling or frozen W/Z target is used to determine the internal transmutation parameters."
+  }
+}

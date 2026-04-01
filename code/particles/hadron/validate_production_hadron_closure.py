@@ -43,17 +43,12 @@ def _channel_summary(channel: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description="Validate current-boundary OPH hadron closure status.")
-    parser.add_argument("--receipt", required=True)
-    parser.add_argument("--dump", required=False)
-    parser.add_argument("--evaluation", required=True)
-    parser.add_argument("--output", required=True)
-    args = parser.parse_args()
-
-    receipt = _load_json(args.receipt)
-    dump = _load_json(args.dump) if args.dump else None
-    evaluation = _load_json(args.evaluation)
+def build_closure_report(
+    receipt: dict[str, Any],
+    evaluation: dict[str, Any],
+    *,
+    dump: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     n_therm, n_sep = _get_schedule_scalars(receipt)
     receipt_filled = _is_finite_number(n_therm) and _is_finite_number(n_sep)
 
@@ -91,7 +86,7 @@ def main() -> None:
             "stable_channel_sequence_evaluation with populated forward-window and published statistical/systematic fields "
             "for pi_iso and N_iso"
         )
-    report = {
+    return {
         "artifact": "oph_hadron_closure_validation_report",
         "required_schedule_scalars": {"N_therm": n_therm, "N_sep": n_sep},
         "production_dump_present": production_dump_present,
@@ -102,6 +97,20 @@ def main() -> None:
         "smallest_live_residual_object": residual,
         "ensembles": ensembles,
     }
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Validate current-boundary OPH hadron closure status.")
+    parser.add_argument("--receipt", required=True)
+    parser.add_argument("--dump", required=False)
+    parser.add_argument("--evaluation", required=True)
+    parser.add_argument("--output", required=True)
+    args = parser.parse_args()
+
+    receipt = _load_json(args.receipt)
+    dump = _load_json(args.dump) if args.dump else None
+    evaluation = _load_json(args.evaluation)
+    report = build_closure_report(receipt, evaluation, dump=dump)
     Path(args.output).write_text(json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 

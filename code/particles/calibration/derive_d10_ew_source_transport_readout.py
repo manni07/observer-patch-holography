@@ -36,6 +36,7 @@ DEFAULT_W_ANCHOR_FACTORIZATION = ROOT / "particles" / "runs" / "calibration" / "
 DEFAULT_MINIMAL_CONDITIONAL = ROOT / "particles" / "runs" / "calibration" / "d10_ew_minimal_conditional_theorem.json"
 DEFAULT_TARGET_EMITTER = ROOT / "particles" / "runs" / "calibration" / "d10_ew_target_emitter_candidate.json"
 DEFAULT_TARGET_FREE_REPAIR = ROOT / "particles" / "runs" / "calibration" / "d10_ew_target_free_repair_value_law.json"
+DEFAULT_FORWARD_TRANSMUTATION = ROOT / "particles" / "runs" / "calibration" / "d10_ew_forward_transmutation_certificate.json"
 DEFAULT_OUT = ROOT / "particles" / "runs" / "calibration" / "d10_ew_source_transport_readout.json"
 
 
@@ -59,6 +60,7 @@ def build_artifact(
     minimal_conditional: dict | None = None,
     target_emitter: dict | None = None,
     target_free_repair: dict | None = None,
+    forward_transmutation: dict | None = None,
 ) -> dict:
     reported = dict(family["reported_outputs"])
     source_slots = dict(source_pair["source_pair"])
@@ -125,6 +127,7 @@ def build_artifact(
     minimal_conditional = minimal_conditional or {}
     target_emitter = target_emitter or {}
     target_free_repair = target_free_repair or {}
+    forward_transmutation = forward_transmutation or {}
     freeze_once_repair_closed = (
         w_anchor_factorization.get("status") == "closed_freeze_once_coherent_repair_law"
     )
@@ -251,6 +254,19 @@ def build_artifact(
         "target_free_repair_chart": target_free_chart or None,
         "target_free_repaired_couplings": target_free_couplings or None,
         "target_free_coherent_emitted_quintet": target_free_quintet or None,
+        "forward_transmutation_certificate_artifact": forward_transmutation.get("artifact"),
+        "forward_transmutation_certificate_status": forward_transmutation.get("status"),
+        "forward_transmutation_certificate_object_id": forward_transmutation.get("object_id"),
+        "forward_transmutation_certificate": (
+            {
+                "notation_split": forward_transmutation.get("notation_split"),
+                "forward_core_solution": forward_transmutation.get("forward_core_solution"),
+                "source_only_reconstruction": forward_transmutation.get("source_only_reconstruction"),
+                "forward_checks": forward_transmutation.get("forward_checks"),
+            }
+            if forward_transmutation
+            else None
+        ),
         "target_free_repair_status_split": {
             "status": "closed" if target_free_repair_closed else "open",
             "theorem": target_free_repair.get("object_id") if target_free_repair_closed else None,
@@ -559,6 +575,11 @@ def build_artifact(
                 if minimal_conditional or target_emitter
                 else "No sharper source-only target-free D10 split is attached to this readout."
             ),
+            (
+                "The forward transmutation certificate `EWForwardTransmutationCertificate_D10` records the non-circular P -> alpha_U -> t map explicitly and keeps the source-ratio beta_ratio_EW separate from the transmutation counting factor beta_transmutation_EW = N_c + 1."
+                if forward_transmutation
+                else "No explicit forward transmutation certificate is attached to this readout."
+            ),
         ],
     }
 
@@ -575,6 +596,7 @@ def main() -> int:
     parser.add_argument("--minimal-conditional-promotion", default=str(DEFAULT_MINIMAL_CONDITIONAL))
     parser.add_argument("--target-emitter", default=str(DEFAULT_TARGET_EMITTER))
     parser.add_argument("--target-free-repair", default=str(DEFAULT_TARGET_FREE_REPAIR))
+    parser.add_argument("--forward-transmutation", default=str(DEFAULT_FORWARD_TRANSMUTATION))
     parser.add_argument("--output", default=str(DEFAULT_OUT))
     args = parser.parse_args()
 
@@ -624,6 +646,12 @@ def main() -> int:
         if target_free_repair_path.exists()
         else None
     )
+    forward_transmutation_path = Path(args.forward_transmutation)
+    forward_transmutation = (
+        json.loads(forward_transmutation_path.read_text(encoding="utf-8"))
+        if forward_transmutation_path.exists()
+        else None
+    )
     artifact = build_artifact(
         family,
         source_pair,
@@ -635,6 +663,7 @@ def main() -> int:
         minimal_conditional,
         target_emitter,
         target_free_repair,
+        forward_transmutation,
     )
 
     out_path = Path(args.output)
