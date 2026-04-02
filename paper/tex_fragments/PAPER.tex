@@ -879,51 +879,45 @@ with \(r_{\mathrm{FR}}(\varepsilon_\delta)\) and \(\eta_\delta^{\mathrm M}\) car
 
 For each cap \(C\), let \(\lambda_C(s)\subset \mathrm{Conf}^+(S^2)\) denote the standard cap-preserving conformal one-parameter subgroup, normalized so that the null blow-up near a smooth cut acts by \(v\mapsto e^{-s}v\), and let \(\alpha_{\lambda_C(s)}\) denote the induced automorphism of the scaling-limit cap net.
 
-\textbf{Theorem 4.2 (\(\mathrm{BW}_{S^2}\) on the OPH Bisognano--Wichmann branch).} Let \(C\subset S^2\) be a round cap. Assume the OPH axioms, the derived fixed-cutoff regulator/collar package established earlier, the controlled scaling-limit scope clause \textbf{T3}, and the branch condition \textbf{T1} that the realized refinement-stable scaling branch for caps and their conformal images lies in the Bisognano--Wichmann geometric modular class. Then:
-\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2em]
-\item at each finite regulator stage, the cap algebra is type I, the reduced cap state has a density matrix \(\rho_C^{(\delta)}\), and its modular Hamiltonian
-\[
-K_C^{(\delta)}:=-\log \rho_C^{(\delta)}
-\]
-has nonadditive part confined to the shrinking collar up to the carried errors \(r_{\mathrm{FR}}(\varepsilon_\delta)\) and \(\eta_\delta^{\mathrm M}\);
-
-\item for every realized scaling-limit cap pair \((\mathcal A_\infty(C),\omega_\infty^C)\) on that branch, the modular automorphism group is geometric:
+\textbf{Theorem 4.2 (\(\mathrm{BW}_{S^2}\) on the OPH Bisognano--Wichmann branch).} Let \(C\subset S^2\) be a round cap. Assume the OPH axioms, the derived fixed-cutoff regulator/collar package established earlier, the controlled scaling-limit scope clause \textbf{T3}, and the branch condition \textbf{T1} that the realized refinement-stable scaling branch for caps and their conformal images lies in the Bisognano--Wichmann geometric modular class. Let \(\lambda_C(s)\) denote the standard cap-preserving conformal one-parameter subgroup, normalized so that the null blow-up near a smooth cut acts by \(v\mapsto e^{-s}v\). Then the scaling-limit modular automorphism group is
 \[
 \sigma_t^{\omega_\infty^C}
 =
-\alpha_{\lambda_C(2\pi t)};
+\alpha_{\lambda_C(2\pi t)}.
 \]
-
-\item no separate cap-isotropy/\(\mathrm{SO}(2)\)-equivariance selector or Euclidean-regularity premise is used here: once \textbf{T1} has fixed the geometric branch and \(\lambda_C(s)\) is normalized by the null blow-up \(v\mapsto e^{-s}v\), the modular KMS normalization fixes the coefficient \(2\pi\). No claim is made that \(\mathcal A_\infty(C)\) remains type I. If the scaling-limit cap algebra remains type I, one may write
+At finite regulator stage the nonadditive part of
 \[
-K_C=2\pi B_C.
+K_C^{(\delta)}:=-\log \rho_C^{(\delta)}
 \]
-In the generic continuum case, the automorphism identity in item \textup{(ii)} is the correct theorem statement and the geometric modular action is generally outer rather than inner.
-\end{enumerate}
-
-Consequently, for every controlled collar family with
+is confined to the shrinking collar up to the carried errors \(r_{\mathrm{FR}}(\varepsilon_\delta)\) and \(\eta_\delta^{\mathrm M}\). No separate cap-isotropy/\(\mathrm{SO}(2)\)-equivariance selector or Euclidean-regularity premise is used. If the scaling-limit cap algebra remains type I, the same automorphism identity may be represented by
 \[
-\delta^{\mathrm M}_{A_\delta:B_\delta:D_\delta}(\varepsilon_\delta)\to 0
+K_C=2\pi B_C;
 \]
-and surviving faithfulness bound, replacing the finite-stage modular action by the geometric cap-dilation action incurs only the carried errors \(r_{\mathrm{FR}}(\varepsilon_\delta)\) and \(\eta_\delta^{\mathrm M}\), and these vanish in the refinement limit.
+otherwise the automorphism identity is the full statement and the action is outer. Consequently, for every controlled collar family with \(\delta^{\mathrm M}_{A_\delta:B_\delta:D_\delta}(\varepsilon_\delta)\to0\) and surviving faithfulness bound, replacing the finite-stage modular action by the geometric cap-dilation action incurs only the carried errors \(r_{\mathrm{FR}}(\varepsilon_\delta)\) and \(\eta_\delta^{\mathrm M}\), and these vanish in the refinement limit.
 
-\textbf{Proof.} The fixed-cutoff collar theorems localize the modular defect to the shrinking collar and control the replacement of the physical collar state by an exact-Markov reference with the carried errors \(r_{\mathrm{FR}}(\varepsilon_\delta)\) and \(\eta_\delta^{\mathrm M}\). By \textbf{T3} the theorem is about the scaling-limit cap pair rather than the finite regulator matrices. By \textbf{T1}, on the selected branch the scaling-limit modular automorphism group is the standard cap-preserving conformal flow \(\alpha_{\lambda_C(s)}\) up to normalization:
+\textbf{Proof.} Markov locality localizes the modular defect to the shrinking collar, with carried finite-stage errors \(r_{\mathrm{FR}}(\varepsilon_\delta)\) and \(\eta_\delta^{\mathrm M}\). By \textbf{T3}, the theorem concerns only scaling-limit cap pairs. By \textbf{T1}, on the selected branch the scaling-limit modular automorphism group is the standard cap-preserving conformal flow up to normalization:
 \[
-\sigma_t^{\omega_\infty^C}=\alpha_{\lambda_C(\kappa_C t)}.
+\sigma_t^{\omega_\infty^C}
+=
+\alpha_{\lambda_C(\kappa_C t)}
 \]
-Because \textbf{T1} identifies the standard cap-preserving subgroup, no separate cap-isotropy or Euclidean-regularity selector enters. The modular group is KMS at inverse temperature \(1\) by definition. The modular KMS condition together with the null-blow-up normalization \(v\mapsto e^{-s}v\) fixes \(\kappa_C=2\pi\). If the limit algebra remains type I, one may represent the automorphism by a modular Hamiltonian and write \(K_C=2\pi B_C\); otherwise the automorphism identity is the full statement. QED.
+for some \(\kappa_C>0\). Because \(s\) is normalized by the null blow-up \(v\mapsto e^{-s}v\), the modular KMS condition fixes \(\kappa_C=2\pi\). Thus
+\[
+\sigma_t^{\omega_\infty^C}
+=
+\alpha_{\lambda_C(2\pi t)}.
+\]
+If the limit algebra remains type I, this automorphism identity is represented by \(K_C=2\pi B_C\); otherwise the automorphism identity is the full statement and the action is outer. QED.
 
-\textbf{BW boundary.} The theorem proves geometric modular flow only on the \textbf{T1}-selected scaling branch. It does \emph{not} prove that MaxEnt alone selects that branch, nor that the continuum state is a vacuum or canonical cap state. When the manuscript informally uses the phrase ``BW/canonical cap phase,'' it means only this selected scaling-limit branch, and in the generic non-type-I case its geometric modular action is outer.
-
-The internal extension route is a two-object scaffold. First, one needs a realized scaling-limit cap-pair extraction from transported marginals. The theorem contract visible in the manuscript is that the realized transported cap-local system packages the cap-local test family, the projectively compatible transported marginal family, and the asymptotic transport-equivalence certificate. The remaining emitted witness is a derived vanishing carried-collar schedule on fixed local collars, explicitly decomposed into the constructive-recovery remainder and the faithful modular-defect term, namely the convergence to zero of
+\textbf{Scope note.} The theorem fixes the \(2\pi\) normalization and the carried refinement limit on the BW branch. It does \emph{not} prove that MaxEnt alone selects that branch. The remaining UV-side scaffold is exactly a realized transported cap-local system whose carried-collar schedule
 \[
 r_{\mathrm{FR}}(\varepsilon_{n,m,\delta})
 +
-4\lambda_\ast^{-1}\,
-\delta^{\mathrm M}_{A_{n,m,\delta}:B_{n,m,\delta}:D_{n,m,\delta}}
+4\bar\lambda_{m,\delta}^{-1}
+\delta^{\mathrm{M}}_{A_{n,m,\delta}:B_{n,m,\delta}:D_{n,m,\delta}}
 \bigl(\varepsilon_{n,m,\delta}\bigr)
 \]
-after transport to each fixed local collar model; only then can local weak-\(*\) extraction and GNS gluing emit the realized scaling-limit cap pair. Beneath that derived schedule, the sharper raw datum is the transported fixed-local-collar Markov/faithfulness package, and the single missing clause inside that lower datum is the eventual common floor on the finite modular-transport family feeding the faithful modular-defect term. No separate exact-Markov-reference faithfulness input is missing there: on one fixed collar model, the exact-Markov comparison marginals inherit the same eventual floor once the exact-Markov modulus tends to zero. The manuscript does not derive a refinement-uniform common floor on the finite modular-transport marginals; this single clause remains external to the emitted theorem chain. Second, one needs ordered cut-pair rigidity on that realized limit. That rigidity step remains symbolic until the realized scaling-limit cap pair exists.
+is derived from transported CMI together with an eventual fixed-local-collar modular-transport common floor, followed by ordered cut-pair rigidity on the emitted scaling-limit cap pair. No separate cap-isotropy or Euclidean-regularity premise is used, and no second comparison-state faithfulness clause is missing.
 \subsubsection{\texorpdfstring{Theorem: \(\mathrm{BW}_{S^2}\) implies Lorentz kinematics}{4.3 Theorem: \textbackslash mathrm\{BW\}\_\{S\^{}2\} implies Lorentz kinematics}}\label{43-theorem-mathrmbw_s2-implies-lorentz-kinematics}
 
 \textbf{Theorem 4.3 (Lorentz kinematics on the screen).} Under the hypotheses of Theorem~\ref{42-theorem-mathrmbw_s2-from-markov-locality-symmetry-regularity},

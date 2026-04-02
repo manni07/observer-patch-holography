@@ -1137,11 +1137,11 @@ Proposition~\ref{prop:splice} is the algebraic version of interior invariance un
 
 \subsection{Geometric modular flow}
 
-The collar analysis proves a fixed-cutoff statement on the finite type-I regulator net: the reduced cap state has a literal density matrix, its modular Hamiltonian exists, and its nonadditive part is confined to a shrinking collar up to carried errors. The Lorentz claim is \emph{not} that these finite matrix algebras are the continuum observer algebras. The finite type-I regulator class is not refinement-closed. The target is the refinement-limit cap pair. Under the controlled scaling clause \textbf{T3}, write
+The collar analysis proves a fixed-cutoff statement on the finite type-I regulator net: the reduced cap state has a literal density matrix, its modular Hamiltonian exists, and its nonadditive part is confined to a shrinking collar up to carried errors. The Lorentz claim is therefore not a literal statement about the finite regulator matrices. Under the controlled scaling clause \textbf{T3}, the target object is a realized scaling-limit cap pair
 \[
 (\mathcal A_\infty(C),\omega_\infty^C)
 \]
-for any realized scaling-limit cap algebra/state pair that the realized refinement-stable branch emits for a round cap \(C\subset S^2\). Axiom~\ref{ax:maxent} controls branch persistence inside one common finite-dimensional MaxEnt family; it does \emph{not} by itself force \(\mathcal A_\infty(C)\) to remain type I or prove that the emitted scaling-limit pair lands in the Bisognano--Wichmann geometric phase. The role of \textbf{T1} is exactly to identify the branch on which the scaling-limit modular action is geometric. On such a branch the limit local algebra may leave the regulator class, and the modular action is then generally outer rather than inner.
+for each round cap \(C\subset S^2\). Axiom~\ref{ax:maxent} controls the state-side realized branch across refinement through one common finite-dimensional MaxEnt family; it does \emph{not} by itself prove that the scaling-limit cap algebra remains type I, that a canonical scaling-limit cap pair has been extracted, or that the realized branch lands in the Bisognano--Wichmann geometric modular class. The theorem below therefore does the precise job available on the present theorem surface: it proves the cap-modular statement on the \textbf{T1}-selected branch, makes the \(2\pi\) normalization and carried refinement limit explicit, and leaves the remaining UV burden exposed rather than hidden.
 
 Fix a cap \(C\subset S^2\) and a shrinking collar family \((A_\delta,B_\delta,D_\delta)\) around \(\partial C\), with \(\delta\downarrow 0\) and \(A_\delta\cup B_\delta\cup D_\delta\) covering a neighborhood of the cut. Write
 \[
@@ -1158,7 +1158,7 @@ and, on each fixed faithful collar model,
 4\lambda_\ast^{-1}\,
 \delta^{\mathrm M}_{A_\delta:B_\delta:D_\delta}(\varepsilon_\delta),
 \]
-where \(\lambda_\ast>0\) is the lower spectral bound used to compare modular Hamiltonians. As in the collar section, every later ``exact'' collar formula is to be read in one of two ways:
+where \(\lambda_\ast>0\) is the lower spectral bound used to compare modular Hamiltonians. Every exact collar identity below is therefore to be read in one of two ways:
 \begin{enumerate}[leftmargin=2em]
 \item literal exactness when the reference collar state is exact Markov; or
 \item a controlled collar family for which
@@ -1171,14 +1171,14 @@ with the finite-stage errors \(r_{\mathrm{FR}}(\varepsilon_\delta)\) and \(\eta_
 
 For each cap \(C\), let \(\lambda_C(s)\subset \Conf^+(S^2)\) denote the standard cap-preserving conformal one-parameter subgroup, normalized so that the null blow-up near a smooth cut acts by \(v\mapsto e^{-s}v\), and let \(\alpha_{\lambda_C(s)}\) denote the induced automorphism of the scaling-limit cap net.
 
-\begin{theorem}[Geometric modular flow on caps in the OPH Bisognano--Wichmann branch]\label{thm:bw}
-Assume Axioms~\ref{ax:screen}--\ref{ax:entropy}, the derived fixed-cutoff regulator/collar package established above, and the controlled scaling-limit scope clause \textbf{T3} of Assumption~\ref{ass:technical}. Assume in addition the \textbf{T1} branch condition that the realized refinement-stable scaling branch for caps and their conformal images lies in the Bisognano--Wichmann geometric modular class. Then the following hold.
+\begin{theorem}[Geometric modular flow on caps on the OPH Bisognano--Wichmann branch]\label{thm:bw}
+Assume Axioms~\ref{ax:screen}--\ref{ax:entropy}, the derived fixed-cutoff regulator/collar package established above, and the controlled scaling-limit scope clause \textbf{T3} of Assumption~\ref{ass:technical}. Assume in addition the \textbf{T1} branch condition that the realized refinement-stable scaling branch for caps and their conformal images lies in the Bisognano--Wichmann geometric modular class. Then:
 \begin{enumerate}[label=\textup{(\roman*)},leftmargin=2em]
 \item At each finite regulator stage, the cap algebra is type I, the reduced cap state has a density matrix \(\rho_C^{(\delta)}\), and its modular Hamiltonian
 \[
 K_C^{(\delta)}:=-\log \rho_C^{(\delta)}
 \]
-has nonadditive part confined to the shrinking collar up to the carried errors measured by \(r_{\mathrm{FR}}(\varepsilon_\delta)\) and \(\eta_\delta^{\mathrm M}\).
+has nonadditive part confined to the shrinking collar up to the carried errors measured by \(r_{\mathrm{FR}}(\varepsilon_\delta)\) and \(\eta_\delta^{\mathrm M}\). In particular, on each fixed collar model the physical collar state differs from its constructive recovered comparison state by \(r_{\mathrm{FR}}(\varepsilon_\delta)\) in trace norm, and its modular defect differs from the exact-Markov reference defect by at most \(\eta_\delta^{\mathrm M}\).
 
 \item For every realized scaling-limit cap pair \((\mathcal A_\infty(C),\omega_\infty^C)\) on that branch, the modular automorphism group is geometric:
 \[
@@ -1191,7 +1191,9 @@ Equivalently, the modular parameter \(t\) and the geometric cap-dilation paramet
 s=2\pi t.
 \]
 
-\item No separate cap-isotropy/\(\mathrm{SO}(2)\)-equivariance selector or Euclidean-regularity premise is used in this theorem. Once \textbf{T1} has fixed the geometric branch and \(\lambda_C(s)\) is normalized by the null blow-up \(v\mapsto e^{-s}v\), the modular KMS normalization fixes the coefficient \(2\pi\). No claim is made that \(\mathcal A_\infty(C)\) remains type I. If the scaling-limit cap algebra happens to remain type I, item \textup{(ii)} may be written as the operator identity
+\item No separate cap-isotropy/\(\mathrm{SO}(2)\)-equivariance selector or Euclidean-regularity premise is used in this theorem. Once \textbf{T1} has fixed the geometric branch and \(\lambda_C(s)\) is normalized by the null blow-up \(v\mapsto e^{-s}v\), the modular KMS normalization fixes the coefficient \(2\pi\).
+
+\item If the scaling-limit cap algebra happens to remain type I, item \textup{(ii)} may be written as the operator identity
 \[
 K_C=2\pi B_C.
 \]
@@ -1206,7 +1208,7 @@ and surviving faithfulness bound, replacing the finite-stage modular action by t
 \end{theorem}
 
 \begin{proof}
-Step 1: fixed-cutoff collar control. On the finite type-I regulator net, Propositions~\ref{prop:splice}, \ref{prop:modulartransport}, and \ref{prop:gensplit} localize the modular defect to the shrinking collar and quantify the discrepancy between the physical collar state and its exact-Markov reference by the carried errors \(r_{\mathrm{FR}}(\varepsilon_\delta)\) and \(\eta_\delta^{\mathrm M}\).
+Step 1: fixed-cutoff collar control. On the finite type-I regulator net, Propositions~\ref{prop:splice}, \ref{prop:modulartransport}, and \ref{prop:gensplit} localize the modular defect to the shrinking collar and quantify the discrepancy between the physical collar state, its constructive recovered comparison state, and its exact-Markov reference by the carried errors \(r_{\mathrm{FR}}(\varepsilon_\delta)\) and \(\eta_\delta^{\mathrm M}\).
 
 Step 2: scaling-limit claim tier. Theorem~\ref{thm:bw} is a scaling-limit statement by \textbf{T3}, so the theorem concerns only scaling-limit cap pairs furnished by the controlled refinement/scaling package, not the finite regulator matrices themselves. Nothing in this step assumes that type-I structure survives the limit.
 
@@ -1215,7 +1217,7 @@ Step 3: branch identification. By \textbf{T1}, on the selected branch the scalin
 \sigma_t^{\omega_\infty^C}=\alpha_{\lambda_C(\kappa_C t)}.
 \]
 
-Step 4: normalization. Because \textbf{T1} identifies the standard cap-preserving conformal subgroup, no separate cap-isotropy or Euclidean-regularity selector enters here. The modular group is KMS at inverse temperature \(1\) by definition. Since \(\lambda_C(s)\) is normalized by unit null dilation under the blow-up \(v\mapsto e^{-s}v\), the standard Bisognano--Wichmann normalization gives
+Step 4: normalization. Because \textbf{T1} already identifies the standard cap-preserving conformal subgroup, no separate cap-isotropy or Euclidean-regularity selector enters. The modular group is KMS at inverse temperature \(1\) by definition. Since \(\lambda_C(s)\) is normalized by unit null dilation under the blow-up \(v\mapsto e^{-s}v\), the Bisognano--Wichmann normalization fixes
 \[
 \kappa_C=2\pi,
 \]
@@ -1229,21 +1231,33 @@ hence
 Step 5: operator versus automorphism form. If the limit cap algebra remains type I, one can represent the modular automorphism group by a modular Hamiltonian \(K_C=-\log\rho_C\) and recover \(K_C=2\pi B_C\). If the limit algebra leaves the regulator class, the modular automorphism group remains well defined while the inner operator representative need not exist inside \(\mathcal A_\infty(C)\). In that case the automorphism identity is the full theorem statement. The final sentence is exactly the carried-error conclusion from Step 1 transported along the controlled scaling family of \textbf{T3}.
 \end{proof}
 
-\begin{remark}[What is proved, what the ``BW/canonical cap phase'' means, and what remains open]
-This theorem has one conditional boundary. OPH derives the finite-range MaxEnt family and its carried collar control. It does \emph{not} derive that every refinement-stable MaxEnt branch lands in the Bisognano--Wichmann phase, nor that MaxEnt by itself selects a vacuum or canonical cap state. When the manuscript informally speaks of the ``BW/canonical cap phase,'' it means exactly the \textbf{T1}-selected case in which the realized refinement branch emits a scaling-limit cap pair satisfying Theorem~\ref{thm:bw}; in the generic non-type-I case this is an outer geometric modular action, not an inner density-matrix formula.
+\begin{remark}[Exact BW-side UV scaffold, and the only nonlatent lower input on the faithfulness side]
+Theorem~\ref{thm:bw} proves the Bisognano--Wichmann conclusion only on the \textbf{T1}-selected geometric branch. To internalize that branch entirely within OPH one still needs exactly two further objects, and neither of them is an independent cap-isotropy selector or a Euclidean-regularity premise.
 
-The remaining BW-side burden is an explicit two-object UV scaffold, and the pressure point is the first object, not the symbolic rigidity calculation. First, one would need a \emph{canonical scaling-limit observer cap-pair realization theorem} from transported marginals. The theorem contract for that object is sharp: the realized transported cap-local system packages the cap-local test family, the projectively compatible transported marginal family, and the asymptotic transport-equivalence certificate. The single remaining emitted witness is a derived vanishing carried-collar schedule on fixed local collars, explicitly decomposed into the constructive-recovery remainder and the faithful modular-defect term, namely the convergence to zero of the carried quantity
+First, one needs a \emph{realized transported cap-local system} for caps and their conformal images. The relevant package is the cap-local test family, the projectively compatible transported marginal family, and the asymptotic transport-equivalence certificate. On each fixed local collar model \((m,\delta)\), let \(\varepsilon_{n,m,\delta}\) be the transported collar conditional mutual information. If the transported physical marginals satisfy an eventual common floor
 \[
+\rho_X^{(n,m,\delta)}\ge \bar\lambda_{m,\delta}\mathbf 1
+\qquad
+\bigl(X\in\{ABD,AB,BD,B\}\bigr)
+\]
+and
+\[
+\delta^{\mathrm M}_{A_{n,m,\delta}:B_{n,m,\delta}:D_{n,m,\delta}}
+\bigl(\varepsilon_{n,m,\delta}\bigr)\to 0,
+\]
+then the exact-Markov comparison marginals inherit the same floor for all sufficiently large \(n\). The carried-collar schedule
+\[
+\eta_{n,m,\delta}^{\mathrm{cap}}
+:=
 r_{\mathrm{FR}}(\varepsilon_{n,m,\delta})
 +
-4\lambda_\ast^{-1}\,
+4\bar\lambda_{m,\delta}^{-1}
 \delta^{\mathrm M}_{A_{n,m,\delta}:B_{n,m,\delta}:D_{n,m,\delta}}
 \bigl(\varepsilon_{n,m,\delta}\bigr)
 \]
-after transport to each fixed local collar model. Only after that witness is supplied can local weak-\(*\) extraction and GNS gluing emit the realized scaling-limit cap pair. Beneath that derived schedule, the sharper raw datum is the transported fixed-local-collar Markov/faithfulness package, and inside that datum the single missing clause is the eventual common floor on the finite modular-transport family feeding the faithful modular-defect term.
-No second comparison-state faithfulness clause is missing there: on one fixed collar model, the exact-Markov replacements inherit the same eventual floor once \(\delta^{\mathrm M}_{m,\delta}(\varepsilon_{n,m,\delta})\to0\).
+is therefore \emph{derived rather than primitive}. The only nonlatent lower input on the faithfulness side is the eventual fixed-local-collar modular-transport common floor on the transported physical marginals themselves; no second comparison-state faithfulness clause is missing.
 
-Second, one would need an \emph{ordered cut-pair rigidity theorem} on those realized cap pairs to collapse the residual cap-preserving conformal freedom to the unique hyperbolic subgroup \(\lambda_C(s)\); modular KMS normalization would then fix \(s=2\pi t\). Ordered cut-pair rigidity therefore remains symbolic until the realized scaling-limit cap pair exists. The weak-\(*\) extraction plus rigidity route is an explicit internal extension route, not part of the proved theorem surface.
+Second, once local weak-\(*\) extraction and GNS gluing have emitted the realized scaling-limit cap pair, one needs \emph{ordered cut-pair rigidity} on that realized pair to collapse the residual cap-preserving conformal freedom to the standard hyperbolic subgroup. Only after that second object is supplied does \textbf{T1} cease to be a theorem-external branch selector. The present paper proves neither object and therefore does not claim that MaxEnt alone selects the BW branch.
 \end{remark}
 
 \begin{corollary}[Lorentz Kinematics]\label{cor:lorentz}
