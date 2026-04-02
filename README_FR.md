@@ -4,7 +4,7 @@
 
 **Version anglaise :** [README.md](README.md)
 
-**Liens rapides :** [site](https://floatingpragma.io/oph/) | [Papier 1 : synthèse](paper/observers_are_all_you_need.pdf) | [Papier 2 : dérivation relativité/MS](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf) | [Papier 3 : dérivation particules](paper/deriving_the_particle_zoo_from_observer_consistency.pdf) | [livre OPH](https://oph-book.floatingpragma.io) | [OPH Lab](https://oph-lab.floatingpragma.io) | [challenge](https://challenge.floatingpragma.io)
+**Liens rapides :** [site](https://floatingpragma.io/oph/) | [Papier 1 : synthèse](paper/observers_are_all_you_need.pdf) | [Papier 2 : dérivation relativité/MS](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf) | [Papier 3 : dérivation particules](paper/deriving_the_particle_zoo_from_observer_consistency.pdf) | [livre OPH](https://oph-book.floatingpragma.io) | [OPH Textbooks](https://learn.floatingpragma.io/) | [OPH Lab](https://oph-lab.floatingpragma.io) | [challenge](https://challenge.floatingpragma.io)
 
 L'OPH est un programme de reconstruction. Espace-temps, structure de jauge, particules, enregistrements et synchronisation des observateurs y apparaissent comme des conséquences de la cohérence de recouvrement sur un écran holographique fini.
 
@@ -84,6 +84,7 @@ Les écarts restants sont étroits et explicites : les leptons chargés attenden
 - **Page theory of everything :** [floatingpragma.io/oph/theory-of-everything](https://floatingpragma.io/oph/theory-of-everything)
 - **Page simulation theory :** [floatingpragma.io/oph/simulation-theory](https://floatingpragma.io/oph/simulation-theory/)
 - **Livre :** [oph-book.floatingpragma.io](https://oph-book.floatingpragma.io)
+- **Application d'etude :** [learn.floatingpragma.io](https://learn.floatingpragma.io/)
 - **Lab :** [oph-lab.floatingpragma.io](https://oph-lab.floatingpragma.io)
 - **Objections courantes :** [extra/COMMON_OBJECTIONS.md](extra/COMMON_OBJECTIONS.md)
 - **Note IBM Quantum :** [extra/IBM_QUANTUM_CLOUD.md](extra/IBM_QUANTUM_CLOUD.md)

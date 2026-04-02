@@ -4,7 +4,7 @@
 
 **French version:** [README_FR.md](README_FR.md)
 
-**Quick links:** [website](https://floatingpragma.io/oph/) | [Paper 1: synthesis](paper/observers_are_all_you_need.pdf) | [Paper 2: SM/GR derivation](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf) | [Paper 3: particle derivation](paper/deriving_the_particle_zoo_from_observer_consistency.pdf) | [OPH Book](https://oph-book.floatingpragma.io) | [OPH Lab](https://oph-lab.floatingpragma.io) | [challenge](https://challenge.floatingpragma.io)
+**Quick links:** [website](https://floatingpragma.io/oph/) | [Paper 1: synthesis](paper/observers_are_all_you_need.pdf) | [Paper 2: SM/GR derivation](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf) | [Paper 3: particle derivation](paper/deriving_the_particle_zoo_from_observer_consistency.pdf) | [OPH Book](https://oph-book.floatingpragma.io) | [OPH Textbooks](https://learn.floatingpragma.io/) | [OPH Lab](https://oph-lab.floatingpragma.io) | [challenge](https://challenge.floatingpragma.io)
 
 OPH is a reconstruction program for fundamental physics. Spacetime, gauge structure, particles, records, and observer synchronization are treated as consequences of overlap consistency on a finite holographic screen.
 
@@ -84,6 +84,7 @@ The remaining particle gaps are narrow and explicit: charged leptons wait on `C_
 - **Theory explainer:** [floatingpragma.io/oph/theory-of-everything](https://floatingpragma.io/oph/theory-of-everything)
 - **Simulation-theory explainer:** [floatingpragma.io/oph/simulation-theory](https://floatingpragma.io/oph/simulation-theory/)
 - **Book:** [oph-book.floatingpragma.io](https://oph-book.floatingpragma.io)
+- **Student study app:** [learn.floatingpragma.io](https://learn.floatingpragma.io/)
 - **Lab:** [oph-lab.floatingpragma.io](https://oph-lab.floatingpragma.io)
 - **Common objections:** [extra/COMMON_OBJECTIONS.md](extra/COMMON_OBJECTIONS.md)
 - **IBM Quantum note:** [extra/IBM_QUANTUM_CLOUD.md](extra/IBM_QUANTUM_CLOUD.md)
