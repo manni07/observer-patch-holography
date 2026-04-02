@@ -14,11 +14,11 @@ This document collects the mathematical derivations and stated premises used in 
 
 \section{Reference Point}\label{1-core-axioms-and-definitions}
 
-The five axioms, the canonical technical-premise ledger \(T1\)--\(T7\), and the dependency map appear in the main OPH theorem ledger. This supplement restates the fixed-cutoff realized presentation and the theorem-local derived controls used repeatedly below. MAR enters only in the gauge-selection portions; the Lorentz/null-modular and Einstein discussions mainly use the first four axioms plus the technical premises stated where needed.
+The five axioms, the canonical technical-premise ledger \(T1\)--\(T6\), and the dependency map appear in the main OPH theorem ledger. This supplement restates the fixed-cutoff realized presentation and the theorem-local derived controls used repeatedly below. MAR enters only in the gauge-selection portions; the Lorentz/null-modular and Einstein discussions mainly use the first four axioms plus the technical premises stated where needed.
 
 \subsection{Technical Premises and Fixed-Cutoff Realization}\label{12-regulator-premises}
 
-The supplement follows the canonical premise scheme of the main manuscript. The only labeled external premises are \(T1\)--\(T7\). The fixed-cutoff realized presentation, the local-Gibbs form, quasi-local propagation, endpoint-Lipschitz interval control, and refinement-stable branch persistence described below are unpackings or consequences of the OPH axioms rather than additional labeled assumptions.
+The supplement follows the canonical premise scheme of the main manuscript. The only labeled external premises are \(T1\)--\(T6\). The fixed-cutoff realized presentation, the local-Gibbs form, quasi-local propagation, endpoint-Lipschitz interval control, and refinement-stable branch persistence described below are unpackings or consequences of the OPH axioms rather than additional labeled assumptions.
 
 \textbf{Fixed-cutoff realized presentation.} On a finite regulator cellulation, each regulator cell \(x\) carries a finite-dimensional factor \(\mathfrak h_x\), and local patch algebras are finite type-I algebras. Gauge-as-gluing is realized as a compact boundary redundancy action on cut data, so physical algebras are fixed-point algebras of the corresponding boundary action. This is the realized regulator form of Axiom 1 plus overlap consistency; it is not a separate premise layer.
 
@@ -65,9 +65,9 @@ This is the endpoint-Lipschitz / finite-variation control imported later into th
 =
 \omega_L\!\bigl(R_{\ell\to L}(\lambda)\bigr)
 \]
-for an induced map \(R_{\ell\to L}\) on that multiplier space. The phrase ``refinement-stable branch'' therefore means persistence along a trajectory or invariant subset of this finite-dimensional map. This state-side refinement notion is enough to compare realized states across cutoffs. It does \emph{not} by itself upgrade fixed-cutoff edge labels to transportable refinement-persistent sectors, and it does not show that the directed colimit of such sectors is nontrivial. In particular, when the gauge branch later speaks of a refinement-stable directed colimit of sectors, the entire transportable directed-system/fiber clause is the explicit content of \(T7\); Axiom 3 supplies only the realized state branch along which one asks whether such sector transport persists.
+for an induced map \(R_{\ell\to L}\) on that multiplier space. The phrase ``refinement-stable branch'' therefore means persistence along a trajectory or invariant subset of this finite-dimensional map. This state-side refinement notion is enough to compare realized states across cutoffs. It does \emph{not} by itself upgrade fixed-cutoff edge labels to transportable refinement-persistent sectors, and it does not show that the directed colimit of such sectors is nontrivial. In particular, when the gauge branch later speaks of a refinement-stable directed colimit of sectors, the entire transportable directed-system/fiber clause is the explicit content of \(T6\); Axiom 3 supplies only the realized state branch along which one asks whether such sector transport persists.
 
-\textbf{What remains external.} This internalization claim stops at the fixed-cutoff local-Gibbs/Lieb--Robinson/refinement package. Quantitative exponential mixing or exact-Markov replacement, when invoked later, is separate state information tied to the recoverability side of Axiom 4 rather than to Axiom 3 alone. The genuinely external technical premises are therefore exactly the canonical list \(T1\)--\(T7\): the Bisognano--Wichmann geometric scaling branch and its scope clause, fixed-cap stationarity, the null-stress/density-upgrade burden, vanishing transport obstruction when global sector transportability is invoked, and the transportable sector-colimit plus symmetric/bosonic/fiber-functor conditions used in gauge reconstruction. No separate regulator premise for quasi-local propagation or refinement stability survives once Axiom 3 is unpacked in this way.
+\textbf{What remains external.} This internalization claim stops at the fixed-cutoff local-Gibbs/Lieb--Robinson/refinement package. Quantitative exponential mixing or exact-Markov replacement, when invoked later, is separate state information tied to the recoverability side of Axiom 4 rather than to Axiom 3 alone. The genuinely external technical premises are therefore exactly the canonical list \(T1\)--\(T6\): the controlled scaling-limit scope clause, fixed-cap stationarity, vanishing transport obstruction when global sector transportability is invoked, and the transportable sector-colimit plus symmetric/bosonic/fiber-functor conditions used in gauge reconstruction; the geometric cap-pair extraction and ordered cut-pair rigidity inputs remain theorem-local UV objects rather than separate global labels. No separate regulator premise for quasi-local propagation or refinement stability survives once Axiom 3 is unpacked in this way.
 
 \textbf{Proposition 1.0a (Ancilla-stable UV underdetermination).} Let a fixed-cutoff OPH realization be stabilized by finite ancillary factors \(K_P\) in a fixed product state, with observable patch algebras embedded as \(\mathcal A(P)\otimes \mathbf 1_{K_P}\) and repair dynamics acting trivially on the ancillas. Then observable expectations on the physical subalgebras, overlap data, the local-Gibbs branch, the collar conditional mutual information \(I(A:D\mid B)\), the Fawzi--Renner remainder, the collar Markov modulus, and the quotient normal form are unchanged. Thus OPH determines the UV branch only modulo such ancillary stabilization together with gauge or implementation hiding, not a unique microscopic presentation.
 
@@ -289,7 +289,7 @@ whose only nonlatent faithfulness-side input is the eventual fixed-local-collar 
 \end{enumerate}
 No second comparison-state faithfulness clause is missing: once the exact-Markov modulus tends to zero on a fixed collar model, the exact-Markov comparison marginals inherit the same eventual common floor.
 
-\begin{corollary}[Lorentz kinematics on the BW branch]\label{cor:lorentz}
+\begin{corollary}[Lorentz kinematics on the extracted geometric subnet]\label{cor:lorentz}
 Under the hypotheses of Theorem~\ref{thm:bw},
 \[
 \mathrm{Conf}^+(S^2)\cong \mathrm{PSL}(2,\mathbb C)\cong \mathrm{SO}^+(3,1).
@@ -302,7 +302,7 @@ Orientation-preserving conformal maps of \(S^2\) are exactly the M\"obius transf
 \[
 \mathrm{Conf}^+(S^2)\cong \mathrm{PSL}(2,\mathbb C)\cong \mathrm{SO}^+(3,1).
 \]
-By Theorem~\ref{thm:bw}, on the \textbf{T1} branch the realized scaling-limit cap modular automorphism groups are the standard cap-preserving conformal dilations with the \(2\pi\) normalization fixed internally. Hence the local kinematics induced by modular flow is the connected Lorentz group.
+By Theorem~\ref{thm:bw}, on the extracted prime geometric subnet the realized scaling-limit cap modular automorphism groups are the standard cap-preserving conformal dilations with the \(2\pi\) normalization fixed internally. Hence the local kinematics induced by modular flow is the connected Lorentz group.
 \end{proof}
 \subsection{Null Modular Bridge at Fixed Cutoff}\label{23-null-modular-bridge-eft-conditions-n1-n3}
 
@@ -600,7 +600,7 @@ Thus the directional modular/null charges determine the effective stress tensor 
 
 \subsection{Entanglement Equilibrium and Einstein\textquotesingle s Equation}\label{25-entanglement-equilibrium-and-einsteins-equation}
 
-\textbf{Internal small-ball bridge.} In the local Lorentzian d=4 scaling regime, the small-ball kernel is supplied by the OPH gravity chain itself. On the BW branch, a sufficiently small cap is the tangent causal diamond D_\ell, whose preserving conformal Killing field is
+\textbf{Internal small-ball bridge.} In the local Lorentzian d=4 scaling regime, the small-ball kernel is supplied by the OPH gravity chain itself. On the extracted prime geometric subnet, a sufficiently small cap is the tangent causal diamond D_\ell, whose preserving conformal Killing field is
 \[
 \xi_{D_\ell}
 =
@@ -1246,7 +1246,7 @@ meaning that the gauge-boson proton-decay channel is absent.
 \[
 C_F=\frac43,\qquad C_A=3.
 \]
-This is the full structural OPH input currently available for proton-spin bookkeeping.
+This is the full structural OPH input used for proton-spin bookkeeping.
 
 \textbf{QCD-dependent continuation ansatz.} If one adds the phenomenological ansatz that quark/gluon spin sharing equilibrates according to the color Casimirs, then
 \[
@@ -1317,7 +1317,7 @@ The \textquotesingle t Hooft vertex is therefore a 12-fermion interaction. This 
 \[
 \eta_B^{(\mathrm{heur})} \sim \varepsilon^{12} = 6^{-12} \approx 4.59 \times 10^{-10}.
 \]
-This is not a theorem. The assignment of one power of \(\varepsilon\) per zero mode is not currently derived, the overall rate prefactor is unknown, and the comparison with observed \(\eta_B \approx 6.1 \times 10^{-10}\) omits transport, washout, and freeze-out. It should therefore be read only as a heuristic continuation benchmark.
+This is not a theorem. The assignment of one power of \(\varepsilon\) per zero mode is not derived, the overall rate prefactor is unknown, and the comparison with observed \(\eta_B \approx 6.1 \times 10^{-10}\) omits transport, washout, and freeze-out. It should therefore be read only as a heuristic continuation benchmark.
 
 \subsection{CP Bias from Overlap Holonomy}\label{114-cp-bias-from-overlap-holonomy}
 
@@ -1333,7 +1333,7 @@ Generic phases violate this \(\Rightarrow\) CP-odd overlap data are generically 
 
 \section{Generation Structure and Flavor Continuations}\label{12-generation-structure-and-yukawa-hierarchy}
 
-This section keeps one imported structural corollary and the D12 flavor-status boundary on one surface. The structural corollary is the realized D9 counting chain \(N_g=3\). The D12 advance is narrower: the corpus puts the quark mass-side continuation, the charged same-carrier readback theorem, and the intrinsic neutrino eta-chain on one common excitation dictionary. What remains open are named continuation closures above that dictionary. They are not independent Yukawa parameters, and they do not belong to the recovered-core theorem surface.
+This section keeps one imported structural corollary and the D12 flavor claim-tier boundary on one surface. The structural corollary is the realized D9 counting chain \(N_g=3\). The D12 advance is narrower: the corpus puts the quark mass-side continuation, the charged same-carrier readback theorem, and the intrinsic neutrino eta-chain on one common excitation dictionary. What remains open are named continuation closures above that dictionary. They are not independent Yukawa parameters, and they do not belong to the recovered-core theorem surface.
 
 \subsection{Imported structural corollary: three generations}\label{121-why-three-generations}
 
@@ -1624,11 +1624,11 @@ Node & Output & Standard mathematics used & Extra premises / inputs beyond the f
 \endlastfoot
 \textbf{D1} & schedule-independent normal form for overlap repair & Newman's lemma & finite patch net, termination, and local confluence & Phase I structural theorem \\
 \textbf{D2} & EC decomposition, Markov collar, and generalized-entropy split & HJPW; Petz; Fawzi--Renner & explicit recoverability control when exact identities are used; coarse-grained \(A/(4G)\) dictionary & Phase I structural lemma/proposition layer \\
-\textbf{D3} & geometric modular flow and Lorentz branch & Bisognano--Wichmann modular geometry; conformal-group classification & T1 together with T3 & Phase I conditional scaling-limit theorem \\
+\textbf{D3} & geometric modular flow and Lorentz branch & Bisognano--Wichmann modular geometry; conformal-group classification & T2 together with the theorem-local geometric cap-pair extraction and ordered cut-pair rigidity hypotheses of Theorem~\ref{thm:bw} & Phase I conditional scaling-limit theorem \\
 \textbf{D4} & null modular bridge to \(T_{kk}\) & Borchers--Wiesbrock; distributional differentiation on half-lines & the theorem-local inherited-strip decomposition and exact-or-controlled Markov hypotheses of Section~\ref{23-null-modular-bridge-eft-conditions-n1-n3}, plus the downstream density-upgrade and relativistic null-stress-identification premises; the endpoint/propagation controls are internal to the local finite-constraint MaxEnt branch & Phase I conditional bridge theorem \\
 \textbf{D5} & Jacobson-type rest-frame relation plus the conditional tensor upgrade & Jacobson small-ball mathematics; null-to-tensor reconstruction modulo a metric term & T4 together with the locally Lorentzian \(d=4\) scaling regime and the all-directions/all-reference-states premise used in the tensor upgrade & Phase I conditional scaling-limit theorem/corollary \\
 \textbf{D6} & capacity/\(\Lambda\) corollary and the separate capacity-based neutrino estimate & de Sitter entropy relation and dimensional analysis & external input \(N_{\mathrm{scr}}\) and the screen-capacity identification & Phase II input-dependent corollary / estimate \\
-\textbf{D7} & compact gauge reconstruction in the bosonic branch & Doplicher--Roberts / Tannaka reconstruction & T2 and T5--T6 together with T7's directed-colimit/fiber premise for transportable edge sectors; the local-Gibbs/Dobrushin-type collar package supplies only fixed-cutoff support and recoverability control and does not by itself prove existence, persistence, triviality, or nontriviality of the refinement-limit sector colimit & Phase I conditional structural theorem \\
+\textbf{D7} & compact gauge reconstruction in the bosonic branch & Doplicher--Roberts / Tannaka reconstruction & T1 and T4--T5 together with T6's directed-colimit/fiber premise for transportable edge sectors; the local-Gibbs/Dobrushin-type collar package supplies only fixed-cutoff support and recoverability control and does not by itself prove existence, persistence, triviality, or nontriviality of the refinement-limit sector colimit & Phase I conditional structural theorem \\
 \textbf{D8} & product structure up to finite quotient on the realized branch & compact Lie representation classification; Schur's lemma & MAR, connected admissible class, one connected abelian factor, and vanishing relevant transport obstruction & Phase I realized-branch theorem \\
 \textbf{D9} & exact hypercharges, the counting chain \(N_g=3\) then \(N_c=3\), and the \(\mathbb Z_6\) quotient & anomaly algebra; Witten anomaly; CKM CP counting & realized one-generation/one-Higgs package and MAR admissibility premises & Phase I realized-branch theorem/corollary chain \\
 \end{longtable}

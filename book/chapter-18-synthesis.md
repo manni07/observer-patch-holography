@@ -4,7 +4,7 @@
 
 **A Note on This Chapter**
 
-This synthesis chapter serves two purposes. The first is to summarize the established physics from Chapters 1-17-the holographic principle, entanglement structure, consistency conditions, emergent spacetime, and classical physics. This material is rigorous and well-supported by current research.
+This synthesis chapter serves two purposes. The first is to summarize the established physics from Chapters 1-17-the holographic principle, entanglement structure, consistency conditions, emergent spacetime, and classical physics. This material is rigorous and well-supported by the cited research program.
 
 The second purpose is to reflect on what it all means: what kind of universe the framework describes, and what it tells us about why reality is the way it is.
 
@@ -104,7 +104,7 @@ This is Gödel's self-reference made physical. The system contains a description
 
 This is Hofstadter's strange loop at the deepest level. Moving through the hierarchy of physics → chemistry → biology → minds → ideas → physics brings you back to where you started.
 
-**Theory-of-everything closure:** this chapter treats the strange-loop picture as the public closure story of OPH. The current OPH texts supply theorem-backed support for that framing: the internal state-and-law habitat theorem and fixed-point corollaries give an OPH-internal setting in which the universe can be read as a self-referential timeless causal structure.
+**Theory-of-everything closure:** this chapter treats the strange-loop picture as the public closure story of OPH. The OPH texts supply theorem-backed support for that framing: the internal state-and-law habitat theorem and fixed-point corollaries give an OPH-internal setting in which the universe can be read as a self-referential timeless causal structure.
 
 This gives a direct answer to the question "Why does anything exist?" without appeal to external causes. In the public OPH framing, the self-causing loop is the closure of the theory-of-everything claim: reality is the consistent loop of information constraints, observer reconstruction, and the observers who eventually understand and rebuild the same structure.
 
@@ -114,7 +114,7 @@ Once you see this, the rest follows:
 
 - **Quantum measurement**: There's no "collapse" puzzle because there's no objective wave function that needs to become definite. There are only correlations between observer records and systems. The wave function is a description of one perspective's information. Different observers can assign different states to the same system until their patches overlap and force agreement.
 
-- **Relativity**: There's no absolute time or space because there's no absolute perspective. Each observer has their own time (modular flow). On the explicit BW geometric branch, overlap consistency plus geometric cap modular flow yields Lorentz kinematics.
+- **Relativity**: There's no absolute time or space because there's no absolute perspective. Each observer has their own time (modular flow). On the extracted prime geometric subnet, overlap consistency plus geometric cap modular flow yields Lorentz kinematics.
 
 - **Bell nonlocality**: Quantum correlations exceed classical bounds because reality isn't a pre-existing thing that observers passively discover. The correlations aren't "transmitted" through space; they're established through the consistency requirements of overlapping patches.
 
@@ -192,17 +192,17 @@ Equivalently, there exists a recovery map from AB to ABC with error controlled b
 
 1. **MaxEnt selection**: local states are chosen by maximum entropy given constraints.
 2. **Refinement stability**: the same constraint family survives as you refine the screen to finer resolution.
-3. **Geometric-branch condition**: in the scaling limit, modular flow on caps becomes geometric. It matches a standard conformal transformation on the sphere. The internalization scaffold beneath this condition is explicit: the scaling-limit cap-pair realization from transported marginals and the later ordered cut-pair rigidity step remain open, with the eventual fixed-local-collar modular-transport common floor as the smallest lower blocker.
+3. **Geometric-subnet lift**: in the scaling limit, modular flow on caps becomes geometric on the extracted prime geometric subnet. It matches a standard conformal transformation on the sphere. The internalization scaffold beneath this condition is explicit: the scaling-limit geometric cap-pair realization from transported marginals on that subnet and the later ordered cut-pair rigidity step remain open, with the eventual fixed-local-collar modular-transport common floor as the smallest lower blocker.
 4. **Gauge-as-gluing**: overlap identifications between patches create redundancies that give rise to gauge structure; a minimality principle selects the specific gauge group.
 5. **EFT bridge**: a low-energy effective field theory limit exists, connecting the screen-level description to familiar particle physics. The stress tensor can be sourced from a conformal field theory on small caps, or built from modular data on light-ray surfaces.
 
-Under these inputs, Lorentz kinematics is recovered from geometric modular flow on the BW branch, Einstein's equation follows from entanglement equilibrium on the stated scaling branch, and the Standard Model gauge group emerges from the gluing structure. Branch selection, the scaling-limit cap-pair route, and the stress-tensor bridge remain explicit assumptions or open scaffold objects.
+Under these inputs, Lorentz kinematics is recovered from geometric modular flow on the extracted prime geometric subnet, Einstein's equation follows from entanglement equilibrium on the stated scaling branch, and the Standard Model gauge group emerges from the gluing structure. Geometric cap-pair extraction, ordered cut-pair rigidity, and the stress-tensor bridge remain explicit assumptions or open scaffold objects.
 
 ## 18.6 What the Model Yields (Under Stated Assumptions)
 
 Under the bridge assumptions above, the model yields:
 
-1. **Lorentz kinematics** on the explicit BW branch from geometric modular flow on caps
+1. **Lorentz kinematics** on the extracted prime geometric subnet from geometric modular flow on caps
 2. **Einstein's equation** on the stated scaling branch via entanglement equilibrium, promoted to a tensor equation by patch consistency
 3. **The Standard Model gauge group** $SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$, reconstructed from edge-sector fusion rules and a minimality principle
 4. **Three generations, three colors**: fixed by anomaly cancellation and the minimality principle
@@ -232,11 +232,11 @@ $$
 
 Here the Standard Model piece includes the derived gauge group, three generations, and three colors. The higher-dimension operators represent corrections and details not yet fixed by the core.
 
-This equation is the long-range target, not a headline claim. What's currently recovered is narrower: Einstein's equation (conditional on the scaling limit) plus the Standard Model gauge structure. Closing the remaining gaps is ongoing work.
+This equation states the long-range effective form rather than the recovered theorem package. The recovered part is narrower: Einstein's equation on the stated scaling branch together with the Standard Model gauge structure. The higher-dimension operators and the full quantitative closure sit above that boundary.
 
 ### Two Fundamental Parameters: The Configuration of Reality
 
-In the current quantitative implementation our universe is characterized by exactly **two external continuous configuration inputs**:
+The quantitative implementation is characterized by exactly **two external continuous configuration inputs**:
 
 | Parameter | Value | What It Sets |
 |-----------|-------|--------------|
@@ -251,9 +251,9 @@ The axiom structure contains no dimensionful constants. It is pure mathematics d
 
 A universe with different configuration parameters would have different absolute scales but the **same structure**: the same gauge groups, the same charge ratios, the same scaling-limit Einstein branch, and the same Standard Model quotient. The configuration parameters are what make our universe *this* universe instead of another one running the same "operating system."
 
-In the current quantitative implementation these parameters are not yet derived from within the system. They are boundary conditions, the fundamental "settings" of the computation that is our universe. Asking "why is $a_{\text{cell}} = 1.63 \, \ell_P^2$?" is, for now, like asking why a simulation was configured with particular settings. Closing or replacing those inputs is part of the remaining program.
+These parameters are external boundary conditions rather than internal derivations. They are the fundamental "settings" of the computation that is our universe. Asking "why is $a_{\text{cell}} = 1.63 \, \ell_P^2$?" is like asking why a simulation was configured with particular settings. Any deeper closure would either derive those settings or replace them with a sharper structural input.
 
-**Current status**: The pixel area is currently *extracted* from measured constants. To make it a true prediction, the framework would need to derive the gauge coupling strengths from geometry. That gap is still open.
+The pixel area is *extracted* from measured constants. A genuine prediction would require deriving the gauge coupling strengths from geometry.
 
 ![The Pixel Constant](../assets/pixel-constant.svg)
 
@@ -287,7 +287,7 @@ The Hilbert space is finite-dimensional. The second fundamental parameter, **scr
 
 ## 18.8 The Remaining Frontier
 
-The core picture has definite physical content. The framework recovers the Standard Model gauge group, three generations, three colors, massless photon/gluons/graviton, and the absence of gauge-mediated proton decay. On top of that, it has a full exact non-hadron output lane on disk: exact `W/Z` on the frozen-repair surface, a closed Higgs/top forward seed together with a compare-only exact inverse pair on the same D11 Jacobian, an exact same-family charged witness with its affine coordinate closed on the fixed witness, an exact same-family quark witness on the selected `sigma_ref` sheet, and an exact compare-only neutrino adapter on the explicit positive selector segment. The remaining difficult jobs are to finish the charged-lepton theorem lane through `C_hat_e^{cand}` and the post-promotion lift whose descended scalar is `mu_phys(Y_e)`, with `charged_physical_identity_mode_equalizer` beneath that scalar, bring flavor mixing onto a fully physical quark branch after the negative local selector closure to `sigma_ref` with the broader honest frontier reduced to the light-quark overlap-defect scalar `Delta_ud_overlap` and its emitted-ray packaging `quark_d12_t1_value_law`, keep the continuation-only D12 internal backread sidecar distinct from the public theorem frontier and from the wrong-sheet CKM boundary, derive the reduced neutrino bridge-correction invariant `C_nu` that would fix the absolute neutrino scale, and land the production backend bundle plus the nonperturbative work needed for hadrons. On the gravity side, the UV/BW internalization frontier is explicit: first the canonical scaling-limit cap-pair realization from transported cap marginals, then ordered cut-pair rigidity on that realized limit. Beneath the first object, the smallest lower blocker is the eventual fixed-local-collar modular-transport common floor.
+The core picture has definite physical content. The framework recovers the Standard Model gauge group, three generations, three colors, massless photon/gluons/graviton, and the absence of gauge-mediated proton decay. On top of that, it has a full exact non-hadron output lane on disk: exact `W/Z` on the frozen-repair surface, a closed Higgs/top forward seed together with a compare-only exact inverse pair on the same D11 Jacobian, an exact same-family charged witness with its affine coordinate closed on the fixed witness, an exact same-family quark witness on the selected `sigma_ref` sheet, and an exact compare-only neutrino adapter on the explicit positive selector segment. The remaining difficult jobs are to finish the charged-lepton theorem lane through `C_hat_e^{cand}` and the post-promotion lift whose descended scalar is `mu_phys(Y_e)`, with `charged_physical_identity_mode_equalizer` beneath that scalar, bring flavor mixing onto a fully physical quark branch after the negative local selector closure to `sigma_ref` with the broader honest frontier reduced to the light-quark overlap-defect scalar `Delta_ud_overlap` and its emitted-ray packaging `quark_d12_t1_value_law`, keep the continuation-only D12 internal backread sidecar distinct from the public theorem frontier and from the wrong-sheet CKM boundary, derive the reduced neutrino bridge-correction invariant `C_nu` that would fix the absolute neutrino scale, and land the production backend bundle plus the nonperturbative work needed for hadrons. On the gravity side, the UV/BW internalization frontier is explicit: first the canonical scaling-limit geometric cap-pair realization from transported cap marginals on the geometric subnet, then ordered cut-pair rigidity on that realized limit. Beneath the first object, the smallest lower blocker is the eventual fixed-local-collar modular-transport common floor.
 
 **Progress on numerical predictions.** The extraction of gauge couplings from
 edge-sector probabilities has been validated numerically in 2D gauge models.
@@ -325,7 +325,7 @@ consistency rather than discrete symmetry numerology. The promise of the
 model is that each engineering target is tied to specific, testable
 structural inputs instead of broad derivation.
 
-## 18.9 What Is Rigorous: The Status of Our Claims
+## 18.9 What Is Rigorous: Claim Tiers
 
 Before addressing the deepest questions, let us be precise about what we have established and how.
 
@@ -333,7 +333,7 @@ Before addressing the deepest questions, let us be precise about what we have es
 
 These are proven mathematical facts, not derivations:
 
-| Result | Status | Source |
+| Result | Claim tier | Source |
 |--------|--------|--------|
 | Noether's theorem: symmetries ↔ conservation laws | Proven | Differential geometry |
 | SO(3) symmetry on S² | Proven | Topology |
@@ -367,7 +367,7 @@ These follow from our axioms plus stated additional assumptions:
 | Error correction structure | Code/QEC ansatz |
 | Markov property on separating regions | Axiom 4 |
 | Local Gibbs structure | MaxEnt selection |
-| Lorentz kinematics on the screen | local recoverability, maximum-entropy state selection, the BW geometric branch, and the spherical Bisognano-Wichmann result, which turns a patch's natural thermal time into a geometric boost-like motion |
+| Lorentz kinematics on the screen | local recoverability, maximum-entropy state selection, the extracted prime geometric subnet, and the spherical Bisognano-Wichmann result, which turns a patch's natural thermal time into a geometric boost-like motion |
 | Cap generalized entropy (area operator + bulk entropy) | quantum error correction, redundant encoding across patches, and horizon normalization |
 | Gauge group reconstruction from sector fusion | edge-sector fusion plus the rule that, if you know how charges combine, you can reconstruct the group behind them |
 | Field algebra from transportable sectors | localized charge sectors plus the reconstruction of full fields from how those sectors move |
@@ -381,7 +381,7 @@ These follow from our axioms plus stated additional assumptions:
 | Electroweak scale from transmutation | Refinement stability (no unprotected relevant scalar) + pixel scale + β_EW = N_c + 1 = 4 |
 | Top Yukawa y_t ≈ 1 | MaxEnt/refinement stability selects least-suppressed channel |
 
-### Current Particle-Spectrum Status
+### Particle-Spectrum Claim Tiers
 
 For the book, the particle story looks like this:
 
@@ -648,7 +648,7 @@ To our continuing astonishment, the universe answers.
 
 ## 18.15 Final Reverse Engineering Summary
 
-Let us close with the current picture of what we have reverse engineered:
+Let us close with the picture of what OPH reverse engineers:
 
 **We started with intuitions**:
 - Space, time, and matter are fundamental
@@ -689,4 +689,4 @@ Escher's hands draw each other. Gödel's sentence refers to itself. The ouroboro
 
 Physicists are reality's hackers. And what we've hacked suggests that the hacker and the hacked belong to the same process, that the act of reverse engineering is itself part of what is being engineered.
 
-The loop closes. The work continues.
+The loop closes.

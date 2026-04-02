@@ -67,8 +67,8 @@ particles have sharp mass and spin labels.
 
 In OPH, this appears after two steps:
 
-1. **Lorentz kinematics is recovered on the explicit BW branch** from
-   geometric modular flow on the screen, with the scaling-limit cap-pair
+1. **Lorentz kinematics is recovered on the extracted prime geometric subnet** from
+   geometric modular flow on the screen, with the scaling-limit geometric cap-pair
    realization and ordered cut-pair rigidity scaffold still open beneath full
    UV internalization (as described in Chapter 15).
 2. **Localized excitations organize into representations** of this emergent

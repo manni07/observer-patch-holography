@@ -277,7 +277,7 @@ This modular flow is what the observer experiences as time.
 
 ### Geometric Modular Flow on Caps
 
-Consider a cap C on the sphere S^2. The current theorem surface makes this statement on an explicit BW branch. On that branch, for a realized scaling-limit cap pair, the cap's natural thermal time stops being only an abstract algebraic flow and becomes a geometric motion on the sphere. The spherical Bisognano-Wichmann statement is then the automorphism identity
+Consider a cap C on the sphere S^2. The theorem surface makes this statement on the extracted prime geometric subnet. On that subnet, for a realized scaling-limit geometric cap pair, the cap's natural thermal time stops being only an abstract algebraic flow and becomes a geometric motion on the sphere. The spherical Bisognano-Wichmann statement is then the automorphism identity
 
 $$\sigma_t^{\omega_C} = \alpha_{\lambda_C(2\pi t)}$$
 
@@ -285,7 +285,7 @@ On the special type-I realization one may write the corresponding operator form
 
 $$K_C = 2\pi B_C + \text{const}$$
 
-The remaining UV scaffold is narrower than a generic microscopic-construction problem. First, one needs the canonical scaling-limit cap-pair realization from transported cap marginals; beneath that, the smallest lower blocker is the eventual fixed-local-collar modular-transport common floor. Second, one needs ordered cut-pair rigidity on the realized cap pair.
+The remaining UV scaffold is narrower than a generic microscopic-construction problem. First, one needs the canonical scaling-limit geometric cap-pair realization from transported cap marginals on the geometric subnet; beneath that, the smallest lower blocker is the eventual fixed-local-collar modular-transport common floor. Second, one needs ordered cut-pair rigidity on the realized cap pair.
 
 ### Conformal Symmetry Is Lorentz Symmetry
 
@@ -297,7 +297,7 @@ The conformal group of the sphere is isomorphic to the Lorentz group.
 
 Moebius transformations of the complex plane (which is the Riemann sphere S^2) are exactly Lorentz transformations of the celestial sphere that a relativistic observer sees.
 
-Lorentz kinematics is not assumed. It is recovered on that BW geometric branch once the scaling-limit cap pair is realized and the cap modular flow is geometric.
+Lorentz kinematics is not assumed. It is recovered on the extracted prime geometric subnet once the scaling-limit cap pair is realized there and the cap modular flow is geometric.
 
 ### Why There Is No Privileged Reference Frame
 
@@ -339,7 +339,7 @@ Special relativity emerges from the conformal structure of the screen. What abou
 
 ### What Patch Consistency Does (and Doesn't) Give Us
 
-Patch consistency does two crucial jobs here. First, it forbids any preferred observer or preferred frame. Second, once each observer gets the same local rest-frame relation, patch consistency forces those local relations to fit together into a full tensor equation. To reach Einstein's equation, the current OPH route also needs the maximum-entropy state choice, the BW geometric branch, and a bridge from modular energy to ordinary stress-energy.
+Patch consistency does two crucial jobs here. First, it forbids any preferred observer or preferred frame. Second, once each observer gets the same local rest-frame relation, patch consistency forces those local relations to fit together into a full tensor equation. To reach Einstein's equation, the current OPH route also needs the maximum-entropy state choice, the extracted geometric subnet with its cap-pair realization and rigidity lift, and a bridge from modular energy to ordinary stress-energy.
 
 ### Jacobson's Insight (1995, 2016)
 
@@ -558,7 +558,7 @@ Einstein discovered special relativity by thinking about light and motion. We ca
 
 **What requires additional assumptions or open branch inputs:**
 
-- Lorentz kinematics on the screen (requires the BW geometric branch and the scaling-limit cap-pair route)
+- Lorentz kinematics on the screen (requires the extracted geometric subnet and the scaling-limit cap-pair route)
 - The scalar Einstein relation in each frame (requires MaxEnt + a stress bridge)
 - Full local stress-tensor reconstruction beyond the null-invisible metric ambiguity
 

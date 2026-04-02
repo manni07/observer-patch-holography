@@ -573,9 +573,9 @@ The conclusion is exact: a hard photon-mass deformation is incompatible with the
 
 The graviton emerges from a parallel chain of reasoning, applied to spacetime geometry instead of internal gauge symmetry.
 
-In Chapter 15 the current theorem surface recovers the cap-modular statement on the explicit BW branch. On that branch, once the recovery and MaxEnt structure is in place, modular flow on caps becomes a geometric conformal transformation with a fixed normalization. In the generic continuum case this is an automorphism-level statement for the scaling-limit cap pair; the operator identity for a modular Hamiltonian is restricted to the special type-I realization.
+In Chapter 15 the theorem surface recovers the cap-modular statement on the extracted prime geometric subnet. On that subnet, once the recovery and MaxEnt structure is in place, modular flow on caps becomes a geometric conformal transformation with a fixed normalization. In the generic continuum case this is an automorphism-level statement for the scaling-limit cap pair; the operator identity for a modular Hamiltonian is restricted to the special type-I realization.
 
-The conformal group of the two-sphere is isomorphic to the Lorentz group: Conf⁺(S²) ≅ PSL(2,ℂ) ≅ SO⁺(3,1). This is a mathematical identity. Once the BW branch is fixed and the scaling-limit cap pair is in hand, Lorentz kinematics follows automatically from that conformal classification.
+The conformal group of the two-sphere is isomorphic to the Lorentz group: Conf⁺(S²) ≅ PSL(2,ℂ) ≅ SO⁺(3,1). This is a mathematical identity. Once the geometric cap pair is in hand on the extracted subnet, Lorentz kinematics follows automatically from that conformal classification.
 
 But geometry goes further. The entanglement structure of the screen encodes dynamics as well as kinematics. Through the entanglement equilibrium argument, developed in Chapter 15, the condition that generalized entropy is stationary under small admissible variations implies a Jacobson-type first-variation Einstein relation in the same scaling regime, and patch consistency upgrades it to the tensor equation. The metric tensor emerges as the compression of modular flow data, and its dynamics are fixed by the requirement that entanglement remains balanced.
 
@@ -689,6 +689,6 @@ The quarks and leptons aren't arbitrary. Their charges are fixed by the requirem
 
 That is a remarkably concrete result. The framework does not merely say that "symmetry matters." It points to a very specific gauge structure, charge pattern, generation count, and color count. It reaches the massless carriers, the $W$ and $Z$, the Higgs, the top quark, and several quark masses. The remaining work sits mostly in flavor completion and in strongly coupled bound states.
 
-We've now seen how particles emerge from the screen as stable patterns that transform under emergent symmetries. But how does spacetime itself emerge? How does Einstein's relativity fit into this picture?
+This chapter has shown how particles emerge from the screen as stable patterns that transform under emergent symmetries. But how does spacetime itself emerge? How does Einstein's relativity fit into this picture?
 
 That's the question of **Chapter 15: Relativity from Modular Time**.

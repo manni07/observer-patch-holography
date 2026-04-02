@@ -134,7 +134,7 @@ The electron is a vibration pattern that persists. The muon is a pattern that pe
 
 The "particle zoo" is a census of vibrational survivors.
 
-In the current framework, that census is only partially closed. Some particles (photon, gluons, graviton, W, Z) are fully derived; others (quarks, leptons, neutrinos) are at earlier stages; and composite particles like hadrons still require computational work beyond the symbolic framework.
+Within OPH, that census is only partially closed. Some particles (photon, gluons, graviton, W, Z) are fully derived; others (quarks, leptons, neutrinos) lie on narrower continuation branches; and composite particles like hadrons require computational work beyond the symbolic framework.
 
 ### Topological Protection
 
@@ -222,7 +222,7 @@ Observers that fit into the consensus survive and replicate. An observer whose i
 
 Laws that allow observers to agree proliferate. A law that prevents consistent gluing between patches cannot support stable observers. No observers means no one to instantiate that law in their shared description.
 
-What we see today is the outcome of this mutual selection: the physics that remains is the physics that permits stable, self-consistent observers to exist and to agree with each other. The universe has converged on the laws that are maximally hospitable to the existence of observers who can verify those laws.
+The outcome of this mutual selection is the physics that permits stable, self-consistent observers to exist and to agree with each other. The universe is governed by laws that are maximally hospitable to the existence of observers who can verify those laws.
 
 ### Laws as Coordination Protocols
 
