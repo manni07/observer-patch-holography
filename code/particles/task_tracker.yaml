@@ -317,11 +317,13 @@ stages:
   - id: stage-3
     title: "Close the charged-lepton absolute frontier"
     status: active
+    note: "2026-04-04 Oracle browser batch revalidated the live two-layer obstruction: no current-corpus proof of `oph_generation_bundle_branch_generator_splitting`, no theorem-grade `refinement_stable_uncentered_trace_lift`, and no contrary evidence from the adversarial split run because capture failed. The productive exit is now narrow: either internalize `central_split_quadratic_commutator_transfer` by proving the missing descended-commutator clause, or turn the dead end into a sharper impossibility theorem and publish that obstruction consistently."
     success_rule: "The charged lane either closes through the exact centered-to-affine route above C_hat_e^{cand}, or every public surface states the layered obstruction: the descended commutator clause is still open, the post-promotion slot is the refinement-stable uncentered trace lift, and charged_physical_identity_mode_equalizer is the exact smaller forcing object beneath mu_phys(Y_e)."
     tasks:
       - id: papers.compact.e.30-replace-koide-assisted-lepton-fitting-with-a-theorem
         title: "Search for the full charged closure chain by promoting C_hat_e^{cand} and then deriving the post-promotion lift whose descended scalar is mu_phys(Y_e)"
         status: blocked
+        note: "Do not spend more Pro cycles on one-shot full-lane closure prompts. The next useful paper-side run is Step 1 only: prove `oph_generation_bundle_branch_generator_splitting` from the current corpus or prove the sharpest exact no-go and smallest missing clause. Only if that closes should Step 2 attempt the post-promotion `refinement_stable_uncentered_trace_lift`."
         owner_lane: pro_paper
         depends_on: ["papers.compact.e.29-derive-the-yukawa-excitation-dictionary"]
       - id: particles.leptons.13-add-support-extension-source-scalar-pair-readback
