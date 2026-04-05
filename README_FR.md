@@ -26,7 +26,7 @@ L'OPH place une surface locale d'unification autour de l'entrée UV locale calib
   </a>
 </p>
 
-Les surfaces d'état actuelles pour les particules se trouvent dans [code/particles/RESULTS_STATUS.md](code/particles/RESULTS_STATUS.md) et [code/particles/EXACT_NONHADRON_MASSES.md](code/particles/EXACT_NONHADRON_MASSES.md). Le statut plus large des affirmations est porté par l'ensemble courant des papiers.
+Les constantes, chaînes de théorèmes et fronts de preuve ouverts pour cette surface sont suivis dans [extra/OPH_PHYSICS_CONSTANTS.md](extra/OPH_PHYSICS_CONSTANTS.md).
 
 **Pile générale des théorèmes et dérivations**
 

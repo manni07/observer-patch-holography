@@ -26,7 +26,7 @@ OPH places a local unification surface around the calibrated local UV input. The
   </a>
 </p>
 
-The current particle-status ledgers live in [code/particles/RESULTS_STATUS.md](code/particles/RESULTS_STATUS.md) and [code/particles/EXACT_NONHADRON_MASSES.md](code/particles/EXACT_NONHADRON_MASSES.md). Broader claim status is carried by the current paper set.
+Constants, theorem chains, and open proof fronts for this surface are tracked in [extra/OPH_PHYSICS_CONSTANTS.md](extra/OPH_PHYSICS_CONSTANTS.md).
 
 **Overall theorem and derivation stack**
 
