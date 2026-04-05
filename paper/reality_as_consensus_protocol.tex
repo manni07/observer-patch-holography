@@ -4,7 +4,7 @@
 \usepackage{lmodern}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
-\usepackage{enumitem}
+\usepackage[shortlabels]{enumitem}
 \usepackage{hyperref}
 \input{release_info.tex}
 
@@ -14,10 +14,16 @@
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\theoremstyle{plain}
 
 \title{Reality as a Consensus Protocol:\\
 The Fixed-Point Computation That Implements Physics}
-\author{B.\ M\"uller}
+\author{B.\ M\"uller \and Kale Arnav Anirudha}
 \date{\OPHPaperReleaseDate}
 
 \begin{document}
@@ -43,17 +49,18 @@ global solution, and the obstruction is holonomic. On the abelian branch it is t
 edge data; on the genuinely noncentral branch it is a crossed-module \v{C}ech class.
 
 Gauge symmetry enters as invariance under changes of hidden local representation that preserve
-overlap data. Under gauge-covariant repair dynamics, the normal-form map descends to the gauge
-quotient, so physical uniqueness is a quotient statement. Classical records are described by a
-finite closure system whose least common fixed point is independent of schedule. These results
-form the patch-net formulation used in the broader OPH literature.
+overlap data. When the repair step is read only on that overlap-invariant quotient, the
+normal-form map descends to the gauge quotient, so physical uniqueness is a quotient statement.
+Classical records are described by a finite closure system whose least common fixed point is
+independent of schedule. These results form the patch-net formulation used in the broader OPH
+literature.
 
 This paper proves four core results:
 
 \begin{enumerate}
 \item \textbf{Asynchronous confluence.} Under termination and local confluence, every initial state has a unique normal form, independent of update schedule (Theorem~\ref{thm:confluence}).
 \item \textbf{Cycle obstruction.} For affine overlap constraints over an abelian group, global consistency holds if and only if the holonomy vanishes on every cycle (Theorem~\ref{thm:holonomy}). The parity triangle gives the minimal frustrated example, and Theorem~\ref{thm:higherdefects} extends the same logic to the crossed-module higher-gauge defect hierarchy used later in OPH.
-\item \textbf{Gauge quotient.} Under gauge-covariant dynamics, the normal-form map descends to the quotient. Gauge-invariant observables are strictly unique on the quotient, even though microscopic representatives need not be unique (Theorem~\ref{thm:gauge}).
+\item \textbf{Gauge quotient.} When local repair is induced on the overlap-invariant quotient, the normal-form map descends to that quotient. Gauge-invariant observables are strictly unique there, even though microscopic representatives need not be unique (Theorem~\ref{thm:gauge}).
 \item \textbf{Record-layer convergence.} Commuting closure operators on a finite lattice converge to the least common fixed point under any asynchronous schedule that applies each operator at least once (Theorem~\ref{thm:crdt}).
 \end{enumerate}
 
@@ -250,22 +257,42 @@ Let $\Gamma = \prod_{i\in V}\Gamma_i$ act on $\Sigma$ componentwise. The action 
 \qquad
 \forall\, x\in S_i,\ \forall\, \gamma_i\in \Gamma_i.
 \]
-Gauge changes alter hidden local representations but do not alter overlap data. Assume gauge covariance:
-\[
-T_i^\lambda(\gamma\cdot s)=\gamma\cdot T_i^\lambda(s)
-\qquad
-\forall\, i,\ \forall\, \gamma\in\Gamma,\ \forall\, s\in\Sigma.
-\]
+Gauge changes alter hidden local representations but do not alter overlap data.
 \end{definition}
 
-Gauge transformations change hidden local representations while leaving overlap data fixed.
+Gauge transformations change hidden local representations while leaving overlap data fixed. Write
+\[
+q:\Sigma\to \Sigma/\Gamma,
+\qquad
+q(s)=[s],
+\]
+for the gauge-orbit map. A \textbf{physical repair law} is a family of local maps
+\[
+\overline T_i^\lambda:\Sigma/\Gamma\to \Sigma/\Gamma
+\]
+on the overlap-invariant quotient. A \textbf{representative repair family} is any choice of lifts
+\[
+T_i^\lambda:\Sigma\to\Sigma
+\]
+such that
+\[
+q\circ T_i^\lambda
+=
+\overline T_i^\lambda\circ q.
+\]
+This is the finite patch-net form of saying that the repair step is defined first on
+overlap-invariant physical data and only then lifted to hidden representatives. The separate OPH
+problem of deriving the physical repair law itself from recovery dynamics remains upstream; the
+point here is only that no extra gauge-covariance axiom is needed once repair is formulated on the
+quotient.
 
 \begin{theorem}[Gauge quotient theorem]\label{thm:gauge}
-Under the gauge action of Definition~\ref{def:gauge} and the hypotheses of Theorem~\ref{thm:confluence},
+Under the gauge action of Definition~\ref{def:gauge}, any representative lift of a physical repair
+law as just defined, and the hypotheses of Theorem~\ref{thm:confluence},
 \[
-\operatorname{nf}_\lambda(\gamma\cdot s)
+q\bigl(\operatorname{nf}_\lambda(\gamma\cdot s)\bigr)
 =
-\gamma\cdot \operatorname{nf}_\lambda(s)
+q\bigl(\operatorname{nf}_\lambda(s)\bigr)
 \qquad
 \forall\, \gamma\in\Gamma,\ \forall\, s\in\Sigma.
 \]
@@ -278,9 +305,24 @@ Hence the normal-form map descends to the quotient:
 \end{theorem}
 
 \begin{proof}
-Suppose $s\to_i t$, so $t=T_i^\lambda(s)\neq s$. Gauge covariance gives $T_i^\lambda(\gamma\cdot s) = \gamma\cdot T_i^\lambda(s) = \gamma\cdot t$, so $\gamma\cdot s\to_i \gamma\cdot t$. The gauge action sends rewrite sequences to rewrite sequences: $s\to^* t$ implies $\gamma\cdot s\to^* \gamma\cdot t$.
-
-Let $t=\operatorname{nf}_\lambda(s)$. Then $T_i^\lambda(t)=t$ for all $i$, so $T_i^\lambda(\gamma\cdot t) = \gamma\cdot T_i^\lambda(t) = \gamma\cdot t$, meaning $\gamma\cdot t$ is also normal. Since $\gamma\cdot s$ rewrites to $\gamma\cdot t$, uniqueness gives $\operatorname{nf}_\lambda(\gamma\cdot s) = \gamma\cdot\operatorname{nf}_\lambda(s)$.
+Suppose $s\to_i t$, so $t=T_i^\lambda(s)\neq s$. If $s'=\gamma\cdot s$, then
+\[
+q\bigl(T_i^\lambda(s')\bigr)
+=
+\overline T_i^\lambda\bigl(q(s')\bigr)
+=
+\overline T_i^\lambda\bigl(q(s)\bigr)
+=
+q\bigl(T_i^\lambda(s)\bigr).
+\]
+Thus gauge-equivalent inputs induce the same repaired orbit, and by induction the orbit reached
+after any repair sequence depends only on the initial orbit. Every maximal repair sequence from
+$s$ ends at $\operatorname{nf}_\lambda(s)$ by Theorem~\ref{thm:confluence}, so the terminal orbit
+$q(\operatorname{nf}_\lambda(s))$ depends only on $q(s)=[s]$. This makes
+\[
+[s]\longmapsto [\operatorname{nf}_\lambda(s)]
+\]
+well-defined on $\Sigma/\Gamma$.
 \end{proof}
 
 \begin{corollary}[Gauge-invariant law]\label{cor:gaugeinv}
@@ -288,7 +330,23 @@ If $M:\Sigma\to Y$ is gauge-invariant ($M(\gamma\cdot s)=M(s)$ for all $\gamma$)
 \end{corollary}
 
 \begin{proof}
-$M(\operatorname{nf}_\lambda(\gamma\cdot s)) = M(\gamma\cdot\operatorname{nf}_\lambda(s)) = M(\operatorname{nf}_\lambda(s))$.
+Because $M$ is gauge-invariant, it factors through the orbit map: $M=\overline M\circ q$ for some
+$\overline M:\Sigma/\Gamma\to Y$. Theorem~\ref{thm:gauge} gives
+\[
+q\bigl(\operatorname{nf}_\lambda(\gamma\cdot s)\bigr)
+=
+q\bigl(\operatorname{nf}_\lambda(s)\bigr),
+\]
+hence
+\[
+M\bigl(\operatorname{nf}_\lambda(\gamma\cdot s)\bigr)
+=
+\overline M\!\left(q\bigl(\operatorname{nf}_\lambda(\gamma\cdot s)\bigr)\right)
+=
+\overline M\!\left(q\bigl(\operatorname{nf}_\lambda(s)\bigr)\right)
+=
+M\bigl(\operatorname{nf}_\lambda(s)\bigr).
+\]
 \end{proof}
 
 \begin{corollary}[Inert ancillary refinement does not change physical law]\label{cor:ancilla}
@@ -502,6 +560,25 @@ The last item is the bridge to the broader OPH branches. Failure of that bridge 
 fixed-point theorems proved here unchanged while revising the downstream gravity, gauge, or
 continuation sectors.
 
+\subsection{Conditional BFT and QECC Extensions}
+\label{subsec:conditional-bft-qecc}
+
+The consensus formalism of \textrm{OPH} has natural analogies to classical and quantum
+distributed Byzantine agreement. Observer patches correspond to protocol nodes, overlap repair
+corresponds to a quorum vote, and the repair fixed-point corresponds to a consensus state. Under
+explicit structural assumptions (quorum size $\geq 2f+1$, partial synchrony, one-vote-per-view,
+certificate semantics, and \textrm{DLS}-style view-change), a \textrm{QBFT}-style interpretation
+of \textrm{OPH} repair satisfies safety and liveness (Appendix~\ref{app:bft-qecc},
+Theorem~\ref{thm:qbft-safety}). The repair map admits a quantum-channel formulation via the Petz
+recovery map (Definition~\ref{def:oph-repair-map}), but the \textrm{CPTP} property on all inputs
+requires either full-rank $\mathcal{N}(\sigma)$ or an explicit domain restriction; trace-preserving
+completion is not automatic when $\mathcal{N}(\sigma)$ has a non-trivial kernel
+(Proposition~\ref{prop:petz-cptp}). A quantum error-correcting interpretation is possible under
+additional topological structure, but the code-distance / min-cut equality requires explicit
+conditions on logical-operator homology and boundary geometry (Claim~\ref{claim:qecc-mincut}). All
+of these extensions are conditional or conjectural and are not part of the core theorem package of
+Paper~4.
+
 
 \appendix
 \section{Quantum/Algebraic Lift: Markov-Collar Splice Theorem}\label{app:splice}
@@ -628,14 +705,77 @@ The final inequality is the standard Fawzi--Renner recovery bound~\cite{fawziRen
 
 This appendix therefore uses exact splice identities in only two regimes: literal exact Markovity, or a controlled collar family on one fixed finite-dimensional model for which \(\delta^{\mathrm M}_{A:B:D}(\varepsilon)\to0\). Small one-shot conditional mutual information is not silently upgraded to an exact normal form.
 
+\section{Conditional Distributed-Systems and QECC Extensions of the Consensus Formalism}\label{app:bft-qecc}
+\input{appendix_B_bft_qecc_extensions}
 
-\begin{thebibliography}{9}
+\begin{thebibliography}{99}
 
 \bibitem{OPH}
 B.~M\"uller,
 \emph{Observers Are All You Need},
-2026.
+2026.\\
 Available at \url{https://oph-book.floatingpragma.io/papers/observers_are_all_you_need.pdf}.
+
+\bibitem{FLP85}
+M.~J.~Fischer, N.~A.~Lynch, and M.~S.~Paterson,
+``Impossibility of distributed consensus with one faulty process,''
+\emph{J.\ ACM} \textbf{32} (1985), no.~2, 374--382.
+
+\bibitem{Lamport1982}
+L.~Lamport, R.~Shostak, and M.~Pease,
+``The Byzantine generals problem,''
+\emph{ACM Trans.\ Program.\ Lang.\ Syst.} \textbf{4} (1982), no.~3, 382--401.
+
+\bibitem{DLS88}
+C.~Dwork, N.~A.~Lynch, and L.~Stockmeyer,
+``Consensus in the presence of partial synchrony,''
+\emph{J.\ ACM} \textbf{35} (1988), no.~2, 288--323.
+
+\bibitem{Moniz2020}
+H.~Moniz,
+\emph{The Istanbul BFT Consensus Algorithm},
+arXiv:2002.03613, 2020.
+
+\bibitem{Saltini}
+R.~Saltini et al.,
+\emph{QBFT Formal Specification and Verification}.
+Available at \url{https://github.com/Consensys/qbft-formal-spec-and-verification}.
+
+\bibitem{Petz1986}
+D.~Petz,
+``Sufficient subalgebras and the relative entropy of states of a von Neumann algebra,''
+\emph{Commun.\ Math.\ Phys.} \textbf{105} (1986), no.~1, 123--131.
+
+\bibitem{FagnolaUmanita2010}
+F.~Fagnola and V.~Umanit\`a,
+``Generators of detailed balance quantum Markov semigroups,''
+\emph{Infinite Dimensional Analysis, Quantum Probability and Related Topics}
+\textbf{13} (2010), no.~3, 459--486.
+
+\bibitem{Junge2018}
+M.~Junge et al.,
+``Universal recovery maps and approximate sufficiency of quantum relative entropies,''
+\emph{Ann.\ Henri Poincar\'e} \textbf{19} (2018), no.~8, 2505--2555.
+
+\bibitem{KL97}
+E.~Knill and R.~Laflamme,
+``Theory of quantum error-correcting codes,''
+\emph{Phys.\ Rev.\ A} \textbf{55} (1997), no.~2, 900--911.
+
+\bibitem{Kitaev2003}
+A.~Kitaev,
+``Fault-tolerant quantum computation by anyons,''
+\emph{Ann.\ Phys.} \textbf{303} (2003), no.~1, 2--30.
+
+\bibitem{Dennis2002}
+E.~Dennis, A.~Kitaev, A.~Landahl, and J.~Preskill,
+``Topological quantum memory,''
+\emph{J.\ Math.\ Phys.} \textbf{43} (2002), no.~9, 4452--4505.
+
+\bibitem{BCW98}
+H.~Buhrman, R.~Cleve, and A.~Wigderson,
+``Quantum vs.\ classical communication and computation,''
+in \emph{Proceedings of STOC 1998}, pp.~63--68.
 
 \bibitem{fawziRenner15}
 O.~Fawzi and R.~Renner,

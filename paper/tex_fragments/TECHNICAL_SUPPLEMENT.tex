@@ -8,7 +8,7 @@ The quantitative branches discussed in this paper use two external inputs (\(P\)
 
 This document collects the mathematical derivations and stated premises used in the OPH paper suite. The Lorentz/null-modular/Einstein and compact-gauge statements are scaling-limit / categorical results under explicit regularity hypotheses; these hypotheses are properties of the EFT phase or UV completion under discussion, not fixed-cutoff matrix-algebra theorems.
 
-\textbf{Scope convention.} Statements about Lorentz recovery, modular flow, and the Einstein branch are scaling-limit / EFT statements rather than literal fixed-cutoff type-I claims. Statements about gauge reconstruction refer to the refinement-stable directed colimit of fixed-cutoff sector categories, not to the finite block list at one regulator scale.
+\textbf{Scope convention.} Statements about Lorentz recovery, modular flow, and the Einstein branch are scaling-limit / EFT statements rather than literal fixed-cutoff type-I claims. Statements about gauge reconstruction refer to the refinement-stable directed colimit of fixed-cutoff sector categories together with the explicit rigid/symmetric bosonic fiber-functor premises of \(T4\)--\(T6\), not to the finite block list at one regulator scale.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -21,6 +21,17 @@ The five axioms, the canonical technical-premise ledger \(T1\)--\(T6\), and the 
 The supplement follows the canonical premise scheme of the main manuscript. The only labeled external premises are \(T1\)--\(T6\). The fixed-cutoff realized presentation, the local-Gibbs form, quasi-local propagation, endpoint-Lipschitz interval control, and refinement-stable branch persistence described below are unpackings or consequences of the OPH axioms rather than additional labeled assumptions.
 
 \textbf{Fixed-cutoff realized presentation.} On a finite regulator cellulation, each regulator cell \(x\) carries a finite-dimensional factor \(\mathfrak h_x\), and local patch algebras are finite type-I algebras. Gauge-as-gluing is realized as a compact boundary redundancy action on cut data, so physical algebras are fixed-point algebras of the corresponding boundary action. This is the realized regulator form of Axiom 1 plus overlap consistency; it is not a separate premise layer.
+
+\textbf{Repair descent on the physical algebra.} In the consensus package, the physical repair law
+is defined on that overlap-invariant physical data rather than on hidden representatives. In the
+finite-patch-net notation, if \(q:\Sigma\to\Sigma/\Gamma\) is the quotient by boundary redundancy
+and \(\overline T_i\) is the physical quotient update, a representative-level map \(T_i\) is only
+required to be a lift satisfying \(q\circ T_i=\overline T_i\circ q\). Therefore
+\(q(T_i(\gamma\cdot s))=q(T_i(s))\) for gauge-equivalent inputs. Quotient descent is thus forced by
+the same overlap-invariant algebraic structure that defines the physical algebra; strict
+representative-level covariance of a chosen lift is implementation bookkeeping, not an extra
+theorem-level premise. This does not yet derive the physical repair law itself from recoverability
+dynamics; that remains the separate upstream burden of the consensus branch.
 
 \textbf{Local finite-constraint MaxEnt branch.} Axiom 3 states that at scale \(\ell_{\mathrm{UV}}\) the realized state maximizes entropy subject to a finite set of gauge-invariant local constraints
 \[
@@ -67,7 +78,7 @@ This is the endpoint-Lipschitz / finite-variation control imported later into th
 \]
 for an induced map \(R_{\ell\to L}\) on that multiplier space. The phrase ``refinement-stable branch'' therefore means persistence along a trajectory or invariant subset of this finite-dimensional map. This state-side refinement notion is enough to compare realized states across cutoffs. It does \emph{not} by itself upgrade fixed-cutoff edge labels to transportable refinement-persistent sectors, and it does not show that the directed colimit of such sectors is nontrivial. In particular, when the gauge branch later speaks of a refinement-stable directed colimit of sectors, the entire transportable directed-system/fiber clause is the explicit content of \(T6\); Axiom 3 supplies only the realized state branch along which one asks whether such sector transport persists.
 
-\textbf{What remains external.} This internalization claim stops at the fixed-cutoff local-Gibbs/Lieb--Robinson/refinement package. Quantitative exponential mixing or exact-Markov replacement, when invoked later, is separate state information tied to the recoverability side of Axiom 4 rather than to Axiom 3 alone. The genuinely external technical premises are therefore exactly the canonical list \(T1\)--\(T6\): the controlled scaling-limit scope clause, fixed-cap stationarity, vanishing transport obstruction when global sector transportability is invoked, and the transportable sector-colimit plus symmetric/bosonic/fiber-functor conditions used in gauge reconstruction; the geometric cap-pair extraction and ordered cut-pair rigidity inputs remain theorem-local UV objects rather than separate global labels. No separate regulator premise for quasi-local propagation or refinement stability survives once Axiom 3 is unpacked in this way.
+\textbf{What remains external.} This internalization claim stops at the fixed-cutoff local-Gibbs/Lieb--Robinson/refinement package. Quantitative exponential mixing or exact-Markov replacement, when invoked later, is separate state information tied to the recoverability side of Axiom 4 rather than to Axiom 3 alone. The genuinely external technical premises are therefore exactly the canonical list \(T1\)--\(T6\): the controlled scaling-limit scope clause, fixed-cap stationarity, and the explicit gauge-side package used in ordinary compact reconstruction. Within that package, \(T1\) keeps the loop-coherence branch criterion explicit on the central compact-group route, while the genuinely noncentral fixed-cutoff branch is handled separately by higher-gauge data rather than by the ordinary DR theorem. The geometric cap-pair extraction and ordered cut-pair rigidity inputs remain theorem-local UV objects rather than separate global labels. No separate regulator premise for quasi-local propagation or refinement stability survives once Axiom 3 is unpacked in this way.
 
 \textbf{Proposition 1.0a (Ancilla-stable UV underdetermination).} Let a fixed-cutoff OPH realization be stabilized by finite ancillary factors \(K_P\) in a fixed product state, with observable patch algebras embedded as \(\mathcal A(P)\otimes \mathbf 1_{K_P}\) and repair dynamics acting trivially on the ancillas. Then observable expectations on the physical subalgebras, overlap data, the local-Gibbs branch, the collar conditional mutual information \(I(A:D\mid B)\), the Fawzi--Renner remainder, the collar Markov modulus, and the quotient normal form are unchanged. Thus OPH determines the UV branch only modulo such ancillary stabilization together with gauge or implementation hiding, not a unique microscopic presentation.
 
@@ -1097,7 +1108,7 @@ For Schwarzschild, a sector transition \(d \to d'\) gives: \[\Delta E = k_B T_H 
 
 \section{Cosmological Constant and Screen-Capacity Framework}\label{8-the-cosmological-constant-problem}
 
-This section is one local/global package rather than two disconnected remarks. The local null-modular reconstruction fixes the Einstein branch only up to a metric term \(\phi g_{ab}\), so it cannot determine \(\Lambda\) from local overlap data alone. The remaining constant enters only when one supplies the global screen-capacity identification, which then yields the D6 relation \(\Lambda = 3\pi/(G N_{\mathrm{scr}})\).
+This section is one local/global package rather than two disconnected remarks. The local null-modular reconstruction fixes the Einstein branch only up to a metric term \(\phi g_{ab}\), so it cannot determine \(\Lambda\) from local overlap data alone. The remaining constant enters only when one supplies the global screen-capacity identification, which then yields the D6 relation \(\Lambda = 3\pi/(G N_{\mathrm{scr}})\). Equivalently, D5 is the local Einstein-recovery branch and D6 is the adjacent global-capacity closure of that same branch.
 
 \subsection{Vacuum Energy Blindness}\label{81-vacuum-energy-blindness}
 
@@ -1127,7 +1138,7 @@ Equivalently, using de Sitter entropy: \[S_{dS} = \frac{A_{dS}}{4G} = \frac{3\pi
 
 For observed \(\Lambda \approx 1.09 \times 10^{-52}\) m\(^{-2}\): \[N_{\mathrm{scr}} \sim 10^{122}\]
 
-Together with Proposition~8.2 and Theorem~8.3, this makes the intended theorematic split explicit: local null data determine the Einstein branch only modulo \(\Lambda g_{ab}\), and the global screen-capacity input fixes the remaining constant.
+Together with Proposition~8.2 and Theorem~8.3, this makes the intended theorematic split explicit: D5 determines the local Einstein branch only modulo \(\Lambda g_{ab}\), and D6 fixes the remaining constant by the global screen-capacity input.
 
 \subsection{\texorpdfstring{No-Go for Local \(\Lambda\) Prediction}{No-Go for Local Lambda Prediction}}\label{84-no-go-for-local-ux3bb-prediction}
 
@@ -1223,7 +1234,7 @@ This section separates three distinct claim types:
 
 If \(H_\partial = H_\partial^{(1)} + H_\partial^{(2)} + H_\partial^{(3)}\) with \([H_\partial^{(i)}, H_\partial^{(j)}] = 0\): \[p(R_1, R_2, R_3) \propto \prod_{i=1}^3 d_{R_i} e^{-t_i C_2(R_i)}\]
 
-Applied to the refinement-stable edge-sector colimit, Tannaka-Krein reconstruction~\cite{tannaka38,krein49,dr89,dr90} first yields some compact group \(G\). Under the MAR admissibility package, and once the admissible class includes one connected abelian charge factor, the connected Lie realization selected by MAR is \(SU(3) \times SU(2) \times U(1)\) (up to finite quotient).
+Applied to the refinement-stable edge-sector colimit together with the rigid symmetric \(C^*\)-tensor and faithful bosonic fiber-functor premises of the compact-gauge theorem, Tannaka-Krein reconstruction~\cite{tannaka38,krein49,dr89,dr90} first yields some compact group \(G\). Under the MAR admissibility package, and once the admissible class includes one connected abelian charge factor, the connected Lie realization selected by MAR is \(SU(3) \times SU(2) \times U(1)\) (up to finite quotient).
 
 Under the stated gauge-selection hypotheses, the explicit MAR selector picks this product structure on the admissible class: the minimal coupled carrier \(\mathbb{C}^3 \otimes \mathbb{C}^2\) enforces commuting color and weak actions, which implies the additive boundary Laplacian. See the gauge-branch derivation in the main OPH trunk for the complete proof.
 
@@ -1816,8 +1827,8 @@ Node & Output & Standard mathematics used & Extra premises / inputs beyond the f
 \textbf{D4} & null modular bridge to \(T_{kk}\) & Borchers--Wiesbrock; distributional differentiation on half-lines & the theorem-local inherited-strip decomposition and exact-or-controlled Markov hypotheses of Section~\ref{23-null-modular-bridge-eft-conditions-n1-n3}, plus the downstream density-upgrade and relativistic null-stress-identification premises; the endpoint/propagation controls are internal to the local finite-constraint MaxEnt branch & Phase I conditional bridge theorem \\
 \textbf{D5} & Jacobson-type rest-frame relation plus the conditional tensor upgrade & Jacobson small-ball mathematics; null-to-tensor reconstruction modulo a metric term & T4 together with the locally Lorentzian \(d=4\) scaling regime and the all-directions/all-reference-states premise used in the tensor upgrade & Phase I conditional scaling-limit theorem/corollary \\
 \textbf{D6} & capacity/\(\Lambda\) corollary and the separate capacity-based neutrino estimate & de Sitter entropy relation and dimensional analysis & external input \(N_{\mathrm{scr}}\) and the screen-capacity identification & Phase II input-dependent corollary / estimate \\
-\textbf{D7} & compact gauge reconstruction in the bosonic branch & Doplicher--Roberts / Tannaka reconstruction & T1 and T4--T5 together with T6's directed-colimit/fiber premise for transportable edge sectors; the local-Gibbs/Dobrushin-type collar package supplies only fixed-cutoff support and recoverability control and does not by itself prove existence, persistence, triviality, or nontriviality of the refinement-limit sector colimit & Phase I conditional structural theorem \\
-\textbf{D8} & product structure up to finite quotient on the realized branch & compact Lie representation classification; Schur's lemma & MAR, connected admissible class, one connected abelian factor, and vanishing relevant transport obstruction & Phase I realized-branch theorem \\
+\textbf{D7} & compact gauge reconstruction in the bosonic branch & Doplicher--Roberts / Tannaka reconstruction & T1 and T4--T5 together with T6's directed-colimit/fiber premise for transportable edge sectors on the ordinary or central-defect bosonic branch; the genuinely noncentral fixed-cutoff branch is handled separately by crossed-module data and is not itself the ordinary compact-group reconstruction theorem & Phase I conditional structural theorem \\
+\textbf{D8} & product structure up to finite quotient on the realized branch & compact Lie representation classification; Schur's lemma & the same ordinary or central-defect bosonic branch as D7, together with MAR, a connected admissible class, one connected abelian factor, and faithful action on the minimal coupled carrier & Phase I realized-branch theorem \\
 \textbf{D9} & exact hypercharges, the counting chain \(N_g=3\) then \(N_c=3\), and the \(\mathbb Z_6\) quotient & anomaly algebra; Witten anomaly; CKM CP counting & realized one-generation/one-Higgs package and MAR admissibility premises & Phase I realized-branch theorem/corollary chain \\
 \end{longtable}
 }
