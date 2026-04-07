@@ -605,7 +605,7 @@ Not directly, and for good reason. The proton mass is a qualitatively different 
 
 The photon and graviton masses are symmetry-protected zeros. Their values are fixed by the algebraic structure of the theory-any deviation would break a required redundancy. The argument is exact and does not depend on knowing coupling constants or solving difficult equations.
 
-Not all mass claims have the same character. The cleanest results are the symmetry-protected zeros: photon, gluons, and graviton. The next easiest are masses tied closely to electroweak structure, such as the $W$ and $Z$. The Higgs, the top quark, and several quark masses lie on the emitted continuation branch. Hadrons are hardest because they require solving the full strongly coupled dynamics of bound states.
+Not all mass claims have the same character. The cleanest results are the symmetry-protected zeros: photon, gluons, and graviton. The next easiest are masses tied closely to electroweak structure, such as the $W$ and $Z$. The Higgs/top lane and the neutrino lane now sit on explicit quantitative branches, while quarks remain on narrower continuation surfaces. Hadrons are hardest because they require solving the full strongly coupled dynamics of bound states.
 
 The proton mass is a bound-state eigenvalue in a strongly coupled gauge theory. The proton is made of three quarks held together by gluons, and its mass emerges from the complicated nonperturbative dynamics of quantum chromodynamics. The dominant contribution is not the masses of the constituent quarks (which sum to only about 10 MeV) but the energy stored in the gluon field and the kinetic energy of the quarks bouncing around inside.
 
@@ -689,7 +689,7 @@ The photon and graviton are particles the theory *forces* upon us. The photon ex
 
 The quarks and leptons aren't arbitrary. Their charges are fixed by the requirement that reality be self-consistent. Three generations and three colors are not inserted by hand; they are the smallest answer that survives the combined demands of chirality, CP violation, anomaly cancellation, and ultraviolet consistency.
 
-That is a remarkably concrete result. The framework does not merely say that "symmetry matters." It points to a very specific gauge structure, charge pattern, generation count, and color count. It reaches the massless carriers, the $W$ and $Z$, the Higgs, the top quark, and several quark masses. The remaining work sits mostly in flavor completion and in strongly coupled bound states.
+That is a remarkably concrete result. The framework does not merely say that "symmetry matters." It points to a very specific gauge structure, charge pattern, generation count, and color count. It reaches the massless carriers, the $W$ and $Z$, a quantitative Higgs/top lane, a theorem-grade neutrino family, and several quark continuation outputs. The remaining work sits mostly in charged-lepton closure, the remaining quark closure steps, and strongly coupled bound states.
 
 This chapter has shown how particles emerge from the screen as stable patterns that transform under emergent symmetries. But how does spacetime itself emerge? How does Einstein's relativity fit into this picture?
 

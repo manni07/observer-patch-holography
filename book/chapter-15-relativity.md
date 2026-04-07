@@ -527,11 +527,11 @@ This term gravitates. But it's not made of particles. It's made of information d
 ### Why It's Dark
 
 The anomaly sector is dark by construction:
-- It doesn't couple to light (no electromagnetic interaction)
-- It doesn't interact with normal matter except through gravity
-- It's collisionless (no self-interaction that would cause clumping)
+- It comes from information-theoretic structure, not from a Standard Model field
+- It gravitates
+- It does not couple electromagnetically
 
-This gives the anomaly sector the right structural profile for a dark component.
+This gives the anomaly sector the right structural profile for a dark component. The detailed response law is still open.
 
 ### The MOND Scale
 

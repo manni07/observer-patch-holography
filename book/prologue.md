@@ -124,7 +124,7 @@ work out the consequences, the results are extraordinary:
 
 - **Gravity** emerges from how observers share entanglement across their screens
 - **The particle zoo** emerges from the symmetry structure forced by the framework
-- **Dark energy and dark matter** get a natural starting point, though the full story is still being worked out
+- **The dark sector** gets a structured starting point, though the response laws and phenomenology are still being worked out
 - **Why anything exists at all** enters the story through a self-referential closure picture
 
 Once you make this shift, strange features of reality start making sense.
@@ -164,7 +164,7 @@ This book reverse engineers reality from first principles.
 We start with a minimal assumption: observers exist, they have bounded
 access to information, and they must agree where their observations overlap.
 
-The framework needs only two numerical inputs from experiment: the size of a single "pixel" on the holographic screen, in Planck units, and the total screen capacity inferred from the cosmological constant. From there, the goal is to recover gravity, gauge structure, and the particle story from observer consistency instead of putting them in by hand. Already the framework reaches gravity, the Standard Model gauge structure, three generations, three colors, and the massless carriers. It also reaches the W and Z, with the Higgs, the top quark, and several quark masses already on the board, while charged leptons, the neutrino sector, and hadrons remain active work.
+The framework needs only two numerical inputs from experiment: the size of a single "pixel" on the holographic screen, in Planck units, and the total screen capacity inferred from the cosmological constant. From there, the goal is to recover gravity, gauge structure, and the particle story from observer consistency instead of putting them in by hand. Already the framework reaches gravity, the Standard Model gauge structure, three generations, three colors, and the massless carriers. It also reaches the W and Z, carries a quantitative Higgs/top lane and a theorem-grade neutrino family, and puts several quark masses on explicit continuation surfaces, while charged leptons and hadrons remain active work.
 
 From this starting point, we derive constraints. We show how the mathematical
 structures of quantum mechanics and relativity emerge from consistency

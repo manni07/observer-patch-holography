@@ -271,11 +271,11 @@ $$V^4 = G \cdot M_b \cdot a_0^{(\text{OPH})}$$
 
 This has the observed Tully-Fisher form, with the normalization benchmark determined by screen capacity in the ansatz.
 
-**No new particles are required at the level of the ansatz.** The "dark matter" would be an effective correction to gravity at large scales, not a new species of particle.
+**This continuation does not need new particles at the level of the ansatz.** The extra pull would come from an effective gravity-side contribution at large scales, not from a new matter species.
 
 ### The Status
 
-This is not yet a finished dark-matter theory. What we have is:
+This is not yet a finished dark-matter theory. It is a continuation branch, not part of the recovered core. What we have is:
 
 - The modular anomaly term exists with a fixed coefficient
 - The de Sitter scale $r_{dS}$ is determined by screen capacity

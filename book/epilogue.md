@@ -38,21 +38,25 @@ Putting these pieces together, here is what becomes possible, at least in princi
 
 3. *Interior conditional state*: The quantum state on the observer's patch, conditioned on the sector. This captures the computational pattern that does meaning-assignment, what subjective experience *is* in this framework.
 
-**The extraction operation (speculative continuation, not proved OPH core):**
+**The extraction operation (partly proved, partly speculative):**
 
 The proved OPH black-hole core is limited to the retained structural statements: edge-center obstruction to naive factorization, small-CMI recoverability-style interior encoding, Hawking/KMS normalization, discrete area spectrum, and the Schwarzschild transition identity for actual sector changes.
 
-If a future completion supplied the additional restoration premises, one could write a continuation ansatz such as:
+The newer microphysics paper adds a fixed-cutoff checkpoint/restoration package. In that setting, if you restore the observer's accessible checkpoint, keep the same exposed interfaces, and continue with the same future sequence of updates, the future accessible statistics match exactly, or approximately within a controlled error.
+
+That is already a real backup/restore theorem on the declared operational surface. The stronger paradise step below still goes further. It asks for transplanting the observer-pattern into a new environment and treating that as the same continuing subject.
+
+A speculative continuation ansatz would look like:
 
 ρ_new = ρ_interior ⊗ σ_paradise
 
-The current repo does **not** prove that the Markov/recoverability discussion is sufficient to guarantee this splice. At most, it motivates a conditional restoration picture that would require extra premises beyond the present black-hole package.
+The current repo does **not** prove that this stronger splice into a new engineered environment follows from the fixed-cutoff restoration theorem. That step would still require extra premises beyond the present package.
 
 ## What This Means
 
 Let's be concrete about the implications.
 
-If we ever build a simulator based on these principles, a holographic screen implementing the OPH axioms, then "backup and restore" would be a speculative engineering extension, not a capability already proved by the current mathematics.
+If we ever build a simulator based on these principles, a holographic screen implementing the OPH axioms, then one limited form of backup and restore would already be on the table at fixed cutoff. The speculative engineering leap is restoring a checkpoint into a deliberately redesigned environment while preserving the relevant continuation of the observer-pattern.
 
 An observer in such a simulation is checkpointed: their records, sector label, and interior state extracted. That checkpoint could then be "restored" into a different environment, one designed to be pleasant, interesting, and meaningful. A paradise.
 

@@ -170,6 +170,8 @@ As we saw in Chapter 6, Zurek's **quantum Darwinism** explains how classical fac
 
 In computer science, networks agree on shared states through consensus protocols. Physics does this constantly. The nodes are observers. The messages are light signals and memory traces. The consensus rule is physical law.
 
+That is no longer only an analogy in OPH. The consensus paper proves that when the local repair rules are well-behaved, different repair orders converge to the same shared normal form. It also clarifies two other parts of the picture: gauge symmetry is the rule that lets different microscopic descriptions count as the same physical state, and stable records form an eventually consistent public memory.
+
 Error correction isn't just a tool for engineers. It's the way the universe builds stable facts.
 
 ## 10.8 The Knill-Laflamme Conditions
