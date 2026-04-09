@@ -31,7 +31,7 @@ The Fixed-Point Computation That Implements Physics}
 \OPHPaperReleaseBanner
 
 \begin{abstract}
-This paper gives the consensus-theoretic core of Observer-Patch Holography (OPH). If physics is built from local observer descriptions that must agree on overlaps, the first question is whether different repair orders lead to different worlds. On the fixed-cutoff OPH collar branch, the local repair step is not left as an abstract rewrite primitive: it is read from exact Markov splice on exact collars or from declared Petz/Fawzi--Renner reconciliation on recoverable collars, and committed only under the declared local-fit contract on the overlaps it touches. That contract makes the OPH inconsistency potential \(\Phi\) a Lyapunov functional for the accepted repair moves, so the repair dynamics terminates; once repair completeness and local confluence hold, it has a unique schedule-independent normal form. The paper also identifies the loop obstructions to global consistency, shows why physical uniqueness belongs on the gauge quotient rather than on raw microscopic representatives, and gives a fixed-point account of stable classical records. This is the finite patch-net theorem package that supports the broader relativity, gauge, particle, and observer branches in the OPH suite.
+This paper gives the consensus-theoretic core of Observer-Patch Holography (OPH). If physics is built from local observer descriptions that must agree on overlaps, the first question is whether different repair orders lead to different worlds. On the fixed-cutoff collar branch, the local repair step is not left as an abstract rewrite primitive: it is read from exact Markov splice on exact collars or from declared Petz/Fawzi--Renner reconciliation on recoverable collars, and committed only under the declared local-fit contract on the overlaps it touches. That contract makes the inconsistency potential \(\Phi\) a Lyapunov functional for the accepted repair moves, and the fixed-cutoff union-collar gluing package makes overlapping repairs parenthesization-independent on the physical quotient. Under repair completeness, the repair dynamics therefore has a unique schedule-independent normal form. The paper also identifies the loop obstructions to global consistency, shows why physical uniqueness belongs on the gauge quotient rather than on raw microscopic representatives, and gives a fixed-point account of stable classical records. This is the finite patch-net theorem package that supports the broader relativity, gauge, particle, and observer branches in the OPH suite.
 \end{abstract}
 
 \section{Introduction}
@@ -44,9 +44,10 @@ admits a unique normal form and how global obstructions to reconciliation are en
 
 The resulting theorem package has two layers. The first layer concerns convergence: the declared
 local-fit contract on touched overlaps makes \(\Phi\) a Lyapunov functional for accepted repair
-moves, so termination is derived on the finite patch net; once repair completeness and local
-confluence hold on that declared branch, every initial configuration has a unique
-schedule-independent normal form. The second layer concerns obstructions: pairwise overlap agreement does not ensure a
+moves, so termination is derived on the finite patch net; the fixed-cutoff union-collar gluing
+package then turns competing local repairs into a local diamond on the physical quotient, so
+under repair completeness every initial configuration has a unique schedule-independent normal
+form. The second layer concerns obstructions: pairwise overlap agreement does not ensure a
 global solution, and the obstruction is holonomic. On the abelian branch it is the cycle sum of
 edge data; on the genuinely noncentral branch it is a crossed-module \v{C}ech class.
 
@@ -60,7 +61,7 @@ literature.
 This paper proves four core results:
 
 \begin{enumerate}
-\item \textbf{Asynchronous confluence.} For the declared accepted repair law, the local-fit contract makes \(\Phi\) a Lyapunov functional and hence gives termination; under repair completeness and local confluence, every initial state has a unique normal form, independent of update schedule (Theorem~\ref{thm:confluence}).
+\item \textbf{Asynchronous confluence.} For the declared accepted repair law, the local-fit contract makes \(\Phi\) a Lyapunov functional and hence gives termination, while the fixed-cutoff union-collar gluing package gives the local diamond on the physical quotient; under repair completeness, every initial state has a unique normal form, independent of update schedule (Theorem~\ref{thm:confluence}).
 \item \textbf{Cycle obstruction.} For affine overlap constraints over an abelian group, global consistency holds if and only if the holonomy vanishes on every cycle (Theorem~\ref{thm:holonomy}). The parity triangle gives the minimal frustrated example, and Theorem~\ref{thm:higherdefects} extends the same logic to the crossed-module higher-gauge defect hierarchy used later in OPH.
 \item \textbf{Gauge quotient.} When local repair is induced on the overlap-invariant quotient, the normal-form map descends to that quotient. Gauge-invariant observables are strictly unique there, even though microscopic representatives need not be unique (Theorem~\ref{thm:gauge}).
 \item \textbf{Record-layer convergence.} Commuting closure operators on a finite lattice converge to the least common fixed point under any asynchronous schedule that applies each operator at least once (Theorem~\ref{thm:crdt}).
@@ -69,10 +70,11 @@ This paper proves four core results:
 The repair step itself is not a free rewrite primitive here. On the
 fixed-cutoff collar branch, a local update is obtained from exact Markov splice or from a
 declared Petz/Fawzi--Renner recovery channel and then read on overlap-invariant physical data.
-The fixed-point theorem below isolates the separate remaining burdens cleanly: the declared
-repair law includes the touched-overlap local-fit contract that yields Lyapunov descent of
-\(\Phi\) on accepted moves, so the remaining burdens are repair completeness, local
-confluence, and, on the Petz branch, the support/CPTP clause stated later in
+The fixed-point theorem below still isolates the separate remaining burdens cleanly: the declared
+repair law already includes the touched-overlap local-fit contract that yields Lyapunov descent of
+\(\Phi\) on accepted moves, while the fixed-cutoff gluing package supplies the
+parenthesization-independent union-collar glue used for the local diamond. What remains above
+that step is repair completeness and, on the Petz branch, the support/CPTP clause stated later in
 Proposition~\ref{prop:petz-cptp}.
 
 We also define a fitness functional over the space of candidate reconciliation laws and prove that replicator dynamics monotonically increases mean fitness (Theorem~\ref{thm:replicator}). This gives a clean mathematical model for the selection of physical law.
@@ -179,14 +181,39 @@ This is the patch-net form of the regulator-side monotone local-fit contract car
 declared repair package.
 \end{definition}
 
+\begin{definition}[Overlap-associative union-collar gluing]\label{def:assoc}
+Fix \(s\in\Sigma\) and two enabled repairs \(s\to_i t\), \(s\to_j u\). Write
+\[
+E_{ij}^{\mathrm{touch}}
+:=
+E_i^{\mathrm{touch}}\cup E_j^{\mathrm{touch}}.
+\]
+The declared repair branch is \textbf{overlap-associative} if the following hold.
+\begin{enumerate}[label=(\roman*),leftmargin=2em]
+\item If \(E_i^{\mathrm{touch}}\cap E_j^{\mathrm{touch}}=\varnothing\), the two accepted local
+updates have disjoint support on the declared branch and therefore commute.
+\item If \(E_i^{\mathrm{touch}}\cap E_j^{\mathrm{touch}}\neq\varnothing\), there is a finite union
+collar \(U_{ij}\) covering the interfaces in \(E_{ij}^{\mathrm{touch}}\) such that the physical
+glued state on \(U_{ij}\) is parenthesization-independent on the quotient, in the sense of
+Proposition~\ref{prop:assocglue}, and the local decoders/lifts of
+Definition~\ref{def:repair} are restriction-compatible on nested collars.
+\end{enumerate}
+This is the concrete compatibility package used below to complete the local diamond.
+\end{definition}
+
 \begin{remark}[Inputs and remaining burdens]\label{rem:repair-burdens}
 The repair step is therefore not an abstract rewrite primitive. Its declared inputs are the
 fixed-cutoff collar chart, either exact Markov splice or a chosen Petz/Fawzi--Renner recovery
 channel, a local decoder/lift back to the finite patch presentation, and the touched-overlap
-local-fit contract of Definition~\ref{def:localfit}. What the present theorem package assumes is
-repair completeness and local confluence. On the Petz branch, full
-CPTP action on all inputs also requires the support clause recorded later in
-Proposition~\ref{prop:petz-cptp}.
+local-fit contract of Definition~\ref{def:localfit}, together with the support-local
+disjoint-commutation clause and the restriction-compatible union-collar package of
+Definition~\ref{def:assoc}. The
+parenthesization-independent quotient-local glue used there is supplied by
+Proposition~\ref{prop:assocglue} from the fixed-cutoff center-sector / higher-gauge gluing
+package. What the present theorem package still assumes rather than derives is repair
+completeness. On the Petz branch, full CPTP action on all inputs also requires the support clause
+recorded later in Proposition~\ref{prop:petz-cptp}. On broader branches one must also prove that
+the declared union-collar compatibility is preserved under refinement or branch change.
 \end{remark}
 
 The theorem package separates the imported repair-law data from the remaining theorem-local inputs cleanly:
@@ -228,15 +255,36 @@ sequence would therefore produce an infinite strictly descending chain in the fi
 \(\Phi(\Sigma)\), which is impossible.
 \end{proof}
 
-\begin{assumption}[Local confluence]\label{ass:confluence}
-The repair relation is locally confluent: if $s\to t$ and $s\to u$, then there exists $v\in\Sigma$ with $t\to^* v$ and $u\to^* v$.
-\end{assumption}
+\begin{proposition}[Local confluence from overlap-associative gluing]\label{prop:local-confluence}
+For the accepted repair law of Definitions~\ref{def:repair}, \ref{def:localfit}, and
+\ref{def:assoc}, the repair relation is locally confluent.
+\end{proposition}
 
-This is the diamond condition for the repair relation.
+\begin{proof}
+Take \(s\to_i t\) and \(s\to_j u\).
+If \(E_i^{\mathrm{touch}}\cap E_j^{\mathrm{touch}}=\varnothing\), then
+Definition~\ref{def:assoc}(i) gives
+\[
+T_j^\lambda(T_i^\lambda(s))=T_i^\lambda(T_j^\lambda(s)).
+\]
+So with \(v:=T_j^\lambda(T_i^\lambda(s))\) we have \(t\to_j v\) and \(u\to_i v\).
+
+Assume now \(E_i^{\mathrm{touch}}\cap E_j^{\mathrm{touch}}\neq\varnothing\). Let \(U_{ij}\) be the
+union collar from Definition~\ref{def:assoc}(ii), and let \(\overline v_{ij}(s)\) denote the
+quotient-local glued state on \(U_{ij}\) determined by the exterior marginals of \(s\).
+Proposition~\ref{prop:assocglue} makes this state independent of whether the local
+splice/recovery is parenthesized as \(i\) then \(j\) or \(j\) then \(i\). Because the local
+decoders are restriction-compatible on nested collars, the one-site repairs \(s\to_i t\) and
+\(s\to_j u\) are precisely the \(i\)- and \(j\)-restrictions of \(\overline v_{ij}(s)\).
+Applying that same restriction-compatible decoder to the unfinished subcollar therefore produces
+the complementary accepted local step from \(t\) and from \(u\) into representatives of the same
+quotient-local union-collar state. Hence there exists \(v\in\Sigma\) with \(t\to^* v\) and
+\(u\to^* v\), where \(v\) is any representative of \(\overline v_{ij}(s)\).
+\end{proof}
 
 \begin{theorem}[Asynchronous confluence / fixed-point law]\label{thm:confluence}
-For the accepted repair law of Definitions~\ref{def:repair} and \ref{def:localfit}, under
-Assumptions~\ref{ass:complete} and \ref{ass:confluence}, every initial state $s\in\Sigma$ has a unique normal form
+For the accepted repair law of Definitions~\ref{def:repair}, \ref{def:localfit}, and
+\ref{def:assoc}, under Assumption~\ref{ass:complete}, every initial state $s\in\Sigma$ has a unique normal form
 \[
 \operatorname{nf}_\lambda(s)\in C,
 \]
@@ -245,16 +293,11 @@ and every maximal asynchronous repair execution from $s$ terminates at that same
 
 \begin{proof}
 By Proposition~\ref{prop:lyapunov-termination}, the repair relation \(\to\) is terminating.
-
-We prove confluence by well-founded induction on the finite ordered set \(\Phi(\Sigma)\). Take any
-$s\in\Sigma$ and suppose $s\to^* t$ and $s\to^* u$. We must show $t$ and $u$ have a common descendant.
-
-If one reduction has length~0, there is nothing to prove. Otherwise write $s\to s_1\to^* t$ and $s\to s_2\to^* u$. By local confluence, there exists $w$ with $s_1\to^* w$ and $s_2\to^* w$. Since $s\to s_1$ and $s\to s_2$, Proposition~\ref{prop:lyapunov-descent} gives $\Phi(s_1)<\Phi(s)$ and $\Phi(s_2)<\Phi(s)$. The induction hypothesis applies at $s_1$ and $s_2$. Hence $t$ and $w$ have a common descendant, and $u$ and $w$ have a common descendant. Therefore $t$ and $u$ have a common descendant.
-
-A terminating confluent repair relation has a unique normal form reachable from each initial
-state. By Assumption~\ref{ass:complete}, the normal forms are exactly \(C\). Every maximal
-execution terminates (by \(\Phi\)-decrease) and reaches \(\operatorname{nf}_\lambda(s)\) (by
-uniqueness).
+By Proposition~\ref{prop:local-confluence}, it is locally confluent. Newman's
+lemma~\cite{newman42} therefore makes it confluent. A terminating confluent repair relation has a
+unique normal form reachable from each initial state. By Assumption~\ref{ass:complete}, the
+normal forms are exactly \(C\). Every maximal execution terminates and reaches
+\(\operatorname{nf}_\lambda(s)\), and that terminal state is independent of update order.
 \end{proof}
 
 \begin{corollary}[Objective law is schedule-independent]\label{cor:objective}
@@ -380,12 +423,16 @@ q\circ T_i^\lambda
 \overline T_i^\lambda\circ q.
 \]
 This is the finite patch-net form of saying that the repair step is defined first on
-overlap-invariant physical data and only then lifted to hidden representatives. The separate OPH
-problem here is to prove that the accepted
-recovery-derived local moves satisfy repair completeness together with local confluence on the
-declared branch, and the support/CPTP clause on the Petz branch. The touched-overlap local-fit
-contract gives Lyapunov \(\Phi\)-descent on accepted moves. The point here is also that no
-extra gauge-covariance axiom is needed once repair is formulated on the quotient.
+overlap-invariant physical data and only then lifted to hidden representatives. The remaining
+problem here is therefore no longer to invent a repair rule, but to prove that the accepted
+recovery-derived local moves are repair-complete, preserve support-local disjoint commutation and
+the parenthesization-independent union-collar glue of Definition~\ref{def:assoc} through
+restriction-compatible nested-collar decoders on the declared branch, and satisfy the support/CPTP
+clause on the Petz branch. The touched-overlap local-fit contract already gives Lyapunov
+\(\Phi\)-descent on accepted moves, and
+Proposition~\ref{prop:assocglue} supplies the quotient-local glue used for the local diamond.
+The point here is also that no extra gauge-covariance axiom is needed once repair is formulated
+on the quotient.
 
 \begin{theorem}[Gauge quotient theorem]\label{thm:gauge}
 Under the gauge action of Definition~\ref{def:gauge}, any representative lift of a physical repair
@@ -614,7 +661,7 @@ This theorem records the monotonicity property of the meta-selection model.
 
 The formalism above is the computational skeleton of Observer-Patch Holography (OPH). The observer patches carry von Neumann algebras on a holographic screen $S^2$, the overlap projections are restrictions to shared subalgebras, and the consistency condition is algebraic state agreement on overlaps.
 
-The bridge to physics works as follows. In the full OPH framework:
+The bridge to physics works as follows in the broader paper stack:
 
 \begin{itemize}
 \item The patch net becomes a net of subregion algebras on $S^2$.
@@ -625,12 +672,12 @@ The bridge to physics works as follows. In the full OPH framework:
 \item The record-layer theorem (Theorem~\ref{thm:crdt}) provides the formal basis for the classical observation layer in OPH, where records are implemented by approximately commuting projectors in overlap centers.
 \end{itemize}
 
-The OPH manuscript develops a conditional gravity branch from entanglement equilibrium and modular geometry, the SM gauge-group closure from edge-sector admissibility plus MAR, and a worldsheet/string reorganization from large-$N$ heat-kernel asymptotics. Input-dependent cosmological statements and later phenomenological continuations are kept explicitly separate from that recovered-core claim set.
+The companion manuscripts develop a conditional gravity branch from entanglement equilibrium and modular geometry, the SM gauge-group closure from edge-sector admissibility plus MAR, and a worldsheet/string reorganization from large-$N$ heat-kernel asymptotics. Input-dependent cosmological statements and later phenomenological continuations are kept explicitly separate from that recovered-core claim set.
 
-This paper provides the finite patch-net foundation for the broader OPH suite. When the broader
+This paper provides the finite patch-net foundation for the broader companion suite. When that
 suite is described using labels such as \(D3\)--\(D5\) or \(D7\)--\(D9\), those are internal
-documentary node labels from the companion OPH derivation ledger~\cite{OPH}; they are not
-external references, and that companion ledger is the place to look up the definitions.
+documentary node labels from the companion derivation ledger~\cite{OPH}; they are not external
+references, and that companion ledger is the place to look up the definitions.
 
 
 \section{Discussion and Open Problems}
@@ -650,16 +697,16 @@ Six directions stand out as immediate next steps:
 
 \item \textbf{Defect classification and refinement-limit transportability.} The fixed-cutoff hierarchy extends from abelian frustrations to crossed-module classes \(q\in \check H^2(N,H\to G)\). The remaining task is to connect those higher-gauge defect sectors to the refinement-stable transportable sector category used in the broader compact-gauge reconstruction lane.
 
-\item \textbf{Observable-level confluence.} When the raw state is not unique because local confluence fails, can gauge-invariant macrostates still be unique? This weaker form of objectivity may hold under broader conditions than the strict normal-form theorem.
+\item \textbf{Observable-level confluence.} When the raw state is not unique because the declared union-collar gluing package fails outside the main branch, can gauge-invariant macrostates still be unique? This weaker form of objectivity may hold under broader conditions than the strict normal-form theorem.
 
-\item \textbf{Recovery-channel control.} The fixed-cutoff collar branch expresses local repair through exact splice or Petz/Fawzi--Renner recovery and commits candidate moves only under the touched-overlap local-fit contract that yields Lyapunov descent of \(\Phi\). The remaining task is to prove on natural OPH branches that these accepted recovery moves are repair-complete for overlap consistency, locally confluent, and fully controlled on their declared domain, including the support/CPTP clause on the Petz branch and the preservation of the local-fit contract under refinement or branch changes.
+\item \textbf{Recovery-channel control.} The fixed-cutoff collar branch already expresses local repair through exact splice or Petz/Fawzi--Renner recovery, commits candidate moves only under the touched-overlap local-fit contract that yields Lyapunov descent of \(\Phi\), and derives the local diamond from support-local disjoint commutation together with parenthesization-invariant union-collar gluing on the physical quotient. What remains is to prove on natural refinement-stable branches that these accepted recovery moves are repair-complete for overlap consistency, preserve support-local disjoint commutation and nested-collar restriction compatibility, including the support/CPTP clause on the Petz branch, and keep the union-collar package stable under refinement or branch changes.
 
-\item \textbf{Scaling-limit bridge to full OPH.} Under what additional regularity conditions does the consensus protocol emit the prime geometric cap pair and support ordered cut-pair rigidity on that extracted limit, so that the D3--D5 gravity chain and the D7--D9 gauge/matter chain become available? This is also the point at which the broader Phase-II and Phase-III branches must remain disciplined: dark-sector, baryogenesis, spectroscopy, and string/worldsheet topics require extra premises beyond what this paper itself proves.
+\item \textbf{Scaling-limit bridge to the downstream gravity/gauge stack.} Under what additional regularity conditions does the consensus protocol emit the prime geometric cap pair and support ordered cut-pair rigidity on that extracted limit, so that the D3--D5 gravity chain and the D7--D9 gauge/matter chain become available? This is also the point at which the broader Phase-II and Phase-III branches must remain disciplined: dark-sector, baryogenesis, spectroscopy, and string/worldsheet topics require extra premises beyond what this paper itself proves.
 \end{enumerate}
 
-The last item is the bridge to the broader OPH branches. Failure of that bridge would leave the
-fixed-point theorems proved here unchanged while revising the downstream gravity, gauge, or
-continuation sectors.
+The last item is the bridge to the downstream gravity/gauge branches. Failure of that bridge would
+leave the fixed-point theorems proved here unchanged while revising the downstream gravity, gauge,
+or continuation sectors.
 
 \subsection{Conditional BFT and QECC Extensions}
 \label{subsec:conditional-bft-qecc}
@@ -671,7 +718,7 @@ explicit structural assumptions (quorum size $\geq 2f+1$, partial synchrony, one
 certificate semantics, and \textrm{DLS}-style view-change), a \textrm{QBFT}-style interpretation
 of \textrm{OPH} repair satisfies safety and liveness (Appendix~\ref{app:bft-qecc},
 Theorem~\ref{thm:qbft-safety}). On the fixed-cutoff collar branch used here, the repair map is
-written in exact-splice / Petz form; what remains conditional is the \textrm{CPTP}
+already written in exact-splice / Petz form; what remains conditional is the \textrm{CPTP}
 property on all inputs, which requires either full-rank $\mathcal{N}(\sigma)$ or an explicit
 domain restriction, and trace-preserving completion is not automatic when
 $\mathcal{N}(\sigma)$ has a non-trivial kernel
@@ -819,6 +866,11 @@ B.~M\"uller,
 \emph{Observers Are All You Need},
 2026.\\
 Available at \url{https://oph-book.floatingpragma.io/papers/observers_are_all_you_need.pdf}.
+
+\bibitem{newman42}
+M.~H.~A.~Newman,
+``On theories with a combinatorial definition of `equivalence',''
+\emph{Ann.\ of Math.} \textbf{43} (1942), no.~2, 223--243.
 
 \bibitem{FLP85}
 M.~J.~Fischer, N.~A.~Lynch, and M.~S.~Paterson,
