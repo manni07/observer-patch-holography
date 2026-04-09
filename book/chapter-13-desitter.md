@@ -32,7 +32,7 @@ A positive cosmological constant Lambda > 0 creates a kind of "anti-gravity"-a r
 
 The expansion began accelerating about 5 billion years ago. The universe is about 68% dark energy.
 
-**This is the hint**: The universe has a positive cosmological constant. It is not static, and it is not decelerating. It is accelerating exponentially toward a de Sitter future.
+The universe has a positive cosmological constant. It is accelerating toward a de Sitter future.
 
 ## 13.3 The First-Principles Reframing: De Sitter Is the Natural Screen
 
@@ -189,7 +189,7 @@ The picture so far:
 |---|---|---|
 | The universe is static or decelerating; gravity should slow expansion | 1998 supernova observations: the universe is accelerating; positive cosmological constant Lambda | De Sitter horizon is the natural holographic screen; the static patch is the observer's arena; finite entropy and horizon complementarity fit our model naturally |
 
-**The key reverse engineering insight**: We started with the intuition that gravity should slow cosmic expansion. The 1998 supernova observations revealed that the universe is accelerating-pushed apart by a positive cosmological constant. Our model explains why de Sitter space is natural: the cosmological horizon serves as the holographic screen. The static patch is the natural arena for observer physics. The finite entropy, observer-dependent time, and horizon complementarity all fit our observer-centric picture naturally. Far from being a problem, de Sitter space is a natural target for the framework.
+Cosmic expansion does not have to decelerate. The supernova data and positive cosmological constant point to de Sitter behavior, and de Sitter space fits the observer-first picture naturally: the cosmological horizon acts as the holographic screen, the static patch is the operational arena, and finite entropy plus horizon complementarity belong to the same structure.
 
 **Additional lessons**:
 
@@ -275,7 +275,7 @@ This has the observed Tully-Fisher form, with the normalization benchmark determ
 
 ### The Status
 
-This is not yet a finished dark-matter theory. It is a continuation branch, not part of the recovered core. What we have is:
+This continuation branch lies outside the recovered core. It gives:
 
 - The modular anomaly term exists with a fixed coefficient
 - The de Sitter scale $r_{dS}$ is determined by screen capacity

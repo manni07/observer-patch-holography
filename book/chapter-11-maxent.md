@@ -36,7 +36,7 @@ The Hamiltonian acting on the wavefunction of the universe gives zero. There is 
 
 This is the **problem of time** in quantum gravity. If the fundamental description has no time, where does time come from?
 
-**This is the hint**: Time is not a fundamental external parameter. The microscopic laws are time-symmetric. Something else must generate the arrow of time we experience.
+Time is not a fundamental external parameter. The microscopic laws are time-symmetric. Something else must generate the arrow of time we experience.
 
 ## 11.3 The First-Principles Reframing: Time Emerges from Modular Flow
 
@@ -156,9 +156,9 @@ If the global state is highly entangled in a particular pattern, the modular flo
 
 ### Roadmap: From Modular Time to Gravity
 
-Here is the high-level chain we use later:
+The chain is:
 
-1. **Recovery structure** from earlier chapters makes the time-generator local near patch boundaries.
+1. **Recovery structure** from Chapter 7 makes the time-generator local near patch boundaries.
 2. **A key theorem** identifies that local time-flow with a standard geometric transformation on the sphere, fixing its normalization.
 3. Geometric time-flow gives **Lorentz kinematics** on the screen.
 4. **Entanglement equilibrium** plus a way to identify local energy yields Einstein's equation as an output.
@@ -234,7 +234,7 @@ $$\Delta^{it} = e^{-2\pi i K t}$$
 
 The natural time evolution of a thermal state in a wedge-shaped region is exactly a Lorentz transformation.
 
-### What This Means
+### Boosts from Thermal Structure
 
 Start with thermal structure. Ask: what is the natural notion of time evolution? The answer is Lorentz boosts.
 
@@ -327,7 +327,7 @@ Recap:
 |---|---|---|
 | Time is a fundamental external parameter flowing from past to future | No preferred time in GR; the Wheeler-DeWitt equation \(H\Psi = 0\) points toward a fundamentally timeless description; microscopic laws are largely time-symmetric | On the thermal-time proposal, time arises from modular flow of restricted states; the arrow of time is the direction of increasing entropy, driven by incomplete knowledge |
 
-**The key reverse engineering insight**: We started with the intuition that time flows fundamentally, carrying the universe from past to future. General relativity showed that there is no preferred time; different observers slice spacetime differently. Quantum gravity pushed the issue further with the Wheeler-DeWitt equation, pointing toward a fundamentally timeless or "frozen" description. Our model explains how time emerges: through the modular flow of density matrices. Time is what incomplete knowledge looks like. The arrow of time points in the direction of consistency-building, the direction where records can be made and compared.
+Time need not be fundamental. General relativity removes any preferred slicing, and quantum gravity sharpens the problem with the Wheeler-DeWitt equation. In OPH, time emerges from modular flow of restricted states. The arrow of time points along the direction in which records can be made and compared.
 
 **Additional lessons**:
 

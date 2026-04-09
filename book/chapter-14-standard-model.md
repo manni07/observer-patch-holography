@@ -499,7 +499,7 @@ A minimality principle then picks the smallest viable realization:
 
 $$\boxed{N_g = 3}$$
 
-Refinement stability explains why extra unfixed Yukawa structure is disfavored, but the key point is simpler: among the allowed options, the smallest viable one wins. Feeding this value back into the Witten-anomaly argument above then closes the color count at $N_c = 3$.
+Refinement stability explains why extra unfixed Yukawa structure is disfavored. Among the allowed options, the smallest viable one wins. Feeding this value back into the Witten-anomaly argument above then closes the color count at $N_c = 3$.
 
 ## 14.13 Why Chirality?
 
@@ -545,9 +545,9 @@ For the book, the picture is this:
 | Electroweak exact sidecar | Exact frozen-repair `W/Z` pair | Compare-only beneath the target-free electroweak theorem |
 | Higgs/top forward branch | Closed one-scalar forward seed for the public Higgs/top rows, plus an exact Higgs/top inverse pair | The public Higgs/top rows are secondary quantitative forward outputs; the inverse pair is compare-only |
 | Charged exact witness | Exact same-family `(e, μ, τ)` triple, with the affine coordinate closed on that fixed witness | Same-family-only; the remaining public boundary is the final charged-lepton promotion and absolute-normalization step |
-| Quark exact witness | Exact same-family `(u, d, s, c, b, t)` sextet on the selected continuation branch | Same-family-only. The public theorem surface already emits a continuation ray together with restricted-scope affine-mean data, and the remaining closure is the explicit three-object extension that fixes the mass-ratio, physical-sheet, and absolute-normalization data; a continuation-only internal backread sidecar fixes the scalar package numerically without removing the wrong CKM branch |
+| Quark exact witness | Exact same-family `(u, d, s, c, b, t)` sextet on the selected continuation branch | Same-family-only. The public theorem surface emits a continuation ray together with restricted-scope affine-mean data. Completing the quark story requires three further ingredients: mass-ratio, physical-sheet, and absolute-normalization data. A continuation-only internal backread sidecar fixes the scalar package numerically without removing the wrong CKM branch |
 | Neutrino theorem branch | Emitted weighted-cycle `(m1, m2, m3)` and emitted weighted-cycle splittings | The theorem lane is carried by the emitted bridge-rigidity and absolute-attachment pair; the older exact adapter remains diagnostic-only |
-| Hard frontier | Hadrons | Still compute-bound behind the production backend bundle and nonperturbative strong-dynamics work |
+| Hard frontier | Hadrons | Compute-bound behind the production backend bundle and nonperturbative strong-dynamics work |
 
 That is enough to tell a clear story without pretending every particle sits at exactly the same stage of completion.
 
@@ -605,7 +605,7 @@ Not directly, and for good reason. The proton mass is a qualitatively different 
 
 The photon and graviton masses are symmetry-protected zeros. Their values are fixed by the algebraic structure of the theory-any deviation would break a required redundancy. The argument is exact and does not depend on knowing coupling constants or solving difficult equations.
 
-Not all mass claims have the same character. The cleanest results are the symmetry-protected zeros: photon, gluons, and graviton. The next easiest are masses tied closely to electroweak structure, such as the $W$ and $Z$. The Higgs/top lane and the neutrino lane now sit on explicit quantitative branches, while quarks remain on narrower continuation surfaces. Hadrons are hardest because they require solving the full strongly coupled dynamics of bound states.
+Not all mass claims have the same character. The cleanest results are the symmetry-protected zeros: photon, gluons, and graviton. The next easiest are masses tied closely to electroweak structure, such as the $W$ and $Z$. The Higgs/top lane and the neutrino lane lie on explicit quantitative branches, while quarks remain on narrower continuation surfaces. Hadrons are hardest because they require solving the full strongly coupled dynamics of bound states.
 
 The proton mass is a bound-state eigenvalue in a strongly coupled gauge theory. The proton is made of three quarks held together by gluons, and its mass emerges from the complicated nonperturbative dynamics of quantum chromodynamics. The dominant contribution is not the masses of the constituent quarks (which sum to only about 10 MeV) but the energy stored in the gluon field and the kinetic energy of the quarks bouncing around inside.
 
@@ -615,7 +615,7 @@ This is a difference in logical type inside the framework. The symmetry-protecte
 
 A separate edge-sector route extracts gauge couplings directly from entanglement. The key statement is that edge-sector probabilities follow a precise mathematical pattern called a heat-kernel law, weighted by the geometry of the gauge group.
 
-Here's what this means. When you cut a region out of the vacuum, the boundary carries "edge modes" labeled by different representations of the gauge group. The probability of finding each representation follows an exponential decay:
+When you cut a region out of the vacuum, the boundary carries "edge modes" labeled by different representations of the gauge group. The probability of finding each representation follows an exponential decay:
 
 $$p_R \propto d_R \, e^{-t \lambda_R}$$
 
@@ -627,7 +627,7 @@ The vacuum literally encodes the golden ratio in its entanglement structure. Thi
 
 Similar tests work for nonabelian groups like $S_3$ (the smallest nonabelian group), where extracting the coupling from different representations gives consistent answers to within a few percent. The pattern holds.
 
-This formula is not only an empirical observation. It can be derived theoretically. The key insight is that the group Laplacian is the *unique* gauge-invariant local quadratic operator on the edge degrees of freedom. Any other choice would either break gauge symmetry or require nonlocal terms. Combined with the MaxEnt principle, which selects the Gibbs state, this uniqueness forces the heat-kernel form. The factor $d_R$ instead of $d_R^2$ appears because entanglement entropy traces over one side of the cut. The derivation requires one additional assumption, that the entropy-maximizing generator is quasi-local, but otherwise follows from the axioms.
+This formula is not only an empirical observation. It can be derived theoretically. The group Laplacian is the *unique* gauge-invariant local quadratic operator on the edge degrees of freedom. Any other choice would either break gauge symmetry or require nonlocal terms. Combined with the MaxEnt principle, which selects the Gibbs state, this uniqueness forces the heat-kernel form. The factor $d_R$ instead of $d_R^2$ appears because entanglement entropy traces over one side of the cut. The derivation requires one additional assumption, that the entropy-maximizing generator is quasi-local, but otherwise follows from the axioms.
 
 Once we can reliably extract gauge couplings from entanglement, the later quantitative branches become much tighter.
 
@@ -639,7 +639,7 @@ In the 1970s, physicists noticed something remarkable. If you run the couplings 
 
 But there was a problem. With just the Standard Model particle content, the three couplings don't quite meet. They miss each other. In the 1990s, physicists discovered that adding supersymmetric partners fixes this: with MSSM-like particle content, the couplings unify beautifully, predicting $\alpha_s(M_Z) \approx 0.117$, remarkably close to the measured value of $0.1177 \pm 0.0009$.
 
-Our framework does not yet promote this to a theorem-level supersymmetric spectrum. The narrower current claim is that the edge-mode structure can reproduce MSSM-like one-loop beta shifts only on a declared D10 calibration package: external input $P$, the printed running/matching conventions, the printed threshold conventions, and, when the near-MSSM benchmark is quoted, an added fermionic-grading restriction to half-integer SU(2) sectors. The key mechanism is the Peter-Weyl decomposition of $L^2(G)$: a representation $R$ corresponds to a block $V_R \otimes V_R^*$ of size $d_R^2$. Entropy, which selects the MaxEnt state, traces over one side, giving the familiar $d_R$ factor in $p_R \propto d_R e^{-t C_2(R)}$. Vacuum polarization loops run over both indices, restoring the second $d_R$. The effective multiplicity for RG running is therefore $N_{\text{eff}} = d \cdot p$.
+This is not a theorem-level supersymmetric spectrum. The claim is narrower: the edge-mode structure can reproduce MSSM-like one-loop beta shifts only on a declared D10 calibration package consisting of external input $P$, the printed running and matching conventions, the printed threshold conventions, and, when the near-MSSM benchmark is quoted, an added fermionic-grading restriction to half-integer SU(2) sectors. The mechanism comes from the Peter-Weyl decomposition of $L^2(G)$: a representation $R$ corresponds to a block $V_R \otimes V_R^*$ of size $d_R^2$. Entropy, which selects the MaxEnt state, traces over one side, giving the familiar $d_R$ factor in $p_R \propto d_R e^{-t C_2(R)}$. Vacuum polarization loops run over both indices, restoring the second $d_R$. The effective multiplicity for RG running is therefore $N_{\text{eff}} = d \cdot p$.
 
 At the unification-scale heat-kernel parameter $t_U \approx 1.64$, this gives:
 $$\Delta b_{\text{edge}} \approx (2.49,\ 4.38,\ 3.97)$$
@@ -671,7 +671,7 @@ Let's step back and see what the framework actually accounts for.
 
 **The zeros.** The photon and graviton masses are exactly zero. This is a symmetry-protected prediction. The photon's masslessness follows from U(1) gauge invariance being a genuine overlap redundancy; any mass would break the consistency of how charged patches glue together. Similarly, the graviton's masslessness follows from diffeomorphism invariance being the redundancy structure of bulk spacetime. Current experimental and observational upper bounds are consistent with these predictions to extraordinary precision: the photon mass is constrained below ~10⁻¹⁸ eV, often summarized as ~27 orders of magnitude, and the graviton mass is constrained below ~10⁻²³ eV by gravitational-wave dispersion, often summarized as ~22 orders of magnitude.
 
-**The particle story.** On top of the structural zeros, the framework has one exact non-hadron output lane on disk: an exact frozen-repair `W/Z` pair, a closed Higgs/top forward seed together with a compare-only exact inverse pair on the same Jacobian, an exact same-family charged witness with its affine coordinate closed on the fixed witness, an exact same-family quark witness on the selected continuation branch, and an emitted weighted-cycle neutrino theorem branch with `(m1, m2, m3) = (0.017454720257976796, 0.019481987935919015, 0.05307522145074924) eV`. The caveats matter. Charged leptons have been reduced to the final promotion and absolute-normalization boundary. Quarks reach a maximal theorem-emitted continuation package consisting of a continuation ray, a selected negative-sign branch, and restricted-scope affine-mean data, while the remaining exact minimal extension is a three-object package that fixes the mass-ratio, physical-sheet, and absolute-normalization data; a continuation-only internal backread sidecar fixes the mass-side scalar package numerically without replacing the public theorem frontier or removing the wrong CKM branch. The neutrino theorem branch emits the absolute family above together with weighted-cycle splittings, while the older exact adapter, bridge corridor, and correction audit remain diagnostic-only sidecars. The hadron spectrum sits outside the current roadmap.
+**The particle story.** Beyond the structural zeros, the framework carries a non-hadron quantitative lane with explicit caveats: an exact frozen-repair `W/Z` pair, a closed Higgs/top forward seed with a compare-only inverse pair, an exact same-family charged witness, an exact same-family quark witness on a selected continuation branch, and a weighted-cycle neutrino theorem branch with `(m1, m2, m3) = (0.017454720257976796, 0.019481987935919015, 0.05307522145074924) eV`. Charged leptons stop at promotion and absolute normalization. Quarks stop at a continuation ray, a selected negative-sign branch, and restricted-scope affine-mean data, with a three-object extension needed for mass-ratio, physical-sheet, and absolute-normalization data. The older neutrino adapter remains diagnostic-only. Hadrons lie outside the proved package.
 
 The same local calibration surface ties this particle lane to the gravity lane. In compact form, `P` fixes `alpha_U`, the transmutation pair `(t_U, t_tr)`, and the electroweak scale `v`, which carry the bosonic surface `M_W = 80.377 GeV` and `M_Z = 91.18797809193725 GeV`; the closed one-scalar Higgs/top seed then carries `M_H = 125.1995304097179 GeV` on the local exact-release surface. The gravity-side readout uses the same local input through `ellbar_SU2(t2_run) + ellbar_SU3(t3_run) = P/4` and `G = a_cell / (4 ellbar_shared)`, which carries `G = 6.674299995910528e-11 m^3 kg^-1 s^-2` on that same local exact-release surface. The invariant causal speed `c = 299792458 m/s` belongs to the Lorentz branch and enters the familiar-unit display through the local readout package. This is the sense in which OPH places a classical gravity constant and the electroweak boson scale on one local calibration surface.
 
@@ -679,7 +679,7 @@ The same local calibration surface ties this particle lane to the gravity lane. 
 
 **Gauge-mediated proton decay.** Gauge-mediated proton decay is forbidden. The gauge group is a product, not embedded in a larger simple group, so no leptoquark generators exist. Current experimental limits ($\tau_p > 10^{34}$ years) are consistent with this prediction.
 
-**The current frontier.** Charged leptons sit at the final promotion and absolute-normalization boundary. Quarks sit at the maximal theorem-emitted continuation package together with the exact minimal three-object extension that fixes the mass-ratio, physical-sheet, and absolute-normalization data. Hadrons remain outside the current roadmap unless the backend-bundle and nonperturbative strong-dynamics program return to scope.
+**The frontier.** Charged leptons stop at the final promotion and absolute-normalization step. Quarks require the three-object extension just described. Hadrons require a production backend and nonperturbative strong-dynamics work.
 
 ## 14.21 The Big Picture
 

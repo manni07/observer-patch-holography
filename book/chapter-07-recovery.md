@@ -46,7 +46,7 @@ After decades of debate, the broad holographic lesson is that black-hole evapora
 
 This lesson was sharpened by the Page-curve and island calculations developed in the 2010s. In semiclassical holographic models, they support encoded-information viewpoints and show how information that seemed lost to the black hole interior can instead be carried by correlations among the outgoing radiation particles, but they do not by themselves turn OPH into a full black-hole evaporation theorem.
 
-**This is the hint**: Information cannot be copied (no-cloning), yet information cannot be destroyed (unitarity). These twin constraints-which seemed contradictory-turn out to require a specific structure: **quantum error correction**.
+Information cannot be copied (no-cloning), yet information cannot be destroyed (unitarity). These twin constraints require a specific structure: **quantum error correction**.
 
 ## 7.3 The First-Principles Reframing: Error Correction Structure Preserves Information
 
@@ -266,7 +266,7 @@ This means you can't recover C from B alone. The GHZ state is non-Markov.
 
 ## 7.9 The Fourth Axiom: Local Markov/Recoverability
 
-We're now ready to state the recovery rule as a physical principle.
+We can state the recovery rule as a physical principle.
 
 **Axiom 4 (Local Markov/Recoverability)**: For any three patches P_A, P_B, P_C on the screen, where P_B topologically separates P_A from P_C:
 
@@ -277,7 +277,7 @@ Here:
 - Its functional form is a target of the program, not fixed a priori
 - Candidate scalings include boundary-size bounds (e.g., proportional to |∂B|/ℓ_P^2) or exponential decay with separation
 
-### What This Means
+### Screening Through the Separator
 
 If region B sits between regions A and C, then B approximately screens A from C. The correlations between A and C are almost entirely mediated through B.
 
@@ -367,7 +367,7 @@ This motivates an encoded-information picture: later radiation may become approx
 
 In 2019, several groups (Penington; Almheiri, Engelhardt, Marolf, and Maxfield) made this precise using a concept called "islands."
 
-The key insight: when computing entropy in theories with gravity, you should include contributions from **island regions** inside the black hole.
+When computing entropy in theories with gravity, you should include contributions from **island regions** inside the black hole.
 
 Before Page time, no island contributes. Radiation entropy equals naive Hawking calculation-increasing.
 
@@ -473,7 +473,7 @@ What we found:
 |---|---|---|
 | Information can be copied freely or lost forever | No-cloning theorem: quantum information cannot be copied; black-hole information puzzles motivate holographic recovery ideas | Error-correcting structure preserves and enables recovery of information without copying; the universe has built-in redundancy that encodes information holographically |
 
-**The key reverse engineering insight**: We started with the intuition that information could either be freely duplicated or permanently destroyed. Quantum mechanics showed with no-cloning that copying is constrained, and black-hole physics pushed holography toward encoded-information viewpoints. OPH contributes to that story by making recoverability and screen encoding structural. What it does not yet prove is a full evaporation/Page-curve resolution from first principles.
+Information need not be freely copied to remain recoverable. No-cloning blocks duplication, while black-hole physics points toward encoded information in extended correlations. OPH makes recoverability and screen encoding structural, while stopping short of a full Page-curve derivation from first principles.
 
 **Additional lessons**:
 

@@ -44,7 +44,7 @@ Think of the screen as a high-resolution, quantum information canvas. Most
 patterns are noisy and ephemeral. Some are stable: they survive overlap
 consistency, persist under modular time, and can be tracked across patches.
 Those stable patterns are what we call **particles**.
-That's the conceptual picture. The detailed particle story is richer: the framework already fixes the gauge structure and several prominent particles, while the more delicate masses are still being filled in.
+That's the conceptual picture. The detailed particle story is richer. The framework fixes the gauge structure and several prominent particles, while the more delicate mass relations remain open.
 
 The key reframing is:
 
@@ -208,11 +208,10 @@ The quantum world is larger but less shareable. Superpositions exist, but they c
 | Motion follows force laws | Trajectories emerge from interference | Least action is the classical limit of quantum consistency |
 | Classical physics is the fundamental layer | Quantum mechanics underlies classical physics | Classical physics emerges because only consistent patterns survive the overlap filter |
 
-**The key reverse engineering insight**: classical physics is not the starting
-point. It is what you get when quantum information on the screen organizes
-into stable patterns, when modular time becomes geometric, and when overlap
-consistency enforces locality. Particles, energy, and motion are the emergent
-vocabulary of that stable regime.
+Classical physics is not the starting point. It appears when quantum
+information on the screen organizes into stable patterns, modular time becomes
+geometric, and overlap consistency enforces locality. Particles, energy, and
+motion are the vocabulary of that stable regime.
 
 **Why classical physics emerges**: The overlap condition demands that observers agree on shared observables. Decoherence, the rapid entanglement of macroscopic objects with their environments, is part of what makes stable shared records possible. Only pointer states that get redundantly copied into the environment can be consistently shared across patches. Classical facts are quantum states that pass the consistency filter. The deterministic, objective world of everyday experience is the public face of a quantum reality too fragile to be broadly shared.
 

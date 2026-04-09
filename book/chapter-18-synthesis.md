@@ -84,7 +84,7 @@ These aren't four separate discoveries. They're four facets of one insight: real
 
 This leads to a conclusion that sounds radical but is natural in the observer-first reading: reality is not merely *described* by computational language. It can be treated as a finite quantum information process.
 
-The screen is a quantum system with finite-dimensional degrees of freedom (qudits on a triangulated sphere). The dynamics is constrained by gauge laws. The state is selected by maximum entropy subject to consistency constraints. This is computational in a concrete sense, even though a literal microscopic quantum-cellular-automaton implementation remains part of the program rather than a theorem already in hand.
+The screen is a quantum system with finite-dimensional degrees of freedom (qudits on a triangulated sphere). The dynamics is constrained by gauge laws. The state is selected by maximum entropy subject to consistency constraints. This is computational in a concrete sense. A literal microscopic quantum-cellular-automaton implementation lies outside the proved theorem package.
 
 What about the simulation principle? The question "are we living in a simulation?" assumes there is a non-simulated alternative, a "base reality" that is somehow more real. But our model shows this is the wrong question. There is no non-computational reality to contrast with a simulated one. Computation is not a metaphor for physics. It is what physics is made of.
 
@@ -190,7 +190,7 @@ Among admissible low-energy sector packages, the realized one is the lexicograph
 
 ### Further Inputs Used by Specific Branches
 
-The five axioms are the foundation. Specific theorem branches still need extra inputs, and the papers now state those openly rather than folding them into the axiom list.
+The five axioms are the foundation. Specific theorem branches use extra inputs, and the papers state those inputs explicitly.
 
 1. **Lorentz branch**: scaling-limit and geometric modular-flow assumptions that let cap modular flow become geometric on the extracted prime geometric subnet.
 2. **Einstein branch**: fixed-cap stationarity and the stress-tensor bridge used in the entanglement-equilibrium argument.
@@ -231,7 +231,7 @@ $$
 \sum_i \frac{c_i}{M_*^{\Delta_i-4}}\mathcal O_i.
 $$
 
-Here the Standard Model piece includes the derived gauge group, three generations, and three colors. The higher-dimension operators represent corrections and details not yet fixed by the core.
+Here the Standard Model piece includes the derived gauge group, three generations, and three colors. The higher-dimension operators represent corrections and details outside the recovered core.
 
 This equation states the long-range effective form rather than the recovered theorem package. The recovered part is narrower: Einstein's equation on the stated scaling branch together with the Standard Model gauge structure. The higher-dimension operators and the full quantitative closure sit above that boundary.
 
@@ -302,11 +302,11 @@ The Hilbert space is finite-dimensional. The second fundamental parameter, **scr
 
 ## 18.8 The Remaining Frontier
 
-The core picture has definite physical content. The framework recovers the Standard Model gauge group, three generations, three colors, massless photon/gluons/graviton, and the absence of gauge-mediated proton decay. On top of that, it has an exact non-hadron output lane on disk with explicit caveats: exact `W/Z` on the frozen-repair surface, a closed Higgs/top forward seed together with a compare-only exact inverse pair on the same Jacobian, an exact same-family charged witness with its affine coordinate closed on the fixed witness, an exact same-family quark witness on the selected continuation branch, and an emitted weighted-cycle neutrino theorem branch with `(m1, m2, m3) = (0.017454720257976796, 0.019481987935919015, 0.05307522145074924) eV`. The charged-lepton boundary has been reduced to the final promotion and absolute-normalization step. The maximal theorem-emitted quark package on the present ledger consists of a continuation ray, a selected negative-sign branch, and restricted-scope affine-mean data; the remaining exact minimal extension is a three-object package that fixes the mass-ratio, physical-sheet, and absolute-normalization data. Hadron masses sit outside the current roadmap because the remaining step is a production backend export bundle plus nonperturbative execution and systematics work rather than an additional realistic symbolic theorem target. On the gravity side, the UV/BW internalization frontier is explicit: first the canonical scaling-limit geometric cap-pair realization from transported cap marginals on the geometric subnet, then ordered cut-pair rigidity on that realized limit. Beneath the first object, the smallest lower blocker is the eventual fixed-local-collar modular-transport common floor.
+The core picture has definite physical content. The framework recovers the Standard Model gauge group, three generations, three colors, massless photon, gluons, graviton, and the absence of gauge-mediated proton decay. It also carries a non-hadron quantitative lane with explicit caveats: exact `W/Z` on the frozen-repair surface, a closed Higgs/top forward seed with a compare-only inverse pair, an exact same-family charged witness, an exact same-family quark witness on a selected continuation branch, and a weighted-cycle neutrino theorem branch with `(m1, m2, m3) = (0.017454720257976796, 0.019481987935919015, 0.05307522145074924) eV`. Charged leptons stop at the promotion and absolute-normalization step. Quarks stop at a continuation ray, a selected negative-sign branch, and restricted-scope affine-mean data; completing them requires three further ingredients that fix the mass-ratio, physical sheet, and absolute normalization. Hadron masses lie outside the proved package because they require a production backend plus nonperturbative strong-dynamics work. On the gravity side, the open frontier is geometric cap-pair realization in the scaling limit and then ordered cut-pair rigidity on that realized limit.
 
 **Numerical checks.** The extraction of gauge couplings from
 edge-sector probabilities has been validated numerically in 2D gauge models.
-The key insight: sector probabilities follow a heat-kernel law weighted by
+Sector probabilities follow a heat-kernel law weighted by
 Laplacian eigenvalues (for $\mathbb{Z}_n$: $\lambda_q = 4\sin^2(\pi q/n)$ ).
 This has been confirmed to essentially exact precision in $\mathbb{Z}_2$ and
 $\mathbb{Z}_3$ models, where the extracted "modular time" $t$ agrees across
@@ -318,11 +318,11 @@ shifts only on a declared D10 calibration package consisting of external input $
 the printed running/matching conventions, the printed threshold conventions, and,
 for the near-MSSM benchmark, an added fermionic-grading restriction to half-integer
 SU(2) sectors, using a structural argument from the Peter-Weyl decomposition. The
-key insight: entropy (MaxEnt selection) traces over one side of the entanglement
+central point is that entropy (MaxEnt selection) traces over one side of the entanglement
 cut, giving the factor $d_R$ in the probability $p_R \propto d_R e^{-t C_2(R)}$.
 But vacuum polarization loops run over both indices of the $V_R \otimes V_R^*$ block,
 restoring the second $d_R$. Therefore the effective multiplicity for RG running is
-$N_{\text{eff}} = d \cdot p$, not just $p$. At $t_U \approx 1.64$, this gives
+$N_{\text{eff}} = d \cdot p$, with the extra factor coming from the second Peter-Weyl index. At $t_U \approx 1.64$, this gives
 $\Delta b_{\text{edge}} \approx (2.49, 4.38, 3.97)$, matching the MSSM target to
 within 5% only on that calibration branch. This supports MSSM-like running behavior
 without promoting an MSSM particle spectrum into the recovered core.
@@ -407,9 +407,9 @@ For the book, the particle story looks like this:
 | Electroweak exact sidecar | Exact frozen-repair `W/Z` pair. | Compare-only beneath the target-free electroweak theorem. |
 | Higgs/top forward branch | Closed one-scalar forward seed for the public Higgs/top rows, plus an exact Higgs/top inverse pair. | The public Higgs/top rows are secondary quantitative forward outputs; the inverse pair is compare-only. |
 | Charged exact witness | Exact same-family `(e, μ, τ)` triple, with the affine coordinate closed on that fixed witness. | Same-family-only; the remaining public boundary is the final charged-lepton promotion and absolute-normalization step. |
-| Quark exact witness | Exact same-family `(u, d, s, c, b, t)` sextet on the selected continuation branch. | Same-family-only. The public theorem surface already emits a continuation ray together with restricted-scope affine-mean data, and the remaining closure is the explicit three-object extension that fixes the mass-ratio, physical-sheet, and absolute-normalization data; a continuation-only internal backread sidecar fixes the scalar package numerically without removing the wrong CKM branch. |
+| Quark exact witness | Exact same-family `(u, d, s, c, b, t)` sextet on the selected continuation branch. | Same-family-only. The public theorem surface emits a continuation ray together with restricted-scope affine-mean data. Completing the quark story requires mass-ratio, physical-sheet, and absolute-normalization data. A continuation-only internal backread sidecar fixes the scalar package numerically without removing the wrong CKM branch. |
 | Neutrino theorem branch | Emitted weighted-cycle `(m1, m2, m3)` and emitted weighted-cycle splittings. | The theorem lane is carried by the bridge-rigidity and absolute-attachment pair; the older exact adapter remains diagnostic-only. |
-| Hardest frontier | Hadrons. | Still compute-bound behind the production backend bundle. |
+| Hardest frontier | Hadrons. | Compute-bound behind the production backend bundle. |
 
 ### Key Physical Arguments We Inherit
 
@@ -434,7 +434,7 @@ These results are developed within the framework; the frontier lies in tightenin
 
 **Geometric modular flow on caps**: The big open relativity task is to show, from an explicit microscopic screen model, that the natural time flow of a cap really becomes the boost-like geometric motion used in the derivation.
 
-**Entanglement equilibrium**: Stationarity of S_gen at fixed cap size follows from MaxEnt selection. As noted in Chapter 15, this selection rule is an additional assumption rather than something forced by patch consistency alone.
+**Entanglement equilibrium**: Stationarity of S_gen at fixed cap size follows from MaxEnt selection. As noted in Chapter 15, this selection rule is an additional assumption. It is not forced by patch consistency alone.
 
 **Focusing input**: The null-deformation version of the argument uses the quantum null energy condition and quantum focusing conjecture as established guides to how entropy changes along lightlike directions.
 
@@ -635,11 +635,11 @@ The weirdness of twentieth-century physics was the universe telling us something
 
 Physicists kept finding that observation plays a special role. Information kept ending up on surfaces. Space, time, and matter kept looking less fundamental than expected. They were reverse engineering a system built on observer consistency, and the clues were everywhere.
 
-Once you see it, you can't unsee it. The elegance isn't aesthetic; it's structural. The pieces fit because they were always the same piece, viewed from different angles by physicists who hadn't yet realized they were looking at one thing.
+The elegance here is structural, not aesthetic. The pieces fit because they are different views of the same underlying consistency problem.
 
 ## 18.14 The Work Continues
 
-We have reverse engineered a piece of reality's source code. Enough to see the structure, even though the larger program is still unfinished.
+We have reverse engineered a piece of reality's source code. Enough to see the structure, while the broader quantitative closure remains open.
 
 Much remains:
 - The microscopic theory

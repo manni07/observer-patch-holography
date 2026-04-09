@@ -140,7 +140,7 @@ $$S \leq \frac{2\pi R E}{\hbar c}$$
 
 The maximum entropy of a region is bounded by its surface area, not its volume.
 
-### What This Means
+### Boundary Counting
 
 This is weird. It means the interior of a region is somehow redundant. All the independent degrees of freedom can be counted by looking at the boundary.
 
@@ -204,7 +204,7 @@ This is a deep shift in perspective. Instead of thinking about space as a fixed 
 
 ## 3.6 Why a Sphere?
 
-In the symmetric cases used to motivate this construction, the screen is naturally modeled as (approximately) spherical. This is not an arbitrary choice-it follows from causal light-cone geometry in those cases.
+In the symmetric cases used to motivate this construction, the screen is naturally modeled as (approximately) spherical. This choice follows from causal light-cone geometry in those cases.
 
 Light travels at the same speed in all directions. If you stand at a point and wait, the light that can reach you from a time $t$ ago forms a sphere of radius $ct$ around you.
 

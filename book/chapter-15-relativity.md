@@ -428,11 +428,11 @@ Once the semiclassical Einstein branch is established, classical mechanics follo
 
 **Conservation laws.** The contracted Bianchi identity is geometric: $\nabla^a G_{ab} = 0$. Combined with the Einstein equation in the scaling regime, this implies stress-energy conservation: $\nabla^a T_{ab} = 0$. Energy and momentum are conserved because the geometry demands it.
 
-**Geodesic motion.** For pressureless matter ("dust"), $T^{ab} = \rho u^a u^b$. Conservation gives $\nabla_a(\rho u^a u^b) = 0$. Working this out yields the geodesic equation: $u^a \nabla_a u^b = 0$. Free particles follow the straightest paths through curved spacetime. This is not an additional postulate. It follows from the Einstein equation in the same effective regime.
+**Geodesic motion.** For pressureless matter ("dust"), $T^{ab} = \rho u^a u^b$. Conservation gives $\nabla_a(\rho u^a u^b) = 0$. Working this out yields the geodesic equation: $u^a \nabla_a u^b = 0$. Free particles follow the straightest paths through curved spacetime. No additional postulate is needed. It follows from the Einstein equation in the same effective regime.
 
 **Newton's laws.** In the weak-field, slow-motion limit, the Einstein equation reduces to Newton's gravitational law: $\nabla^2 \Phi = 4\pi G \rho$. Geodesic motion becomes $\ddot{\mathbf{x}} = -\nabla \Phi$. This is Newton's second law with gravitational force.
 
-So classical mechanics is a derived consequence. The familiar laws of motion and gravity emerge from the deeper framework when we consider the appropriate limit. Newton's physics remains valid in its domain, but it is no longer fundamental.
+So classical mechanics is a derived consequence. The familiar laws of motion and gravity emerge from the deeper framework when we consider the appropriate limit. Newton's physics remains valid in its domain and belongs to the effective level.
 
 ## 15.10 Why Emergent Gravity Still Works
 
@@ -500,7 +500,7 @@ That changes the bookkeeping. The collar/edge-center structure blocks a naive fa
 
 This is the sense in which OPH softens the information paradox. It says the fundamental store of information is the screen, not an autonomous bulk interior.
 
-What it does **not** yet give is a full Page-curve theorem, an island derivation, or a complete proof that evaporation returns all information in a detailed semiclassical process. Those stronger claims remain outside the proved core.
+It does **not** give a full Page-curve theorem, an island derivation, or a complete proof that evaporation returns all information in a detailed semiclassical process. Those stronger claims remain outside the proved core.
 
 ## 15.12 Dark Sector: A Program-Level Modular-Anomaly Branch
 
@@ -572,6 +572,6 @@ Gravity emerges from entanglement equilibrium. The equilibrium condition comes f
 
 Newton's absolute time and space were beautiful ideas that served humanity well for two centuries. But they were always approximations. The deeper truth is that time and space are not the stage on which physics happens. They emerge from the physics itself.
 
-We now have the stage: emergent spacetime with Lorentz kinematics and the scaling-limit Einstein branch. We've seen how both spacetime (this chapter) and particles (Chapter 14) emerge from the screen. But what exactly IS matter in this model? How do the classical concepts of particles, energy, and motion relate to the deeper quantum structure?
+The framework therefore yields emergent spacetime with Lorentz kinematics and the scaling-limit Einstein branch. We have seen how both spacetime (this chapter) and particles (Chapter 14) emerge from the screen. But what exactly IS matter in this model? How do the classical concepts of particles, energy, and motion relate to the deeper quantum structure?
 
 That's the question of **Chapter 16: Matter, Motion, and Classical Physics**.

@@ -40,7 +40,7 @@ $$S(A) \propto |\partial A|$$
 
 This is the **area law** for entanglement entropy. Only degrees of freedom near the boundary-within a correlation length of the cut-contribute to the entanglement.
 
-**This is the hint**: Space is not a passive container. It's woven from quantum correlations. The vacuum is entangled across every boundary you can draw. Cut the entanglement, and you cut the connectivity of space itself.
+Space is not a passive container. It's woven from quantum correlations. The vacuum is entangled across every boundary you can draw. Cut the entanglement, and you cut the connectivity of space itself.
 
 ## 9.3 The First-Principles Reframing: Space Emerges from Entanglement
 
@@ -272,7 +272,7 @@ Chapter summary:
 |---|---|---|
 | Space is a passive container; the vacuum is empty | The vacuum is entangled across boundaries; many low-energy states show area-law entanglement; the Ryu-Takayanagi formula connects entanglement to geometry in holographic settings | Space emerges from entanglement; distance is a measure of shared correlations; cutting entanglement cuts spatial connectivity |
 
-**The key reverse engineering insight**: We started with the intuition that space is a fixed stage-a container for physics. Quantum mechanics showed by revealing that the vacuum is a web of entanglement, that entanglement entropy often scales with area rather than volume, and that in holographic settings this entropy is linked to the area of minimal surfaces in the bulk. Our model explains why: space is not fundamental. It emerges as the pattern of correlations that enables observers to agree on shared observations. Two regions are "close" when they share many quantum correlations. The Ryu-Takayanagi formula makes this quantitative in the holographic regime: geometry encodes entanglement.
+Space is not a passive backdrop. Quantum theory reveals a vacuum knit together by entanglement, with area-law scaling in many low-energy states and holographic formulas that tie entropy to geometry. In OPH, spatial structure emerges from the correlation pattern that lets observers agree on shared observations. Regions count as close when they share many quantum correlations.
 
 **Additional lessons**:
 

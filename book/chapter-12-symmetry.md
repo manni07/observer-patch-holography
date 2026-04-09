@@ -28,7 +28,7 @@ The correspondences are breathtaking:
 
 Conservation laws aren't arbitrary rules. They're geometric consequences of symmetry.
 
-**This is the hint**: Symmetries are not aesthetic choices-they're connected to the deepest physical laws. The "stuff" of physics (energy, momentum, charge) is really just "geometry" (symmetry). If symmetry were optional, conservation would be optional. But conservation laws are among the most precisely tested facts in all of science.
+Symmetries are connected to the deepest physical laws. The "stuff" of physics (energy, momentum, charge) is really just "geometry" (symmetry). If symmetry were optional, conservation would be optional. But conservation laws are among the most precisely tested facts in all of science.
 
 ## 12.3 The First-Principles Reframing: Symmetries Are Consistency Requirements
 
@@ -244,7 +244,7 @@ Summary:
 |---|---|---|
 | Symmetries are aesthetic choices; the universe happens to be symmetric | Noether's theorem: every continuous symmetry corresponds to a conservation law; symmetries are not optional | Symmetries are consistency requirements; they provide the translation manual that makes different observers' measurements compatible |
 
-**The key reverse engineering insight**: We started with the intuition that symmetries are aesthetic preferences-the universe could have been asymmetric. Noether's theorem showed that symmetries are inextricably linked to conservation laws. Our model explains why: symmetries are consistency requirements. They're the grammar that lets different observers translate between their viewpoints. Without rotational symmetry, observers facing different directions couldn't agree on physics. Without time-translation symmetry, physics today couldn't be compared to physics yesterday. Conservation laws are the bookkeeping of agreement.
+Symmetries are tied to conservation laws and to agreement between observers. In OPH they function as consistency requirements, the grammar that lets different viewpoints translate into one another. Rotational symmetry keeps physics compatible across directions. Time-translation symmetry keeps it compatible across repeated comparisons. Conservation laws record that agreement.
 
 **Additional lessons**:
 

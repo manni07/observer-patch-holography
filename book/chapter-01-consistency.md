@@ -241,7 +241,7 @@ Even without black holes, if you keep accelerating, signals from behind you can 
 
 ## 1.8 The Central Thesis
 
-We've now collected the major hints:
+The major hints line up:
 
 1. **The speed of light is invariant** → Space and time are observer-dependent
 2. **Measurement affects outcomes** → Observers are part of physics, not outside it
@@ -326,7 +326,7 @@ You might ask: "If reality is a computation, what is it computing?" The answer: 
 
 This view dissolves many traditional puzzles. "Why does anything exist at all?" becomes "Why does the computation run?" which is not a meaningful question, any more than asking why 2+2=4. The computation runs because it is self-consistent. It does not need an external cause.
 
-"What is the universe made of?" becomes, within OPH, "What substrate best realizes the computational picture?" The current construction answers: finite-dimensional quantum systems on a 2D surface, constrained by gauge invariance, organized by maximum entropy, and narrowed at low energy by the minimal admissible realization rule. This is the concrete technical realization studied in the present program, not yet a uniquely established final ontology.
+"What is the universe made of?" becomes, within OPH, "What substrate best realizes the computational picture?" The construction studied here uses finite-dimensional quantum systems on a 2D surface, constrained by gauge invariance, organized by maximum entropy, and narrowed at low energy by the minimal admissible realization rule. This is a concrete technical realization, not a claim of unique final ontology.
 
 ## 1.12 The Reverse Engineering Ahead
 

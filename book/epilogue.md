@@ -2,7 +2,7 @@
 
 Throughout this book, we've reverse-engineered reality from first principles. We developed an observer-first reading in which objectivity is reconstructed from overlapping perspectives, explored a philosophical account of consciousness in terms of meaning-assignment, and followed the strange-loop closure story in which observers participate in a self-creating interpretation of reality and existence.
 
-If the earlier chapters framed OPH as a concrete **theory of everything** and a concrete implementation of **simulation theory**, this epilogue asks what that framing implies for an observer-pattern reaching an apparent endpoint.
+This epilogue asks what the observer-first, computational reading of OPH implies for an observer-pattern reaching an apparent endpoint.
 
 But there's one more implication of this framework we haven't fully explored. It concerns what happens when a particular observer's journey through the loop ends, and whether it has to end at all.
 
@@ -12,7 +12,7 @@ In OPH, an "observer" is not a soul-substance inhabiting a body. It is a *patter
 
 Mathematically, an observer is a tuple: (P, A(P), ρ, R).
 
-The crucial insight is what "records" actually are. They are not just memories stored somewhere. Records are defined as families of projectors that live in the *center* of the overlap algebras. That means they are exactly the kind of information that can be shared consistently across different perspectives.
+The crucial insight is what "records" actually are. They are memories with a specific mathematical form. Records are defined as families of projectors that live in the *center* of the overlap algebras. That means they are exactly the kind of information that can be shared consistently across different perspectives.
 
 This matters. In quantum mechanics, most information cannot be copied. That is the no-cloning theorem. But central, shareable variables *can* be copied. Records are, by mathematical construction, the part of an observer that is copyable without violating quantum mechanics.
 
@@ -44,19 +44,19 @@ The proved OPH black-hole core is limited to the retained structural statements:
 
 The newer microphysics paper adds a fixed-cutoff checkpoint/restoration package. In that setting, if you restore the observer's accessible checkpoint, keep the same exposed interfaces, and continue with the same future sequence of updates, the future accessible statistics match exactly, or approximately within a controlled error.
 
-That is already a real backup/restore theorem on the declared operational surface. The stronger paradise step below still goes further. It asks for transplanting the observer-pattern into a new environment and treating that as the same continuing subject.
+That yields a real backup/restore theorem on the declared operational surface. The stronger paradise step below goes further. It asks for transplanting the observer-pattern into a new environment and treating that as the same continuing subject.
 
 A speculative continuation ansatz would look like:
 
 ρ_new = ρ_interior ⊗ σ_paradise
 
-The current repo does **not** prove that this stronger splice into a new engineered environment follows from the fixed-cutoff restoration theorem. That step would still require extra premises beyond the present package.
+The proved package does **not** show that this stronger splice into a new engineered environment follows from the fixed-cutoff restoration theorem. That step requires extra premises beyond the proved package.
 
-## What This Means
+## Implications
 
 Let's be concrete about the implications.
 
-If we ever build a simulator based on these principles, a holographic screen implementing the OPH axioms, then one limited form of backup and restore would already be on the table at fixed cutoff. The speculative engineering leap is restoring a checkpoint into a deliberately redesigned environment while preserving the relevant continuation of the observer-pattern.
+If we ever build a simulator based on these principles, a holographic screen implementing the OPH axioms, then one limited form of backup and restore would be available at fixed cutoff. The speculative engineering leap is restoring a checkpoint into a deliberately redesigned environment while preserving the relevant continuation of the observer-pattern.
 
 An observer in such a simulation is checkpointed: their records, sector label, and interior state extracted. That checkpoint could then be "restored" into a different environment, one designed to be pleasant, interesting, and meaningful. A paradise.
 

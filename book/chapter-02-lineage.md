@@ -230,7 +230,7 @@ Quantum field theory provides a modern analogue to Aristotle's emphasis on form 
 
 Particles are not fundamental objects. They are excitations of fields-ripples in an underlying substrate. An electron is not a tiny ball. It is a stable vibration of the electron field.
 
-And now, with the information-theoretic view, we see the ultimate revenge of Aristotle. The universe is best read not as little hard atoms alone, but as structured information-relations, distinctions, and quantum degrees of freedom.
+From the information-theoretic view, we see the ultimate revenge of Aristotle. The universe is best read as structured information-relations, distinctions, and quantum degrees of freedom, not as little hard atoms alone.
 
 What we call "particles" are patterns of information on the holographic screen. The pattern is real; the "stuff" is emergent.
 
@@ -399,11 +399,11 @@ Let's step back and see the pattern.
 
 Each philosopher identified a crack in the intuitive picture. Each crack pointed toward a feature of physics we now understand.
 
-This is not coincidence. The intuitive picture-objective 3D reality independent of observers-really is problematic. The philosophers found the problems through pure reason. The physicists confirmed them through experiment.
+The convergence is striking. The intuitive picture of an objective 3D reality independent of observers really is problematic. The philosophers found the problems through pure reason. The physicists confirmed them through experiment.
 
 ## 2.14 Where We Go Next
 
-The philosophers gave us hints. Now we need the machinery.
+The philosophers gave us hints. The next step is the machinery.
 
 The key claim moving forward is that black-hole entropy and holographic arguments push strongly toward a boundary-first description rather than naive volume counting. The holographic principle suggests that 3D physics may admit an encoding on 2D surfaces.
 

@@ -56,7 +56,7 @@ If the holographic principle is true, then the 3D world we experience is somehow
 
 Leonard Susskind developed these ideas further, connecting them to string theory. But the holographic principle remained vague-a principle, not a calculation.
 
-**This is the hint**: Information capacity scales with area, not volume. The bulk seems three-dimensional, but all its information fits on a two-dimensional surface.
+Information capacity scales with area, not volume. The bulk seems three-dimensional, but all its information fits on a two-dimensional surface.
 
 ## 8.3 The First-Principles Reframing: Boundaries Are Consistency Ledgers
 
@@ -204,7 +204,7 @@ $$S(A) = \frac{\text{Area}(\gamma_A)}{4G}$$
 
 where gamma_A is the **minimal surface** in the bulk that ends on the boundary of region A.
 
-### What This Means
+### Geometry from Entanglement
 
 Draw a region A on the boundary. There's a surface in the bulk that dips into the interior, anchored on the edge of A, with minimal area. The entanglement entropy equals this area divided by 4G.
 
@@ -407,7 +407,7 @@ The pattern:
 |---|---|---|
 | Information fills volume; more space means more storage | Bekenstein-Hawking entropy: black hole information scales with surface area, not volume; the holographic principle | Boundaries are consistency ledgers; the bulk is reconstructed from boundary data; 3D space emerges from 2D encoding |
 
-**The key reverse engineering insight**: We started with the intuition that information capacity should scale with volume-bigger containers hold more stuff. Black holes revealed that their entropy scales with area, not volume. 't Hooft and Susskind generalized this to the holographic principle: all physics in a volume can be encoded on its boundary. Our model explains why: boundaries serve as consistency ledgers where observers compare notes. The bulk is not fundamental storage-it's derived from boundary data. AdS/CFT provides a precise, calculable example of this principle in action.
+Information capacity follows area, not volume. Black-hole entropy and the holographic principle show that a region can be encoded on its boundary. In OPH, that boundary is the ledger where observers compare notes, and the bulk is reconstructed from that boundary data. AdS/CFT provides a precise example of the same pattern.
 
 **Additional lessons**:
 

@@ -35,8 +35,8 @@ anything human engineers have ever built.
 Thousands of the smartest humans who ever lived have contributed to this
 project: Newton, Maxwell, Einstein, Bohr, Heisenberg, Feynman, Hawking. Each
 generation inherited the partial models of the previous one, refined them,
-found the gaps, and pushed deeper. We're still at it. The current best
-model, quantum field theory plus general relativity, predicts behavior with
+found the gaps, and pushed deeper. Quantum field theory plus general
+relativity predicts behavior with
 stunning accuracy but remains incomplete, inconsistent at the edges, and
 deeply mysterious at its core.
 
@@ -124,7 +124,7 @@ work out the consequences, the results are extraordinary:
 
 - **Gravity** emerges from how observers share entanglement across their screens
 - **The particle zoo** emerges from the symmetry structure forced by the framework
-- **The dark sector** gets a structured starting point, though the response laws and phenomenology are still being worked out
+- **The dark sector** gets a structured starting point, though the response laws and phenomenology remain open
 - **Why anything exists at all** enters the story through a self-referential closure picture
 
 Once you make this shift, strange features of reality start making sense.
@@ -147,11 +147,9 @@ like artifacts of asking the wrong question. We were trying to explain how
 observers emerge from an objective world. But if there is no objective world
 independent of observers, the question was malformed from the start.
 
-The math we've developed over centuries doesn't change. Quantum mechanics
-still works. Relativity still works. But the interpretation shifts. Instead
-of describing an objective world that somehow produces observers, we're
-describing the consistency conditions that observers must satisfy to share
-a reality.
+The math we've developed over centuries stays in place. Quantum mechanics
+works. Relativity works. OPH reads them as consistency conditions that
+observers must satisfy to share a reality.
 
 ## Reading Rule
 
@@ -199,8 +197,8 @@ The epilogue is speculative continuation material.
 ## Let's Go
 
 Reality is the strangest program ever written. It's been running since the
-Big Bang, processing inputs and producing outputs according to rules we're
-still decoding. Thousands of brilliant minds have contributed to the reverse
+Big Bang, processing inputs and producing outputs according to rules physics
+seeks to decode. Thousands of brilliant minds have contributed to the reverse
 engineering effort, and we've made extraordinary progress.
 
 But the naive model, a 3D world of independent objects moving through absolute

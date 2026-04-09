@@ -28,7 +28,7 @@ For a while, these obstacles seemed insurmountable.
 
 ### Shor's Miracle
 
-In 1995, Peter Shor published a nine-qubit code that proved quantum error correction was possible. The key insight: **you don't copy the data, you spread it across entangled correlations**.
+In 1995, Peter Shor published a nine-qubit code that proved quantum error correction was possible. **You don't copy the data. You spread it across entangled correlations.**
 
 The three-qubit bit-flip code encodes:
 $$|\psi_L\rangle = \alpha|000\rangle + \beta|111\rangle$$
@@ -37,7 +37,7 @@ This isn't copying-it's entangling. The information about alpha and beta is spre
 
 To detect errors without measuring the data, you measure **parity**-whether pairs of qubits match. This reveals which qubit flipped without revealing whether the qubits are 0 or 1. The superposition survives.
 
-**This is the hint**: Quantum error correction is possible. Information can be protected without copying by spreading it across entangled patterns. The universe permits robust quantum information.
+Quantum error correction is possible. Information can be protected without copying by spreading it across entangled patterns. The universe permits robust quantum information.
 
 ## 10.3 The First-Principles Reframing: Reality Is Error-Corrected
 
@@ -170,9 +170,9 @@ As we saw in Chapter 6, Zurek's **quantum Darwinism** explains how classical fac
 
 In computer science, networks agree on shared states through consensus protocols. Physics does this constantly. The nodes are observers. The messages are light signals and memory traces. The consensus rule is physical law.
 
-That is no longer only an analogy in OPH. The consensus paper proves that when the local repair rules are well-behaved, different repair orders converge to the same shared normal form. It also clarifies two other parts of the picture: gauge symmetry is the rule that lets different microscopic descriptions count as the same physical state, and stable records form an eventually consistent public memory.
+In OPH, the consensus paper proves that when the local repair rules can fix the declared overlap mismatches, fit together locally, and lower a shared inconsistency score at each accepted step, different repair orders converge to the same shared normal form. It also clarifies two other parts of the picture: gauge symmetry is the rule that lets different microscopic descriptions count as the same physical state, and stable records form an eventually consistent public memory.
 
-Error correction isn't just a tool for engineers. It's the way the universe builds stable facts.
+Error correction is a physical principle as well as a tool for engineers. It is the way the universe builds stable facts.
 
 ## 10.8 The Knill-Laflamme Conditions
 
@@ -242,9 +242,9 @@ To summarize:
 
 | Intuitive Picture | Surprising Hint | First-Principles Reframing |
 |---|---|---|
-| Information is either fragile (destroyed by noise) or requires copying for protection | No-cloning forbids copying, yet quantum error correction is possible; the Petz recovery map and holographic codes show information can be recovered | Reality requires robust encoding; spacetime can be read as quantum-error-correction structure rather than as bare local storage |
+| Information is either fragile (destroyed by noise) or requires copying for protection | No-cloning forbids copying, yet quantum error correction is possible; the Petz recovery map and holographic codes show information can be recovered | Reality requires robust encoding; spacetime can be read as quantum-error-correction structure and robust screen encoding |
 
-**The key reverse engineering insight**: We started with the intuition that protecting information requires either isolation or copying. Quantum mechanics revealed with no-cloning (copying is forbidden) while simultaneously revealing that quantum error correction is possible through entanglement. The discovery that AdS/CFT has the structure of an error-correcting code shows this is not just an engineering technique-it is deeply relevant to how spacetime can be organized. Our model explains why: observer consistency requires robust shared information. The universe can then be read as code-like because that is how stable, consistent facts are maintained across many observers in a noisy quantum world.
+Protecting information does not require isolation or copying. Quantum mechanics forbids cloning and still permits error correction through entanglement. AdS/CFT shows the same code-like structure in holography. OPH treats that structure as part of the reason stable shared facts can persist across many observers in a noisy quantum world.
 
 **Additional lessons**:
 

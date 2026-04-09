@@ -83,11 +83,11 @@ This means at least one ingredient in the classical Bell-premise package must fa
 
 Many physicists read the Bell results as strong pressure against naive local realism, but the exact interpretive lesson remains contested. The alternative is to accept a deeper nonlocal structure or preferred causal bookkeeping, which many physicists regard as a high explanatory cost.
 
-**This is the hint**: Quantum correlations exceed what any local hidden variable theory permits. The intuitive picture of pre-existing properties carried from a common past is experimentally contradicted.
+Quantum correlations exceed what any local hidden variable theory permits. The intuitive picture of pre-existing properties carried from a common past is experimentally contradicted.
 
 ## 6.3 The First-Principles Reframing: Consistency and Nonlocal Correlations
 
-Now we reverse engineer. Why does nature behave this way? What principle would make such nonclassical correlations structurally natural rather than merely surprising?
+The reverse-engineering question is simple: why does nature behave this way? What principle would make such nonclassical correlations structurally natural?
 
 ### Objectivity Is Agreement
 
@@ -217,7 +217,7 @@ QMA is the quantum analog of NP. Just as NP captures problems where solutions ar
 
 Being QMA-complete means the Quantum Marginal Problem is as hard as any problem in the class. If you could solve QMP efficiently, you could solve any QMA problem efficiently.
 
-### What This Means
+### Why the Hardness Matters
 
 In classical physics, local data often determine global data on simple overlap structures, and compatibility checking is much easier than in the quantum case.
 
@@ -443,7 +443,7 @@ Summary of this chapter:
 |---|---|---|
 | Correlations come from shared causes or hidden variables | Bell's theorem: quantum correlations violate Bell inequalities, exceeding what any local hidden variable theory permits | Consistency conditions across observer patches make Bell-violating correlations structurally natural rather than accidental |
 
-**The key reverse engineering insight**: We started with the intuition that distant correlations must have local explanations. Bell's theorem revealed that nature permits correlations that exceed classical bounds. This points toward a consistency-built reality that naturally favors genuinely quantum correlation structure rather than classical hidden-variable stories.
+Distant correlations need not come from classical hidden variables. Bell's theorem shows that nature permits stronger, genuinely quantum structure. In OPH, that structure belongs to the consistency conditions that link observer patches.
 
 **Why Bell violations matter here**: This deserves emphasis. The Quantum Marginal Problem is QMA-complete-checking whether local states are globally consistent is computationally hard. This hardness is a feature, not a bug. It shows that overlap consistency is a real constraint, and Bell-violating correlations may be part of the quantum structure that helps satisfy it.
 
