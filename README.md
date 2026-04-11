@@ -28,15 +28,15 @@ OPH places a local unification surface around the calibrated local UV input. The
 
 Constants, theorem chains, and open proof fronts for this surface are tracked in [extra/OPH_PHYSICS_CONSTANTS.md](extra/OPH_PHYSICS_CONSTANTS.md).
 
-**Overall theorem and derivation stack**
+**Current theorem stack and open fronts**
 
 <p align="center">
-  <a href="assets/prediction-chain.svg" target="_blank" rel="noopener noreferrer">
-    <img src="assets/prediction-chain.svg" alt="Overall OPH theorem and derivation stack" width="92%">
+  <a href="assets/prediction-chain.svg?v=20260411" target="_blank" rel="noopener noreferrer">
+    <img src="assets/prediction-chain.svg?v=20260411" alt="Current OPH theorem stack and open proof fronts" width="92%">
   </a>
 </p>
 
-<p align="center"><sub>The full OPH stack from axioms to relativity, gauge structure, particles, observers, and the remaining open fronts. Click to open the full SVG.</sub></p>
+<p align="center"><sub>The current OPH stack from axioms to relativity, gauge structure, particles, observers, and the remaining open proof fronts. Click to open the full SVG.</sub></p>
 
 ## Particle Highlights
 
