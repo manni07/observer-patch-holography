@@ -267,11 +267,11 @@ That same local calibration surface organizes the numerical unification story. T
 | `G` | `P -> a_cell`, `ellbar_shared`, `G = a_cell / (4 ellbar_shared)` | `6.674299995910528e-11 m^3 kg^-1 s^-2` | exact emitted branch value on the declared local exact-release surface |
 | `W` | `P -> alpha_U -> (t_U, t_tr) -> v -> M_W` | `80.377 GeV` | exact codomain on the target-free electroweak identity surface |
 | `Z` | `P -> alpha_U -> (t_U, t_tr) -> v -> M_Z` | `91.18797809193725 GeV` | exact codomain on the target-free electroweak identity surface |
-| `H` | `P -> alpha_U -> (t_U, t_tr) -> Higgs scalar -> M_H` | `125.1995304097179 GeV` | exact codomain on the closed one-scalar Higgs/top surface |
+| `H` | `P -> alpha_U -> (t_U, t_tr) -> Higgs scalar -> M_H` | `public 125.21892206026347 GeV; exact sidecar 125.1995304097179 GeV` | public forward Higgs/top row with compare-only exact inverse sidecar |
 
 ![OPH unification diagram](../assets/OPH_Unification_Diagram.svg)
 
-The boundary of this local package consists of five explicit pieces: the local SI readout package, the shared-edge entropy bridge, the strict classical branch clause, the target-free electroweak identity surface, and the closed one-scalar Higgs/top promotion surface. The same calibrated local input therefore organizes the classical gravity coupling and the electroweak boson/Higgs mass scale within one diagrammatic surface, while `c` enters as the structural Lorentz output displayed in local SI units.
+The boundary of this local package consists of five explicit pieces: the local SI readout package, the shared-edge entropy bridge, the strict classical branch clause, the target-free electroweak identity surface, and the one-scalar Higgs/top forward seed together with its compare-only inverse sidecar. The same calibrated local input therefore organizes the classical gravity coupling and the electroweak boson/Higgs mass scale within one diagrammatic surface, while `c` enters as the structural Lorentz output displayed in local SI units.
 
 ### The Measurement Problem
 
@@ -315,7 +315,7 @@ different charge sectors to numerical noise level.
 
 **Peter-Weyl second-index mechanism for β-coefficients.** A narrower Phase II result:
 the edge-sector heat-kernel branch reproduces MSSM-like one-loop beta coefficient
-shifts only on a declared D10 calibration package consisting of external input $P$,
+shifts only on a declared calibration package consisting of external input $P$,
 the printed running/matching conventions, the printed threshold conventions, and,
 for the near-MSSM benchmark, an added fermionic-grading restriction to half-integer
 SU(2) sectors, using a structural argument from the Peter-Weyl decomposition. The
@@ -337,7 +337,7 @@ The main open directions are:
 5. **Numerical predictions**: Implement SU(2)/SU(3) quantum link models and
    extract gauge couplings using the validated formulas.
 
-We have shifted the Standard Model program toward anomaly and gluing
+The Standard Model program is organized around anomaly and gluing
 consistency rather than discrete symmetry numerology. The promise of the
 model is that each engineering target is tied to specific, testable
 structural inputs instead of broad derivation.

@@ -855,20 +855,20 @@ control is presently collar-local: Theorem~\ref{thm:splice} gives the exact-Mark
 \(\delta^{\mathrm M}_{A:B:D}(\varepsilon)\to0\) on one fixed finite-dimensional collar model and
 the one-shot recovery comparison bound \(2\sqrt{1-e^{-\varepsilon}}\le 2\sqrt{\varepsilon}\),
 while Theorem~\ref{thm:crdt} gives the \((\varepsilon,\delta_{\mathrm{rec}})\) repeated-read
-stability bound for approximate record projectors. The current corpus does \emph{not} prove a
+stability bound for approximate record projectors. This paper does \emph{not} prove a
 global noisy-consensus theorem asserting that arbitrarily long asynchronous approximate repair
 sequences converge to a unique approximate quotient normal form with uniformly controlled
 accumulated error.
 
 \paragraph{Expressive-power status.}
 The law-selection model of Theorem~\ref{thm:replicator} is a finite-candidate monotonicity result,
-not a universality theorem. For each fixed patch net the current theorem package proves a
+not a universality theorem. For each fixed patch net the theorem package proves a
 finite-state exact reconciliation mechanism rather than an unbounded universal machine. A genuine
 universality claim would require an explicit uniform family of patch nets and repair laws that
 simulates arbitrary circuits or machines with stated encoding overhead and robustness under
 asynchronous schedules. No such theorem is supplied here.
 
-With that status split fixed, six directions stand out as immediate next steps:
+With that status split fixed, six explicit downstream directions remain:
 
 \begin{enumerate}
 \item \textbf{Coarse-graining.} When does reconciliation commute with renormalization? If you coarse-grain the patch net and then reconcile, do you get the same result as reconciling first and then coarse-graining? The conditions under which these operations commute would connect the discrete model to continuum field theory.
@@ -877,9 +877,9 @@ With that status split fixed, six directions stand out as immediate next steps:
 
 \item \textbf{Observable-level confluence beyond the declared fixed-cutoff physical algebra.} Theorem~\ref{thm:obsconfluence} closes the fixed-cutoff quantum-lift statement when microscopic representatives differ by gauge relabelings globally or by sector/higher-gauge relabelings on the same declared quotient-local glued state. The remaining question is whether an analogous observable theorem survives on broader refinement-stable branches where the union-collar compatibility is only approximate or where the physical observable algebra itself changes under refinement.
 
-\item \textbf{Global approximate-consensus stability.} Theorem~\ref{thm:splice} and Theorem~\ref{thm:crdt} already supply the collar-local perturbative controls carried by the present paper. What remains is a multi-step theorem showing that approximate recovery moves are repair-complete for overlap consistency, preserve support-local disjoint commutation and nested-collar restriction compatibility, satisfy the support/CPTP clause on the Petz branch where needed, and converge under long asynchronous schedules to a unique approximate quotient normal form with controlled accumulated error.
+\item \textbf{Global approximate-consensus stability.} Theorem~\ref{thm:splice} and Theorem~\ref{thm:crdt} supply the collar-local perturbative controls carried by this paper. What is absent is a multi-step theorem showing that approximate recovery moves are repair-complete for overlap consistency, preserve support-local disjoint commutation and nested-collar restriction compatibility, satisfy the support/CPTP clause on the Petz branch where needed, and converge under long asynchronous schedules to a unique approximate quotient normal form with controlled accumulated error.
 
-\item \textbf{Expressive power / universality.} A universality claim would require an explicit uniform family of patch nets and repair laws that simulates arbitrary circuits or machines with stated encoding overhead and robustness under asynchronous schedules. The current paper supplies no such construction, so universality remains an external possibility rather than a theorem-grade output.
+\item \textbf{Expressive power / universality.} A universality claim would require an explicit uniform family of patch nets and repair laws that simulates arbitrary circuits or machines with stated encoding overhead and robustness under asynchronous schedules. This paper supplies no such construction, so universality remains an external possibility rather than a theorem-grade output.
 
 \item \textbf{Scaling-limit bridge to the downstream gravity/gauge stack.} Under what additional regularity conditions does the consensus protocol emit the prime geometric cap pair and support ordered cut-pair rigidity on that extracted limit, so that the D3--D5 gravity chain and the D7--D9 gauge/matter chain become available? This is also the point at which the broader Phase-II and Phase-III branches must remain disciplined: dark-sector, baryogenesis, spectroscopy, and string/worldsheet topics require extra premises beyond what this paper itself proves.
 \end{enumerate}
@@ -898,7 +898,7 @@ explicit structural assumptions (quorum size $\geq 2f+1$, partial synchrony, one
 certificate semantics, and \textrm{DLS}-style view-change), a \textrm{QBFT}-style interpretation
 of \textrm{OPH} repair satisfies safety and liveness (Appendix~\ref{app:bft-qecc},
 Theorem~\ref{thm:qbft-safety}). On the fixed-cutoff collar branch used here, the repair map is
-already written in exact-splice / Petz form; what remains conditional is the \textrm{CPTP}
+written in exact-splice / Petz form; what remains conditional is the \textrm{CPTP}
 property on all inputs, which requires either full-rank $\mathcal{N}(\sigma)$ or an explicit
 domain restriction, and trace-preserving completion is not automatic when
 $\mathcal{N}(\sigma)$ has a non-trivial kernel

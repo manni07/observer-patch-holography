@@ -44,7 +44,7 @@ Les constantes, chaînes de théorèmes et fronts de preuve ouverts pour cette s
 ### Résultats théorématiques et structurels
 
 - Zéros structurels exacts pour le photon, les gluons et le graviton.
-- Sortie électrofaible sur la branche de calibration D10, avec lignes publiques `W/Z` target-free fermées et paire gelée exacte utilisée seulement comme validation compare-only
+- Sortie électrofaible sur la branche de calibration target-free, avec lignes publiques `W/Z` fermées et paire gelée exacte utilisée seulement comme validation compare-only
   `W = 80.377 GeV`, `Z = 91.18797809193725 GeV`.
 - Étage quantitatif Higgs/top en aval du coeur électrofaible, avec une graine forward scalaire unique fermée qui porte les lignes publiques
   `H = 125.218922 GeV`, `t = 172.388646 GeV`.

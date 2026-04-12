@@ -19,7 +19,7 @@ OPH is a reconstruction program for fundamental physics. Spacetime, gauge struct
 ## Local Unification Surface
 
 OPH places a local unification surface around the calibrated local UV input. The same `P`-driven scale carries the electroweak boson and Higgs lane together with the gravity-side entropy lane, while the Lorentz branch supplies the invariant causal speed and the local readout package supplies the SI display.
-On the current public constants surface, `hbar` and `k_B` remain part of that downstream familiar-unit readout rather than standalone OPH-emitted constants.
+On the public constants surface, `hbar` and `k_B` remain part of that downstream familiar-unit readout rather than standalone OPH-emitted constants.
 
 <p align="center">
   <a href="assets/OPH_Unification_Diagram.svg" target="_blank" rel="noopener noreferrer">
@@ -29,7 +29,7 @@ On the current public constants surface, `hbar` and `k_B` remain part of that do
 
 Constants, theorem chains, and open proof fronts for this surface are tracked in [extra/OPH_PHYSICS_CONSTANTS.md](extra/OPH_PHYSICS_CONSTANTS.md).
 
-**Current theorem stack and open fronts**
+**Theorem stack and open fronts**
 
 <p align="center">
   <a href="assets/prediction-chain.svg?v=20260412" target="_blank" rel="noopener noreferrer">
@@ -37,14 +37,14 @@ Constants, theorem chains, and open proof fronts for this surface are tracked in
   </a>
 </p>
 
-<p align="center"><sub>The current OPH stack from axioms to relativity, gauge structure, particles, observers, and the remaining open proof fronts. Click to open the full SVG.</sub></p>
+<p align="center"><sub>The OPH stack from axioms to relativity, gauge structure, particles, observers, and the open proof fronts. Click to open the full SVG.</sub></p>
 
 ## Particle Highlights
 
 ### Theorem-grade and structural hits
 
 - Exact structural zeros for the photon, gluons, and graviton.
-- Electroweak output on the D10 calibration branch, with closed target-free public `W/Z` rows and an exact frozen compare-only pair
+- Electroweak output on the target-free calibration branch, with closed public `W/Z` rows and an exact frozen compare-only pair
   `W = 80.377 GeV`, `Z = 91.18797809193725 GeV`.
 - A quantitative Higgs/top stage downstream of the electroweak core, with a closed one-scalar forward seed carrying the public rows
   `H = 125.218922 GeV`, `t = 172.388646 GeV`.
