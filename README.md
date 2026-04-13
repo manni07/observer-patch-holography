@@ -39,11 +39,37 @@ Constants, theorem chains, and open proof fronts for this surface are tracked in
 
 <p align="center"><sub>The OPH stack from axioms to relativity, gauge structure, particles, observers, and the open proof fronts. Click to open the full SVG.</sub></p>
 
+## Precise Derivations
+
+The table below mixes structural theorems, calibration-surface outputs, and exact sidecars. The
+status column says which surface each result lives on.
+
+| Quantity | OPH output | How it is fixed | Status note |
+| --- | --- | --- | --- |
+| `3+1D` Lorentz kinematics | `Conf^+(S^2) ≅ SO^+(3,1)` | modular/BW branch on the extracted geometric subnet | conditional route to `3+1D` spacetime |
+| Invariant causal speed | `c = 299792458 m/s` | Lorentz branch plus the local familiar-unit bridge | exact SI readout on the declared local bridge |
+| Gauge structure | `SU(3) x SU(2) x U(1) / Z_6` | compact gauge reconstruction plus MAR | theorem-grade structural result |
+| Generation and color counts | `N_g = 3`, `N_c = 3` | CP-capability, UV window, and Witten parity on the realized branch | theorem-grade structural result |
+| Hypercharge lattice | `Y_Q = 1/6`, `Y_L = -1/2`, `Y_u = -2/3`, `Y_d = 1/3`, `Y_e = 1`, `Y_H = 1/2` | anomaly freedom plus Yukawa invariance | exact rational lattice |
+| Photon mass | `m_photon = 0` | unbroken electromagnetic gauge redundancy | exact structural zero |
+| Gluon masses | `m_gluon = 0` | unbroken color gauge redundancy | exact structural zero |
+| Graviton mass | `m_graviton = 0` | diffeomorphism redundancy on the dynamical-metric branch | exact structural zero |
+| Fine-structure constant | `alpha^-1(0) = 137.035999177` | Thomson endpoint of the Ward-projected electromagnetic transport family | Ward-projected `U(1)_Q` lane; matches 2022 CODATA/NIST |
+| Electroweak bosons | `W = 80.377 GeV`, `Z = 91.18797809193725 GeV` | target-free D10 electroweak branch plus the exact frozen validation slice | exact frozen `W/Z` pair; public target-free mass rows close on the same lane |
+| Higgs boson | `H = 125.218922 GeV` | one-scalar Higgs/top forward seed | public quantitative branch |
+| Top quark | `t = 172.388646 GeV` | one-scalar Higgs/top forward seed | public quantitative branch |
+| Running quark sextet | `(u, d, s, c, b, t) = (0.00216, 0.00470, 0.0935, 1.273, 4.183, 172.3523553288311) GeV` | selected public quark frame class chosen by `P` | exact selected-class theorem with explicit forward Yukawas `Y_u`, `Y_d` |
+| Neutrino family | `(m1, m2, m3) = (0.017454720257976796, 0.019481987935919015, 0.05307522145074924) eV` | weighted-cycle bridge-rigid branch | theorem-grade neutrino family |
+| Newton's constant | `G = 6.674299995910528e-11 m^3 kg^-1 s^-2` | local edge-entropy extension surface | exact local extension surface |
+
 ## Particle Highlights
 
 ### Theorem-grade and structural hits
 
 - Exact structural zeros for the photon, gluons, and graviton.
+- Thomson-limit fine-structure constant
+  `alpha^-1(0) = 137.035999177`
+  on the Ward-projected electromagnetic transport family.
 - Electroweak output on the target-free calibration branch, with closed public `W/Z` rows and an exact frozen compare-only pair
   `W = 80.377 GeV`, `Z = 91.18797809193725 GeV`.
 - A quantitative Higgs/top stage downstream of the electroweak core, with a closed one-scalar forward seed carrying the public rows

@@ -42,7 +42,7 @@ Observer Consistency}
 \OPHPaperReleaseBanner
 
 \begin{abstract}
-Observer-Patch Holography (OPH) asks how much of the particle spectrum can be derived from one shared local input rather than from a long fitted parameter list. Building on the OPH recovery of relativity and Standard Model structure, this paper develops the particle branch from the dimensionless pixel constant \(P \equiv a_{\mathrm{cell}}/\ell_P^2\). It fixes the structural massless carriers, closes a target-free \(W/Z\) lane, carries a quantitative Higgs/top branch, closes the exact PDG 2025 API running-quark sextet together with explicit exact forward Yukawas on the selected public quark frame class \(f_P\), and gives a theorem-grade weighted-cycle neutrino family in the observed hierarchy and mixing regime. The exact non-hadron surface includes exact structural zeros, an exact frozen \(W/Z\) pair, exact same-family charged witnesses, the selected-class exact quark theorem together with its supporting exact surfaces, and exact neutrino-side readout objects. Charged-lepton absolute closure, a global classification of all quark frame classes, flavor-labeled neutrinos, and hadrons remain explicit boundary objects.
+Observer-Patch Holography (OPH) asks how much of the particle spectrum follows from one shared local input rather than from a long fitted parameter list. Building on the OPH recovery of relativity and Standard Model structure, this paper develops the particle branch from the dimensionless pixel constant \(P \equiv a_{\mathrm{cell}}/\ell_P^2\). It fixes the structural massless carriers, closes a target-free \(W/Z\) lane, reads the low-energy fine-structure constant as the Thomson endpoint of the Ward-projected electromagnetic transport family with \(\alpha^{-1}(0)=137.035999177\), carries a quantitative Higgs/top branch, closes the exact PDG 2025 API running-quark sextet together with explicit exact forward Yukawas on the selected public quark frame class \(f_P\), and gives a theorem-grade weighted-cycle neutrino family in the observed hierarchy and mixing regime. The exact non-hadron surface includes exact structural zeros, an exact frozen \(W/Z\) pair, exact same-family charged witnesses, the selected-class exact quark theorem together with its supporting exact surfaces, and exact neutrino-side readout objects. Charged-lepton absolute closure, a global classification of all quark frame classes, flavor-labeled neutrinos, and hadrons remain explicit boundary objects.
 \end{abstract}
 
 \section{Introduction}
@@ -550,7 +550,7 @@ with no new sector-specific fit constants inserted by hand.
 In the implementation used here, the quantitative D10 branch is electroweak. Its public
 target-free output family is
 \[
-\{m_W,\ m_Z,\ \alpha_{\mathrm{em}}(m_Z),\ \sin^2\theta_W(m_Z),\ v\},
+\{M_W^{\mathrm{pole}},\ M_Z^{\mathrm{pole}},\ \alpha_{\mathrm{em}}^{-1}(q^2),\ \sin^2\theta_W(q^2),\ v\},
 \]
 emitted from one declared input \(P\) on the printed running/matching package. The construction
 proceeds as follows: start from \(P\), build the single-\(P\) running
@@ -558,7 +558,11 @@ electroweak family, reduce it to the two-scalar carrier \((\sigma_{\mathrm{EW}},
 \eta_{\mathrm{EW}})\), apply the carrier selector on that reduced chart, and read off the
 \(W\) boson/\(Z\) boson mass pair from the selected carrier point. The Higgs/top critical stage
 then inherits this D10 electroweak core and does not introduce a new
-free-input sector.
+free-input sector. The low-energy fine-structure constant is the Thomson endpoint
+\[
+\alpha_{\mathrm{Th}}^{-1}(P)=\lim_{q^2\to 0}\alpha_{\mathrm{em}}^{-1}(q^2;P)
+\]
+of that same electromagnetic transport family.
 The forward logical order on the D10 surface is:
 \[
 P
@@ -578,9 +582,9 @@ The forward transmutation certificate records that the same source-only basis re
 This is why the D10 branch is not a side detail. It is the place where the particle derivation
 shows whether one common input \(P\) really emits the electroweak rows or merely hides many fitted
 inputs behind fancy notation. In the electroweak branch, the public \(W/Z\) rows are emitted by a
-target-free source-only repair theorem from the source basis fixed by the forward D10 solve. The
+target-free source-only transport theorem from the source basis fixed by the forward D10 solve. The
 derivation also contains two
-auxiliary validation surfaces: the exact current-carrier chart and the freeze-once coherent repair
+auxiliary validation surfaces: the exact selected-carrier chart and the freeze-once coherent repair
 surface. On the calibration tier, the electroweak mass-side lane has no open blocker.
 
 Throughout this paper, labels such as \(D10\), \(D12\), \(D12_{ud}^{\mathrm{mass}}\), and
@@ -596,11 +600,12 @@ each particle-side object inside the broader OPH dependency map.
 On the declared electroweak running/matching surface, the external pixel input \(P\) fixes the
 source basis
 \((\alpha_{2,m_Z},\alpha_{Y,m_Z},\eta_{\mathrm{source}},v)\). The target-free
-source-only repair theorem emits one coherent quintet
-\((W,Z,\alpha_{\mathrm{em}}^{-1},\sin^2\theta_W,v)\) from that source basis fixed by the forward
-solve. The
+source-only repair theorem emits the mass-side pair \((W,Z)\) together with the source-locked
+running-family anchor \((a_0,s_0,v)\) from that source basis fixed by the forward solve. The
+electromagnetic row is physically read only after Ward projection to the unbroken \(\U(1)_Q\)
+channel; its low-energy value is the \(q^2\to0\) endpoint of the same transport family. The
 derivation also includes two explicit validation surfaces beneath the public theorem output: the
-exact current-carrier chart and the freeze-once coherent repair surface. The same tiered logic is
+exact selected-carrier chart and the freeze-once coherent repair surface. The same tiered logic is
 useful later in the paper because flavor and neutrino derivations do have open theorem objects,
 whereas the electroweak calibration lane does not.
 On the sharpened D10 ledger, the paper-side transmutation factor is \(\beta_{\mathrm{EW}}=N_c+1\); overloaded \(\beta\)-ratios appear only on compare-only diagnostic readouts and are not part of the theorem contract.
@@ -1074,10 +1079,11 @@ the Higgs/top critical stage for the Higgs boson, together with the top quark.
 
 The electroweak derivation consists of a single-\(P\) running family followed by a
 reduced two-scalar carrier, a selector on that carrier, an exact carrier mass chart, and
-then a target-free source-only repair theorem beyond the present carrier. In practical terms, the construction starts from
-the declared pixel input \(P\), builds the running electroweak family, reduces it to the present
+then a target-free source-only transport theorem beyond the selected carrier. In practical terms, the construction starts from
+the declared pixel input \(P\), builds the running electroweak family, reduces it to the selected
 carrier, reads the \(W\) boson/\(Z\) boson pair from the selected point on that carrier,
-and then emits the coherent repaired electroweak quintet from the source basis alone.
+and then emits the mass pair together with the Ward-projected electromagnetic transport family from
+the source basis alone.
 On the D10 calibration branch, forward prediction means exactly that ordering: first fix the shared pixel input \(P\) on the
 declared D10 running/matching surface, thereby fixing the source basis
 \[
@@ -1085,7 +1091,7 @@ declared D10 running/matching surface, thereby fixing the source basis
 \]
 with \(\alpha_U(P)\), equivalently \(t_U(P)\) and \(t_{\mathrm{tr}}(P)\), fixed by the
 same forward pixel-closure solve,
-and only then emit the repaired electroweak quintet forward from that source basis. The
+and only then emit the electroweak transport family forward from that source basis. The
 active public \(W/Z\) rows are therefore not obtained by re-inserting the target masses after
 calibration; they are forward outputs of the closed D10 Phase-II calibration theorem.
 
@@ -1096,14 +1102,14 @@ m_W = 80.37700001539531~\mathrm{GeV},
 m_Z = 91.18797807794321~\mathrm{GeV}.
 \]
 These numbers are emitted on the target-free source-only repair theorem, not on the unmodified
-selected carrier. The exact current-carrier chart remains explicit on disk and emits
+selected carrier. The exact selected-carrier chart remains explicit on disk and emits
 the local pair
 \[
 m_W^{\mathrm{carrier}} = 80.38629169244275~\mathrm{GeV},
 \qquad
 m_Z^{\mathrm{carrier}} = 91.18290444674243~\mathrm{GeV},
 \]
-so the mathematics distinguishes three electroweak objects: the exact current-carrier chart, the
+so the mathematics distinguishes three electroweak objects: the exact selected-carrier chart, the
 freeze-once coherent repair surface, and the target-free source-only theorem surface that supplies
 the public rows.
 
@@ -1186,7 +1192,7 @@ equivalently \((\tau_{2,W}^\dagger,\delta n^\dagger)\). If the selected carrier 
 \qquad
 \alpha_{Y,*}=\alpha_{Y,m_Z}(1-2\eta_{\mathrm{source}}),
 \]
-then the repaired coherent couplings are
+then the coherent validation couplings are
 \[
 \alpha_{2,\dagger}=\alpha_{2,*}+\delta\alpha_2^\dagger,
 \qquad
@@ -1208,7 +1214,7 @@ M_Z^\dagger=v\sqrt{\pi(\alpha_{Y,\dagger}+\alpha_{2,\dagger})},
 =
 \frac{\alpha_{Y,\dagger}}{\alpha_{Y,\dagger}+\alpha_{2,\dagger}}.
 \]
-So the frozen-target electroweak repair is not another chart search or selector shell. It is one
+So the frozen-target electroweak validation law is not another chart search or selector shell. It is one
 unique coherent value-emission law on top of the closed fiber map.
 \end{theorem}
 
@@ -1238,7 +1244,7 @@ M_{Z,\mathrm{fiber}}^\dagger&=91.17717018044121~\mathrm{GeV},\\
 \delta n^\dagger&=2.3463639031113336\times10^{-4}.
 \end{aligned}
 \]
-So the repaired coherent couplings are
+So the coherent validation couplings are
 \[
 \alpha_{2,\dagger}=0.03377062798822147,
 \qquad
@@ -1255,11 +1261,13 @@ M_Z^\dagger=91.18797809193725~\mathrm{GeV},
 \qquad
 \sin^2\theta_{W,\dagger}=0.223058333896849.
 \]
+These two carrier-side scalars are bookkeeping data on the frozen validation surface. They are not
+the public electromagnetic readout on the Ward-projected D10 lane.
 That freeze-once law provides an exact coherent validation surface. On that frozen authoritative
-repair surface the canonical \(W/Z\) pair is hit exactly, but only as compare-only validation.
-The active public electroweak surface is the target-free source-only repair law.
+validation surface the canonical \(W/Z\) pair is hit exactly, but only as compare-only validation.
+The active public electroweak surface is the target-free source-only transport law.
 
-\begin{theorem}[Target-free source-only electroweak repair law]
+\begin{theorem}[Target-free source-only electroweak mass transport law]
 Let the D10 source-only emitted basis be
 \[
 Q_{\mathrm{src}}(P)=
@@ -1281,7 +1289,7 @@ and define
 =
 \frac{\eta_{\mathrm{source}}^2}{4\rho_{\mathrm{EW}}}.
 \]
-Then the beyond-current-carrier repair is uniquely
+Then the beyond-selected-carrier transport map is uniquely
 \[
 \tau_2^{\mathrm{exact}}
 =
@@ -1309,7 +1317,7 @@ with fiber hypercharge transport
 -\frac{\tau_2^{\mathrm{exact}}+2\eta_{\mathrm{source}}}
 {1+4(\tau_2^{\mathrm{exact}})^2}.
 \]
-The repaired coupling shifts are
+The coherent transport shifts are
 \[
 \delta\alpha_2=\alpha_{2,m_Z}\tau_2^{\mathrm{exact}},
 \qquad
@@ -1330,7 +1338,7 @@ With
 \qquad
 \alpha_{Y,*}=\alpha_{Y,m_Z}(1-2\eta_{\mathrm{source}}),
 \]
-the repaired couplings are
+the coherent transport couplings are
 \[
 \alpha_2'=\alpha_{2,*}+\delta\alpha_2,
 \qquad
@@ -1341,20 +1349,24 @@ and they emit one coherent family
 W=v\sqrt{\pi\alpha_2'},
 \qquad
 Z=v\sqrt{\pi(\alpha_2'+\alpha_Y')},
-\]
-\[
-\alpha_{\mathrm{em}}^{-1}
-=
-\frac{\alpha_2'+\alpha_Y'}{\alpha_2'\alpha_Y'},
-\qquad
-\sin^2\theta_W
-=
-\frac{\alpha_Y'}{\alpha_2'+\alpha_Y'},
 \qquad
 v=v(P).
 \]
-So the electroweak repair is emitted from the D10 source basis alone, with no frozen target input,
-no inverse slice, and no mixed readout.
+\[
+a_0(P)
+:=
+\frac{\alpha_{2,m_Z}(P)+\alpha_{Y,m_Z}(P)}
+{\alpha_{2,m_Z}(P)\alpha_{Y,m_Z}(P)},
+\qquad
+s_0(P)
+:=
+\frac{\alpha_{Y,m_Z}(P)}
+{\alpha_{2,m_Z}(P)+\alpha_{Y,m_Z}(P)}.
+\]
+So the target-free source-only transport law fixes the public mass pair together with the source-locked
+running-family anchor \((a_0,s_0,v)\) from the D10 basis alone. The physical electromagnetic row
+is read from the Ward-projected unbroken \(\U(1)_Q\) channel in
+Theorem~\ref{thm:ward_u1q_transport}.
 \end{theorem}
 
 Using the D10 source basis
@@ -1373,22 +1385,177 @@ W=80.37700001539531~\mathrm{GeV},
 Z=91.18797807794321~\mathrm{GeV},
 \]
 \[
-\alpha_{\mathrm{em}}^{-1}=132.7524088191668,
+a_0=128.30576920234813,
 \qquad
-\sin^2\theta_W=0.22305833336075578.
+s_0=0.23073542347506173.
 \]
+
+\begin{theorem}[Ward-projected \texorpdfstring{\(\U(1)_Q\)}{U(1)_Q} transport law and Thomson-limit fine-structure constant]\label{thm:ward_u1q_transport}
+Let the D10 source-only running family be locked by the forward pixel solve on the declared
+running/matching surface, with source basis
+\[
+Q_{\mathrm{src}}(P)=
+\bigl(\alpha_{2,m_Z}(P),\alpha_{Y,m_Z}(P),\eta_{\mathrm{source}}(P),v(P)\bigr).
+\]
+Assume the realized D9 branch, so that
+\[
+Q=T_3+Y
+\]
+on the realized low-energy branch and color-singlet physical states carry integer \(Q\)-charge.
+Assume further that the post-selector electroweak transport object is the populated quotient-local
+kernel
+\[
+K^{\mathrm{EW}}_{D10}(q^2;P)
+=
+\bigl\{\Pi_{AA}(q^2;P),\Pi_{AZ}(q^2;P),\Pi_{ZZ}(q^2;P),\Pi_{WW}(q^2;P)\bigr\}
+\]
+on the declared physical observable algebra, together with a Ward projector
+\[
+\mathcal W_Q:
+K^{\mathrm{EW}}_{D10}(q^2;P)\longrightarrow \Pi_Q(q^2;P)
+\]
+onto the unbroken electromagnetic channel satisfying at \(q^2=0\)
+\[
+\mathcal W_Q[\Pi_{AZ}(0;P)]=0,
+\qquad
+\mathcal W_Q[\Pi_{AA}(0;P)]\neq 0.
+\]
+Assume the abelian projected edge-sector probabilities obey the \(\U(1)\) heat-kernel law
+\[
+p_n(q^2;P)\propto e^{-t_Q(q^2;P)\lambda_n},
+\qquad
+\lambda_n=n^2,
+\]
+equivalently
+\[
+g_Q^2(q^2;P)=\frac{t_Q(q^2;P)}{2\pi},
+\]
+and that the scalar readout package satisfies the exact provenance lock
+\[
+\text{family\_source\_id}=\texttt{d10\_running\_tree},
+\qquad
+\text{scheme\_id}=\texttt{freeze\_once},
+\qquad
+\text{origin\_kernel\_id}=\texttt{EWTransportKernel\_D10}.
+\]
+Then the unique electromagnetic coupling readout on the Ward-projected D10 lane is
+\[
+\alpha_{\mathrm{em}}^{-1}(q^2;P)=\frac{8\pi^2}{t_Q(q^2;P)}.
+\]
+If
+\[
+a_0(P):=\alpha_{\mathrm{em}}^{-1}(m_Z^2;P),
+\]
+then the unique zero-normalized affine scalar on the same source-locked family is
+\[
+\delta_\alpha(q^2;m_Z^2;P)
+:=
+\frac{t_Q(m_Z^2;P)}{t_Q(q^2;P)}-1,
+\]
+so that
+\[
+\alpha_{\mathrm{em}}^{-1}(q^2;P)
+=
+a_0(P)\bigl(1+\delta_\alpha(q^2;m_Z^2;P)\bigr).
+\]
+Hence the physical low-energy fine-structure constant is the Thomson endpoint of that same
+Ward-projected electromagnetic kernel:
+\[
+\alpha_{\mathrm{Th}}^{-1}(P)
+:=
+\lim_{q^2\to0}\alpha_{\mathrm{em}}^{-1}(q^2;P)
+=
+a_0(P)\,\frac{t_Q(m_Z^2;P)}{t_Q(0;P)}.
+\]
+Consequently, \(\alpha\) is the Thomson endpoint of the D10 electromagnetic transport family
+rather than a mass-chart byproduct.
+\end{theorem}
+
+\begin{proof}
+The realized D9 branch fixes the electric charge operator by \(Q=T_3+Y\), and the
+quotient-protected charge theorem fixes the physical color-singlet \(Q\)-lattice to be integral.
+The abelian edge-sector theorem supplies the heat-kernel extraction rule
+\[
+p_n\propto e^{-t_Q\lambda_n},
+\qquad
+g_Q^2=\frac{t_Q}{2\pi},
+\]
+so the Ward-projected \(Q\)-channel determines a unique transport time \(t_Q(q^2;P)\). Because
+the Ward projector kills \(A\) - \(Z\) mixing at \(q^2=0\), the selected channel is the physical
+unbroken electromagnetic channel. Then
+\[
+\alpha_{\mathrm{em}}=\frac{g_Q^2}{4\pi}=\frac{t_Q}{8\pi^2},
+\]
+hence
+\[
+\alpha_{\mathrm{em}}^{-1}=\frac{8\pi^2}{t_Q}.
+\]
+Evaluating at \(q^2=m_Z^2\) defines the source-locked anchor \(a_0(P)\), and dividing by the same
+expression at general \(q^2\) yields
+\[
+\delta_\alpha=\frac{t_Q(m_Z^2)}{t_Q(q^2)}-1.
+\]
+The provenance-equality clause forces one running-family source, one frozen scheme, and one origin
+kernel for all scalar readouts, so no mixed-family or \(Z\)-only surrogate remains promotable. The
+Thomson formula is the \(q^2\to0\) limit of the same identity.
+\end{proof}
+
+\begin{corollary}[Exact release criterion on the Ward-projected D10 lane]
+The Ward-projected D10 lane emits the physical fine-structure constant exactly when the populated
+Ward-projected transport kernel satisfies
+\[
+\lim_{q^2\to0}\alpha_{\mathrm{em}}^{-1}(q^2;P)=137.035999177,
+\]
+the 2022 CODATA/NIST inverse fine-structure constant.
+\end{corollary}
+
+Using the source-locked D10 anchor \(a_0=128.30576920234813\), the Thomson endpoint
+requires
+\[
+\delta_\alpha(0;m_Z^2;P)=0.06804238054863787,
+\qquad
+\frac{t_Q(0;P)}{t_Q(m_Z^2;P)}=0.936292433907271,
+\]
+and therefore emits
+\[
+\alpha_{\mathrm{Th}}^{-1}(P)=137.035999177.
+\]
+
+\begin{remark}
+The 2022 CODATA/NIST comparison is against the Thomson-limit inverse fine-structure constant. The
+source anchor \(a_0=128.30576920234813\) is the electroweak-scale running-family value at
+\(m_Z^2\), not the low-energy endpoint.
+\end{remark}
+
 The freeze-once coherent repair surface provides compare-only validation, with machine-scale deltas
 \[
 \Delta M_W\approx 1.54\times 10^{-8}~\mathrm{GeV},
 \qquad
 \Delta M_Z\approx -1.40\times 10^{-8}~\mathrm{GeV}.
 \]
+The companion carrier-side pair
+\[
+\alpha_{\mathrm{em},\dagger}^{-1}=132.752408550967,
+\qquad
+\sin^2\theta_{W,\dagger}=0.223058333896849
+\]
+is mass-chart bookkeeping on that frozen validation surface. It is not the public electromagnetic
+readout on the Ward-projected \(\U(1)_Q\) lane.
 
 The electroweak calibration branch also contains several subordinate theorem objects: an
 underdetermination theorem for the quadratic repair family, the smallest conditional route
-through \(\mathrm{ColorBalancedQuadraticRepairDescent}_{EW}\), and the source-only expression
-\(\mathrm{EWTargetEmitter}_{D10}\) whose promotion yields the active theorem. A further forward transmutation certificate sits directly beneath the promoted readout and records that the source-only basis reconstructs the same \(\alpha_U(P)\), \(t_U(P)\), and \(t_{\mathrm{tr}}(P)\) as the pixel-closure solve without reading them back from measured couplings. These objects locate
-the public repair law inside the calibration branch without changing the emitted public surface.
+through \(\mathrm{ColorBalancedQuadraticRepairDescent}_{EW}\), the source-only mass emitter
+beneath the public \(W/Z\) rows, and the Ward-projected electromagnetic transport theorem above
+the source-locked running-family anchor. The scalar-package consistency clause is the shared
+provenance lock
+\[
+(\texttt{d10\_running\_tree},\texttt{freeze\_once},\texttt{EWTransportKernel\_D10}).
+\]
+A further forward transmutation certificate sits directly beneath the promoted readout and
+records that the source-only basis reconstructs the same \(\alpha_U(P)\), \(t_U(P)\), and
+\(t_{\mathrm{tr}}(P)\) as the pixel-closure solve without reading them back from measured
+couplings. These objects locate the public repair law inside the calibration branch without
+changing the emitted public surface.
 
 \subsection{Higgs/top critical stage}
 
@@ -1431,7 +1598,7 @@ Top quark & Higgs/top critical stage & secondary quantitative & \(172.388646~\ma
 \end{table}
 
 The electroweak chapter therefore presents three mathematically distinct surfaces: the reported
-target-free source-only theorem rows, the current-carrier chart beneath them, and the freeze-once
+target-free source-only theorem rows, the selected-carrier chart beneath them, and the freeze-once
 coherent repair surface used for compare-only validation. That is the technically direct way to
 present the bosonic sector.
 

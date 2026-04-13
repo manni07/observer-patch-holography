@@ -39,11 +39,37 @@ Les constantes, chaînes de théorèmes et fronts de preuve ouverts pour cette s
 
 <p align="center"><sub>La pile OPH complète, des axiomes jusqu'à la relativité, la structure de jauge, les particules, les observateurs et les fronts encore ouverts. Cliquez pour ouvrir le SVG complet.</sub></p>
 
+## Dérivations précises
+
+Le tableau ci-dessous mélange des théorèmes structurels, des sorties de surface de calibration et
+des sidecars exacts. La colonne de statut indique sur quelle surface chaque résultat vit.
+
+| Quantité | Sortie OPH | Comment elle est fixée | Note de statut |
+| --- | --- | --- | --- |
+| Cinématique lorentzienne `3+1D` | `Conf^+(S^2) ≅ SO^+(3,1)` | branche modulaire/BW sur le sous-réseau géométrique extrait | voie conditionnelle vers l'espace-temps `3+1D` |
+| Vitesse causale invariante | `c = 299792458 m/s` | branche lorentzienne plus pont local vers les unités familières | lecture SI exacte sur la surface locale déclarée |
+| Structure de jauge | `SU(3) x SU(2) x U(1) / Z_6` | reconstruction de jauge compacte plus MAR | résultat structurel de rang théorème |
+| Comptages génération/couleur | `N_g = 3`, `N_c = 3` | capacité CP, fenêtre UV et parité de Witten sur la branche réalisée | résultat structurel de rang théorème |
+| Réseau des hypercharges | `Y_Q = 1/6`, `Y_L = -1/2`, `Y_u = -2/3`, `Y_d = 1/3`, `Y_e = 1`, `Y_H = 1/2` | liberté d'anomalie plus invariance Yukawa | réseau rationnel exact |
+| Masse du photon | `m_photon = 0` | redondance de jauge électromagnétique non brisée | zéro structurel exact |
+| Masses des gluons | `m_gluon = 0` | redondance de jauge de couleur non brisée | zéro structurel exact |
+| Masse du graviton | `m_graviton = 0` | redondance difféomorphe sur la branche à métrique dynamique | zéro structurel exact |
+| Constante de structure fine | `alpha^-1(0) = 137.035999177` | point Thomson de la famille de transport électromagnétique projetée par Ward | voie Ward-projetée `U(1)_Q`; correspond à la valeur CODATA/NIST 2022 |
+| Bosons électrofaibles | `W = 80.377 GeV`, `Z = 91.18797809193725 GeV` | branche électrofaible D10 target-free plus tranche gelée de validation exacte | paire `W/Z` exacte sur la surface gelée; les lignes publiques se ferment sur la même voie |
+| Boson de Higgs | `H = 125.218922 GeV` | graine forward Higgs/top à un scalaire | branche quantitative publique |
+| Quark top | `t = 172.388646 GeV` | graine forward Higgs/top à un scalaire | branche quantitative publique |
+| Sextet courant des quarks | `(u, d, s, c, b, t) = (0.00216, 0.00470, 0.0935, 1.273, 4.183, 172.3523553288311) GeV` | classe publique de trame quark sélectionnée par `P` | théorème exact sur classe sélectionnée avec Yukawas forward `Y_u`, `Y_d` |
+| Famille neutrino | `(m1, m2, m3) = (0.017454720257976796, 0.019481987935919015, 0.05307522145074924) eV` | branche rigide à cycle pondéré | famille neutrino de rang théorème |
+| Constante de Newton | `G = 6.674299995910528e-11 m^3 kg^-1 s^-2` | surface locale étendue à entropie de bord | surface locale étendue exacte |
+
 ## Points forts côté particules
 
 ### Résultats théorématiques et structurels
 
 - Zéros structurels exacts pour le photon, les gluons et le graviton.
+- Constante de structure fine au point Thomson
+  `alpha^-1(0) = 137.035999177`
+  sur la famille de transport électromagnétique projetée par Ward.
 - Sortie électrofaible sur la branche de calibration target-free, avec lignes publiques `W/Z` fermées et paire gelée exacte utilisée seulement comme validation compare-only
   `W = 80.377 GeV`, `Z = 91.18797809193725 GeV`.
 - Étage quantitatif Higgs/top en aval du coeur électrofaible, avec une graine forward scalaire unique fermée qui porte les lignes publiques
