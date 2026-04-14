@@ -4,6 +4,8 @@
 > There are only local, subjective perspectives, and physics is the rulebook that keeps them consistent where they overlap.
 > If you are not a physicist, you are in the right place; this book is written as a reverse-engineering story, not a math-first textbook.
 
+This book is a synthesis surface. For recovered-core theorem status and claim tier, consult [*Recovering Relativity and the Standard Model from the OPH Package Rooted in Observer Consistency*](https://wkaxfdgxoqmghwgshymt.supabase.co/storage/v1/object/public/papers/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf) first. Lane-specific claim tier remains with the corresponding companion papers, including [*Deriving the Particle Zoo from Observer Consistency*](https://wkaxfdgxoqmghwgshymt.supabase.co/storage/v1/object/public/papers/deriving_the_particle_zoo_from_observer_consistency.pdf), [*Reality as a Consensus Protocol*](https://wkaxfdgxoqmghwgshymt.supabase.co/storage/v1/object/public/papers/reality_as_consensus_protocol.pdf), and [*Screen Microphysics and Observer Synchronization*](https://wkaxfdgxoqmghwgshymt.supabase.co/storage/v1/object/public/papers/screen_microphysics_and_observer_synchronization.pdf). [*Observers Are All You Need*](https://wkaxfdgxoqmghwgshymt.supabase.co/storage/v1/object/public/papers/observers_are_all_you_need.pdf) and this book organize the suite around those ledgers and do not upgrade claim tier.
+
 Whether your interest begins with **simulation theory** or with the hope of a **theory of everything**, this book is the long-form OPH answer to both. It presents OPH as a concrete route toward a simulation-theory reading: reality is modeled as an observer-consistent information process with a specific architecture of holographic screens, observer patches, and overlap-consistency rules. It also presents OPH as a theory-of-everything program: quantum mechanics, relativity, gauge structure, and particle physics appear as effective descriptions of deeper overlap-consistency rules, while the strange-loop idea remains an interpretive extension outside the recovered core.
 
 ## The Cosmic Program
@@ -153,7 +155,7 @@ observers must satisfy to share a reality.
 
 ## Reading Rule
 
-This book is the narrative layer of OPH. For the formal presentation of the framework, see [*Observers Are All You Need*](https://wkaxfdgxoqmghwgshymt.supabase.co/storage/v1/object/public/papers/observers_are_all_you_need.pdf). Here the goal is clarity, momentum, and the larger picture.
+This book is the narrative layer of OPH. Recovered-core theorem status and claim tier inherit from [*Recovering Relativity and the Standard Model from the OPH Package Rooted in Observer Consistency*](https://wkaxfdgxoqmghwgshymt.supabase.co/storage/v1/object/public/papers/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf), while lane-specific claim tier remains with the corresponding companion papers. [*Observers Are All You Need*](https://wkaxfdgxoqmghwgshymt.supabase.co/storage/v1/object/public/papers/observers_are_all_you_need.pdf) and this book are synthesis surfaces only. Here the goal is clarity, momentum, and the larger picture.
 
 ## What This Book Does
 
