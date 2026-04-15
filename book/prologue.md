@@ -126,7 +126,7 @@ work out the consequences, the results are extraordinary:
 
 - **Gravity** emerges from how observers share entanglement across their screens
 - **The particle zoo** emerges from the symmetry structure forced by the framework
-- **The dark sector** gets a structured starting point, though the response laws and phenomenology remain open
+- **A dark-sector continuation** is explored through modular anomalies, but MOND/RAR-scale phenomenology remains future work rather than a recovered-core result
 - **Why anything exists at all** enters the story through a self-referential closure picture
 
 Once you make this shift, strange features of reality start making sense.
