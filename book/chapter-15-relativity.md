@@ -539,7 +539,7 @@ The framework connects this anomaly to the cosmological constant. The only avail
 
 $$a_0 = \frac{15}{8\pi^2} c^2 \sqrt{\frac{\Lambda}{3}} \approx 1.0 \times 10^{-10} \text{ m/s}^2$$
 
-This lands remarkably close to the empirical MOND acceleration scale, the threshold below which galaxy rotation curves deviate from Newtonian predictions. The numerical coincidence is suggestive, but the full galaxy-dynamics story, including rotation curves, lensing, and cluster behavior, remains open work.
+This lands near the empirical MOND acceleration scale. That numerical proximity motivates the continuation, but it does not yet derive a galaxy law.
 
 ## 15.14 Reverse Engineering Summary
 

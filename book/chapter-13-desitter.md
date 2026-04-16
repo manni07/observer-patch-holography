@@ -275,9 +275,9 @@ where $g_b$ is the Newtonian acceleration from baryons. For a galaxy, this would
 
 $$V^4 = G \cdot M_b \cdot a_0^{(\text{OPH})}$$
 
-This has the observed Tully-Fisher form, with the normalization benchmark determined by screen capacity in the ansatz.
+This has the observed Tully-Fisher form in the ansatz, with a benchmark normalization set by screen capacity.
 
-**This continuation does not need new particles at the level of the ansatz.** The extra pull would come from an effective gravity-side contribution at large scales, not from a new matter species.
+**No new particles are required at the level of the ansatz.** The "dark matter" would be an effective correction to gravity at large scales, not a new species of particle.
 
 ### The Status
 
@@ -295,7 +295,7 @@ What remains missing:
 - Cosmological abundance and structure-formation analysis
 - Environment-dependence and stability checks
 
-So the present claim is modest but interesting: the same finite screen capacity that gives us the cosmological constant also supplies an infrared acceleration scale in the right ballpark for galaxy phenomenology.
+So the current claim is narrower: the same finite screen capacity that gives us the cosmological constant also supplies an IR benchmark scale for a possible dark-sector continuation. The continuation itself is still open.
 
 ### What A Future Closure Would Need To Face
 
