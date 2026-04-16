@@ -44,7 +44,7 @@ Space is not a passive container. It's woven from quantum correlations. The vacu
 
 ## 9.3 The First-Principles Reframing: Space Emerges from Entanglement
 
-Now we reverse engineer. Why does nature weave space from correlations?
+Reverse engineering asks why nature weaves space from correlations.
 
 ### The Consistency Imperative
 
@@ -60,9 +60,11 @@ Distance is not a primitive. It emerges from the entanglement structure of the v
 
 ### The Ryu-Takayanagi Formula
 
-We introduced the RT formula in Chapter 8: entanglement entropy of a boundary region equals the area of the minimal bulk surface anchored on that region's boundary, divided by 4G. This looks exactly like the Bekenstein-Hawking formula for black hole entropy-but now it applies to any region.
+We introduced the RT formula in Chapter 8: entanglement entropy of a boundary region equals the area of the minimal bulk surface anchored on that region's boundary, divided by 4G. This looks exactly like the Bekenstein-Hawking formula for black hole entropy, except the same structure applies to any region.
 
 The deep implication: **geometry encodes entanglement**.
+
+That sentence is easy to repeat and easy to misunderstand. The claim is not that geometry and entanglement vaguely resemble each other. The claim is that the amount of quantum correlation across a cut determines the size of the bulk surface associated with that cut. Entropy is doing geometric work. If the boundary state ties two regions together strongly, the bulk description between them is correspondingly thick and connected.
 
 ### A Simple Example
 
@@ -102,6 +104,8 @@ $$S = 2\sqrt{2} \approx 2.83$$
 
 A 41% violation. Decisively testable.
 
+The symbol \(S\) is a specific combination of correlation measurements taken with different detector settings on the two sides. Classical hidden-variable stories cap that combination at 2 because one shared instruction sheet has to service every setting at once. Quantum mechanics escapes that cap because the correlation structure is not classical bookkeeping.
+
 ### The Bell State
 
 The simplest entangled state is the Bell pair:
@@ -118,14 +122,11 @@ This is the signature of entanglement: **the whole can be pure while the parts a
 
 The **2015 loophole-free Bell tests** closed the main locality and detection loopholes simultaneously while strongly constraining remaining loophole worries. The result: suitable entangled experiments violate Bell inequalities, ruling out simple local hidden-variable accounts.
 
-On the fixed-cutoff microphysics surface, OPH carries the matching theorem package. If a
-two-wing experiment is encoded by commuting left and right observables, binary settings, and a
-declared source state on the joint wing algebra, then the compare slice carries the joint Born
-law, the local marginals do not depend on the remote setting, and the CHSH value stays below
-\(2\sqrt{2}\). Exact saturation at \(2\sqrt{2}\) is fixed only under an explicit two-qubit
-branch premise with the stated Pauli readouts.
+OPH does not replace this Bell story with a new one. It keeps the standard quantum structure. In the fixed-cutoff measurement setting used in the book, the framework preserves the Born rule, respects no-signaling, and reproduces the ordinary Tsirelson limit. The maximal value \(2\sqrt{2}\) appears in the explicit Bell-pair setup. So the book's claim is narrower and clearer: overlap consistency fits quantum Bell correlations naturally, while classical hidden variables do not.
 
 Entanglement is real and irreducible. The correlations are stronger than any classical mechanism can produce, yet still cannot transmit information faster than light.
+
+That point matters for the whole project. Entanglement is experimentally compulsory structure. Any story about observer agreement has to inherit it rather than explain it away.
 
 ### Why Quantum? The Tsirelson Bound
 
@@ -236,6 +237,8 @@ In AdS/CFT and related semiclassical holographic models, there is a striking lat
 In those models, the island formula reproduces the Page curve and shows how the radiation can encode information that semiclassical bulk reasoning seemed to lose.
 
 This is important evidence for holographic encoding. But it is not, by itself, an OPH theorem. In OPH, the theorem-level black-hole claim is narrower: edge-center structure blocks naive inside/outside factorization, and small-CMI recoverability supports encoded interior data rather than an independent interior tensor factor. A full Page-curve or island derivation is not part of the proved OPH core.
+
+That distinction matters for the reader. The book relies on the encoding lesson: interior information can be stored nonlocally and recovered in the right regime. It does not rely on claiming that every step of black-hole evaporation has been solved inside OPH. The encoded-interior idea belongs to the core story. The full late-time evaporation story still sits beyond it.
 
 ## 9.10 From Entanglement to the Classical World
 

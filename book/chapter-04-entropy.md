@@ -50,7 +50,7 @@ where $W$ is the number of microstates compatible with the macrostate.
 
 ### Why Entropy Increases
 
-Now the Second Law becomes almost obvious.
+The Second Law becomes almost obvious.
 
 Consider a box with gas in the left half. Remove the partition. What happens?
 
@@ -253,7 +253,7 @@ This is strong evidence for holographic encoding, but it is not by itself an OPH
 
 ## 4.8 Entropy on the Observer Screen
 
-Now let's connect to our model.
+Here is the connection to the model.
 
 Each observer has a finite patch on the holographic screen. In this screen-language summary, the entropy budget is tied to the patch area:
 
@@ -365,4 +365,4 @@ Entropy is not a villain. It's the rulebook telling us what can be remembered, w
 
 The next chapter builds the algebra of observables-the mathematical structure describing what observers can measure and how their measurements must relate across patches.
 
-The reverse engineering continues.
+Once entropy limits what can be stored, the next question is what can be asked and compared.

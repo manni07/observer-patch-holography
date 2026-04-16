@@ -40,7 +40,7 @@ Time is not a fundamental external parameter. The microscopic laws are time-symm
 
 ## 11.3 The First-Principles Reframing: Time Emerges from Modular Flow
 
-Now we reverse engineer. Why do we experience time if it's not fundamental?
+Reverse engineering asks why we experience time if it is not fundamental.
 
 ### The Thermal Time principle
 
@@ -70,11 +70,19 @@ $$\sigma_t(A) = \Delta^{it} A \Delta^{-it}$$
 
 Even without specifying a Hamiltonian, even without putting time in by hand, the algebra-state pair *generates its own time evolution*.
 
+For a non-specialist, the surprise is easy to miss. An automorphism is just a structure-preserving way of pushing every allowed question forward. Tomita-Takesaki says that once you know which questions an observer can ask and which state those questions live in, the pair already contains a preferred internal flow. The clock is not added from outside. It is extracted from the observer's restricted situation.
+
+The technical phrases "cyclic" and "separating" sound forbidding, but their role is straightforward. They say the chosen state probes the algebra richly enough and distinguishes operators cleanly enough for modular theory to get a grip. Once those conditions hold, the observer's limited state is not passive. It carries an intrinsic ordering of accessible questions.
+
 Key properties:
 1. **KMS Condition**: The state satisfies thermal equilibrium at "temperature" beta = 1 with respect to modular time
 2. **State dependence**: The modular flow is fixed by the chosen algebra-state pair; different faithful states generally give different flows
 
 This theorem says: given any quantum system and any state of incomplete knowledge, there's a natural notion of time evolution.
+
+That is why the theorem matters here. It turns time from a background assumption into something an observer earns by having a state, a horizon, and a limited algebra of questions.
+
+That is the philosophical punchline hidden inside the formalism. Partial knowledge has its own dynamics. Give an observer a restricted state and a restricted algebra, and the pair furnishes an internal before-and-after structure without appealing to an external master clock.
 
 ### The Rindler Wedge
 
@@ -89,6 +97,10 @@ The modular temperature works out to:
 $$T_{Unruh} = \frac{\hbar a}{2\pi k_B c}$$
 
 The Unruh effect isn't a separate phenomenon-it's Tomita-Takesaki theory applied to spacetime. The "time" experienced by an observer is determined by their restricted access to the quantum state.
+
+This is the first major payoff of the chapter. The mathematics does not stay abstract. Restrict the vacuum to what one observer can access, and the restriction behaves like a thermal state with its own clock.
+
+This is also the point where modular theory stops sounding like rarefied operator algebra and starts sounding like lived physics. Restriction generates both a temperature and a time flow. Losing access to part of the state has thermodynamic and temporal consequences.
 
 ## 11.4 The Arrow of Time
 
@@ -188,6 +200,10 @@ Jacobson inverted the logic of physics. Usually we think of gravity as fundament
 
 **On Jacobson's thermodynamic reading, gravity is not fundamental in the usual force-law sense; it is what local thermodynamic equilibrium looks like geometrically.**
 
+The force of the argument lies in its austerity. Jacobson does not start with planets tracing curves through a manifold. He starts with heat flow, horizon entropy, and the insistence that the same thermodynamic accounting must work in every infinitesimal causal patch. Einstein's equation is what that insistence looks like when written geometrically.
+
+Put less formally, gravity becomes horizon bookkeeping done consistently everywhere. If every tiny causal patch has to balance heat, entropy, and temperature in the same way, the spacetime metric has to bend so that the bookkeeping closes. Curvature is the public face of that accounting rule.
+
 ## 11.8 Complexity and the Growth of Interiors
 
 For an eternal black hole in AdS/CFT, the boundary state is thermal and time-independent. But the bulk geometry is not static-the wormhole interior keeps growing.
@@ -234,11 +250,15 @@ $$\Delta^{it} = e^{-2\pi i K t}$$
 
 The natural time evolution of a thermal state in a wedge-shaped region is exactly a Lorentz transformation.
 
+That means the same structure that tells the observer "this restricted state is thermal" also tells the observer how boosts and clocks fit together. Thermal language and relativistic geometry are two descriptions of one modular fact.
+
+One structure is doing two jobs at once. Read algebraically, it is the modular evolution of a restricted state. Read geometrically, it is the boost symmetry of the wedge. The two readings agree because the observer's horizon cuts the vacuum in exactly the right way.
+
 ### Boosts from Thermal Structure
 
 Start with thermal structure. Ask: what is the natural notion of time evolution? The answer is Lorentz boosts.
 
-This reverses the usual logic in QFT. We don't postulate Lorentz symmetry and then discover thermal horizons; the BW theorem shows the boost structure is already encoded in modular flow.
+This reverses the usual logic in QFT. We don't postulate Lorentz symmetry and then discover thermal horizons; the BW theorem shows the boost structure is encoded in modular flow.
 
 In the OPH program, the modular/boost link is part of the route by which Lorentz kinematics and a universal light speed are recovered. That stronger claim is program-level and should not be presented as a standalone theorem of Unruh/Bisognano-Wichmann alone.
 
@@ -351,8 +371,8 @@ Time need not be fundamental. General relativity removes any preferred slicing, 
 
 ---
 
-We've found the "engine" of reality: time emerges from incomplete knowledge, flowing in the direction of consistency-building.
+We’ve located a source of time without putting time in by hand. Incomplete knowledge, restricted access, and record-building are enough to generate clocks and an arrow.
 
-Now we ask: why does the machine have these particular parts? Why these particles, these forces, these symmetries?
+The harder question concerns translation. Different observers inherit different local clocks, different horizons, and different cuts through the state. Why do the conversion rules between their descriptions lock into the rigid form of symmetry and conservation law instead of dissolving into case-by-case negotiation?
 
-The answer lies in the geometry of the screen. That's the story of **Chapter 12: Symmetry on the Sphere**.
+That is the story of **Chapter 12: Symmetry on the Sphere**.

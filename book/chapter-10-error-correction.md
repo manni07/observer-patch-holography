@@ -41,7 +41,7 @@ Quantum error correction is possible. Information can be protected without copyi
 
 ## 10.3 The First-Principles Reframing: Reality Is Error-Corrected
 
-Now we reverse engineer. Why does nature permit quantum error correction? What principle makes robust quantum information essential?
+Reverse engineering asks why nature permits quantum error correction. What principle makes robust quantum information essential?
 
 ### The Consistency Imperative
 
@@ -140,7 +140,7 @@ The most dramatic application is the black hole information problem.
 
 ### The Hayden-Preskill Thought Experiment
 
-Take an old black hole that has already emitted more than half its entropy. Throw a diary into it. How long until an outside observer can recover the diary from Hawking radiation?
+Take a black hole that has emitted more than half its entropy. Throw a diary into it. How long until an outside observer can recover the diary from Hawking radiation?
 
 The answer: after roughly the scrambling time, plus enough outgoing radiation to carry the diary information. For an old, highly scrambled black hole, this can be parametrically fast compared with the full evaporation time. In that sense the black hole acts like a mirror.
 
@@ -154,7 +154,7 @@ This is a vivid example of error correction in holography. But in OPH it should 
 
 ## 10.7 Observer Consistency as Error Correction
 
-Now let's connect to our thesis.
+Here is the connection to our thesis.
 
 ### The Observer-Code Correspondence
 
@@ -170,7 +170,7 @@ As we saw in Chapter 6, Zurek's **quantum Darwinism** explains how classical fac
 
 In computer science, networks agree on shared states through consensus protocols. Physics does this constantly. The nodes are observers. The messages are light signals and memory traces. The consensus rule is physical law.
 
-In OPH, the consensus paper proves a finite-patch normal-form theorem: accepted local repairs lower a shared inconsistency score, overlapping repairs rejoin through the declared quotient-level compatibility package, and repair completeness identifies fixed points with globally consistent states. Under those conditions, different repair orders converge to the same shared normal form. The same paper also sharpens two related parts of the picture: gauge symmetry identifies different microscopic descriptions of the same physical state, and the observer-accessible measurement layer is carried by a finite record algebra with the Born rule, the L\"uders update, and explicit stability bounds when practical readout is only approximate. On the fixed-cutoff microphysics surface, the same operator setting extends to a two-wing Bell package with no-signaling and the Tsirelson bound on the stated source-and-setting branch, while exact \(2\sqrt{2}\) saturation is tied to an explicit two-qubit Bell-pair branch.
+In OPH, the same idea appears in a more formal way. Local repairs to inconsistent patch descriptions are supposed to lower a shared inconsistency score. When neighboring repairs are compatible, different repair orders converge to the same shared description. The measurement layer then singles out the records that observers can actually compare, with the usual Born probabilities and measurement updates on that accessible record structure. The Bell analysis stays within the standard quantum limits as well. In plain language, the framework treats stable public facts as the result of many local correction steps settling on one common answer.
 
 Error correction is a physical principle as well as a tool for engineers. It is the way the universe builds stable facts.
 
@@ -181,6 +181,8 @@ For a code with projector P onto the code space and error operators {E_a}, the c
 $$P E_a^\dagger E_b P = \alpha_{ab} P$$
 
 Within the code space, all errors look the same up to a scalar. Errors don't move you between different logical states. The scalar can be detected as the syndrome and removed.
+
+This is the heart of the theorem. The formula says the error channel cannot learn which logical state was encoded. Every correctable error acts on the protected subspace in the same bland way, differing only by an overall number. The physical carrier may be damaged, but the logical information stays hidden from the noise. That is why it can be recovered.
 
 In quantum gravity, we only have approximate codes. The Knill-Laflamme condition holds up to 1/N corrections. This is enough to make classical spacetime look stable.
 

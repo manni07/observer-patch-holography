@@ -50,7 +50,7 @@ Information cannot be copied (no-cloning), yet information cannot be destroyed (
 
 ## 7.3 The First-Principles Reframing: Error Correction Structure Preserves Information
 
-Now we reverse engineer. Why does nature have these strange constraints? What principle explains both no-cloning and unitarity?
+Reverse engineering asks why nature has these strange constraints. What principle explains both no-cloning and unitarity?
 
 ### The Library of Alexandria Revisited
 
@@ -80,7 +80,7 @@ The story of recovery begins in 1948, in a cramped office at Bell Telephone Labo
 
 Claude Shannon was not like other engineers. While his colleagues worried about practical problems-how to reduce static on phone lines, how to compress calls onto cables-Shannon was thinking about something deeper. What *is* information? Can it be measured? And crucially: how do you send a message reliably when the channel tries to destroy it?
 
-Shannon had spent World War II working on cryptography, trying to make messages secure from eavesdroppers. Now he was attacking the opposite problem: how to make messages survive noise that corrupts them randomly.
+Shannon had spent World War II working on cryptography, trying to make messages secure from eavesdroppers. He then attacked the opposite problem: how to make messages survive noise that corrupts them randomly.
 
 His 1948 paper, "A Mathematical Theory of Communication," is one of the most influential scientific works of the twentieth century. It founded information theory. And buried in its pages was a key insight about recovery.
 
@@ -94,7 +94,7 @@ Here's the simplest example. Instead of sending a single bit (0 or 1), send it t
 - To send "0," transmit "000"
 - To send "1," transmit "111"
 
-Now suppose noise flips one bit. You receive "010." Majority vote says the original was "0"-two zeros versus one one. The information survives.
+Suppose noise flips one bit. You receive "010." Majority vote says the original was "0"-two zeros versus one one. The information survives.
 
 This seems obvious, but Shannon proved something surprising: every noisy channel has a **capacity**-a maximum rate at which you can send information reliably. If you send slower than capacity, there exist codes whose error rate can be made arbitrarily small.
 
@@ -206,7 +206,7 @@ Strong subadditivity says B can only help, never hurt. If you want to learn abou
 
 In 1986, Hungarian mathematician Denes Petz asked a natural question: if I(A:C|B) = 0 exactly, can we physically reconstruct the state?
 
-The answer is yes, and Petz constructed the explicit procedure-now called the **Petz recovery map**:
+The answer is yes, and Petz constructed the explicit procedure later called the **Petz recovery map**:
 
 $$R_{B \to BC}(\sigma) = \rho_{BC}^{1/2} (\rho_B^{-1/2} \sigma \rho_B^{-1/2} \otimes I_C) \rho_{BC}^{1/2}$$
 
@@ -431,7 +431,7 @@ The recovery model includes both rigorous mathematical results and testable pred
 
 **3. Entanglement wedge reconstruction**: In holographic systems, bulk operators can be reconstructed from any boundary region whose entanglement wedge contains them. Supported by explicit AdS/CFT examples and by holographic code constructions.
 
-**4. Quantum error correction works**: Threshold theorem: below error threshold, arbitrary reliability is achievable. Confirmed in laboratory quantum computers-error-corrected qubits now demonstrably outperform physical qubits (Google Willow, 2024).
+**4. Quantum error correction works**: Threshold theorem: below error threshold, arbitrary reliability is achievable. Confirmed in laboratory quantum computers-laboratory demonstrations in 2024 showed error-corrected qubits outperforming physical qubits.
 
 **Empirical validation signatures**:
 - Information genuinely lost in any physical process
@@ -449,9 +449,9 @@ The recovery rule has a startling implication: in this recoverability picture, n
 
 If the universe is unitary and holographic encoding is robust, information is not simply destroyed; it is redistributed into increasingly nonlocal correlations of the full quantum state.
 
-The Library of Alexandria? The scrolls burned, but the information scrambled into smoke, heat, and light. That radiation spread across the cosmos at light speed. It's now diluted across an unimaginably vast region of space-but it's still there. In principle, with a computer the size of the observable universe, you could run the Petz map and watch the smoke reconstitute into Sophocles.
+The Library of Alexandria? The scrolls burned, but the information scrambled into smoke, heat, and light. That radiation spread across the cosmos at light speed. It is diluted across an unimaginably vast region of space-but it's still there. In principle, with a computer the size of the observable universe, you could run the Petz map and watch the smoke reconstitute into Sophocles.
 
-We already use weak versions of this. Paleontology recovers information about creatures from millions of years ago-from fossils, the degraded remnants of organisms. Astronomy observes light from billions of years ago-information that traveled across the universe to reach our telescopes. The cosmic microwave background is one vivid example of very old information preserved in radiation.
+Paleontology and astronomy already use weak versions of this. Fossils preserve information about creatures from millions of years ago. Astronomy records light that has traveled for billions of years before reaching our telescopes. The cosmic microwave background is one vivid example of very old information preserved in radiation.
 
 The recovery rule says this is not accident or luck. It's structural: the past is encoded in the present in increasingly scrambled form.
 

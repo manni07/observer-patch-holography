@@ -36,7 +36,7 @@ The universe has a positive cosmological constant. It is accelerating toward a d
 
 ## 13.3 The First-Principles Reframing: De Sitter Is the Natural Screen
 
-Now we reverse engineer. Why does nature have a positive cosmological constant? What principle makes de Sitter space natural?
+Reverse engineering asks why nature has a positive cosmological constant. What principle makes de Sitter space natural?
 
 ### The Static Patch
 
@@ -71,6 +71,8 @@ $$T_{dS} = \frac{\hbar H}{2\pi k_B}$$
 
 For our universe, this is about 10^{-30} Kelvin-undetectable. During inflation, horizon-scale quantum fluctuations were stretched and later seeded structure formation; the de Sitter temperature is one thermodynamic way of characterizing that regime.
 
+This temperature does not mean that empty space is glowing brightly around us. It means that an observer confined to one static patch sees the horizon as a thermal environment. Part of the quantum state is inaccessible beyond the horizon, and that loss of access has the same thermodynamic signature that horizons have elsewhere in gravitational physics.
+
 ### Why This Temperature? The Unruh Connection
 
 The Gibbons-Hawking and Unruh formulas are closely related, but the identification has to be stated carefully.
@@ -81,7 +83,7 @@ $$T_U = \frac{\hbar a}{2\pi c k_B}$$
 
 So the de Sitter and Unruh temperatures are locally linked, but they should not be identified by assigning every static-patch observer the same acceleration \(a = cH\).
 
-This has an important implication for our model: **de Sitter horizons automatically satisfy the same thermodynamic relations as Rindler horizons**. We don't need to prove this-Gibbons and Hawking already did.
+This has an important implication for our model: **de Sitter horizons automatically satisfy the same thermodynamic relations as Rindler horizons**. We don't need to prove this-Gibbons and Hawking did.
 
 ### Finite Entropy
 
@@ -90,6 +92,8 @@ If the horizon has temperature, it must have entropy:
 $$S_{dS} = \frac{A}{4\ell_P^2} = \frac{\pi c^5}{G\hbar H^2}$$
 
 This is the entropy associated with one de Sitter static patch-the logarithm of the effective number of states accessible within that patch.
+
+That is the practical meaning of the formula. It is a capacity statement. The patch does not contain an infinite amount of information hidden in a smooth continuum. It contains a finite number of distinguishable states, and the area of the horizon tells you how large that state space can be.
 
 This finite entropy has major implications. At minimum, an observer's accessible patch has finite information capacity. Stronger global-finiteness statements require additional assumptions.
 
@@ -128,6 +132,8 @@ The three-dimensional bulk inside the horizon is encoded holographically on the 
 
 When an object falls toward the horizon, it gets redshifted and appears to freeze onto the surface, its information smeared across the screen.
 
+This is why the horizon is the natural screen in this chapter. It is the last place where an observer can still trade signals with the rest of the patch. If the book's general claim is that physics is organized around what observers can compare, then the cosmological horizon is exactly where that comparison structure has to live.
+
 ### Why This Is Not "dS/CFT"
 
 When physicists say "de Sitter holography is unsolved," they typically mean: we don't have an AdS/CFT-like duality with a clean boundary CFT at infinity. The classic dS/CFT proposal puts a Euclidean CFT at future infinity, but this leads to notorious problems-potential non-unitarity, complex weights, and no clear operational access for any observer.
@@ -161,9 +167,9 @@ But Lambda is the one thing that **can** be shared across overlaps. It's a globa
 
 ### The Claim Boundary
 
-The cosmology-facing theorem package has a clear scope. If the constraint family is rotationally symmetric and the maximum-entropy state is unique, the reference state is isotropic and its stress tensor has perfect-fluid form. If that same isotropy condition holds for all observers, the spatial slices are constant-curvature. Combined with the conditional Einstein branch and positive screen-capacity Lambda, the metric takes FLRW form. Markov-control estimates then bound patch-to-patch anisotropy and give the collar benchmark used in the horizon-homogeneity bookkeeping.
+The cosmology claim is conditional, and it is easier to understand in plain language than in theorem shorthand. If the entropy-maximizing state is rotationally symmetric for an observer, then the large-scale stress tensor looks like a perfect fluid. If the same isotropy holds across observers, the spatial slices have constant curvature. Combine that with the gravity relation from the earlier chapters and a positive cosmological constant, and you recover the familiar FLRW form used in cosmology.
 
-What this does not say is equally important. The bare OPH axioms do not, by themselves, force every cosmological branch onto that symmetric sector. The theorem package identifies the exact consequences of that branch once it is selected and states the error control cleanly.
+The important caution is simple. The bare OPH axioms do not force every possible cosmological branch into that symmetric sector. The book's claim is narrower: once that sector is selected, the standard large-scale cosmological geometry follows.
 
 ## 13.7 Scrambling and Chaos
 

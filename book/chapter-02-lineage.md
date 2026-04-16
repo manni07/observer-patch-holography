@@ -26,7 +26,7 @@ Imagine prisoners chained in a cave since childhood, facing a blank wall. They c
 
 The prisoners have never seen anything else. To them, the shadows *are* reality. They give the shadows names. They develop theories about shadow behavior. Some prisoners are better at predicting which shadow will come next; they are honored as wise.
 
-Now imagine one prisoner is freed. He turns around and sees the fire. He stumbles up the passage and emerges into sunlight. At first, he is blinded. Gradually, he sees real objects-and finally the sun itself.
+Imagine one prisoner is freed. He turns around and sees the fire. He stumbles up the passage and emerges into sunlight. At first, he is blinded. Gradually, he sees real objects-and finally the sun itself.
 
 ### The Intuitive Picture
 
@@ -407,8 +407,4 @@ The philosophers gave us hints. The next step is the machinery.
 
 The key claim moving forward is that black-hole entropy and holographic arguments push strongly toward a boundary-first description rather than naive volume counting. The holographic principle suggests that 3D physics may admit an encoding on 2D surfaces.
 
-In the next chapter, we make this concrete. We introduce the **holographic screen** as the surface on which the accessible data is organized. We explain *why* a region's boundary is the natural place to do that.
-
-This isn't meant as loose metaphor. It is the organizing picture the next chapter develops and defends.
-
-The reverse engineering continues.
+The next chapter turns that suspicion into a physical object: the **holographic screen**. Instead of speaking loosely about hidden structure, it asks where the data lives and why boundary area, rather than volume, controls it.

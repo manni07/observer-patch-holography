@@ -4,7 +4,7 @@
 > There are only local, subjective perspectives, and physics is the rulebook that keeps them consistent where they overlap.
 > If you are not a physicist, you are in the right place; this book is written as a reverse-engineering story, not a math-first textbook.
 
-This book is a synthesis surface. For recovered-core theorem status and claim tier, consult [*Recovering Relativity and the Standard Model from the OPH Package Rooted in Observer Consistency*](https://wkaxfdgxoqmghwgshymt.supabase.co/storage/v1/object/public/papers/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf) first. Lane-specific claim tier remains with the corresponding companion papers, including [*Deriving the Particle Zoo from Observer Consistency*](https://wkaxfdgxoqmghwgshymt.supabase.co/storage/v1/object/public/papers/deriving_the_particle_zoo_from_observer_consistency.pdf), [*Reality as a Consensus Protocol*](https://wkaxfdgxoqmghwgshymt.supabase.co/storage/v1/object/public/papers/reality_as_consensus_protocol.pdf), and [*Screen Microphysics and Observer Synchronization*](https://wkaxfdgxoqmghwgshymt.supabase.co/storage/v1/object/public/papers/screen_microphysics_and_observer_synchronization.pdf). [*Observers Are All You Need*](https://wkaxfdgxoqmghwgshymt.supabase.co/storage/v1/object/public/papers/observers_are_all_you_need.pdf) and this book organize the suite around those ledgers and do not upgrade claim tier.
+This book is written for readers, not as the canonical claim ledger. The compact paper is the place to look for the tightest statement of what the framework establishes, and the companion papers carry the technical details for particles, consensus dynamics, and screen microphysics. The job of the book is different. It is to show how the clues fit together, why the mathematics points in one direction, and how the separate results add up to one picture.
 
 Whether your interest begins with **simulation theory** or with the hope of a **theory of everything**, this book is the long-form OPH answer to both. It presents OPH as a concrete route toward a simulation-theory reading: reality is modeled as an observer-consistent information process with a specific architecture of holographic screens, observer patches, and overlap-consistency rules. It also presents OPH as a theory-of-everything program: quantum mechanics, relativity, gauge structure, and particle physics appear as effective descriptions of deeper overlap-consistency rules, while the strange-loop idea remains an interpretive extension outside the recovered core.
 
@@ -155,7 +155,7 @@ observers must satisfy to share a reality.
 
 ## Reading Rule
 
-This book is the narrative layer of OPH. Recovered-core theorem status and claim tier inherit from [*Recovering Relativity and the Standard Model from the OPH Package Rooted in Observer Consistency*](https://wkaxfdgxoqmghwgshymt.supabase.co/storage/v1/object/public/papers/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf), while lane-specific claim tier remains with the corresponding companion papers. [*Observers Are All You Need*](https://wkaxfdgxoqmghwgshymt.supabase.co/storage/v1/object/public/papers/observers_are_all_you_need.pdf) and this book are synthesis surfaces only. Here the goal is clarity, momentum, and the larger picture.
+This book is the narrative layer of OPH. The compact paper and companion papers state the technical claim boundaries precisely. [*Observers Are All You Need*](https://wkaxfdgxoqmghwgshymt.supabase.co/storage/v1/object/public/papers/observers_are_all_you_need.pdf) and this book do something else: they show the overall shape of the argument and keep the reader moving through it.
 
 ## What This Book Does
 
@@ -164,7 +164,7 @@ This book reverse engineers reality from first principles.
 We start with a minimal assumption: observers exist, they have bounded
 access to information, and they must agree where their observations overlap.
 
-The framework needs only two numerical inputs from experiment: the size of a single "pixel" on the holographic screen, in Planck units, and the total screen capacity inferred from the cosmological constant. From there, the goal is to recover gravity, gauge structure, and the particle story from the full OPH package rooted in observer consistency instead of putting them in by hand. On its stated claim boundary, the framework reaches a conditional gravity branch and, under the transport and reconstruction premises plus MAR, the Standard Model gauge structure, three generations, three colors, and the massless carriers. It fixes the W and Z, places the Higgs and top on a quantitative branch, closes an exact PDG 2025 running-quark sextet together with exact forward Yukawas on the quark frame selected by \(P\), and carries a theorem-grade neutrino family. Charged leptons require one final absolute anchor. Hadron masses sit outside the closed package.
+The framework needs only two numerical inputs from experiment: the size of a single "pixel" on the holographic screen, in Planck units, and the total screen capacity inferred from the cosmological constant. From there, the aim is to recover gravity, gauge structure, and the particle story from observer consistency instead of putting them in by hand. On the reader-facing claim boundary of the book, the framework reaches a conditional gravity branch, the Standard Model gauge structure, three generations, three colors, massless photon/gluons/graviton, the \(W\) and \(Z\), a calibrated Higgs/top sector, a running quark package, and a neutrino branch with definite masses. Charged leptons and hadrons remain the main open edges.
 
 From this starting point, we derive constraints. We show how the mathematical
 structures of quantum mechanics and relativity emerge from consistency
@@ -201,7 +201,7 @@ The epilogue is speculative continuation material.
 Reality is the strangest program ever written. It's been running since the
 Big Bang, processing inputs and producing outputs according to rules physics
 seeks to decode. Thousands of brilliant minds have contributed to the reverse
-engineering effort, and we've made extraordinary progress.
+engineering effort.
 
 But the naive model, a 3D world of independent objects moving through absolute
 time and existing whether or not anyone observes it, turns out to be the

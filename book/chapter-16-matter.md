@@ -43,7 +43,7 @@ Think of the screen as a high-resolution, quantum information canvas. Most
 patterns are noisy and ephemeral. Some are stable: they survive overlap
 consistency, persist under modular time, and can be tracked across patches.
 Those stable patterns are what we call **particles**.
-That's the conceptual picture. The particle sector has a sharper structure. The framework fixes the gauge structure, the massless carriers, and the W/Z pair. It carries an exact source-only D11 Higgs/top split theorem on the declared D10/D11 running, matching, and threshold surface, an exact running quark sextet with exact forward Yukawas on the quark frame selected by \(P\), and a theorem-grade neutrino family. Charged leptons require one final absolute anchor. Hadron masses sit outside the closed package.
+That is the conceptual picture. The particle sector can be stated more concretely as well. The framework fixes the gauge structure, the massless carriers, and the \(W/Z\) pair. It also carries a calibrated Higgs/top result, a quark-mass package in the physical quark basis used by the model, and a neutrino branch with definite masses. Charged leptons still need one final overall anchor, and hadron masses sit outside the closed package because strong-coupling bound-state physics is harder.
 
 The key reframing is:
 

@@ -103,7 +103,7 @@ If electrons were tiny billiard balls, they would pass through one slit or the o
 
 Instead, you get an interference pattern-bands of high and low density, exactly like what you'd see with water waves passing through two openings. The electrons seem to pass through *both* slits simultaneously and interfere with themselves.
 
-But wait. Put a detector at one of the slits to see which way the electron went. Now what happens?
+But wait. Put a detector at one of the slits to see which way the electron went. What happens then?
 
 **The interference pattern disappears.** The electrons behave like particles again, piling up in two bands.
 
@@ -348,8 +348,6 @@ In the chapters ahead, we'll apply this method systematically:
 
 The 3D world you see around you-the chairs, the stars, the empty space-is not the primary storage device of reality. The real data is stored on boundaries. We call this the holographic principle. It says that everything happening in a volume of space can be described by data on the surface that encloses it.
 
-This isn't philosophy. It's physics. And it started with black holes.
+This isn't philosophy. It's physics, and the first hard clue came from black holes.
 
-In the next chapter, we trace the intellectual lineage of these ideas. We'll meet the physicists who first realized that what we see is not all there is. And we'll see how their insights led to the discovery that information, geometry, and reality are far more intertwined than anyone imagined.
-
-The reverse engineering continues.
+The next chapter traces the lineage of that suspicion. It moves from philosophy to physics and shows how the long argument about appearance and reality became a concrete argument about information and geometry.

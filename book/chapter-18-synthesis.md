@@ -193,23 +193,23 @@ Among admissible low-energy sector packages, the realized one is the lexicograph
 
 The five axioms are the foundation. Specific theorem branches use extra inputs, and the papers state those inputs explicitly.
 
-1. **Lorentz branch**: the `T2` scaling-limit scope clause together with theorem-local realized geometric cap-pair extraction and ordered cut-pair rigidity on the extracted prime geometric subnet.
-2. **Einstein branch**: the null bridge still uses theorem-local inherited-strip and exact-or-controlled Markov hypotheses plus the same-half-line local modular-Hamiltonian input; the Jacobson step then adds fixed-cap stationarity and the separate bounded-interval projective branch used in the entanglement-equilibrium argument.
-3. **Gauge branch**: the transport and reconstruction premises needed for ordinary compact gauge reconstruction, together with MAR on the realized admissible branch.
+1. **Lorentz branch**: a smooth scaling regime in which cap modular flow becomes genuinely geometric.
+2. **Einstein branch**: a bridge from modular energy to ordinary stress-energy together with the stationarity assumption used in entanglement equilibrium.
+3. **Gauge branch**: transportable charge sectors and enough reconstruction machinery to recover a compact gauge group.
 4. **Configuration inputs**: the pixel area \(P\) and screen capacity \(N_{\mathrm{scr}}\), which set quantitative scales but are not axioms.
 
-Under that full ledger, Lorentz kinematics is recovered on the stated scaling branch, Einstein's equation follows on the Jacobson-style branch, and the Standard Model quotient emerges on the realized gauge branch. Geometric cap-pair extraction, ordered cut-pair rigidity, the separate bounded-interval projective branch, and parts of the transport package remain explicit pieces of scaffolding.
+Under that fuller ledger, Lorentz kinematics is recovered in the scaling regime, Einstein's equation follows on the thermodynamic gravity branch, and the Standard Model quotient emerges on the gauge branch. Some technical scaffolding remains visible in each derivation, but the reader-facing picture is the simpler one summarized below.
 
 ## 18.6 What the Model Yields (Under Stated Assumptions)
 
 Under the full ledger above, the model yields:
 
-1. **Lorentz kinematics** on the extracted prime geometric subnet from geometric modular flow on caps
-2. **Einstein's equation** on the stated scaling branch via entanglement equilibrium, with the bounded-interval projective branch included in the small-ball step and then promoted to a tensor equation by patch consistency
+1. **Lorentz kinematics** in the scaling regime where cap modular flow becomes geometric
+2. **Einstein's equation** on the semiclassical gravity branch via entanglement equilibrium, then promoted to tensor form by patch consistency
 3. **The Standard Model gauge group** $SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$, reconstructed from the transportable bosonic edge-sector package, with MAR selecting the realized branch
 4. **Three generations, three colors**: fixed by anomaly cancellation together with MAR
 5. **Massless gauge bosons and graviton**: forced by emergent gauge and diffeomorphism invariance, which forbid mass terms
-6. **A particle story with clear landmarks**: photon, gluons, graviton, W, and Z are fixed; an exact source-only D11 Higgs/top split theorem closes on the declared D10/D11 surface; a quark theorem closes the exact PDG 2025 running sextet together with exact forward Yukawas on the quark frame selected by \(P\); the weighted-cycle neutrino branch carries a theorem-grade absolute family together with a theorem-grade physical Majorana pair on its shared-basis transport branch; charged leptons, hadrons, and theorem coverage beyond the selected quark frame define the main boundary
+6. **A particle story with clear landmarks**: photon, gluons, graviton, W, and Z are fixed; the framework also carries a calibrated Higgs/top sector, a running quark package, and a neutrino branch with definite masses and phases, while charged leptons and hadrons remain the main open edges
 
 The photon and graviton are forced by the axiom chain. The framework reaches deep into particle physics and goes far beyond a vague gesture in that direction.
 
@@ -226,7 +226,7 @@ $$
 \sqrt{-g}\left[
 \frac{1}{16\pi G}(R-2\Lambda)
 +
-\mathcal L_{\mathrm{SM}}^{\mathrm{realized\ branch}}
+\mathcal L_{\mathrm{SM}}
 \right]
 +
 \sum_i \frac{c_i}{M_*^{\Delta_i-4}}\mathcal O_i.
@@ -259,20 +259,20 @@ The pixel area is *extracted* from measured constants. A genuine prediction woul
 
 ![The Pixel Constant](../assets/pixel-constant.svg)
 
-That same local calibration surface organizes the numerical unification story. The bosonic route is `P -> alpha_U -> (t_U, t_tr) -> v -> (M_W, M_Z)`. The electromagnetic row uses the same source basis, then passes through the Ward-projected charge channel, anchored at `alpha^-1(m_Z^2) = 128.30576920234813` and read at low energy as `alpha^-1(0) = 137.035999177`. The exact electroweak Higgs theorem carries `M_H = 125.1995304097179 GeV` on the declared running, matching, and threshold surface. The same Jacobian surface emits a companion top coordinate `m_t = 172.3523553288312 GeV`. At PDG quoting precision the Higgs row lands on the 2025 Higgs average. The exact public running-top row uses the PDG 2025 cross-section top entry. The bridge to the PDG direct-top average is open and is tracked in [#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207). On the stated local extension surface, the gravity route uses the lifted product presentation of the realized quotient branch to give `ellbar_shared = ellbar_SU(2) + ellbar_SU(3)`; the same pixel law on that surface fixes `ellbar_shared = P/4`, and the local SI readout is `G_SI = c^3 a_cell / (hbar P)` relative to the declared microscopic cell-area datum `a_cell`. The invariant causal speed belongs to the Lorentz branch and receives its SI display through the local readout package.
+That same local calibration story organizes the main numerical claims. In plain language, one local input sets the electroweak scale, the low-energy electromagnetic coupling, and the effective gravitational coupling. The representative outputs used throughout the book are:
 
-| Quantity | OPH chain | Display value | Claim surface |
-| --- | --- | --- | --- |
-| `c` | Lorentz branch + local SI readout | `299792458 m/s` | structural causal-speed output with SI readout |
-| `G` | `P -> ellbar_SU(2) + ellbar_SU(3) -> ellbar_shared -> G_SI = c^3 a_cell / (hbar P)` | `6.674299995910528e-11 m^3 kg^-1 s^-2` | exact emitted branch value on the stated local extension surface, relative to the declared `a_cell` datum; the same D10 pixel law there fixes `ellbar_shared = P/4` |
-| `W` | `P -> alpha_U -> (t_U, t_tr) -> v -> M_W` | `80.377 GeV` | exact codomain on the target-free electroweak identity surface |
-| `Z` | `P -> alpha_U -> (t_U, t_tr) -> v -> M_Z` | `91.18797809193725 GeV` | exact codomain on the target-free electroweak identity surface |
-| `alpha^-1(0)` | `P -> alpha_U -> (t_U, t_tr) -> (alpha_2, alpha_Y) ->` Ward-projected charge transport `-> alpha^-1(0)` | `137.035999177` | Thomson endpoint of the electromagnetic transport family |
-| `H` | `P -> alpha_U -> (t_U, t_tr) -> (eta_source, beta_EW, lambda_EW, tau2_tree_exact, delta_n_tree_exact) -> rho_HT -> (pi_y, pi_lambda) -> (m_t, m_H)` | `125.1995304097179 GeV` | exact source-only D11 Higgs/top split theorem on the declared D10/D11 running, matching, and threshold surface, with a compare-only exact inverse Higgs/top slice on the same Jacobian surface |
+| Quantity | Book value | Meaning |
+| --- | --- | --- |
+| `c` | `299792458 m/s` | the emergent causal speed displayed in SI units |
+| `G` | `6.674299995910528e-11 m^3 kg^-1 s^-2` | the gravitational coupling read out from the same local calibration |
+| `W` | `80.377 GeV` | the electroweak \(W\)-boson mass |
+| `Z` | `91.18797809193725 GeV` | the electroweak \(Z\)-boson mass |
+| `alpha^-1(0)` | `137.035999177` | the low-energy electromagnetic coupling |
+| `H` | `125.1995304097179 GeV` | the Higgs value on the electroweak calibration branch |
 
 ![OPH unification diagram](../assets/OPH_Unification_Diagram.svg)
 
-On the stated local extension surface, the remaining boundary is summarized by three explicit pieces: the local SI readout package, the strict classical branch clause, and the target-free electroweak identity surface. The same calibrated local input therefore organizes the classical gravity coupling and the electroweak boson/Higgs mass scale within one diagrammatic surface, while `c` enters as the structural Lorentz output displayed in local SI units.
+The important point is not the private notation behind each step. The important point is that the framework is trying to organize classical gravity, electroweak masses, and low-energy electromagnetism with one common local calibration instead of treating them as unrelated constants.
 
 ### The Measurement Problem
 
@@ -306,7 +306,7 @@ The cosmology-facing theorem package is conditional. If the MaxEnt constraint fa
 
 ## 18.8 The Claim Boundary
 
-The core picture has definite physical content. The framework recovers the Standard Model gauge group, three generations, three colors, massless photon, gluons, graviton, and the absence of gauge-mediated proton decay. It also carries a non-hadron package with clear boundaries: an exact \(W/Z\) pair on the electroweak theorem surface, an exact source-only Higgs theorem with a compare-only exact inverse validation slice and a companion top coordinate on the same Jacobian surface, an exact same-family charged witness, an exact PDG 2025 running quark sextet together with exact forward Yukawas on the quark frame selected by \(P\), and a weighted-cycle neutrino theorem branch with \((m_1, m_2, m_3) = (0.017454720257976796, 0.019481987935919015, 0.05307522145074924)\,\mathrm{eV}\) together with the theorem-grade physical Majorana pair \((\alpha_{21}^{(\mathrm{Maj})},\alpha_{31}^{(\mathrm{Maj})})=(153.618518^\circ,257.003241^\circ)\) on its shared-basis transport branch. The Higgs row lands on the PDG 2025 Higgs average at quoted precision. The exact public running-top row uses the PDG 2025 cross-section top entry. The bridge to the PDG direct-top average is open and is tracked in [#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207). Charged leptons require one final absolute anchor. The exact quark theorem is restricted to the quark frame selected by \(P\). Hadron masses lie outside the proved package because they require a production backend plus nonperturbative strong-dynamics work. On the gravity side, the boundary sits at geometric cap-pair realization in the scaling limit and ordered cut-pair rigidity on that realized limit.
+The core picture has definite physical content. The framework recovers the Standard Model gauge group, three generations, three colors, massless photon, gluons, graviton, and the absence of gauge-mediated proton decay. It also carries a reader-facing particle package with clear boundaries: the \(W/Z\) pair, the low-energy fine-structure constant, a Higgs/top calibration, a six-quark running-mass package with Yukawas, and a neutrino branch with definite masses and phases. Charged leptons still need one absolute anchor, and hadron masses remain outside the closed package because nonperturbative strong dynamics are harder. On the gravity side, the remaining open edge is the full microscopic completion of the geometric-cap construction.
 
 **Numerical checks.** The extraction of gauge couplings from
 edge-sector probabilities has been validated numerically in 2D gauge models.
@@ -316,25 +316,12 @@ This has been confirmed to essentially exact precision in $\mathbb{Z}_2$ and
 $\mathbb{Z}_3$ models, where the extracted "modular time" $t$ agrees across
 different charge sectors to numerical noise level.
 
-**Peter-Weyl second-index mechanism for β-coefficients.** A narrower Phase II result:
-the edge-sector heat-kernel branch reproduces MSSM-like one-loop beta coefficient
-shifts only on a declared calibration package consisting of external input $P$,
-the printed running/matching conventions, the printed threshold conventions, and,
-for the near-MSSM benchmark, an added fermionic-grading restriction to half-integer
-SU(2) sectors, using a structural argument from the Peter-Weyl decomposition. The
-central point is that entropy (MaxEnt selection) traces over one side of the entanglement
-cut, giving the factor $d_R$ in the probability $p_R \propto d_R e^{-t C_2(R)}$.
-But vacuum polarization loops run over both indices of the $V_R \otimes V_R^*$ block,
-restoring the second $d_R$. Therefore the effective multiplicity for RG running is
-$N_{\text{eff}} = d \cdot p$, with the extra factor coming from the second Peter-Weyl index. At $t_U \approx 1.64$, this gives
-$\Delta b_{\text{edge}} \approx (2.49, 4.38, 3.97)$, matching the MSSM target to
-within 5% only on that calibration branch. This supports MSSM-like running behavior
-without promoting an MSSM particle spectrum into the recovered core.
+**Beta-function benchmark.** A narrower running-coupling result is that the edge-sector construction reproduces MSSM-like one-loop beta-coefficient shifts on one specific calibration branch. The book-level point is simple: the framework can mimic unification-style running without claiming that an MSSM particle spectrum is part of the recovered core.
 
 The main unresolved objects are:
 
 1. **Screen microphysics**: What exactly are the degrees of freedom on S²?
-2. **Particle closure**: the charged-lepton source landing from the common calibration input to physical charged data, theorem coverage beyond the selected quark frame, and hadron masses behind the backend gate.
+2. **Particle closure**: the charged-lepton anchor, fuller quark closure beyond the chosen physical basis, and hadron masses.
 3. **Dynamics and gravity**: Can local horizon thermodynamics be made fully internal?
 4. **Cosmology**: What fixes Λ and the initial low‑entropy condition?
 5. **Numerical predictions**: Implement SU(2)/SU(3) quantum link models and
@@ -404,15 +391,15 @@ These follow from our axioms plus stated additional assumptions:
 
 For the book, the particle story looks like this:
 
-| Lane | Result | Boundary |
+| Sector | What the framework fixes | What remains open |
 | --- | --- | --- |
-| Structural carriers | Photon, gluons, and graviton are exact zeros. | theorem-grade structural statement |
-| Electroweak theorem | W and Z are fixed by the electroweak closure, with an exact reference-hitting validation slice beneath it. | the theorem surface carries the pair; the validation slice is secondary |
-| Higgs/top branch | An exact source-only electroweak calibration theorem yields \(H = 125.1995304097179\) GeV and a companion top coordinate \(t = 172.3523553288312\) GeV, with an exact inverse validation slice on the same Jacobian surface. | the Higgs theorem is exact on its calibration surface; the bridge to the PDG direct-top row is open and tracked in [#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207) |
-| Charged-lepton witness | An exact same-family \((e,\mu,\tau)\) witness fixes the ordered charged triple and its affine coordinate on that witness. | the theorem surface contains a conditional determinant-line lift and an algebraic mass readout; the open theorem is the landing from the common calibration input to physical charged data or the charged determinant line |
-| Quark theorem | An exact PDG 2025 running \((u,d,s,c,b,t)\) sextet and exact forward Yukawas on the quark frame selected by \(P\). | the theorem closes on that selected frame; it does not classify every quark frame |
-| Neutrino theorem | A theorem-grade weighted-cycle family with \((m_1,m_2,m_3)=(0.017454720257976796, 0.019481987935919015, 0.05307522145074924)\) eV, the corresponding mixing data, and the physical Majorana pair \((\alpha_{21}^{(\mathrm{Maj})},\alpha_{31}^{(\mathrm{Maj})})=(153.618518^\circ,257.003241^\circ)\) on the shared-basis transport branch. | exact central-splitting adapters are diagnostic validation surfaces |
-| Hadron boundary | Bound-state masses lie outside the closed package. | backend plus nonperturbative strong dynamics are required |
+| Structural carriers | Photon, gluons, and graviton are forced to be massless. | Nothing additional is needed at that structural level. |
+| Electroweak bosons | The \(W\) and \(Z\) masses are fixed on the electroweak calibration branch. | Their relation to bound-state strong dynamics is separate. |
+| Higgs and top | The same calibration branch gives a Higgs value near \(125.20\) GeV and a companion top value near \(172.35\) GeV. | Connecting that top value to the direct experimental extraction still needs extra work. |
+| Charged leptons | The family structure is fixed and the remaining freedom is isolated to one overall anchor. | One absolute mass-setting input is still missing. |
+| Quarks | The six running quark masses and corresponding Yukawa data are fixed in the model's physical quark basis. | A fuller basis-independent closure remains open. |
+| Neutrinos | One neutrino branch gives definite masses and Majorana phases. | Stronger closure beyond that branch remains open. |
+| Hadrons | Composite hadron masses are outside the closed package. | Bound-state strong dynamics still have to be solved. |
 
 ### Key Physical Arguments We Inherit
 
@@ -705,3 +692,5 @@ We are inside looking around, patterns on the screen, computing meaning, discove
 Escher's hands draw each other. Gödel's sentence refers to itself. The ouroboros eats its tail. Those are the philosophical images this chapter uses to interpret the strange-loop continuation.
 
 Physicists are reality's hackers. And what we've hacked suggests that the hacker and the hacked belong to the same process, that the act of reverse engineering is itself part of what is being engineered.
+
+That synthesis still leaves one exposed frontier. If observers, meaning, and public reality belong to one structure, what should we say about experience itself? The next chapter turns from synthesis to metaphysics.

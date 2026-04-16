@@ -60,7 +60,7 @@ Information capacity scales with area, not volume. The bulk seems three-dimensio
 
 ## 8.3 The First-Principles Reframing: Boundaries Are Consistency Ledgers
 
-Now we reverse engineer. Why does nature encode bulk physics on boundaries?
+Reverse engineering asks why nature encodes bulk physics on boundaries.
 
 ### Dennis Gabor's Hologram
 
@@ -98,7 +98,7 @@ This is **anti-de Sitter space**, or AdS. It's a spacetime with constant negativ
 
 It's not our universe-our universe has positive curvature, with an accelerating expansion driven by dark energy. But AdS is a remarkable training ground. It has a clear boundary, clean symmetry, and a setting where gravity and quantum physics meet in calculable ways.
 
-Now imagine the label on the can isn't decoration-it's a living quantum field theory with particles, forces, and fluctuations. It has no gravity of its own. It just lives on the surface.
+Imagine the label on the can as a living quantum field theory with particles, forces, and fluctuations. It has no gravity of its own. It just lives on the surface.
 
 Here's the bold claim: **everything happening inside the can is exactly the same as what happens on the label**. A falling particle in the bulk corresponds to ripples on the boundary. A black hole forming inside corresponds to hot plasma on the surface. This isn't an approximation. It's a perfect translation.
 
@@ -176,9 +176,15 @@ This is the **UV/IR connection**. High energies on the boundary map to small z i
 
 ## 8.8 The GKPW Dictionary
 
-Witten, Gubser, Klebanov, and Polyakov wrote down the precise formula-the **GKPW dictionary**:
+Witten, Gubser, Klebanov, and Polyakov wrote down the precise formula for this translation:
 
 $$Z_{gravity}[\phi \to \phi_0] = \left\langle \exp\left(\int d^d x \, \phi_0(x) \mathcal{O}(x)\right) \right\rangle_{CFT}$$
+
+This is the working dictionary between bulk and boundary. The left-hand side asks the gravity theory for its partition function while the bulk field \(\phi\) is forced to approach the boundary profile \(\phi_0\). The right-hand side asks the boundary theory for the generating functional obtained by turning on a source \(\phi_0(x)\) for the operator \(\mathcal{O}(x)\).
+
+That is why the formula matters. It tells you how to turn a bulk question into a boundary calculation. Fix the boundary data, and the bulk tells you how the interior responds. Turn on the corresponding source in the CFT, and the boundary tells you the same thing in field-theory language. Differentiate with respect to the source and you generate correlation functions. The bulk and boundary are solving one problem in two dialects.
+
+It helps to picture one concrete use. If the boundary theorist asks, "What happens if I couple a source to this operator and measure the response?" the bulk theorist asks, "What bulk field profile reaches the boundary with that asymptotic value?" GKPW says those are the same computation written on opposite sides of the correspondence.
 
 ### The Dictionary
 
@@ -194,6 +200,8 @@ $$Z_{gravity}[\phi \to \phi_0] = \left\langle \exp\left(\int d^d x \, \phi_0(x) 
 
 The relationship Delta(Delta-d) = m squared R squared connects mass to dimension.
 
+The table is not just a glossary. Each row says what kind of bulk quantity the boundary theory is keeping track of. A bulk scalar is read as a boundary operator. A bulk gauge field is read as a conserved current. A bulk black hole is read as a hot many-body state. The third spatial direction in the bulk becomes a bookkeeping device for scale on the boundary.
+
 ## 8.9 The Ryu-Takayanagi Formula
 
 The deepest connection between bulk geometry and boundary physics involves entanglement.
@@ -204,11 +212,17 @@ $$S(A) = \frac{\text{Area}(\gamma_A)}{4G}$$
 
 where gamma_A is the **minimal surface** in the bulk that ends on the boundary of region A.
 
+This does more than match two elegant expressions. It tells you how much geometry is needed to keep region \(A\) tied to the rest of the state. More entanglement across the boundary cut means a larger minimal surface. Less entanglement means a smaller one. Entropy is no longer a side comment about ignorance. It becomes the quantity that measures how much bulk geometry is supporting the connection.
+
+The surface \(\gamma_A\) can be read as the cheapest geometric bottleneck compatible with the boundary cut. Its area measures how much correlation has to pass between \(A\) and its complement. The formula therefore says something very concrete: the bulk pays for connectivity with area, and that bill is exactly the boundary entanglement entropy.
+
 ### Geometry from Entanglement
 
 Draw a region A on the boundary. There's a surface in the bulk that dips into the interior, anchored on the edge of A, with minimal area. The entanglement entropy equals this area divided by 4G.
 
 More entanglement means a larger minimal surface. The geometry of the bulk encodes entanglement structure on the boundary.
+
+That is why the RT formula sits at the center of the chapter. It turns a quantum-information question into a geometric one. Once area can be read from entropy, the old separation between "matter state" and "shape of space" starts to collapse.
 
 **Geometry is built from entanglement. Information becomes shape.**
 
@@ -222,7 +236,11 @@ A local bulk field can be written as a "smeared" integral over boundary operator
 
 $$\phi(z, x) = \int d^d x' \, K(z, x; x') \, \mathcal{O}(x')$$
 
-Near the boundary, K is narrow-bulk fields depend on nearby boundary operators. Deep in the bulk, K is wide-bulk fields depend on operators spread across a large boundary region.
+The kernel \(K\) answers a practical question: which boundary observables do you need if you want to describe one local excitation in the bulk? Near the boundary, \(K\) is narrow, so the answer is "mostly nearby ones." Deep in the bulk, \(K\) spreads out, so the answer becomes "a coordinated patch of the boundary."
+
+This is the mechanism behind the slogan that the bulk is encoded on the boundary. A bulk point is not stored in one place. It is reconstructed from a weighted average of many boundary observables.
+
+HKLL is valuable because it answers the skeptical question hovering over holography. If the boundary is fundamental, why does the interior ever look local? The answer is that certain collective boundary patterns reconstruct localized bulk operators with semiclassical accuracy. Locality is emergent and still physically real at the semiclassical level.
 
 ### Implications
 
@@ -231,6 +249,8 @@ Local bulk physics depends on **nonlocal** boundary data. The deeper you go, the
 A bulk region can be reconstructed from **many different** boundary subsets. This redundancy is exactly what you want in an error-correcting code.
 
 If you erase part of the boundary, bulk information survives-you can recover it from the remaining boundary. This is the holographic implementation of the recovery rule.
+
+HKLL matters because it shows how a world that looks local inside can be stored nonlocally on the boundary without contradiction. The boundary keeps the ledger. HKLL explains how to read a local bulk story out of that ledger.
 
 ## 8.11 Black Holes and Thermodynamics
 
@@ -260,7 +280,7 @@ Read the RT formula backwards: **area is determined by entanglement**. More enta
 
 Mark Van Raamsdonk made this vivid with a thought experiment. Take two entangled CFTs-two copies of the boundary theory in an entangled state. Together they describe a connected bulk spacetime: a wormhole connecting two regions.
 
-Now reduce the entanglement. As you dial down the correlations between the two CFTs, what happens to the wormhole? It stretches and thins. When entanglement reaches zero, the wormhole pinches off entirely. Two disconnected spacetimes.
+Reduce the entanglement. As you dial down the correlations between the two CFTs, what happens to the wormhole? It stretches and thins. When entanglement reaches zero, the wormhole pinches off entirely. Two disconnected spacetimes.
 
 **Entanglement is the glue of spacetime.** Without it, space falls apart.
 

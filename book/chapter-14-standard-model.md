@@ -438,6 +438,8 @@ $$\boxed{Y_Q = \frac{1}{6}, \quad Y_L = -\frac{1}{2}, \quad Y_u = \frac{2}{3}, \
 
 These are exact rationals, the Standard Model hypercharges, with the ratios fixed by anomaly freedom + Yukawa invariance and the absolute values fixed by standard normalization. There are no continuous parameters to adjust.
 
+That is what makes the derivation satisfying. The equations are not decorative bookkeeping. They explain why the charges come out in the strange pattern we observe. Quarks carry third-integer charges because the weak interaction, the Higgs couplings, and anomaly cancellation all have to coexist in one self-consistent chiral theory.
+
 ## 14.11 The Number of Colors: Why N_c = 3
 
 In the full argument, generations and colors are linked. It is easiest to see the color step first, then feed in the next section's result that the theory prefers three generations.
@@ -541,15 +543,15 @@ This sounds abstract, but it has concrete consequences. The model does not postu
 
 For the book, the picture is this:
 
-| Lane | Result | Boundary |
+| Sector | What the framework fixes | What remains open |
 |---|---|---|
-| Structural carriers | Photon, gluons, and graviton are exact zeros | theorem-grade structural statement |
-| Electroweak theorem | W and Z are fixed by the electroweak closure, with an exact reference-hitting validation slice beneath it | the theorem surface carries the pair; the validation slice is secondary |
-| Higgs/top branch | An exact source-only electroweak calibration theorem yields \(H = 125.1995304097179\) GeV and a companion top coordinate \(t = 172.3523553288312\) GeV on the same Jacobian surface, with an exact inverse validation slice beneath it | the Higgs theorem is exact on its calibration surface; the bridge to the PDG direct-top row is open and tracked in [#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207) |
-| Charged-lepton witness | An exact same-family \((e,\mu,\tau)\) witness fixes the ordered charged triple and its affine coordinate on that witness | the theorem surface contains a conditional determinant-line lift and an algebraic mass readout; the open theorem is the landing from the common calibration input to physical charged data or the charged determinant line |
-| Quark theorem | An exact PDG 2025 running \((u,d,s,c,b,t)\) sextet and exact forward Yukawas on the quark frame selected by \(P\) | the theorem closes on that selected frame; it does not classify every quark frame |
-| Neutrino theorem | A theorem-grade weighted-cycle family with \((m_1,m_2,m_3)=(0.017454720257976796, 0.019481987935919015, 0.05307522145074924)\) eV, the corresponding mixing data, and the physical Majorana pair \((\alpha_{21}^{(\mathrm{Maj})},\alpha_{31}^{(\mathrm{Maj})})=(153.618518^\circ,257.003241^\circ)\) on the shared-basis transport branch | exact central-splitting adapters are diagnostic validation surfaces |
-| Hadron boundary | Bound-state masses lie outside the closed package | backend plus nonperturbative strong dynamics are required |
+| Structural carriers | Photon, gluons, and graviton are forced to be massless | Nothing additional is needed at that structural level |
+| Electroweak bosons | The \(W\) and \(Z\) masses are fixed on the electroweak calibration branch | Their relation to strongly coupled bound states is a separate problem |
+| Higgs and top | The same calibration branch gives a Higgs value near \(125.20\) GeV and a companion top value near \(172.35\) GeV | Connecting that top value to the direct experimental extraction still needs extra work |
+| Charged leptons | The family structure is fixed and the remaining freedom is isolated to one overall anchor | One absolute mass-setting input is still missing |
+| Quarks | The six running quark masses and corresponding Yukawa data are fixed in the model's physical quark basis | A fuller basis-independent closure remains open |
+| Neutrinos | One neutrino branch gives definite masses and Majorana phases | Stronger closure beyond that branch remains open |
+| Hadrons | Composite hadron masses are outside the closed package | Bound-state strong dynamics still have to be solved |
 
 That is enough to tell a clear story without pretending every particle sits at exactly the same stage of completion.
 
@@ -557,11 +559,15 @@ That is enough to tell a clear story without pretending every particle sits at e
 
 The photon is not an optional feature of the model. It emerges necessarily from the way observer patches glue together.
 
-Here is the chain of reasoning. Our Assumption D states that when two observer patches overlap, there is redundancy in how they identify their shared observables. Two observers looking at the same region can use different "coordinate systems" for describing it, and the transformation between these descriptions leaves all physical observables invariant. This redundancy is what we call gauge freedom, and it forms a mathematical structure called a groupoid.
+Here is the chain of reasoning. One of the framework's core overlap assumptions says that when two observer patches share a region, there is redundancy in how they identify the same observables. Two observers can use different local frames for the same overlap, and the transformation between those frames leaves the physical content unchanged. That redundancy is gauge freedom.
 
 When you have a boundary between patches-say, a collar region around the edge of a cap-the Hilbert space of that collar decomposes into sectors. In the formal derivation this is called edge-center completion: the boundary splits into sectors, each sector carries a charge label, and those labels combine when collars are joined.
 
 These fusion rules define a mathematical structure called a tensor category. A key result, established by Tannaka-Krein reconstruction (and its physics version, the Doplicher-Roberts theorem), is that any such transportable tensor category with the right rigid, symmetric, bosonic fiber-functor properties is equivalent to the representation category of some compact group G. In other words, the transportable edge-sector package reconstructs a gauge group.
+
+The plain-language content is elegant. If you know how charges combine, separate, and travel, you can work backward to the symmetry group hiding behind them. You do not have to guess the group first and then decorate it with matter. The charge bookkeeping itself tells you what group must have been there.
+
+Tannaka-Krein reconstruction is intimidating terminology for an intuitive move. Watch the full pattern of transport, fusion, and conjugation carefully enough, and the hidden symmetry group ceases to be a guess. It becomes the only group compatible with that pattern.
 
 On the realized Standard Model branch, this reconstructed group includes a U(1) factor, the gauge group of electromagnetism. The key point is that this U(1) comes from the redundancy structure of how patches identify their overlaps once the transportable-sector reconstruction package is in place.
 
@@ -573,9 +579,9 @@ The conclusion is exact: a hard photon-mass deformation is incompatible with the
 
 ## 14.16 Why the Graviton Is Inevitable
 
-The graviton emerges from a parallel chain of reasoning, applied to spacetime geometry instead of internal gauge symmetry.
+The graviton emerges from the same logic, applied to spacetime geometry instead of internal gauge symmetry.
 
-In Chapter 15 the theorem surface recovers the cap-modular statement on the extracted prime geometric subnet. On that subnet, once the recovery and MaxEnt structure is in place, modular flow on caps becomes a geometric conformal transformation with a fixed normalization. In the generic continuum case this is an automorphism-level statement for the scaling-limit cap pair; the operator identity for a modular Hamiltonian is restricted to the special type-I realization.
+Chapter 15 argues that once modular flow on screen caps becomes geometric, the conformal motions of the sphere recover Lorentz kinematics. At that point the screen is no longer carrying only abstract algebraic data. It is carrying the compressed information that observers read as spacetime geometry.
 
 The conformal group of the two-sphere is isomorphic to the Lorentz group: Conf⁺(S²) ≅ PSL(2,ℂ) ≅ SO⁺(3,1). This is a mathematical identity. Given the geometric cap pair on the extracted subnet, Lorentz kinematics follows from that conformal classification.
 
@@ -607,7 +613,7 @@ Not directly, and for good reason. The proton mass is a qualitatively different 
 
 The photon and graviton masses are symmetry-protected zeros. Their values are fixed by the algebraic structure of the theory-any deviation would break a required redundancy. The argument is exact and does not depend on knowing coupling constants or solving difficult equations.
 
-Not all mass claims have the same character. The cleanest results are the symmetry-protected zeros: photon, gluons, and graviton. The next easiest are masses tied closely to electroweak structure, such as the \(W\) and \(Z\). The Higgs/top lane is a closed source-only split calibration theorem on the declared D10/D11 running, matching, and threshold surface, the neutrino lane is a theorem-grade weighted-cycle branch, and the quark lane closes on the quark frame selected by \(P\) with exact running masses and exact forward Yukawas. Hadrons are hardest because they require solving the full strongly coupled dynamics of bound states.
+Not all mass claims have the same character. The cleanest results are the symmetry-protected zeros: photon, gluons, and graviton. The next easiest are masses tied closely to electroweak structure, such as the \(W\) and \(Z\). The Higgs and top are calibrated together on one electroweak branch. The neutrino result comes from a separate branch with explicit masses and phases. The quark result gives running masses and Yukawas in the model's physical quark basis. Hadrons are hardest because they require solving the full strongly coupled dynamics of bound states.
 
 The proton mass is a bound-state eigenvalue in a strongly coupled gauge theory. The proton is made of three quarks held together by gluons, and its mass emerges from the complicated nonperturbative dynamics of quantum chromodynamics. The dominant contribution comes from the energy stored in the gluon field and the kinetic energy of the quarks bouncing around inside. The constituent quark masses sum to only about 10 MeV.
 
@@ -631,6 +637,10 @@ Similar tests work for nonabelian groups like $S_3$ (the smallest nonabelian gro
 
 This formula is not only an empirical observation. It can be derived theoretically. The group Laplacian is the *unique* gauge-invariant local quadratic operator on the edge degrees of freedom. Any other choice would either break gauge symmetry or require nonlocal terms. Combined with the MaxEnt principle, which selects the Gibbs state, this uniqueness forces the heat-kernel form. The factor $d_R$ instead of $d_R^2$ appears because entanglement entropy traces over one side of the cut. The derivation requires one additional assumption, that the entropy-maximizing generator is quasi-local, but otherwise follows from the axioms.
 
+That is why this section belongs in a book rather than an appendix. The vacuum is not being mined for cute number patterns. The claim is that edge entanglement is constrained enough that only one simple local weighting rule survives, and once that happens the representation theory of the gauge group leaves visible fingerprints in the probabilities.
+
+The foreign terminology hides a simple picture. Edge entanglement does not weight charge sectors arbitrarily. It assigns each sector a local geometric cost on the group manifold. Read those costs carefully enough and the effective gauge couplings can be inferred from the vacuum itself.
+
 Once we can reliably extract gauge couplings from entanglement, the later quantitative branches become much tighter.
 
 ## 14.19 Gauge Unification and the Proton
@@ -641,11 +651,11 @@ In the 1970s, physicists noticed something remarkable. If you run the couplings 
 
 But there was a problem. With just the Standard Model particle content, the three couplings don't quite meet. They miss each other. In the 1990s, physicists discovered that adding supersymmetric partners fixes this: with MSSM-like particle content, the couplings unify beautifully, predicting $\alpha_s(M_Z) \approx 0.117$, remarkably close to the measured value of $0.1177 \pm 0.0009$.
 
-This is not a theorem-level supersymmetric spectrum. The claim is narrower: the edge-mode structure can reproduce MSSM-like one-loop beta shifts only on a declared calibration package consisting of external input $P$, the printed running and matching conventions, the printed threshold conventions, and, when the near-MSSM benchmark is quoted, an added fermionic-grading restriction to half-integer SU(2) sectors. The mechanism comes from the Peter-Weyl decomposition of $L^2(G)$: a representation $R$ corresponds to a block $V_R \otimes V_R^*$ of size $d_R^2$. Entropy, which selects the MaxEnt state, traces over one side, giving the familiar $d_R$ factor in $p_R \propto d_R e^{-t C_2(R)}$. Vacuum polarization loops run over both indices, restoring the second $d_R$. The effective multiplicity for RG running is therefore $N_{\text{eff}} = d \cdot p$.
+This is not a claim that OPH predicts a supersymmetric particle spectrum. The claim is narrower and more interesting. On one specific calibration choice, the edge-mode calculation can reproduce MSSM-like one-loop running. The mechanism is simple in spirit. Entropy weights a representation by one copy of its dimension because one side of the entanglement cut is traced over. Loop corrections see both indices of the representation block, so a second factor of the dimension returns in the running. That is what lets the beta-function shifts land near the familiar unification benchmark.
 
 At the unification-scale heat-kernel parameter $t_U \approx 1.64$, this gives:
 $$\Delta b_{\text{edge}} \approx (2.49,\ 4.38,\ 3.97)$$
-compared to the MSSM target $(2.50,\ 4.17,\ 4.00)$. The agreement is within 5% for all three coefficients only on that declared calibration branch. What emerges here is MSSM-like running behavior under stated premises, not a theorem that the realized OPH branch contains an MSSM particle spectrum.
+compared to the MSSM target $(2.50,\ 4.17,\ 4.00)$. The agreement is within 5% for all three coefficients on that calibration choice. What emerges here is unification-like running behavior, not a theorem that the realized OPH branch contains an MSSM particle spectrum.
 
 The sharper structural prediction concerns *how* any unification-like closure would happen.
 
@@ -664,6 +674,10 @@ There's no larger group. No X and Y bosons. No leptoquark generators. Unificatio
 
 The prediction is stark: **gauge-mediated proton decay is forbidden**. That is the theorem-level statement.
 
+This is one of the cleanest experimental forks in the road. A simple-group unification story predicts new gauge bosons that eventually turn protons into lighter particles. The OPH route predicts that those bosons never exist. The difference is not cosmetic. It is the difference between one future detector signal and none.
+
+That is why the claim is unusually valuable. Many high-energy ideas differ mainly in elegance or ultraviolet taste. Proton decay is harsher. Either the detector sees the relevant channel or it keeps not seeing it. This chapter places OPH on the null-decay side for structural reasons, not as a temporary preference.
+
 This is a unique experimental signature. Standard SUSY GUTs predict *both* precision unification *and* proton decay. Our model combines a theorem-level structural statement with a separate calibration branch: the full connected gauge group has only the product-group adjoint content and no mixed leptoquark generators, so gauge-mediated proton decay is forbidden. The same running story allows MSSM-like unification-style closure without simple-group embedding. If Hyper-Kamiokande continues to see null results while precision measurements continue to favor unified couplings, that would support geometric unification over algebraic unification.
 
 ## 14.20 What the Model Explains
@@ -674,15 +688,15 @@ Let's step back and see what the framework actually accounts for.
 
 **The zeros.** The photon and graviton masses are exactly zero. This is a symmetry-protected prediction. The photon's masslessness follows from U(1) gauge invariance being a genuine overlap redundancy; any mass would break the consistency of how charged patches glue together. Similarly, the graviton's masslessness follows from diffeomorphism invariance being the redundancy structure of bulk spacetime. Experimental and observational upper bounds are consistent with these predictions to extraordinary precision: the photon mass is constrained below ~10⁻¹⁸ eV, often summarized as ~27 orders of magnitude, and the graviton mass is constrained below ~10⁻²³ eV by gravitational-wave dispersion, often summarized as ~22 orders of magnitude.
 
-**The particle story.** Beyond the structural zeros, the framework carries a non-hadron theorem-and-calibration package with clear claim boundaries: an exact \(W/Z\) pair on the electroweak theorem surface, the Thomson-limit fine-structure constant \(\alpha^{-1}(0)=137.035999177\) on the Ward-projected electromagnetic transport family, an exact source-only D11 Higgs/top split theorem with an exact inverse validation slice beneath it, an exact same-family charged witness, an exact PDG 2025 running quark sextet together with exact forward Yukawas on the quark frame selected by \(P\), and a weighted-cycle neutrino theorem branch with \((m_1, m_2, m_3) = (0.017454720257976796, 0.019481987935919015, 0.05307522145074924)\,\mathrm{eV}\) together with the theorem-grade physical Majorana pair \((\alpha_{21}^{(\mathrm{Maj})},\alpha_{31}^{(\mathrm{Maj})})=(153.618518^\circ,257.003241^\circ)\) on its shared-basis transport branch. Charged leptons require one final absolute anchor. The quark theorem is restricted to the quark frame selected by \(P\). Hadrons lie outside the proved package.
+**The particle story.** Beyond the massless carriers, the framework reaches a readable particle package. It fixes the \(W\) and \(Z\), matches the Thomson-limit fine-structure constant \(\alpha^{-1}(0)=137.035999177\), gives a Higgs value near \(125.20\) GeV together with a companion top value near \(172.35\) GeV, fixes a six-quark running-mass package with corresponding Yukawas in the model's physical quark basis, and specifies a neutrino family with masses \((0.017454720257976796, 0.019481987935919015, 0.05307522145074924)\,\mathrm{eV}\) together with definite Majorana phases. Charged leptons still need one absolute mass-setting input. Hadrons remain outside the closed package because strong-coupling bound states are harder.
 
-The same local calibration surface ties this particle lane to the gravity lane. In compact form, \(P\) fixes \(\alpha_U\), the transmutation pair \((t_U, t_{tr})\), and the electroweak scale \(v\), which carry \(M_W = 80.377\,\mathrm{GeV}\) and \(M_Z = 91.18797809193725\,\mathrm{GeV}\). The Ward-projected electromagnetic channel is anchored at \(\alpha^{-1}(m_Z^2)=128.30576920234813\) and reaches the Thomson-limit value \(\alpha^{-1}(0)=137.035999177\). The exact electroweak Higgs theorem on the declared running, matching, and threshold surface carries \(M_H = 125.1995304097179\,\mathrm{GeV}\). The same Jacobian surface emits a companion top coordinate \(m_t = 172.3523553288312\,\mathrm{GeV}\). At PDG quoting precision the Higgs row lands on the 2025 Higgs average. The exact public running-top row on the selected quark frame uses the PDG 2025 cross-section top entry. The bridge to the PDG direct-top average is open and is tracked in [#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207). An exact inverse validation slice on the same Jacobian surface matches the canonical Higgs/top reference pair and remains a validation surface that does not define the theorem surface. On the stated local extension surface, the gravity-side readout uses the lifted product presentation of the realized quotient branch to give \(\bar\ell_{\mathrm{shared}} = \bar\ell_{SU(2)}(t_{2,\mathrm{run}}) + \bar\ell_{SU(3)}(t_{3,\mathrm{run}})\); the same pixel law on that surface fixes \(\bar\ell_{\mathrm{shared}} = P/4\), and the local SI readout is \(G_{\mathrm{SI}} = c^3 a_{\mathrm{cell}} / (\hbar P)\) relative to the declared microscopic datum \(a_{\mathrm{cell}}\), which carries \(G = 6.674299995910528\times 10^{-11}\,\mathrm{m}^3\,\mathrm{kg}^{-1}\,\mathrm{s}^{-2}\) on that same local calibration surface. The invariant causal speed \(c = 299792458\,\mathrm{m/s}\) belongs to the Lorentz branch and enters the familiar-unit display through the local readout package. This is the sense in which OPH places a classical gravity constant and the electroweak boson scale on one local calibration surface.
+The reason these numbers belong in one chapter is that the framework is trying to organize them with one local calibration story. The same input that sets the electroweak scale also feeds the low-energy electromagnetic coupling and the effective gravitational coupling. The reader does not need every intermediate symbol to see the point. The point is that OPH is attempting to tie electroweak masses, the Higgs/top calibration, electromagnetism at low energy, and Newton's constant to one common structure instead of treating them as unrelated constants.
 
 **Charge quantization.** All color-singlet particles have integer electric charge. No fractional charges like $\pm 1/3$ can exist outside hadrons. This follows from the global structure of the gauge group.
 
 **Gauge-mediated proton decay.** Gauge-mediated proton decay is forbidden. The gauge group is a product, not embedded in a larger simple group, so no leptoquark generators exist. Current experimental limits ($\tau_p > 10^{34}$ years) are consistent with this prediction.
 
-**The boundary.** Charged leptons require the source landing from the common calibration input to physical charged data. The exact quark theorem is restricted to the quark frame selected by \(P\). Hadrons require a production backend and nonperturbative strong-dynamics work.
+**The boundary.** Charged leptons still need an absolute mass-setting input. The quark result is tied to one physical quark basis. Hadrons require nonperturbative strong-dynamics work.
 
 ## 14.21 The Big Picture
 
@@ -692,8 +706,8 @@ The photon and graviton are particles the theory *forces* upon us on the stated 
 
 The quarks and leptons aren't arbitrary. Their charges are fixed by the realized gauge-consistency package. On the realized MAR-admissible branch, three generations and three colors are not inserted by hand; they are the smallest answer that survives the combined demands of chirality, CP violation, anomaly cancellation, and ultraviolet consistency.
 
-That is a remarkably concrete result. The framework does not merely say that "symmetry matters." It points to a very specific gauge structure, charge pattern, generation count, and color count. It reaches the massless carriers, the \(W\) and \(Z\), an exact D11 Higgs/top split theorem, a theorem-grade neutrino family, and an exact running quark sextet with exact forward Yukawas on the quark frame selected by \(P\). The main boundary sits in the charged-lepton anchor, theorem coverage beyond the selected quark frame, and strongly coupled bound states.
+That is a remarkably concrete result. The framework points to a specific gauge structure, charge pattern, generation count, and color count. It also reaches the massless carriers, the \(W\) and \(Z\), a calibrated Higgs/top sector, a neutrino family, and a running quark package. The main open edge sits in the charged-lepton anchor, fuller quark closure beyond the chosen physical basis, and strongly coupled bound states.
 
-This chapter has shown how particles emerge from the screen as stable patterns that transform under emergent symmetries. But how does spacetime itself emerge? How does Einstein's relativity fit into this picture?
+This chapter has shown how particles emerge from the screen as stable patterns that transform under emergent symmetries. The natural sequel is spacetime itself. If the particle inventory is fixed by consistency, can geometry be fixed the same way?
 
 That's the question of **Chapter 15: Relativity from Modular Time**.

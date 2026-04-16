@@ -90,7 +90,7 @@ But the real surprise comes when you chain measurements:
 2. Measure spin along the x-axis. This gives 50/50 up or down.
 3. Measure spin along z again.
 
-The final z-measurement is now random-50% up, 50% down. But if you skip step 2, the atoms stay "up" with certainty.
+The final z-measurement becomes random-50% up, 50% down. But if you skip step 2, the atoms stay "up" with certainty.
 
 The x-measurement has disturbed the z-state. The order of questions changes the answers.
 
@@ -239,7 +239,7 @@ An observer in a causal diamond can only access fields within that diamond. The 
 
 ## 5.8 Patch Algebras on the Screen
 
-Now we connect to our model. Each observer has a patch P on the holographic screen S². Associated with patch P is an algebra A(P)-the observer's accessible questions.
+Here is the connection to the model. Each observer has a patch P on the holographic screen S². Associated with patch P is an algebra A(P)-the observer's accessible questions.
 
 ### Net Axioms (Algebraic)
 
@@ -321,7 +321,7 @@ This seems to conflict with entanglement. Entangled particles show correlations:
 
 The key distinction: **correlations** are not **influence**.
 
-Alice and Bob share an entangled pair. Alice measures and gets "up." She now knows Bob will measure "up." But she hasn't influenced Bob's particle-she has learned about it.
+Alice and Bob share an entangled pair. Alice measures and gets "up." She can then infer that Bob will measure "up." But she hasn't influenced Bob's particle-she has learned about it.
 
 The commutation relation [A(P), A(Q)] = 0 says Alice's measurement operator doesn't change Bob's statistics. Before Alice measures, Bob has 50/50 odds. After Alice measures, Bob still has 50/50 odds. Alice's knowledge changed, but not Bob's physics.
 
@@ -355,4 +355,4 @@ The algebraic structure is not optional. It is what the hints from quantum mecha
 
 The next chapter develops the overlap consistency condition in detail: exactly how must measurements on shared regions agree?
 
-The reverse engineering continues.
+Once the questions are algebraic, the crucial issue is gluing their answers.

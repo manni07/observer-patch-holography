@@ -38,7 +38,7 @@ Fine-tuning reveals that laws are not unique. There are many possible laws, and 
 
 ## 17.3 The First-Principles Reframing: Laws Are Survivors
 
-Now we reverse engineer. Why do we have these specific laws?
+Reverse engineering asks why we have these specific laws.
 
 ### Lee Smolin's Cosmological Natural Selection
 
@@ -134,7 +134,7 @@ The electron is a vibration pattern that persists. The muon is a pattern that pe
 
 The "particle zoo" is a census of vibrational survivors.
 
-Within OPH, that census is uneven. Some particles sit on exact structural or exact-sidecar surfaces (photon, gluons, graviton, W, Z). The Higgs/top lane is a closed source-only split calibration theorem on the declared D10/D11 running, matching, and threshold surface, and the neutrino lane has theorem-grade weighted-cycle outputs. Quarks and charged leptons sit on narrower intermediate surfaces, and composite particles like hadrons require computational work beyond the symbolic framework.
+Within OPH, that census is uneven. Some particles sit on especially clean structural results: photon, gluons, graviton, W, and Z. The Higgs and top are calibrated together on one electroweak branch, and the neutrino sector has definite masses on another. Quarks and charged leptons sit on narrower intermediate results, and composite particles like hadrons require stronger computational control of the strong interaction.
 
 ### Topological Protection
 
@@ -177,7 +177,7 @@ Here is a striking observation: among all the memes that have evolved in human c
 The **simulator meme**, the idea that reality is computational and can be simulated, is the meme that allows reality to understand itself.
 
 Think about what happens as this meme evolves:
-1. Early humans develop language (memes can now replicate)
+1. Early humans develop language, allowing memes to replicate
 2. Mathematics emerges (precise memes that compress patterns)
 3. Physics develops (memes that model reality's rules)
 4. Computation theory appears (memes about information processing)

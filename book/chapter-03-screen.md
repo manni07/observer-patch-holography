@@ -24,7 +24,7 @@ In 1972, a graduate student named Jacob Bekenstein walked into John Wheeler's of
 
 Imagine a cup of hot tea. The tea has entropy-it is hot and messy, with many microscopic arrangements of molecules that produce the same macroscopic state.
 
-Now lower the cup into a black hole.
+Lower the cup into a black hole.
 
 The tea crosses the event horizon and vanishes. No one outside can ever see it again. If the tea is gone, so is its entropy. The total entropy of the observable universe has decreased.
 
@@ -86,7 +86,7 @@ Entropy is a count of possibilities. More precisely, it's the logarithm of the n
 
 Picture a row of ten coins. Each coin can be heads (H) or tails (T). There are $2^{10} = 1024$ possible arrangements.
 
-Now suppose I tell you: "Five coins are heads and five are tails." How many arrangements fit this description? The answer is "10 choose 5" = 252.
+Suppose I tell you: "Five coins are heads and five are tails." How many arrangements fit this description? The answer is "10 choose 5" = 252.
 
 But if I tell you "all ten are heads," there's only one arrangement: HHHHHHHHHH.
 
@@ -124,7 +124,7 @@ This is why the Bekenstein-Hawking formula is so important. It connects informat
 
 ## 3.4 The Holographic Principle
 
-Now let's follow the hint to its logical conclusion.
+Let's follow the hint to its logical conclusion.
 
 ### The Bekenstein Bound
 
@@ -411,7 +411,7 @@ These ideas have strong support in the settings where we can currently probe the
 - AdS/CFT calculations match both sides of the duality
 - No violation of the relevant entropy bounds has ever been observed
 
-The holographic principle started as a proposal. It is now one of the most influential and best-supported organizing ideas in quantum gravity.
+The holographic principle started as a proposal. It stands as one of the most influential and best-supported organizing ideas in quantum gravity.
 
 ## 3.11 The Reverse Engineering
 
@@ -458,8 +458,8 @@ We have established that:
 
 But we haven't yet explained dynamics. The screen we've described is static-it encodes information. What makes things happen? What creates the arrow of time?
 
-The answer involves entropy again, but now entropy's role in dynamics. The Second Law says entropy increases. But why? And what does this have to do with the screen?
+The answer involves entropy again, this time in dynamics. The Second Law says entropy increases. But why? And what does this have to do with the screen?
 
 In the next chapter, we explore the edge of the screen, the boundary conditions that govern what can happen. We will see how entropy growth is a geometric constraint built into the structure of horizons themselves, not only a statistical tendency.
 
-The reverse engineering continues in Chapter 4: Entropy on the Edge.
+Chapter 4 turns the screen from a storage surface into a thermodynamic one.
