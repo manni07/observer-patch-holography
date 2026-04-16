@@ -143,7 +143,7 @@ $$I(X:Y|Z) = H(X|Z) + H(Y|Z) - H(X,Y|Z)$$
 
 If I(X:Y|Z) = 0, then X and Y are **conditionally independent given Z**. Once you know Z, learning Y tells you nothing new about X.
 
-This is the mathematical definition of "Z screens X from Y." All information that Y has about X is already contained in Z.
+This is the mathematical definition of "Z screens X from Y." All information that Y has about X is contained in Z.
 
 Small conditional mutual information means approximate conditional independence-and approximate conditional independence enables recovery.
 
@@ -300,12 +300,15 @@ $$\|\rho_{ABC} - (\mathrm{id}\otimes\mathcal R)(\rho_{AB})\|_1 \le 2\sqrt{\ln 2\
 **Loopy covers** require additional cycle-consistency control. At fixed cutoff,
 the central-defect branch is governed by a Cech 2-cocycle in the center of
 triple-overlap algebras, while the genuinely noncentral branch is governed by a
-crossed-module / 2-group class \(q_\Sigma\in \check H^2(N_\Sigma,H_\Sigma\to
-G_\Sigma)\). Global gluing is possible iff the relevant obstruction class
+crossed-module / 2-group class
+
+$$q_\Sigma \in \check H^2(N_\Sigma, H_\Sigma \to G_\Sigma).$$
+
+Global gluing is possible iff the relevant obstruction class
 vanishes. In the EFT limit, the central truncation reduces to anomaly
 cancellation.
 
-This matches holographic expectations. In AdS/CFT, entanglement between boundary regions scales with the area of the minimal surface connecting them. In our model, one natural scaling candidate similarly ties recoverability bounds to separator size rather than bulk volume.
+This matches holographic expectations. In AdS/CFT, entanglement between boundary regions scales with the area of the minimal surface connecting them. In our model, one natural scaling candidate ties recoverability bounds to separator size and not to bulk volume.
 
 ### Why This Matters
 

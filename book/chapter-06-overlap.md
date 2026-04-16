@@ -401,7 +401,7 @@ Let's state the consistency condition precisely.
 ### Setup
 
 We have:
-- A screen \(S^2\)
+- A screen $S^2$
 - A collection of patches {P_i}
 - For each patch P_i, an algebra A(P_i) of observables
 - For each patch P_i, a state omega_i
@@ -432,7 +432,7 @@ The topology of this graph determines what kind of global structure can emerge. 
 
 The overlap consistency framework suggests several signatures and checks:
 
-**1. Bell inequality violations**: On the fixed-cutoff microphysics surface, OPH carries an explicit two-wing Bell package. Once you specify commuting left and right observables, binary setting choices, and a source state on the joint wing algebra, the joint law is the Born trace, the local marginals are independent of the remote setting, and the CHSH value obeys the Tsirelson bound \(S \le 2\sqrt{2}\). Exact saturation at \(S = 2\sqrt{2}\) is fixed only on an explicit two-qubit Bell-pair branch with the stated Pauli readouts. This has been confirmed in hundreds of experiments, culminating in the 2015 loophole-free tests. Any violation *exceeding* the Tsirelson bound identifies a measurement contradiction with quantum mechanics.
+**1. Bell inequality violations**: On the fixed-cutoff microphysics surface, OPH carries an explicit two-wing Bell package. Once you specify commuting left and right observables, binary setting choices, and a source state on the joint wing algebra, the joint law is the Born trace, the local marginals are independent of the remote setting, and the CHSH value obeys the Tsirelson bound $S \le 2\sqrt{2}$. Exact saturation at $S = 2\sqrt{2}$ is fixed only on an explicit two-qubit Bell-pair branch with the stated Pauli readouts. This has been confirmed in hundreds of experiments, culminating in the 2015 loophole-free tests. Any violation *exceeding* the Tsirelson bound identifies a measurement contradiction with quantum mechanics.
 
 **2. Markov property on separating regions**: In OPH-motivated structured states, when patches A and C are separated by patch B and the relevant Markov / recovery conditions hold, the conditional mutual information I(A:C|B) is expected to be small. Small conditional mutual information is therefore a natural structured-state signature to inspect. In OPH-motivated numerical constructions it is often small compared with random-state baselines: structured states obeying our axioms show I(A:C|B) ≈ 0, while random states show I(A:C|B) > 0.
 

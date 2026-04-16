@@ -152,7 +152,7 @@ This density matrix defines a modular Hamiltonian:
 
 $$K_P = -\ln \rho_P$$
 
-which generates modular time \(t_P\) for that observer.
+which generates modular time $t_P$ for that observer.
 
 **Every observer has their own emergent clock.**
 
@@ -345,7 +345,7 @@ Recap:
 
 | Intuitive Picture | Surprising Hint | First-Principles Reframing |
 |---|---|---|
-| Time is a fundamental external parameter flowing from past to future | No preferred time in GR; the Wheeler-DeWitt equation \(H\Psi = 0\) points toward a fundamentally timeless description; microscopic laws are largely time-symmetric | On the thermal-time proposal, time arises from modular flow of restricted states; the arrow of time is the direction of increasing entropy, driven by incomplete knowledge |
+| Time is a fundamental external parameter flowing from past to future | No preferred time in GR; the Wheeler-DeWitt equation $H\Psi = 0$ points toward a fundamentally timeless description; microscopic laws are largely time-symmetric | On the thermal-time proposal, time arises from modular flow of restricted states; the arrow of time is the direction of increasing entropy, driven by incomplete knowledge |
 
 Time need not be fundamental. General relativity removes any preferred slicing, and quantum gravity sharpens the problem with the Wheeler-DeWitt equation. In OPH, time emerges from modular flow of restricted states. The arrow of time points along the direction in which records can be made and compared.
 

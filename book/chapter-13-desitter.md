@@ -42,7 +42,7 @@ Reverse engineering asks why nature has a positive cosmological constant. What p
 
 What does one observer actually experience in de Sitter space?
 
-As you look outward, galaxies recede faster and faster. At a critical distance \(r_H = c/H\), the recession velocity equals the speed of light. Beyond this radius, light can never reach you.
+As you look outward, galaxies recede faster and faster. At a critical distance $r_H = c/H$, the recession velocity equals the speed of light. Beyond this radius, light can never reach you.
 
 This defines your **cosmological horizon**-the boundary of your causal access.
 
@@ -55,8 +55,8 @@ Inside the horizon, you can use static coordinates. This region-the **static pat
 | Framework Element | De Sitter Property |
 |-------------------|-------------------|
 | Observers have finite patches | The static patch is bounded by horizon |
-| Patch boundary is \(S^2\) | The horizon is topologically a 2-sphere |
-| Finite entropy | Gibbons-Hawking entropy \(S = A/(4\ell_P^2)\) |
+| Patch boundary is $S^2$ | The horizon is topologically a 2-sphere |
+| Finite entropy | Gibbons-Hawking entropy $S = A/(4\ell_P^2)$ |
 | No "God's eye view" | No observer sees beyond their horizon |
 | Observer equivalence | De Sitter is maximally symmetric |
 | Time is emergent | No preferred global time; time is patch-dependent |
@@ -81,7 +81,7 @@ A geodesic observer at the center of the static patch has zero proper accelerati
 
 $$T_U = \frac{\hbar a}{2\pi c k_B}$$
 
-So the de Sitter and Unruh temperatures are locally linked, but they should not be identified by assigning every static-patch observer the same acceleration \(a = cH\).
+So the de Sitter and Unruh temperatures are locally linked, but they should not be identified by assigning every static-patch observer the same acceleration $a = cH$.
 
 This has an important implication for our model: **de Sitter horizons automatically satisfy the same thermodynamic relations as Rindler horizons**. We don't need to prove this-Gibbons and Hawking did.
 
@@ -126,7 +126,7 @@ Where should we put the holographic screen in de Sitter?
 
 The natural answer: on the cosmological horizon.
 
-For an observer at \(r = 0\), the horizon is a sphere at \(r = c/H\). This sphere has area \(4\pi c^2/H^2\) and entropy of order \(10^{122}\) in natural units, or \(10^{122}/\ln 2\) bits.
+For an observer at $r = 0$, the horizon is a sphere at $r = c/H$. This sphere has area $4\pi c^2/H^2$ and entropy of order $10^{122}$ in natural units, or $10^{122}/\ln 2$ bits.
 
 The three-dimensional bulk inside the horizon is encoded holographically on the two-dimensional horizon.
 
@@ -207,11 +207,11 @@ Cosmic expansion does not have to decelerate. The supernova data and positive co
 
 1. **Accelerating Expansion**: The universe is 68% dark energy with Lambda > 0.
 
-2. **Static Patch**: Each observer is bounded by a cosmological horizon at \(r = c/H\).
+2. **Static Patch**: Each observer is bounded by a cosmological horizon at $r = c/H$.
 
-3. **Gibbons-Hawking**: The horizon has temperature \(T = \hbar H / (2\pi k_B)\) and entropy \(S = A / (4\ell_P^2)\).
+3. **Gibbons-Hawking**: The horizon has temperature $T = \hbar H / (2\pi k_B)$ and entropy $S = A / (4\ell_P^2)$.
 
-4. **Finite Patch Entropy**: A de Sitter static patch carries entropy of order \(10^{122}\) in natural units, so an observer's accessible region has finite information capacity.
+4. **Finite Patch Entropy**: A de Sitter static patch carries entropy of order $10^{122}$ in natural units, so an observer's accessible region has finite information capacity.
 
 5. **Horizon Complementarity**: Patch-relative descriptions are primary, and consistency is enforced on overlaps rather than through a single preferred global observer description.
 

@@ -43,7 +43,6 @@ Think of the screen as a high-resolution, quantum information canvas. Most
 patterns are noisy and ephemeral. Some are stable: they survive overlap
 consistency, persist under modular time, and can be tracked across patches.
 Those stable patterns are what we call **particles**.
-That is the conceptual picture. The particle sector can be stated more concretely as well. The framework fixes the gauge structure, the massless carriers, and the \(W/Z\) pair. It also carries a calibrated Higgs/top result, a quark-mass package in the physical quark basis used by the model, and a neutrino branch with definite masses. Charged leptons need one final overall anchor, and hadron masses sit outside the closed package because strong-coupling bound-state physics is harder.
 
 The key reframing is:
 
@@ -66,8 +65,8 @@ The first bridge is symmetry. Once Lorentz kinematics is recovered, a durable
 excitation is sorted by the familiar labels of relativistic physics: mass,
 spin, and helicity. Once the gauge branch is recovered, the charge bookkeeping
 also stops looking arbitrary. The realized branch fixes the Standard Model
-quotient \(SU(3)\times SU(2)\times U(1)/\mathbb Z_6\), the exact hypercharge
-lattice, and the counting chain \(N_g=3\), \(N_c=3\). Those are structural
+quotient $SU(3)\times SU(2)\times U(1)/\mathbb Z_6$, the exact hypercharge
+lattice, and the counting chain $N_g=3$, $N_c=3$. Those are structural
 answers about what kinds of matter can exist.
 
 That structural layer has direct particle consequences. The photon,
@@ -125,7 +124,7 @@ together with definite Majorana phases on that branch.
 
 Taken together, the particle picture is larger than a few isolated numbers.
 OPH fixes the structural gauge package, the exact massless carriers, the
-\(W/Z\) pair, the Thomson-limit electromagnetic coupling, the Higgs/top pair,
+$W/Z$ pair, the Thomson-limit electromagnetic coupling, the Higgs/top pair,
 the running quark sextet with Yukawas, and one neutrino family. Charged
 leptons need one absolute anchor. Hadrons require a separate nonperturbative
 bound-state step.
@@ -139,10 +138,8 @@ definition; it explains why particles have sharp representation labels.
 
 In OPH, this appears after two steps:
 
-1. **Lorentz kinematics is recovered on the extracted prime geometric subnet** from
-   geometric modular flow on the screen, with the scaling-limit geometric cap-pair
-   realization and ordered cut-pair rigidity scaffold still open beneath full
-   UV internalization (as described in Chapter 15).
+1. **Lorentz kinematics is recovered on the extracted prime geometric subnet**
+   on the geometric cap branch described in Chapter 15.
 2. **Localized excitations organize into representations** of this emergent
    symmetry in the EFT regime.
 
@@ -202,7 +199,7 @@ freedom in the form of effective equations of motion.
 
 The broad shape of the low-energy laws is set by the same consistency
 structure that gives us gauge symmetry in Chapter 14. The exact
-coupling-by-coupling story is part of the continuing program.
+coupling-by-coupling story is carried by the quantitative particle and gravity branches.
 
 ## 16.8 Why the Principle of Least Action Appears
 

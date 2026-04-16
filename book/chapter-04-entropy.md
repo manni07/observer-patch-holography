@@ -120,7 +120,7 @@ In 1948, Claude Shannon created information theory. He needed a measure of uncer
 
 $$H = -\sum_i p_i \log p_i$$
 
-This closely parallels the Gibbs/Shannon entropy formula, and Boltzmann's \(S = k_B \ln W\) appears as the equal-probability special case.
+This closely parallels the Gibbs/Shannon entropy formula, and Boltzmann's $S = k_B \ln W$ appears as the equal-probability special case.
 
 The connection is not coincidence. Thermodynamic and information-theoretic entropy share the same core counting logic, though the standard formulas are written in slightly different settings.
 
@@ -302,7 +302,7 @@ The entropy model includes both mathematical results and testable predictions:
 
 **1. Second Law holds statistically**: Entropy increases in isolated systems with overwhelming probability. Any genuine violation identifies a measurement contradiction with statistical mechanics. No violation has ever been observed in a properly isolated system.
 
-**2. Black-hole entropy follows the semiclassical A/4 law**: The Bekenstein-Hawking formula \(S_{BH} = A/(4\ell_P^2)\) is strongly supported by semiclassical gravity, black-hole thermodynamics, and microstate-counting evidence in special settings.
+**2. Black-hole entropy follows the semiclassical A/4 law**: The Bekenstein-Hawking formula $S_{BH} = A/(4\ell_P^2)$ is strongly supported by semiclassical gravity, black-hole thermodynamics, and microstate-counting evidence in special settings.
 
 **3. Page curve in semiclassical holographic models**: If information is preserved, radiation entropy should rise then fall. Island-formula calculations derive this in controlled models and confirm consistency with unitarity there, but it is not an OPH-specific evaporation theorem.
 

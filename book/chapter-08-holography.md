@@ -24,7 +24,7 @@ But black holes are different. Their information lives on the surface:
 
 $$S_{BH} = \frac{k_B c^3}{4 G \hbar} A = \frac{A}{4 \ell_P^2}$$
 
-In entropy units, black hole entropy is \(A/(4\ell_P^2)\); in bits this becomes \(A/(4\ell_P^2 \ln 2)\).
+In entropy units, black hole entropy is $A/(4\ell_P^2)$; in bits this becomes $A/(4\ell_P^2 \ln 2)$.
 
 ### The Bekenstein Bound
 
@@ -180,7 +180,7 @@ Witten, Gubser, Klebanov, and Polyakov wrote down the precise formula for this t
 
 $$Z_{gravity}[\phi \to \phi_0] = \left\langle \exp\left(\int d^d x \, \phi_0(x) \mathcal{O}(x)\right) \right\rangle_{CFT}$$
 
-This is the working dictionary between bulk and boundary. The left-hand side asks the gravity theory for its partition function while the bulk field \(\phi\) is forced to approach the boundary profile \(\phi_0\). The right-hand side asks the boundary theory for the generating functional obtained by turning on a source \(\phi_0(x)\) for the operator \(\mathcal{O}(x)\).
+This is the working dictionary between bulk and boundary. The left-hand side asks the gravity theory for its partition function while the bulk field $\phi$ is forced to approach the boundary profile $\phi_0$. The right-hand side asks the boundary theory for the generating functional obtained by turning on a source $\phi_0(x)$ for the operator $\mathcal{O}(x)$.
 
 That is why the formula matters. It tells you how to turn a bulk question into a boundary calculation. Fix the boundary data, and the bulk tells you how the interior responds. Turn on the corresponding source in the CFT, and the boundary tells you the same thing in field-theory language. Differentiate with respect to the source and you generate correlation functions. The bulk and boundary are solving one problem in two dialects.
 
@@ -219,9 +219,9 @@ $$S(A) = \frac{\text{Area}(\gamma_A)}{4G}$$
 
 where gamma_A is the **minimal surface** in the bulk that ends on the boundary of region A.
 
-This does more than match two elegant expressions. It tells you how much geometry is needed to keep region \(A\) tied to the rest of the state. More entanglement across the boundary cut means a larger minimal surface. Less entanglement means a smaller one. Entropy is no longer a side comment about ignorance. It becomes the quantity that measures how much bulk geometry is supporting the connection.
+This does more than match two elegant expressions. It tells you how much geometry is needed to keep region $A$ tied to the rest of the state. More entanglement across the boundary cut means a larger minimal surface. Less entanglement means a smaller one. Entropy is no longer a side comment about ignorance. It becomes the quantity that measures how much bulk geometry is supporting the connection.
 
-The surface \(\gamma_A\) can be read as the cheapest geometric bottleneck compatible with the boundary cut. Its area measures how much correlation has to pass between \(A\) and its complement. The formula therefore says something very concrete: the bulk pays for connectivity with area, and that bill is exactly the boundary entanglement entropy.
+The surface $\gamma_A$ can be read as the cheapest geometric bottleneck compatible with the boundary cut. Its area measures how much correlation has to pass between $A$ and its complement. The formula therefore says something very concrete: the bulk pays for connectivity with area, and that bill is exactly the boundary entanglement entropy.
 
 ### Geometry from Entanglement
 
@@ -243,7 +243,7 @@ A local bulk field can be written as a "smeared" integral over boundary operator
 
 $$\phi(z, x) = \int d^d x' \, K(z, x; x') \, \mathcal{O}(x')$$
 
-The kernel \(K\) answers a practical question: which boundary observables do you need if you want to describe one local excitation in the bulk? Near the boundary, \(K\) is narrow, so the answer is "mostly nearby ones." Deep in the bulk, \(K\) spreads out, so the answer becomes "a coordinated patch of the boundary."
+The kernel $K$ answers a practical question: which boundary observables do you need if you want to describe one local excitation in the bulk? Near the boundary, $K$ is narrow, so the answer is "mostly nearby ones." Deep in the bulk, $K$ spreads out, so the answer becomes "a coordinated patch of the boundary."
 
 This is the mechanism behind the slogan that the bulk is encoded on the boundary. A bulk point is not stored in one place. It is reconstructed from a weighted average of many boundary observables.
 

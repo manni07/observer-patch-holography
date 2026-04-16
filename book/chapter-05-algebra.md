@@ -108,7 +108,7 @@ For a baseball, the uncertainty is negligible-about 10⁻³⁴ meters. For an el
 
 ### Compatible Questions
 
-Not every pair of questions interferes. If two observables commute-[A, B] = 0-they share eigenstates and can be measured simultaneously. In hydrogen, the Hamiltonian commutes with \(L^2\) and with a chosen component such as \(L_z\), which is the standard example.
+Not every pair of questions interferes. If two observables commute-[A, B] = 0-they share eigenstates and can be measured simultaneously. In hydrogen, the Hamiltonian commutes with $L^2$ and with a chosen component such as $L_z$, which is the standard example.
 
 Two observers asking compatible questions can both get definite answers without disturbing each other's results. This is when classical intuition works.
 
@@ -265,7 +265,7 @@ In finite-dimensional language, this is equality of reduced density matrices on 
 
 Observers cannot ask infinitely many questions. Every measurement costs energy and time. In the holographic setting used here, maximum accessible information scales with patch area.
 
-A patch with area \(A\) can support an entropy of at most about \(A/(4\ell_P^2)\) in natural units, or \(A/(4\ell_P^2 \ln 2)\) bits. Equivalently, the effective Hilbert-space dimension is bounded by \(e^{A/(4\ell_P^2)}\).
+A patch with area $A$ can support an entropy of at most about $A/(4\ell_P^2)$ in natural units, or $A/(4\ell_P^2 \ln 2)$ bits. Equivalently, the effective Hilbert-space dimension is bounded by $e^{A/(4\ell_P^2)}$.
 
 ## 5.9 Type Classification
 

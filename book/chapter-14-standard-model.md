@@ -176,8 +176,8 @@ Renormalization works for some theories (called "renormalizable") but not others
 A strange consequence of renormalization: coupling constants change with energy.
 
 The fine structure constant alpha, which measures the strength of electromagnetism, is
-\(\alpha^{-1}(0)=137.035999177\) in the Thomson limit. At higher energies, it increases. At the Z
-boson mass, it is about \(1/128\).
+$\alpha^{-1}(0)=137.035999177$ in the Thomson limit. At higher energies, it increases. At the Z
+boson mass, it is about $1/128$.
 
 In OPH, that low-energy number sits inside the same particle story as the weak bosons. Once the
 electroweak transport family is fixed by the shared local calibration, electromagnetism is read as
@@ -187,7 +187,7 @@ Thomson limit of that channel gives
 $$\alpha^{-1}(0)=137.035999177.$$
 
 The fine-structure constant is therefore not an isolated entry from a constants table. It is the
-low-energy endpoint of the same branch that produces the \(W\) and \(Z\) rows.
+low-energy endpoint of the same branch that produces the $W$ and $Z$ rows.
 
 The strong force coupling runs the opposite way. At low energies, it's strong (hence the name). At high energies, it weakens. This is "asymptotic freedom," discovered by Gross, Wilczek, and Politzer in 1973.
 
@@ -555,34 +555,16 @@ For the book, the picture is this:
 
 | Sector | What the framework fixes | What remains open |
 |---|---|---|
-| Gauge structure | The realized branch fixes \(SU(3)\times SU(2)\times U(1)/\mathbb Z_6\), the exact hypercharge lattice, and the counting chain \(N_g=3\), \(N_c=3\) | Bound-state spectroscopy is a separate layer |
+| Gauge structure | The realized branch fixes the Standard Model quotient, the exact hypercharge lattice, and the generation/color counting | Bound-state spectroscopy is a separate layer |
 | Structural carriers | Photon, gluons, and graviton are forced to be massless | Nothing additional is needed at that structural level |
-| Electroweak bosons | The electroweak calibration branch fixes \(M_W = 80.377\) GeV and \(M_Z = 91.18797809193725\) GeV | Their relation to strongly coupled bound states is a separate problem |
-| Electromagnetic coupling | The same transport family gives the Thomson-limit value \(\alpha^{-1}(0)=137.035999177\) | The full ultraviolet running story belongs to the broader calibration package |
-| Higgs and top | The same calibration branch gives \(m_H = 125.1995304097179\) GeV and a companion top value \(m_t = 172.3523553288312\) GeV | Connecting that top value to the direct experimental extraction requires extra work |
+| Electroweak sector | One electroweak transport family fixes the weak-boson pair and the Thomson-limit electromagnetic coupling | The full ultraviolet running story belongs to the broader calibration package |
+| Higgs and top | One electroweak calibration surface fixes a Higgs value and its companion top value | Connecting that top value to the direct experimental extraction requires extra work |
 | Charged leptons | The family structure is fixed and the remaining freedom is isolated to one overall anchor | One absolute mass-setting input is missing |
-| Quarks | The six running quark masses and corresponding Yukawa data are fixed in the model's physical quark basis: \((0.00216, 0.00470, 0.0935, 1.273, 4.183, 172.3523553288311)\) GeV | A fuller basis-independent closure remains open |
+| Quarks | The six running quark masses and corresponding Yukawa data are fixed in the model's physical quark basis | A fuller basis-independent closure remains open |
 | Neutrinos | One neutrino branch gives definite masses and Majorana phases | Stronger closure beyond that branch remains open |
 | Hadrons | Composite hadron masses are outside the closed package | Bound-state strong dynamics still have to be solved |
 
-That is enough to tell a clear story without pretending every particle sits at exactly the same stage of completion.
-
-Several numerical outputs deserve to be stated plainly. On the electroweak calibration branch, the Higgs comes out at
-
-$$m_H = 125.1995304097179\,\mathrm{GeV}$$
-
-with a companion top value
-
-$$m_t = 172.3523553288312\,\mathrm{GeV}.$$
-
-The quark package is also stated explicitly in the book-level particle story. In the model's physical quark basis, the running masses are
-
-$$
-(m_u,m_d,m_s,m_c,m_b,m_t) =
-(0.00216,\ 0.00470,\ 0.0935,\ 1.273,\ 4.183,\ 172.3523553288311)\,\mathrm{GeV}.
-$$
-
-These are not hadron masses. They are the running quark masses emitted by the framework in that basis.
+The detailed numerical rows belong to the calibration story just below.
 
 ### How the Concrete Particle Rows Arise
 
@@ -591,7 +573,7 @@ physicist actually cares about.
 
 The first step is structural. Chapter 15 supplies Lorentz kinematics, so stable excitations sort
 themselves by the usual representation labels: mass, spin, and helicity. This chapter supplies the
-realized gauge quotient, the hypercharge lattice, and the counting chain \(N_g=3\), \(N_c=3\).
+realized gauge quotient, the hypercharge lattice, and the counting chain $N_g=3$, $N_c=3$.
 That decides which charged excitations can exist and how they transform.
 
 The second step is redundancy. The photon, gluons, and graviton sit on symmetry-protected zero
@@ -601,13 +583,13 @@ closing consistently.
 
 The third step is the shared local calibration. Structural arguments tell you
 what kind of particle family can exist. They do not, by themselves, tell you
-the numerical value of the pixel scale \(P\). The local quantitative branch
+the numerical value of the pixel scale $P$. The local quantitative branch
 therefore has to be calibrated.
 
 In reader-facing terms, the cleanest way to think about that calibration is this. The
 electroweak sector gives a small trusted family of observables with little
-hadronic ambiguity. Use the \(W\) and \(Z\) masses to pin down \(P\), then
-ask whether the same \(P\) forces the rest of the local particle story. If
+hadronic ambiguity. Use the $W$ and $Z$ masses to pin down $P$, then
+ask whether the same $P$ forces the rest of the local particle story. If
 the answer is yes, the framework is reverse engineering one machine with one
 shared knob across sectors.
 
@@ -711,7 +693,7 @@ Not directly, and for good reason. The proton mass is a qualitatively different 
 
 The photon and graviton masses are symmetry-protected zeros. Their values are fixed by the algebraic structure of the theory-any deviation would break a required redundancy. The argument is exact and does not depend on knowing coupling constants or solving difficult equations.
 
-Not all mass claims have the same character. The cleanest results are the symmetry-protected zeros: photon, gluons, and graviton. The next easiest are masses tied closely to electroweak structure, such as the \(W\) and \(Z\). The Higgs and top are calibrated together on one electroweak branch. The neutrino result comes from a separate branch with explicit masses and phases. The quark result gives running masses and Yukawas in the model's physical quark basis. Hadrons are hardest because they require solving the full strongly coupled dynamics of bound states.
+Not all mass claims have the same character. The cleanest results are the symmetry-protected zeros: photon, gluons, and graviton. The next easiest are masses tied closely to electroweak structure, such as the $W$ and $Z$. The Higgs and top are calibrated together on one electroweak branch. The neutrino result comes from a separate branch with explicit masses and phases. The quark result gives running masses and Yukawas in the model's physical quark basis. Hadrons are hardest because they require solving the full strongly coupled dynamics of bound states.
 
 The proton mass is a bound-state eigenvalue in a strongly coupled gauge theory. The proton is made of three quarks held together by gluons, and its mass emerges from the complicated nonperturbative dynamics of quantum chromodynamics. The dominant contribution comes from the energy stored in the gluon field and the kinetic energy of the quarks bouncing around inside. The constituent quark masses sum to only about 10 MeV.
 
@@ -786,7 +768,7 @@ Let's step back and see what the framework actually accounts for.
 
 **The zeros.** The photon and graviton masses are exactly zero. This is a symmetry-protected prediction. The photon's masslessness follows from U(1) gauge invariance being a genuine overlap redundancy; any mass would break the consistency of how charged patches glue together. Similarly, the graviton's masslessness follows from diffeomorphism invariance being the redundancy structure of bulk spacetime. Experimental and observational upper bounds are consistent with these predictions to extraordinary precision: the photon mass is constrained below ~10⁻¹⁸ eV, often summarized as ~27 orders of magnitude, and the graviton mass is constrained below ~10⁻²³ eV by gravitational-wave dispersion, often summarized as ~22 orders of magnitude.
 
-**The particle story.** Beyond the massless carriers, the framework reaches a readable particle package. It fixes the \(W\) and \(Z\) at \(80.377\) GeV and \(91.18797809193725\) GeV, matches the Thomson-limit fine-structure constant \(\alpha^{-1}(0)=137.035999177\), gives the Higgs value \(125.1995304097179\) GeV together with the companion top value \(172.3523553288312\) GeV, fixes the six-quark running-mass package \((0.00216, 0.00470, 0.0935, 1.273, 4.183, 172.3523553288311)\) GeV with corresponding Yukawas in the model's physical quark basis, and specifies a neutrino family with masses \((0.017454720257976796, 0.019481987935919015, 0.05307522145074924)\,\mathrm{eV}\) together with definite Majorana phases. Charged leptons need one absolute mass-setting input. Hadrons remain outside the closed package because strong-coupling bound states are harder.
+**The particle story.** Section 14.14 gives the concrete package. The framework fixes the massless carriers, the weak-boson pair, the Thomson-limit electromagnetic coupling, a Higgs/top calibration, a six-quark running-mass package with Yukawas, and one neutrino branch with definite masses and Majorana phases. Charged leptons need one absolute anchor. Hadrons remain outside the closed package because strong-coupling bound states are harder.
 
 The reason these numbers belong in one chapter is that the framework is trying to organize them with one local calibration story. The same input that sets the electroweak scale also feeds the low-energy electromagnetic coupling and the effective gravitational coupling. The reader does not need every intermediate symbol to see the point. The point is that OPH is attempting to tie electroweak masses, the Higgs/top calibration, electromagnetism at low energy, and Newton's constant to one common structure instead of treating them as unrelated constants.
 
@@ -804,7 +786,7 @@ The photon and graviton are particles the theory *forces* upon us on the stated 
 
 The quarks and leptons aren't arbitrary. Their charges are fixed by the realized gauge-consistency package. On the realized MAR-admissible branch, three generations and three colors are not inserted by hand; they are the smallest answer that survives the combined demands of chirality, CP violation, anomaly cancellation, and ultraviolet consistency.
 
-That is a remarkably concrete result. The framework points to a specific gauge structure, charge pattern, generation count, and color count. It also reaches the massless carriers, the \(W\) and \(Z\), a calibrated Higgs/top sector, a neutrino family, and a running quark package. The main open edge sits in the charged-lepton anchor, fuller quark closure beyond the chosen physical basis, and strongly coupled bound states.
+That is a remarkably concrete result. The framework points to a specific gauge structure, charge pattern, generation count, and color count. It also reaches the massless carriers, the $W$ and $Z$, a calibrated Higgs/top sector, a neutrino family, and a running quark package. The main open edge sits in the charged-lepton anchor, fuller quark closure beyond the chosen physical basis, and strongly coupled bound states.
 
 This chapter has shown how particles emerge from the screen as stable patterns that transform under emergent symmetries. The natural sequel is spacetime itself. If the particle inventory is fixed by consistency, can geometry be fixed the same way?
 

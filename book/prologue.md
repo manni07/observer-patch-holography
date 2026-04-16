@@ -6,8 +6,6 @@
 > There are only local, subjective perspectives, and physics is the rulebook that keeps them consistent where they overlap.
 > If you are not a physicist, you are in the right place; this book is written as a reverse-engineering story, not a math-first textbook.
 
-This book is for readers. The compact paper states the tight technical boundary. The companion papers carry the heavier machinery for particles, consensus dynamics, and screen microphysics. The job here is different. The book shows how the clues fit together, why the mathematics points in one direction, and how the separate results add up to one picture.
-
 Whether your interest begins with **simulation theory** or with the hope of a **theory of everything**, this book gives the long-form OPH answer. OPH is presented here as a concrete observer-consistent information architecture. Quantum mechanics, relativity, gauge structure, and particle physics appear as effective descriptions of deeper overlap-consistency rules. The strange-loop material is kept where it belongs: as interpretation outside the recovered core.
 
 ## The Cosmic Program
@@ -155,10 +153,6 @@ The math we've developed over centuries stays in place. Quantum mechanics
 works. Relativity works. OPH reads them as consistency conditions that
 observers must satisfy to share a reality.
 
-## Reading Rule
-
-This book is the narrative layer of OPH. The compact paper and companion papers state the technical claim boundaries precisely. [*Observers Are All You Need*](https://wkaxfdgxoqmghwgshymt.supabase.co/storage/v1/object/public/papers/observers_are_all_you_need.pdf) and this book do something else: they show the overall shape of the argument and keep the reader moving through it.
-
 ## What This Book Does
 
 This book reverse engineers reality from first principles.
@@ -166,20 +160,20 @@ This book reverse engineers reality from first principles.
 We start with a minimal assumption: observers exist, they have bounded
 access to information, and they must agree where their observations overlap.
 
-The framework needs only two numerical inputs from experiment: the size of a single "pixel" on the holographic screen, in Planck units, and the total screen capacity inferred from the cosmological constant. From there, the aim is to recover gravity, gauge structure, and the particle story from observer consistency instead of putting them in by hand. On the reader-facing claim boundary of the book, the framework reaches a conditional gravity branch, the Standard Model gauge structure, three generations, three colors, massless photon/gluons/graviton, the \(W\) and \(Z\), a calibrated Higgs/top sector, a running quark package, and a neutrino branch with definite masses. Charged leptons and hadrons remain the main open edges.
+The framework needs only two numerical inputs from experiment: the size of a single "pixel" on the holographic screen, in Planck units, and the total screen capacity inferred from the cosmological constant. From there, the book asks how much of gravity, gauge structure, and the particle story can be recovered from observer consistency. The resulting picture contains a conditional gravity branch, the Standard Model gauge structure, three generations, three colors, massless photon/gluons/graviton, the $W$ and $Z$, a calibrated Higgs/top sector, a running quark package, and a neutrino branch with definite masses. Charged leptons and hadrons remain the main open edges.
 
 This is where the reverse-engineering method matters. A good reverse engineer
 separates architecture from calibration. First you infer the structure the
 system must have. Then you identify the small number of external knobs that
 the structure itself does not fix. In OPH, the main local knob is the pixel
-scale \(P=a_{\mathrm{cell}}/\ell_P^2\). The axioms determine a great deal
+scale $P=a_{\mathrm{cell}}/\ell_P^2$. The axioms determine a great deal
 about the shape of the theory, but they do not determine that number by pure
 logic alone. The book's quantitative question is therefore sharp: if you pin
-down \(P\) on one clean electroweak anchor, does that same \(P\) also drive
+down $P$ on one clean electroweak anchor, does that same $P$ also drive
 the rest of the particle package?
 
 The practical calibration move is simple to state. Use the clean electroweak
-surface, align \(P\) with the \(W/Z\) masses, and then ask whether the same
+surface, align $P$ with the $W/Z$ masses, and then ask whether the same
 value propagates through the fine-structure constant, the Higgs/top sector,
 the quark package, and the gravity-facing readout. If that works, the theory
 is doing real reverse engineering. If each sector needs its own private dial,

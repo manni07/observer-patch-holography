@@ -80,67 +80,29 @@ In AdS_3, the minimal "surface" is a geodesic-a shortest path through the bulk. 
 
 ## 9.4 Bell's Theorem: The Reality of Entanglement
 
-The story of entanglement begins as a fight about the nature of reality.
+Entanglement is not a decorative idea. Bell experiments force it on us.
 
-### The EPR Paper
+For suitable two-wing experiments, any local hidden-variable account obeys
 
-In May 1935, Einstein, Podolsky, and Rosen published a thought experiment designed to show quantum mechanics was incomplete.
+$$|S| \leq 2.$$
 
-Take two particles created together and let them fly apart. Quantum mechanics says they can be correlated in a special way: if you measure particle A and find it has spin-up, you instantly know particle B has spin-down. This holds even if the particles are light-years apart.
+Quantum mechanics allows a stronger pattern and reaches the Tsirelson limit
 
-But according to quantum mechanics, the particles don't have definite spins until measured. Does measuring particle A somehow instantly affect particle B? That would require faster-than-light influence-what Einstein called "spooky action at a distance."
+$$|S| \leq 2\sqrt{2}.$$
 
-Einstein concluded the particles must have had definite spins all along-"hidden variables" beneath the quantum description.
+That stronger pattern has been observed. The 2015 loophole-free Bell tests closed the major loopholes at the same time and ruled out the simple local hidden-variable stories Einstein hoped would survive.
 
-### Bell's Breakthrough
+The Bell pair makes the structure vivid:
 
-In 1964, John Bell proved that Einstein's intuition is tested. If particles have hidden variables, the correlations must satisfy certain constraints-the **Bell inequality**:
+$$|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle).$$
 
-$$|S| \leq 2$$
+The total state is pure, while each qubit by itself is maximally mixed:
 
-Quantum mechanics violates it:
+$$\rho_A = \frac{1}{2}|0\rangle\langle0| + \frac{1}{2}|1\rangle\langle1|.$$
 
-$$S = 2\sqrt{2} \approx 2.83$$
+The whole is ordered in a way the parts are not. That is the operational signature of entanglement.
 
-A 41% violation. Decisively testable.
-
-The symbol \(S\) is a specific combination of correlation measurements taken with different detector settings on the two sides. Classical hidden-variable stories cap that combination at 2 because one shared instruction sheet has to service every setting at once. Quantum mechanics escapes that cap because the correlation structure is not classical bookkeeping.
-
-### The Bell State
-
-The simplest entangled state is the Bell pair:
-
-$$|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)$$
-
-The total state is **pure**-it has zero entropy. But each piece is maximally mixed:
-
-$$\rho_A = \frac{1}{2}|0\rangle\langle0| + \frac{1}{2}|1\rangle\langle1|$$
-
-This is the signature of entanglement: **the whole can be pure while the parts are mixed**.
-
-### Experimental Confirmation
-
-The **2015 loophole-free Bell tests** closed the main locality and detection loopholes simultaneously while strongly constraining remaining loophole worries. The result: suitable entangled experiments violate Bell inequalities, ruling out simple local hidden-variable accounts.
-
-OPH does not replace this Bell story with a new one. It keeps the standard quantum structure. In the fixed-cutoff measurement setting used in the book, the framework preserves the Born rule, respects no-signaling, and reproduces the ordinary Tsirelson limit. The maximal value \(2\sqrt{2}\) appears in the explicit Bell-pair setup. So the book's claim is narrower and clearer: overlap consistency fits quantum Bell correlations naturally, while classical hidden variables do not.
-
-Entanglement is real and irreducible. The correlations are stronger than any classical mechanism can produce, yet still cannot transmit information faster than light.
-
-That point matters for the whole project. Entanglement is experimentally compulsory structure. Any story about observer agreement has to inherit it rather than explain it away.
-
-### Why Quantum? The Tsirelson Bound
-
-Bell showed that classical correlations are bounded. But why doesn't nature allow even stronger correlations?
-
-Imagine "super-quantum" correlations that saturate the algebraic maximum of S = 4. Even if they still obey no-signaling, they would trivialize tasks like communication complexity and sit uneasily with the information-processing structure of ordinary quantum theory.
-
-The Tsirelson bound \(S = 2\sqrt{2}\) is the maximum allowed by quantum mechanics. It's strong enough to violate classical limits while still fitting the specific information-processing structure of ordinary quantum theory.
-
-This suggests a deep connection: **quantum correlations are closely tied to the consistency structure we observe**. Classical correlations are too weak for the full quantum phenomena we measure, while super-quantum options overshoot the ordinary quantum-information structure. Quantum appears to sit at a particularly important sweet spot.
-
-In OPH, this connects to overlap consistency. When patches on the S^2 screen overlap, observers must agree on shared observables. The program argues that the needed correlation structure lines up with quantum mechanics rather than with classical or stronger no-signaling alternatives.
-
-Classical correlations are too weak, while super-quantum ones overshoot the ordinary consistency structure. Quantum mechanics is the consistency sweet spot emphasized in this chapter.
+Chapter 6 gives the overlap-consistency reading of Bell correlations. The lesson needed here is narrower. Space cannot be built out of classical bookkeeping alone. The vacuum correlations used in this chapter belong to the same experimentally compulsory quantum structure.
 
 ## 9.5 ER = EPR: Wormholes Are Entanglement
 
@@ -236,7 +198,7 @@ In AdS/CFT and related semiclassical holographic models, there is a striking lat
 
 In those models, the island formula reproduces the Page curve and shows how the radiation can encode information that semiclassical bulk reasoning seemed to lose.
 
-This is important evidence for holographic encoding. But it is not, by itself, an OPH theorem. In OPH, the theorem-level black-hole claim is narrower: edge-center structure blocks naive inside/outside factorization, and small-CMI recoverability supports encoded interior data rather than an independent interior tensor factor. A full Page-curve or island derivation is not part of the proved OPH core.
+This is important evidence for holographic encoding. But it is not, by itself, an OPH theorem. In OPH, the theorem-level black-hole claim is narrower: edge-center structure blocks naive inside/outside factorization, and small-CMI recoverability supports encoded interior data without introducing an independent interior tensor factor. A full Page-curve or island derivation is not part of the proved OPH core.
 
 That distinction matters for the reader. The book relies on the encoding lesson: interior information can be stored nonlocally and recovered in the right regime. It does not rely on claiming that every step of black-hole evaporation has been solved inside OPH. The encoded-interior idea belongs to the core story. The full late-time evaporation story still sits beyond it.
 
@@ -290,7 +252,7 @@ Space is not a passive backdrop. Quantum theory reveals a vacuum knit together b
 
 2. **Bell's theorem**: Entanglement is real and irreducible. No hidden variables can explain quantum correlations.
 
-3. **Area law**: Many low-energy states show entanglement entropy scaling with boundary area rather than volume-a major structural clue behind holography.
+3. **Area law**: Many low-energy states show entanglement entropy scaling with boundary area instead of volume, a major structural clue behind holography.
 
 4. **Ryu-Takayanagi**: In holographic settings, entanglement entropy is given by minimal/extremal surface area divided by 4G. Geometry encodes entanglement.
 

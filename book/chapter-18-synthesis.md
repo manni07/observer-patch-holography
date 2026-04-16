@@ -118,7 +118,7 @@ Returning to the broader observer-first OPH framework, the rest of this chapter 
 
 - **Relativity**: There's no absolute time or space because there's no absolute perspective. Each observer has their own time (modular flow). On the extracted prime geometric subnet, overlap consistency plus geometric cap modular flow yields Lorentz kinematics.
 
-- **Bell nonlocality**: Quantum correlations exceed classical bounds because reality isn't a pre-existing thing that observers passively discover. On the fixed-cutoff microphysics surface, the Bell package is explicit: the compare slice carries the joint Born law, the local marginals do not depend on the remote setting, and the CHSH value stays below the Tsirelson bound on the stated two-wing source branch. Exact \(2\sqrt{2}\) saturation is fixed only on an explicit two-qubit Bell-pair branch. The correlations aren't "transmitted" through space; they're established through the consistency requirements of overlapping patches.
+- **Bell nonlocality**: Quantum correlations exceed classical bounds because reality isn't a pre-existing thing that observers passively discover. On the fixed-cutoff microphysics surface, the Bell package is explicit: the compare slice carries the joint Born law, the local marginals do not depend on the remote setting, and the CHSH value stays below the Tsirelson bound on the stated two-wing source branch. Exact $2\sqrt{2}$ saturation is fixed only on an explicit two-qubit Bell-pair branch. The correlations aren't "transmitted" through space; they're established through the consistency requirements of overlapping patches.
 
 - **The hard problem of consciousness**: Subjective experience isn't mysteriously added to an objective world. Subjectivity is primary. The "hard problem" dissolves; it only seems hard if you assume objective reality comes first and then try to fit experience into it.
 
@@ -160,7 +160,7 @@ The OPH papers organize the foundation in three layers: five core axioms, two ex
 
 ### Axiom 1: Screen Net
 
-Physical data is organized on a horizon screen. Each connected patch \(P \subset S^2\) carries an algebra of observables \(A(P)\):
+Physical data is organized on a horizon screen. Each connected patch $P \subset S^2$ carries an algebra of observables $A(P)$:
 
 $$P \subset Q \implies A(P) \subset A(Q)$$
 
@@ -197,7 +197,7 @@ The five axioms are the foundation. Specific theorem branches use extra inputs, 
 1. **Lorentz branch**: a smooth scaling regime in which cap modular flow becomes genuinely geometric.
 2. **Einstein branch**: a bridge from modular energy to ordinary stress-energy together with the stationarity assumption used in entanglement equilibrium.
 3. **Gauge branch**: transportable charge sectors and enough reconstruction machinery to recover a compact gauge group.
-4. **Configuration inputs**: the pixel area \(P\) and screen capacity \(N_{\mathrm{scr}}\), which set quantitative scales but are not axioms.
+4. **Configuration inputs**: the pixel area $P$ and screen capacity $N_{\mathrm{scr}}$, which set quantitative scales but are not axioms.
 
 Under that fuller ledger, Lorentz kinematics is recovered in the scaling regime, Einstein's equation follows on the thermodynamic gravity branch, and the Standard Model quotient emerges on the gauge branch. Some technical scaffolding remains visible in each derivation, but the reader-facing picture is the simpler one summarized below.
 
@@ -262,60 +262,26 @@ alone. The pixel area is therefore a calibrated input.
 
 The clean reader-facing picture is this. The electroweak branch gives a small
 family of observables that are sharp enough to serve as a local anchor. Use
-the \(W\) and \(Z\) masses to infer the value of \(P\). Then demand that the
-same \(P\) propagate through the low-energy electromagnetic coupling, the
+the $W$ and $Z$ masses to infer the value of $P$. Then demand that the
+same $P$ propagate through the low-energy electromagnetic coupling, the
 Higgs/top sector, the quark package, and the gravity-facing readout. That is
 the test. One shared input should organize many outputs.
 
 If different observables implied different pixel scales, the reverse
-engineering attempt would fail. A single-\(P\) closure means the same local
+engineering attempt would fail. A single-$P$ closure means the same local
 resolution scale keeps reappearing when the theory is read through different
 quantities.
 
 ![The Pixel Constant](../assets/pixel-constant.svg)
 
-That same local calibration story organizes the main numerical claims. In plain language, one local input sets the electroweak scale, the low-energy electromagnetic coupling, and the effective gravitational coupling. The representative outputs used throughout the book are:
-
-| Quantity | Book value | Meaning |
-| --- | --- | --- |
-| `c` | `299792458 m/s` | the emergent causal speed displayed in SI units |
-| `G` | `6.674299995910528e-11 m^3 kg^-1 s^-2` | the gravitational coupling read out from the same local calibration |
-| `W` | `80.377 GeV` | the electroweak \(W\)-boson mass |
-| `Z` | `91.18797809193725 GeV` | the electroweak \(Z\)-boson mass |
-| `alpha^-1(0)` | `137.035999177` | the low-energy electromagnetic coupling |
-| `H` | `125.1995304097179 GeV` | the Higgs value on the electroweak calibration branch |
+That same local calibration story organizes the main numerical claims. In plain language, one local input sets the electroweak scale, the low-energy electromagnetic coupling, and the effective gravitational coupling.
 
 ![OPH unification diagram](../assets/OPH_Unification_Diagram.svg)
 
 This is the reverse-engineering wager in one sentence: calibrate one local
 resolution scale, then see how much of known physics falls out of it.
 
-Two particle highlights deserve to be visible here as well. The electroweak calibration branch gives
-
-$$
-(m_H,m_t)=(125.1995304097179,\ 172.3523553288312)\,\mathrm{GeV}.
-$$
-
-The quark package is stated just as explicitly in the model's physical quark basis:
-
-$$
-(m_u,m_d,m_s,m_c,m_b,m_t)=
-(0.00216,\ 0.00470,\ 0.0935,\ 1.273,\ 4.183,\ 172.3523553288311)\,\mathrm{GeV}.
-$$
-
-For the reader, those are headline outputs. The Higgs value is not a hand-set input, and the quark package is not left as a vague hierarchy claim.
-
-The closed surface is wider than two showpiece numbers. The same reader-facing
-package fixes \(M_W=80.377\) GeV, \(M_Z=91.18797809193725\) GeV, and the
-Thomson-limit coupling \(\alpha^{-1}(0)=137.035999177\). It also fixes exact
-zeros for the photon, gluons, and graviton, and it carries one neutrino family
-with masses \((0.017454720257976796,\ 0.019481987935919015,\
-0.05307522145074924)\,\mathrm{eV}\) together with definite Majorana phases.
-
-Above that numerical layer sits the structural layer: the realized gauge
-quotient \(SU(3)\times SU(2)\times U(1)/\mathbb Z_6\), the exact hypercharge
-lattice, and the counting chain \(N_g=3\), \(N_c=3\). Those results explain
-why the package has the shape it has.
+Chapters 14 and 16 give the detailed particle rows. The synthesis point is the shared calibration story itself. The same local scale organizes the weak-boson pair, the Thomson-limit electromagnetic coupling, the Higgs/top surface, the quark package, and the gravity-facing readout. Above that numerical layer sits the structural layer: the realized gauge quotient $SU(3)\times SU(2)\times U(1)/\mathbb Z_6$, the exact hypercharge lattice, and the counting chain $N_g=3$, $N_c=3$.
 
 ### The Measurement Problem
 
@@ -349,7 +315,7 @@ The cosmology-facing theorem package is conditional. If the MaxEnt constraint fa
 
 ## 18.8 The Claim Boundary
 
-The core picture has definite physical content. The framework recovers the Standard Model gauge group, three generations, three colors, massless photon, gluons, graviton, and the absence of gauge-mediated proton decay. It also carries a reader-facing particle package with clear boundaries: the \(W/Z\) pair, the low-energy fine-structure constant, a Higgs/top calibration, a six-quark running-mass package with Yukawas, and a neutrino branch with definite masses and phases. Charged leptons need one absolute anchor, and hadron masses remain outside the closed package because nonperturbative strong dynamics are harder. On the gravity side, the remaining open edge is the full microscopic completion of the geometric-cap construction.
+The core picture has definite physical content. The framework recovers the Standard Model gauge group, three generations, three colors, massless photon, gluons, graviton, and the absence of gauge-mediated proton decay. It also carries a particle package with clear boundaries: the $W/Z$ pair, the low-energy fine-structure constant, a Higgs/top calibration, a six-quark running-mass package with Yukawas, and a neutrino branch with definite masses and phases. Charged leptons need one absolute anchor, and hadron masses remain outside the closed package because nonperturbative strong dynamics are harder. On the gravity side, the unresolved edge is the full microscopic completion of the geometric-cap construction.
 
 **Numerical checks.** The extraction of gauge couplings from
 edge-sector probabilities has been validated numerically in 2D gauge models.
@@ -437,9 +403,9 @@ For the book, the particle story looks like this:
 | Sector | What the framework fixes | What remains open |
 | --- | --- | --- |
 | Structural carriers | Photon, gluons, and graviton are forced to be massless. | Nothing additional is needed at that structural level. |
-| Electroweak bosons | The \(W\) and \(Z\) masses are fixed on the electroweak calibration branch. | Their relation to bound-state strong dynamics is separate. |
-| Electromagnetic coupling | The same electroweak transport family yields \(\alpha^{-1}(0)=137.035999177\) in the Thomson limit. | The broader ultraviolet running story belongs to the same calibration package. |
-| Higgs and top | The same calibration branch gives \(m_H = 125.1995304097179\) GeV and a companion top value \(m_t = 172.3523553288312\) GeV. | Connecting that top value to the direct experimental extraction requires extra work. |
+| Electroweak bosons | The $W$ and $Z$ masses are fixed on the electroweak calibration branch. | Their relation to bound-state strong dynamics is separate. |
+| Electromagnetic coupling | The same electroweak transport family yields $\alpha^{-1}(0)=137.035999177$ in the Thomson limit. | The broader ultraviolet running story belongs to the same calibration package. |
+| Higgs and top | The same calibration branch gives $m_H = 125.1995304097179$ GeV and a companion top value $m_t = 172.3523553288312$ GeV. | Connecting that top value to the direct experimental extraction requires extra work. |
 | Charged leptons | The family structure is fixed and the remaining freedom is isolated to one overall anchor. | One absolute mass-setting input is missing. |
 | Quarks | The six running quark masses and corresponding Yukawa data are fixed in the model's physical quark basis. | A fuller basis-independent closure remains open. |
 | Neutrinos | One neutrino branch gives definite masses and Majorana phases. | Stronger closure beyond that branch remains open. |

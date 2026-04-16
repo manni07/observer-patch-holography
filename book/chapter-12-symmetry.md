@@ -58,7 +58,7 @@ Conservation laws are the simplest form of this agreement. If I measure total en
 
 ## 12.4 Why Symmetry Lives on the Screen
 
-Our fundamental object is the holographic screen \(S^2\). The screen is a sphere. Therefore, the natural symmetry group is **SO(3)**.
+Our fundamental object is the holographic screen $S^2$. The screen is a sphere. Therefore, the natural symmetry group is **SO(3)**.
 
 This has immediate consequences. Whatever physics lives on the screen must organize itself into **representations** of SO(3)-ways that fields can transform under rotations.
 
@@ -125,13 +125,13 @@ $$G_{SM} = SU(3) \times SU(2) \times U(1)$$
 
 Where do these internal symmetries come from?
 
-This list is easy to memorize and easy to treat as a curiosity. It helps to slow down and say what it is doing. \(SU(3)\) keeps track of the color bookkeeping that confines quarks. \(SU(2)\) groups left-handed weak partners into doublets. \(U(1)\) carries the leftover charge assignment that survives symmetry breaking and becomes ordinary electromagnetism. The real question of the chapter is why nature settles on exactly this trio instead of some nearby alternative.
+This list is easy to memorize and easy to treat as a curiosity. It helps to slow down and say what it is doing. $SU(3)$ keeps track of the color bookkeeping that confines quarks. $SU(2)$ groups left-handed weak partners into doublets. $U(1)$ carries the leftover charge assignment that survives symmetry breaking and becomes ordinary electromagnetism. The real question of the chapter is why nature settles on exactly this trio instead of some nearby alternative.
 
 For a reader meeting these groups for the first time, the useful picture is practical. They are the accounting systems that specify which transformations count as physically equivalent in the strong, weak, and electromagnetic sectors. The later Standard Model chapter asks why this accounting package is so specific.
 
 ### Extra Dimensions
 
-Maybe the screen is \(S^2 \times K\), where K is a tiny internal manifold.
+Maybe the screen is $S^2 \times K$, where K is a tiny internal manifold.
 
 If K is a circle, you get U(1). If K is more complex (like a Calabi-Yau space), you can get non-Abelian groups like SU(3).
 
