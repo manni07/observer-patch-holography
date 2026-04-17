@@ -132,7 +132,7 @@ Particle status surfaces for this repo live in [code/particles/RESULTS_STATUS.md
 ## Repository Guide
 
 - **[`paper/`](paper):** PDFs, LaTeX sources, and release metadata.
-- **[`book/`](book):** OPH Book source.
+- **[`book/`](book):** OPH Book source. Print-PDF build notes live in [`book/README.md`](book/README.md).
 - **[`code/`](code):** computational material, particle outputs, and experiments.
 - **[`assets/`](assets):** public diagrams and figures.
 - **[`extra/`](extra):** maintained public notes such as objections, experimental write-ups, and selected supporting essays.
