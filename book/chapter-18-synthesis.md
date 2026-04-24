@@ -210,7 +210,7 @@ Under the full ledger above, the model yields:
 3. **The Standard Model gauge group** $SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$, reconstructed from the transportable bosonic edge-sector package, with MAR selecting the realized branch
 4. **Three generations, three colors**: fixed by anomaly cancellation together with MAR
 5. **Massless gauge bosons and graviton**: forced by emergent gauge and diffeomorphism invariance, which forbid mass terms
-6. **A particle sector with clear landmarks**: photon, gluons, graviton, W, and Z are fixed; the framework also carries a calibrated Higgs/top sector, a running quark package, and a neutrino branch with definite masses and phases, while charged leptons and hadrons sit outside theorem-grade closure
+6. **A particle sector with clear landmarks**: photon, gluons, graviton, W, and Z are fixed; the framework also carries a Higgs/top quantitative branch, a running quark package, and a neutrino branch with definite masses and phases, while charged leptons and hadrons sit outside theorem-grade closure
 
 The photon and graviton are forced by the axiom chain. The framework reaches deep into particle physics and goes far beyond a vague gesture in that direction.
 
@@ -237,18 +237,30 @@ Here the Standard Model piece includes the derived gauge group, three generation
 
 This equation states the long-range effective form, not the recovered theorem package. The recovered part is narrower: Einstein's equation on the stated scaling branch together with the Standard Model gauge structure. The higher-dimension operators and the full quantitative closure sit above that boundary.
 
-### Two Fundamental Parameters: The Configuration of Reality
+### One External Parameter and One Self-Consistent Pixel Variable
 
-The quantitative implementation is characterized by exactly **two external continuous configuration inputs**:
+The quantitative implementation is characterized by one external continuous input together with one
+local closure variable:
 
 | Parameter | Value | What It Sets |
 |-----------|-------|--------------|
-| **Pixel area** | $a_{\text{cell}} \approx 1.63 \, \ell_P^2$ | Resolution (Planck scale, $G$, and gauge calibration) |
+| **Pixel area ratio** | $P \equiv a_{\text{cell}}/\ell_P^2$ | Resolution (Planck scale, $G$, and the shared quantitative particle/gravity scale) |
 | **Screen capacity** | $\log(\dim \mathcal{H}) \sim 10^{122}$ | Size (cosmological constant, de Sitter horizon, capacity branch) |
 
-The axiom structure contains no dimensionful constants. It is pure mathematics describing how information organizes on holographic screens. These two parameters are the only "settings" that distinguish our universe from other possible universes running the same axiom structure.
+The axiom structure contains no dimensionful constants. It is pure mathematics describing how
+information organizes on holographic screens. The screen-capacity input is still an external
+setting. The pixel ratio now has a sharper status: historically it was introduced by calibration,
+but the synthesis-level closure proposal tries to derive it by self-consistency.
 
-**Pixel area** determines the resolution of the computation, roughly 1.63 Planck areas per pixel. From this single calibration scale, Newton's gravitational constant and the local mass scale follow. The gauge coupling strengths are also organized through this scale.
+**Pixel area ratio.** The local screen variable is
+
+$$
+P \equiv \frac{a_{\text{cell}}}{\ell_P^2}.
+$$
+
+It sets the local resolution of the computation. Once \(P\) is fixed, Newton's gravitational
+constant, the local mass scale, and the electroweak/electromagnetic branch are all organized
+through that same scale.
 
 The local familiar-unit package is then simple. Once \(P\) is fixed, the single local ruler is
 \(\sqrt{a_{\text{cell}}}\). Lengths are \(\sqrt{a_{\text{cell}}}\) times dimensionless branch
@@ -261,11 +273,9 @@ same energy scale divided by \(k_B\). So \(c\) is a structural output, while \(\
 
 A universe with different configuration parameters would have different absolute scales but the **same structure**: the same gauge groups, the same charge ratios, the same scaling-limit Einstein branch, and the same Standard Model quotient. The configuration parameters are what make our universe *this* universe instead of another one running the same "operating system."
 
-These parameters are external boundary conditions. They are the fundamental "settings" of the computation that is our universe. Asking "why is $a_{\text{cell}} = 1.63 \, \ell_P^2$?" is like asking why a simulation was configured with particular settings. A deeper closure would have to derive those settings or replace them with a sharper structural input.
-
-The reverse-engineering logic is precise here. The structural axioms fix the
-form of the machine. They do not fix this local numerical scale by pure logic
-alone. The pixel area is therefore a calibrated input.
+The older book-level picture treated both quantities as external settings. The newer synthesis twist
+is narrower and more interesting: the screen capacity still enters as an external global input, but
+the pixel ratio can be tied to the inner particle world by one self-consistency equation.
 
 The golden ratio gives the exact self-similar balance point. If we write
 $$x=\frac{S_{\mathrm{gen}}}{S_{\mathrm{bulk}}}=1+\frac{\langle L\rangle}{S_{\mathrm{bulk}}}$$
@@ -273,37 +283,75 @@ and impose exact self-similar balance,
 $$\frac{S_{\mathrm{gen}}}{S_{\mathrm{bulk}}}=\frac{S_{\mathrm{bulk}}}{\langle L\rangle},$$
 then \(x\) satisfies \(x^2-x-1=0\), so the unique positive equilibrium point is
 \(\phi=(1+\sqrt5)/2\). In that precise sense, the golden ratio is the exact
-self-similar balance point. OPH does not place the realized universe at
-exact equilibrium: a universe with durable records, structure, and dynamics
-needs entropy gradients, so the realized branch sits slightly off that balance
-point. The exact numerical value of \(P\) comes from the electroweak
-calibration surface. The reason it sits close to \(\phi\) is structural. Exact
-equilibrium fixes the reference configuration, and the measured pixel input is
-a small equilibrium-breaking detuning away from it. This belongs to the
-quantitative calibration layer, not to the recovered core.
+self-similar balance point. OPH does not place the realized universe at exact
+equilibrium: a universe with durable records, structure, and dynamics needs
+entropy gradients, so the realized branch sits slightly off that balance point.
 
-The clean reader-facing picture is this. The electroweak branch gives a small
-family of observables that are sharp enough to serve as a local anchor. Use
-the $W$ and $Z$ masses to infer the value of $P$. Then demand that the
-same $P$ propagate through the low-energy electromagnetic coupling, the
-Higgs/top sector, the quark package, and the gravity-facing readout. That is
-the test. One shared input should organize many outputs.
+The new closure proposal writes that detuning explicitly as
 
-If different observables implied different pixel scales, the reverse
-engineering attempt would fail. A single-$P$ closure means the same local
-resolution scale keeps reappearing when the theory is read through different
-quantities.
+$$
+\alpha_{\text{ext}}(P) := \frac{P-\phi}{\sqrt{\pi}},
+\qquad\text{so}\qquad
+P = \phi + \alpha_{\text{ext}}(P)\sqrt{\pi}.
+$$
+
+Now run the inner OPH particle chain forward from a trial \(P\):
+
+$$
+P \rightarrow \alpha_U(P) \rightarrow (t_U,t_{\mathrm{tr}})
+\rightarrow (t_2,t_3,v) \rightarrow a_0(P)=\alpha_{\mathrm{em}}^{-1}(m_Z^2;P).
+$$
+
+On the electroweak transport lane, this emits an inner electromagnetic observation scale
+\(\alpha_{\text{in}}(P)\). The closure condition is then
+
+$$
+\alpha_{\text{ext}}(P)=\alpha_{\text{in}}(P),
+$$
+
+or equivalently
+
+$$
+P = \phi + \alpha_{\text{in}}(P)\sqrt{\pi}.
+$$
+
+If we define
+
+$$
+g(P):=\phi+\alpha_{\text{in}}(P)\sqrt{\pi},
+$$
+
+then the problem is literally a fixed-point problem: find the value satisfying \(g(P)=P\).
+
+This is the twist. The same screen cell is described twice:
+
+- from the outside, as one pixel of the simulating screen
+- from the inside, as the smallest electromagnetic observation step available to observers in the simulated world
+
+The fixed point is the value for which those two descriptions agree.
+
+The older calibration story is still useful as historical intuition: use the electroweak branch as
+the cleanest numerical anchor and test whether one shared \(P\) propagates through many outputs.
+But the sharper synthesis reading is now a closure story rather than a pure fit story.
 
 ![The Pixel Constant](../assets/pixel-constant.svg)
 
-That same local calibration structure organizes the main numerical claims. One local input sets the electroweak scale, the low-energy electromagnetic coupling, and the effective gravitational coupling.
+That same local closure structure organizes the main numerical claims. One local input sets the
+electroweak scale, the low-energy electromagnetic coupling, and the effective gravitational
+coupling.
 
 ![OPH unification diagram](../assets/OPH_Unification_Diagram.svg)
 
-This is the reverse-engineering wager in one sentence: calibrate one local
-resolution scale, then see how much of known physics falls out of it.
+This is the reverse-engineering wager in one sentence: close one local
+resolution scale against its own inner observation law, then see how much of known physics falls
+out of it.
 
-Chapters 14 and 16 give the detailed particle rows. The synthesis point is the shared calibration structure itself. The same local scale organizes the weak-boson pair, the Thomson-limit electromagnetic coupling, the Higgs/top surface, the quark package, and the gravity-facing readout. Above that numerical layer sits the structural layer: the realized gauge quotient $SU(3)\times SU(2)\times U(1)/\mathbb Z_6$, the exact hypercharge lattice, and the counting chain $N_g=3$, $N_c=3$.
+Chapters 14 and 16 give the detailed particle rows. The synthesis point is the shared closure
+structure itself. The same local scale organizes the weak-boson pair, the Thomson-limit
+electromagnetic coupling, the Higgs/top surface, the quark package, and the gravity-facing
+readout. Above that numerical layer sits the structural layer: the realized gauge quotient
+$SU(3)\times SU(2)\times U(1)/\mathbb Z_6$, the exact hypercharge lattice, and the counting chain
+$N_g=3$, $N_c=3$.
 
 ### The Measurement Problem
 
@@ -337,7 +385,7 @@ The cosmology-facing theorem package is conditional. If the MaxEnt constraint fa
 
 ## 18.8 The Claim Boundary
 
-The core picture has definite physical content. The framework recovers the Standard Model gauge group, three generations, three colors, massless photon, gluons, graviton, and the absence of gauge-mediated proton decay. It also carries a particle package with clear boundaries: the $W/Z$ pair, the low-energy fine-structure constant, a Higgs/top calibration, a six-quark running-mass package with Yukawas, and a neutrino branch with definite masses and phases. Charged leptons need one absolute anchor, and hadron masses remain outside the closed package because nonperturbative strong dynamics are harder. On the gravity side, the unresolved edge is the full microscopic completion of the geometric-cap construction.
+The core picture has definite physical content. The framework recovers the Standard Model gauge group, three generations, three colors, massless photon, gluons, graviton, and the absence of gauge-mediated proton decay. It also carries a particle package with clear boundaries: the $W/Z$ pair, the low-energy fine-structure constant, a Higgs/top quantitative branch, a six-quark running-mass package with Yukawas, and a neutrino branch with definite masses and phases. Charged leptons need one absolute anchor, and hadron masses remain outside the closed package because nonperturbative strong dynamics are harder. On the gravity side, the unresolved edge is the full microscopic completion of the geometric-cap construction.
 
 **Numerical checks.** The extraction of gauge couplings from
 edge-sector probabilities has been validated numerically in 2D gauge models.
@@ -425,9 +473,9 @@ For the book, the particle sector can be summarized as follows:
 | Sector | What the framework fixes | What the framework does not fix |
 | --- | --- | --- |
 | Structural carriers | Photon, gluons, and graviton are forced to be massless. | Nothing additional is needed at that structural level. |
-| Electroweak bosons | The $W$ and $Z$ masses are fixed on the electroweak calibration branch. | Their relation to bound-state strong dynamics is separate. |
-| Electromagnetic coupling | The same electroweak transport family yields $\alpha^{-1}(0)=137.035999177$ in the Thomson limit. | The broader ultraviolet running structure belongs to the same calibration package. |
-| Higgs and top | The same calibration branch gives $m_H = 125.1995304097179$ GeV and a companion top value $m_t = 172.3523553288312$ GeV. | Connecting that top value to the direct experimental extraction requires extra work. |
+| Electroweak bosons | The $W$ and $Z$ masses are fixed on the electroweak quantitative-closure branch. | Their relation to bound-state strong dynamics is separate. |
+| Electromagnetic coupling | The same electroweak transport family yields $\alpha^{-1}(0)=137.035999177$ in the Thomson limit. | The broader ultraviolet running structure belongs to the same quantitative package. |
+| Higgs and top | The same quantitative branch gives $m_H = 125.1995304097179$ GeV and a companion top value $m_t = 172.3523553288312$ GeV. | Connecting that top value to the direct experimental extraction requires extra work. |
 | Charged leptons | The family geometry, the centered shape, and a same-family exact witness are fixed. | The determinant normalization that would set the public electron, muon, and tau masses is not derived. |
 | Quarks | The six running quark masses and corresponding Yukawa data are fixed in the model's physical quark basis. | A basis-independent classification is not derived. |
 | Neutrinos | One neutrino branch gives definite masses and Majorana phases. | A branch-independent closure is not derived. |
@@ -557,6 +605,13 @@ This section develops a philosophical continuation of the framework: **the stran
 Reality is computational. Within this computation, evolution produces observers. Observers develop understanding, the memetic evolution described in Chapter 17. Eventually, the "simulator meme" emerges: the understanding of reality's computational nature. Armed with this understanding, observers can simulate reality.
 
 But here's the key interpretive move: the simulation doesn't require external hardware. The observers' understanding of reality can be read as part of reality understanding itself. The simulation runs on the same substrate it simulates.
+
+There is now a small quantitative version of that closure higher up in this chapter. The pixel ratio
+\(P\) is fixed by matching an outer screen detuning, \(P-\phi\), to an inner electromagnetic
+observation scale, \(\alpha_{\text{in}}(P)\sqrt{\pi}\), emitted by the same OPH chain. That does
+not prove the full metaphysical strange loop. But it does show, in concrete mathematics, how an
+outer simulator-side variable and an inner simulated-world variable can be tied by one
+self-consistency law.
 
 This creates a strange-loop reading:
 - Reality produces observers

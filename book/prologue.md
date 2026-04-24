@@ -160,24 +160,33 @@ This book reverse engineers reality from first principles.
 We start with a minimal assumption: observers exist, they have bounded
 access to information, and they must agree where their observations overlap.
 
-The framework needs only two numerical inputs from experiment: the size of a single "pixel" on the holographic screen, in Planck units, and the total screen capacity inferred from the cosmological constant. From there, the book asks how much of gravity, gauge structure, and the particle story can be recovered from observer consistency. The resulting picture contains a conditional gravity branch, the Standard Model gauge structure, three generations, three colors, massless photon/gluons/graviton, the $W$ and $Z$, a calibrated Higgs/top sector, a running quark package, and a neutrino branch with definite masses. Charged leptons and hadrons remain the main open edges.
+The framework needs one external quantitative input from experiment, the total screen capacity inferred from the cosmological constant, together with one local pixel variable that the synthesis chapter later tries to close by self-consistency. From there, the book asks how much of gravity, gauge structure, and the particle story can be recovered from observer consistency. The resulting picture contains a conditional gravity branch, the Standard Model gauge structure, three generations, three colors, massless photon/gluons/graviton, the $W$ and $Z$, a Higgs/top quantitative branch, a running quark package, and a neutrino branch with definite masses. Charged leptons and hadrons remain the main open edges.
 
 This is where the reverse-engineering method matters. A good reverse engineer
-separates architecture from calibration. First you infer the structure the
-system must have. Then you identify the small number of external knobs that
-the structure itself does not fix. In OPH, the main local knob is the pixel
-scale $P=a_{\mathrm{cell}}/\ell_P^2$. The axioms determine a great deal
-about the shape of the theory, but they do not determine that number by pure
-logic alone. The book's quantitative question is therefore sharp: if you pin
-down $P$ on one clean electroweak anchor, does that same $P$ also drive
-the rest of the particle package?
+separates architecture from the small quantitative surface that remains after
+the architecture is fixed. First you infer the structure the system must
+have. Then you identify the few external knobs that the structure itself does
+not yet fix. In OPH, the main local knob is the pixel scale
+$P=a_{\mathrm{cell}}/\ell_P^2$. The axioms determine a great deal about the
+shape of the theory, but they do not determine that number on the structural
+core alone. The book's quantitative question is therefore sharp: can that
+same $P$ drive the rest of the particle package, and can it eventually be
+recovered by an outer/inner self-consistency closure rather than left as a
+free dial?
 
-The practical calibration move is simple to state. Use the clean electroweak
+The historical calibration move is simple to state. Use the clean electroweak
 surface, align $P$ with the $W/Z$ masses, and then ask whether the same
 value propagates through the fine-structure constant, the Higgs/top sector,
 the quark package, and the gravity-facing readout. If that works, the theory
 is doing real reverse engineering. If each sector needs its own private dial,
 it is only curve fitting with philosophical decoration.
+
+Later in the synthesis chapter, that historical move gets sharpened into a
+self-reference. The same screen cell is described twice: from the outside as
+one pixel of the simulating screen, and from the inside as the smallest
+electromagnetic observation step available in the simulated world. The newer
+closure proposal asks for the value of $P$ where those two descriptions of
+the same cell agree.
 
 From this starting point, we derive constraints. We show how the mathematical
 structures of quantum mechanics and relativity emerge from consistency

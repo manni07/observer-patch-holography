@@ -17,10 +17,11 @@ Pour le statut théorématique du noyau reconstruit et le niveau de preuve des c
 - Un paquet théorématique à cutoff fixe pour les patches d'observateurs, les collerettes, la réparation de recouvrement, la jauge supérieure, les enregistrements et le checkpoint/restauration.
 - Une voie conditionnelle vers la géométrie lorentzienne, le temps modulaire, la dynamique d'Einstein de type Jacobson et la cosmologie de Sitter en patch statique sur le sous-réseau géométrique premier extrait ; la branche d'Einstein utilise la stationnarité à cap fixe, le pont modulaire sur les surfaces nulles et la branche projective séparée sur intervalles bornés, tandis que le scaffold UV/BW restant est la réalisation de la paire de caps géométriques sur ce sous-réseau puis la rigidité des paires de coupures ordonnées, avec le plancher commun éventuel de transport modulaire sur collerette locale fixe comme plus petit bloqueur inférieur.
 - Une voie conditionnelle de jauge compacte dans la branche bosonique vers le quotient réalisé du Modèle Standard `SU(3) x SU(2) x U(1) / Z_6`, sous les prémisses de reconstruction par secteurs transportables et sous MAR, avec le réseau exact des hypercharges et la chaîne de comptage réalisée `N_g = 3`, `N_c = 3`.
-- Un programme particules avec porteurs structurels exactement sans masse, une branche de calibration électrofaible de Phase II émise vers l'avant avec une surface théorématique publique `W/Z` target-free fermée plus une paire gelée exacte utilisée seulement comme validation compare-only, un théorème exact de séparation Higgs/top à source seule sur la surface électrofaible déclarée de running, matching et seuils avec une tranche inverse exacte Higgs/top gardée comme validation compare-only, une fermeture quark exacte sur classe publique sélectionnée avec Yukawas forward exactes explicites, des surfaces exactes non hadroniques et des voies de continuation explicites aux frontières théorématiques ouvertes.
+- Un programme particules avec porteurs structurels exactement sans masse, une branche électrofaible de fermeture quantitative de Phase II émise vers l'avant avec une surface théorématique publique `W/Z` target-free fermée plus une paire gelée exacte utilisée seulement comme validation compare-only, un théorème exact de séparation Higgs/top à source seule sur la surface électrofaible déclarée de running, matching et seuils avec une tranche inverse exacte Higgs/top gardée comme validation compare-only, une fermeture quark exacte sur classe publique sélectionnée avec Yukawas forward exactes explicites, des surfaces exactes non hadroniques et des voies de continuation explicites aux frontières théorématiques ouvertes.
 - Une architecture microphysique d'écran concrète qui met mesure, enregistrements et observateurs à l'intérieur de la physique.
 
-L'OPH utilise seulement deux entrées calibrées : l'échelle de pixel de l'écran `P = a_cell / l_P^2` et la capacité totale de l'écran `N_scr = log dim H_tot`, déduite de la constante cosmologique. La valeur numérique exacte de `P` provient de la surface de calibration. Sa proximité avec le nombre d'or fait partie de l'explication quantitative. `φ = (1 + sqrt(5)) / 2` est le point exact d'équilibre auto-similaire de la hiérarchie total/bulk/edge, et un univers avec des enregistrements durables, de la structure et de la dynamique doit s'en écarter par un petit décalage brisant cet équilibre. Cela appartient à la couche de calibration de Phase II, non au coeur structurel.
+L'OPH utilise une seule entrée quantitative externe, la capacité totale de l'écran `N_scr = log dim H_tot`, déduite de la constante cosmologique, ainsi qu'un ratio local de pixel `P = a_cell / l_P^2` que le papier de synthèse traite comme une variable de fermeture extérieure/intérieure de Phase II plutôt que comme un bouton ajusté secteur par secteur. Sur cette petite surface quantitative, l'OPH émet des prédictions concrètes pour les couplages, les masses et les grandeurs gravitationnelles.
+Le papier de synthèse reformule `P` comme un problème de point fixe. `φ = (1 + sqrt(5)) / 2` est le point exact d'équilibre auto-similaire de la hiérarchie total/bulk/edge; on peut donc écrire le décalage extérieur sous la forme `α_ext(P) = (P - φ) / sqrt(pi)`, ou encore `P = φ + α_ext(P) sqrt(pi)`. La chaîne D10 intérieure émet l'échelle d'observation électromagnétique correspondante `α_in(P)`, et la fermeture proposée est `α_ext(P) = α_in(P)`, équivalemment `P = φ + α_in(P) sqrt(pi)`. Cela appartient à la couche de fermeture quantitative de Phase II, non au coeur structurel.
 
 ## Surface locale d'unification
 
@@ -52,7 +53,7 @@ respect clair d'une borne supérieure par rapport aux valeurs de référence PDG
 les papiers. Les résultats structurels comme la branche lorentzienne `3+1D`, le quotient de jauge
 du Modèle Standard `SU(3) x SU(2) x U(1) / Z_6`, le réseau exact des hypercharges et la chaîne de
 comptage `N_g = 3`, `N_c = 3` sont énoncés dans les papiers et ne sont pas répétés ici. La voie
-bosonique `W/Z/H` appartient à la branche de calibration de phase II; elle est donc discutée dans
+bosonique `W/Z/H` appartient à la branche de fermeture quantitative de phase II; elle est donc discutée dans
 les papiers mais omise de ce tableau rapide.
 
 | Quantité | Symbole | OPH | PDG/NIST | Δ |
@@ -86,7 +87,7 @@ La surface neutrino publique inclut aussi une paire physique de phases de Majora
 rang théorème sur la branche de transport weighted-cycle en base partagée ; voir
 `code/particles/RESULTS_STATUS.md`.
 
-La surface de calibration électrofaible déclarée porte aussi un théorème exact à source seule pour
+La surface électrofaible déclarée de fermeture quantitative porte aussi un théorème exact à source seule pour
 le Higgs, avec `m_H = 125.1995304097179 GeV`, ainsi qu'une coordonnée compagnon pour le top
 `m_t = 172.3523553288312 GeV` sur la même surface jacobienne.
 À la précision effectivement publiée par le PDG, la ligne Higgs tombe sur la moyenne 2025.

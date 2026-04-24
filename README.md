@@ -16,13 +16,13 @@ For recovered-core theorem status and claim tier, consult **Paper 2. [Recovering
 
 OPH is unusual because it tries to recover the shape of the world before it fits the numbers. At the structural level, it predicts the exact shape of the universe we appear to inhabit: a `3+1D` Lorentzian spacetime, de Sitter static-patch cosmology on the gravity side, and the Standard Model quotient `SU(3) x SU(2) x U(1) / Z_6` with the exact hypercharge lattice and the counting chain `N_g = 3`, `N_c = 3`.
 
-The quantitative side is deliberately small. OPH uses only two calibrated inputs: the screen-pixel scale `P = a_cell / l_P^2` and the total screen capacity `N_scr = log dim H_tot`, inferred from the cosmological constant. From that two-constant surface, OPH makes concrete numerical predictions for couplings, masses, and gravity-facing quantities instead of fitting each sector independently.
-The exact numerical value of `P` comes from the calibration surface. Its proximity to the golden ratio is part of the quantitative explanation. `φ = (1 + sqrt(5)) / 2` is the exact self-similar balance point of the total/bulk/edge hierarchy, and a universe with durable records, structure, and dynamics must sit at a small equilibrium-breaking detuning away from that balance point. This belongs to the Phase II calibration layer, not the structural core.
+The quantitative side is deliberately small. OPH uses one external quantitative input, the total screen capacity `N_scr = log dim H_tot`, inferred from the cosmological constant, together with one local pixel ratio `P = a_cell / l_P^2` that the synthesis paper treats as a Phase II outer/inner closure variable rather than a sector-by-sector fit dial. From that small surface, OPH makes concrete numerical predictions for couplings, masses, and gravity-facing quantities instead of fitting each sector independently.
+The synthesis-paper closure packages `P` as a fixed-point problem. `φ = (1 + sqrt(5)) / 2` is the exact self-similar balance point of the total/bulk/edge hierarchy, so the outer detuning can be written as `α_ext(P) = (P - φ) / sqrt(pi)`, equivalently `P = φ + α_ext(P) sqrt(pi)`. The inner D10 chain emits the corresponding electromagnetic observation scale `α_in(P)`, and the proposed closure is `α_ext(P) = α_in(P)`, equivalently `P = φ + α_in(P) sqrt(pi)`. This belongs to the Phase II quantitative-closure layer, not the structural core.
 
 - A finite-resolution theorem package for observer patches, collars, overlap repair, higher gauge structure, records, and checkpoint/restoration. On the genuinely noncentral branch this already includes the fixed-cutoff crossed-module defect hierarchy; the remaining open item there is the refinement-limit transportable-sector lift into the compact-gauge lane.
 - A conditional route to Lorentzian geometry, modular time, Jacobson-type Einstein dynamics, and de Sitter static-patch cosmology on the extracted prime geometric subnet; local null data fix the Einstein branch only up to a metric term, so the cosmological-capacity lane fixes `Lambda` through the global screen-capacity identification. Local null data alone do not fix it. The Einstein branch uses fixed-cap stationarity, the null-surface bridge, and the separate bounded-interval projective branch. The UV/BW scaffold consists of geometric cap-pair realization on that subnet plus ordered cut-pair rigidity, with the eventual fixed-local-collar modular-transport common floor as the smallest lower blocker.
 - A conditional compact gauge route in the bosonic branch to the realized Standard Model quotient `SU(3) x SU(2) x U(1) / Z_6`, under the transportable-sector reconstruction premises and MAR, together with the exact hypercharge lattice and the realized counting chain `N_g = 3`, `N_c = 3`.
-- A particle program with exact structural massless carriers, a forward-emitted Phase II electroweak calibration branch with a closed target-free public `W/Z` theorem surface plus a compare-only exact frozen pair, an exact source-only Higgs/top split theorem on the declared D10/D11 running, matching, and threshold surface together with a compare-only exact inverse Higgs/top slice, an exact selected-class quark closure with explicit exact forward Yukawas, exact non-hadron mass surfaces, and explicit continuation lanes where theorem boundaries remain open.
+- A particle program with exact structural massless carriers, a forward-emitted Phase II electroweak quantitative-closure branch with a closed target-free public `W/Z` theorem surface plus a compare-only exact frozen pair, an exact source-only Higgs/top split theorem on the declared D10/D11 running, matching, and threshold surface together with a compare-only exact inverse Higgs/top slice, an exact selected-class quark closure with explicit exact forward Yukawas, exact non-hadron mass surfaces, and explicit continuation lanes where theorem boundaries remain open.
 - A concrete screen-microphysics architecture that puts measurement, records, and observers inside the physics.
 
 ### Precise Derivations
@@ -32,7 +32,7 @@ a clean upper-bound success against the PDG/NIST reference values used in the pa
 results such as the `3+1D` Lorentz branch, the Standard Model gauge quotient
 `SU(3) x SU(2) x U(1) / Z_6`, the exact hypercharge lattice, and the counting chain `N_g = 3`,
 `N_c = 3` are stated in the papers and are not repeated here. The `W/Z/H` boson lane sits on the
-Phase II calibration branch, so it is discussed in the papers but omitted from this quick
+Phase II quantitative-closure branch, so it is discussed in the papers but omitted from this quick
 comparison.
 
 | Quantity | Symbol | OPH | PDG/NIST | Δ |
@@ -65,7 +65,7 @@ PDG/NIST one-number comparison row.
 The public neutrino surface also includes theorem-grade physical Majorana phases on the
 shared-basis weighted-cycle transport branch; see `code/particles/RESULTS_STATUS.md`.
 
-The declared electroweak calibration surface also carries an exact source-only Higgs theorem with
+The declared electroweak quantitative-closure surface also carries an exact source-only Higgs theorem with
 `m_H = 125.1995304097179 GeV` and a companion top coordinate
 `m_t = 172.3523553288312 GeV` on the same Jacobian surface.
 At the precision quoted by PDG, the Higgs row lands on the 2025 Higgs average.
@@ -78,7 +78,7 @@ Charged leptons sit on a split claim tier. The repo carries an exact same-family
 
 ## Local Unification Surface
 
-The local unification surface is organized around the calibrated local UV input. The same `P`-driven scale carries the electroweak boson and Higgs lane together with the gravity-side entropy lane, while the Lorentz branch supplies the invariant causal speed and the local familiar-unit package supplies meters, seconds, GeV, and Kelvin. On the stated local extension surface, the lifted product presentation of the realized quotient branch gives `ellbar_shared = ellbar_SU(2) + ellbar_SU(3)`; the same D10 pixel law on that surface fixes `ellbar_shared = P/4`, and the gravity-side emitted row is `G_SI = c^3 a_cell / (hbar P)` relative to the declared microscopic datum `a_cell`.
+The local unification surface is organized around the local pixel ratio `P` on its declared Phase II closure surface. The same `P`-driven scale carries the electroweak boson and Higgs lane together with the gravity-side entropy lane, while the Lorentz branch supplies the invariant causal speed and the local familiar-unit package supplies meters, seconds, GeV, and Kelvin. On the stated local extension surface, the lifted product presentation of the realized quotient branch gives `ellbar_shared = ellbar_SU(2) + ellbar_SU(3)`; the same D10 pixel law on that surface fixes `ellbar_shared = P/4`, and the gravity-side emitted row is `G_SI = c^3 a_cell / (hbar P)` relative to the declared microscopic datum `a_cell`.
 The familiar-unit package on that surface is explicit: `L_loc = sqrt(a_cell) * Lhat(P)`,
 `t_loc = sqrt(a_cell) * That(P) / c`, `E_loc = hbar c * Ehat(P) / sqrt(a_cell)`, and
 `Theta_loc = hbar c * Thetahat(P) / (k_B sqrt(a_cell))`, with dimensionless branch outputs

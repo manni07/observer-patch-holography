@@ -1,6 +1,6 @@
 \section{Recovered Core: Foundations and Structural Branches}\label{observer-patch-holography}
 
-OPH is an observer-centric reconstruction program for fundamental physics. Physical data live on a horizon screen \(S^2\), and reality is encoded by the mutual consistency of overlapping patch descriptions. This paper works with five OPH axioms, two explicit external inputs used only in the quantitative branches, and theorem-local technical premises stated where needed for the scaling, gauge, and transport arguments below.
+OPH is an observer-centric reconstruction program for fundamental physics. Physical data live on a horizon screen \(S^2\), and reality is encoded by the mutual consistency of overlapping patch descriptions. This paper works with five OPH axioms, one explicit external input used only in the cosmological branch, one Phase-II pixel variable fixed on a later outer/inner closure branch, and theorem-local technical premises stated where needed for the scaling, gauge, and transport arguments below.
 
 \subsection{Overview}\label{overview}
 
@@ -22,7 +22,10 @@ patch-net package to the later Lorentz, Einstein, and compact-gauge branches sta
 
 The Lorentz/null-modular/Einstein chain is a scaling-limit statement on the declared recovered-core branch with an explicit D3/D4/D5 burden split: D3 carries \textbf{T2} together with the theorem-local realized transported geometric cap-local system, its derived carried-collar schedule above the transported fixed-local-collar Markov/faithfulness datum, and the later ordered cut-pair rigidity step; on that branch the scaling-limit observer algebra may leave the finite type-I regulator class, so the theorem is automorphism-level there and \(K_C=2\pi B_C\) is only the special type-I limit form; D4 carries theorem-local null-cut center transfer, the extra inherited left/right strip-split condition needed to inherit the spatial-collar-type tensor decomposition, and the exact-or-controlled Markov hypotheses together with the same-half-line local modular-Hamiltonian input and the separate bounded-interval projective branch; and D5 adds fixed-cap stationarity, the locally Lorentzian \(d=4\) scaling regime, and the tensor-upgrade side conditions. The gauge chain stays on the compact paper's D7--D9 surface: D7 reconstructs a compact group only under the explicit loop-coherence criterion \textbf{T1}, symmetric braiding \textbf{T4}, and the transportable refinement-directed sector colimit with faithful bosonic fiber functor supplied by \textbf{T5}--\textbf{T6}; D8 then uses Axiom 5 together with the same ordinary or central-defect bosonic branch, a connected positive-dimensional Lie admissible class, one connected abelian factor, and faithful action on the minimal coupled carrier; D9 stays on the realized one-generation chiral matter plus one Higgs package with asymptotic-freedom and MAR admissibility premises, yielding the realized Standard Model quotient, exact hypercharge lattice, and the counting chain \(N_g=3\) then \(N_c=3\). The worldsheet/string material and the flavor, neutrino, hadron, dark-sector, and spectroscopy branches are kept separate from the recovered core.
 
-Two external continuous inputs appear only where declared. The pixel area \(P \equiv a_{\rm cell}/\ell_P^2\) enters deferred quantitative branches, and the screen capacity \(N_{\mathrm{scr}} \equiv \log \dim \mathcal H_{\mathrm{tot}}\) enters the cosmological-capacity branch. They are implementation inputs, not additional axioms.
+One external continuous input and one Phase-II pixel variable appear only where declared. The
+pixel area \(P \equiv a_{\rm cell}/\ell_P^2\) is fixed on the outer/inner closure branch summarized
+in Section~\ref{sec:p-closure}, and the screen capacity \(N_{\mathrm{scr}} \equiv \log \dim \mathcal
+H_{\mathrm{tot}}\) enters the cosmological-capacity branch. They are not additional axioms.
 
 \subsection{Model and Axioms}\label{1-model-and-axioms}
 
@@ -70,15 +73,20 @@ This paper uses five OPH axioms. The only labeled technical premises used below 
 
 \subsubsection{External inputs and theorem-local technical premises}\label{14-assumptions-and-external-inputs}
 
-The quantitative branches discussed here use exactly two external continuous inputs:
+The quantitative branches discussed here use one Phase-II pixel variable together with one
+external continuous input:
 
 \[
-P \equiv a_{\mathrm{cell}}/\ell_P^2 = 1.63094,
+P \equiv a_{\mathrm{cell}}/\ell_P^2,
 \qquad
 N_{\mathrm{scr}} \equiv \log \dim \mathcal H_{\mathrm{tot}} \sim 10^{122}.
 \]
 
-Here \(P\) and \(N_{\mathrm{scr}}\) are external implementation inputs, not theorem targets. \(P\) fixes the local UV pixel scale used by the deferred forward D10 branch and its descendants, while \(N_{\mathrm{scr}}\) fixes the global screen-capacity scale used by the cosmological-capacity branch. Any retained capacity-level neutrino side estimate on that input is legacy bookkeeping rather than the live weighted-cycle theorem lane. These are implementation inputs. They are not extra axioms.
+Here \(P\) is the local UV-area ratio fixed on the outer/inner closure branch summarized in
+Section~\ref{sec:p-closure}, while \(N_{\mathrm{scr}}\) remains the external screen-capacity input
+used by the cosmological-capacity branch. Any retained capacity-level neutrino side estimate on
+that input is legacy bookkeeping rather than the live weighted-cycle theorem lane. These are
+quantitative-branch quantities, not extra axioms.
 
 Later theorem statements use only the canonical technical-premise labels \textbf{T1}--\textbf{T6}. Fixed-cutoff regulator bookkeeping, quasi-local propagation, endpoint control, collar decomposition, and related branch-internal statements are cited directly from axioms and earlier theorems rather than through a second premise-label system.
 
@@ -3548,7 +3556,7 @@ Node & Representative outputs in this manuscript & Standard mathematics used & E
 \textbf{D7} & Theorem 6.1 compact gauge reconstruction & Doplicher--Roberts / Tannaka reconstruction & bosonic symmetric transportable colimit and fiber-functor premises on the ordinary or central-defect branch; the genuinely noncentral fixed-cutoff branch is handled separately by crossed-module data, and the refinement-stable qualifier is internal to the local finite-constraint MaxEnt/refinement branch & Phase I conditional structural theorem \\
 \textbf{D8} & product gauge structure up to finite quotient under MAR & compact Lie representation classification; Schur's lemma & the same ordinary or central-defect bosonic branch as D7, together with MAR, a connected admissible class, one connected abelian factor, and faithful action on the minimal coupled carrier & Phase I realized-branch theorem \\
 \textbf{D9} & realized \(\SU(3)\times\SU(2)\times\U(1)/\mathbb Z_6\), exact hypercharges, the counting chain \(N_g=3\) then \(N_c=3\), and no gauge-mediated proton decay as a product-group corollary & anomaly algebra; Witten anomaly; CKM CP counting & realized one-generation/one-Higgs package and MAR admissibility premises & Phase I realized-branch theorem/corollary chain \\
-\textbf{D10} & forward gauge-coupling closure and target-free source-only electroweak repair theorem of the D10 calibration branch & RG running and matching conventions & external input \(P\), pixel closure, the source-only forward transmutation solve \(\mathcal F(\alpha_U;P)=0\), the fixed-cutoff edge heat-kernel / Casimir theorem on the microphysics surface together with the compact-group / Peter--Weyl lift, and the printed threshold conventions & Phase II calibration sector \\
+\textbf{D10} & forward gauge-coupling closure and target-free source-only electroweak repair theorem of the D10 quantitative-closure branch & RG running and matching conventions & pixel ratio \(P\), pixel closure, the source-only forward transmutation solve \(\mathcal F(\alpha_U;P)=0\), the fixed-cutoff edge heat-kernel / Casimir theorem on the microphysics surface together with the compact-group / Peter--Weyl lift, and the printed threshold conventions & Phase II quantitative-closure sector \\
 \textbf{D12} & charged-lepton centered-readback / centered-to-affine frontier, textures, dark-sector, baryogenesis, spectroscopy, string/worldsheet, and other downstream continuations & branch-specific EFT and phenomenological manipulations & explicit additional ans\"atze beyond D6, D9, or D10 & Phase III phenomenological continuation / program branch \\
 \end{longtable}
 }
@@ -3561,7 +3569,7 @@ The ledger implies the following reading rules.
 \item
 Phase I, the recovered core carried by this manuscript, is D1--D5 together with D7--D9. These are the structural or realized-branch claims defended at theorem/corollary level once all stated premises are included.
 \item
-Phase II contains the separate input-dependent capacity corollary D6 and the D10 calibration sector. Failure there does not by itself erase Phase I.
+Phase II contains the separate input-dependent capacity corollary D6 and the D10 quantitative-closure branch. Failure there does not by itself erase Phase I.
 \item
 Phase III contains D12 continuations only. Nothing in D12 is theorem-level unless its extra ans\"atze are replaced by proved premises.
 \item \textbf{Existence / strange-loop continuations}: self-simulation or strange-loop closure stories are continuation-level epilogues only. The internally available ingredient is a theorem-usable OPH state-and-law habitat built from overlap-consistent patch states together with finite Axiom-3 law coordinates. The recovered core does \emph{not} derive an existence theorem, an internal closure map on an invariant admissible observer-supporting sector, or any uniqueness/stability result for such a map.
@@ -3715,14 +3723,22 @@ The lane-specific readout boundary above that dictionary is explicit. On the low
 \begin{itemize}
 \item \textbf{Scaling-limit control}: the Lorentz/null-modular/Einstein chain depends on the explicit scaling-limit premises declared earlier in the manuscript; proving or constructing that regime is an open task.
 \item \textbf{Fermionic gauge branch}: the manuscript proves compact gauge reconstruction only in the bosonic internal-gauge branch; a full fermionic/super-Tannakian extension remains open.
-\item \textbf{External inputs}: $P$ and $N_{\mathrm{scr}}$ are not derived in this manuscript. The numerical value of $\Lambda$ is not a local recovered prediction because local null data determine the Einstein equation only up to a metric term $\phi g_{ab}$; fixing $\Lambda$ requires the global capacity input $N_{\mathrm{scr}}$.
-\item \textbf{Calibration sector}: the D10 numerical implementation depends on printed running, matching, and threshold conventions together with the integrated heat-kernel calibration appendices. Its internal transmutation data are fixed forward from the OPH input \(P\) through the source-only pixel-closure solve, not read back from measured low-energy couplings. The displayed carrier closes its own exact \(W/Z\) chart, and the promoted target-free source-only repair theorem emits the public electroweak quintet on the Phase II calibration branch. The freeze-once coherent repair surface is retained only as compare-only validation; on that frozen authoritative surface the canonical \(W/Z\) pair is hit exactly, but it remains below the target-free theorem.
+\item \textbf{External inputs}: \(N_{\mathrm{scr}}\) remains external, and the numerical value of \(\Lambda\) is not a local recovered prediction because local null data determine the Einstein equation only up to a metric term \(\phi g_{ab}\); fixing \(\Lambda\) requires the global capacity input \(N_{\mathrm{scr}}\). The local pixel ratio \(P\) is fixed only on the Phase-II outer/inner closure program summarized in Section~\ref{sec:p-closure}; it is not part of Phase I.
+\item \textbf{Quantitative-closure branch}: the D10 numerical implementation depends on printed running, matching, and threshold conventions together with the integrated heat-kernel quantitative appendices. Its internal transmutation data are fixed forward from the OPH pixel ratio \(P\) through the source-only pixel-closure solve, not read back from measured low-energy couplings. The displayed carrier closes its own exact \(W/Z\) chart, and the promoted target-free source-only repair theorem emits the public electroweak quintet on the Phase II quantitative-closure branch. The freeze-once coherent repair surface is retained only as compare-only validation; on that frozen authoritative surface the canonical \(W/Z\) pair is hit exactly, but it remains below the target-free theorem.
 \item \textbf{Hadron execution boundary}: the hadron lane is not blocked by one small symbolic gap. The next object is one production backend export bundle with publication-complete manifest provenance and real stable-channel correlator arrays; the normalized production dump and then production statistical/systematic control only follow after that bundle lands. Because that remaining nonperturbative execution burden is not a realistic target within the current project compute scope, hadron rows remain outside the declared particle roadmap and outside the derived output surface.
 \end{itemize}
 
-The compact Higgs/top forward seed downstream of the D10 gauge core is a declared calibration-surface theorem on the same D10/D11 running, matching, and threshold surface used by the emitted electroweak carrier. Its one-scalar seed law is \(\sigma_{D11,\mathrm{HT}}=\alpha_U\cos(2\theta_{W0})/\sqrt{\pi}\), and the live forward path satisfies the exact fixed-ray factorization \(\delta y_t/y_t^{\mathrm{core}}=-(9/16)\,\delta\lambda/\lambda^{\mathrm{core}}=\sigma_{D11,\mathrm{HT}}\) on that declared surface. The D11 Jacobian then emits the public forward Higgs/top pair. A separate compare-only inverse slice on the same D11 Jacobian can be solved to hit the canonical Higgs/top reference pair exactly, but that sidecar is not the live forward branch and does not change the theorem status of the public D11 rows.
+The compact Higgs/top forward seed downstream of the D10 gauge core is a declared theorem on the
+same D10/D11 quantitative surface used by the emitted electroweak carrier. Its one-scalar seed law
+is \(\sigma_{D11,\mathrm{HT}}=\alpha_U\cos(2\theta_{W0})/\sqrt{\pi}\), and the live forward path
+satisfies the exact fixed-ray factorization
+\(\delta y_t/y_t^{\mathrm{core}}=-(9/16)\,\delta\lambda/\lambda^{\mathrm{core}}=\sigma_{D11,\mathrm{HT}}\)
+on that declared surface. The D11 Jacobian then emits the public forward Higgs/top pair. A
+separate compare-only inverse slice on the same D11 Jacobian can be solved to hit the canonical
+Higgs/top reference pair exactly, but that sidecar is not the live forward branch and does not
+change the theorem status of the public D11 rows.
 
-Failures localize by tier. A failure in a Phase-III flavor, dark-sector, baryogenesis, spectroscopy, string, strong-CP, proton-spin, or similar continuation retracts that continuation only. A failure in D10 challenges the corresponding calibration sector. Only a failure in Phase I would overturn the recovered-core claim set.
+Failures localize by tier. A failure in a Phase-III flavor, dark-sector, baryogenesis, spectroscopy, string, strong-CP, proton-spin, or similar continuation retracts that continuation only. A failure in D10 challenges the corresponding quantitative-closure branch. Only a failure in Phase I would overturn the recovered-core claim set.
 
 \subsubsection{Comparison with other unification approaches}\label{85-comparison-with-other-unification-approaches}
 
