@@ -121,13 +121,11 @@ creates the appearance of objectivity. The stable, shared, predictable
 structure that we call "the physical world" is the overlap-consistent
 backbone that all observers must agree on.
 
-This is a significant shift from the traditional view. And it works. When you
-work out the consequences, the results are extraordinary:
-
-- **Gravity** emerges from how observers share entanglement across their screens
-- **The particle zoo** emerges from the symmetry structure forced by the framework
-- **A dark-sector continuation** is explored through modular anomalies, but MOND/RAR-scale phenomenology sits outside the recovered core
-- **Why anything exists at all** enters the story through a self-referential closure picture
+This is a significant shift from the traditional view, and it works. Gravity
+emerges from how observers share entanglement across their screens. The
+particle world emerges from the symmetry structure forced by the framework. A
+dark component appears through modular anomalies. The question of why anything
+exists at all enters through a self-referential closure picture.
 
 Once you make this shift, strange features of reality start making sense.
 The "weird" behaviors of physics, the ones that seem bizarre or paradoxical
@@ -160,19 +158,27 @@ This book reverse engineers reality from first principles.
 We start with a minimal assumption: observers exist, they have bounded
 access to information, and they must agree where their observations overlap.
 
-The framework needs one external quantitative input from experiment, the total screen capacity inferred from the cosmological constant, together with one local pixel variable that the synthesis chapter later tries to close by self-consistency. From there, the book asks how much of gravity, gauge structure, and the particle story can be recovered from observer consistency. The resulting picture contains a conditional gravity branch, the Standard Model gauge structure, three generations, three colors, massless photon/gluons/graviton, the $W$ and $Z$, a Higgs/top quantitative branch, a running quark package, and a neutrino branch with definite masses. Charged leptons and hadrons remain the main open edges.
+The framework takes one global quantitative input from experiment, the total
+screen capacity inferred from the cosmological constant, together with one
+local pixel variable tied to the particle story by a self-consistency
+equation. From there, the book asks how much of gravity, gauge structure, and
+the particle world can be recovered from observer consistency. The resulting
+picture contains the Standard Model gauge structure, three generations, three
+colors, the massless photon, gluons, and graviton, the $W$ and $Z$, a
+Higgs-top calibration, a running quark package, and a neutrino family with
+definite masses.
 
 This is where the reverse-engineering method matters. A good reverse engineer
 separates architecture from the small quantitative surface that remains after
 the architecture is fixed. First you infer the structure the system must
 have. Then you identify the few external knobs that the structure itself does
-not yet fix. In OPH, the main local knob is the pixel scale
+not fix on structural grounds alone. In OPH, the main local knob is the pixel scale
 $P=a_{\mathrm{cell}}/\ell_P^2$. The axioms determine a great deal about the
 shape of the theory, but they do not determine that number on the structural
 core alone. The book's quantitative question is therefore sharp: can that
 same $P$ drive the rest of the particle package, and can it eventually be
-recovered by an outer/inner self-consistency closure rather than left as a
-free dial?
+recovered by an outer/inner self-consistency closure rather than sitting as an
+isolated dial?
 
 The historical calibration move is simple to state. Use the clean electroweak
 surface, align $P$ with the $W/Z$ masses, and then ask whether the same
@@ -181,17 +187,17 @@ the quark package, and the gravity-facing readout. If that works, the theory
 is doing real reverse engineering. If each sector needs its own private dial,
 it is only curve fitting with philosophical decoration.
 
-The synthesis paper adds a twist. The same screen cell is described twice:
-from the outside as one pixel of the simulating screen, and from the inside
-as the smallest electromagnetic observation step available in the simulated
-world. The closure map asks for the value of $P$ where those two readings
-agree, and the fixed-point proof certifies an admissible solution on the
-physical interval.
+The synthesis chapter gives that same quantity a second reading. One screen
+cell can be described from the outside as a pixel of the screen and from the
+inside as the smallest electromagnetic observation step available to observers
+in the encoded world. The closure map asks for the value of $P$ where those
+two readings agree, and the fixed-point proof certifies an admissible
+solution on the physical interval.
 
-That extra closure does not force a deeper one-way derivation of the hardware
-settings. OPH also allows a stranger reading. Observers can infer $P$ and the
-total screen capacity from inside the world even if those values are later
-chosen by the observers who build the hardware layer.
+That closure does not force a one-way derivation of hardware settings from
+lower-level physics. It does support the stranger interpretive picture in
+which observers inside the world infer $P$ and total screen capacity from
+within the same loop that includes the hardware choice.
 
 From this starting point, we derive constraints. We show how the mathematical
 structures of quantum mechanics and relativity emerge from consistency
@@ -202,28 +208,22 @@ The long-range goal is to recover all of known physics, gravity and the Standard
 The apparent mysteries of physics dissolve once you make the conceptual shift from
 "objective reality exists" to "consistency across observers is fundamental."
 
-The structure follows the logic of reverse engineering:
-
-1. **Observe anomalies.** Each chapter starts with the "intuitive picture"
-   most people hold, then introduces the "surprising hint"-the discovery
-   that broke that intuition.
-
-2. **Reverse engineer principles.** We show how the anomaly makes sense once
-   you adopt the observer-consistency model.
-
-3. **Calibrate sparingly, then test hard.** We fix the tiny external input
-   surface, then ask how much of the remaining behavior follows from that one
-   choice. We catalogue predictions, both verified and testable. We note what
-   identifies a measurement contradiction with the model.
+The structure follows the logic of reverse engineering. Each chapter begins
+with the intuitive picture most readers carry into the subject and then turns
+to the surprising hint that breaks that intuition. From there the book asks
+what principle explains the hint once observer consistency is taken
+seriously. When the structural chain is in place, the book fixes the small
+external input surface and tests how much of the remaining behavior follows
+from it, including both verified and testable consequences.
 
 This model rests on established mathematics and physics, organized around five core axioms. The results are striking: gravity, the symmetry structure behind the Standard Model, and several further programs all emerge from the framework. Our goal is to show you how deep the rabbit hole goes.
 
 ## How This Book Is Organized
 
 Chapters 1-12 cover the observer-first framework and structural tools.
-Chapters 13-17 cover the main physics branches.
-Chapters 18-19 are synthesis and interpretation.
-The epilogue is speculative continuation material.
+Chapters 13-17 carry the main physics arc.
+Chapters 18-19 gather the synthesis and interpretation.
+The epilogue turns the picture outward one final time.
 
 ## Begin
 

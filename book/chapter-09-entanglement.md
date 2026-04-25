@@ -122,7 +122,8 @@ This state lives on two copies of a system. It is an entangled purification of a
 
 In AdS/CFT, the thermofield double is dual to an **eternal two-sided black hole**. The two boundaries correspond to two copies of the CFT. They're connected by a smooth wormhole through the interior.
 
-Break the entanglement and the wormhole collapses. Maintain the entanglement and the wormhole stays open.
+Break the entanglement and the wormhole collapses. Maintain the entanglement and
+the connection holds.
 
 ### Traversable Wormholes
 
@@ -160,9 +161,10 @@ MERA isn't just a numerical trick. It's a discrete version of AdS/CFT-the first 
 
 In 2015, Hayden, Pastawski, Preskill, Nezami, and Yoshida built a toy model called the **HaPPY code**.
 
-They tiled a hyperbolic disk with perfect tensors. The result:
-1. **RT formula becomes exact**: Entropy of a boundary region equals the number of legs cut by a minimal path
-2. **Bulk reconstruction**: Bulk operators can be recovered from different boundary regions
+They tiled a hyperbolic disk with perfect tensors, and two things happened at
+once. The RT formula became exact, with boundary entropy equal to the number of
+legs cut by a minimal path. Bulk operators also became recoverable from
+different boundary regions.
 
 This redundancy is quantum error correction. The bulk exists because it's the error-corrected version of the boundary.
 
@@ -198,7 +200,7 @@ In AdS/CFT and related semiclassical holographic models, there is a striking lat
 
 In those models, the island formula reproduces the Page curve and shows how the radiation can encode information that semiclassical bulk reasoning seemed to lose.
 
-This is important evidence for holographic encoding. But it is not, by itself, an OPH theorem. In OPH, the theorem-level black-hole claim is narrower: edge-center structure blocks naive inside/outside factorization, and small-CMI recoverability supports encoded interior data without introducing an independent interior tensor factor. A full Page-curve or island derivation is not part of the proved OPH core.
+This is important evidence for holographic encoding. But it is not, by itself, an OPH derivation. In OPH, the black-hole claim is narrower: the boundary-sector structure blocks naive inside-outside factorization, and small-CMI recoverability supports encoded interior data without introducing an independent interior tensor factor. A full Page-curve or island derivation is not part of the closed OPH core.
 
 That distinction matters for the reader. The book relies on the encoding lesson: interior information can be stored nonlocally and recovered in the right regime. It does not rely on claiming that every step of black-hole evaporation has been solved inside OPH. The encoded-interior idea belongs to the core story. The full late-time evaporation story still sits beyond it.
 
@@ -214,55 +216,27 @@ Classical facts are quantum information that got copied everywhere. You look at 
 
 This is error correction as a law of physics. Reality stabilizes itself through redundancy.
 
-## 9.11 Testable Predictions and Verified Results
+## 9.11 What Entanglement Predicts
 
-The entanglement-geometry correspondence makes sharp, testable predictions:
+If geometry is built from entanglement, several things have to happen. In the
+holographic regime, boundary entropy has to track extremal surfaces. Low-energy
+states have to care about boundary area more than bulk volume. Entropy
+inequalities have to act like geometric constraints. Bulk regions have to be
+reconstructible from the right boundary data. Black-hole evaporation has to
+respect unitarity through encoded interior information.
 
-**1. Ryu-Takayanagi formula in AdS/CFT**: In the appropriate holographic regime, the RT/HRT framework links boundary entanglement entropy to extremal-surface geometry in the bulk. This has been checked in many explicit holographic calculations and is a central piece of the AdS/CFT dictionary.
-
-**2. Area law scaling**: Many ground states of local Hamiltonians obey boundary-dominated entanglement scaling, though there are important logarithmic and other controlled exceptions. This boundary sensitivity is a major structural clue behind holography.
-
-**3. Subadditivity and strong subadditivity**: If entanglement = geometry, then entropy inequalities become geometric constraints. Strong subadditivity $S(AB) + S(BC) \geq S(B) + S(ABC)$ constrains which bulk geometries can exist. These inequalities are provably satisfied by any quantum state.
-
-**4. Page curve and islands in holographic toy models**: In AdS/CFT and related semiclassical setups, island calculations reproduce Page-curve behavior in controlled models, clarifying the semiclassical side of the information paradox and supporting the idea that radiation can encode interior information. This is strong evidence for holographic encoding, but it is not presently an OPH-specific evaporation theorem.
-
-**5. Entanglement wedge reconstruction**: Bulk operators in the entanglement wedge can be reconstructed from boundary data. This has been verified in toy models and provides a concrete test of the holographic dictionary.
-
-**Empirical validation signatures**:
-- Violation of the RT formula in any AdS/CFT calculation
-- Systematic volume-law entanglement in the local ground-state regimes where the area-law argument is supposed to apply
-- Black hole evaporation violating unitarity (information loss)
-- Bulk physics that cannot be reconstructed from boundary entanglement
-
-None of these contradicting observations has ever been made.
+That is the direction the evidence points. Ryu-Takayanagi works in the
+settings where it should. Area-law scaling is widespread in the regimes that
+matter here. Entanglement wedge reconstruction works in explicit examples.
+Black-hole information is read through encoded radiation rather than deletion.
 
 ## 9.12 Reverse Engineering Summary
 
-Chapter summary:
-
-| Intuitive Picture | Surprising Hint | First-Principles Reframing |
-|---|---|---|
-| Space is a passive container; the vacuum is empty | The vacuum is entangled across boundaries; many low-energy states show area-law entanglement; the Ryu-Takayanagi formula connects entanglement to geometry in holographic settings | Space emerges from entanglement; distance is a measure of shared correlations; cutting entanglement cuts spatial connectivity |
-
-Space is not a passive backdrop. Quantum theory reveals a vacuum knit together by entanglement, with area-law scaling in many low-energy states and holographic formulas that tie entropy to geometry. In OPH, spatial structure emerges from the correlation pattern that lets observers agree on shared observations. Regions count as close when they share many quantum correlations.
-
-**Additional lessons**:
-
-1. **The vacuum is entangled**: Empty space is a web of quantum correlations. Cut the web and you cut space itself.
-
-2. **Bell's theorem**: Entanglement is real and irreducible. No hidden variables can explain quantum correlations.
-
-3. **Area law**: Many low-energy states show entanglement entropy scaling with boundary area instead of volume, a major structural clue behind holography.
-
-4. **Ryu-Takayanagi**: In holographic settings, entanglement entropy is given by minimal/extremal surface area divided by 4G. Geometry encodes entanglement.
-
-5. **ER = EPR**: Certain entangled states admit wormhole dual descriptions, and the proposal treats geometry as a language for quantum correlations.
-
-6. **Tensor networks**: MERA and HaPPY show how entanglement creates geometry through discrete circuits.
-
-7. **Monogamy**: Entanglement is exclusive. This forces the network to be sparse-which is why space is local.
-
-8. **Entanglement wedges**: Boundary regions reconstruct bulk regions. Overlapping wedges must agree-this is consistency.
+Space is not a passive backdrop. The vacuum is a web of quantum correlations,
+and the structure of that web is what becomes geometry. Area-law scaling,
+Ryu-Takayanagi, entanglement wedges, tensor networks, and the ER=EPR intuition
+all point in the same direction. Distance is a measure of shared
+correlations. Cut enough entanglement and you cut space itself.
 
 ---
 

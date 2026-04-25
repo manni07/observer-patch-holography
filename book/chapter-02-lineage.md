@@ -4,7 +4,10 @@
 
 Before physicists discovered that reality behaves strangely, philosophers had raised questions that resonate with later problems in fundamental physics.
 
-This is not a coincidence. The ancients didn't have particle accelerators or interferometers. But they had something almost as good: pure logical reasoning applied to careful observation. They asked what *must* be true if experience is to make any sense at all.
+The resemblance is not accidental. The ancients did not have particle
+accelerators or interferometers. They had something close in spirit: pure
+logical reasoning applied to careful observation. They asked what *must* be
+true if experience is to make any sense at all.
 
 And they found problems. Paradoxes. Contradictions. They discovered that the intuitive picture-objective reality independent of observers-leads to logical difficulties.
 
@@ -46,9 +49,12 @@ The 3D world is like a hologram-it looks solid and three-dimensional, but the in
 
 $$S_{max} = \frac{A}{4\ell_P^2}$$
 
-This is not a literal one-to-one dimensional match to Plato's Cave. It resonates with the same structural idea: the world we perceive can be an appearance reconstructed from a deeper bookkeeping layer.
+This is no literal one-to-one dimensional match to Plato's Cave. The resonance
+lies in the structural idea that the world we perceive can be an appearance
+reconstructed from a deeper bookkeeping layer.
 
-Plato was not doing modern holographic physics, but his cave analogy resonates strikingly with later projection-based pictures.
+Plato was working with myth and metaphysics, yet his cave analogy resonates
+strikingly with later projection-based pictures.
 
 ## 2.3 Zeno's Paradoxes: The Discrete Spacetime Hint
 
@@ -82,13 +88,16 @@ The paradoxes show that our intuitive picture of continuous spacetime is problem
 
 Modern physics has found two hints that spacetime is not continuous.
 
-First, the holographic bound strongly suggests finite information capacity. That does not by itself prove a literal spacetime lattice, but it pushes against naive continuum intuition and motivates Planck-scale cutoff pictures.
+First, the holographic bound strongly suggests finite information capacity. It
+does not prove a literal spacetime lattice by itself. It does, however, push
+against naive continuum intuition and motivate Planck-scale cutoff pictures.
 
-Second, quantum mechanics already quantizes other continuous quantities. Energy comes in discrete packets (photons). Angular momentum is quantized in discrete $\hbar$-scaled units, with spin-$1/2$ as one familiar example. If space and time are also quantized, Zeno's paradoxes dissolve.
+Second, quantum mechanics quantizes other continuous quantities. Energy comes in discrete packets (photons). Angular momentum is quantized in discrete $\hbar$-scaled units, with spin-$1/2$ as one familiar example. If space and time are also quantized, Zeno's paradoxes dissolve.
 
 In finite-cutoff pictures of the OPH type, you do not need to traverse infinitely many intervals because the description is discretized below the cutoff.
 
-Zeno was not deriving Planck-scale discreteness, but his paradoxes still sharpen the pressure points in naive continuum intuition.
+Zeno was not deriving Planck-scale discreteness. His paradoxes still sharpen
+the pressure points in naive continuum intuition.
 
 ## 2.4 The Skeptics: The Contextualism Hint
 
@@ -122,7 +131,9 @@ Different measurement contexts reveal different aspects of the system. Niels Boh
 
 The Skeptics' "compared to what?" turns out to be essential physics. Properties are relational, not intrinsic. The honey is sweet-relative-to-healthy-observers, just as the electron has position-relative-to-position-measurements.
 
-The Skeptics were not doing quantum contextuality in the modern technical sense, but their context-dependence arguments resonate with later measurement-theoretic lessons.
+The Skeptics were not doing quantum contextuality in the modern technical
+sense. Their context-dependence arguments still resonate with later
+measurement-theoretic lessons.
 
 ## 2.5 Descartes: The Observer-First Hint
 
@@ -196,7 +207,8 @@ $$S_A = \frac{\text{Area}(\gamma_A)}{4G_N}$$
 
 Space is not the container. It's the visualization-the 3D picture our recovery map constructs from 2D boundary data.
 
-Kant was not deriving holographic geometry, but his reconstruction-first stance resonates with later emergent-space programs.
+Kant was not deriving holographic geometry. His reconstruction-first stance
+resonates with later emergent-space programs.
 
 ## 2.7 Democritus vs. Aristotle: The Information Hint
 
@@ -302,7 +314,9 @@ The philosophical hints became physics in the 20th century.
 
 **Claude Shannon** founded information theory in 1948. He defined the **bit**-the fundamental unit of information, a single yes-or-no answer. He showed how to quantify information, how to compress it, how to transmit it reliably.
 
-Shannon's key insight: information is about reducing uncertainty. Before you flip a coin, there are two possibilities. After you see the result, there is one. The flip provides one bit of information.
+Shannon's central point was simple. Information reduces uncertainty. Before you
+flip a coin, there are two possibilities. After you see the result, there is
+one. The flip provides one bit of information.
 
 **Rolf Landauer** added a crucial physical insight in 1961: erasing information costs energy. If you have a bit in an unknown state and you want to reset it to zero, you must dump at least $k_B T \ln 2$ of energy into the environment.
 
@@ -310,15 +324,13 @@ This sounds technical. It is revolutionary. It means **information is physical**
 
 ### The Synthesis
 
-Once you accept that information is physical, all the philosophical hints crystallize into physics:
-
-- **Plato's projections** become holographic encoding
-- **Zeno's paradoxes** become the Planck-scale cutoff
-- **Skeptical contextualism** becomes quantum measurement
-- **Cartesian observer-centrism** becomes patch-based physics
-- **Kantian emergent space** becomes RT-formula geometry
-- **Aristotelian form** becomes information-theoretic ontology
-- **Pragmatic truth** becomes consistency-based law selection
+Once you accept that information is physical, all the philosophical hints
+crystallize into physics. Plato's projections turn into holographic encoding.
+Zeno's paradoxes reappear as the Planck-scale cutoff. Skeptical contextualism
+returns in quantum measurement. Cartesian observer-centrism becomes
+patch-based physics. Kant's emergent space becomes RT-formula geometry.
+Aristotelian form becomes information-theoretic ontology. Pragmatic truth
+becomes consistency-based law selection.
 
 The philosophers were reverse-engineering reality with logic. Physics gave us the math to make their insights precise.
 
@@ -352,13 +364,18 @@ This would be the strange loop: **reality evolves observers who discover how rea
 
 In this speculative continuation, we are not programs running on someone else's hardware. We are patterns within a self-simulating system. The simulation would run through us, through our understanding, and through our eventual construction of the very computational substrate that gives rise to us.
 
-This is the book's most speculative thread. It is not needed for the physics developed so far, but it gives the story a striking philosophical closure.
+This thread sits furthest out on the philosophical edge of the book. The
+physics does not depend on it, yet it gives the story a striking closure.
 
 Escher's hands draw each other. Reality simulates the observers who simulate reality.
 
 ### The Physics
 
-Quantum link models, discussed in [*Observers Are All You Need*](../paper/observers_are_all_you_need.pdf), make this concrete. Imagine a triangulated sphere where each edge carries a small quantum system. Rules at each vertex constrain which configurations are allowed, and maximum entropy selects the state. It is a concrete quantum-computational model, with qubits, gates, and constraints, and in that model spacetime, particles, and observers all emerge as outputs.
+One concrete realization uses quantum link models. Imagine a triangulated sphere
+where each edge carries a small quantum system. Rules at each vertex constrain
+which configurations are allowed, and maximum entropy selects the state. It is
+a concrete quantum-computational model, with qubits, gates, and constraints,
+and in that model spacetime, particles, and observers all emerge as outputs.
 
 The simulation principle asked the right question but framed it wrong. The question is not "are we simulated?" The question is "what is the nature of the self-simulating loop we are part of?" Our framework provides a direction toward the answer.
 
@@ -386,16 +403,13 @@ Even something as basic as "how long is a meter" requires solving the consistenc
 
 Let's step back and see the pattern.
 
-| Philosopher | Intuitive Picture | Their Hint | Modern Physics |
-|-------------|------------------|------------|----------------|
-| Plato | We see reality directly | Perception is projection | Holographic principle |
-| Zeno | Space is continuous | Infinite divisibility is paradoxical | Planck-scale discreteness |
-| Skeptics | Objects have intrinsic properties | Properties depend on context | Quantum measurement |
-| Descartes | Start with the world | Start with the observer | Observer-centric physics |
-| Kant | Space is the stage | Space is a reconstruction | Emergent geometry |
-| Aristotle | Stuff is primary | Form is primary | Information ontology |
-| Pragmatists | Truth is correspondence | Truth is what survives | Laws as survivors |
-| Gödel/Hofstadter | Descriptions separate from described | Self-reference creates strange loops | Self-simulating reality |
+Plato points toward projection and holography. Zeno points toward the trouble
+inside naive continuity and therefore toward a cutoff. The skeptics point
+toward contextuality and quantum measurement. Descartes points toward the
+observer as the right place to begin. Kant points toward space as a
+reconstruction, not a stage. Aristotle points toward form as more basic than
+stuff. The pragmatists point toward truth as what survives. Godel and
+Hofstadter point toward self-reference and strange loops.
 
 Each philosopher identified a crack in the intuitive picture. Each crack pointed toward a feature of physics that later became clear.
 

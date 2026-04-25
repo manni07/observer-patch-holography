@@ -46,7 +46,7 @@ But what counts as a measurement? When exactly does collapse happen? Does consci
 
 Our model cuts through this by removing the problematic assumption: that the measurement problem is about a single observer-independent state description that must somehow connect to lived experience.
 
-The formalism can still contain a global quantum state, but no observer occupies a God's-eye position outside the system. What observers actually have are patch-level descriptions. A "superposition" isn't a bizarre state where something is really in two places at once; it's an incomplete description that admits multiple compatible continuations. When two patches that were previously independent come to share access to a system, their descriptions must agree on that overlap. That agreement is what we call "measurement." The "collapse" is just what consistency looks like from one patch's perspective.
+The formalism can still contain a global quantum state, but no observer occupies a God's-eye position outside the system. What observers actually have are patch-level descriptions. A "superposition" isn't a bizarre state where something is really in two places at once; it's an incomplete description that admits multiple compatible continuations. When two patches that had no shared access come to share access to a system, their descriptions must agree on that overlap. That agreement is what we call "measurement." The "collapse" is just what consistency looks like from one patch's perspective.
 
 The measurement problem evaporates because there was never an objective wavefunction needing to collapse. There were only perspectives needing to synchronize.
 
@@ -72,7 +72,12 @@ But notice the hidden assumption: that "nothing" is the default state, and exist
 
 Consider: what would "nothing" actually look like? Not empty space (that's still something, with geometry and quantum fields). True nothing would be the absence of all structure, all information, all distinction. But a state with no information *is* indistinguishable from random noise. It has no features that could distinguish it from anything else.
 
-Here's the key insight: the process our model describes (observer patches enforcing consistency, carving out stable structures from the space of possibilities) is precisely how *something* emerges from what would otherwise be undifferentiated noise. The first moment of meaning is when some piece of data becomes causally connected to another, when a distinction makes a difference. Before that mutual information exists, there's no "there" there.
+The process described by the model, observer patches enforcing consistency and
+carving stable structures from the space of possibilities, is precisely how
+*something* emerges from what would otherwise be undifferentiated noise. The
+first moment of meaning arrives when one piece of data becomes causally
+connected to another, when a distinction makes a difference. Before that mutual
+information exists, there is no "there" there.
 
 Some philosophers have called this "selector theory": non-existence isn't the natural default that existence must overcome. Rather, undifferentiated nothing and structured something lie on a continuum, and the consistency constraints we've described are what carve out the structured regions.
 
@@ -110,33 +115,33 @@ We began this book with a metaphor: physicists as reverse engineers, taking apar
 
 But the deepest discovery isn't any particular equation. It's this: the reverse engineer is part of the system being reverse engineered. The observer is on the screen. The hacker and the hacked are one.
 
-This sounds like mysticism, but it's the opposite. It's what you get when you take the physics seriously all the way down. If there's no view from nowhere, then the scientist describing reality is a pattern within reality describing itself. The strange loop closes.
+This can sound mystical until the physics is followed all the way down. If
+there is no perspective-free perch outside the system, then the scientist
+describing reality is a pattern within reality describing itself. The strange
+loop closes there.
 
 The weirdness of quantum mechanics, the relativity of simultaneity, the holographic encoding of information, the emergence of spacetime from entanglement: none of these are bugs to be fixed. They're features pointing at the truth. Reality isn't made of objects in a void observed from outside. It's made of perspectives, consistency relations, and the structure that emerges when finite observers must agree.
 
 ## 19.10 The Tests Ahead
 
-This is strong coherence, but it's not proof. The philosophical picture is compelling, but it must earn its place by making contact with physics.
-
-The tests remain:
-- Can overlap consistency be formalized as a complete sheaf condition?
-- Can quantum structure be derived as a consistency constraint?
-- Can the dimensionality of spacetime be forced rather than assumed?
-- Can dynamics arise from synchronization pressure?
-- Can the pixel area and screen-capacity inputs used in this book be derived or replaced from first principles, or must they remain empirical inputs?
-
-If those fail, the model fails, and the philosophical picture with it. Beautiful coherence is necessary but not sufficient.
-
-If they succeed, the philosophical reading gains real physical support. If they fail, it does not.
+The philosophical picture earns its weight only when it keeps making contact
+with physics. The deep questions are clear: whether overlap consistency can be
+formalized as a complete sheaf condition, whether quantum structure itself can
+be forced by consistency, whether spacetime dimensionality can be driven rather
+than assumed, whether dynamics can grow out of synchronization pressure, and
+whether the pixel area and screen-capacity inputs can be folded back into first
+principles. The chapter does not treat these as loose decorations. They are the
+pressure points where metaphysics and physics meet.
 
 ## 19.11 Reverse Engineering Summary
 
-| Intuitive Picture | Surprising Hint | First-Principles Reframing |
-|---|---|---|
-| Experience is extra, added to objective reality | The hard problem persists in every objective-first theory | Experience is the interior of observer patches; objectivity is overlap consistency |
-| Measurement collapses an objective wavefunction | No one can say when or how collapse occurs | "Collapse" is observer synchronization; there's no objective state to collapse |
-| Laws are eternal truths that need explaining | Fine-tuning seems miraculous | Laws are survivors of consistency filters |
-| Existence requires a cause; nothing is default | Every explanation itself exists | Undifferentiated nothing and structured something form a continuum; consistency carves out structure |
+The metaphysical picture follows the same turn made in the physics chapters.
+Experience is not an extra ingredient sprinkled onto objective matter. It is
+the interior of observer patches. Measurement is not the collapse of a God's-eye
+wavefunction. It is the synchronization of partial descriptions. Laws are not
+timeless commands hanging above the universe. They are the stable survivors of
+consistency filters. Even the question of existence changes shape once one
+stops asking for an external cause standing outside the whole structure.
 
 ## 19.12 God, Meaning, and Participation
 

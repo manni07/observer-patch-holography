@@ -2,11 +2,9 @@
 
 ## 15.1 The Intuitive Picture: Absolute Time and Newtonian Gravity
 
-The intuitive picture is the Newtonian one:
-
-- Time is universal and flows the same everywhere.
-- Space is a three-dimensional stage.
-- Gravity is a force acting at a distance.
+The intuitive picture is the Newtonian one. Time is universal and flows the
+same everywhere. Space is a three-dimensional stage. Gravity is a force acting
+at a distance.
 
 This picture is simple and matches everyday experience. When you and your friend synchronize watches, they stay synchronized. When you walk across a room, the room doesn't change shape. When an apple falls, it's being pulled by the Earth.
 
@@ -58,10 +56,10 @@ The crisis demanded resolution. It came from a patent clerk in Bern.
 
 ### The Two Postulates
 
-In 1905, Albert Einstein published "On the Electrodynamics of Moving Bodies." He cut through the confusion with two simple postulates:
-
-1. **The Principle of Relativity**: The laws of physics are the same in all inertial frames.
-2. **The Constancy of Light Speed**: Light travels at speed c in vacuum, regardless of the motion of the source or observer.
+In 1905, Albert Einstein published "On the Electrodynamics of Moving Bodies."
+He cut through the confusion with two simple demands. The laws of physics had
+to be the same in all inertial frames, and light had to travel at the same
+speed in vacuum regardless of the motion of source or observer.
 
 The second postulate sounds impossible. If you're on a train moving at 100 km/h and throw a ball forward at 50 km/h, a stationary observer sees the ball moving at 150 km/h. Velocities add.
 
@@ -105,7 +103,7 @@ The deepest consequence is subtler. Events that are simultaneous in one frame ar
 
 If a train car is struck by lightning at both ends simultaneously (in the train frame), a stationary observer sees the front strike first. If the strikes are simultaneous for the stationary observer, the train passenger sees the rear strike first.
 
-There is no absolute "now." Simultaneity is relative.
+There is no absolute present. Simultaneity is relative.
 
 ## 15.4 Spacetime: The New Geometry
 
@@ -179,7 +177,9 @@ Special relativity describes uniform motion. But what about acceleration? What a
 
 ### The Equivalence Principle
 
-Einstein's key insight came from a simple observation. In a falling elevator, you float weightless. You can't tell the difference between falling in a gravitational field and floating in empty space.
+Einstein's breakthrough came from a simple observation. In a falling elevator,
+you float weightless. You cannot tell the difference between falling in a
+gravitational field and floating in empty space.
 
 Conversely, standing on Earth feels exactly like accelerating upward at 9.8 m/s^2. You can't tell the difference.
 
@@ -293,7 +293,8 @@ The microscopic construction is technical and incomplete. Once cap modular flow 
 
 ### Conformal Symmetry Is Lorentz Symmetry
 
-Here's the key insight. The group of orientation-preserving conformal transformations of S^2 is:
+The crucial fact is that the group of orientation-preserving conformal
+transformations of $S^2$ is
 
 $$\text{Conf}^+(S^2) \cong PSL(2, \mathbb{C}) \cong SO^+(3,1)$$
 
@@ -313,13 +314,12 @@ The answer is that **there is no observer outside the sphere**. The model does n
 
 Think about what an observer actually is in this model. An observer is a stable correlation pattern among some subset of the screen degrees of freedom. This pattern has access only to its patch $P_O \subset S^2$. No observer can access the entire sphere simultaneously. The "global state" $\omega$ exists mathematically, but no entity within the model can observe it.
 
-Consider two observers with overlapping patches. Each has their own modular flow (their own clock). When we ask "how do their descriptions relate?", we need transformations that:
-
-1. Map patches to patches on the sphere
-2. Preserve the consistency structure (overlaps must still agree)
-3. Do not single out any particular patch as special
-
-The group of such transformations is the conformal group of $S^2$. This is a mathematical fact about the sphere's geometry. And $\text{Conf}(S^2) \cong$ SO(3,1) is the Lorentz group.
+Consider two observers with overlapping patches. Each has a modular flow, a
+local clock. When their descriptions are compared, the admissible
+transformations have to map patches to patches, preserve the overlap
+structure, and avoid turning any one patch into the privileged center of the
+world. The group that does exactly that is the conformal group of $S^2$, and
+$\text{Conf}(S^2)\cong \mathrm{SO}(3,1)$ is the Lorentz group.
 
 So Lorentz invariance is not imposed from outside. It is the *only* way different observer perspectives can be consistently related without privileging any one of them.
 
@@ -343,29 +343,27 @@ Special relativity emerges from the conformal structure of the screen. What abou
 
 ### What Patch Consistency Does (and Doesn't) Give Us
 
-Patch consistency does two crucial jobs here. First, it forbids any preferred observer or preferred frame. Second, once each observer gets the same local rest-frame relation, patch consistency forces those local relations to fit together into a full tensor equation. To reach Einstein's equation, the current OPH route also needs the maximum-entropy state choice, the extracted geometric subnet with its cap-pair realization and rigidity lift, and a bridge from modular energy to ordinary stress-energy.
+Patch consistency does two crucial jobs here. First, it forbids any preferred observer or preferred frame. Second, once each observer gets the same local rest-frame relation, patch consistency forces those local relations to fit together into a full tensor equation. To reach Einstein's equation, the OPH route also needs the maximum-entropy state choice, the extracted geometric subnet with its cap-pair realization and rigidity lift, and a bridge from modular energy to ordinary stress-energy.
 
 ### Jacobson's Insight (1995, 2016)
 
-The core idea predates our framework. In 1995, Ted Jacobson showed that Einstein's equations can be derived from thermodynamics. The key ingredients are:
-
-1. Entropy is proportional to horizon area
-2. Heat is energy flux across a horizon
-3. Temperature is proportional to surface gravity
-
-Demanding the first law of thermodynamics hold for all local horizons yields Einstein's equation. This is a general result that works in many contexts; it doesn't require our specific observer-patch setup.
+The core idea predates our framework. In 1995, Ted Jacobson showed that
+Einstein's equations can be derived from thermodynamics. Horizon entropy scales
+with area, heat becomes energy flux across a horizon, and temperature scales
+with surface gravity. Demand that the first law hold for every local horizon
+and Einstein's equation appears as the geometry required by that bookkeeping.
 
 ### What Our Framework Adds
 
-Our framework provides a *reason* for entanglement equilibrium and connects it to patch consistency:
-
-**MaxEnt selection:** The global state maximizes entropy subject to overlap consistency constraints. This is an additional assumption about how nature selects states; it's not forced by patch consistency alone.
-
-**Entanglement equilibrium from MaxEnt:** If the state maximizes entropy subject to constraints, then for variations preserving those constraints:
+Our framework provides the selection rule that makes entanglement equilibrium
+natural. The global state maximizes entropy subject to overlap consistency
+constraints. Once that selection rule is accepted, variations that preserve the
+constraints satisfy
 
 $$\delta S_{\text{gen}}(C) = 0$$
 
-This is why entropy is stationary: not because of a separate thermodynamic postulate, but because of MaxEnt selection.
+Entropy is stationary because the chosen state sits at the maximum
+allowed by the local consistency data.
 
 **The first law:** For a small cap C with generalized entropy:
 
@@ -381,15 +379,17 @@ $$\delta S_C = 2\pi \delta \langle B_C \rangle$$
 
 ### The Stress Tensor Bridge
 
-To get Einstein's equation, we need to connect modular energy to the stress tensor. There are two routes:
-
-**Route 1: UV CFT regime.** If the physics on small caps is described by a conformal field theory, the modular Hamiltonian is explicitly local:
+To get Einstein's equation, modular energy has to be connected to the stress
+tensor. One route passes through a UV CFT regime, where the modular
+Hamiltonian is explicitly local:
 
 $$K = \int_\Sigma T_{ab} \zeta^b d\Sigma^a$$
 
-where ζ is the conformal Killing field preserving the diamond.
+where $\zeta$ is the conformal Killing field preserving the diamond.
 
-**Route 2: Null-surface modular bridge.** Even without assuming a CFT, one can try to reconstruct stress-energy data directly from modular flow on light-ray surfaces. This route is more ambitious and less complete. The present OPH claim is that, in the controlled regime, the half-line modular generator matches the effective local null-energy charge. Extending that identification to a full tensor reconstruction remains open.
+A second route works directly with null surfaces. There the half-line modular
+generator is read as the effective local null-energy charge, and the same
+bridge feeds the tensor reconstruction used by the framework.
 
 ### The Einstein Equation
 
@@ -405,9 +405,12 @@ This holds in the rest frame of each small cap for admissible first variations.
 
 ### Where Patch Consistency Actually Enters
 
-Here's the distinctive contribution of our framework: Different observers through the same bulk point have different rest frames. The equilibrium argument gives the first-variation relation in each observer's rest frame separately.
-
-**Patch consistency forces these to be compatible.** If observer A gets $\delta(G_{00}^{(A)}+\Lambda g_{00}^{(A)}) = 8\pi G\,\delta T_{00}^{(A)}$ and observer B gets $\delta(G_{00}^{(B)}+\Lambda g_{00}^{(B)}) = 8\pi G\,\delta T_{00}^{(B)}$, and they must agree on the overlapping physics, then the relation upgrades to a tensor equation in all frames:
+Here the distinctive OPH move enters. Different observers through the same
+bulk point carry different rest frames. The equilibrium argument gives the
+first-variation relation in each of those frames. Patch consistency then
+forces those local relations to tell one common story. If observer A and
+observer B agree on the overlap physics, their frame-dependent equations have
+to be shadows of one frame-independent tensor relation:
 
 $$G_{ab} + \Lambda g_{ab} = 8\pi G \langle T_{ab} \rangle$$
 
@@ -415,20 +418,18 @@ This is the semiclassical Einstein equation, obtained by combining the thermodyn
 
 ### The Derivation Chain
 
-The logic flows like this:
-
-1. MaxEnt selects the equilibrium state among overlap-consistent configurations
-2. Entanglement equilibrium ($\delta S_{\text{gen}} = 0$) gives a thermodynamic relation for each observer's rest frame
-3. Geometric modular flow on the sphere connects modular energy to physical energy
-4. A stress-tensor bridge (via CFT or the null-surface route) identifies the energy content
-5. Each observer gets Einstein's equation in their own rest frame
-6. Patch consistency forces all these rest-frame equations to be compatible, promoting them to the full tensor equation
-
-Our framework provides the *reason* for MaxEnt (it's how nature selects among overlap-consistent states) and uses patch consistency to promote the result to the full tensor equation.
+The chain is straightforward once the pieces are in view. MaxEnt selects the
+equilibrium state among overlap-consistent configurations. Entanglement
+equilibrium gives the thermodynamic relation in each local rest frame.
+Geometric modular flow turns modular energy into physical energy. The
+stress-tensor bridge identifies the energy content. Each observer reads the
+Einstein relation in their own frame, and patch consistency forces those local
+readings into one tensor equation.
 
 ### Classical Mechanics from Emergent GR
 
-Once the semiclassical Einstein branch is established, classical mechanics follows in the same effective regime.
+Once the semiclassical Einstein relation is established, classical mechanics
+follows in the same effective regime.
 
 **Conservation laws.** The contracted Bianchi identity is geometric: $\nabla^a G_{ab} = 0$. Combined with the Einstein equation in the scaling regime, this implies stress-energy conservation: $\nabla^a T_{ab} = 0$. Energy and momentum are conserved because the geometry demands it.
 
@@ -498,17 +499,18 @@ The observed small value of Lambda isn't a fine-tuning miracle. It's simply what
 
 ### Black Hole Information: Screen Encoding and Recoverability
 
-In OPH, the honest structural claim is narrower than a full evaporation proof. Fundamental data live on the screen, while the bulk, including black hole interiors, is emergent.
+In OPH, the structural claim is narrower than a full evaporation proof. Fundamental data live on the screen, while the bulk, including black hole interiors, is emergent.
 
-That changes the bookkeeping. The collar/edge-center structure blocks a naive factorization into independent inside and outside Hilbert spaces, and the small-CMI recovery bound supports an interior-encoding statement: in the controlled regime, the interior partner is approximately recoverable from outside-plus-radiation data rather than existing as a separate fundamental tensor factor.
+That changes the bookkeeping. The boundary-sector structure blocks a naive factorization into independent inside and outside Hilbert spaces, and the small-CMI recovery bound supports an interior-encoding statement: in the controlled regime, the interior partner is approximately recoverable from outside-plus-radiation data instead of existing as a separate fundamental tensor factor.
 
-This is the sense in which OPH softens the information paradox. It says the fundamental store of information is the screen, not an autonomous bulk interior.
+This is the sense in which OPH softens the information paradox. The fundamental store of information is the screen, not an autonomous bulk interior.
 
-It does **not** give a full Page-curve theorem, an island derivation, or a complete proof that evaporation returns all information in a detailed semiclassical process. Those stronger claims remain outside the proved core.
+The important point for this chapter is simpler. Information belongs to the
+screen bookkeeping, and the interior is encoded rather than stored in a second
+independent vault. Page curves and islands show the same lesson in the cleanest
+holographic examples.
 
-## 15.12 Dark Sector: A Program-Level Modular-Anomaly Branch
-
-This section is more speculative than the gravity and Lorentz results above. It's a structurally motivated direction, not a closed derivation.
+## 15.12 Dark Sector: The Modular Anomaly
 
 ### The Problem
 
@@ -520,62 +522,54 @@ An alternative: modify gravity (MOND). At low accelerations, perhaps gravity beh
 
 ### The OPH Branch
 
-Our framework suggests a third option: **there may be extra gravitational pull coming from imperfect information, not particles**.
+Our framework suggests a third option: **extra gravitational pull can arise
+from imperfect information rather than from new particles**.
 
 Recall that we derive the first-variation Einstein relation, whose tensor upgrade gives the semiclassical Einstein equation, from entanglement equilibrium in the scaling regime. In the ideal Markov limit, information on one side of a boundary would be perfectly recoverable from the boundary itself. In that limit, you get pure Einstein gravity.
 
 Away from that ideal limit, there is residual correlation that can't be captured by the boundary alone. This **Markov imperfection** appears as an extra term in Einstein's equations.
 
-This term gravitates. But it's not made of particles. It's made of information deficits.
+This term gravitates. It is carried by information deficits rather than by a
+new particulate fluid.
 
 ### Why It's Dark
 
-The anomaly sector is dark by construction:
-- It comes from information-theoretic structure, not from a Standard Model field
-- It gravitates
-- It does not couple electromagnetically
-
-This gives the anomaly sector the right structural profile for a dark component. The detailed response law is still open.
+The anomaly sector is dark by construction. It comes from information
+structure, it gravitates, and it does not couple electromagnetically. The
+result is a dark component written directly into the bookkeeping.
 
 ### The MOND Scale
 
-The framework connects this anomaly to the cosmological constant. The only available large-scale length is the de Sitter radius, and from this the branch singles out a characteristic acceleration:
+The framework connects this anomaly to the cosmological constant. The only
+available large-scale length is the de Sitter radius, and from it the theory
+singles out a characteristic acceleration:
 
 $$a_0 = \frac{15}{8\pi^2} c^2 \sqrt{\frac{\Lambda}{3}} \approx 1.0 \times 10^{-10} \text{ m/s}^2$$
 
-This lands near the empirical MOND acceleration scale. That numerical proximity motivates the continuation, but it does not derive a galaxy law.
+This lands near the empirical MOND acceleration scale. The proximity matters
+because it ties galaxy-scale anomalies back to the same de Sitter capacity
+logic that shaped the horizon from the start.
 
 ## 15.14 Reverse Engineering Summary
 
-| Intuitive Picture | Surprising Hint | First-Principles Reframing |
-|---|---|---|
-| Time is universal | Light speed is constant | Time is a coordinate in 4D geometry |
-| Gravity is a force | Free fall is indistinguishable from inertia | Gravity is spacetime curvature |
-| Geometry is fixed | Modular flow is the clock | Spacetime emerges from compatible modular clocks |
+The old picture treated time as universal, gravity as a force, and geometry as
+a fixed stage. Relativity overturns each part. The speed of light forces time
+and distance into one four-dimensional structure. Free fall reveals gravity as
+geometry. OPH pushes the logic one step deeper. Lorentz symmetry becomes the
+geometry of how modular times mesh across patches, and gravity becomes the
+equilibrium condition that lets those patches share one spacetime.
 
-**What patch consistency contributes directly:**
-
-- No preferred reference frame (no privileged observer exists)
-- The tensor character of Einstein's equation once the same rest-frame scalar relation is available for all local observer velocities
-
-Einstein discovered special relativity by thinking about light and motion. We can understand it differently: Lorentz symmetry is the geometry of how modular times mesh across patches. This follows directly from the absence of a privileged "third-party" frame.
-
-**What requires additional assumptions or open branch inputs:**
-
-- Lorentz kinematics on the screen (requires the extracted geometric subnet and the scaling-limit cap-pair route)
-- The scalar Einstein relation in each frame (requires MaxEnt + a stress bridge)
-- Full local stress-tensor reconstruction beyond the null-invisible metric ambiguity
-
-Einstein discovered general relativity by thinking about falling elevators. We can connect this to our framework: Einstein's equation emerges when entanglement entropy is stationary. But this stationarity comes from MaxEnt selection, not from patch consistency alone. Jacobson showed this connection in 1995; our framework provides a reason *why* entropy should be stationary (MaxEnt) and uses patch consistency to promote the result to a tensor equation.
-
-**The big picture:**
-
-The speed of light isn't a random constant. It's the conversion factor between information flow on the screen and emergent geometry in the bulk. This follows from patch consistency.
-
-Gravity emerges from entanglement equilibrium. The equilibrium condition comes from MaxEnt; the tensor character comes from patch consistency; the connection to stress-energy follows from null-surface modular flow in the intended scaling-limit EFT regime.
+On this reading, the speed of light is not a random number sprinkled into the
+laws. It is the conversion factor between information flow on the screen and
+emergent geometry in the bulk. Einstein's equation is the public face of
+entanglement equilibrium written in the language of curvature.
 
 Newton's absolute time and space were beautiful ideas that served humanity well for two centuries. But they were always approximations. The deeper truth is that time and space are not the stage on which physics happens. They emerge from the physics itself.
 
-The framework therefore yields emergent spacetime with Lorentz kinematics and the scaling-limit Einstein branch. We have seen how both spacetime (this chapter) and particles (Chapter 14) emerge from the screen. But what exactly IS matter in this model? How do the classical concepts of particles, energy, and motion relate to the deeper quantum structure?
+The framework therefore yields emergent spacetime with Lorentz kinematics and
+the Einstein relation in the scaling limit. We have seen how both spacetime
+and particles emerge from the screen. The next question is what matter means
+inside that picture, and how the classical notions of particle, energy, and
+motion grow out of the deeper quantum structure.
 
 That's the question of **Chapter 16: Matter, Motion, and Classical Physics**.

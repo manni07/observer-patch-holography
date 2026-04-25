@@ -33,7 +33,7 @@ We take a narrower, operational step: **start from perspectives and demand consi
 
 But why abandon the intuitive picture at all? Because the universe gave us hints, strange, persistent, reproducible hints, that it cannot be correct.
 
-Here's a thought experiment that illustrates the problem: imagine a cosmic ledger that records **all** facts "right now." You might expect physics to supply the rules for such a ledger. But relativity says there is no unique global "now." Quantum mechanics says not all properties can be simultaneously definite. Horizons say no observer can access everything. The ledger is not even well-defined.
+Here's a thought experiment that illustrates the problem: imagine a cosmic ledger that records **all** facts at one global instant. You might expect physics to supply the rules for such a ledger. But relativity says there is no unique global present. Quantum mechanics says not all properties can be simultaneously definite. Horizons say no observer can access everything. The ledger is not even well-defined.
 
 The intuitive picture is wrong. Not approximately wrong. Not wrong in some technical sense that doesn't matter for everyday life. It's *fundamentally* wrong about the nature of space, time, and observation.
 
@@ -83,7 +83,7 @@ Time dilates. A moving clock ticks slower. In 1971, physicists Hafele and Keatin
 
 Lengths contract. A moving ruler is shorter. If a spaceship flies past me at 90% of the speed of light, I measure it as less than half its rest length.
 
-Simultaneity is relative. Two events that are simultaneous in my frame may not be simultaneous in yours. There is no absolute "now."
+Simultaneity is relative. Two events that are simultaneous in my frame may not be simultaneous in yours. There is no absolute present.
 
 **The hint**: The speed of light is invariant.
 
@@ -177,11 +177,8 @@ Here's a hint that's easy to miss: it's incredibly hard to construct a universe 
 
 ### The Fine-Tuning Puzzle
 
-Look at the constants of nature:
-- The strength of gravity
-- The masses of elementary particles
-- The charge of the electron
-- The cosmological constant
+Look at the constants of nature: the strength of gravity, the masses of
+elementary particles, the charge of the electron, the cosmological constant.
 
 Change almost any of these by a small amount, and the universe becomes incapable of supporting complex structures. Make gravity slightly stronger, and stars burn out too fast for planets to form. Make the strong nuclear force slightly weaker, and nuclei fall apart. Make the cosmological constant larger, and space expands too fast for galaxies to condense.
 
@@ -209,11 +206,11 @@ Broad observer agreement strongly favors these symmetries. If the laws changed a
 
 ### Noether's Theorem: The Consistency-Conservation Link
 
-In 1918, Emmy Noether proved one of the most beautiful theorems in physics: **Every continuous symmetry corresponds to a conservation law.**
-
-- If the laws don't change over time → energy is conserved
-- If the laws don't change across space → momentum is conserved
-- If the laws don't change under rotations → angular momentum is conserved
+In 1918, Emmy Noether proved one of the most beautiful theorems in physics:
+**every continuous symmetry corresponds to a conservation law**. If the laws do
+not change over time, energy is conserved. If they do not change across space,
+momentum is conserved. If they do not change under rotations, angular momentum
+is conserved.
 
 This is the bookkeeping of agreement. It is more than mathematics.
 
@@ -241,13 +238,12 @@ Even without black holes, if you keep accelerating, signals from behind you can 
 
 ## 1.8 The Central Thesis
 
-The major hints line up:
-
-1. **The speed of light is invariant** → Space and time are observer-dependent
-2. **Measurement affects outcomes** → Observers are part of physics, not outside it
-3. **The laws are uniform and fine-tuned** → Consistency is expensive, not default
-4. **Symmetries enforce conservation** → Physics is structured to enable agreement
-5. **Horizons limit access** → Every observer has a finite patch
+The major hints line up. The speed of light is invariant, so space and time are
+observer-dependent. Measurement affects outcomes, so observers are part of the
+physics rather than spectators outside it. The laws are uniform and fine-tuned,
+which means consistency is expensive. Symmetries enforce conservation, so
+physics is structured to enable agreement. Horizons limit access, so every
+observer lives on a finite patch.
 
 What picture explains all these hints?
 
@@ -295,7 +291,8 @@ Physicists call this **universality**. At large scales, different microscopic th
 
 ## 1.10 Five Core Axioms
 
-From these hints, the current OPH papers distill **five core axioms** that guide the rest of this book:
+From these hints, the OPH papers distill **five core axioms** that guide the
+rest of this book:
 
 **Axiom 1: Screen Net / Finite Access**
 Every observer is finite. You only access a patch of a common horizon screen, never the whole structure at once, and each patch comes with its own algebra of accessible observables.
@@ -304,19 +301,30 @@ Every observer is finite. You only access a patch of a common horizon screen, ne
 If you look at a star and I look at the same star, we have to agree on what we can jointly check. Where patches overlap, their descriptions must match on the shared observables. That single constraint shapes almost everything.
 
 **Axiom 3: Local MaxEnt and Refinement Stability**
-At the regulator scale, the realized branch is selected by maximizing entropy subject to a finite family of local constraints. As the screen is refined, that same constraint family persists, so the theory stays on one stable branch instead of changing its rules at every cutoff.
+At the regulator scale, the realized state is selected by maximizing entropy
+subject to a finite family of local constraints. As the screen is refined, that
+same constraint family persists, so the theory stays on one stable track
+instead of changing its rules at every cutoff.
 
 **Axiom 4: Recoverable Generalized Entropy**
 You cannot pack infinite information into a finite region. The entropy budget is controlled by a generalized entropy, with the recoverability structure needed to rebuild missing information from overlap data when the stated conditions hold.
 
-**Axiom 5: Minimal Admissible Realization (MAR)**
-Among the admissible low-energy possibilities, the realized branch is the minimal one under the precise complexity ordering used later in the physics program. This is the selector that narrows the gauge story to the realized Standard Model branch.
+**Axiom 5: Economy Principle**
+Among the admissible low-energy possibilities, the realized package is the
+minimal one under the precise complexity ordering used in the physics program.
+This is the selector that narrows the gauge story to the Standard Model.
 
 ## 1.11 Reality as Computation
 
 These five axioms point toward a radical conclusion: reality can be modeled computationally. We do not need to treat it as a pre-given objective stage.
 
-The screen is a quantum system. The degrees of freedom are finite-dimensional (qudits on edges of a triangulated sphere). The dynamics is constrained by gauge laws (Gauss constraints at every vertex). The realized branch is selected by maximum entropy subject to a stable family of local constraints, and the low-energy branch is narrowed further by the minimal realization rule used later in the program. This is a quantum computation in the most literal sense: qubits, gates, constraints, outputs.
+The screen is a quantum system. The degrees of freedom are finite-dimensional,
+with qudits on the edges of a triangulated sphere. The dynamics is constrained
+by gauge laws at every vertex. Maximum entropy selects the realized state
+subject to a stable family of local constraints, and the low-energy package is
+narrowed further by the minimal realization rule used later in the program.
+This is a quantum computation in the most literal sense: qubits, gates,
+constraints, outputs.
 
 What is the output? Everything. Spacetime geometry emerges from entanglement patterns. Particles emerge as excitations. Observers emerge as self-modeling patterns that process information and maintain records. The laws of physics emerge as the rules that permit consistent information flow between patches.
 

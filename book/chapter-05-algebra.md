@@ -56,11 +56,12 @@ Heisenberg had never heard of matrices-he was a physicist, not a mathematician. 
 
 ### The Reverse Engineering Insight
 
-This is reverse engineering in action.
-
-- **The intuitive picture**: Measurements reveal pre-existing values. Order doesn't matter.
-- **The hint**: Spectral line calculations required arrays whose multiplication doesn't commute.
-- **The reframing**: Observable quantities form a non-commutative algebra. This algebraic structure is fundamental-more fundamental than the "objects" being measured.
+This is reverse engineering in action. The intuitive picture says measurements
+reveal pre-existing values and order should not matter. The hint is that
+spectral-line calculations required arrays whose multiplication does not
+commute. The reframing is that observable quantities form a non-commutative
+algebra, and that algebraic structure sits deeper than the supposed objects
+being measured.
 
 Heisenberg started with observations (spectral lines) and reverse-engineered the mathematical structure that must underlie them. The non-commutative algebra wasn't assumed-it was forced by the data.
 
@@ -84,11 +85,9 @@ In 1922, Otto Stern and Walther Gerlach sent a beam of silver atoms through a no
 
 This was shocking. Atomic magnetic moments are quantized-they take only discrete values.
 
-But the real surprise comes when you chain measurements:
-
-1. Measure spin along the z-axis. Keep only the "up" atoms.
-2. Measure spin along the x-axis. This gives 50/50 up or down.
-3. Measure spin along z again.
+The real surprise comes when you chain measurements. Measure spin along the
+$z$-axis and keep only the up atoms. Then measure along $x$, which gives a
+50/50 split. Measure along $z$ again and the final result is no longer fixed.
 
 The final z-measurement becomes random-50% up, 50% down. But if you skip step 2, the atoms stay "up" with certainty.
 
@@ -102,7 +101,9 @@ $$\Delta X \cdot \Delta P \geq \frac{\hbar}{2}$$
 
 The more precisely you know position, the less precisely you can know momentum, and vice versa.
 
-This is not a limitation of measurement devices. It is a fundamental feature of reality. There is no state that has both precise position and precise momentum-such a state doesn't exist.
+This does not come from clumsy measurement devices. It is a fundamental feature
+of reality. There is no state that has both precise position and precise
+momentum. Such a state does not exist.
 
 For a baseball, the uncertainty is negligible-about 10⁻³⁴ meters. For an electron confined to an atom-sized region, the momentum uncertainty corresponds to 0.3% of the speed of light. At atomic scales, quantum mechanics is unavoidable.
 
@@ -174,10 +175,9 @@ In the standard textbook update rule, an ideal measurement updates the state to 
 
 ### The Density Matrix
 
-When we have incomplete knowledge, we use a density matrix ρ instead of a pure state vector. A density matrix satisfies:
-- ρ is Hermitian
-- ρ has non-negative eigenvalues
-- Tr(ρ) = 1
+When we have incomplete knowledge, we use a density matrix $\rho$ instead of a
+pure state vector. The matrix is Hermitian, its eigenvalues are non-negative,
+and its trace is 1.
 
 A pure state has ρ = |ψ⟩⟨ψ|. A mixed state is a probabilistic mixture.
 
@@ -193,11 +193,12 @@ Observables form an algebraic structure. You can add them, multiply them by scal
 
 ### What Is an Algebra?
 
-Formally, an algebra is a vector space with a multiplication operation. Quantum observables form a *-algebra: there's an adjoint operation A → A† with (AB)† = B†A†.
-
-- Addition corresponds to superposing measurements
-- Scalar multiplication corresponds to rescaling
-- The product captures algebraic composition and is closely related to sequential operations
+Formally, an algebra is a vector space with a multiplication operation.
+Quantum observables form a *-algebra, equipped with an adjoint operation
+$A\mapsto A^\dagger$ satisfying $(AB)^\dagger=B^\dagger A^\dagger$. Addition
+corresponds to superposing measurements, scalar multiplication to rescaling,
+and the product to algebraic composition closely tied to sequential
+operations.
 
 ### States on Algebras
 
@@ -331,25 +332,20 @@ The algebraic condition [A(P), A(Q)] = 0 is the mathematical statement that cons
 
 ## 5.12 The Reverse Engineering Summary
 
-Let's trace the logic explicitly.
+Let us trace the logic explicitly. The intuitive picture says objects have
+definite properties and measurements simply reveal them. The hints keep
+breaking that image. Heisenberg's matrices do not commute. Stern-Gerlach shows
+that measurement order changes outcomes. The uncertainty principle limits
+simultaneous knowledge. Interference demands complex amplitudes rather than
+plain probabilities.
 
-**The intuitive picture**: Objects have definite properties. Measurements reveal pre-existing values. Order doesn't matter.
-
-**The hints**:
-- Heisenberg's matrices don't commute
-- The Stern-Gerlach experiment shows measurement order affects outcomes
-- The uncertainty principle sets fundamental limits on simultaneous knowledge
-- Interference patterns require complex amplitudes, not just probabilities
-
-**The first-principles reframing**:
-
-1. Observables form algebras-mathematical structures with non-commutative multiplication
-2. States assign expectation values to observables
-3. Each observer has their own algebra (their patch on the screen)
-4. Consistency means agreeing on shared observables where patches overlap
-5. Von Neumann algebras admit modular flow, and Type III horizon-restricted examples make the thermal/KMS aspect especially vivid
-6. Causality requires commutation for spacelike-separated regions
-7. **Non-commutativity is central to the kind of consistency problem quantum physics presents**-a fully commutative picture would miss the nontrivial constraint structure highlighted in this chapter
+The reframing is therefore unavoidable. Observables form algebras with
+non-commutative multiplication. States assign expectation values to those
+observables. Each observer carries a local algebra on a patch of the screen.
+Consistency means agreement on shared observables where patches overlap. Von
+Neumann algebras carry modular flow, and causality requires commutation for
+spacelike-separated regions. Non-commutativity is the feature that makes the
+quantum consistency problem genuinely hard.
 
 The algebraic structure is not optional. It is what the hints from quantum mechanics force us to accept. OPH then explores a stronger interpretation: non-commutativity is deeply tied to the difficulty of global consistency, not an arbitrary extra feature. The "strangeness" of quantum mechanics is thereby read as part of the price of a structured reality, not as a standalone theorem from consistency alone.
 

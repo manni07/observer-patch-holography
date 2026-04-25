@@ -46,15 +46,16 @@ Reverse engineering asks why we experience time if it is not fundamental.
 
 In the 1990s, Alain Connes and Carlo Rovelli proposed that time emerges from statistical mechanics-from our incomplete knowledge of the quantum state.
 
-The logic:
-1. We have a quantum system described by an algebra of observables
-2. We have a state rho (a density matrix representing our knowledge)
-3. Any density matrix defines a **modular Hamiltonian**: K = -ln rho
+The logic is spare. Start with a quantum system described by an algebra of
+observables. Give it a state $\rho$, a density matrix representing the
+observer's limited access. Any such density matrix defines a modular
+Hamiltonian, $K=-\ln\rho$.
 
 What is a modular Hamiltonian? In ordinary quantum mechanics, the Hamiltonian H generates time evolution via $e^{-iHt}$. The modular Hamiltonian instead generates a state-dependent modular flow. If you know the density matrix $\rho$, you can take its logarithm and get an operator $K = -\ln\rho$ whose modular evolution acts like an internal clock for that state.
 
-4. This Hamiltonian generates a flow: sigma_s(A) = e^{iKs} A e^{-iKs}
-5. **The Thermal Time principle**: This flow is proposed as what we experience as time.
+That Hamiltonian generates a flow,
+$\sigma_s(A)=e^{iKs}Ae^{-iKs}$, and the thermal-time principle reads that flow
+as the time the observer experiences.
 
 On the thermal-time proposal, time is the modular flow of the statistical state rather than a fundamental coordinate on a manifold.
 
@@ -74,9 +75,9 @@ For a non-specialist, the surprise is easy to miss. An automorphism is just a st
 
 The technical phrases "cyclic" and "separating" sound forbidding, but their role is straightforward. They say the chosen state probes the algebra richly enough and distinguishes operators cleanly enough for modular theory to get a grip. Once those conditions hold, the observer's limited state is not passive. It carries an intrinsic ordering of accessible questions.
 
-Key properties:
-1. **KMS Condition**: The state satisfies thermal equilibrium at "temperature" beta = 1 with respect to modular time
-2. **State dependence**: The modular flow is fixed by the chosen algebra-state pair; different faithful states generally give different flows
+Two properties matter most. The state satisfies the KMS equilibrium condition
+at inverse temperature $\beta=1$ with respect to modular time, and the
+resulting modular flow depends on the chosen algebra-state pair.
 
 This theorem says: given any quantum system and any state of incomplete knowledge, there's a natural notion of time evolution.
 
@@ -168,12 +169,12 @@ If the global state is highly entangled in a particular pattern, the modular flo
 
 ### Roadmap: From Modular Time to Gravity
 
-The chain is:
-
-1. **Recovery structure** from Chapter 7 makes the time-generator local near patch boundaries.
-2. **A key theorem** identifies that local time-flow with a standard geometric transformation on the sphere, fixing its normalization.
-3. Geometric time-flow gives **Lorentz kinematics** on the screen.
-4. **Entanglement equilibrium** plus a way to identify local energy yields Einstein's equation as an output.
+The chain is clean once the pieces are visible. Recovery structure from Chapter
+7 makes the time generator local near patch boundaries. A key theorem then
+identifies that local flow with a standard geometric motion on the sphere and
+fixes its normalization. Geometric time flow gives Lorentz kinematics on the
+screen, and entanglement equilibrium together with the local energy bridge
+yields Einstein's equation.
 
 This chapter builds the time ingredient. The next sections show how it feeds into gravity.
 
@@ -185,10 +186,9 @@ He started with thermodynamics-the first law:
 
 $$\delta Q = T \, dS$$
 
-Then made three assumptions:
-1. **Entropy is area**: S proportional to boundary area
-2. **Heat is energy flux**: delta Q is stress-energy integrated over a local horizon
-3. **Temperature is Unruh temperature**: T proportional to surface gravity
+He then made three linked identifications. Entropy scaled with boundary area.
+Heat became energy flux across a local horizon. Temperature became Unruh
+temperature, proportional to surface gravity.
 
 He demanded the relation hold for all local horizons.
 
@@ -260,16 +260,17 @@ Start with thermal structure. Ask: what is the natural notion of time evolution?
 
 This reverses the usual logic in QFT. We don't postulate Lorentz symmetry and then discover thermal horizons; the BW theorem shows the boost structure is encoded in modular flow.
 
-In the OPH program, the modular/boost link is part of the route by which Lorentz kinematics and a universal light speed are recovered. That stronger claim is program-level and should not be presented as a standalone theorem of Unruh/Bisognano-Wichmann alone.
+In OPH, that modular-boost link is the route by which Lorentz kinematics and a
+universal light speed are recovered on the screen.
 
 ### Connection to Our Framework
 
-In our model:
-1. Each observer's patch has a boundary
-2. This boundary is a horizon with Gibbons-Hawking temperature
-3. The modular flow of the horizon state generates time evolution
-
-In [*Observers Are All You Need*](../paper/observers_are_all_you_need.pdf), this idea is carried over from wedges in ordinary spacetime to caps on the holographic screen. The natural time flow of a patch becomes an actual geometric motion on the sphere, and once that happens the conformal symmetry of the sphere reproduces Lorentz symmetry.
+In our model, each observer's patch has a boundary, that boundary carries a
+horizon temperature, and the modular flow of the horizon state generates the
+observer's time evolution. Carried over from wedges in ordinary spacetime to
+caps on the holographic screen, that flow becomes an actual geometric motion on
+the sphere. Once that happens, the conformal symmetry of the sphere reproduces
+Lorentz symmetry.
 
 ### The Speed of Light
 
@@ -281,11 +282,10 @@ From the boundary perspective: information propagates on the S² screen at a max
 
 ### The Causal Structure
 
-The light cone structure of spacetime-which events can influence which-emerges from entanglement:
-
-- **Spacelike separation**: Regions can be correlated (entangled) but cannot signal
-- **Timelike separation**: Events can have causal influence
-- **Null separation**: The boundary between these regimes
+The light-cone structure of spacetime, the question of which events can
+influence which, emerges from entanglement. Spacelike-separated regions can be
+correlated without signaling. Timelike-separated events can have causal
+influence. Null separation marks the dividing line between those two regimes.
 
 The modular flow provides the time direction. Entanglement provides correlations. No-signaling prevents faster-than-light communication. Taken together, these ingredients reproduce the Minkowski-style causal structure targeted by the program.
 
@@ -295,37 +295,20 @@ Einstein discovered special relativity in 1905 by thinking about light and motio
 
 The laws of physics look the same to all inertial observers because thermal states on wedge-shaped regions naturally evolve via boosts. In the OPH program, the universal speed emerges when that modular-boost structure is carried over to the screen and then read back into bulk kinematics.
 
-## 11.10 Testable Predictions and Verified Results
+## 11.10 What Time Predicts
 
-The emergent time model includes both rigorous mathematical results and testable predictions:
+The thermal-time picture does not float free of physics. Tomita-Takesaki says
+an algebra-state pair carries its own flow. The KMS condition gives that flow
+the structure of thermal equilibrium. Bisognano-Wichmann shows that modular
+time becomes an actual Lorentz boost in the wedge setting. Boltzmann explains
+why irreversible records emerge out of reversible microscopic laws.
 
-**Rigorous results (mathematical theorems)**:
-
-**1. Tomita-Takesaki theorem**: Once you specify both the observables available to an observer and the state they are in, there is a built-in notion of time flow. The algebra-state pair carries its own natural dynamics.
-
-**2. KMS condition**: That natural time flow behaves exactly like thermal equilibrium. In other words, modular time is not an arbitrary parameter; it has the precise structure of heat physics.
-
-**3. Bisognano-Wichmann theorem**: For a wedge-shaped region of spacetime, the natural modular time flow is literally a Lorentz boost. That is the deep reason thermal structure and relativity fit together so tightly. In OPH, the claim is that spherical patches on the screen behave in the same spirit.
-
-**4. Boltzmann's H-theorem**: Under standard coarse-graining assumptions, entropy almost always rises. This is the classic bridge from reversible microscopic laws to an irreversible macroscopic arrow of time.
-
-**Testable predictions**:
-
-**1. Unruh effect**: Accelerating observers see thermal radiation at T = ℏa/(2πk_B c). While direct detection is beyond current technology (requires acceleration ~10²⁰ m/s²), the Unruh effect is closely related to Hawking radiation through the same horizon-thermodynamic structure, and the mathematics is well established.
-
-**2. Jacobson's derivation**: If entropy ∝ area and temperature ∝ surface gravity, then Einstein's equations can be recovered under specific thermodynamic assumptions. This is strong evidence for the thermodynamic route, but not a proof that every horizon-thermodynamics construction must reduce uniquely to GR.
-
-**3. Microscopic laws are largely time-symmetric**: Electromagnetic, strong, and gravitational dynamics are time-reversal symmetric in their standard formulations, while the weak interaction contains the known small CP/T-violating effects.
-
-**4. Arrow of time from Past principle**: Given low-entropy initial conditions, the Second Law follows statistically. Confirmed by the entire edifice of thermodynamics and cosmology.
-
-**Empirical validation signatures**:
-- Microscopic laws with fundamental time asymmetry (beyond tiny CP violation)
-- Modular flow failing to generate consistent time evolution
-- Unruh temperature having wrong dependence on acceleration
-- Jacobson's derivation failing for some horizon type
-
-None of these contradicting observations has ever been made.
+The physical world fits this picture with surprising loyalty. Accelerating
+observers inherit Unruh temperature from the same horizon logic that produces
+Hawking radiation. Jacobson's thermodynamic route points toward Einstein's
+equation. The microscopic laws are largely time-symmetric, while the arrow of
+time rides on low-entropy initial conditions and the thermodynamics of record
+making.
 
 ---
 
@@ -341,33 +324,14 @@ The arrow of time is the arrow of record-keeping. Time flows in the direction we
 
 ## 11.12 Reverse Engineering Summary
 
-Recap:
-
-| Intuitive Picture | Surprising Hint | First-Principles Reframing |
-|---|---|---|
-| Time is a fundamental external parameter flowing from past to future | No preferred time in GR; the Wheeler-DeWitt equation $H\Psi = 0$ points toward a fundamentally timeless description; microscopic laws are largely time-symmetric | On the thermal-time proposal, time arises from modular flow of restricted states; the arrow of time is the direction of increasing entropy, driven by incomplete knowledge |
-
-Time need not be fundamental. General relativity removes any preferred slicing, and quantum gravity sharpens the problem with the Wheeler-DeWitt equation. In OPH, time emerges from modular flow of restricted states. The arrow of time points along the direction in which records can be made and compared.
-
-**Additional lessons**:
-
-1. **Boltzmann**: Entropy measures the number of microstates compatible with a macrostate. Entropy increases because high-entropy states vastly outnumber low-entropy states.
-
-2. **Past principle**: The arrow of time exists because the Big Bang was a low-entropy state. Our model argues this is not merely an arbitrary input but can be read as a consistency requirement: observers need entropy gradients to form records, so a universe with observers appears to require a beginning far from equilibrium.
-
-3. **Jaynes**: Entropy measures ignorance. In the Jaynes program, MaxEnt gives the least-biased probability distribution consistent with the stated constraints.
-
-4. **Thermal Time principle**: Time is proposed to arise from the modular flow of our statistical state.
-
-5. **Tomita-Takesaki**: In the appropriate algebra-state setting, modular theory generates its own intrinsic time flow.
-
-6. **Jacobson**: In Jacobson's framework, Einstein's equations can be derived from thermodynamic assumptions; gravity can be read as equation-of-state-like.
-
-7. **Complexity**: Interior growth has been conjecturally linked to computational complexity. This is a suggestive bridge, not a settled account of time.
-
-8. **Records**: We remember the past because records require entropy flow from a low-entropy origin.
-
-9. **Bisognano-Wichmann**: In QFT wedges, Lorentz boosts are modular flow. Our screen analog follows once the recovery and MaxEnt structure is in place (Chapter 15).
+Time does not need to be laid down as a primitive external river. General
+relativity removes any preferred slicing. Quantum gravity sharpens that loss.
+OPH reads time from the inside, through the modular flow attached to a
+restricted state. The arrow points in the direction records can be made and
+kept. Boltzmann explains why entropy rises. Jaynes explains why ignorance has
+structure. Tomita-Takesaki supplies the clock. Bisognano-Wichmann ties that
+clock to relativity. Jacobson shows how the same thermodynamic language leans
+toward gravity.
 
 ---
 

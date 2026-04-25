@@ -130,10 +130,10 @@ In each case, the horizon is a boundary that limits what the observer can access
 
 Here's the key motivating insight: finite observer access naturally suggests an effective screen picture.
 
-For an observer in our universe:
-- There is an observer-dependent cosmological horizon scale
-- If they're near a black hole, there's an event horizon
-- If they're accelerating, there's a Rindler horizon
+For an observer in our universe, the accessible boundary can take several
+forms. There is an observer-dependent cosmological horizon scale. Near a black
+hole there is an event horizon. Under sustained acceleration there is a
+Rindler horizon.
 
 In the simplest symmetric situations, the relevant causal boundary is approximately spherical. The area of this sphere bounds the amount of information the observer can access.
 
@@ -165,9 +165,9 @@ The mathematical object describing the screen is the 2-sphere, $S^2$.
 
 $$S^2 = \{(x, y, z) \in \mathbb{R}^3 : x^2 + y^2 + z^2 = 1\}$$
 
-We can parameterize it with spherical coordinates $(\theta, \phi)$:
-- $\theta$ is the polar angle, from 0 at the North Pole to $\pi$ at the South Pole
-- $\phi$ is the azimuthal angle, from 0 to $2\pi$ around the equator
+We can parameterize it with spherical coordinates $(\theta,\phi)$. The angle
+$\theta$ runs from the North Pole to the South Pole, and $\phi$ runs around the
+equator from $0$ to $2\pi$.
 
 The metric is:
 
@@ -223,13 +223,10 @@ In classical physics, observers are implicitly outside the system-disembodied me
 
 ### Observers as Patterns in the Data
 
-An observer is a special kind of pattern in the horizon data-a subsystem with three key properties:
-
-**1. Bounded access**: The observer can only interact with a finite patch P of the screen. This patch defines what the observer can measure, know, and act upon. The boundary of the patch is the observer's horizon.
-
-**2. Stable records**: The observer contains internal correlations that persist over time-memory. When you measure something and remember the result, your brain has become correlated with the measured system. These correlations are the "records" that define measurement outcomes.
-
-**3. Self-modeling**: An observer can build compressed representations of its environment. Your brain doesn't store raw sensory data; it builds a model of the world.
+An observer is a special pattern in the horizon data. It has bounded access to
+a finite patch of the screen. It carries stable records, internal
+correlations that persist as memory. It also builds compressed models of its
+environment rather than storing raw data without structure.
 
 ### The Vortex Analogy
 
@@ -277,17 +274,19 @@ This computational picture is developed concretely through **quantum link models
 
 ### A Plausible Hardware Sketch
 
-The exact screen hardware is not the focus of this book. It is one active research direction in OPH.
+The exact screen hardware is not the focus of this book. The point here is the
+logic of the architecture rather than the engineering detail of the substrate.
 
 The current microphysics program studies one concrete reference architecture. Start with a finite cellulation of the sphere. Put small quantum registers on the links. Add small record registers on selected vertices or coarse cells. Enforce local gauge admissibility through Gauss checks. Let the faces carry local plaquette dynamics. Add local repair and synchronization moves that keep neighboring patches mutually consistent.
 
 In that picture, a patch is a boundary-fixed observable algebra carved out of the screen. An overlap is the shared interface where two patches read the same observables and the same edge-sector data. Records are stored in explicit finite registers, so measurement and observer memory are part of the same microscopic machine.
 
-This matters for a simple reason. It turns the screen from a philosophical image into a simulator target. The design can be compiled into ordinary qubits, and that makes it possible to test fixed-cutoff measurement, stable records, checkpoint and restoration, and observer synchronization inside one finite system.
+This matters for a simple reason. It turns the screen from a philosophical image into a simulator target. The design can be compiled into ordinary qubits, and that makes it possible to test finite-resolution measurement, stable records, restoration protocols, and observer synchronization inside one finite system.
 
 ## 3.10 Entanglement Creates Depth
 
-The screen gives a boundary. It does not yet explain why experience feels three-dimensional. The missing ingredient is entanglement.
+The screen gives a boundary. Three-dimensional depth appears when entanglement
+starts arranging the data into an interior.
 
 When parts of a quantum state are strongly correlated, they behave as one connected structure. In holographic settings this relation becomes quantitative: boundary entanglement constrains bulk geometry. The Ryu-Takayanagi formula and related results make that statement precise in the regimes where they apply.
 
@@ -297,20 +296,16 @@ Chapter 9 develops this in detail. In the present chapter, entanglement does one
 
 ## 3.11 The Reverse Engineering
 
-Let's trace the reverse engineering explicitly.
-
-**The intuitive picture**: Information scales with volume. Space is the fundamental container.
-
-**The hint**: Black hole entropy scales with area, and gravitational entropy bounds point toward boundary-limited information.
-
-**The lesson**: A boundary-first description becomes a strong candidate. On that reading, the boundary is primary and the bulk emergent.
-
-**The first-principles reframing**:
-
-1. In the symmetric constructions used here, each observer has an effective horizon that is naturally modeled by a spherical screen bounding accessible information
-2. The screen carries the fundamental data, limited by $S \leq A/(4\ell_P^2)$
-3. Entanglement patterns on the screen create the geometry of the emergent 3D bulk
-4. Different observers have different screens, but consistency on overlaps makes the emergent 3D world shared and stable
+Let us trace the reverse engineering explicitly. The intuitive picture says
+information scales with volume and space is the container. The hint is that
+black-hole entropy scales with area, with gravitational entropy bounds pushing
+toward boundary-limited information. The lesson is that a boundary-first
+description becomes the strongest candidate. In the symmetric constructions
+used here, each observer has an effective horizon naturally modeled by a
+spherical screen. That screen carries the fundamental data, limited by
+$S\leq A/(4\ell_P^2)$. Entanglement patterns on the screen create the geometry
+of the emergent three-dimensional bulk, and overlap consistency makes that bulk
+shared and stable across observers.
 
 The holographic principle is not introduced here as a philosophical preference. It is presented as the strongest explanatory reading of the hints reviewed in this chapter.
 
@@ -332,11 +327,13 @@ In the finite-resolution screen picture used here, continuous space is an effect
 
 ## 3.13 Where We Go Next
 
-We have established that:
-- Gravitational entropy bounds and holographic arguments push strongly toward horizon-sensitive information organization and away from naive volume counting
-- In the symmetric light-cone constructions used here, the effective screens are spherical as a consequence of causality
-- The amount of information is finite, bounded by area
-- Entanglement patterns on the screen create emergent 3D geometry
+We have established four linked facts. Gravitational entropy bounds and
+holographic arguments push away from naive volume counting and toward
+horizon-sensitive information organization. In the symmetric light-cone
+constructions used here, the effective screens are spherical as a consequence
+of causality. The amount of information is finite and bounded by area.
+Entanglement patterns on the screen create the emergent three-dimensional
+geometry.
 
 But we haven't yet explained dynamics. The screen we've described is static-it encodes information. What makes things happen? What creates the arrow of time?
 

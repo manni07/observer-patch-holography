@@ -18,22 +18,13 @@ as fundamental?
 
 ## 16.2 The Surprising Hint: The Classical World Is Not Fundamental
 
-Quantum physics breaks the intuitive picture in three ways:
-
-1. **Particles do not have definite paths.** In the double-slit experiment,
-   each particle explores multiple paths at once. The classical trajectory
-   appears only after interference and measurement.
-
-2. **Fields are more fundamental than particles.** The same electron can be
-   created or destroyed. A particle is a long-lived excitation of a field,
-   not a permanent object.
-
-3. **Energy is more than fuel.** It is a generator of time evolution, and it
-   is tied to symmetry. In relativity, energy and momentum are components of a
-   single object, and mass is energy at rest.
-
-The hint is clear: the classical picture is an emergent approximation.
-The question becomes: what makes classical physics work so well?
+Quantum physics breaks the intuitive picture in three directions at once.
+Particles do not follow single definite paths in the double-slit experiment.
+Fields are more basic than particles, because the same electron can be
+created and destroyed. Energy is more than fuel, because it generates time
+evolution and joins momentum inside one relativistic structure. The hint is
+clear. The classical picture is an emergent approximation. The real question
+is why it works so well.
 
 ## 16.3 The First-Principles Reframing: Matter as Stable Patterns
 
@@ -44,17 +35,14 @@ patterns are noisy and ephemeral. Some are stable: they survive overlap
 consistency, persist under modular time, and can be tracked across patches.
 Those stable patterns are what we call **particles**.
 
-The key reframing is:
-
-- **Matter is not a primitive substance.**
-- **Particles are not tiny billiard balls.**
-- **Matter is the set of robust, localized excitations of the net of
-  algebras on the screen.**
+Matter is not a primitive substance. Particles are not tiny billiard balls.
+Matter is the set of robust, localized excitations of the net of algebras on
+the screen.
 
 A useful analogy is a ripple in a pond. The water is the substrate, but the
 ripple is a pattern that moves and interacts. The ripple is not a separate
-thing; it is a stable excitation. Particles play the same role in the
-emergent EFT.
+thing. It is a stable excitation. Particles play the same role in the
+emergent effective theory.
 
 ## 16.4 From Stable Patterns to Concrete Particle Predictions
 
@@ -64,72 +52,69 @@ the zoo stops looking like a zoo.
 
 The first bridge is symmetry. Once Lorentz kinematics is recovered, a durable
 excitation is sorted by the familiar labels of relativistic physics: mass,
-spin, and helicity. Once the gauge branch is recovered, the charge bookkeeping
-also stops looking arbitrary. The realized branch fixes the Standard Model
+spin, and helicity. Once the gauge story is recovered, the charge bookkeeping
+also stops looking arbitrary. The realized package fixes the Standard Model
 quotient $SU(3)\times SU(2)\times U(1)/\mathbb Z_6$, the exact hypercharge
 lattice, and the counting chain $N_g=3$, $N_c=3$. Those are structural
 answers about what kinds of matter can exist at all.
 
-From there the particle package enters in a definite order.
+From there the particle package enters in a definite order. The structural
+carriers come first. The photon, the eight gluons, and the graviton are
+massless because they sit along redundancy directions of the overlap and
+gauge structure. A hard mass for any of them would spoil the gluing rules
+that let different patches describe the same physics. The same structural
+package also blocks gauge-mediated proton decay, because the realized gauge
+group is a product group and does not contain the extra leptoquark gauge
+bosons required by simple-group unification.
 
-- **Structural carriers.** The photon, the eight gluons, and the graviton are
-  massless because they sit along redundancy directions of the overlap and
-  gauge structure. A hard mass for any of them would spoil the gluing rules
-  that let different patches describe the same physics. This same structural
-  package also blocks gauge-mediated proton decay, because the realized gauge
-  group is a product group and does not contain the extra leptoquark gauge
-  bosons that simple-group unification would require.
+The electroweak transport family gives the weak-boson pair
 
-- **Electroweak bosons and the low-energy electromagnetic coupling.** One
-  electroweak transport family yields the weak-boson pair
+$$
+M_W = 80.377\,\mathrm{GeV}, \qquad
+M_Z = 91.18797809193725\,\mathrm{GeV},
+$$
 
-  $$
-  M_W = 80.377\,\mathrm{GeV}, \qquad
-  M_Z = 91.18797809193725\,\mathrm{GeV},
-  $$
+and the same family, followed along the unbroken electromagnetic channel to
+the long-distance Thomson limit, gives
 
-  and the same family, followed along the unbroken electromagnetic channel to
-  the long-distance Thomson limit, yields
+$$
+\alpha^{-1}(0)=137.035999177.
+$$
 
-  $$
-  \alpha^{-1}(0)=137.035999177.
-  $$
+The point is not that one more number has been fitted. The point is that the
+weak-boson pair and the familiar low-energy electromagnetic strength come from
+one continuous construction.
 
-  The payoff is simple: the weak-boson pair and the familiar low-energy
-  electromagnetic strength come from one branch of the same construction.
+The same electroweak core continues into the scalar and companion top values
 
-- **Higgs and top.** The same electroweak core continues into the scalar and
-  companion top values
+$$
+(m_H,m_t)=(125.1995304097179,\ 172.3523553288312)\,\mathrm{GeV}.
+$$
 
-  $$
-  (m_H,m_t)=(125.1995304097179,\ 172.3523553288312)\,\mathrm{GeV}.
-  $$
+The quark sector closes on one selected physical quark basis,
 
-  In plain language, the Higgs appears as the scalar continuation of the same
-  quantitative branch that produced the electroweak pair.
+$$
+(m_u,m_d,m_s,m_c,m_b,m_t)=
+(0.00216,\ 0.00470,\ 0.0935,\ 1.273,\ 4.183,\ 172.3523553288311)\,\mathrm{GeV},
+$$
 
-- **Quarks.** The quark sector closes on one selected physical quark basis:
+and these are running quark masses, not hadron masses. They belong to the
+short-distance particle description before QCD binds quarks into composite
+states.
 
-  $$
-  (m_u,m_d,m_s,m_c,m_b,m_t)=
-  (0.00216,\ 0.00470,\ 0.0935,\ 1.273,\ 4.183,\ 172.3523553288311)\,\mathrm{GeV}.
-  $$
+The neutrino sector is concrete as well:
 
-  These are running quark masses, not hadron masses. They belong to the
-  short-distance particle description before QCD binds quarks into composite
-  states. This is why OPH can speak cleanly about the quark sextet while still
-  treating hadrons as a separate bound-state problem.
+$$
+(m_{\nu_e},m_{\nu_\mu},m_{\nu_\tau})=
+(0.017454720257976796,\ 0.019481987935919015,\ 0.05307522145074924)\,\mathrm{eV},
+$$
 
-- **Neutrinos.** The neutrino branch is concrete as well:
-
-  $$
-  (m_{\nu_e},m_{\nu_\mu},m_{\nu_\tau})=
-  (0.017454720257976796,\ 0.019481987935919015,\ 0.05307522145074924)\,\mathrm{eV},
-  $$
-
-  together with definite Majorana phases on that branch. These values come
-  from the weighted-cycle neutrino lane, so the neutrino story lands as one
-  explicit emitted family in the OPH chain.
+together with definite Majorana phases in that construction. Taken together, the
+particle picture is larger than a handful of isolated numbers. OPH fixes the
+structural gauge package, the exact massless carriers, the $W/Z$ pair, the
+Thomson-limit electromagnetic coupling, the Higgs-top pair, the running quark
+sextet with Yukawas, and one neutrino family. Charged leptons need one
+absolute anchor. Hadrons require a separate nonperturbative bound-state step.
 
 Taken together, the particle picture is larger than a handful of isolated
 numbers. OPH fixes the structural gauge package, the exact massless carriers,
@@ -145,14 +130,11 @@ In ordinary physics, a particle is defined by symmetry. Wigner showed that
 classified by mass together with spin or helicity. This is more than a
 definition; it explains why particles have sharp representation labels.
 
-In OPH, this appears after two steps:
+In OPH, this appears once Lorentz kinematics is recovered on the geometric
+track described in Chapter 15 and once localized excitations organize into
+representations of that emergent symmetry in the effective theory. Particles
+are therefore the representation theory of emergent symmetries.
 
-1. **Lorentz kinematics is recovered on the extracted prime geometric subnet**
-   on the geometric cap branch described in Chapter 15.
-2. **Localized excitations organize into representations** of this emergent
-   symmetry in the EFT regime.
-
-So particles are **the representation theory of emergent symmetries**.
 A "mass" is the representation label that tells you how the excitation
 responds to time translations. A "spin" is the label for how it responds to
 rotations.
@@ -182,22 +164,17 @@ energy tensor. On null surfaces, the modular generator becomes an integral of
 $T_{kk}$ (null energy density), and in a UV CFT it reduces to the standard
 stress-tensor charge on small caps.
 
-So energy has a clean meaning:
-
-- **Energy is the charge that generates time translations**, and in the
-  emergent EFT it is encoded in the stress tensor $T_{ab}$.
-
-Conservation of energy then follows from symmetry: if the emergent action is
-invariant under time shifts, Noether's theorem gives a conserved energy.
+So energy has a clean meaning. It is the charge that generates time
+translations, and in the emergent effective theory it is encoded in the
+stress tensor $T_{ab}$. Conservation of energy then follows from symmetry: if
+the emergent action is invariant under time shifts, Noether's theorem gives a
+conserved energy.
 
 ## 16.7 Motion and Forces: Why Things Move the Way They Do
 
-Classical motion can be described in two equivalent ways:
-
-- **Force laws**: $F = ma$.
-- **Variational laws**: trajectories extremize an action.
-
-Both are effective descriptions. In OPH, motion is a property of
+Classical motion can be described in two equivalent languages. One uses force
+laws such as $F = ma$. The other uses variational laws in which trajectories
+extremize an action. Both are effective descriptions. In OPH, motion is a property of
 stable patterns moving under modular flow, observed consistently across
 patches. Forces describe how those patterns interact within the emergent EFT.
 
@@ -208,7 +185,8 @@ freedom in the form of effective equations of motion.
 
 The broad shape of the low-energy laws is set by the same consistency
 structure that gives us gauge symmetry in Chapter 14. The exact
-coupling-by-coupling story is carried by the quantitative particle and gravity branches.
+coupling-by-coupling story is carried by the quantitative particle and gravity
+picture built in the surrounding chapters.
 
 ## 16.8 Why the Principle of Least Action Appears
 
@@ -242,11 +220,9 @@ Historically it is called "least" action, but what really survives is
 
 ## 16.9 The Classical Limit: Why the World Looks Deterministic
 
-Classical physics is an **emergent approximation** that appears when:
-
-- The action is large compared to $\hbar$ (stationary phase dominates).
-- The system is strongly entangled with its environment (decoherence).
-- Observers coarse-grain over microscopic details (MaxEnt selection).
+Classical physics is an emergent approximation. It appears when the action is
+large compared to $\hbar$, when the system is strongly entangled with its
+environment, and when observers coarse-grain over microscopic details.
 
 ### Why Decoherence Matters for Consistency
 
@@ -256,12 +232,17 @@ Here's why. The overlap condition demands that observers agree on shared observa
 
 Decoherence solves this by rapidly entangling macroscopic objects with their environments. This entanglement has a specific structure: it correlates the object's state with environmental "records" that can be accessed by multiple observers independently.
 
-The key insight from **quantum Darwinism** (Chapter 6) is that only certain states, pointer states, get their information redundantly copied into the environment. These are the states that many observers can access and agree upon. Coherent superpositions do not get copied into stable public records; once the system is entangled with the environment, the interference becomes locally inaccessible.
+Quantum Darwinism adds one decisive ingredient. Only certain states, the pointer
+states, get their information redundantly copied into the environment. Those
+are the states many observers can access and agree upon. Coherent
+superpositions do not get copied into stable public records, and once the
+system is entangled with the environment the interference becomes locally
+inaccessible.
 
-**Classical facts are quantum states that pass the consistency filter.** A "classical" property is one that:
-1. Gets redundantly encoded in the environment
-2. Can be accessed through multiple independent channels
-3. Produces agreement when different observers check
+**Classical facts are quantum states that pass the consistency filter.** A
+classical property is one whose information is redundantly encoded in the
+environment, accessible through multiple channels, and public enough that
+different observers can recover the same result.
 
 The pointer basis, the set of states that decohere into classical alternatives, is not arbitrary. It is constrained by the system-environment coupling and by which observables can be stably shared across patches. States that can't be consistently shared across patches don't survive as "real" in the intersubjective sense.
 
@@ -279,20 +260,16 @@ The quantum world is larger but less shareable. Superpositions exist, but they c
 
 ## 16.10 Reverse Engineering Summary
 
-| Intuitive Picture | Surprising Hint | First-Principles Reframing |
-|---|---|---|
-| Matter is fundamental stuff moving through space | Quantum interference and creation/annihilation show particles are not permanent objects | Matter is a stable excitation pattern in the screen net |
-| The particle catalog is an arbitrary list | Gauge structure and one calibration branch fix concrete particle rows | Matter comes with a constrained package of charges, carriers, couplings, and masses |
-| Energy is just a fuel | Energy is a generator tied to symmetry | Energy is the charge of emergent time translations (stress tensor) |
-| Motion follows force laws | Trajectories emerge from interference | Least action is the classical limit of quantum consistency |
-| Classical physics is the fundamental layer | Quantum mechanics underlies classical physics | Classical physics emerges because only consistent patterns survive the overlap filter |
-
 Classical physics is not the starting point. It appears when quantum
 information on the screen organizes into stable patterns, modular time becomes
-geometric, and overlap consistency enforces locality. Particles, energy, and
-motion are the vocabulary of that stable regime.
-
-**Why classical physics emerges**: The overlap condition demands that observers agree on shared observables. Decoherence, the rapid entanglement of macroscopic objects with their environments, is part of what makes stable shared records possible. Only pointer states that get redundantly copied into the environment can be consistently shared across patches. Classical facts are quantum states that pass the consistency filter. The deterministic, objective world of everyday experience is the public face of a quantum reality too fragile to be broadly shared.
+geometric, and overlap consistency enforces locality. Matter is not primitive
+stuff. It is a family of stable excitation patterns. The particle catalogue is
+not arbitrary. It comes with a constrained package of charges, carriers,
+couplings, and masses. Energy is not fuel. It is the charge of time
+translations. Motion does not need a separate mystical principle. Stationary
+action is the classical limit of quantum interference. The deterministic world
+of everyday life is the public face of a quantum reality that becomes
+shareable only after decoherence and redundancy have done their work.
 
 We've seen that spacetime, particles, and classical physics all emerge from the screen through consistency requirements. But why these particular laws? Why these constants? Could the universe have been different?
 

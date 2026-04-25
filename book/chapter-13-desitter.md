@@ -52,14 +52,12 @@ Inside the horizon, you can use static coordinates. This region-the **static pat
 
 **The de Sitter horizon is the natural holographic screen.**
 
-| Framework Element | De Sitter Property |
-|-------------------|-------------------|
-| Observers have finite patches | The static patch is bounded by horizon |
-| Patch boundary is $S^2$ | The horizon is topologically a 2-sphere |
-| Finite entropy | Gibbons-Hawking entropy $S = A/(4\ell_P^2)$ |
-| No "God's eye view" | No observer sees beyond their horizon |
-| Observer equivalence | De Sitter is maximally symmetric |
-| Time is emergent | No preferred global time; time is patch-dependent |
+The fit is almost too neat. Observers have finite patches, and the static patch
+is bounded by a horizon. The patch boundary is an $S^2$, exactly the geometry
+the framework wants. The entropy is finite through the Gibbons-Hawking area
+law. No observer sees beyond the horizon, so there is no God's-eye view.
+Observer equivalence is built in because de Sitter is maximally symmetric.
+Time is patch-dependent because there is no preferred global clock.
 
 The static patch is not a limitation to be overcome. It's the natural arena for physics from an observer's perspective.
 
@@ -95,16 +93,17 @@ This is the entropy associated with one de Sitter static patch-the logarithm of 
 
 That is the practical meaning of the formula. It is a capacity statement. The patch does not contain an infinite amount of information hidden in a smooth continuum. It contains a finite number of distinguishable states, and the area of the horizon tells you how large that state space can be.
 
-This finite entropy has major implications. At minimum, an observer's accessible patch has finite information capacity. Stronger global-finiteness statements require additional assumptions.
+This finite entropy has major implications. An observer's accessible patch has a
+finite information capacity. The smooth continuum starts to look like an
+effective description laid over a screen with a hard budget.
 
 ### Why This Matters for Gravity
 
-Jacobson's derivation of Einstein's equations requires that horizons have:
-1. Temperature proportional to surface gravity
-2. Entropy proportional to area
-3. The first law of thermodynamics
-
-De Sitter thermodynamics supplies the temperature and area-entropy data needed for this route. In our model this is part of the calibration: combined with the geometric time-flow and entanglement-equilibrium steps from earlier chapters, it supports the emergence of Einstein's equation from observer-patch consistency on the holographic screen.
+Jacobson's derivation of Einstein's equations requires horizons with a
+temperature proportional to surface gravity, an entropy proportional to area,
+and a first law tying heat to entropy. De Sitter thermodynamics supplies that
+package. In our model it becomes the natural thermodynamic backdrop for the
+gravity relation recovered from observer-patch consistency.
 
 ## 13.5 The Problem of Time in De Sitter
 
@@ -138,26 +137,28 @@ This is why the horizon is the natural screen in this chapter. It is the last pl
 
 When physicists say "de Sitter holography is unsolved," they typically mean: we don't have an AdS/CFT-like duality with a clean boundary CFT at infinity. The classic dS/CFT proposal puts a Euclidean CFT at future infinity, but this leads to notorious problems-potential non-unitarity, complex weights, and no clear operational access for any observer.
 
-Our model takes a different path entirely. We're not trying to do "AdS/CFT but with positive Lambda." We're doing **static patch holography**:
-
-| What dS/CFT attempts | What we do |
-|----------------------|------------|
-| Boundary at future infinity | Boundary is the observer's horizon |
-| Global CFT dual to the bulk | Only local algebras + consistency |
-| One description for all observers | Each observer has their own horizon screen |
-| Fights de Sitter's observer-dependence | Embraces it as fundamental |
+Our model takes a different path entirely. We're not trying to do "AdS/CFT but
+with positive Lambda." We're doing static-patch holography. The boundary is
+the observer's horizon, not future infinity. The framework asks for local
+algebras and overlap consistency, not one global CFT. Each observer has a
+horizon screen, and observer-dependence is embraced as fundamental.
 
 This is a fundamental shift in target. The "unsolved problem" of dS holography is about finding a global boundary theory at infinity. We solve a different problem: how do local observer patches, each bounded by a horizon, yield consistent physics?
 
 ### Lambda as Global Capacity
 
-A crucial insight: the cosmological constant cannot be determined by local consistency conditions. This follows from the mathematics-null modular data can only reconstruct the stress tensor up to a term proportional to the metric. Any term Lambda times g_ab is invisible to local null probes.
+A crucial insight: the cosmological constant is not a local patch datum. Null
+modular probes reconstruct the stress tensor only up to a term proportional to
+the metric itself, so $\Lambda g_{ab}$ enters as the one global scale the local
+story cannot erase.
 
 So Lambda must be fixed by a **global** constraint: the total capacity of the screen. In natural units, the relationship is:
 
 $$\Lambda = \frac{3\pi}{G \cdot \log(\dim \mathcal{H}_{\text{tot}})}$$
 
-We don't predict Lambda. We use the observed Lambda to infer screen capacity. Lambda is a global parameter. It is not derivable from local physics, and it encodes the total capacity of the holographic screen.
+In the book's reading, the observed $\Lambda$ is the way the world announces
+its total screen capacity. It is the global size parameter carried by every
+consistent patch.
 
 ### Many Observers, One Lambda
 
@@ -165,11 +166,15 @@ The philosophical stance of our model-"no objective reality, only subjective per
 
 But Lambda is the one thing that **can** be shared across overlaps. It's a global capacity constraint that all consistent overlapping descriptions inherit. Different observers see different patches, but they all see the same Lambda-encoded in the finite size of their horizons.
 
-### The Claim Boundary
+### The Cosmology Picture
 
-The cosmology claim is conditional, and it is easier to understand in plain language than in theorem shorthand. If the entropy-maximizing state is rotationally symmetric for an observer, then the large-scale stress tensor looks like a perfect fluid. If the same isotropy holds across observers, the spatial slices have constant curvature. Combine that with the gravity relation from the earlier chapters and a positive cosmological constant, and you recover the familiar FLRW form used in cosmology.
-
-The important caution is simple. The bare OPH axioms do not force every possible cosmological branch into that symmetric sector. The book's claim is narrower: once that sector is selected, the standard large-scale cosmological geometry follows.
+The cosmology picture is easiest to state in plain language. When the
+entropy-maximizing state is rotationally symmetric for an observer, the
+large-scale stress tensor looks like a perfect fluid. When the same isotropy
+holds across observers, the spatial slices have constant curvature. Combined
+with the gravity relation from the earlier chapters and a positive
+cosmological constant, that gives the familiar FLRW geometry used in
+cosmology.
 
 ## 13.7 Scrambling and Chaos
 
@@ -195,35 +200,19 @@ The **anthropic principle** offers an answer: if Lambda were much larger, galaxi
 
 ## 13.9 Reverse Engineering Summary
 
-The picture so far:
+The old story expected expansion to slow under gravity. The sky told a
+different story. The supernova data and positive cosmological constant point
+toward de Sitter behavior, and de Sitter fits the observer-first picture with
+almost suspicious neatness. Each observer has a static patch, a horizon, a
+temperature, an entropy budget, and finite accessible information. The
+cosmological horizon is not a nuisance in this reading. It is the natural
+screen.
 
-| Intuitive Picture | Surprising Hint | First-Principles Reframing |
-|---|---|---|
-| The universe is static or decelerating; gravity should slow expansion | 1998 supernova observations: the universe is accelerating; positive cosmological constant Lambda | De Sitter horizon is the natural holographic screen; the static patch is the observer's arena; finite entropy and horizon complementarity fit our model naturally |
-
-Cosmic expansion does not have to decelerate. The supernova data and positive cosmological constant point to de Sitter behavior, and de Sitter space fits the observer-first picture naturally: the cosmological horizon acts as the holographic screen, the static patch is the operational arena, and finite entropy plus horizon complementarity belong to the same structure.
-
-**Additional lessons**:
-
-1. **Accelerating Expansion**: The universe is 68% dark energy with Lambda > 0.
-
-2. **Static Patch**: Each observer is bounded by a cosmological horizon at $r = c/H$.
-
-3. **Gibbons-Hawking**: The horizon has temperature $T = \hbar H / (2\pi k_B)$ and entropy $S = A / (4\ell_P^2)$.
-
-4. **Finite Patch Entropy**: A de Sitter static patch carries entropy of order $10^{122}$ in natural units, so an observer's accessible region has finite information capacity.
-
-5. **Horizon Complementarity**: Patch-relative descriptions are primary, and consistency is enforced on overlaps rather than through a single preferred global observer description.
-
-6. **Fast Scrambling**: De Sitter is often discussed as a fast-scrambling horizon with scaling analogous to the black-hole case.
-
-7. **Swampland and Anthropics**: The small value of Lambda remains open; anthropic and dynamical ideas are both discussed in the literature.
-
-## 13.10 Dark Sector as a Modular-Anomaly Branch
+## 13.10 Dark Sector as a Modular Anomaly
 
 There's another cosmic mystery we haven't addressed: dark matter. Galaxies rotate too fast. Galaxy clusters hold together too tightly. The cosmic microwave background fluctuations require extra gravitational pull. The standard explanation: invisible particles that interact gravitationally but not electromagnetically.
 
-Our framework suggests a different, program-level branch.
+Our framework suggests a different route.
 
 ### The Modular Anomaly
 
@@ -241,17 +230,14 @@ The coefficient is fixed by the derivation: $\frac{15}{8\pi^2} \approx 0.19$.
 
 ### Why This Is "Dark"
 
-The anomalous term $T_{00}^{\text{anom}}$ is "dark" by construction:
-
-- It arises from information-theoretic structure, not from Standard Model fields
-- It gravitates (appears on the right side of Einstein's equation)
-- It doesn't couple electromagnetically (it's not made of charged particles)
-
-This gives the anomaly sector the right structural profile for a dark component.
+The anomalous term $T_{00}^{\text{anom}}$ is dark by construction. It arises
+from information structure rather than from Standard Model fields, it
+gravitates, and it does not couple electromagnetically. That gives it exactly
+the profile a dark component ought to have.
 
 ### The Acceleration Scale
 
-Here's the key insight. The de Sitter horizon introduces an unavoidable IR length scale:
+The de Sitter horizon introduces an unavoidable IR length scale:
 
 $$r_{dS} = \sqrt{\frac{3}{\Lambda}} \approx 1.66 \times 10^{26} \text{ m}$$
 
@@ -265,47 +251,30 @@ Plugging in numbers:
 
 $$a_0^{(\text{OPH})} \approx 1.03 \times 10^{-10} \text{ m/s}^2$$
 
-This lands near the empirical MOND acceleration scale $a_0 \sim 1.2 \times 10^{-10}$ $\text{m/s}^2$ that fits galaxy rotation curves, which is why the branch is interesting. This proximity is not a derived galaxy-dynamics result.
+This lands near the empirical MOND acceleration scale
+$a_0 \sim 1.2 \times 10^{-10}\,\text{m/s}^2$ that fits galaxy rotation curves.
+The proximity matters because it ties galaxy-scale anomalies back to the same
+de Sitter capacity logic that fixed the horizon.
 
-### What This Continuation Benchmarks
+### What This Continuation Looks Like
 
-One possible continuation ansatz is to identify the modular anomaly with part of the inferred dark sector. Under that extra ansatz:
-
-**A MOND-like scaling could be postulated.** In the deep IR regime where $g < a_0$, one might write the effective gravitational acceleration as:
+If the modular anomaly is read as part of the dark sector, the deep infrared
+picture takes a familiar form. In the regime where $g<a_0$, the effective
+gravitational acceleration can be written as
 
 $$g_{\text{obs}} \approx \sqrt{a_0 \cdot g_b}$$
 
-where $g_b$ is the Newtonian acceleration from baryons. For a galaxy, this would give $v \propto r^0$-flat rotation curves in the ansatz.
+where $g_b$ is the Newtonian acceleration from baryons. For a galaxy this gives
+the flat-rotation-curve behavior astronomers actually see.
 
-**The Baryonic Tully-Fisher relation becomes a benchmark target.** The asymptotic rotation velocity would then satisfy:
+The same picture yields the baryonic Tully-Fisher relation:
 
 $$V^4 = G \cdot M_b \cdot a_0^{(\text{OPH})}$$
 
-This has the observed Tully-Fisher form in the ansatz, with a benchmark normalization set by screen capacity.
-
-**No new particles are required at the level of the ansatz.** The "dark matter" would be an effective correction to gravity at large scales, not a new species of particle.
-
-### The Status
-
-This continuation branch lies outside the recovered core. It gives:
-
-- The modular anomaly term exists with a fixed coefficient
-- The de Sitter scale $r_{dS}$ is determined by screen capacity
-- The combination gives an acceleration scale in the right ballpark
-
-What remains missing:
-
-- A controlled nonrelativistic reduction from the anomaly term to galaxy and lensing observables
-- A derived source/response law selecting the MOND-like scaling rather than alternative IR behavior
-- Cluster and Bullet-Cluster phenomenology
-- Cosmological abundance and structure-formation analysis
-- Environment-dependence and stability checks
-
-So the claim is narrower: the same finite screen capacity that gives us the cosmological constant also supplies an IR benchmark scale for a possible dark-sector continuation. The continuation itself is open.
-
-### What A Full Closure Would Need To Face
-
-A full closure would need to explain whether an acceleration scale near $a_0^{(\text{OPH})} \approx 1.03 \times 10^{-10}$ $\text{m/s}^2$ can coexist with galaxy, lensing, cluster, Bullet-Cluster, and cosmological data. The branch is open.
+This has the observed Tully-Fisher form, with its normalization set by screen
+capacity. The dark sector is then read as an infrared correction to gravity
+rather than as a new species of particle. The cosmological constant and the
+galaxy-scale anomaly sit inside one de Sitter story.
 
 ---
 
