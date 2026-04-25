@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Record the historical sharpest target-free D10 repair split.
+"""Record the current sharpest target-free D10 repair split.
 
-Chain role: preserve the sharpest pre-theorem split beneath the promoted
-target-free D10 repair law.
+Chain role: preserve the sharpest open split beneath the current target-free
+D10 repair candidate.
 
 Mathematics: two statements are recorded. First, the current emitted source data
 only determine a two-parameter quadratic repair family, so the target-free
@@ -66,8 +66,8 @@ def build_artifact(source_pair: dict, *, color_count: int) -> dict:
     return {
         "artifact": "oph_d10_ew_minimal_conditional_promotion",
         "generated_utc": _timestamp(),
-        "status": "historical_split_superseded_by_target_free_repair_theorem",
-        "superseded_by": "EWTargetFreeRepairValueLaw_D10",
+        "status": "open_split_beneath_target_free_candidate",
+        "candidate_object_id": "EWTargetFreeRepairValueLaw_D10",
         "source_artifact": source_pair.get("artifact"),
         "unconditional_theorem": {
             "name": "current_corpus_underdetermination_of_forward_d10_repair_law",
@@ -126,7 +126,7 @@ def build_artifact(source_pair: dict, *, color_count: int) -> dict:
             },
         },
         "notes": [
-            "This artifact is retained as historical scaffolding beneath the promoted target-free D10 repair theorem.",
+            "This artifact records the current open split beneath the target-free D10 repair candidate.",
             "It records the sharpest earlier split between source-only underdetermination and the smallest honest conditional closure route.",
             "The W/Z mass lane and the Ward-projected electromagnetic theorem sit above this split on separate D10 surfaces.",
         ],

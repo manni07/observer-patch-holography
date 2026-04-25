@@ -1,0 +1,81 @@
+{
+  "artifact": "oph_d10_ew_common_transport_gap_report",
+  "benchmark_reference_surface": {
+    "MW_pole_gev": 80.377,
+    "MZ_pole_gev": 91.18797809193725,
+    "source_label": "PDG 2025 API",
+    "w_summary_id": "S043M",
+    "z_summary_id": "S044M"
+  },
+  "emitted_source_only_transport": {
+    "chart_coordinates": {
+      "delta_n_tree_exact": 0.00023462861448267432,
+      "tau2_tree_exact": -0.0002311551936776595
+    },
+    "coherent_output_quintet": {
+      "MW_pole": 80.32761139938977,
+      "MZ_pole": 91.13194079503025,
+      "alpha_em_eff_inv": 132.75461375350363,
+      "sin2w_eff": 0.22305823563867866,
+      "v_report": 246.6174823334856
+    },
+    "kind": "current_source_only_transport_candidate",
+    "repaired_couplings": {
+      "alpha2_prime": 0.03377008189620809,
+      "alphaY_prime": 0.009695314669219836
+    }
+  },
+  "family_source_id": "d10_running_tree",
+  "generated_utc": "2026-04-25T10:05:52Z",
+  "notes": [
+    "This artifact is compare-only: the required common transport uses benchmark W/Z values as inputs and is not a source-only OPH prediction.",
+    "The current source-only transport is honest only to the extent that it is emitted from the D10 source basis with no frozen benchmark input.",
+    "A robust common transport law should keep this gap small for the physically derived P; if the gap grows materially, the source-only transport formulas are not yet the right running-to-pole map."
+  ],
+  "observable_gap_to_benchmark": {
+    "MW_pole_gev": -0.04938860061022865,
+    "MZ_pole_gev": -0.05603729690700732,
+    "alpha_em_eff_inv": 0.16315357661730445,
+    "max_mass_gap_mev": 56.03729690700732,
+    "sin2w_eff": -9.825817054442965e-08
+  },
+  "p": 1.6309681897,
+  "required_common_transport": {
+    "chart_coordinates": {
+      "delta_n_tree_exact": 0.0007900668983525701,
+      "tau2_tree_exact": 0.0009986178032674875
+    },
+    "coherent_output_quintet": {
+      "MW_pole": 80.377,
+      "MZ_pole": 91.18797809193725,
+      "alpha_em_eff_inv": 132.59146017688622,
+      "sin2w_eff": 0.22305833389684943,
+      "v_report": 246.6174823334856
+    },
+    "kind": "freeze_once_compare_only_required_transport",
+    "repaired_couplings": {
+      "alpha2_prime": 0.033811621033015896,
+      "alphaY_prime": 0.00970724596584435
+    }
+  },
+  "running_family": {
+    "MW_run_gev": 80.33689708153138,
+    "MZ_run_gev": 91.59613026585075,
+    "alpha_em_inv_mz": 128.3079639392109,
+    "sin2w_mz": 0.23073520955323926,
+    "v_report_gev": 246.6174823334856
+  },
+  "status": "compare_only_diagnostic",
+  "transport_gap": {
+    "alpha2_prime": -4.15391368078083e-05,
+    "alphaY_prime": -1.1931296624514628e-05,
+    "delta_n_tree_exact": -0.0005554382838698958,
+    "tau2_tree_exact": -0.001229772996945147
+  },
+  "verdict": {
+    "classification": "fails_required_benchmark_transport",
+    "default_p_behavior_note": "At this P the current source-only law does not reproduce the benchmark-required transport.",
+    "max_chart_gap": 0.001229772996945147,
+    "max_mass_gap_mev": 56.03729690700732
+  }
+}

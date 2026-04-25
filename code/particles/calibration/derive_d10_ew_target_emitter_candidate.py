@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Record the historical source-only target-free D10 repair candidate.
+"""Record the strongest current source-only target-free D10 repair candidate.
 
-Chain role: preserve the strongest prior source-only target-emitter candidate
-after the target-free D10 repair law has been promoted to theorem status.
+Chain role: preserve the strongest current source-only target-emitter candidate
+beneath the still-open target-free D10 repair value law.
 
 Mathematics: build a single scalar `lambda_EW` from the emitted D10 source data
 and use it to emit a coherent target-free candidate for `(tau2_tree_exact,
@@ -85,9 +85,9 @@ def build_artifact(source_pair: dict, references: dict) -> dict:
     return {
         "artifact": "oph_d10_ew_target_emitter_candidate",
         "generated_utc": _timestamp(),
-        "status": "historical_candidate_promoted_to_theorem",
+        "status": "strongest_current_source_only_candidate",
         "object_id": "EWTargetEmitter_D10",
-        "promoted_to": "EWTargetFreeRepairValueLaw_D10",
+        "candidate_for": "EWTargetFreeRepairValueLaw_D10",
         "proof_gate": "single_family_single_P_no_mixed_readout",
         "family_source_id": "d10_running_tree",
         "basis": {
@@ -152,8 +152,8 @@ def build_artifact(source_pair: dict, references: dict) -> dict:
             "delta_alphaY_tree_compare_only": comparison_delta_alphaY_parallel + comparison_delta_alphaY_perp,
         },
         "honesty_note": (
-            "This source-only candidate is retained as historical scaffolding beneath the promoted "
-            "target-free D10 repair theorem."
+            "This source-only candidate is the strongest current candidate beneath the still-open "
+            "target-free D10 repair value law; it is not promoted to theorem status."
         ),
     }
 

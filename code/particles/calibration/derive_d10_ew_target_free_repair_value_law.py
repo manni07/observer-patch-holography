@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Promote the source-only D10 electroweak repair law to theorem status.
+"""Record the current source-only D10 electroweak repair candidate.
 
-Chain role: emit the exact target-free D10 electroweak repair package from the
-source-only D10 basis and the promoted source-only theorem.
+Chain role: emit the current target-free D10 electroweak repair candidate from
+the source-only D10 basis without overstating its closure status.
 
 Mathematics: define the source-only emitter scalar
 `lambda_EW = eta_source^2 / (4 * beta_EW)`, then emit the unique repair chart
@@ -13,7 +13,7 @@ OPH-derived inputs: the emitted D10 source pair and compact current-carrier
 slice, with the frozen-target repair surface retained only for compare-only
 validation.
 
-Output: a machine-readable theorem artifact for
+Output: a machine-readable candidate artifact for
 `EWTargetFreeRepairValueLaw_D10`.
 """
 
@@ -90,10 +90,14 @@ def build_artifact(source_pair: dict, references: dict) -> dict:
     return {
         "artifact": "oph_d10_ew_target_free_repair_value_law",
         "generated_utc": _timestamp(),
-        "status": "closed",
+        "status": "candidate_only",
         "object_id": "EWTargetFreeRepairValueLaw_D10",
-        "proof_gate": "single_family_single_P_no_mixed_readout",
+        "proof_gate": "blocked_by_current_corpus_underdetermination",
         "phase_tier": "phase_ii_calibration",
+        "promotion_allowed": False,
+        "promotion_blockers": [
+            "current_corpus_underdetermination_of_forward_d10_repair_law",
+        ],
         "family_source_id": "d10_running_tree",
         "basis": {
             "alpha2_mz": alpha_2,
@@ -171,9 +175,10 @@ def build_artifact(source_pair: dict, references: dict) -> dict:
             "delta_sin2w_eff": (alphaY_prime / alpha_sum_prime) - (alphaY_frozen / alpha_sum_frozen),
         },
         "notes": [
-            "This theorem records the closed source-only D10 mass-side object beneath the Ward-projected electromagnetic transport family.",
+            "This artifact records the current source-only D10 mass-side candidate beneath the Ward-projected electromagnetic transport family.",
+            "The unconditional source-only underdetermination theorem remains the honesty boundary on the present corpus, so this candidate is not promoted to theorem status.",
             "The freeze-once coherent repair law serves as compare-only validation on the same W/Z mass lane.",
-            "This closes the D10 electroweak mass-side lane on the Phase II calibration tier; the physical fine-structure constant is read separately on the Ward-projected U(1)_Q transport family.",
+            "At the repo default P this candidate nearly coincides numerically with the frozen benchmark surface, but that numerical coincidence is not by itself a proof of target-free closure.",
         ],
     }
 

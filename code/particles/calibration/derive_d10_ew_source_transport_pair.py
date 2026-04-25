@@ -43,13 +43,7 @@ def _quintet(alpha_y: float, alpha2: float, v: float) -> dict[str, float]:
     }
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser(description="Build the reduced D10 electroweak source transport pair.")
-    parser.add_argument("--input", default=str(DEFAULT_INPUT))
-    parser.add_argument("--output", default=str(DEFAULT_OUT))
-    args = parser.parse_args()
-
-    payload = json.loads(Path(args.input).read_text(encoding="utf-8"))
+def build_artifact(payload: dict[str, object]) -> dict[str, object]:
     core = dict(payload.get("core_source", {}))
     reported = dict(payload.get("reported_outputs", {}))
     alpha1 = float(core["alpha1_mz"])
@@ -279,6 +273,17 @@ def main() -> int:
             "No reference-fit W/Z slice is emitted here. This artifact stays predictive-only and records only the OPH seed family plus its first nonzero source-side trial.",
         ],
     }
+    return artifact
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Build the reduced D10 electroweak source transport pair.")
+    parser.add_argument("--input", default=str(DEFAULT_INPUT))
+    parser.add_argument("--output", default=str(DEFAULT_OUT))
+    args = parser.parse_args()
+
+    payload = json.loads(Path(args.input).read_text(encoding="utf-8"))
+    artifact = build_artifact(payload)
 
     out_path = Path(args.output)
     out_path.parent.mkdir(parents=True, exist_ok=True)

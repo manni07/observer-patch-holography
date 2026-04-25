@@ -9,6 +9,7 @@
     "eta_source": 0.022147000871961295,
     "v_report_gev": 246.76711732749683
   },
+  "candidate_for": "EWTargetFreeRepairValueLaw_D10",
   "coherent_emitted_quintet": {
     "MW_pole": 80.37700001539531,
     "MZ_pole": 91.18797807794321,
@@ -50,12 +51,11 @@
     "lambda_value": 0.00022769874427635073
   },
   "family_source_id": "d10_running_tree",
-  "generated_utc": "2026-04-13T06:29:53Z",
-  "honesty_note": "This source-only candidate is retained as historical scaffolding beneath the promoted target-free D10 repair theorem.",
+  "generated_utc": "2026-04-25T10:05:51Z",
+  "honesty_note": "This source-only candidate is the strongest current candidate beneath the still-open target-free D10 repair value law; it is not promoted to theorem status.",
   "object_id": "EWTargetEmitter_D10",
-  "promoted_to": "EWTargetFreeRepairValueLaw_D10",
   "proof_gate": "single_family_single_P_no_mixed_readout",
-  "status": "historical_candidate_promoted_to_theorem",
+  "status": "strongest_current_source_only_candidate",
   "target_emitter_law": {
     "delta_alpha2_tree": -7.808301031916019e-06,
     "delta_alphaY_parallel": 2.3421396282673238e-06,

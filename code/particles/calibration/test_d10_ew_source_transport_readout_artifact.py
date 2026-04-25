@@ -50,8 +50,8 @@ def test_d10_source_transport_readout_uses_predictive_seed_trial() -> None:
     assert payload["artifact"] == "oph_d10_ew_source_transport_readout"
     assert public["MW_pole"] > 0.0
     assert public["MZ_pole"] > 0.0
-    assert payload["predictive_mass_promotion_allowed"] is True
-    assert payload["predictive_promotion_allowed"] is True
+    assert payload["predictive_mass_promotion_allowed"] is False
+    assert payload["predictive_promotion_allowed"] is False
     assert payload["public_surface_candidate_allowed"] is True
     assert payload["predictive_population_closed"] is True
     assert payload["predictive_population_verdict"] == "closed_current_carrier_nonexact_running_quintet"
@@ -60,31 +60,32 @@ def test_d10_source_transport_readout_uses_predictive_seed_trial() -> None:
     assert payload["tau2_current_carrier_obstruction_status"] == "closed_smaller_primitive"
     assert payload["exact_mass_pair_chart_current_carrier_status"] == "closed_smaller_primitive"
     assert payload["w_anchor_neutral_shear_factorization_status"] == "closed_freeze_once_coherent_repair_law"
-    assert payload["active_builder_smallest_missing_object"] is None
+    assert payload["active_builder_smallest_missing_object"] == "EWTargetFreeRepairValueLaw_D10"
     assert payload["current_carrier_builder_local_frontier"] == "EWExactMassPairSelector_D10"
-    assert payload["smallest_predictive_missing_object"] is None
-    assert payload["broader_honest_repair_frontier"] is None
+    assert payload["smallest_predictive_missing_object"] == "EWTargetFreeRepairValueLaw_D10"
+    assert payload["broader_honest_repair_frontier"] == "EWTargetFreeRepairValueLaw_D10"
     assert payload["exact_pdg_wz_frontier"] == "EWTargetFreeRepairValueLaw_D10"
-    assert payload["target_free_repair_value_law_status"] == "closed"
+    assert payload["target_free_repair_value_law_status"] == "candidate_only"
     assert payload["forward_transmutation_certificate_status"] == "closed_forward_p_to_t_map"
     assert payload["forward_transmutation_certificate_object_id"] == "EWForwardTransmutationCertificate_D10"
     assert payload["exact_closure_emitted_quintet"]["alpha_em_eff_inv"] > 0.0
     assert payload["selected_population_point"]["tau_2"] == 0.0
     assert payload["quartet_atomicity"]["all_four_readouts_share_one_population_point"] is True
     assert payload["quartet_atomicity"]["independent_post_population_readout_scalar_remaining"] is False
-    assert abs(mass_pair["tau_2"] - (-2.311623001746158e-4)) < 1.0e-15
-    assert abs(mass_pair["delta_n_dagger"] - 2.346358802434819e-4) < 1.0e-15
-    assert abs(mass_pair["MW_pole"] - 80.37700001539531) < 1.0e-12
-    assert abs(mass_pair["MZ_pole"] - 91.18797807794321) < 1.0e-12
-    assert abs(payload["public_emitted_quintet"]["MW_pole"] - 80.37700001539531) < 1.0e-12
-    assert abs(payload["public_emitted_quintet"]["MZ_pole"] - 91.18797807794321) < 1.0e-12
+    assert mass_pair["status"] == "freeze_once_coherent_repair_exact"
+    assert abs(mass_pair["tau_2"] - (-2.3116268316325517e-4)) < 1.0e-15
+    assert abs(mass_pair["delta_n_dagger"] - 2.3463639031113336e-4) < 1.0e-15
+    assert abs(mass_pair["MW_pole"] - 80.377) < 1.0e-12
+    assert abs(mass_pair["MZ_pole"] - 91.18797809193725) < 1.0e-12
+    assert abs(payload["public_emitted_quintet"]["MW_pole"] - 80.377) < 1.0e-12
+    assert abs(payload["public_emitted_quintet"]["MZ_pole"] - 91.18797809193725) < 1.0e-12
     assert payload["public_emitted_quintet"]["alpha_em_eff_inv"] is None
     assert payload["public_emitted_quintet"]["sin2w_eff"] is None
-    assert abs(payload["public_mass_lane_quintet"]["alpha_em_eff_inv"] - 132.7524088191668) < 1.0e-12
+    assert abs(payload["public_mass_lane_quintet"]["alpha_em_eff_inv"] - 132.75240855096712) < 1.0e-12
     assert abs(payload["current_compact_emitted_quintet"]["MW_pole"] - 80.38629169244275) < 1.0e-12
     assert abs(payload["current_compact_emitted_quintet"]["MZ_pole"] - 91.18290444674243) < 1.0e-12
-    assert payload["reported_readout_assignment"]["alpha_em_eff_inv"] == "ward_projected_u1q_transport_family"
-    assert payload["reported_readout_assignment"]["sin2w_eff"] == "ward_projected_u1q_transport_family"
+    assert payload["reported_readout_assignment"]["alpha_em_eff_inv"] == "coherent_frozen_target_repair_couplings"
+    assert payload["reported_readout_assignment"]["sin2w_eff"] == "coherent_frozen_target_repair_couplings"
     assert payload["public_readout_split"]["electromagnetic_transport_surface"] == "WardProjectedU1QTransportLaw_D10"
     assert payload["ward_projected_transport_family"]["thomson_endpoint_alpha_em_eff_inv_prediction"] is None
     assert payload["ward_projected_transport_family"]["thomson_endpoint_alpha_em_eff_inv_reference"] == 137.035999177
@@ -92,14 +93,14 @@ def test_d10_source_transport_readout_uses_predictive_seed_trial() -> None:
     assert payload["ward_projected_transport_family"]["prediction_status"] == "reference_compare_only_until_source_transport_is_emitted"
     assert payload["proof_gate"]["single_post_transport_tree_identity_required"] is False
     target_free_split = payload["target_free_repair_status_split"]
-    assert target_free_split["status"] == "closed"
-    assert target_free_split["theorem"] == "EWTargetFreeRepairValueLaw_D10"
+    assert target_free_split["status"] == "open"
+    assert target_free_split["theorem"] is None
     assert target_free_split["unconditional_source_only_status"] == "current_corpus_underdetermination_of_forward_d10_repair_law"
     assert target_free_split["minimal_conditional_principle"] == "ColorBalancedQuadraticRepairDescent_D10"
     assert target_free_split["minimal_conditional_theorem"] == "minimal_conditional_d10_forward_repair_law"
     assert target_free_split["strongest_source_only_candidate"] == "EWTargetEmitter_D10"
-    assert payload["minimal_conditional_promotion_status"] == "historical_split_superseded_by_target_free_repair_theorem"
-    assert payload["target_emitter_candidate_status"] == "historical_candidate_promoted_to_theorem"
+    assert payload["minimal_conditional_promotion_status"] == "open_split_beneath_target_free_candidate"
+    assert payload["target_emitter_candidate_status"] == "strongest_current_source_only_candidate"
     transmutation = payload["forward_transmutation_certificate"]
     assert transmutation["notation_split"]["beta_ratio_EW"]["value"] == 0.5385291530498766
     assert transmutation["notation_split"]["beta_transmutation_EW"]["value"] == 4

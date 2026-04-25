@@ -1,5 +1,5 @@
 {
-  "active_builder_smallest_missing_object": null,
+  "active_builder_smallest_missing_object": "EWTargetFreeRepairValueLaw_D10",
   "artifact": "oph_d10_ew_source_transport_readout",
   "base_running_quintet": {
     "MW_pole": 80.38629169244275,
@@ -8,8 +8,8 @@
     "sin2w_eff": 0.23073542347506173,
     "v_report": 246.76711732749683
   },
-  "best_mass_pair_law_id": "EWTargetFreeRepairValueLaw_D10",
-  "broader_honest_repair_frontier": null,
+  "best_mass_pair_law_id": "freeze_once_coherent_d10_electroweak_repair_law",
+  "broader_honest_repair_frontier": "EWTargetFreeRepairValueLaw_D10",
   "coherent_emitter_formula": {
     "MW_pole": "W0 * (1 + delta_rho + delta_rW)",
     "MZ_pole": "Z0 * (1 + delta_rho)",
@@ -162,25 +162,25 @@
     "source_label": "PDG 2025 API"
   },
   "freeze_once_target_free_residual_object": "EWTargetFreeRepairValueLaw_D10",
-  "generated_utc": "2026-04-25T04:17:29Z",
+  "generated_utc": "2026-04-25T10:05:52Z",
   "mass_pair_predictive_candidate": {
-    "MW_pole": 80.37700001539531,
-    "MZ_pole": 91.18797807794321,
-    "delta_alpha2_dagger": -7.808301031916019e-06,
-    "delta_alphaY_parallel": 2.3421396282673238e-06,
-    "delta_alphaY_perp": 1.030287026970081e-05,
-    "delta_n_dagger": 0.0002346358802434819,
+    "MW_pole": 80.377,
+    "MZ_pole": 91.18797809193725,
+    "delta_alpha2_dagger": -7.808313968675484e-06,
+    "delta_alphaY_parallel": 2.3421435088707883e-06,
+    "delta_alphaY_perp": 1.0302892666790446e-05,
+    "delta_n_dagger": 0.00023463639031113336,
     "eta_EW": null,
     "law": {
-      "equivalent_two_coordinate_chart": "(tau2_tree_exact, delta_n_tree_exact)",
-      "historical_validation_surface": "FreezeOnceCoherentD10ElectroweakRepairLaw_D10",
-      "name": "EWTargetFreeRepairValueLaw_D10",
-      "proof_gate": "single_family_single_P_no_mixed_readout"
+      "equivalent_two_coordinate_chart": "(tau2_w_anchor, delta_n_dagger)",
+      "name": "freeze_once_coherent_d10_electroweak_repair_law",
+      "proof_gate": "single_family_single_P_no_mixed_readout",
+      "stricter_still_open_object": "EWTargetFreeRepairValueLaw_D10"
     },
     "sigma_EW": null,
-    "status": "target_free_source_only_repair_exact",
-    "tau_2": -0.0002311623001746158,
-    "tau_Y": -0.04406283002558085
+    "status": "freeze_once_coherent_repair_exact",
+    "tau_2": -0.00023116268316325517,
+    "tau_Y": -0.04406282964256108
   },
   "minimal_conditional_promotion": {
     "conditional_principle": {
@@ -222,18 +222,18 @@
     }
   },
   "minimal_conditional_promotion_artifact": "oph_d10_ew_minimal_conditional_promotion",
-  "minimal_conditional_promotion_status": "historical_split_superseded_by_target_free_repair_theorem",
+  "minimal_conditional_promotion_status": "open_split_beneath_target_free_candidate",
   "notes": [
     "One running-family base quintet and one shared scalar package Sigma_EW_D10 organize the D10 lane.",
     "The selected carrier point emits the mass pair directly from the transported D10 couplings.",
     "The reduced two-scalar carrier gives the compact source family on the selected D10 lane.",
     "The exact mass-pair chart on the selected carrier is closed, and the builder-local mass-side residual is the selector `EWExactMassPairSelector_D10` on that chart.",
-    "The D10 mass-side surface carries the W/Z pair from the source trunk. The freeze-once coherent pair serves as compare-only validation on the same family and agrees with the source-only mass-side law to machine scale.",
+    "The freeze-once coherent repair law is closed on one authoritative frozen target pair, so the W/Z surface comes from one coherent coupling pair on the shared D10 family.",
     "The selected electroweak point is the chosen carrier point itself, not a separate transported seed placeholder.",
     "The compact point records the same family on the fixed-eta slice eta_EW = alpha_u * cos(2*theta_W0) with free sigma_EW; the no-new-parameter point is sigma_EW = -eta_EW.",
     "The compact anti-diagonal slice restores alpha_em^-1 and sin^2(theta_W) through a source-normalized hypercharge readout on the selected carrier point, but that slice does not define the public fine-structure theorem.",
     "The physical electromagnetic readout is anchored at `a0 = alpha_em^-1(m_Z^2) = 128.30576920234813` on the source-locked running family and is read through Ward projection to the unbroken `U(1)_Q` channel. The Thomson endpoint stored in this artifact is reference compare-only until the source transport is emitted on the same branch.",
-    "The source-only underdetermination theorem, the minimal conditional route through ColorBalancedQuadraticRepairDescent_D10, and the stronger source-only candidate EWTargetEmitter_D10 stay on disk as lower-level mass-side objects beneath the Ward-projected electromagnetic readout.",
+    "The target-free D10 problem splits across the source-only underdetermination theorem, the conditional route through ColorBalancedQuadraticRepairDescent_D10, and the source-only candidate EWTargetEmitter_D10.",
     "The forward transmutation certificate `EWForwardTransmutationCertificate_D10` records the non-circular P -> alpha_U -> t map explicitly and keeps the source-ratio beta_ratio_EW separate from the transmutation counting factor beta_transmutation_EW = N_c + 1."
   ],
   "one_scalar_reduction_certificate": {
@@ -321,10 +321,10 @@
     "sigma_EW_formula": "(n_EW - 1 - beta_EW * (u_EW - 1)) / (1 - beta_EW)"
   },
   "population_selector_status": "closed",
-  "predictive_mass_promotion_allowed": true,
+  "predictive_mass_promotion_allowed": false,
   "predictive_population_closed": true,
   "predictive_population_verdict": "closed_current_carrier_nonexact_running_quintet",
-  "predictive_promotion_allowed": true,
+  "predictive_promotion_allowed": false,
   "predictive_trace_evaluator_candidate": "oph_d10_ew_transport_trace_evaluator",
   "proof_gate": {
     "common_provenance_required": true,
@@ -333,19 +333,19 @@
     "single_post_transport_tree_identity_required": false,
     "single_remaining_mass_scalar_after_fiber_law": false
   },
-  "proof_status": "source_locked_wz_mass_lane_closed__ward_projected_em_transport_family",
+  "proof_status": "freeze_once_coherent_repair_law_closed",
   "public_emitted_quintet": {
-    "MW_pole": 80.37700001539531,
-    "MZ_pole": 91.18797807794321,
+    "MW_pole": 80.377,
+    "MZ_pole": 91.18797809193725,
     "alpha_em_eff_inv": null,
     "sin2w_eff": null,
     "v_report": 246.76711732749683
   },
   "public_mass_lane_quintet": {
-    "MW_pole": 80.37700001539531,
-    "MZ_pole": 91.18797807794321,
-    "alpha_em_eff_inv": 132.7524088191668,
-    "sin2w_eff": 0.22305833336075578,
+    "MW_pole": 80.377,
+    "MZ_pole": 91.18797809193725,
+    "alpha_em_eff_inv": 132.75240855096712,
+    "sin2w_eff": 0.22305833389684906,
     "v_report": 246.76711732749683
   },
   "public_readout_split": {
@@ -353,15 +353,14 @@
     "electromagnetic_source_anchor": "source_locked_running_family_anchor",
     "electromagnetic_transport_kernel": "EWTransportKernel_D10",
     "electromagnetic_transport_surface": "WardProjectedU1QTransportLaw_D10",
-    "wz_mass_lane_surface": "EWTargetFreeRepairValueLaw_D10"
+    "wz_mass_lane_surface": "FreezeOnceCoherentD10ElectroweakRepairLaw_D10"
   },
   "public_surface_candidate_allowed": true,
   "public_surface_candidate_scope": [
     "MW_pole",
-    "MZ_pole",
-    "v_report"
+    "MZ_pole"
   ],
-  "public_surface_policy": "source_locked_wz_mass_lane_plus_ward_projected_em_transport_family",
+  "public_surface_policy": "freeze_once_authoritative_target_coherent_repair_surface",
   "quartet_atomicity": {
     "all_four_readouts_share_one_population_point": true,
     "candidate_status": "all_or_none",
@@ -374,10 +373,10 @@
     "u_EW_from_mW": "mW^2 / (pi * v_report^2 * alpha2_0)"
   },
   "reported_readout_assignment": {
-    "MW_pole": "coherent_target_free_repair_couplings",
-    "MZ_pole": "coherent_target_free_repair_couplings",
-    "alpha_em_eff_inv": "ward_projected_u1q_transport_family",
-    "sin2w_eff": "ward_projected_u1q_transport_family",
+    "MW_pole": "coherent_frozen_target_repair_couplings",
+    "MZ_pole": "coherent_frozen_target_repair_couplings",
+    "alpha_em_eff_inv": "coherent_frozen_target_repair_couplings",
+    "sin2w_eff": "coherent_frozen_target_repair_couplings",
     "v_report": "inherit_running_core"
   },
   "scheme_id": "freeze_once",
@@ -396,7 +395,7 @@
     "delta_rW": 0.005123221323258043,
     "delta_rho": -0.005123221323258043
   },
-  "smallest_predictive_missing_object": null,
+  "smallest_predictive_missing_object": "EWTargetFreeRepairValueLaw_D10",
   "source_pair": {
     "eta_EW": 0.001970385566344652,
     "sigma_EW": 0.0,
@@ -448,7 +447,7 @@
     }
   },
   "target_emitter_candidate_artifact": "oph_d10_ew_target_emitter_candidate",
-  "target_emitter_candidate_status": "historical_candidate_promoted_to_theorem",
+  "target_emitter_candidate_status": "strongest_current_source_only_candidate",
   "target_free_coherent_emitted_quintet": {
     "MW_pole": 80.37700001539531,
     "MZ_pole": 91.18797807794321,
@@ -466,14 +465,14 @@
   "target_free_repair_status_split": {
     "minimal_conditional_principle": "ColorBalancedQuadraticRepairDescent_D10",
     "minimal_conditional_theorem": "minimal_conditional_d10_forward_repair_law",
-    "status": "closed",
+    "status": "open",
     "strongest_source_only_candidate": "EWTargetEmitter_D10",
-    "theorem": "EWTargetFreeRepairValueLaw_D10",
+    "theorem": null,
     "unconditional_source_only_status": "current_corpus_underdetermination_of_forward_d10_repair_law"
   },
   "target_free_repair_value_law_artifact": "oph_d10_ew_target_free_repair_value_law",
   "target_free_repair_value_law_object_id": "EWTargetFreeRepairValueLaw_D10",
-  "target_free_repair_value_law_status": "closed",
+  "target_free_repair_value_law_status": "candidate_only",
   "target_free_repaired_couplings": {
     "alpha2_prime": 0.03377062800115824,
     "alpha2_star": 0.03377843630219015,
@@ -502,10 +501,10 @@
       "v_report": 246.76711732749683
     },
     "transport_quintet": {
-      "MW_pole": 80.37700001539531,
-      "MZ_pole": 91.18797807794321,
-      "alpha_em_eff_inv": 132.7524088191668,
-      "sin2w_eff": 0.22305833336075578,
+      "MW_pole": 80.377,
+      "MZ_pole": 91.18797809193725,
+      "alpha_em_eff_inv": 132.75240855096712,
+      "sin2w_eff": 0.22305833389684906,
       "v_report": 246.76711732749683
     }
   },
