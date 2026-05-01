@@ -67,15 +67,17 @@ package also blocks gauge-mediated proton decay, because the realized gauge
 group is a product group and does not contain the extra leptoquark gauge
 bosons required by simple-group unification.
 
-The electroweak transport family gives the weak-boson pair
+The electroweak transport family gives the public target-free weak-boson pair
 
 $$
-M_W = 80.377\,\mathrm{GeV}, \qquad
-M_Z = 91.18797809193725\,\mathrm{GeV},
+M_W = 80.37700001539531\,\mathrm{GeV}, \qquad
+M_Z = 91.18797807794321\,\mathrm{GeV},
 $$
 
-and the same family, followed along the unbroken electromagnetic channel to
-the long-distance Thomson limit, is compared with the CODATA/NIST central value
+with a frozen validation sidecar that lands on the canonical exact pair
+$80.377\,\mathrm{GeV}$ and $91.18797809193725\,\mathrm{GeV}$. The same family,
+followed along the unbroken electromagnetic channel to the long-distance
+Thomson limit, is compared with the CODATA/NIST central value
 
 $$
 \alpha^{-1}(0)=137.035999177.
@@ -85,13 +87,14 @@ The weak-boson pair and the familiar low-energy electromagnetic strength come
 from one continuous construction. At theorem level this is a numerical
 fixed-point witness; the interval certificate remains separate.
 
-The same electroweak core continues into the scalar and companion top values
+On the declared D10/D11 running, matching, and threshold surface, the same
+electroweak core continues into the scalar and companion top values
 
 $$
 (m_H,m_t)=(125.1995304097179,\ 172.3523553288312)\,\mathrm{GeV}.
 $$
 
-The quark sector closes on one selected physical quark basis,
+The quark sector closes on one selected public physical quark frame class,
 
 $$
 (m_u,m_d,m_s,m_c,m_b,m_t)=
@@ -102,7 +105,7 @@ and these are running quark masses, not hadron masses. They belong to the
 short-distance particle description before QCD binds quarks into composite
 states.
 
-The neutrino sector is concrete as well:
+The neutrino sector is concrete as well on its weighted-cycle branch:
 
 $$
 (m_{\nu_e},m_{\nu_\mu},m_{\nu_\tau})=
@@ -111,10 +114,11 @@ $$
 
 together with definite Majorana phases in that construction. Taken together, the
 particle picture is larger than a handful of isolated numbers. OPH fixes the
-structural gauge package, the exact massless carriers, the $W/Z$ pair, the
-fine-structure fixed-point witness, the Higgs/top pair, the running quark
-sextet with Yukawas, and one neutrino family. Charged leptons need one
-absolute anchor. Hadrons require a separate nonperturbative bound-state step.
+structural gauge package, the exact massless carriers, the D10 weak pair, the
+fine-structure fixed-point witness, the D11 Higgs/top pair, the selected-class
+running quark sextet with Yukawas, and one weighted-cycle neutrino family.
+Charged leptons need one absolute anchor. Hadrons require a separate
+nonperturbative bound-state step.
 
 ## 16.5 What Is a Particle?
 

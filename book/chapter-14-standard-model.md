@@ -550,9 +550,10 @@ The particle picture can be told as one continuous line. The
 framework fixes the Standard Model quotient, the hypercharge lattice, and the
 generation-color counting. The same structure keeps the photon, gluons, and
 graviton on protected zero lines. From there the electroweak transport family
-supplies the weak-boson pair and the long-distance electromagnetic coupling,
-then carries the picture into the Higgs-top pairing, the running quark masses,
-and the neutrino family.
+supplies the weak-boson pair and a fixed-point witness for the long-distance
+electromagnetic coupling, then carries the picture into the Higgs-top surface,
+the selected-class running quark masses, and the weighted-cycle neutrino
+family.
 
 ### How the Concrete Particle Rows Arise
 
@@ -563,12 +564,12 @@ labels of mass, spin, and helicity. This chapter supplies the realized gauge
 quotient, the hypercharge lattice, and the generation-color counting. Together
 they decide which charged excitations can exist and how they transform.
 
-Then comes the shared local calibration. The electroweak sector is the cleanest
-place to set the scale because the data are sharp and hadronic clutter is weak.
-Use the $W$ and $Z$ masses to pin down the local ruler, then keep asking the
-same question as the picture widens. Does that one choice still work for the
-long-distance electromagnetic coupling, the Higgs-top pair, the quark sector,
-and the neutrino family? This chapter argues that it does.
+Then comes the shared local calibration branch. Once the common pixel ratio is
+fixed, the electroweak sector is the cleanest place to read out the local
+ruler because the data are sharp and hadronic clutter is weak. From there the
+same forward construction can be checked against the long-distance
+electromagnetic coupling, continued into the Higgs-top surface, and pushed
+through the selected quark and neutrino lanes.
 
 The fine-structure constant belongs here beside the weak sector. This is
 why the later mass tables do not feel like disconnected tricks. They read as
@@ -582,9 +583,9 @@ The interpretation is simple. The screen cell wants to sit at the golden-ratio
 balance point, the exact self-similar equilibrium of the local entropy
 hierarchy. A universe with observers cannot remain perfectly silent. It needs a
 small displacement so that records can form, photons can carry information, and
-measurements can leave durable traces. OPH identifies the fine-structure
-constant with that small displacement, read from inside the world as
-electromagnetic strength.
+measurements can leave durable traces. OPH reads the observed fine-structure
+constant as that small displacement, with the public comparison made at the
+Thomson limit and the full uniqueness certificate treated separately.
 
 ## 14.15 Why the Photon Is Inevitable
 
@@ -675,18 +676,22 @@ In the 1970s, physicists noticed something remarkable. If you run the couplings 
 
 But there was a problem. With just the Standard Model particle content, the three couplings don't quite meet. They miss each other. In the 1990s, physicists discovered that adding supersymmetric partners fixes this: with MSSM-like particle content, the couplings unify beautifully, predicting $\alpha_s(M_Z) \approx 0.117$, remarkably close to the measured value of $0.1177 \pm 0.0009$.
 
-On one calibration choice, the edge-mode calculation reproduces MSSM-like one-loop
-running. Entropy weights a representation by one copy of its dimension because
-one side of the entanglement cut is traced over. Loop corrections see both
-indices of the representation block, so a second factor of the dimension
-returns in the running. That is what lets the beta-function shifts land near
-the familiar unification benchmark.
+The OPH result here is narrower than a full unification theorem. On the current
+D10 calibration branch, one edge-mode heat-kernel choice reproduces MSSM-like
+one-loop running. Entropy weights a representation by one copy of its
+dimension because one side of the entanglement cut is traced over. Loop
+corrections see both indices of the representation block, so a second factor
+of the dimension returns in the running. That is what lets the beta-function
+shifts land near the familiar unification benchmark.
 
 At the unification-scale heat-kernel parameter $t_U \approx 1.64$, this gives:
 $$\Delta b_{\text{edge}} \approx (2.49,\ 4.38,\ 3.97)$$
 compared to the MSSM target $(2.50,\ 4.17,\ 4.00)$. The agreement is within 5%
 for all three coefficients on that calibration choice. What emerges here is
-unification-like running behavior, not an MSSM spectrum hidden inside OPH.
+unification-like running behavior, not an MSSM spectrum hidden inside OPH and
+not a recovered simple-group theorem. The branch still depends on printed
+running and matching conventions together with extra choices about thresholds,
+representation content, and effective loop multiplicities.
 
 The sharper structural prediction concerns *how* any unification-like closure would happen.
 
@@ -703,10 +708,10 @@ charge-fusion data, yielding the product structure:
 
 $$G_{\mathrm{phys}} = \mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1) / \mathbb{Z}_6$$
 
-There is no larger group. No X and Y bosons. No leptoquark generators.
-Unification happens geometrically, with all three couplings sharing a common
-"diffusion time" on the edge, instead of algebraically through group
-embedding.
+There is no larger group. No X and Y bosons. No leptoquark generators. Any
+coupling closure that survives the separate D10 calibration premises happens
+geometrically, with all three couplings sharing a common "diffusion time" on
+the edge, instead of algebraically through group embedding.
 
 The prediction is stark: **gauge-mediated proton decay is forbidden**.
 
@@ -718,14 +723,14 @@ detector sees the relevant channel or it keeps not seeing it. This chapter
 places OPH on the null-decay side for structural reasons.
 
 This is a unique experimental signature. Standard SUSY GUTs predict both
-precision unification and proton decay. Our model combines a structural
-statement with a separate running-coupling picture: the full connected gauge
-group has only the product-group adjoint content and no mixed leptoquark
-generators, so gauge-mediated proton decay is forbidden. The same running
-structure allows MSSM-like unification-style closure without simple-group
-embedding. If Hyper-Kamiokande continues to see null results while precision
-measurements continue to favor unified couplings, that would support
-geometric unification over algebraic unification.
+precision unification and proton decay. Our model separates those questions:
+the full connected gauge group has only the product-group adjoint content and
+no mixed leptoquark generators, so gauge-mediated proton decay is forbidden,
+while the separate D10 calibration branch can still display MSSM-like
+unification-style running without simple-group embedding. If Hyper-Kamiokande
+continues to see null results while precision measurements continue to favor
+unified couplings, that would support geometric calibration over algebraic
+unification.
 
 ## 14.20 What the Model Explains
 
@@ -737,9 +742,9 @@ Let's step back and see what the framework actually accounts for.
 
 **The particle package.** Section 14.14 gives the concrete package. The
 framework fixes the massless carriers, the weak-boson pair, the Thomson-limit
-electromagnetic coupling, a Higgs-top calibration, a six-quark running-mass
-package with Yukawas, and one neutrino family with definite masses and
-Majorana phases.
+fine-structure witness, a Higgs-top surface, a selected-class six-quark
+running-mass package with Yukawas, and one weighted-cycle neutrino family with
+definite masses and Majorana phases.
 
 The reason these numbers belong in one chapter is that the framework is trying to organize them with one local calibration structure. The same input that sets the electroweak scale also feeds the low-energy electromagnetic coupling and the effective gravitational coupling. The reader does not need every intermediate symbol to see the point. OPH is attempting to tie electroweak masses, the Higgs/top calibration, electromagnetism at low energy, and Newton's constant to one common structure instead of treating them as unrelated constants.
 
@@ -748,8 +753,9 @@ The reason these numbers belong in one chapter is that the framework is trying t
 **Gauge-mediated proton decay.** Gauge-mediated proton decay is forbidden. The gauge group is a product, not embedded in a larger simple group, so no leptoquark generators exist. Current experimental limits ($\tau_p > 10^{34}$ years) are consistent with this prediction.
 
 **The remaining terrain.** Charged leptons need an absolute mass-setting
-anchor. The quark result is tied to one physical quark basis. Hadrons belong
-to the nonperturbative strong-dynamics layer.
+anchor. The quark result is tied to one selected physical quark basis rather
+than a global classification. Hadrons belong to the nonperturbative
+strong-dynamics layer.
 
 ## 14.21 The Big Picture
 
@@ -773,10 +779,11 @@ chirality, CP violation, anomaly cancellation, and ultraviolet consistency.
 
 It is a remarkably concrete result. The book points to a specific gauge
 structure, charge pattern, generation count, and color count. It also reaches
-the massless carriers, the $W$ and $Z$, a calibrated Higgs-top sector, a
-neutrino family, and a running quark package. Charged leptons, fuller quark
-closure beyond the chosen physical basis, and strongly coupled bound states
-belong to the next layer of the same narrative.
+the massless carriers, the $W$ and $Z$, a calibrated Higgs-top surface, one
+weighted-cycle neutrino family, and a running quark package on a selected
+physical basis. Charged leptons, fuller quark closure beyond the chosen
+physical basis, and strongly coupled bound states belong to the next layer of
+the same narrative.
 
 This chapter has shown how particles emerge from the screen as stable patterns that transform under emergent symmetries. The natural sequel is spacetime itself. If the particle inventory is fixed by consistency, can geometry be fixed the same way?
 

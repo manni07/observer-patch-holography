@@ -44,10 +44,11 @@ selection principle. Minimality gives the economy.
 
 ## 18.4 How Spacetime Appears
 
-Once cap modular flow becomes geometric, time stops looking imported from
-outside. It becomes the internal flow attached to a restricted state. When
-those local flows fit together across the sphere, Lorentz kinematics appears.
-When generalized entropy sits at equilibrium under admissible variations,
+Once cap modular flow becomes geometric on the extracted prime geometric
+subnet, time stops looking imported from outside. It becomes the internal flow
+attached to a restricted state. When those local flows fit together across the
+realized scaling-limit cap pair, Lorentz kinematics appears. When generalized
+entropy sits at equilibrium under admissible fixed-cap MaxEnt variations,
 Einstein gravity appears as the public large-scale grammar of that equilibrium.
 
 In plain language, spacetime is the compressed way finite observers keep track
@@ -67,9 +68,11 @@ $$
 
 Three generations and three colors follow from the same pressure. The photon,
 gluons, and graviton stay massless because they ride on redundancy directions
-the architecture cannot break. The weak pair, the low-energy electromagnetic
-coupling, the Higgs-top surface, the running quark package, and one neutrino
-family all arrive inside the same reconstruction.
+the architecture cannot break. The D10 weak pair, a fixed-point witness for
+the low-energy electromagnetic coupling, the Higgs-top surface, a selected-class
+running quark package, and one weighted-cycle neutrino family all arrive
+inside the same reconstruction. Charged leptons and hadrons still sit beyond
+that closed core.
 
 That is the twist. The Standard Model no longer looks like a cabinet full of
 unrelated entries. It looks like the smallest charged world that lets the
@@ -212,6 +215,14 @@ That architecture does more than tidy up puzzles. It turns the universe into a
 much stranger object than classical physics ever imagined. There is no view
 from nowhere. There are views from somewhere, and a shared reality is what
 appears when those views can lock into one coherent public record.
+
+The strongest parts of that structure are tiered rather than flat. The gauge
+quotient, charge lattice, counting chain, massless carriers, Lorentz branch,
+and Einstein branch belong to the recovered core. The electroweak and
+Higgs-top numerics sit on calibration surfaces above that core, and the darker
+phenomenological lanes sit higher still. Keeping those tiers straight does not
+weaken the picture. It shows exactly where OPH is already rigid and where it
+is still advancing.
 
 The next chapter turns to the deepest interpretive question. If observers,
 meaning, and world belong to one structure, what exactly should be said about
