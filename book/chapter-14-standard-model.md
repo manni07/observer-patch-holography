@@ -183,9 +183,8 @@ long-distance Thomson value
 
 $$\alpha^{-1}(0)=137.035999177.$$
 
-The interval-wide uniqueness certificate is still a separate mathematical
-object. The fine-structure constant belongs to the same transport family that
-yields the $W$ and $Z$ rows.
+The fine-structure constant belongs to the same transport family that yields
+the $W$ and $Z$ rows.
 
 The strong force coupling runs the opposite way. At low energies, it's strong (hence the name). At high energies, it weakens. This is "asymptotic freedom," discovered by Gross, Wilczek, and Politzer in 1973.
 
@@ -336,7 +335,7 @@ $$\mathcal{L}_{Yukawa} = y_e \bar{L} \phi e_R + y_u \bar{Q} \tilde{\phi} u_R + y
 
 When the Higgs gets a vacuum expectation value, these terms become mass terms. The masses are proportional to the Yukawa couplings.
 
-Why do the Yukawa couplings have the values they do? Why is the top quark so much heavier than the electron? This remains unexplained.
+Why do the Yukawa couplings have the values they do? Why is the top quark so much heavier than the electron? The Standard Model leaves this unexplained.
 
 ## 14.9 From Overlaps to Gauge Structure
 
@@ -564,18 +563,17 @@ labels of mass, spin, and helicity. This chapter supplies the realized gauge
 quotient, the hypercharge lattice, and the generation-color counting. Together
 they decide which charged excitations can exist and how they transform.
 
-Then comes the shared local calibration branch. Once the common pixel ratio is
+Then comes the shared local calibration. Once the common pixel ratio is
 fixed, the electroweak sector is the cleanest place to read out the local
 ruler because the data are sharp and hadronic clutter is weak. From there the
 same forward construction can be checked against the long-distance
 electromagnetic coupling, continued into the Higgs-top surface, and pushed
-through the selected quark and neutrino lanes.
+through the quark and neutrino sectors.
 
 The fine-structure constant belongs here beside the weak sector. This is
 why the later mass tables do not feel like disconnected tricks. They read as
-different faces of one calibrated machine. Charged leptons ask for one
-additional absolute anchor. Hadrons belong to the later strong-binding descent
-of the same picture. Chapter 18 returns to the same local scale from the
+different faces of one calibrated machine. Hadrons belong to the later
+strong-binding descent of the same picture. Chapter 18 returns to the same local scale from the
 outside-inside closure equation, which gives the whole particle package an even
 tighter narrative spine.
 
@@ -585,7 +583,7 @@ hierarchy. A universe with observers cannot remain perfectly silent. It needs a
 small displacement so that records can form, photons can carry information, and
 measurements can leave durable traces. OPH reads the observed fine-structure
 constant as that small displacement, with the public comparison made at the
-Thomson limit and the full uniqueness certificate treated separately.
+Thomson limit.
 
 ## 14.15 Why the Photon Is Inevitable
 
@@ -648,10 +646,10 @@ confinement.
 
 That difference matters. Some results in the framework are structural and
 sharp. Others depend on solving the strong-coupling machinery in detail. The
-electroweak sector sits close enough to the calibration surface that masses and
+electroweak sector sits close enough to the local calibration that masses and
 couplings can be pinned down cleanly. Hadrons live deeper in the jungle.
 
-There is still a promising route into that jungle. Edge entanglement does not
+A promising route into that jungle uses edge entanglement. It does not
 weight charge sectors arbitrarily. It assigns each one a local geometric cost
 set by the gauge group itself. Read those costs carefully enough and the
 effective gauge couplings can be inferred from the vacuum.
@@ -676,22 +674,20 @@ In the 1970s, physicists noticed something remarkable. If you run the couplings 
 
 But there was a problem. With just the Standard Model particle content, the three couplings don't quite meet. They miss each other. In the 1990s, physicists discovered that adding supersymmetric partners fixes this: with MSSM-like particle content, the couplings unify beautifully, predicting $\alpha_s(M_Z) \approx 0.117$, remarkably close to the measured value of $0.1177 \pm 0.0009$.
 
-The OPH result here is narrower than a full unification theorem. On the current
-D10 calibration branch, one edge-mode heat-kernel choice reproduces MSSM-like
-one-loop running. Entropy weights a representation by one copy of its
-dimension because one side of the entanglement cut is traced over. Loop
-corrections see both indices of the representation block, so a second factor
-of the dimension returns in the running. That is what lets the beta-function
+OPH separates two ideas that are often fused together. Couplings can display
+unification-like running without the Standard Model being embedded in a larger
+simple group. One edge-mode heat-kernel construction reproduces MSSM-like
+one-loop running: entropy weights a representation by one copy of its
+dimension because one side of the entanglement cut is traced over, while loop
+corrections see both indices of the representation block. A second factor of
+the dimension returns in the running. That is what lets the beta-function
 shifts land near the familiar unification benchmark.
 
 At the unification-scale heat-kernel parameter $t_U \approx 1.64$, this gives:
 $$\Delta b_{\text{edge}} \approx (2.49,\ 4.38,\ 3.97)$$
 compared to the MSSM target $(2.50,\ 4.17,\ 4.00)$. The agreement is within 5%
-for all three coefficients on that calibration choice. What emerges here is
-unification-like running behavior, not an MSSM spectrum hidden inside OPH and
-not a recovered simple-group theorem. The branch still depends on printed
-running and matching conventions together with extra choices about thresholds,
-representation content, and effective loop multiplicities.
+for all three coefficients in this edge-mode picture. What emerges here is
+unification-like running behavior, not an MSSM spectrum hidden inside OPH.
 
 The sharper structural prediction concerns *how* any unification-like closure would happen.
 
@@ -709,9 +705,9 @@ charge-fusion data, yielding the product structure:
 $$G_{\mathrm{phys}} = \mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1) / \mathbb{Z}_6$$
 
 There is no larger group. No X and Y bosons. No leptoquark generators. Any
-coupling closure that survives the separate D10 calibration premises happens
-geometrically, with all three couplings sharing a common "diffusion time" on
-the edge, instead of algebraically through group embedding.
+coupling closure happens geometrically, with all three couplings sharing a
+common "diffusion time" on the edge, instead of algebraically through group
+embedding.
 
 The prediction is stark: **gauge-mediated proton decay is forbidden**.
 
@@ -726,8 +722,8 @@ This is a unique experimental signature. Standard SUSY GUTs predict both
 precision unification and proton decay. Our model separates those questions:
 the full connected gauge group has only the product-group adjoint content and
 no mixed leptoquark generators, so gauge-mediated proton decay is forbidden,
-while the separate D10 calibration branch can still display MSSM-like
-unification-style running without simple-group embedding. If Hyper-Kamiokande
+while the edge-mode calibration can display MSSM-like unification-style
+running without simple-group embedding. If Hyper-Kamiokande
 continues to see null results while precision measurements continue to favor
 unified couplings, that would support geometric calibration over algebraic
 unification.
@@ -752,10 +748,10 @@ The reason these numbers belong in one chapter is that the framework is trying t
 
 **Gauge-mediated proton decay.** Gauge-mediated proton decay is forbidden. The gauge group is a product, not embedded in a larger simple group, so no leptoquark generators exist. Current experimental limits ($\tau_p > 10^{34}$ years) are consistent with this prediction.
 
-**The remaining terrain.** Charged leptons need an absolute mass-setting
-anchor. The quark result is tied to one selected physical quark basis rather
-than a global classification. Hadrons belong to the nonperturbative
-strong-dynamics layer.
+**Why hadrons are harder.** Quark masses are short-distance parameters.
+Hadrons are bound states. Their masses come from the nonperturbative dynamics
+of confined quarks and gluons, so they require solving the strong-binding
+layer rather than reading off one more particle row.
 
 ## 14.21 The Big Picture
 
@@ -781,9 +777,8 @@ It is a remarkably concrete result. The book points to a specific gauge
 structure, charge pattern, generation count, and color count. It also reaches
 the massless carriers, the $W$ and $Z$, a calibrated Higgs-top surface, one
 weighted-cycle neutrino family, and a running quark package on a selected
-physical basis. Charged leptons, fuller quark closure beyond the chosen
-physical basis, and strongly coupled bound states belong to the next layer of
-the same narrative.
+physical basis. Strongly coupled bound states add the QCD problem on top of
+that particle-level structure.
 
 This chapter has shown how particles emerge from the screen as stable patterns that transform under emergent symmetries. The natural sequel is spacetime itself. If the particle inventory is fixed by consistency, can geometry be fixed the same way?
 

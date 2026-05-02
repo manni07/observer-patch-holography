@@ -144,7 +144,19 @@
 \OPHPaperReleaseBanner
 
 \begin{abstract}
-Observer-Patch Holography starts from a finite holographic screen and one requirement: neighboring observer patches must agree on their overlap. The outer description supplies the finite screen. The inner universe is the effective world reconstructed by observers who live on that screen. The central quantitative object is the pixel ratio \(P=a_{\mathrm{cell}}/\ell_P^2\), the size of one screen cell measured in Planck areas. The framework finds the fine-structure constant by asking for the nonzero detuning of a holographic screen cell such that the cell's outer geometric displacement from perfect self-similar equilibrium equals the electromagnetic observation scale emitted by the universe living on that same screen. The fixed-point calculation gives a numerical closure witness, with an interval-wide uniqueness certificate outside the theorem core. The framework also admits an inverse observational use case in which observers infer \(P\) and total screen capacity from inside the world while the outer screen settings remain externally fixed screen data. Independently of that quantitative closure, the framework recovers the Lorentz/Einstein branch and the realized Standard Model quotient with exact hypercharge and counting data. On the gravity lane the local Einstein equation is fixed only up to a metric term, and the external screen-capacity input closes that same branch globally by fixing the cosmological constant and the de Sitter static-patch package. The electroweak sector, the Higgs/top surface, the quark and neutrino families, and the local gravity-facing readout descend from the same \(P\). The string/worldsheet lane instead starts from the separate compact-group heat-kernel edge branch, where the closed edge partition reorganizes exactly into the two-dimensional Yang--Mills heat-kernel form and the later large-\(N_{\mathrm{edge}}\) theorem gives a controlled effective-description branch. The cosmological-capacity closure uses the separate external input \(N_{\mathrm{scr}}\). The direct theorem-grade zero-momentum electromagnetic certificate, charged-lepton absolute masses, and hadrons are work in progress.
+Observer-Patch Holography starts from a finite horizon screen and one rule: local observer
+patches must agree on every observable they share. Together with local MaxEnt, recoverable
+generalized entropy, and minimal admissible realization, that rule reconstructs an effective
+world with Lorentz kinematics, an Einstein branch, and the realized Standard Model quotient
+\(\SU(3)\times\SU(2)\times\U(1)/\mathbb Z_6\), including exact hypercharge and the counting chain
+\(N_g=3\) then \(N_c=3\). The quantitative side uses only two scales. The global capacity
+\(N_{\mathrm{scr}}=\log\dim\mathcal H_{\mathrm{tot}}\) is read from the cosmological horizon and gives
+\(\Lambda=3\pi/(G N_{\mathrm{scr}})\). The local pixel ratio
+\(P=a_{\mathrm{cell}}/\ell_P^2\) is computed inside OPH by describing the same screen cell from two
+sides: outside, as a small displacement from golden-ratio entropy balance; inside, as the
+electromagnetic observation step available to observers in the encoded world. Equating those two
+readings fixes \(P\), and the same scale feeds the electroweak, Higgs/top, quark, neutrino, and
+local gravity-facing readouts. Hadrons require the separate nonperturbative QCD bound-state layer.
 \end{abstract}
 
 \begin{center}
@@ -160,131 +172,102 @@ A reader who follows the mathematical proofs presented should conclude that, con
 
 \section{Introduction}
 
-This synthesis paper assembles the current paper corpus on one unified synthesis surface. It brings
-together the recovered core from Ref.~\cite{ophcompact}, the finite patch-net consensus spine from
-Ref.~\cite{ophconsensus}, the screen-microphysics engineering lane from Ref.~\cite{ophmicrophysics},
-and the downstream particle-spectrum lane from Ref.~\cite{ophparticles}. The guiding
-question is whether overlap consistency for local observer descriptions on a finite-capacity screen
-is strong enough to recover the structural features of low-energy physics, and if so, how much of
-that recovery is theorem-level and how much depends on explicit scaling-limit,
-categorical, or continuation premises.
+Observer-Patch Holography asks how much of physics is forced once the world is described from the
+inside. No observer has access to a view from nowhere. Each observer sees a patch of a finite
+horizon screen, carries records inside that patch, and can compare only the observables shared with
+neighboring patches. OPH takes that comparison rule literally: where descriptions overlap, they must
+agree.
 
-\paragraph{Canonical premise key.}
-The six labeled technical items used across the paper corpus are introduced up front here so the overview can use them without forcing the reader to hunt for a later table. \textbf{T1} is loop coherence on the ordinary compact-gauge route. \textbf{T2} is the controlled refinement/scaling-limit scope clause for the Lorentz/null-modular/Einstein branch. \textbf{T3} is internalized on the compact surface as the derived fixed-cap generalized-entropy stationarity theorem for admissible fixed-cap MaxEnt variations on the realized cap-label-preserving MaxEnt family used in the D5 Einstein branch. \textbf{T4}--\textbf{T6} are the bosonic gauge-reconstruction premises: symmetric braiding, a faithful bosonic fiber functor or explicit super-Tannakian fork, and the directed colimit of transportable edge sectors with objectwise finite-dimensional fibers. The formal premise ledger appears in Section~\ref{16-summary-complete-axiom-set}.
+That one demand is strong enough to organize the familiar world. The effective bulk is reconstructed
+from compatible screen data. Locality comes from the way collars control recovery across patch
+boundaries. Gauge freedom is the freedom to change the local description without changing any shared
+observable. Records are the stable parts of a patch that can be checked by other patches. Matter is
+the stable charge and excitation content that survives transport, fusion, and minimal admissible
+realization.
 
-On this synthesis surface, recovered-core theorem status and claim tier inherit from the compact recovered-core ledger in Ref.~\cite{ophcompact}, while lane-specific claim tier remains with the corresponding companion papers, including Refs.~\cite{ophparticles,ophconsensus,ophmicrophysics}; the present paper organizes those outputs across lanes but does not upgrade them by restating them.
+The first major achievement is spacetime. Modular flow on screen caps becomes geometric, giving the
+Lorentzian structure of local physics. Generalized entropy at fixed cap then gives the Einstein
+relation in the large-scale regime. The cosmological constant is not treated as a vacuum-energy
+guess. It is read from the total screen capacity \(N_{\mathrm{scr}}\), with
+\[
+\Lambda=\frac{3\pi}{G N_{\mathrm{scr}}}.
+\]
 
-The answer is sharply tiered. Fixed-cutoff collar structure, higher-gauge defect transport,
-the consensus/fixed-point formulation together with observable-level quotient confluence on the
-declared physical algebras, the
-record-algebra / Born-L\"uders package with its quantitative stability surface, and the
-checkpoint/restoration package, including checkpoint data, restoration maps, future-law stability under restoration error, and an operational observer-identity criterion imported from Ref.~\cite{ophmicrophysics}, are theorem-bearing on their stated finite
-surfaces. The Lorentz/null-modular/Einstein chain remains a conditional scaling-limit branch,
-starting from finite type-I regulators but targeting an extracted scaling-limit observer algebra
-that may leave that class, and compact gauge reconstruction remains a conditional categorical branch. The particle lane is the most tiered part of
-the corpus: the structural carrier skeleton and realized Standard Model branch are fixed, the
-electroweak stage remains a forward-emitted non-core quantitative-closure branch whose internal
-transmutation data are fixed from \(P\), with target-free public \(W/Z\) rows and a compare-only
-frozen validation pair, the Higgs/top stage is an exact source-only split theorem on the declared running, matching, and threshold surface with a compare-only exact inverse slice beneath it, the neutrino lane
-closes on its weighted-cycle theorem branch with diagnostic sidecars beneath it, the charged-lepton lane is fixed
-only up to exact centered readback plus a closed common-shift no-go, the quark lane closes on the
-public physical quark frame class selected by \(P\) without claiming a global classification of all
-quark frame classes, and the hadron lane remains unfinished.
+The second achievement is the Standard Model structure. Transportable edge sectors reconstruct the
+compact gauge quotient
+\[
+\SU(3)\times\SU(2)\times\U(1)/\mathbb Z_6.
+\]
+The same consistency package fixes exact hypercharge, three generations, three colors, the
+masslessness of the photon, gluons, and graviton, integer charge for color singlets, and the absence
+of gauge-mediated proton decay.
 
-The paper is organized by lane. Section~2 gives the synthesis-level map. Section~3 carries the
-recovered-core trunk: axioms, premise ledger, collar tools, gluing, the Lorentz/gravity branch,
-and the compact-gauge/Standard-Model branch. Section~4 records the consensus lane. Section~5
-summarizes the particle lane. Section~6 records the screen-microphysics and observer lane.
-Section~7 records the controlled worldsheet effective-description lane. Section~8 gives the cross-lane theorem
-boundary and open directions. The appendices collect supplementary architecture and synthesis-level
-material that is useful in this paper but not part of the recovered core itself.
+The third achievement is quantitative. OPH uses one global capacity scale and one local pixel scale.
+The global scale is \(N_{\mathrm{scr}}\). The local scale is
+\[
+P:=\frac{a_{\mathrm{cell}}}{\ell_P^2}.
+\]
+The value of \(P\) is not inserted as a separate measured constant. OPH computes it by giving the
+same screen cell two readings. From outside, the cell sits a little above the exact self-similar
+entropy balance point \(\varphi=(1+\sqrt5)/2\). From inside, the same cell appears as the smallest
+electromagnetic observation step available in the encoded world. The local scale is the value of
+\(P\) where those two readings coincide.
 
-\section{Overview of Results}
+With \(P\) fixed, the same scale feeds the weak-boson pair, the low-energy electromagnetic coupling,
+the Higgs/top surface, the running quark package, a neutrino family, and the local gravity-facing
+readout. Hadrons are harder for a physical reason: they are QCD bound states, so their masses require
+the nonperturbative strong-binding layer rather than one more elementary particle row.
 
-The current paper corpus supports the following lane-level split.
+The fourth achievement is implementation. The screen-microphysics construction makes patches,
+overlaps, edge observables, records, repair maps, and observer checkpoints explicit at finite
+cutoff. OPH has a regulated observer-and-record surface on which the basic consistency machinery can
+be written directly.
+
+\paragraph{Axioms in words.}
+The theory uses five axioms. A screen net assigns algebras to connected screen patches. Overlap
+consistency requires agreement on shared observables. Local MaxEnt selects the least biased local
+state compatible with the finite constraint data and keeps the realized construction stable under
+refinement. Recoverable generalized entropy supplies the collar-recovery and focusing structure
+used by the gravity lane. Minimal admissible realization selects the simplest low-energy sector
+package that satisfies the consistency constraints.
+
+This paper is the synthesis surface. It gives the operational picture first, then places the
+technical proof machinery after the reader has the construction in hand.
+
+\section{Main Achievements}
+
+The OPH papers support the following unified picture.
 
 \begin{enumerate}[leftmargin=2em]
-\item \textbf{At fixed cutoff, local structure and repair are sharp.} Technically, the
-collar theorem package is explicit and finite-range, the genuinely noncentral higher-gauge branch
-is closed at fixed cutoff by the crossed-module defect package, and the consensus lane gives a
-unique schedule-independent quotient normal form together with schedule-independent physical
-observable values on the declared fixed-cutoff physical algebras once the declared
-recovery-derived repair moves are committed by the touched-overlap local-fit contract that yields
-strict decrease of the inconsistency potential \(\Phi\), disjoint accepted repairs commute by
-support locality, the fixed-cutoff center-sector / higher-gauge gluing package makes overlapping
-repairs parenthesization-independent on the physical quotient, and repair completeness holds on the
-stated finite patch-net branch. The remaining open item on that genuinely noncentral lane is the
-refinement-limit transportable-sector lift used by the later compact-gauge branch. Microscopic
-representative lifts may still differ by gauge or sector relabelings inside one declared
-quotient-local glued state without changing the resulting observable values on those algebras.
-\item \textbf{Relativity appears as a controlled continuum branch.}
-Technically, the Lorentz/null-modular/Einstein chain is a refinement/scaling-limit branch.
-It depends on the controlled refinement/scaling limit, the theorem-local realized transported geometric cap-local system whose carried-collar schedule sits above the transported fixed-local-collar Markov/faithfulness datum, and ordered cut-pair rigidity on the extracted prime geometric subnet; on that branch the finite cap regulators are type-I, but the scaling-limit observer algebra may be non-type-I, so the theorem is automorphism-level there and \(K_C=2\pi B_C\) is only the special type-I limit form; stronger BW / canonical-cap phrasing remains theorem-external unless the extraction-and-rigidity package is supplied. The null bridge also uses the theorem-local null-cut center
-transfer, the extra inherited left/right strip-split condition needed for the spatial-collar-type
-tensor decomposition, the exact-or-controlled Markov hypotheses on one fixed inherited strip
-model, and the geometric scaling action on the null half-line blow-up net that derives the
-half-sided modular pair, while the same-half-line local modular-Hamiltonian input and the
-separate bounded-interval projective branch enter only later; on that surface the
-exact-or-controlled strip additivity, the endpoint-Lipschitz renormalized half-line family, the
-weak tail generator, the derived half-sided modular inclusion, and the positive null-translation
-generator on its Stone domain with the affine half-line modular relation are internal to the
-bridge itself. The Einstein step adds the derived fixed-cap generalized-entropy stationarity theorem for admissible fixed-cap MaxEnt variations on the realized cap-label-preserving MaxEnt family,
-the internal small-ball bridge from the geometric cap generator together with the separate bounded-interval projective branch,
-the locally Lorentzian \(d=4\) scaling regime, the small-ball constancy and D4 carried-remainder hypotheses,
-and the all-directions/all-reference-states tensor-upgrade premise. On that same gravity lane, the
-local Einstein equation is fixed only modulo \(\Lambda g_{ab}\), and the additional
-screen-capacity input \(N_{\mathrm{scr}}\) closes the same branch globally by
-\(\Lambda=3\pi/(G N_{\mathrm{scr}})\), thereby fixing the de Sitter static-patch package
-\((S_{\mathrm{dS}},r_{\mathrm{dS}},t_\Lambda)\); the observed cosmic age remains a downstream
-FLRW benchmark rather than an additional D6 theorem output.
-\item \textbf{The Standard Model gauge skeleton appears as a constrained consistency output.}
-Technically, compact gauge reconstruction and the realized
-\(\SU(3)\times\SU(2)\times\U(1)/\mathbb Z_6\) branch follow under the stated transportability and
-categorical premises, with the exact hypercharge lattice and the realized counting chain \(N_g=3\) then \(N_c=3\).
-\item \textbf{The particle lane has real outputs and a nonuniform closure profile.}
-Technically, the structural carriers are exact, the electroweak stage remains on a non-core
-Phase-II quantitative-closure branch with target-free public \(W/Z\) rows, a Ward-projected
-electromagnetic transport family whose low-energy endpoint is tracked by the same forward
-closure program, with a numerical fixed-point witness and a separate certificate boundary, and a compare-only frozen validation pair. Its internal
-transmutation data are fixed forward from \(P\); measured couplings enter as comparisons. The
-Higgs/top stage closes on a source-only split theorem surface, the charged-lepton lane carries
-exact centered readback plus a closed common-shift no-go, the neutrino lane closes on its
-weighted-cycle theorem branch with diagnostic sidecars below it, the quark lane closes on the
-public physical quark frame class selected by \(P\) without claiming a global classification of
-all quark frame classes, and the hadron lane remains an execution-contract surface without a
-mass-derivation theorem. At the local numerical level the same declared input \(P\) organizes
-the bosonic mass trunk and the gravity-side shared edge-entropy identity beneath the local \(G\)
-readout.
-\item \textbf{The screen-microphysics lane is explicit and concrete.} Technically, it
-contains an explicit regulated reference architecture, sharpened patch-net and edge-sector
-branches, a closed fixed-cutoff record-algebra / Born-L\"uders package with quantitative stability
-bounds, and a closed checkpoint/restoration package.
-\item \textbf{The UV picture is sharper at fixed cutoff than in the continuum.} Technically, OPH
-fixes the physical UV branch only modulo implementation hiding and inert ancillary refinement; the
-UV burden is the realized transported geometric cap-local system with its derived carried-collar
-schedule above the transported fixed-local-collar Markov/faithfulness datum, then ordered
-cut-pair rigidity on the emitted scaling-limit geometric cap pair, and separately the
-refinement-limit transportable-sector lift.
-\item \textbf{The consensus lane is exact but not overpromoted.} Technically, on each fixed finite
-patch net the normal form is a finite-state decidable object, approximate stability is only
-carried by the local splice and record error controls, and no universality theorem for a uniform
-family of growing patch nets and repair laws is part of the current five-paper corpus.
-\item \textbf{The string/worldsheet lane is controlled but non-core.} Technically, the compact
-carrier now proves the exact OPH-to-2D-Yang--Mills partition bridge
-\(Z_{\mathrm{edge}}(t)=\sum_R d_R^2 e^{-tC_2(R)}=K_t(1)\) on the compact-group heat-kernel branch,
-and then carries the worldsheet lane as a theorem-level effective description on a distinct
-large-\(N_{\mathrm{edge}}\) branch with fixed-\(\tau=tN_{\mathrm{edge}}\) window and uniform
-genus-remainder control explicit in the premises, but it is not part of the recovered core.
+\item \textbf{Observers and records become physical objects.} Finite patches, shared overlaps,
+record algebras, repair maps, and observer checkpoints are represented on the screen rather than
+assumed from outside.
+\item \textbf{Spacetime is reconstructed.} Modular time supplies Lorentz kinematics, and
+recoverable generalized entropy supplies the Einstein relation. The de Sitter capacity relation
+then ties the cosmological constant to \(N_{\mathrm{scr}}\).
+\item \textbf{The Standard Model quotient is selected.} Gluing and transport reconstruct the
+realized gauge quotient, exact hypercharge, three generations, three colors, and the structural
+absence of gauge-mediated proton decay.
+\item \textbf{The local particle scale is computed.} The pixel ratio \(P\) is fixed by matching a
+screen cell's outer entropy detuning to its inner electromagnetic observation scale. The same
+number organizes the weak sector, electromagnetic coupling, Higgs/top surface, quark package,
+neutrino family, and local gravity-facing readout.
+\item \textbf{The framework has a regulated implementation surface.} The microphysics paper turns
+the observer language into explicit finite screen registers, edge observables, records, and repair
+cycles.
+\item \textbf{Edge sectors also admit worldsheet-style effective descriptions.} The heat-kernel
+edge partition function reorganizes the same boundary data into a controlled two-dimensional
+Yang--Mills worldsheet description in the appropriate large-edge regime.
 \end{enumerate}
 
 \subsection*{Companion Papers}
 
 The detailed depth surfaces used throughout this synthesis are:
 \begin{enumerate}[leftmargin=2em]
-\item \emph{Recovering Relativity and the Standard Model from the OPH Package Rooted in Observer Consistency}~\cite{ophcompact}, which carries the premise ledger, the recovered-core Lorentz/gravity route, and the compact-gauge/Standard-Model branch.
+\item \emph{Recovering Relativity and the Standard Model from the OPH Package Rooted in Observer Consistency}~\cite{ophcompact}, which gives the compact technical core for relativity, gravity, and Standard Model structure.
 \item \emph{Reality as a Consensus Protocol: The Fixed-Point Computation That Implements Physics}~\cite{ophconsensus}, which carries the finite patch-net fixed-point, defect, quotient, and operator-record consensus package.
 \item \emph{Screen Microphysics, Patches, and Observer Synchronization in OPH}~\cite{ophmicrophysics}, which carries the regulated reference architecture, the fixed-cutoff edge heat-kernel / Casimir theorem, and the measurement and observer checkpoint/restoration packages.
-\item \emph{Deriving the Particle Zoo from Observer Consistency}~\cite{ophparticles}, which carries the structural-to-family particle route and the per-sector claim-tier ledger.
+\item \emph{Deriving the Particle Zoo from Observer Consistency}~\cite{ophparticles}, which carries the particle derivations, masses, couplings, and sector calculations.
 \end{enumerate}
 
 \def\OPHSkipEmbeddedReferences{1}

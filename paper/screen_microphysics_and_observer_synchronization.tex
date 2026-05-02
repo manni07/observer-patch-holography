@@ -49,7 +49,7 @@ regulator-scale edge-center completion language are reused as background structu
 chosen, the patch algebra, overlap algebra, edge-sector observables, record layer, and
 observer-level interfaces can be defined explicitly at fixed cutoff.
 
-\item \textbf{Fixed-cutoff theorem and implementation claims.} Small-lattice digital or tensor-network realizations can test
+\item \textbf{Fixed-cutoff implementation claims.} Small-lattice digital or tensor-network realizations can test
 whether the reference architecture exhibits gauge-invariant patch observables, stable records,
 low conditional mutual information across collars, and robust synchronization under local repair
 schedules.
@@ -220,8 +220,8 @@ What must be compiled into qubit circuits is explicit:
 \section{From Local Registers to Patches and Overlaps}
 
 The bridge from local finite registers to OPH patch language has to be explicit. A patch is
-not only a geometric region. It is a connected region together with the gauge-invariant
-observable algebra available there.
+a connected geometric region together with the gauge-invariant observable algebra available
+there.
 
 Let $P\subseteq \Gamma$ be a connected collection of faces, together with all vertices and
 links incident to those faces. Its extended cutoff Hilbert space is
@@ -349,7 +349,7 @@ shared overlap algebra to neighboring patches.
 \item \textbf{Update capability.} It can condition future local actions on those records.
 \item \textbf{Comparison capability.} It can query at least one shared overlap observable
 family and detect mismatch syndromes with neighbors.
-\item \textbf{Persistence.} The pattern remains identifiable for many local update cycles.
+\item \textbf{Persistence.} The pattern is identifiable for many local update cycles.
 \end{enumerate}
 
 This is an observer pattern criterion, not a consciousness criterion. It is meant to support
@@ -379,9 +379,9 @@ The fixed-cutoff object used here is not a vague repair option or an abstract gl
 on every edge of the patch-overlap graph. For each neighboring patch
 pair $(P,Q)$, the paper specifies the support of the update, the declared shared
 observable family, the finite syndrome alphabet, the local correction menu, the acceptance rule,
-and the logging contract. What it does \emph{not} yet claim is a theorem that a chosen family
+and the logging contract. It does \emph{not} claim a theorem that a chosen family
 must terminate, be confluent, or yield a continuum-consistent normal form. Those theorem-level
-questions remain on the consensus-paper side of the boundary.
+questions are on the consensus-paper side of the boundary.
 
 The default should be explicit syndrome-based overlap repair rather than a fully
 implicit dissipative dynamics. Dissipative or record-mediated variants may later be useful, but
@@ -651,7 +651,7 @@ lower $L_{PQ}$. This hard-codes the priority order
 \end{aligned}
 \end{equation}
 
-For logging and later schedule diagnostics, it is still useful to keep a scalar local cost,
+For logging and schedule diagnostics, it is useful to keep a scalar local cost,
 \begin{equation}
 \Xi_{PQ}
 =
@@ -786,7 +786,7 @@ For t = 1,...,T_max:
 
 Only the schedule $\nu_t$ should vary across the simplest simulation experiments. Reasonable
 schedule choices are round-robin over overlap edges, uniform random asynchronous sampling, or
-priority by current largest $\Xi_{PQ}$. The interface $\mathfrak I_{PQ}$ should remain
+priority by current largest $\Xi_{PQ}$. The interface $\mathfrak I_{PQ}$ should be
 unchanged across those schedule experiments.
 
 This loop also makes the simulator/logging boundary concrete. A single log line per attempted
@@ -842,7 +842,7 @@ candidate branch $c$,
 \text{whenever }\rho\sim_{PQ}\rho'.
 \end{equation}
 If this packet-closure test passes, the microscopic instrument pushes forward to a genuine
-finite update rule on packet space. If it fails, the finite packet layer is still an embedded
+finite update rule on packet space. If it fails, the finite packet layer is an embedded
 readout/actuation interface, without an autonomous quotient dynamics. This is the boundary kept
 explicit for the later fixed-point paper \emph{Reality as a Consensus Protocol}.
 
@@ -1266,7 +1266,7 @@ irrep projectors
 \qquad
 \rho\in\{\mathbf 1,\mathbf 1',\mathbf 2\},
 \end{equation}
-because the whole point of the upgrade is to check that the overlap interface still behaves well
+because the whole point of the upgrade is to check that the overlap interface behaves well
 when the shared sector carries genuinely nonabelian labels.
 For the edge-law branch, the cut register on each active overlap is the same encoded $S_3$
 boundary register, and the minimal class-symmetric edge operator is the transposition-class
@@ -1352,7 +1352,7 @@ edge-state or local sampler).
 sector probabilities, attempted edge moves, and pass/fail statistics for every cycle.
 \end{enumerate}
 
-This remains a fixed-cutoff microphysics note. A successful pilot would show that one fixed-cutoff
+This is a fixed-cutoff microphysics note. A successful pilot would show that one fixed-cutoff
 screen model can instantiate the declared objects and measurements; it would not identify a
 unique UV completion or close any continuum claim.
 
@@ -1516,8 +1516,8 @@ g(t)=0\ \text{for all post-verify cycles},
 \qquad
 N_{\mathrm{plat}}\le 8,
 \end{equation}
-and the residual label must remain unchanged for the final $10$ cycles. A run that oscillates
-indefinitely, or that reports $\Phi=0$ while the forced stale source is still present, fails
+and the residual label must are unchanged for the final $10$ cycles. A run that oscillates
+indefinitely, or that reports $\Phi=0$ while the forced stale source is present, fails
 this gate.
 \item \textbf{$S_3$ nonabelian gate.}
 On \path{S3-1-transposition}, \path{S3-2-threecycle}, and
@@ -1560,7 +1560,7 @@ $\mathrm{Refresh}_{IJ}$ from the candidate menu. Expected failure:
 \texttt{Z2-1-stale-record} does not converge and $C_r(5)$ drops.
 \item \texttt{NC-2-wrong-orientation}: reverse one stored edge orientation in the $S_3$ holonomy
 routine without updating the inverse lookup. Expected failure: $M_{\mathrm{class}}$ and
-$D_{\mathrm{sched}}$ jump while the $\mathbb Z_2$ pilot may still look healthy.
+$D_{\mathrm{sched}}$ jump while the $\mathbb Z_2$ pilot may look healthy.
 \item \texttt{NC-3-no-illegal-penalty}: set $\lambda_u=0$ in the $S_3$ build. Expected failure:
 $u_{\mathrm{bad}}$ and $N_{\mathrm{irrep}}$ become nonzero.
 \item \texttt{NC-4-no-write}: skip the record-write layer. Expected failure: $C_r(5)$ and
@@ -1694,7 +1694,7 @@ The open bridges are:
 Nothing below claims that the octahedral $\mathbb Z_2$ pilot, the $S_3$ upgrade, or the
 thermalized edge-law branch are the unique OPH microphysics. They are explicit regulated
 fixed-cutoff constructions on which the observer-side theorem packages are carried and
-the remaining structural branches are stated explicitly.
+the open structural branches are stated explicitly.
 \item \textbf{Global repair theory.}
 The local repair kernel, the regulator embedding, the edge-law package, and the local
 measurement/backup packages are carried here as fixed-cutoff theorem packages. Beyond those
@@ -1870,11 +1870,11 @@ automatically an autonomous quotient dynamics. That stronger statement requires 
 packet-closure test introduced in the preceding section: identical input packets must lead to
 identical reread packets after every accepted branch. When that test passes for a declared
 observable family, the regulator pushes forward to the exact finite packet-level update rule on
-that family. When it fails, the embedding proved here still stands, but the missing quotient
+that family. When it fails, the embedding proved here stands, but the missing quotient
 closure is explicit and logged rather than hidden.
 
 \paragraph{Conclusion for this package.}
-The regulated patch-net embedding is explicit at fixed cutoff: patch vertices, patch-state spaces, interface alphabets, projection maps, syndrome components, and candidate menus are fixed by the regulator. The remaining items are packet-level quotient closure when available, repair completeness on the declared finite patch-net branch, the quotient-level compatibility package that yields the local diamond, residual-obstruction classification, and refinement-limit lift. On that branch, the consensus theorem package yields Lyapunov descent, derived termination, local confluence, schedule robustness, and normal-form existence.
+The regulated patch-net embedding is explicit at fixed cutoff: patch vertices, patch-state spaces, interface alphabets, projection maps, syndrome components, and candidate menus are fixed by the regulator. The open items are packet-level quotient closure when available, repair completeness on the declared finite patch-net branch, the quotient-level compatibility package that yields the local diamond, residual-obstruction classification, and refinement-limit lift. On that branch, the consensus theorem package yields Lyapunov descent, derived termination, local confluence, schedule robustness, and normal-form existence.
 
 \subsection{Edge heat-kernel / Casimir theorem}\label{sec:microphysics-feeds-e24}
 
@@ -1991,7 +1991,7 @@ interface: the cut register, the sector projectors, the reversible thermal branc
 finite-group stationary Casimir law, together with the conditional Peter--Weyl heat-kernel
 corollary when the stated refinement ladder is supplied. The later compact D10 surfaces may
 import this package only through that declared handoff. They do not need a new leaf-level
-Casimir derivation; what remains above this microphysics surface is only the compact-group lift,
+Casimir derivation; what sits above this microphysics surface is only the compact-group lift,
 refinement-stable universality, UV uniqueness, and the separate calibration conventions/root
 control of the D10 solve.
 
@@ -2016,7 +2016,7 @@ records, structure, and dynamics. The microphysics handoff identifies the balanc
 D10 solve fixes the realized detuning.
 
 \paragraph{Conclusion for this package.}
-This fixes the edge heat-kernel / Casimir package at fixed cutoff. The remaining items are uniqueness and refinement-stable universality, not a missing leaf-level Casimir derivation.
+This fixes the edge heat-kernel / Casimir package at fixed cutoff. The open items are uniqueness and refinement-stable universality, not a missing leaf-level Casimir derivation.
 
 \subsection{Measurement / Born-rule theorem stack}
 
@@ -2081,8 +2081,8 @@ surface, no extra hidden noncommutative ambiguity survives at the measurement in
 \paragraph{Repeated-read corollary.}
 If no accepted repair move between $t$ and $t+1$ touches the support of $P_E$, then the next
 read of the same event has probability $1$. If the support is touched, the cycle table records
-the precise place where the conditioning surface changed. So the measurement package is not only
-defined but auditable.
+the precise place where the conditioning surface changed. The measurement package is defined
+with an auditable conditioning surface.
 
 \paragraph{Merge boundary.}
 What is closed here is exactly the fixed-cutoff operational measurement package: central record
@@ -2103,7 +2103,7 @@ all fixed on the declared operational surface.
 \subsection{Bell / CHSH theorem stack}
 
 \paragraph{Inputs used here.}
-From the fixed-cutoff theorem surfaces already established we use only the declared physical
+From the fixed-cutoff theorem surfaces we use only the declared physical
 observable algebra on one observer-facing two-wing region, the central setting registers on the
 same compare slice, and the Born/L\"uders package on the resulting commuting event algebra. The
 consensus paper supplies the quotient-level physical observable algebra and observable-level
@@ -2171,7 +2171,7 @@ so the left marginal is independent of \(y\) and the right marginal is independe
 
 \paragraph{Proof.}
 Because the left and right projectors commute, \(\Pi_{ab|xy}\) is a commuting projective family on
-the fixed setting slice. The Born theorem already proved above on the same commuting event algebra
+the fixed setting slice. The Born theorem proved above on the same commuting event algebra
 therefore gives the joint law. Positivity is immediate, and normalization follows from
 \[
 \sum_{a,b}\Pi_{ab|xy}
@@ -2387,20 +2387,20 @@ This closes the fixed-cutoff observer checkpoint/restoration package: the checkp
 
 \subsection{Open Fixed-Cutoff and Continuum Questions}
 
-The remaining open items are:
+The open items are:
 \begin{enumerate}[leftmargin=2em]
 \item The regulated patch-net embedding package is closed here at the object and local-interface
 level. Downstream work begins only when one asks for packet-level quotient closure on a declared
 observable family and then for the later global consensus analysis on that exported packet net.
 \item The edge heat-kernel / Casimir package has an explicit thermalized finite-group theorem
-here, while its compact heat-kernel lift remains a downstream refinement question.
+here, while its compact heat-kernel lift is a downstream refinement question.
 \item The fixed-cutoff measurement/Born-rule package is closed here by the central record
 algebra, Born trace, and conditioning theorem stack.
 \item The fixed-cutoff Bell/CHSH package is closed here on the declared two-wing surface by the
 source-premised joint law, no-signaling theorem, and CHSH/Tsirelson theorem stack.
 \item The fixed-cutoff observer checkpoint/restoration package is closed here by the
 checkpoint, restoration, error, and identity theorem stack.
-\item What remains after these fixed-cutoff results is packet-level quotient closure where
+\item What sits after these fixed-cutoff results is packet-level quotient closure where
 desired, the compact heat-kernel lift, refinement-stable universality, global consensus analysis,
 and the continuum/gravity lift.
 \end{enumerate}
@@ -2410,14 +2410,14 @@ and the continuum/gravity lift.
 The regulated screen architecture carries five fixed-cutoff theorem packages:
 \begin{enumerate}[leftmargin=2em]
 \item the regulated patch-net embedding theorem, with the later packet-closure/global-consensus boundary made explicit,
-\item the edge-sector thermal/Casimir theorem, with its remaining compact heat-kernel lift made explicit,
+\item the edge-sector thermal/Casimir theorem, with its open compact heat-kernel lift made explicit,
 \item the central-record/Born-rule measurement package,
 \item the fixed-cutoff Bell/CHSH package on the declared two-wing surface, and
 \item the checkpoint/restoration/backup observer package.
 \end{enumerate}
 
 These results do \emph{not} identify the unique OPH UV completion, prove global repair
-convergence, derive the continuum/gravity branch, or finish the remaining packet-level,
+convergence, derive the continuum/gravity branch, or finish the open packet-level,
 refinement, and edge-law lifts. The regulated patch-net embedding theorem is closed on its
 fixed-cutoff microphysics surface; the open bridge begins with autonomous packet dynamics
 when closure holds, then global consensus analysis, refinement-stable universality, and the

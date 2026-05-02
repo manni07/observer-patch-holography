@@ -6,7 +6,7 @@
 > There are only local, subjective perspectives, and physics is the rulebook that keeps them consistent where they overlap.
 > If you are not a physicist, you are in the right place; this book is written as a reverse-engineering book, not a math-first textbook.
 
-Whether your interest begins with **simulation theory** or with the hope of a **theory of everything**, this book gives the long-form OPH answer. OPH is presented here as a concrete observer-consistent information architecture. Quantum mechanics, relativity, gauge structure, and particle physics appear as effective descriptions of deeper overlap-consistency rules. The strange-loop material is kept where it belongs: as interpretation outside the recovered core.
+Whether your interest begins with **simulation theory** or with the hope of a **theory of everything**, this book gives the long-form OPH answer. OPH is presented here as a concrete observer-consistent information architecture. Quantum mechanics, relativity, gauge structure, and particle physics appear as effective descriptions of deeper overlap-consistency rules.
 
 ## The Cosmic Program
 
@@ -39,7 +39,7 @@ project: Newton, Maxwell, Einstein, Bohr, Heisenberg, Feynman, Hawking. Each
 generation inherited the partial models of the previous one, refined them,
 found the gaps, and pushed deeper. Quantum field theory plus general
 relativity predicts behavior with
-stunning accuracy but remains incomplete, inconsistent at the edges, and
+stunning accuracy but is incomplete, inconsistent at the edges, and
 deeply mysterious at its core.
 
 ## The Weirdest Program Ever Written
@@ -67,9 +67,8 @@ reflects a correlated result. No signal passes between them. The correlation
 is just... there.
 
 **Black holes put information under pressure.** Throw something into a black
-hole, and modern quantum-gravity arguments strongly suggest the information
-is not simply lost, even though the detailed recovery mechanism remains subtle
-and framework-dependent.
+hole, and modern quantum-gravity arguments say the information is not simply
+lost. It is encoded in a far less obvious way.
 
 **Holography is a major clue.** The information needed to describe a volume
 of space may be encoded on its boundary. The three-dimensional
@@ -167,9 +166,9 @@ alone?
 
 This is where the reverse-engineering method matters. A good reverse engineer
 first works out the architecture, then checks how many knobs are really left.
-The book argues that most of the architecture is forced early. The interesting
-remaining question is whether one local scale can organize far more of the
-particle structure than common sense would expect.
+The book argues that most of the architecture is forced early. The sharp test
+is whether one local scale can organize far more of the particle structure
+than common sense would expect.
 
 That is the game played in the middle of the book. Start with the cleanest part
 of the particle data, the weak sector. Fix the local scale there. Then ask a
@@ -181,15 +180,16 @@ machine rather than fitting a different dial for every chapter.
 The synthesis chapter returns to the same scale from a more surprising angle.
 From one side it looks like a pixel of the screen. From the other it looks like
 the smallest observational step available to the world encoded on that screen.
-The strange and beautiful possibility is that these two descriptions meet at
-the same value. That is where the book's stranger loop starts to come into
-view.
+The theory identifies these two descriptions at the same value. That is where
+the book's self-reference theme enters the physics.
 
 From this starting point, we derive constraints. We show how the mathematical
 structures of quantum mechanics and relativity emerge from consistency
 requirements. We trace the logic from axioms to consequences.
 
-The long-range goal is to recover all of known physics, gravity and the Standard Model included, from this simple starting point. We do not want to postulate the answer by hand.
+The program targets the recovery of known physics, gravity and the Standard
+Model included, from this simple starting point. The answer is not inserted by
+hand.
 
 The apparent mysteries of physics dissolve once you make the conceptual shift from
 "objective reality exists" to "consistency across observers is fundamental."
@@ -199,10 +199,13 @@ with the intuitive picture most readers carry into the subject and then turns
 to the surprising hint that breaks that intuition. From there the book asks
 what principle explains the hint once observer consistency is taken
 seriously. When the structural chain is in place, the book fixes the small
-external input surface and tests how much of the remaining behavior follows
-from it, including both verified and testable consequences.
+external input surface and follows its consequences through gravity, gauge
+structure, particles, and observers.
 
-This model rests on established mathematics and physics, organized around five core axioms. The results are striking: gravity, the symmetry structure behind the Standard Model, and several further programs all emerge from the framework. Our goal is to show you how deep the rabbit hole goes.
+This model rests on established mathematics and physics, organized around five
+core axioms. Gravity, the symmetry structure behind the Standard Model, and
+several further programs emerge from the framework. The book explains the path
+from observer consistency to that reconstructed world.
 
 ## How This Book Is Organized
 

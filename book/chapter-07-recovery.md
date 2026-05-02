@@ -38,7 +38,7 @@ In 1974, Stephen Hawking made a disturbing discovery. Black holes aren't quite b
 
 $$T = \frac{\hbar c^3}{8\pi G M k_B}$$
 
-For a solar-mass black hole, this is about 60 nanokelvin-undetectably cold. But for small black holes, the temperature can be significant. And crucially, the radiation carries energy away. Black holes evaporate.
+For a solar-mass black hole, this is about 60 nanokelvin-undetectably cold. But for small black holes, the temperature can be significant. The radiation carries energy away. Black holes evaporate.
 
 Here's the problem. Hawking's calculation showed the radiation is thermal-random, uncorrelated noise carrying no information about what fell in. If you throw a book into a black hole and wait for evaporation, all you get out is random static.
 
@@ -50,7 +50,7 @@ Hawking was willing to accept this. Most other physicists were not.
 
 After decades of debate, the broad holographic lesson is that black-hole evaporation need not destroy information. In semiclassical holographic models, the Hawking radiation is not truly random: it carries subtle correlations, so information that looked lost can instead be encoded in the radiation.
 
-This lesson was sharpened by the Page-curve and island calculations developed in the 2010s. In semiclassical holographic models, they support encoded-information viewpoints and show how information that seemed lost to the black hole interior can instead be carried by correlations among the outgoing radiation particles, but they do not by themselves turn OPH into a full black-hole evaporation theorem.
+This lesson was sharpened by the Page-curve and island calculations developed in the 2010s. In semiclassical holographic models, they support encoded-information viewpoints and show how information that seemed lost to the black hole interior can instead be carried by correlations among the outgoing radiation particles.
 
 Information cannot be copied (no-cloning), yet information cannot be destroyed (unitarity). These twin constraints require a specific structure: **quantum error correction**.
 
@@ -85,7 +85,7 @@ But how can information be preserved if it cannot be copied? The answer: you don
 
 The recovery thread begins in 1948, in a cramped office at Bell Telephone Laboratories in Murray Hill, New Jersey.
 
-Claude Shannon was not like other engineers. While his colleagues worried about practical problems-how to reduce static on phone lines, how to compress calls onto cables-Shannon was thinking about something deeper. What *is* information? Can it be measured? And crucially: how do you send a message reliably when the channel tries to destroy it?
+Claude Shannon was not like other engineers. While his colleagues worried about practical problems-how to reduce static on phone lines, how to compress calls onto cables-Shannon was thinking about something deeper. What *is* information? Can it be measured? How do you send a message reliably when the channel tries to destroy it?
 
 Shannon had spent World War II working on cryptography, trying to make messages secure from eavesdroppers. He then attacked the opposite problem: how to make messages survive noise that corrupts them randomly.
 
@@ -350,7 +350,7 @@ The Page curve long stood as a consistency requirement for unitarity, not as a d
 
 ### The Recovery Perspective
 
-The recovery rule makes holographic interior encoding more plausible, but it does not by itself amount to an OPH Page-curve theorem.
+The recovery rule gives a natural OPH reading of holographic interior encoding.
 
 Label the systems in the usual way. $A$ is the information thrown into the
 black hole, Alice's diary. $B$ is the early Hawking radiation. $C$ is the late

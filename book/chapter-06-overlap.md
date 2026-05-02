@@ -369,7 +369,7 @@ Here's the idea. A quantum system interacts with its environment-air molecules, 
 
 Consider Schroedinger's cat. If the cat is alive, air molecules bounce off it in a certain way. Light reflects off it in a certain way. Heat radiates from it in a certain way. Each of these environmental fragments carries partial information about the cat's state.
 
-When you look at the cat, you're not accessing the cat directly-you're reading information from these environmental fragments. And crucially, many observers can read many different fragments and still agree.
+When you look at the cat, you're not accessing the cat directly-you're reading information from these environmental fragments. Many observers can read many different fragments and agree.
 
 The information that gets redundantly copied is the information that becomes "objective." It's the information that survives across multiple overlaps. Quantum superpositions don't get copied this way-only certain "pointer states" that are robust against environmental interaction.
 

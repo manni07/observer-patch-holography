@@ -304,7 +304,7 @@ Hofstadter argued that consciousness itself is a strange loop, a pattern that pe
 
 This has profound implications for our model. If reality is computational, and observers are patterns within that computation that model reality, then we have a strange loop: reality contains observers that understand reality.
 
-But strange-loop thinkers argue for something deeper: the loop may not just *exist* within reality; it may be part of how reality closes on itself. Self-reference becomes not merely possible but structurally important.
+But strange-loop thinkers argue for something deeper: the loop may be part of how reality closes on itself. Self-reference becomes possible and structurally important.
 
 We will return to this idea in Chapter 18, where we consider the possibility that reality evolves toward producing observers capable of understanding and simulating it, closing the loop of self-creation.
 

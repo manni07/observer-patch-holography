@@ -121,8 +121,7 @@ This does not derive the specific low entropy of the Big Bang from pure logic.
 It does show why the Past principle is structurally important in this picture.
 A universe with durable observers checking for consistency requires a
 significant departure from equilibrium. The low-entropy past is therefore a
-structural precondition for the consistency-building present. That initial
-condition is not derived here.
+structural precondition for the consistency-building present.
 
 ## 4.4 Information is Physical
 

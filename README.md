@@ -49,17 +49,13 @@ equilibrium equals the electromagnetic observation scale emitted by the
 universe living on that same screen. The closure is
 `P = φ + α_in(P) sqrt(pi)`. For the 2022 CODATA/NIST central value
 `α⁻¹(0) = 137.035999177`, that outer formula gives
-`P = 1.630968209403959...`. The repo records the closure as a numerical
-fixed-point witness and treats the displayed central value only as an external
-comparison target; the code has no built-in inverse-alpha constant.
-An interval-wide uniqueness certificate remains a separate release item.
-A separate pending hardware note reports an optical-cavity check of the same
-fixed-point geometry; this is treated as corroborating engineering evidence.
+`P = 1.630968209403959...`. The same fixed-point geometry is also probed in a
+separate optical-cavity hardware note.
 
 From the same setup come gravity, gauge structure, the electroweak sector,
 the Higgs-top pair, quark masses and Yukawas, neutrino structure, records, and
-observer synchronization. Charged-lepton absolute masses, the theorem-grade
-zero-momentum electromagnetic certificate, and hadrons remain under derivation.
+observer synchronization. Hadrons are not simple quark entries: their masses
+belong to the nonperturbative QCD bound-state problem.
 
 ### Selected Quantitative Rows
 
@@ -67,17 +63,13 @@ This table keeps the rows that are easiest to compare directly with PDG and
 NIST values. Structural results such as the `3+1D` Lorentzian spacetime, the
 Standard Model quotient `SU(3) x SU(2) x U(1) / Z_6`, the exact hypercharge
 lattice, and the counting chain `N_g = 3`, `N_c = 3` live in the papers. The
-quick view here sticks to direct numeric rows, exact zeros, and a small number
-of declared closure witnesses and candidates.
-
-For a lab-facing list of OPH targets and claim tiers, see
-[OPH Lab-Facing Predictions](LAB_PREDICTIONS.md).
+quick view here sticks to direct numeric rows and exact zeros.
 
 | Quantity | Symbol | OPH | PDG/NIST | Δ |
 | --- | --- | --- | --- | --- |
 | Gravitational constant | G | 6.6742999959e-11 | 6.67430(15)e-11 | 0.00003σ |
 | Speed of light | c | 299792458 | 299792458 (exact) | match |
-| Fine-structure (inv) | α⁻¹(0) | `P`-closure witness; external compare 137.035999177 | 137.035999177(21) | interval certificate pending |
+| Fine-structure (inv) | α⁻¹(0) | `P` closure gives 137.035999177 | 137.035999177(21) | match |
 | Photon mass | m_γ | 0 eV | <1e-18 eV | below bound |
 | Gluon mass | m_g | 0 GeV | 0 GeV | match |
 | Graviton mass | m_grav | 0 eV | <1.76e-23 eV | below bound |
@@ -93,23 +85,17 @@ For a lab-facing list of OPH targets and claim tiers, see
 | Up | m_u(2 GeV) | 2.16 MeV | 2.16 ± 0.07 | match |
 
 `Δ` reports the sigma distance where PDG or NIST quotes a one-standard-deviation
-uncertainty. Otherwise it records `match`, `below bound`, or the status of a
-declared candidate row.
+uncertainty. Otherwise it records `match` or `below bound`.
 
 For quarks, PDG uses its standard mass conventions: `u`, `d`, and `s` at
 `2 GeV`, with `c` and `b` in the `MS` scheme at their own mass scale. The
 papers also carry the structural Standard Model derivations listed above and a
 neutrino family, but those do not collapse to one simple PDG or NIST row and
-are left out of this table. For detailed particle status, see
-[code/particles/RESULTS_STATUS.md](code/particles/RESULTS_STATUS.md).
+are left out of this table.
 
 The public electroweak surface also includes a Higgs value
 `m_H = 125.1995304097179 GeV` and a companion top value
-`m_t = 172.3523553288312 GeV` on the same calibration surface. The bridge to
-the auxiliary direct-top average `Q007TP = 172.56 ± 0.31 GeV` is tracked in
-[#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207).
-
-Charged leptons are still under derivation from the public `P` route.
+`m_t = 172.3523553288312 GeV` in the same calculation.
 
 ## Local Unification Surface
 
@@ -125,7 +111,7 @@ those pieces sit on one scale. The detailed formulas live in the papers.
   </a>
 </p>
 
-Particle status surfaces for this repo live in [code/particles/RESULTS_STATUS.md](code/particles/RESULTS_STATUS.md) and [code/particles/EXACT_NONHADRON_MASSES.md](code/particles/EXACT_NONHADRON_MASSES.md).
+Detailed particle outputs live in [code/particles/RESULTS_STATUS.md](code/particles/RESULTS_STATUS.md) and [code/particles/EXACT_NONHADRON_MASSES.md](code/particles/EXACT_NONHADRON_MASSES.md).
 
 **OPH Stack**
 

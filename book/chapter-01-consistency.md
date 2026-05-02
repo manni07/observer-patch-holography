@@ -37,7 +37,7 @@ We take a narrower, operational step: **start from perspectives and demand consi
 
 But why abandon the intuitive picture at all? Because the universe gave us hints, strange, persistent, reproducible hints, that it cannot be correct.
 
-Here's a thought experiment that illustrates the problem: imagine a cosmic ledger that records **all** facts at one global instant. You might expect physics to supply the rules for such a ledger. But relativity says there is no unique global present. Quantum mechanics says not all properties can be simultaneously definite. Horizons say no observer can access everything. The ledger is not even well-defined.
+Here's a thought experiment that illustrates the problem: imagine a cosmic record that contains **all** facts at one global instant. You might expect physics to supply the rules for such a record. But relativity says there is no unique global present. Quantum mechanics says not all properties can be simultaneously definite. Horizons say no observer can access everything. The record is not even well-defined.
 
 The intuitive picture is wrong. Not approximately wrong. Not wrong in some technical sense that doesn't matter for everyday life. It's *fundamentally* wrong about the nature of space, time, and observation.
 
@@ -133,7 +133,7 @@ These questions have haunted physics for a century. Different interpretations of
 
 The "measurement problem" has haunted physics for a century: When does the wave function collapse? What counts as an observer? Why does measurement produce definite outcomes from indefinite superpositions?
 
-Our model reframes this problem. It does not claim to eliminate every foundations dispute around it.
+Our model reframes this problem.
 
 The puzzle assumes a God's-eye view where the wave function is "really" in superposition, and then something magical happens called "collapse." But there is no God's-eye view. There are only observer patches.
 
@@ -278,7 +278,7 @@ We propose this principle goes deeper than biology. It applies to physics itself
 
 In our framework, the laws of physics, Lorentz symmetry, gauge structure, and conservation laws, emerge from the consistency program. They are not imposed from outside.
 
-**One interpretive OPH continuation is to view the laws of physics as survivors of a selection process.**
+**A strong OPH reading views the laws of physics as survivors of a selection process.**
 
 Think of the early universe as a chaos of competing possibilities: different geometries, different dynamics, different rules. Most configurations were inconsistent. They could not support stable patterns. They could not enable multiple observers to share a coherent reality.
 
@@ -300,8 +300,8 @@ Physicists call this **universality**. At large scales, different microscopic th
 
 ## 1.10 Five Core Axioms
 
-From these hints, the OPH papers distill **five core axioms** that guide the
-rest of this book:
+From these hints, OPH distills **five core axioms** that guide the rest of this
+book:
 
 **Axiom 1: Screen Net / Finite Access**
 Every observer is finite. You only access a patch of a common horizon screen, never the whole structure at once, and each patch comes with its own algebra of accessible observables.
@@ -343,7 +343,7 @@ You might ask: "If reality is a computation, what is it computing?" It is comput
 
 This view changes many traditional puzzles. "Why does anything exist at all?" becomes a question about the coherence of a closed self-referential structure. On this reading, the loop does not need an external cause because it is not a temporal chain with a first step waiting to be triggered from outside.
 
-"What is the universe made of?" becomes, within OPH, "What substrate best realizes the computational picture?" The construction studied here uses finite-dimensional quantum systems on a 2D surface, constrained by gauge invariance, organized by maximum entropy, and narrowed at low energy by the minimal admissible realization rule. This is a concrete technical realization, not a claim of unique final ontology.
+"What is the universe made of?" becomes, within OPH, "What substrate best realizes the computational picture?" The construction studied here uses finite-dimensional quantum systems on a 2D surface, constrained by gauge invariance, organized by maximum entropy, and narrowed at low energy by the minimal admissible realization rule. It is concrete enough to do physics, yet broad enough to keep the focus on structure rather than on a material picture borrowed from everyday life.
 
 ## 1.12 The Reverse Engineering Ahead
 

@@ -39,7 +39,7 @@ This dissolves the hard problem by showing it rested on a false premise: the ass
 
 Dissolving the hard problem is different from solving the easy problems. Our framework says nothing about why *these* neural patterns correlate with *that* quale, why activity in V4 looks red while activity in auditory cortex sounds like music. Those are scientific questions requiring empirical investigation. The model just removes the philosophical obstacle that made them seem impossible in principle.
 
-Similarly, the model sketches a criterion for which physical systems count as observer patches. A thermostat, a bacterium, and a corporation can all be discussed in the same consistency-and-record language. The remaining work is to make that classification sharper.
+Similarly, the model gives a structural way to discuss which physical systems count as observer patches. A thermostat, a bacterium, and a corporation can all be placed in the same consistency-and-record language, even though they occupy very different levels of organization.
 
 ## 19.5 The Measurement Problem Evaporates
 
@@ -66,8 +66,7 @@ dimensions, not four or seven? In OPH, the fine-structure row is tied to the
 same pixel fixed-point witness that organizes the local particle scale. The
 number is the screen cell's small displacement from exact self-similar
 equilibrium, read from inside the world as electromagnetic observation
-strength. A full uniqueness certificate remains separated from the public proof
-core.
+strength.
 
 Some invoke the anthropic principle: the constants must be compatible with observers existing, or we wouldn't be here to ask. But this feels like giving up on explanation.
 
@@ -187,6 +186,6 @@ significance through what its observers build together.
 
 ---
 
-*The reverse engineering has gone far enough to show the shape of the system. The real work is testing, sharpening, and inhabiting that picture.*
+*The reverse engineering shows the shape of the system. The human task is testing, sharpening, and inhabiting that picture.*
 
-One practical edge still remains. If observer-patterns are structural and partially restorable, what follows for continuation, death, and deliberate restoration? The epilogue takes up that speculative engineering question.
+If observer-patterns are structural and partially restorable, what follows for continuation, death, and deliberate restoration? The epilogue takes up that speculative engineering question.

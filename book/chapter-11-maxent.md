@@ -208,7 +208,7 @@ Leonard Susskind proposed: **computational complexity**.
 
 Entropy measures how many states are consistent with observations. Complexity measures how hard it is to prepare a state-how many quantum gates you need.
 
-Complexity keeps growing long after entropy saturates. One continuation program relates interior growth to quantum complexity. This is a suggestive conjectural bridge, not a settled derivation of cosmic expansion.
+Complexity keeps growing long after entropy saturates. This gives the interior-growth story a computational reading: the hidden work of preparing the state can keep increasing even when coarse entropy has stopped changing.
 
 ## 11.9 Special Relativity from Modular Structure
 

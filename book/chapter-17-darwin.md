@@ -49,7 +49,7 @@ alternative.
 In 1992, Lee Smolin proposed a radical idea: **Cosmological Natural Selection (CNS)**.
 
 Smolin noticed something curious. The parameters of our universe are often
-argued to be tuned not only for life but also for black-hole production. If
+argued to be tuned for life and black-hole production. If
 the weak force were weaker, supernovae would fail more often. If neutrons
 were heavier, hydrogen burning in stars would be harder to sustain. If
 gravity were stronger, stars would burn out faster.

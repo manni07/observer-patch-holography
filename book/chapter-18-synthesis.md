@@ -68,15 +68,14 @@ $$
 
 Three generations and three colors follow from the same pressure. The photon,
 gluons, and graviton stay massless because they ride on redundancy directions
-the architecture cannot break. The D10 weak pair, a fixed-point witness for
-the low-energy electromagnetic coupling, the Higgs-top surface, a selected-class
-running quark package, and one weighted-cycle neutrino family all arrive
-inside the same reconstruction. Charged leptons and hadrons still sit beyond
-that closed core.
+the architecture cannot break. The weak pair, the low-energy electromagnetic
+coupling, the Higgs-top surface, a running quark package, and one
+weighted-cycle neutrino family all arrive inside the same reconstruction.
+Hadrons add the strong-binding problem on top of that particle-level picture.
 
 That is the twist. The Standard Model no longer looks like a cabinet full of
 unrelated entries. It looks like the smallest charged world that lets the
-observer ledger close.
+observer records close.
 
 ## 18.6 One Global Size and One Local Ruler
 
@@ -124,11 +123,8 @@ $$
 P=1.630968209403959\ldots
 $$
 
-The OPH code records this as a numerical fixed-point witness and includes a
-local numerical contraction certificate. A full interval certificate for
-uniqueness remains a separate mathematical object.
-A separate pending hardware note reports an optical-cavity check of the same
-fixed-point geometry; this is treated as corroborating engineering evidence.
+The same fixed-point geometry is also probed in an optical-cavity hardware
+note.
 
 One cell on the screen is then being described twice. From one side it is a
 pixel of the horizon. From the other it is the smallest electromagnetic step
@@ -216,13 +212,10 @@ much stranger object than classical physics ever imagined. There is no view
 from nowhere. There are views from somewhere, and a shared reality is what
 appears when those views can lock into one coherent public record.
 
-The strongest parts of that structure are tiered rather than flat. The gauge
-quotient, charge lattice, counting chain, massless carriers, Lorentz branch,
-and Einstein branch belong to the recovered core. The electroweak and
-Higgs-top numerics sit on calibration surfaces above that core, and the darker
-phenomenological lanes sit higher still. Keeping those tiers straight does not
-weaken the picture. It shows exactly where OPH is already rigid and where it
-is still advancing.
+The structure is not a flat list. The gauge quotient, charge lattice, counting
+chain, massless carriers, Lorentz geometry, Einstein relation, electroweak
+rows, Higgs-top surface, quark package, and neutrino family form one organized
+reconstruction rather than a catalog of unrelated facts.
 
 The next chapter turns to the deepest interpretive question. If observers,
 meaning, and world belong to one structure, what exactly should be said about

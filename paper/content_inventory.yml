@@ -1,0 +1,77 @@
+# OPH paper content inventory.
+# Purpose: keep each paper's role explicit so synthesis text does not repeat
+# detailed claim tables or sector details carried by companion papers.
+
+papers:
+  observers_are_all_you_need:
+    role: synthesis and reader entrypoint
+    lead_material:
+      - informal OPH picture
+      - five axioms in words
+      - pixel ratio P and capacity N_scr
+      - lane-level result map
+    detailed_status_home:
+      - late cross-lane theorem boundary
+      - embedded recovered-core classification section
+    avoid_repeating:
+      - full per-sector particle tables
+      - full compact-paper dependency DAG
+      - microphysics packet-level engineering details
+
+  recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact:
+    role: compact recovered-core theorem surface
+    lead_material:
+      - recovered-core axioms and premises
+      - Lorentz, Einstein, and Standard Model dependency ledger
+    detailed_status_home:
+      - compact dependency tables
+    avoid_repeating:
+      - full synthesis lane inventory
+      - detailed particle continuation numerics
+
+  deriving_the_particle_zoo_from_observer_consistency:
+    role: particle-sector derivation and per-sector audit
+    lead_material:
+      - P-driven particle reconstruction
+      - structural carriers
+      - electroweak, Higgs/top, quark, charged-lepton, neutrino, and hadron lanes
+    detailed_status_home:
+      - particle claim-tier tables
+      - exact-output and execution-boundary sections
+    avoid_repeating:
+      - full recovered-core proof ledger
+      - screen-microphysics packet construction
+
+  reality_as_consensus_protocol:
+    role: fixed-cutoff consensus and quotient-normal-form theorem surface
+    lead_material:
+      - finite patch-net repair
+      - defect hierarchy
+      - quotient confluence
+    detailed_status_home:
+      - fixed-cutoff theorem and non-universality boundary
+    avoid_repeating:
+      - particle-sector numerical closure
+      - Lorentz and Einstein proof details
+
+  screen_microphysics_and_observer_synchronization:
+    role: regulated screen implementation and observer-record surface
+    lead_material:
+      - reference architecture
+      - fixed-cutoff records, Born-Luders package, Bell package, and checkpoint restoration
+    detailed_status_home:
+      - architecture and packet-level closure sections
+    avoid_repeating:
+      - Standard Model dependency ledger
+      - full particle claim-tier audit
+
+style_policy:
+  front_matter:
+    - lead with theory content before ledgers
+    - use status tables late in synthesis papers
+    - cite companion papers for sector detail
+  prose:
+    - avoid em dash scaffolding
+    - avoid stock transition phrases
+    - avoid formulaic contrast templates
+    - state research state directly, with "work in progress" only for unfinished derivation lanes

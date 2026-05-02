@@ -88,10 +88,10 @@ account stays consistent.
 
 ### The Consistency Ledger
 
-**Boundaries are consistency ledgers where observers compare notes.**
+**Boundaries are shared records where observers compare notes.**
 
 Reality emerges from the agreement of observer patches. But where do observers
-compare notes? They need a shared ledger, a common reference where their
+compare notes? They need a shared record, a common reference where their
 descriptions must match.
 
 The boundary serves exactly this role. It's where the bookkeeping lives. Each
@@ -155,7 +155,7 @@ The "CFT" in AdS/CFT stands for Conformal Field Theory. What makes these theorie
 
 A conformal field theory has no preferred length scale. Zoom in or out and the physics looks the same. This is called **scale invariance**.
 
-Why does this matter for observers? A conformal theory embodies scale-free agreement. If two observers use different rulers, they still agree on the form of correlations. The CFT is a natural candidate for a boundary ledger-a universal language for recording observations.
+Why does this matter for observers? A conformal theory embodies scale-free agreement. If two observers use different rulers, they still agree on the form of correlations. The CFT is a natural candidate for a boundary record, a universal language for observations.
 
 ### Key Properties
 
@@ -275,7 +275,7 @@ If you erase part of the boundary, bulk information survives-you can recover it 
 
 HKLL matters because it shows how a world that looks local inside can be stored
 nonlocally on the boundary without contradiction. The boundary keeps the
-ledger. HKLL explains how to read a local bulk description out of that ledger.
+record. HKLL explains how to read a local bulk description out of that record.
 
 ## 8.11 Black Holes and Thermodynamics
 
@@ -438,7 +438,7 @@ This sidesteps that specific "boundary theory at infinity" version of the unsolv
 
 The old picture said that more volume means more independent storage. Black
 holes shattered that idea. Information capacity follows area, not volume, and
-the boundary carries the ledger from which the bulk can be rebuilt.
+the boundary carries the record from which the bulk can be rebuilt.
 
 That is the deep pattern running through holography. AdS/CFT shows it with the
 sharpest mathematical precision. The holographic principle gives it its broad

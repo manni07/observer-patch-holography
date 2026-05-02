@@ -51,13 +51,10 @@ subsequent updates follow the same path, then the future accessible statistics
 match exactly or within a controlled error.
 
 That is striking. It says a meaningful form of restoration is part of the
-framework. The stronger claim people care about most goes further. It would
-move the observer-pattern into a newly engineered environment and treat that as
-the same continuing subject.
-
-Restoration is cleaner than transplantation. The second
-move asks for extra structure tying one recovered interior pattern to one
-redesigned world.
+framework. Transplantation is a deeper question: it asks whether an
+observer-pattern can be moved into a newly engineered environment and treated
+as the same continuing subject. The issue is the interface between one
+recovered interior pattern and one redesigned world.
 
 ## What Follows
 
