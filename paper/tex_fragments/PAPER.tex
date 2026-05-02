@@ -13,9 +13,10 @@ states into a constrained gluing problem. The fixed-cutoff branch gives collar d
 edge centers, and finite repair dynamics on the declared physical quotient. Second, the continuum
 geometric branch turns modular flow on caps into Lorentz kinematics and then into the Einstein
 relation through fixed-cap generalized-entropy stationarity. Third, the transportable edge-sector
-branch reconstructs compact internal gauge data; minimal admissible realization and anomaly
-constraints select the realized Standard Model quotient with exact hypercharge and the counting
-chain \(N_g=3\) then \(N_c=3\).
+branch reconstructs compact internal gauge data; minimal admissible realization, anomaly
+constraints, and the explicit CKM/weak-sector clauses of MAR select the realized Standard Model
+quotient with exact hypercharge, the realized color triplet \(N_c=3\), and the generation count
+\(N_g=3\).
 
 The local pixel ratio \(P \equiv a_{\rm cell}/\ell_P^2\) and the total screen capacity
 \(N_{\mathrm{scr}} \equiv \log \dim \mathcal H_{\mathrm{tot}}\) enter only on their declared
@@ -2614,7 +2615,7 @@ Theorem 6.1 yields \emph{some} compact \(G\). Axiom 5 (MAR, Minimal Admissible R
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{Axiom 5 (MAR): Minimal Admissible Realization.} Among all OPH-realizable sector packages \(\mathfrak S\) consisting of the connected Lie gauge-sector image relevant in the low-energy EFT, its admissible light chiral matter content, and one Higgs doublet, and which are (i) loop-coherent / transportable (vanishing relevant obstruction: \([z]=0\) on the central branch or \(q_\Sigma=0\) on the higher-gauge branch), (ii) anomaly-free, (iii) refinement-stable with light chiral matter, (iv) single-Higgs Yukawa-completable with one connected abelian charge factor acting nontrivially on the coupled carrier, (v) intrinsically CP-capable, (vi) weak-sector UV-completable, the realized low-energy package is the lexicographically minimal one under
+\textbf{Axiom 5 (MAR): Minimal Admissible Realization.} Among all OPH-realizable sector packages \(\mathfrak S\) consisting of the connected Lie gauge-sector image relevant in the low-energy EFT, its admissible light chiral matter content, and one Higgs doublet, and which are (i) loop-coherent / transportable (vanishing relevant obstruction: \([z]=0\) on the central branch or \(q_\Sigma=0\) on the higher-gauge branch), (ii) anomaly-free, (iii) refinement-stable with light chiral matter, (iv) single-Higgs Yukawa-completable with one connected abelian charge factor acting nontrivially on the coupled carrier, (v) intrinsically quark-sector CP-capable, (vi) weak-sector UV-completable on that same one-Higgs branch, the realized low-energy package is the lexicographically minimal one under
 
 \[C(\mathfrak S) = (\chi_{\mathrm{cpl}},\; N_{\mathrm{nonab}},\; N_c,\; N_g).\]
 
@@ -2669,7 +2670,7 @@ QED.
 \begin{itemize}
 \tightlist
 \item
-  Admissibility conditions (iii)--(iv) require both a pseudoreal nonabelian charge type and a complex nonabelian charge type, and include one connected abelian charge factor acting nontrivially on the coupled carrier (Lemma 6.7, Corollary 6.8).
+  By the definition of \(\chi_{\mathrm{cpl}}\), the realized MAR package contains a light chiral pseudoreal weak-type role and a light chiral complex color-type role on a common coupled carrier; clause (iii) imposes refinement stability on that branch, and clause (iv) adds one connected abelian charge factor acting nontrivially on the same carrier together with one-Higgs Yukawa completeness.
 \item
   The minimal faithful pseudoreal representation is the doublet (\ensuremath{\chi} = 2), giving \(SU(2)\). No intrinsically complex 2D irrep qualifies in the connected compact Lie class, because the connected derived image of any irreducible 2D unitary representation lies in \(SU(2)\), so the nonabelian action is pseudoreal up to abelian twist. The first intrinsically complex case is therefore the triplet (\ensuremath{\chi} = 3), giving \(SU(3)\).
 \item
@@ -2691,6 +2692,12 @@ G_{\mathrm{phys}} = \frac{SU(3) \times SU(2) \times U(1)}{Z_6}.
 \]
 
 The full proof route is given in the remainder of Section 6.2.
+
+\textbf{Corollary 6.6b (Three colors on the realized branch).} On the realized one-generation matter package carried by the minimal coupled block of Proposition 6.6a, the color multiplicity is already fixed by the same MAR derivation: the color factor is the fundamental triplet of \(\mathrm{SU}(3)\), so
+\[
+N_c=3.
+\]
+This is not a later selector layered on top of the theorem stack. QED.
 
 \subsubsection{Refinement stability and unprotected relevant operators}\label{63-refinement-stability-and-unprotected-relevant-operators}
 
@@ -2721,11 +2728,11 @@ Relevant operators that are neither symmetry-forbidden nor retained in the selec
 
 \textbf{Corollary 6.8 (chirality selector).} A gauge-invariant Dirac mass term is a relevant scalar. If both chiralities exist in conjugate representations, the mass term is allowed and will be generated under refinement unless symmetry-forbidden or explicitly retained as a protected constraint. Therefore keeping light fermions on the selected refinement-stable branch requires chiral matter content or an explicit protecting mechanism. QED.
 
-\subsubsection{Generation number from CP violation and refinement stability (derived from MAR)}\label{64-generation-number-from-cp-violation-and-refinement-stability-derived-from-mar}
+\subsubsection{Generation number from CKM CP capability and weak-sector completability (derived from MAR)}\label{64-generation-number-from-cp-violation-and-refinement-stability-derived-from-mar}
 
-Anomaly cancellation is generation-by-generation, so it does not fix the number of generations. The admissibility conditions constrain the window; MAR selects the minimum.
+Anomaly cancellation is generation-by-generation, so it does not fix the number of generations. On the realized one-Higgs branch, the lower and upper bounds come from the CP-capability and weak-sector UV clauses already declared in MAR, and MAR then selects the minimum.
 
-\textbf{Proposition 6.9 (The number of generations is N\_g = 3).} Under (i) intrinsic CP violation in the quark sector, (ii) UV-completability of SU(2)\_L (asymptotic freedom at one loop), (iii) MaxEnt/refinement stability selecting minimal viable spectrum, and (iv) the derived N\_c = 3 from Theorem 6.14, the generation number is
+\textbf{Proposition 6.9 (The number of generations is N\_g = 3).} On the realized one-Higgs quark branch of Proposition 6.6a, with the derived \(N_c=3\) from Corollary 6.6b and with the CP-capability and weak-sector UV clauses already built into Axiom 5, the generation number is
 
 \[
 N_g = 3.
@@ -2737,16 +2744,16 @@ N_g = 3.
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \textbf{Intrinsic CP violation exists} in the quark sector (empirical fact; also, the framework treats "intrinsic CP violation" as a selector input).
+  \textbf{Intrinsic CKM CP capability} is part of the realized quark branch through clause (v) of Axiom 5.
 \item
-  \textbf{UV-completability proxy}: SU(2)\_L is asymptotically free at one loop in the emergent EFT.
+  \textbf{Weak-sector UV completability} is part of the same realized one-Higgs branch through clause (vi) of Axiom 5.
 \item
-  \textbf{MaxEnt + refinement stability} penalizes unnecessary unfixed flavor structure, selecting the minimal viable spectrum.
+  \textbf{MAR minimality} acts on the same realized branch once the first three complexity entries are fixed.
 \item
-  Use the derived N\_c = 3 from Theorem 6.14.
+  Use the derived \(N_c = 3\) from Corollary 6.6b.
 \end{enumerate}
 
-\textbf{Step 1: CP violation lower bound.} The number of physical CP-violating phases in an N\_g \ensuremath{\times} N\_g CKM matrix is:
+\textbf{Step 1: CKM CP-capability lower bound.} The number of physical CP-violating phases in an N\_g \ensuremath{\times} N\_g CKM matrix is:
 
 \[
 \#\text{(CP phases)} = \frac{(N_g - 1)(N_g - 2)}{2}.
@@ -2755,12 +2762,12 @@ N_g = 3.
 \begin{itemize}
 \tightlist
 \item
-  For N\_g = 1, 2: this is 0 \ensuremath{\to} \textbf{no intrinsic CP violation possible}.
+  For N\_g = 1, 2: this is 0 \ensuremath{\to} \textbf{no intrinsic CKM CP capability}.
 \item
-  For N\_g = 3: this is 1 \ensuremath{\to} \textbf{intrinsic CP violation possible}.
+  For N\_g = 3: this is 1 \ensuremath{\to} \textbf{intrinsic CKM CP capability is available}.
 \end{itemize}
 
-So intrinsic CP violation requires:
+So intrinsic CKM CP capability requires:
 
 \[
 N_g \ge 3.
@@ -2786,7 +2793,7 @@ With N\_c = 3, we have N\_c + 1 = 4, so:
 
 Combining: 3 \ensuremath{\leq} N\_g \ensuremath{\leq} 5.
 
-\textbf{Step 3: MAR selection.} Given the allowed window \{3, 4, 5\}, MAR (fourth component of the complexity vector \(C(\mathfrak S)\)) selects the smallest viable choice:
+\textbf{Step 3: MAR selection.} These are not extra post-MAR selectors: they are the numerical content of clauses (v) and (vi) of Axiom 5 on the already-realized one-Higgs branch. Given the allowed window \{3, 4, 5\}, MAR (fourth component of the complexity vector \(C(\mathfrak S)\)) selects the smallest viable choice:
 
 \[
 N_g = 3.
@@ -2801,7 +2808,7 @@ QED.
 \item
   It predicts a \textbf{single integer}.
 \item
-  It uses \textbf{two admissibility conditions} (CP violation exists; weak sector is UV-completable) plus MAR\textquotesingle s lexicographic minimality.
+  It uses \textbf{two explicit MAR clauses} (intrinsic CKM CP capability and weak-sector UV completability) plus MAR\textquotesingle s lexicographic minimality, rather than a separate post hoc admissibility menu.
 \item
   It is not a fit to a continuous number.
 \item
@@ -2957,13 +2964,9 @@ Y_H = \tfrac{1}{2}.
   This high-precision set of numbers strongly constrains the realized matter package and matches observation exactly.
 \end{itemize}
 
-\subsubsection{Witten anomaly and the number of colors}\label{69-witten-anomaly-and-the-number-of-colors}
+\subsubsection{Witten anomaly on the realized color branch}\label{69-witten-anomaly-and-the-number-of-colors}
 
-\textbf{Theorem 6.14 (The number of colors is N\_c = 3).} Under the gauge structure SU(N\_c) \ensuremath{\times} SU(2)\_L \ensuremath{\times} U(1)\_Y with one left-handed quark doublet Q per color and one left-handed lepton doublet L per generation, the global SU(2) anomaly (Witten, 1982) requires N\_c to be odd. Under MAR (lexicographic minimization of \(C(\mathfrak S)\), where \(N_c\) is the third component), this yields:
-
-\[
-N_c = 3.
-\]
+\textbf{Theorem 6.14 (Witten anomaly consistency on the realized color branch).} On the realized one-generation package emitted by Proposition 6.6a and Corollary 6.6b, the global SU(2) anomaly is absent generation by generation.
 
 \textbf{Inputs.}
 
@@ -2971,7 +2974,7 @@ N_c = 3.
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Low-energy gauge group contains an SU(2)\_L factor and an SU(N\_c) color factor.
+  The realized color factor is the SU(3) triplet from Corollary 6.6b.
 \item
   The matter content per generation includes:
 
@@ -2984,8 +2987,6 @@ N_c = 3.
   \end{itemize}
 \item
   \textbf{Witten\textquotesingle s global SU(2) anomaly constraint} (Witten, 1982): the number of left-handed SU(2) doublets must be even.
-\item
-  \textbf{MAR} (Selection Axiom): among allowed values, the third component of the complexity vector \(C(\mathfrak S)\) is minimized.
 \end{enumerate}
 
 \textbf{Proof.} Count SU(2) doublets per generation:
@@ -3004,26 +3005,32 @@ Total doublets per generation:
 N_c + 1.
 \]
 
-Witten anomaly cancellation requires this to be even:
+Substituting the realized value \(N_c=3\) gives
 
 \[
-N_c + 1 \equiv 0 \pmod{2} \quad \Rightarrow \quad N_c \text{ is odd}.
+N_c+1=4.
 \]
 
-The Witten constraint alone allows N\_c \ensuremath{\in} \{1, 3, 5, 7, ...\}. N\_c = 1 fails admissibility (SU(1) is trivial, no complex nonabelian charge type). MAR (input 4) then selects N\_c = 3 as the smallest nontrivial value. QED.
+Witten anomaly cancellation therefore requires an even number of doublets, and the realized branch satisfies it exactly:
 
-\textbf{Status.} The Witten anomaly derives N\_c odd. The specific value N\_c = 3 follows from MAR applied to the admissible class. Under the stated gauge-selection hypotheses, this is derived, not assumed.
+\[
+4 \equiv 0 \pmod{2}.
+\]
+
+So the realized triplet-doublet package is globally consistent generation by generation. QED.
+
+\textbf{Status.} In the updated theorem stack, the specific value \(N_c=3\) is already emitted by the D8 minimal-coupled-carrier derivation and carried into D9. Witten's anomaly is retained as a nontrivial consistency check on that emitted triplet-doublet package, not as a residual selector that upgrades oddness to \(3\).
 
 \textbf{Why this is convincing.}
 
 \begin{itemize}
 \tightlist
 \item
-  It predicts a \textbf{single integer} given the minimality selector.
+  It checks a \textbf{global anomaly constraint} on the emitted branch without introducing a new selector.
 \item
-  The odd constraint is independent of continuous parameters, RG running, masses, or Yukawa values.
+  The parity constraint is independent of continuous parameters, RG running, masses, or Yukawa values.
 \item
-  It cannot be adjusted without changing the basic notion of electroweak doublets and color replication.
+  It confirms that the realized SU(3) triplet plus lepton doublet package is globally consistent generation by generation.
 \end{itemize}
 
 \subsubsection{Bond-dimension gatekeeping}\label{610-bond-dimension-gatekeeping}
@@ -3548,7 +3555,7 @@ phase split is:
 \toprule
 Phase & Nodes & Meaning \\
 \midrule
-I & D1--D5, D7--D9 & Recovered core: fixed-cutoff overlap repair and collar structure; the conditional Lorentz/null-modular/Einstein branch; compact gauge reconstruction; realized Standard Model quotient, exact hypercharge, \(N_g=3\), and \(N_c=3\). \\
+I & D1--D5, D7--D9 & Recovered core: fixed-cutoff overlap repair and collar structure; the conditional Lorentz/null-modular/Einstein branch; compact gauge reconstruction; realized Standard Model quotient, exact hypercharge, \(N_c=3\), and \(N_g=3\). \\
 II & D6, D10 & Quantitative closures: screen-capacity closure of the same Einstein branch and the \(P\)-driven electroweak/gauge-coupling branch. These depend on declared external or branch-specific inputs. \\
 III & D12 & Continuations: flavor details beyond the stated theorem surfaces, dark-sector proposals, baryogenesis, spectroscopy, hadrons, and string/worldsheet effective-description branches. \\
 \bottomrule
@@ -3582,8 +3589,8 @@ UV-sensitive and continuation-level corrections outside the recovered core.
 fixed-cap generalized-entropy stationarity, and the tensor upgrade. The scaling branch uses
 \textbf{T2} plus the theorem-local geometric-subnet extraction and rigidity hypotheses.
 \item \textbf{Gauge structure}: compact gauge reconstruction uses the transportable bosonic
-sector package. MAR plus anomaly and admissibility constraints select the realized Standard Model
-quotient, \(N_g=3\), and \(N_c=3\).
+sector package. MAR plus anomaly algebra and the explicit CKM/weak-sector clauses on the same
+one-Higgs branch select the realized Standard Model quotient, \(N_c=3\), and \(N_g=3\).
 \item \textbf{Microscopic theory}: finite quantum-link style presentations give concrete
 fixed-cutoff examples. They do not select a unique microscopic representative.
 \item \textbf{Noncentral gluing}: the crossed-module higher-gauge package closes the fixed-cutoff

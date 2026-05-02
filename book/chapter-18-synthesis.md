@@ -66,7 +66,9 @@ $$
 SU(3)\times SU(2)\times U(1)/\mathbb Z_6.
 $$
 
-Three generations and three colors follow from the same pressure. The photon,
+The color triplet follows from the minimal coupled carrier, and the
+three-generation count follows from CKM phase counting, weak-sector
+consistency, and minimality on the same low-energy branch. The photon,
 gluons, and graviton stay massless because they ride on redundancy directions
 the architecture cannot break. The weak pair, the low-energy electromagnetic
 coupling, the Higgs-top surface, a running quark package, and one
