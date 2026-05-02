@@ -156,7 +156,7 @@ A conserved current on the screen creates a gauge boson in the bulk.
 
 ### Our Route: Gauge Group from Gluing
 
-In this book we take a different route. The gauge group is not assumed in advance. Instead, we look at what happens when you glue observer patches together: the charges that live on the edges between patches fuse in specific ways, and a reconstruction theorem lets you work backward from those fusion rules to the symmetry group behind them. A minimality principle then selects the smallest realization that still satisfies all the consistency constraints, and the answer turns out to be exactly $SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$, the Standard Model gauge group. The same logic also fixes three generations of matter and three colors.
+In this book we take a different route. The gauge group is not assumed in advance. Instead, we look at what happens when you glue observer patches together: the charges that live on the edges between patches fuse in specific ways, and a reconstruction theorem lets you work backward from those fusion rules to the symmetry group behind them. A minimal admissible realization principle then fixes the realized low-energy branch, and the answer turns out to be exactly $SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$, the Standard Model gauge group. On that same branch, the minimal coupled carrier fixes three colors, while CKM phase counting together with weak-sector ultraviolet consistency fixes three generations.
 
 ## 12.8 Symmetry Breaking
 

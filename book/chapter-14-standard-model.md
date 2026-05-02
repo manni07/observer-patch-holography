@@ -396,7 +396,7 @@ those two are in place, the remaining commuting charge direction is $U(1)$,
 and the sixth-integer hypercharge pattern sharpens the result to the Standard
 Model quotient.
 
-The same minimality logic also fixes the counting. CP violation requires at least three generations. Ultraviolet consistency keeps the number finite. The smallest viable answer is three generations, and the anomaly argument then closes the color count at three as well.
+The same low-energy package also fixes the counting. The minimal coupled carrier already makes the quark doublet a color triplet and therefore fixes $N_c=3$. On the same one-Higgs quark branch, intrinsic CKM CP capability requires at least three generations, weak-sector ultraviolet consistency keeps the count finite, and the smallest viable answer is $N_g=3$. The Witten anomaly then remains as a consistency check on the resulting triplet-doublet package.
 
 ## 14.10 Hypercharge from Gluing Consistency
 
@@ -440,68 +440,85 @@ That is what makes the derivation satisfying. The equations are not decorative b
 
 ## 14.11 The Number of Colors: Why N_c = 3
 
-In the full argument, generations and colors are linked. It is easiest to see the color step first, then feed in the next section's result that the theory prefers three generations.
+In the full argument, the color count is fixed directly by the same coupled carrier that emits the $SU(3)$ factor. The global $SU(2)$ anomaly is still important, but here it checks the realized package rather than determining the count.
 
-### The Witten Anomaly
+### The Coupled Color Carrier
 
-The global $SU(2)$ anomaly requires an even total number of left-handed
-$SU(2)$ doublets. There are $N_gN_c$ quark doublets and $N_g$ lepton
-doublets, for a total of $N_g(N_c+1)$. Once the generation-count step below
-gives $N_g=3$, this becomes
+The weak sector needs a pseudoreal doublet. The color sector needs a genuinely
+complex nonabelian role. The smallest common carrier that supports both on one
+block is
 
-$$3(N_c + 1) \equiv 0 \pmod{2} \implies N_c \text{ is odd}$$
+$$\mathbb C^3 \otimes \mathbb C^2.$$
 
-The case $N_c = 1$ is ruled out because the admissibility package requires a genuinely complex nonabelian color sector. The minimal remaining odd choice is:
+That already fixes the quark doublet to be a color triplet:
 
 $$\boxed{N_c = 3}$$
 
-This is a striking structural output. Witten's anomaly forces $N_c$ to be odd
-once $N_g=3$, and the admissibility package rules out the trivial $N_c=1$
-case by requiring a genuinely complex nonabelian color sector. The smallest
-surviving value is $N_c=3$.
+This is the decisive structural step. The color count is emitted by the same
+minimal coupled carrier that produces the $SU(3)$ factor, not by a later oddness
+argument.
+
+### The Witten Check
+
+The global $SU(2)$ anomaly still has to cancel on the realized branch. Each
+generation contributes $N_c$ quark doublets and one lepton doublet, so the
+number of left-handed $SU(2)$ doublets per generation is
+
+$$N_c + 1.$$
+
+With $N_c=3$, this becomes
+
+$$N_c + 1 = 4,$$
+
+which is even. So Witten's anomaly is satisfied generation by generation. In
+this derivation it confirms the realized triplet-doublet package rather than
+selecting the color count.
 
 ## 14.12 Why Three Generations?
 
 Anomaly cancellation works generation by generation. Each generation independently satisfies the conditions. So why three?
 
-### CP Violation Requires Three
+### CKM CP Capability Requires Three
 
 The CKM matrix describes how quarks mix under the weak force. In general, it's a unitary N_g × N_g matrix. The number of physical CP-violating phases is:
 
 $$\text{(CP phases)} = \frac{(N_g - 1)(N_g - 2)}{2}$$
 
-For N_g = 1 or 2: 0 phases. **No CP violation possible.**
-For N_g = 3: 1 phase. **CP violation possible.**
+For N_g = 1 or 2: 0 phases. **No intrinsic CKM CP capability.**
+For N_g = 3: 1 phase. **Intrinsic CKM CP capability is available.**
 
-CP violation was observed in 1964 in kaon decays. It requires at least three generations:
+So the realized quark branch requires at least three generations:
 
 $$N_g \ge 3$$
 
-### UV Completability Limits
+### Weak-Sector UV Completability Limits
 
 Too many generations spoil asymptotic freedom. The SU(2) beta function coefficient is:
 
-$$b_{SU(2)} = \frac{1}{3}[22 - N_g(N_c + 1)]$$
+$$b_{SU(2)} = \frac{22}{3} - \frac{1}{3}N_g(N_c + 1) - \frac{1}{6}$$
 
-For $b_{SU(2)} > 0$ (asymptotic freedom): $N_g(N_c + 1) < 22$.
+The final $-1/6$ is the contribution of one Higgs doublet. For
+$b_{SU(2)} > 0$ (asymptotic freedom):
 
-Since the color-type requirement forces $N_c \ge 3$, we have $N_c + 1 \ge 4$:
+$$N_g(N_c + 1) < \frac{43}{2}.$$
 
-$$4 N_g < 22 \implies N_g \le 5$$
+With $N_c = 3$, this becomes
+
+$$4 N_g < \frac{43}{2} \implies N_g \le 5$$
 
 Combining: $3 \le N_g \le 5$.
 
 ### The Minimal Viable Window
 
-CP violation and weak-sector UV completability define the admissible window:
+CKM CP capability and weak-sector UV completability define the viable window:
 
 $$3 \le N_g \le 5.$$
 
-A minimality principle then picks the smallest viable realization:
+A minimal admissible realization principle then picks the smallest viable realization:
 
 $$\boxed{N_g = 3}$$
 
-Refinement stability explains why extra unfixed Yukawa structure is disfavored. Among the allowed options, the smallest viable one wins. Feeding this value back into the Witten-anomaly argument above then closes the color count at $N_c = 3$.
+Refinement stability explains why extra unfixed Yukawa structure is disfavored. Among the allowed options, the smallest viable one wins. With $N_g=3$ and $N_c=3$, each generation carries four left-handed weak doublets, so the Witten anomaly is automatically satisfied on the realized branch.
 
 ## 14.13 Why Chirality?
 
@@ -740,7 +757,7 @@ unification.
 
 Let's step back and see what the framework actually accounts for.
 
-**The integers.** Why three colors? Why three generations? Why those specific hypercharges? These are consequences of consistency requirements, not free parameters. Demanding anomaly-free matter, CP violation, and the smallest viable matter package drives the theory to the observed counting.
+**The integers.** Why three colors? Why three generations? Why those specific hypercharges? These are consequences of consistency requirements, not free parameters. Anomaly cancellation and Yukawa invariance fix the hypercharge lattice, the minimal coupled carrier fixes the color triplet, and CKM CP capability together with weak-sector ultraviolet consistency fixes the generation count.
 
 **The zeros.** The photon and graviton masses are exactly zero. This is a symmetry-protected prediction. The photon's masslessness follows from U(1) gauge invariance being a genuine overlap redundancy; any mass would break the consistency of how charged patches glue together. Similarly, the graviton's masslessness follows from diffeomorphism invariance being the redundancy structure of bulk spacetime. Experimental and observational upper bounds are consistent with these predictions to extraordinary precision: the photon mass is constrained below ~10⁻¹⁸ eV, often summarized as ~27 orders of magnitude, and the graviton mass is constrained below ~10⁻²³ eV by gravitational-wave dispersion, often summarized as ~22 orders of magnitude.
 
@@ -778,8 +795,9 @@ kind of conclusion through its own architecture.
 
 The quarks and leptons are not arbitrary. Their charges are fixed by the
 gauge-consistency package. Three generations and three colors are not inserted
-by hand. They are the smallest answer that survives the combined demands of
-chirality, CP violation, anomaly cancellation, and ultraviolet consistency.
+by hand. They follow from the combined demands of anomaly cancellation,
+chirality, the minimal coupled color carrier, CKM CP capability, and
+ultraviolet consistency.
 
 It is a remarkably concrete result. The book points to a specific gauge
 structure, charge pattern, generation count, and color count. It also reaches

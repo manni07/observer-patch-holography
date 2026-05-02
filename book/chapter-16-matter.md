@@ -55,7 +55,8 @@ excitation is sorted by the familiar labels of relativistic physics: mass,
 spin, and helicity. Once the gauge structure is recovered, the charge bookkeeping
 also stops looking arbitrary. The realized package fixes the Standard Model
 quotient $SU(3)\times SU(2)\times U(1)/\mathbb Z_6$, the exact hypercharge
-lattice, and the counting chain $N_g=3$, $N_c=3$. Those are structural
+lattice, the realized color triplet $N_c=3$, and the generation count $N_g=3$.
+Those are structural
 answers about what kinds of matter can exist at all.
 
 From there the particle package enters in a definite order. The structural
