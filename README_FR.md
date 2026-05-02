@@ -16,7 +16,7 @@ Pour le noyau technique compact, commencez par **Paper 2. [Recovering Relativity
 
 - Un paquet à cutoff fixe pour les patches d'observateurs, les collerettes, la réparation de recouvrement, la jauge supérieure, les enregistrements et le checkpoint/restauration.
 - Une reconstruction de la géométrie lorentzienne, du temps modulaire, de la dynamique d'Einstein de type Jacobson et de la cosmologie de Sitter en patch statique.
-- Une reconstruction de jauge compacte vers le quotient réalisé du Modèle Standard `SU(3) x SU(2) x U(1) / Z_6`, avec le réseau exact des hypercharges et la chaîne de comptage réalisée `N_g = 3`, `N_c = 3`.
+- Une reconstruction de jauge compacte vers le quotient réalisé du Modèle Standard `SU(3) x SU(2) x U(1) / Z_6`, avec le réseau exact des hypercharges, le triplet de couleur réalisé `N_c = 3` et le comptage des générations `N_g = 3`.
 - Un programme particules avec porteurs structurels exactement sans masse, secteur électrofaible, surface Higgs/top, masses de quarks avec Yukawas, structure neutrino et constantes locales.
 - Une architecture microphysique d'écran concrète qui met mesure, enregistrements et observateurs à l'intérieur de la physique.
 
@@ -50,8 +50,8 @@ Les sorties particules détaillées vivent dans [code/particles/RESULTS_STATUS.m
 
 Ce tableau condensé garde les lignes OPH les plus faciles à comparer directement avec les valeurs
 PDG/NIST. Les résultats structurels comme la géométrie lorentzienne `3+1D`, le quotient de jauge
-du Modèle Standard `SU(3) x SU(2) x U(1) / Z_6`, le réseau exact des hypercharges et la chaîne de
-comptage `N_g = 3`, `N_c = 3` sont énoncés dans les papiers et ne sont pas répétés ici.
+du Modèle Standard `SU(3) x SU(2) x U(1) / Z_6`, le réseau exact des hypercharges, le triplet
+de couleur réalisé `N_c = 3` et le comptage des générations `N_g = 3` sont énoncés dans les papiers et ne sont pas répétés ici.
 
 | Quantité | Symbole | OPH | PDG/NIST | Δ |
 | --- | --- | --- | --- | --- |

@@ -1093,6 +1093,6 @@
 <g filter="url(#panelShadow)">
   <rect x="4000" y="4176" width="1500" height="64" rx="22" fill="rgb(10 14 22 / 0.90)" stroke="rgb(255 255 255 / 0.08)" />
   <text x="4028" y="4204" fill="#f4f7fb" font-size="16" font-family="Space Grotesk, sans-serif" font-weight="700">End-state poster rule</text>
-  <text x="4028" y="4225" fill="#9ba7b8" font-size="13" font-family="JetBrains Mono, monospace">Rose completion nodes are planned closure results for completed OPH. Cyan and blue nodes are theorem/output structure already articulated in the paper set.</text>
+  <text x="4028" y="4225" fill="#9ba7b8" font-size="13" font-family="JetBrains Mono, monospace">Rose completion nodes are planned closure results for completed OPH. Cyan and blue nodes are theorem/output structure articulated in the paper set.</text>
 </g>
 </svg>

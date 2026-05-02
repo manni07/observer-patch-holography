@@ -396,7 +396,7 @@ those two are in place, the remaining commuting charge direction is $U(1)$,
 and the sixth-integer hypercharge pattern sharpens the result to the Standard
 Model quotient.
 
-The same low-energy package also fixes the counting. The minimal coupled carrier already makes the quark doublet a color triplet and therefore fixes $N_c=3$. On the same one-Higgs quark branch, intrinsic CKM CP capability requires at least three generations, weak-sector ultraviolet consistency keeps the count finite, and the smallest viable answer is $N_g=3$. The Witten anomaly then remains as a consistency check on the resulting triplet-doublet package.
+The same low-energy package also fixes the counting. The minimal coupled carrier makes the quark doublet a color triplet and therefore fixes $N_c=3$. On the same one-Higgs quark branch, intrinsic CKM CP capability requires at least three generations, weak-sector ultraviolet consistency keeps the count finite, and the smallest viable answer is $N_g=3$. The Witten anomaly then remains as a consistency check on the resulting triplet-doublet package.
 
 ## 14.10 Hypercharge from Gluing Consistency
 
@@ -450,7 +450,7 @@ block is
 
 $$\mathbb C^3 \otimes \mathbb C^2.$$
 
-That already fixes the quark doublet to be a color triplet:
+That fixes the quark doublet to be a color triplet:
 
 $$\boxed{N_c = 3}$$
 
@@ -518,7 +518,7 @@ A minimal admissible realization principle then picks the smallest viable realiz
 
 $$\boxed{N_g = 3}$$
 
-Refinement stability explains why extra unfixed Yukawa structure is disfavored. Among the allowed options, the smallest viable one wins. With $N_g=3$ and $N_c=3$, each generation carries four left-handed weak doublets, so the Witten anomaly is automatically satisfied on the realized branch.
+Refinement stability explains why extra unfixed Yukawa structure is disfavored. Among the allowed options, the smallest viable one wins. With $N_c=3$ and $N_g=3$, each generation carries four left-handed weak doublets, so the Witten anomaly is automatically satisfied on the realized branch.
 
 ## 14.13 Why Chirality?
 
@@ -794,13 +794,13 @@ String theory is often credited with predicting gravity. OPH reaches the same
 kind of conclusion through its own architecture.
 
 The quarks and leptons are not arbitrary. Their charges are fixed by the
-gauge-consistency package. Three generations and three colors are not inserted
+gauge-consistency package. Three colors and three generations are not inserted
 by hand. They follow from the combined demands of anomaly cancellation,
 chirality, the minimal coupled color carrier, CKM CP capability, and
 ultraviolet consistency.
 
 It is a remarkably concrete result. The book points to a specific gauge
-structure, charge pattern, generation count, and color count. It also reaches
+structure, charge pattern, color count, and generation count. It also reaches
 the massless carriers, the $W$ and $Z$, a calibrated Higgs-top surface, one
 weighted-cycle neutrino family, and a running quark package on a selected
 physical basis. Strongly coupled bound states add the QCD problem on top of

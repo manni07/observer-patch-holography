@@ -34,7 +34,8 @@ holographic screen whose descriptions have to agree where their patches
 overlap. Push that requirement hard enough and a `3+1D` Lorentzian spacetime
 emerges, together with a Jacobson-style Einstein equation and the realized
 Standard Model quotient `SU(3) x SU(2) x U(1) / Z_6`, including the exact
-hypercharge lattice and the counting chain `N_g = 3`, `N_c = 3`.
+hypercharge lattice, the realized color triplet `N_c = 3`, and the generation
+count `N_g = 3`.
 
 The scale is set by two quantities: the total screen capacity
 `N_scr = log dim H_tot`, read from the cosmological constant, and the local
@@ -62,7 +63,8 @@ belong to the nonperturbative QCD bound-state problem.
 This table keeps the rows that are easiest to compare directly with PDG and
 NIST values. Structural results such as the `3+1D` Lorentzian spacetime, the
 Standard Model quotient `SU(3) x SU(2) x U(1) / Z_6`, the exact hypercharge
-lattice, and the counting chain `N_g = 3`, `N_c = 3` live in the papers. The
+lattice, the realized color triplet `N_c = 3`, and the generation count
+`N_g = 3` live in the papers. The
 quick view here sticks to direct numeric rows and exact zeros.
 
 | Quantity | Symbol | OPH | PDG/NIST | Δ |
