@@ -8,6 +8,11 @@
 
 Whether your interest begins with **simulation theory** or with the hope of a **theory of everything**, this book gives the long-form OPH answer. OPH is presented here as a concrete observer-consistent information architecture. Quantum mechanics, relativity, gauge structure, and particle physics appear as effective descriptions of deeper overlap-consistency rules.
 
+More precisely, OPH models reality as an observer-based fixed-point consensus
+process. Finite observer patches compare overlap-visible records, repair
+checkable mismatch, and settle into the stable public world that survives those
+consistency tests.
+
 ## The Cosmic Program
 
 Reverse engineering a program without source code is an exercise in inference.
