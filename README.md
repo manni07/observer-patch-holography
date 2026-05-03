@@ -25,21 +25,6 @@ that survive refinement. The public world is the overlap-stable output of that
 process. In this sense, OPH treats reality as a computational process, not as a
 static stage on which computation merely happens.
 
-## Where To Start
-
-If you want the compact technical core, start with **Paper 2. [Recovering
-Relativity and the Standard Model from Observer Overlap
-Consistency](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf)**.
-It carries the relativity, gravity, and Standard Model structure in the
-tightest form. **Paper 3. [Deriving the Particle Zoo from Observer
-Consistency](paper/deriving_the_particle_zoo_from_observer_consistency.pdf)**
-carries the particle derivations. **Paper 4. [Reality as a Consensus
-Protocol](paper/reality_as_consensus_protocol.pdf)** develops the consensus and
-repair picture. **Paper 5. [Screen Microphysics and Observer
-Synchronization](paper/screen_microphysics_and_observer_synchronization.pdf)**
-covers finite screen architecture, records, and observer machinery. This
-README, Paper 1, and the book are the broad overviews.
-
 ## What OPH Delivers
 
 Most theories begin by assuming spacetime, quantum fields, and a list of
