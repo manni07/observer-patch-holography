@@ -114,7 +114,7 @@ effective description laid over a screen with a hard budget.
 Jacobson's derivation of Einstein's equations requires horizons with a
 temperature proportional to surface gravity, an entropy proportional to area,
 and a first law tying heat to entropy. De Sitter thermodynamics supplies that
-package. In our model it becomes the natural thermodynamic backdrop for the
+structure. In our model it becomes the natural thermodynamic backdrop for the
 gravity relation recovered from observer-patch consistency.
 
 ## 13.5 The Problem of Time in De Sitter

@@ -319,7 +319,7 @@ instead of changing its rules at every cutoff.
 You cannot pack infinite information into a finite region. The entropy budget is controlled by a generalized entropy, with the recoverability structure needed to rebuild missing information from overlap data when the stated conditions hold.
 
 **Axiom 5: Economy Principle**
-Among the admissible low-energy possibilities, the realized package is the
+Among the admissible low-energy possibilities, the realized sector is the
 minimal one under the precise complexity ordering used in the physics program.
 This is the selector that narrows the gauge structure to the Standard Model.
 
@@ -330,7 +330,7 @@ These five axioms point toward a radical conclusion: reality can be modeled comp
 The screen is a quantum system. The degrees of freedom are finite-dimensional,
 with qudits on the edges of a triangulated sphere. The dynamics is constrained
 by gauge laws at every vertex. Maximum entropy selects the realized state
-subject to a stable family of local constraints, and the low-energy package is
+subject to a stable family of local constraints, and the low-energy sector is
 narrowed further by the minimal realization rule used later in the program.
 This is a quantum computation in the most literal sense: qubits, gates,
 constraints, outputs.

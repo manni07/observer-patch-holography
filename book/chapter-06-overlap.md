@@ -80,7 +80,7 @@ Over the following decades, experimenters closed the major loopholes one by one.
 
 **The result: suitable entangled Bell experiments violate Bell inequalities repeatedly.**
 
-This means at least one ingredient in the classical Bell-premise package must
+This means at least one ingredient in the classical Bell-premise set must
 fail. The pressure falls on locality, realism, or the assumption that
 measurement settings are not secretly pre-coordinated with hidden variables.
 

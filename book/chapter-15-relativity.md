@@ -514,7 +514,7 @@ the Gibbons-Hawking entropy is $S = A/(4G)$. For the late-time de Sitter
 horizon, this gives a bare radius-squared ratio near $1.05\times10^{122}$ and
 an entropy capacity near $3.31\times10^{122}$.
 
-The "problem" exists only if you compute vacuum energy using QFT and assume that calculation is fundamental. We don't. In this framework, Lambda is fixed by the global-capacity package rather than by a local QFT vacuum-energy sum. QFT vacuum fluctuations are emergent phenomena, not fundamental contributions to the stress tensor.
+The "problem" exists only if you compute vacuum energy using QFT and assume that calculation is fundamental. We don't. In this framework, Lambda is fixed by the global-capacity relation rather than by a local QFT vacuum-energy sum. QFT vacuum fluctuations are emergent phenomena, not fundamental contributions to the stress tensor.
 
 The observed small value of Lambda isn't a fine-tuning miracle. It's simply what the screen structure produces. Understanding why the screen has this particular capacity is a question about initial conditions, not about cancellation of quantum corrections.
 

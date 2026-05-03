@@ -175,7 +175,7 @@ the long-distance Thomson limit, the 2022 CODATA/NIST central value is
 $\alpha^{-1}(0)=137.035999177$. At higher energies, it increases. At the Z
 boson mass, it is about $1/128$.
 
-That low-energy number sits inside the same particle package as the weak bosons.
+That low-energy number sits inside the same particle sector as the weak bosons.
 Once the electroweak transport family is fixed by the shared local calibration,
 electromagnetism is read as the unbroken channel left after the weak and
 hypercharge sectors mix. The OPH $P$-closure witness is compared with the
@@ -386,7 +386,7 @@ once supplied by the transport premises, is unique and checkable.
 
 Why does the reconstructed group have the form SU(3) x SU(2) x U(1)?
 
-Once you ask for the smallest matter package that can carry color, weak
+Once you ask for the smallest matter sector that can carry color, weak
 interactions, chirality, and ordinary charge, the answer is forced into a
 color triplet, a weak doublet, and one abelian charge direction. The weak
 factor has to behave like $SU(2)$ because weak doublets come in the right
@@ -396,7 +396,7 @@ those two are in place, the remaining commuting charge direction is $U(1)$,
 and the sixth-integer hypercharge pattern sharpens the result to the Standard
 Model quotient.
 
-The same low-energy package also fixes the counting. The minimal coupled carrier makes the quark doublet a color triplet and therefore fixes $N_c=3$. On the same one-Higgs quark branch, intrinsic CKM CP capability requires at least three generations, weak-sector ultraviolet consistency keeps the count finite, and the smallest viable answer is $N_g=3$. The Witten anomaly then remains as a consistency check on the resulting triplet-doublet package.
+The same low-energy sector also fixes the counting. The minimal coupled carrier makes the quark doublet a color triplet and therefore fixes $N_c=3$. On the same one-Higgs quark branch, intrinsic CKM CP capability requires at least three generations, weak-sector ultraviolet consistency keeps the count finite, and the smallest viable answer is $N_g=3$. The Witten anomaly then remains as a consistency check on the resulting triplet-doublet structure.
 
 ## 14.10 Hypercharge from Gluing Consistency
 
@@ -440,7 +440,7 @@ That is what makes the derivation satisfying. The equations are not decorative b
 
 ## 14.11 The Number of Colors: Why N_c = 3
 
-In the full argument, the color count is fixed directly by the same coupled carrier that emits the $SU(3)$ factor. The global $SU(2)$ anomaly is still important, but here it checks the realized package rather than determining the count.
+In the full argument, the color count is fixed directly by the same coupled carrier that emits the $SU(3)$ factor. The global $SU(2)$ anomaly is still important, but here it checks the realized structure rather than determining the count.
 
 ### The Coupled Color Carrier
 
@@ -471,7 +471,7 @@ With $N_c=3$, this becomes
 $$N_c + 1 = 4,$$
 
 which is even. So Witten's anomaly is satisfied generation by generation. In
-this derivation it confirms the realized triplet-doublet package rather than
+this derivation it confirms the realized triplet-doublet structure rather than
 selecting the color count.
 
 ## 14.12 Why Three Generations?
@@ -599,7 +599,7 @@ The fine-structure constant belongs here beside the weak sector. This is
 why the later mass tables do not feel like disconnected tricks. They read as
 different faces of one calibrated machine. Hadrons belong to the later
 strong-binding descent of the same picture. Chapter 18 returns to the same local scale from the
-outside-inside closure equation, which gives the whole particle package an even
+outside-inside closure equation, which gives the whole particle sector an even
 tighter narrative spine.
 
 The interpretation is simple. The screen cell wants to sit at the golden-ratio
@@ -661,7 +661,8 @@ Both particles are forced by consistency. Both are exactly massless because thei
 ## 14.18 Why Composite Masses Are Different
 
 Consider the proton. Its mass is 938.272 MeV, measured to extraordinary
-precision. Can we derive this from first principles?
+precision. Can OPH compute it at the same level as the symmetry-protected
+zero lines?
 
 Not in the same clean way as the massless carriers. The photon, gluons, and
 graviton sit on symmetry-protected zero lines. Their values are fixed by the
@@ -761,10 +762,10 @@ Let's step back and see what the framework actually accounts for.
 
 **The zeros.** The photon and graviton masses are exactly zero. This is a symmetry-protected prediction. The photon's masslessness follows from U(1) gauge invariance being a genuine overlap redundancy; any mass would break the consistency of how charged patches glue together. Similarly, the graviton's masslessness follows from diffeomorphism invariance being the redundancy structure of bulk spacetime. Experimental and observational upper bounds are consistent with these predictions to extraordinary precision: the photon mass is constrained below ~10⁻¹⁸ eV, often summarized as ~27 orders of magnitude, and the graviton mass is constrained below ~10⁻²³ eV by gravitational-wave dispersion, often summarized as ~22 orders of magnitude.
 
-**The particle package.** Section 14.14 gives the concrete package. The
+**The particle structure.** Section 14.14 gives the concrete structure. The
 framework fixes the massless carriers, the weak-boson pair, the Thomson-limit
 fine-structure witness, a Higgs-top surface, a selected-class six-quark
-running-mass package with Yukawas, and one weighted-cycle neutrino family with
+running-mass sector with Yukawas, and one weighted-cycle neutrino family with
 definite masses and Majorana phases.
 
 The reason these numbers belong in one chapter is that the framework is trying to organize them with one local calibration structure. The same input that sets the electroweak scale also feeds the low-energy electromagnetic coupling and the effective gravitational coupling. The reader does not need every intermediate symbol to see the point. OPH is attempting to tie electroweak masses, the Higgs/top calibration, electromagnetism at low energy, and Newton's constant to one common structure instead of treating them as unrelated constants.
@@ -786,7 +787,7 @@ charge transport, and survive under refinement?
 
 The photon and graviton are particles the theory forces upon us. The photon
 exists because $U(1)$ gauge redundancy emerges from how charged patches glue
-together once the gauge reconstruction package is in place. The graviton
+together once the gauge reconstruction is in place. The graviton
 exists because diffeomorphism invariance emerges from the fact that bulk
 spacetime is a compression of screen data. In both cases the structure is
 decisive: adding a hard mass term would break a redundancy the model requires.
@@ -794,7 +795,7 @@ String theory is often credited with predicting gravity. OPH reaches the same
 kind of conclusion through its own architecture.
 
 The quarks and leptons are not arbitrary. Their charges are fixed by the
-gauge-consistency package. Three colors and three generations are not inserted
+gauge-consistency structure. Three colors and three generations are not inserted
 by hand. They follow from the combined demands of anomaly cancellation,
 chirality, the minimal coupled color carrier, CKM CP capability, and
 ultraviolet consistency.
@@ -802,7 +803,7 @@ ultraviolet consistency.
 It is a remarkably concrete result. The book points to a specific gauge
 structure, charge pattern, color count, and generation count. It also reaches
 the massless carriers, the $W$ and $Z$, a calibrated Higgs-top surface, one
-weighted-cycle neutrino family, and a running quark package on a selected
+weighted-cycle neutrino family, and a running quark sector on a selected
 physical basis. Strongly coupled bound states add the QCD problem on top of
 that particle-level structure.
 

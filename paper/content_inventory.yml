@@ -58,7 +58,7 @@ papers:
     role: regulated screen implementation and observer-record surface
     lead_material:
       - reference architecture
-      - fixed-cutoff records, Born-Luders package, Bell package, and checkpoint restoration
+      - fixed-cutoff records, Born-Luders rules, Bell/CHSH surface, and checkpoint restoration
     detailed_status_home:
       - architecture and packet-level closure sections
     avoid_repeating:

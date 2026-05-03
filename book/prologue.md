@@ -152,7 +152,7 @@ observers must satisfy to share a reality.
 
 ## What This Book Does
 
-This book reverse engineers reality from first principles.
+This book reverse engineers reality from observer consistency.
 
 We start with a minimal assumption: observers exist, they have bounded
 access to information, and they must agree where their observations overlap.
@@ -164,11 +164,13 @@ pixel size. From there the question is simple: how much of gravity, gauge
 structure, and the particle world can be forced from observer consistency
 alone?
 
-The current OPH basis is not pre-quantum in the technical sense. It starts with
-algebraic observables, states, trace/Born event probabilities on declared
-record surfaces, and generalized entropy. Quantum mechanics is one effective
-description carried by the deeper observer-patch architecture, not a formalism
-already derived in this book from classical primitives.
+The OPH basis is quantum-algebraic by design. It starts with algebraic
+observables, states, trace/Born event probabilities on declared record
+surfaces, and generalized entropy. The aim is not to derive every mathematical
+ingredient from a blank slate. The aim is to see whether this basis can support
+a consistent and comprehensive theory of everything, with quantum mechanics as
+the algebraic language of observer patches and spacetime, gauge structure,
+records, and particles recovered from overlap consistency.
 
 This is where the reverse-engineering method matters. A good reverse engineer
 first works out the architecture, then checks how many knobs are really left.
@@ -179,7 +181,7 @@ than common sense would expect.
 That is the game played in the middle of the book. Start with the cleanest part
 of the particle data, the weak sector. Fix the local scale there. Then ask a
 hard question: does the same choice keep working when you move outward to the
-electromagnetic coupling, the Higgs and top, the quark package, and the
+electromagnetic coupling, the Higgs and top, the quark sector, and the
 gravity-facing side of the framework? If it does, the book is uncovering one
 machine rather than fitting a different dial for every chapter.
 
@@ -192,7 +194,8 @@ the book's self-reference theme enters the physics.
 From this starting point, we derive constraints. We show how relativity, gauge
 structure, and particle physics are organized by consistency requirements, and
 how the quantum-algebraic description fits as one effective language inside
-the same architecture. We trace the logic from axioms to consequences.
+the same architecture. We trace the logic from the starting basis to its
+consequences.
 
 The program targets the recovery of known physics, gravity and the Standard
 Model included, from this simple starting point. The answer is not inserted by

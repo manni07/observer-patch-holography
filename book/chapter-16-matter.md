@@ -53,18 +53,18 @@ the zoo stops looking like a zoo.
 The first bridge is symmetry. Once Lorentz kinematics is recovered, a durable
 excitation is sorted by the familiar labels of relativistic physics: mass,
 spin, and helicity. Once the gauge structure is recovered, the charge bookkeeping
-also stops looking arbitrary. The realized package fixes the Standard Model
+also stops looking arbitrary. The realized sector fixes the Standard Model
 quotient $SU(3)\times SU(2)\times U(1)/\mathbb Z_6$, the exact hypercharge
 lattice, the realized color triplet $N_c=3$, and the generation count $N_g=3$.
 Those are structural
 answers about what kinds of matter can exist at all.
 
-From there the particle package enters in a definite order. The structural
+From there the particle structure enters in a definite order. The structural
 carriers come first. The photon, the eight gluons, and the graviton are
 massless because they sit along redundancy directions of the overlap and
 gauge structure. A hard mass for any of them would spoil the gluing rules
 that let different patches describe the same physics. The same structural
-package also blocks gauge-mediated proton decay, because the realized gauge
+structure also blocks gauge-mediated proton decay, because the realized gauge
 group is a product group and does not contain the extra leptoquark gauge
 bosons required by simple-group unification.
 
@@ -91,7 +91,7 @@ $$
 (m_H,m_t)=(125.1995304097179,\ 172.3523553288312)\,\mathrm{GeV}.
 $$
 
-The quark sector gives the running mass package
+The quark sector gives the running mass structure
 
 $$
 (m_u,m_d,m_s,m_c,m_b,m_t)=
@@ -111,7 +111,7 @@ $$
 
 together with definite Majorana phases in that construction. Taken together,
 the particle picture is larger than a handful of isolated numbers. OPH fixes
-the structural gauge package, the exact massless carriers, the weak pair, the
+the structural gauge reconstruction, the exact massless carriers, the weak pair, the
 fine-structure fixed-point relation, the Higgs/top pair, the running quark
 sextet with Yukawas, and one weighted-cycle neutrino family. Hadrons require a
 separate nonperturbative bound-state step because protons, neutrons, and mesons
@@ -244,7 +244,7 @@ Classical physics is not the starting point. It appears when quantum
 information on the screen organizes into stable patterns, modular time becomes
 geometric, and overlap consistency enforces locality. Matter is not primitive
 stuff. It is a family of stable excitation patterns. The particle catalogue is
-not arbitrary. It comes with a constrained package of charges, carriers,
+not arbitrary. It comes with a constrained pattern of charges, carriers,
 couplings, and masses. Energy is the charge of time
 translations. Motion does not need a separate mystical principle. Stationary
 action is the classical limit of quantum interference. The deterministic world

@@ -7,19 +7,20 @@
 **Quick links:** [website](https://floatingpragma.io/oph/) | [OPH Textbooks](https://learn.floatingpragma.io/) | [OPH Lab](https://oph-lab.floatingpragma.io)
 
 OPH is a reconstruction program for fundamental physics. It starts from finite
-observers on a finite holographic screen and works outward. Its current axiom
-package is quantum-algebraic: patch algebras, states, trace/Born event
-probabilities on declared record surfaces, and generalized entropy are part of
-the working basis. OPH does not yet claim to derive quantum mechanics from
-pre-quantum primitives. Instead, it uses that algebraic-information basis to
-recover the observed effective universe: spacetime, gauge structure, particles,
-records, and observer synchronization are treated as consequences of overlap
-consistency, not as primitives.
+observers on a finite holographic screen and works outward. Its working basis
+is quantum-algebraic: patch algebras, states, trace/Born event probabilities on
+declared record surfaces, and generalized entropy are part of the formal
+starting point. The program is not a demand to derive every mathematical
+ingredient from first principles. Its goal is to construct a consistent and
+comprehensive theory of everything by using that algebraic-information basis
+to recover the observed effective universe: spacetime, gauge structure,
+particles, records, and observer synchronization are treated as consequences
+of overlap consistency, not as primitives.
 
 ## Where To Start
 
 If you want the compact technical core, start with **Paper 2. [Recovering
-Relativity and the Standard Model from the OPH Package Rooted in Observer
+Relativity and the Standard Model from Observer Overlap
 Consistency](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf)**.
 It carries the relativity, gravity, and Standard Model structure in the
 tightest form. **Paper 3. [Deriving the Particle Zoo from Observer
@@ -41,9 +42,10 @@ hard enough and a `3+1D` Lorentzian spacetime emerges, together with a
 Jacobson-style Einstein equation and the realized Standard Model quotient
 `SU(3) x SU(2) x U(1) / Z_6`, including the exact hypercharge lattice, the
 realized color triplet `N_c = 3`, and the generation count `N_g = 3`. Quantum
-mechanics is treated as one effective algebraic description of the deeper OPH
-architecture, not as a formalism already derived here from a classical or
-pre-quantum substrate.
+mechanics is treated as the algebraic information language carried by the OPH
+architecture. The reconstruction test is whether that basis coherently
+recovers the effective universe, not whether every mathematical ingredient has
+been derived from an empty starting point.
 
 The scale is set by two quantities: the total screen capacity
 `N_scr = log dim H_tot`, read from the de Sitter horizon, and the local pixel
@@ -114,7 +116,7 @@ The public electroweak surface also includes a Higgs value
 The local unification surface is organized around the pixel ratio `P` and one
 local ruler, `a_cell`. On that surface the same scale touches the electroweak
 bosons, the Higgs lane, the gravity-side entropy relation, and the familiar
-unit package for meters, seconds, GeV, and Kelvin. The diagram below shows how
+unit readout for meters, seconds, GeV, and Kelvin. The diagram below shows how
 those pieces sit on one scale. The detailed formulas live in the papers.
 
 <p align="center">
@@ -148,7 +150,7 @@ Detailed particle outputs live in [code/particles/RESULTS_STATUS.md](code/partic
 ## Papers
 
 - **Paper 1. [Observers Are All You Need](paper/observers_are_all_you_need.pdf)**: broad synthesis across the full OPH stack.
-- **Paper 2. [Recovering Relativity and the Standard Model from the OPH Package Rooted in Observer Consistency](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf)**: compact technical core for relativity, gravity, and Standard Model structure.
+- **Paper 2. [Recovering Relativity and the Standard Model from Observer Overlap Consistency](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf)**: compact technical core for relativity, gravity, and Standard Model structure.
 - **Paper 3. [Deriving the Particle Zoo from Observer Consistency](paper/deriving_the_particle_zoo_from_observer_consistency.pdf)**: particle derivations and the quantitative mass and coupling surface.
 - **Paper 4. [Reality as a Consensus Protocol](paper/reality_as_consensus_protocol.pdf)**: repair, fixed-point, and consensus picture.
 - **Paper 5. [Screen Microphysics and Observer Synchronization](paper/screen_microphysics_and_observer_synchronization.pdf)**: finite screen architecture, records, and observer synchronization.

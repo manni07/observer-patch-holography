@@ -35,7 +35,7 @@ that overlap have to match.
 
 The state on the screen is selected by maximum entropy subject to a stable
 local family of constraints. Generalized entropy gives each cap both a bulk
-piece and a boundary piece. The least elaborate low-energy matter package that
+piece and a boundary piece. The least elaborate low-energy matter sector that
 respects those constraints is the one the world settles into. Once those three
 moves are in place, the whole architecture becomes legible.
 
@@ -71,7 +71,7 @@ three-generation count follows from CKM phase counting, weak-sector
 consistency, and minimality on the same low-energy branch. The photon,
 gluons, and graviton stay massless because they ride on redundancy directions
 the architecture cannot break. The weak pair, the low-energy electromagnetic
-coupling, the Higgs-top surface, a running quark package, and one
+coupling, the Higgs-top surface, a running quark sector, and one
 weighted-cycle neutrino family all arrive inside the same reconstruction.
 Hadrons add the strong-binding problem on top of that particle-level picture.
 
@@ -217,7 +217,7 @@ appears when those views can lock into one coherent public record.
 
 The structure is not a flat list. The gauge quotient, charge lattice, counting
 chain, massless carriers, Lorentz geometry, Einstein relation, electroweak
-rows, Higgs-top surface, quark package, and neutrino family form one organized
+rows, Higgs-top surface, quark sector, and neutrino family form one organized
 reconstruction rather than a catalog of unrelated facts.
 
 The next chapter turns to the deepest interpretive question. If observers,

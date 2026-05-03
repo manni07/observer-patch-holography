@@ -138,7 +138,7 @@ Where do these internal symmetries come from?
 
 This list is easy to memorize and easy to treat as a curiosity. It helps to slow down and say what it is doing. $SU(3)$ keeps track of the color bookkeeping that confines quarks. $SU(2)$ groups left-handed weak partners into doublets. $U(1)$ carries the leftover charge assignment that survives symmetry breaking and becomes ordinary electromagnetism. The real question of the chapter is why nature settles on exactly this trio instead of some nearby alternative.
 
-For a reader meeting these groups for the first time, the useful picture is practical. They are the accounting systems that specify which transformations count as physically equivalent in the strong, weak, and electromagnetic sectors. The later Standard Model chapter asks why this accounting package is so specific.
+For a reader meeting these groups for the first time, the useful picture is practical. They are the accounting systems that specify which transformations count as physically equivalent in the strong, weak, and electromagnetic sectors. The later Standard Model chapter asks why this accounting structure is so specific.
 
 ### Extra Dimensions
 
