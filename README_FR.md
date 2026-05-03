@@ -8,6 +8,17 @@
 
 L'OPH est un programme de reconstruction pour la physique fondamentale. Il part d'observateurs finis sur un écran holographique fini et progresse vers l'extérieur. Sa base de travail est algébrique-quantique : algèbres de patchs, états, probabilités de type trace/Born sur les surfaces d'enregistrement déclarées et entropie généralisée font partie du point de départ formel. Le programme ne cherche pas à dériver chaque ingrédient mathématique à partir de premiers principes. Son objectif est de construire une théorie du tout cohérente et complète en utilisant cette base d'information algébrique pour reconstruire l'univers effectif observé : espace-temps, structure de jauge, particules, enregistrements et synchronisation des observateurs y apparaissent comme des conséquences de la cohérence de recouvrement, et non comme des primitives.
 
+La thèse opérationnelle est plus précise que "l'information est fondamentale".
+L'OPH modélise la réalité comme un processus de consensus à point fixe fondé
+sur les observateurs. Des patches d'observateurs finis portent des
+enregistrements locaux, ne comparent que les données visibles dans leurs
+recouvrements, réparent les désaccords par des mouvements de récupération
+déclarés et convergent vers des points fixes stables qui survivent au
+raffinement. Le monde public est la sortie stable par recouvrement de ce
+processus. En ce sens, l'OPH traite la réalité comme un processus
+computationnel, et non comme une scène statique sur laquelle le calcul se
+produirait simplement.
+
 ## Par où commencer
 
 Pour le noyau technique compact, commencez par **Paper 2. [Recovering Relativity and the Standard Model from Observer Overlap Consistency](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf)**. **Paper 3. [Deriving the Particle Zoo from Observer Consistency](paper/deriving_the_particle_zoo_from_observer_consistency.pdf)** porte les dérivations particules. **Paper 4. [Reality as a Consensus Protocol](paper/reality_as_consensus_protocol.pdf)** développe l'image consensus-réparation. **Paper 5. [Screen Microphysics and Observer Synchronization](paper/screen_microphysics_and_observer_synchronization.pdf)** couvre l'architecture d'écran finie, les enregistrements et la machinerie observateur. Ce README, le Paper 1 et le livre sont les grandes vues d'ensemble.
@@ -21,6 +32,13 @@ Pour le noyau technique compact, commencez par **Paper 2. [Recovering Relativity
 - Une architecture microphysique d'écran concrète qui met mesure, enregistrements et observateurs à l'intérieur de la physique.
 
 La mécanique quantique est traitée comme le langage algébrique d'information porté par l'architecture OPH. Le test de reconstruction est de savoir si cette base retrouve de manière cohérente l'univers effectif, et non si chaque ingrédient mathématique a été dérivé depuis un point de départ vide. Une reconstruction des espaces de Hilbert, des `C*`-algèbres ou des algèbres de von Neumann, des probabilités de Born, de la trace et de l'entropie depuis de simples enregistrements opérationnels serait une autre question, pas une condition préalable au programme.
+
+Le mécanisme est la boucle de consensus à point fixe. Les observateurs locaux
+n'accèdent pas à un état global depuis l'extérieur. Ils portent des états de
+patch finis, échangent les données visibles dans les recouvrements, rejettent
+les prolongements incohérents et conservent les motifs stables qui peuvent être
+synchronisés. Géométrie, particules, lois et enregistrements sont les points
+fixes à grande échelle de ce calcul en réseau d'observateurs.
 
 L'OPH utilise une seule entrée quantitative externe, la capacité totale de l'écran `N_scr = log dim H_tot`, lue depuis l'horizon de Sitter, ainsi qu'un ratio local de pixel `P = a_cell / l_P^2`. Pour la constante cosmologique observée, le ratio nu d'aire d'horizon vaut `N_patch = (R_dS / l_P)^2 ≈ 1.05e122`, tandis que la capacité entropique utilisée par l'OPH vaut `N_scr = pi N_patch ≈ 3.31e122`. La même cellule d'écran est décrite deux fois : vue de l'extérieur comme un pixel situé légèrement au-dessus de l'équilibre auto-similaire exact `φ = (1 + sqrt(5)) / 2`, et vue de l'intérieur comme la plus petite échelle d'observation électromagnétique disponible pour les observateurs de l'univers simulé. `P` est la valeur pour laquelle ces deux descriptions coïncident.
 Le papier de synthèse écrit cette autoréférence comme un problème de point fixe. L'OPH trouve la constante de structure fine en demandant quel décalage non nul d'une cellule d'écran holographique fait coïncider le déplacement géométrique extérieur depuis l'équilibre auto-similaire parfait avec l'échelle d'observation électromagnétique émise par l'univers vivant sur ce même écran. Le décalage extérieur vaut `α_ext(P) = (P - φ) / sqrt(pi)`, ou encore `P = φ + α_ext(P) sqrt(pi)`, tandis que le côté intérieur est le couplage électromagnétique émis par cette même cellule. Pour la valeur centrale externe 2022 `α⁻¹(0) = 137.035999177`, cette formule extérieure donne `P = 1.630968209403959...`. La même géométrie de point fixe est aussi testée par une note matérielle en cavité optique. Sur cette petite surface quantitative, l'OPH émet des prédictions concrètes pour les couplages, les masses et les grandeurs gravitationnelles.

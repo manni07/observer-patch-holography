@@ -17,6 +17,14 @@ to recover the observed effective universe: spacetime, gauge structure,
 particles, records, and observer synchronization are treated as consequences
 of overlap consistency, not as primitives.
 
+The operational claim is sharper than "information is fundamental." OPH models
+reality as an observer-based fixed-point consensus process. Finite observer
+patches carry local records, compare only what their overlaps expose, repair
+mismatches through declared recovery moves, and settle into stable fixed points
+that survive refinement. The public world is the overlap-stable output of that
+process. In this sense, OPH treats reality as a computational process, not as a
+static stage on which computation merely happens.
+
 ## Where To Start
 
 If you want the compact technical core, start with **Paper 2. [Recovering
@@ -46,6 +54,12 @@ mechanics is treated as the algebraic information language carried by the OPH
 architecture. The reconstruction test is whether that basis coherently
 recovers the effective universe, not whether every mathematical ingredient has
 been derived from an empty starting point.
+
+The mechanism is the fixed-point consensus loop. Local observers do not access
+a global state from outside. They carry finite patch states, exchange
+overlap-visible data, reject inconsistent continuations, and keep the stable
+patterns that can be synchronized. Geometry, particles, laws, and records are
+the large-scale fixed points of that observer-network computation.
 
 The scale is set by two quantities: the total screen capacity
 `N_scr = log dim H_tot`, read from the de Sitter horizon, and the local pixel
