@@ -183,14 +183,13 @@ voice play the same note at different pitches. Nothing interesting would happen.
 Arbitrary detuning would not make a world either. The useful departures have to
 reinforce one another. Harmony has to be amplified. Dissonance has to fade.
 
-That is the role of the local pixel ratio $P$. The weak sector is a clean
-readout, but it is not the place where a separate dial is chosen. The pixel
-ratio is selected as a small detuning from perfect self-similar balance, the
-value for which the outside screen geometry and the inside electromagnetic
-readout agree. The middle of the book then asks a harder question: does that
-same fixed point keep working when you move through the weak pair, the
-electromagnetic coupling, the Higgs and top, the quark sector, the neutrino
-family, and the gravity-facing side of the framework?
+That is the role of the local pixel ratio $P$. The pixel ratio is selected as a
+small detuning from perfect self-similar balance, the value for which the
+outside screen geometry and the inside electromagnetic readout agree. The
+middle of the book then asks a harder question: does that same fixed point keep
+working when you move through the weak pair, the electromagnetic coupling, the
+Higgs and top, the quark sector, the neutrino family, and the gravity-facing
+side of the framework?
 
 The synthesis chapter returns to the same point from a more surprising angle.
 From one side it looks like a pixel of the screen. From the other it looks like
