@@ -79,6 +79,10 @@ He traced the logic ruthlessly. What if different observers disagree about simul
 
 The result was special relativity. It was a revolution disguised as bookkeeping.
 
+A reference frame is an observer's chosen grid of clocks and rulers. Special
+relativity says different moving frames slice the same events into space and
+time differently, while still agreeing on the laws and on the speed of light.
+
 ### The Surprising Conclusion
 
 Here's what Einstein discovered: **to keep the speed of light consistent across all observers, space and time themselves must be observer-dependent.**
@@ -118,6 +122,11 @@ The mere act of observation changes the outcome.
 This has nothing to do with technological limitations or clumsy detectors disturbing the electrons. In the standard textbook reading of quantum mechanics, before measurement the electron is described by a superposition rather than by a single definite path through one slit.
 
 The wave function $|\psi\rangle$ describes probabilities, not definite properties. When you measure, the wave function "collapses" to a definite state. But what counts as a measurement? Who is the observer? When exactly does collapse happen?
+
+The notation $|\psi\rangle$ is just the standard quantum way to name a state.
+It does not mean the electron is secretly a little object with an unknown
+classical path. It means the theory is assigning amplitudes, numbers whose
+squares give probabilities for possible measurement outcomes.
 
 These questions have haunted physics for a century. Different interpretations of quantum mechanics give different answers. But they all agree on the experimental facts: observation affects outcomes in ways that have no classical analogue.
 
@@ -207,7 +216,7 @@ A symmetry says "this thing looks the same from different perspectives."
 
 **Lorentz symmetry**: You're standing still, I'm flying past at half light-speed. We measure different times and distances, but we agree on the laws. If physics depended on your velocity, observers in relative motion couldn't agree.
 
-**Gauge symmetry**: You use one mathematical description, I use another. As long as they're related by a gauge transformation, we make the same physical predictions. This lets different mathematical formalisms agree on reality.
+**Gauge symmetry**: You use one mathematical description, I use another. As long as they're related by a gauge transformation, we make the same physical predictions. A gauge choice is like choosing coordinates for an internal bookkeeping system. Different choices can describe the same physical situation. This lets different mathematical formalisms agree on reality.
 
 Broad observer agreement strongly favors these symmetries. If the laws changed arbitrarily depending on location, orientation, or frame, consistency would become much harder to maintain.
 
@@ -231,7 +240,7 @@ If information has a speed limit, every observer has limits. There are parts of 
 
 ### Cosmological Horizons
 
-The universe is expanding. Cosmology distinguishes several horizon scales. The observable-universe radius today is about 46 billion light-years, while the future event horizon is much smaller. The key point for us is that there are regions from which light cannot reach us, so every observer has a finite causal patch.
+The universe is expanding. Cosmology distinguishes several horizon scales. The observable-universe radius today is about 46 billion light-years, while the future event horizon is much smaller. The key point for us is that there are regions from which light cannot reach us, so every observer has a finite causal patch. A causal patch is the part of spacetime that can exchange signals with that observer.
 
 This doesn't violate relativity. Nothing is moving through space faster than light. Space itself is expanding. But the effect is real: there's a boundary beyond which we cannot see.
 
@@ -315,8 +324,17 @@ subject to a finite family of local constraints. As the screen is refined, that
 same constraint family persists, so the theory stays on one stable track
 instead of changing its rules at every cutoff.
 
+The regulator scale is the working resolution of the screen. MaxEnt means
+"maximum entropy": choose the least biased state compatible with the constraints
+the observer can actually enforce.
+
 **Axiom 4: Recoverable Generalized Entropy**
 You cannot pack infinite information into a finite region. The entropy budget is controlled by a generalized entropy, with the recoverability structure needed to rebuild missing information from overlap data when the stated conditions hold.
+
+Generalized entropy is ordinary quantum entropy plus the geometric boundary
+term familiar from horizons. Recoverability means that missing local data can
+be reconstructed from neighboring overlap data when the correlations have the
+right form.
 
 **Axiom 5: Economy Principle**
 Among the admissible low-energy possibilities, the realized sector is the
@@ -334,6 +352,10 @@ subject to a stable family of local constraints, and the low-energy sector is
 narrowed further by the minimal realization rule used later in the program.
 This is a quantum computation in the most literal sense: qubits, gates,
 constraints, outputs.
+
+A qudit is the multi-level cousin of a qubit. A triangulated sphere is a sphere
+approximated by small triangular pieces, so the screen can be treated as a
+finite network rather than a perfectly smooth surface.
 
 What is the output? Everything. Spacetime geometry emerges from entanglement patterns. Particles emerge as excitations. Observers emerge as self-modeling patterns that process information and maintain records. The laws of physics emerge as the rules that permit consistent information flow between patches.
 

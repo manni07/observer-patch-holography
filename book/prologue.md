@@ -123,8 +123,9 @@ backbone that all observers must agree on.
 This is a significant shift from the traditional view, and it works. Gravity
 emerges from how observers share entanglement across their screens. The
 particle world emerges from the symmetry structure forced by the framework. A
-dark component appears through modular anomalies. The question of why anything
-exists at all enters through a self-referential closure picture.
+dark component appears through modular anomalies, residual mismatches in the
+bookkeeping that turns local observer time into geometry. The question of why
+anything exists at all enters through a self-referential closure picture.
 
 Once you make this shift, strange features of reality start making sense.
 The "weird" behaviors of physics, the ones that seem bizarre or paradoxical

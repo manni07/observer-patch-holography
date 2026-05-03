@@ -25,6 +25,11 @@ The parameters of our universe seem weirdly well-adjusted for the existence of c
 
 **The Higgs mass**: The Higgs boson mass is 125 GeV. In naive naturalness estimates, quantum corrections would drive it toward the UV cutoff, creating the usual hierarchy puzzle.
 
+GeV is a particle-physics energy unit. The UV cutoff is the short-distance
+scale where the current effective theory is expected to stop being valid.
+"Naturalness" asks why low-energy quantities are not dragged up toward that
+high-energy scale by quantum corrections.
+
 **The strong force**: Small percent-level shifts in nuclear parameters are often argued to strongly disrupt stellar nucleosynthesis and the chemistry needed for long-lived structure.
 
 The list goes on. The more we look, the more fine-tuning we find.
@@ -90,6 +95,10 @@ dead under repeated scattering. Alive cats stay alive. Broad macroscopic
 superpositions do not remain public. The environment acts as a selection
 pressure.
 
+Pointer states are the states that keep leaving the same kind of record in the
+environment. They are "pointer" states because a measuring device can point to
+them repeatedly without immediately erasing what was measured.
+
 ### Replication and Redundancy
 
 Surviving pointer states do more than persist. They replicate.
@@ -110,6 +119,10 @@ Here's another way to think about the evolution of laws.
 
 The holographic screen has limited capacity: A/4G bits. It can't encode infinite complexity. It must compress.
 
+Here $A$ is the area of the boundary and $G$ is Newton's gravitational constant.
+The formula is the black-hole entropy scaling in plain form: storage capacity
+grows like area, not volume.
+
 What are physical laws? They are statements that reduce the amount of
 information needed to describe the world. If energy is conserved, you do not
 need to track a different value at every moment. If the electron mass is
@@ -128,6 +141,10 @@ The laws we observe can be read as compression codes for the universe's actual d
 
 In Chapter 14, we described particles as stable excitations in an effective
 field theory. This is another form of selection.
+
+An effective field theory is a physics description that works at the energies
+being studied without claiming to be the final description at all possible
+scales.
 
 The electron is a vibration pattern that persists. The muon is a pattern that persists for about 2.2 microseconds before decaying. The Higgs is a pattern that persists for about 10^{-22} seconds.
 

@@ -44,12 +44,17 @@ selection principle. Minimality gives the economy.
 
 ## 18.4 How Spacetime Appears
 
-Once cap modular flow becomes geometric on the extracted prime geometric
-subnet, time stops looking imported from outside. It becomes the internal flow
-attached to a restricted state. When those local flows fit together across the
-realized scaling-limit cap pair, Lorentz kinematics appears. When generalized
-entropy sits at equilibrium under admissible fixed-cap MaxEnt variations,
-Einstein gravity appears as the public large-scale grammar of that equilibrium.
+Once cap modular flow becomes geometric, time stops looking imported from
+outside. It becomes the internal flow attached to a restricted state. When
+those local flows fit together across the smooth screen, Lorentz kinematics
+appears. When generalized entropy sits at equilibrium under the allowed
+MaxEnt variations of a fixed cap, Einstein gravity appears as the public
+large-scale grammar of that equilibrium.
+
+Read that sentence as a compressed recap. Modular flow is the clock a restricted
+state carries. Lorentz kinematics is the rulebook for relating moving
+observers. Generalized entropy is the horizon-plus-bulk entropy accounting that
+gravity has to respect.
 
 In plain language, spacetime is the compressed way finite observers keep track
 of how their clocks, horizons, and correlations line up. Geometry is what the
@@ -74,6 +79,11 @@ the architecture cannot break. The weak pair, the low-energy electromagnetic
 coupling, the Higgs-top surface, a running quark sector, and one
 weighted-cycle neutrino family all arrive inside the same reconstruction.
 Hadrons add the strong-binding problem on top of that particle-level picture.
+
+The particle words here refer to roles explained in Chapters 12-16: color is the
+three-way strong-force bookkeeping, CKM phases describe quark mixing under the
+weak interaction, and hadrons are composite particles such as protons and
+neutrons.
 
 That is the twist. The Standard Model no longer looks like a cabinet full of
 unrelated entries. It looks like the smallest charged world that lets the

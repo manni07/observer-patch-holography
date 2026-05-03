@@ -165,6 +165,11 @@ $$S(\rho) = -\text{Tr}(\rho \ln \rho)$$
 
 A pure state (definite quantum state) has zero entropy. A maximally mixed state (equal probability for all possibilities) has maximum entropy.
 
+A density matrix is the quantum version of a probability table. Its diagonal
+entries track ordinary probabilities, while its off-diagonal entries track the
+phase relations that make interference possible. The trace operation,
+written `Tr`, is the matrix version of summing over all possibilities.
+
 ### The Entanglement Puzzle
 
 Here's where it gets weird.
@@ -186,6 +191,10 @@ The **entanglement entropy** quantifies this:
 $$S_A = -\text{Tr}(\rho_A \ln \rho_A)$$
 
 where $\rho_A$ is the reduced density matrix after tracing out the other subsystem.
+
+"Tracing out" means deliberately ignoring a subsystem and asking what state is
+left for the part you still observe. It is the quantum version of looking only
+at one column of a larger data table after summing over the rest.
 
 For the Bell state, $S_A = \ln 2$ (one bit). For a product state (no entanglement), $S_A = 0$.
 

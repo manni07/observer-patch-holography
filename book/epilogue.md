@@ -35,6 +35,10 @@ observer-pattern away from its environment without destroying the structure
 that makes it the observer it is. The environment matters. The interface
 matters. But the observer is not dissolved into an undifferentiated whole.
 
+Conditional independence means that, once the boundary information is fixed,
+the inside and outside no longer need extra direct knowledge of each other to
+make compatible predictions.
+
 ## A Continuation Thought Experiment
 
 This makes a limited continuation thought experiment possible.
@@ -43,6 +47,10 @@ What would need to be stored? First, the public outcome data carried by the
 observer's record layer. Second, the boundary-sector label that tells the
 environment how to glue to the observer. Third, the interior conditional
 state, the computational pattern that carries the observer's point of view.
+
+The boundary-sector label is the interface tag. It tells the outside world how
+the observer-pattern connects back to its surroundings. The interior
+conditional state is the inside pattern, specified relative to that interface.
 
 What does the framework actually support? It supports a backup-and-restore
 statement on the operational surface studied in the paper. If the accessible

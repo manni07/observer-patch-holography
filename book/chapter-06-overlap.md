@@ -229,6 +229,11 @@ QMA is the quantum analog of NP. Just as NP captures problems where solutions ar
 
 Being QMA-complete means the Quantum Marginal Problem is as hard as any problem in the class. If you could solve QMP efficiently, you could solve any QMA problem efficiently.
 
+If the complexity labels are unfamiliar, keep the operational lesson: local
+quantum consistency is not just tedious bookkeeping. In the worst case it is as
+hard as the hardest verification problems quantum computers are expected to
+handle.
+
 ### Why the Hardness Matters
 
 In classical physics, local data often determine global data on simple overlap structures, and compatibility checking is much easier than in the quantum case.
@@ -389,6 +394,11 @@ Let's step back and consider the big picture.
 
 We've been building toward a radical view of reality. We do not begin by requiring a single, global "state of the universe." A useful mathematical analogy is a sheaf-like gluing picture in which local data are stitched together by consistency conditions.
 
+A sheaf is the mathematics of local descriptions that may or may not glue into
+one global description. Maps are the friendly example. If every local map agrees
+on its overlaps with neighboring maps, you can assemble an atlas. If the overlap
+rules conflict around a loop, no single map exists.
+
 ### The Internet Analogy
 
 Think of the internet. There's no single file called "The Internet" stored somewhere. There are billions of computers, each with its own memory. They communicate via protocols. When my computer sends a packet to yours, we "agree" on the content. The "internet" is the emergent consistency of all these local interactions.
@@ -414,7 +424,7 @@ If Alice and Bob agree on their overlap (AB), and Bob and Carol agree on their o
 
 But beware of loops. Go from Alice to Bob to Carol and back to Alice-you should return with the same state on shared overlaps. If not, you have **frustration**: local assignments can't all be true simultaneously.
 
-This is analogous to gauge theory and geometry. Move a vector around a loop; if it comes back rotated, there is nontrivial holonomy. Likewise, a loop that does not close cleanly signals an obstruction to global gluing rather than a simple globally consistent assignment.
+This is analogous to gauge theory and geometry. Move a vector around a loop; if it comes back rotated, there is nontrivial holonomy. Holonomy is the leftover mismatch that appears after a full circuit. Likewise, a loop that does not close cleanly signals an obstruction to global gluing rather than a simple globally consistent assignment.
 
 ## 6.11 Formal Statement
 

@@ -94,13 +94,20 @@ $$
 The quark sector gives the running mass structure
 
 $$
-(m_u,m_d,m_s,m_c,m_b,m_t)=
-(0.00216,\ 0.00470,\ 0.0935,\ 1.273,\ 4.183,\ 172.3523553288311)\,\mathrm{GeV},
+\begin{aligned}
+(m_u,m_d,m_s) &= (0.00216,\ 0.00470,\ 0.0935)\,\mathrm{GeV},\\
+(m_c,m_b,m_t) &= (1.273,\ 4.183,\ 172.3523553288311)\,\mathrm{GeV},
+\end{aligned}
 $$
 
 and these are running quark masses, not hadron masses. They belong to the
 short-distance particle description before QCD binds quarks into composite
 states.
+
+Running means the quoted mass depends on the energy scale at which the quark is
+probed. This is normal in quantum field theory. It is why a quark mass in a
+short-distance table is not the same kind of number as a proton mass measured in
+the lab.
 
 The neutrino sector is concrete as well:
 
@@ -116,6 +123,10 @@ fine-structure fixed-point relation, the Higgs/top pair, the running quark
 sextet with Yukawas, and one weighted-cycle neutrino family. Hadrons require a
 separate nonperturbative bound-state step because protons, neutrons, and mesons
 are QCD composites rather than elementary particle rows.
+
+Majorana phases are extra neutrino mixing phases that matter if neutrinos are
+their own antiparticles in the relevant sense. QCD is quantum chromodynamics,
+the strong-interaction theory that binds quarks and gluons into hadrons.
 
 ## 16.5 What Is a Particle?
 
@@ -142,6 +153,10 @@ framework,
 time first appears as modular flow, so energy first appears as the generator of
 that flow. Far enough out in the effective world, this becomes the ordinary
 Hamiltonian language and the stress tensor familiar from field theory.
+
+The Hamiltonian is the operator that generates time evolution. The stress tensor
+is the field-theory object that records where energy and momentum are and how
+they flow.
 
 Energy conservation survives the journey because once the emergent action
 respects time shifts, the usual conserved charge follows with it. The deep
@@ -180,6 +195,9 @@ Here the action is
 $$S = \int L(q, \dot q, t)\,dt,$$
 
 where $L$ is the Lagrangian.
+
+The Lagrangian is the local rule that weighs motion. Roughly, it records the
+balance between kinetic and potential contributions along a candidate path.
 
 When the action $S$ is large compared to $\hbar$, phases oscillate rapidly and
 cancel out. Only paths where $S$ is stationary survive. This yields the

@@ -67,6 +67,10 @@ Conservation laws are the simplest form of this agreement. If I measure total en
 
 Our fundamental object is the holographic screen $S^2$. The screen is a sphere. Therefore, the natural symmetry group is **SO(3)**.
 
+SO(3) is the group of ordinary rotations in three-dimensional space. Calling it
+a group only means that rotations can be composed, undone, and compared in a
+consistent way.
+
 This has immediate consequences. Whatever physics lives on the screen must organize itself into **representations** of SO(3)-ways that fields can transform under rotations.
 
 The representations are labeled by angular momentum $l=0,1,2,\ldots$. The
@@ -111,6 +115,11 @@ returns to the starting lift.
 
 Quantum mechanics allows **projective representations**. Physical states are rays in Hilbert space-vectors defined only up to an overall phase. This phase freedom permits the double cover SU(2).
 
+A ray is a direction rather than one particular arrow. Multiplying a quantum
+state by an overall phase changes the vector but not the physical state. That
+small freedom is what lets spinors carry the minus sign after a 360-degree
+rotation without changing observable probabilities.
+
 The matter content of the universe-quarks, leptons, all fermions-exists because quantum mechanics allows projective representations of the screen's symmetry group.
 
 ## 12.6 Wigner's Classification
@@ -118,6 +127,10 @@ The matter content of the universe-quarks, leptons, all fermions-exists because 
 In 1939, Eugene Wigner classified all possible elementary particles.
 
 A particle is a representation of the Poincare group-the symmetry group of special relativity.
+
+The Poincare group collects the basic moves that leave special relativity
+unchanged: translations in space and time, rotations, and Lorentz boosts between
+observers moving at constant relative velocity.
 
 Irreducible representations are labeled by two numbers only: mass $m$, which
 is continuous and non-negative, and spin $s$, which comes in the familiar
@@ -165,6 +178,12 @@ A conserved current on the screen creates a gauge boson in the bulk.
 
 In this book we take a different route. The gauge group is not assumed in advance. Instead, we look at what happens when you glue observer patches together: the charges that live on the edges between patches fuse in specific ways, and a reconstruction theorem lets you work backward from those fusion rules to the symmetry group behind them. A minimal admissible realization principle then fixes the realized low-energy branch, and the answer turns out to be exactly $SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$, the Standard Model gauge group. On that same branch, the minimal coupled carrier fixes three colors, while CKM phase counting together with weak-sector ultraviolet consistency fixes three generations.
 
+The notation looks forbidding, but the roles are practical. $SU(3)$ is the
+color accounting system for quarks. $SU(2)$ is the weak doublet accounting
+system. $U(1)$ is the single continuous charge direction that feeds ordinary
+electromagnetism after symmetry breaking. The quotient by $\mathbb Z_6$ says
+that some shared center labels are counted only once.
+
 ## 12.8 Symmetry Breaking
 
 The universe has beautiful symmetries. But the symmetries are also hidden.
@@ -188,6 +207,10 @@ are absorbed by the gauge bosons, the $W$ and $Z$ become massive, the Higgs
 boson remains as the physical excitation, and fermion masses are fed through
 their Higgs couplings. The underlying symmetry $SU(2)\times U(1)$ narrows to
 $U(1)_{\mathrm{em}}$.
+
+"Absorbed" is physicists' shorthand. The would-be massless Goldstone degrees of
+freedom do not appear as separate particles. They become the extra polarization
+states needed by massive $W$ and $Z$ bosons.
 
 Symmetry breaking corresponds to the screen "freezing" into a specific
 configuration. We live in a frozen shard of a more symmetric world.

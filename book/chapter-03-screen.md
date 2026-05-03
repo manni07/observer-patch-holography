@@ -244,6 +244,11 @@ Not in a simple sense. Different patches represent different observers, or the s
 
 What creates the sense of time? The internal structure of the quantum state provides a natural flow: the **modular flow** from quantum statistical mechanics. For a thermal state, modular flow generates time evolution, and the thermal time principle provides an important interpretive-organizational guide.
 
+For now, "flow" only means an internal rule for ordering changes. Think of it
+as the clock a subsystem inherits from its own state, not a clock imposed from
+outside. Chapter 11 returns to this slowly and gives the physics behind the
+phrase.
+
 ### Why This Matters
 
 This definition of observers resolves several puzzles:
@@ -262,6 +267,12 @@ subtler and is developed later.
 Here's a concrete way to think about the screen and its observers.
 
 Imagine the screen as a **gauge-invariant quantum system** on the 2-sphere, something like a quantum cellular automaton but with important structure. Triangulate the sphere into tiny cells. At each edge of the triangulation sits a finite-dimensional quantum system (a qudit). At each vertex, a gauge constraint (Gauss's law) restricts which configurations are physical. Not all states survive; only those satisfying the constraint at every vertex.
+
+In plainer language, a qudit is a small quantum register with finitely many
+possible readouts, like a qubit with more than two options. A gauge constraint
+is a local accounting rule: many internal descriptions may be allowed, but only
+the combinations that leave the shared physical quantities unchanged count as
+physical.
 
 **Observer patches** are subsystems defined by boundary-gauge-invariant algebras. Each patch is like a computational thread, a connected region where an observer can ask questions and get answers. The algebra $\mathcal{A}(R)$ defines what that observer can measure: the operators that commute with the boundary gauge transformations.
 

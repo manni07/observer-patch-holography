@@ -201,7 +201,11 @@ The holographic principle and emergent geometry resonate with this picture.
 
 The fundamental data lives on the 2D holographic screen. This data has no spatial interpretation-it's just quantum information on a sphere. Space is *reconstructed* from this data through the pattern of entanglement.
 
-The Ryu-Takayanagi formula makes the geometry-entanglement link precise in holographic settings: entanglement structure helps determine bulk geometric relations.
+The Ryu-Takayanagi formula makes the geometry-entanglement link precise in
+holographic settings: the amount of entanglement across a boundary is computed
+by the area of a corresponding surface in the bulk. The later holography
+chapters develop this carefully. Here the only point is the direction of the
+hint: quantum correlation can carry geometric information.
 
 $$S_A = \frac{\text{Area}(\gamma_A)}{4G_N}$$
 

@@ -77,6 +77,11 @@ $$S = \frac{c}{3}\ln\frac{L}{\epsilon}$$
 
 where c is the central charge and epsilon is a UV cutoff.
 
+The central charge counts, roughly, how many independent quantum degrees of
+freedom the CFT has. The UV cutoff is the shortest distance the calculation
+allows. Without it, the field theory would keep counting arbitrarily tiny
+correlations across the boundary of the interval.
+
 In AdS_3, the minimal "surface" is a geodesic-a shortest path through the bulk. Compute its length using the AdS metric. Divide by 4G.
 
 **With the standard cutoff identification, they match.** Two completely different calculations-one from quantum field theory, one from geometry-give the same answer.
@@ -124,6 +129,10 @@ The strongest evidence comes from the **thermofield double state**:
 $$|\text{TFD}\rangle = \sum_n e^{-\beta E_n/2} |n\rangle_L |n\rangle_R$$
 
 This state lives on two copies of a system. It is an entangled purification of a thermal state at temperature T = 1/beta.
+
+"Purification" means that a mixed, thermal-looking state can be treated as part
+of a larger pure state if we include a second auxiliary copy. The thermal
+uncertainty is then reinterpreted as entanglement with that second copy.
 
 In AdS/CFT, the thermofield double is dual to an **eternal two-sided black hole**. The two boundaries correspond to two copies of the CFT. They're connected by a smooth wormhole through the interior.
 

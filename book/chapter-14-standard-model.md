@@ -234,6 +234,11 @@ The Standard Model is organized by symmetry. The gauge group is:
 
 $$G_{SM} = SU(3)_C \times SU(2)_L \times U(1)_Y$$
 
+The notation names three continuous accounting systems. $SU(3)$ is a
+three-component special-unitary symmetry, $SU(2)$ is its two-component cousin,
+and $U(1)$ is the circle-like symmetry behind a single conserved charge. The
+subscripts say which physical bookkeeping each factor carries.
+
 **SU(3)_C** is the color group. Quarks carry color charge: red, green, or blue. Gluons carry color-anticolor combinations. The strong force binds quarks into colorless combinations.
 
 **SU(2)_L** is the weak isospin group. It acts only on left-handed particles.
@@ -254,6 +259,10 @@ A relativistic fermion has a left-handed face and a right-handed face. For
 massless particles, that split lines up with helicity, with spin either
 tracking the motion or leaning against it. For massive particles the relation
 is subtler, but the left-right split remains built into the theory.
+
+Helicity is the easy visual version: compare the direction of a particle's spin
+with its direction of travel. Chirality is the deeper field-theory label. For
+massless particles they coincide; for massive particles they do not have to.
 
 ### The Weak Force Discriminates
 
@@ -319,6 +328,10 @@ This is symmetric under rotations in field space. But the minimum isn't at zero.
 
 The field "falls" to some point in this valley. The symmetry is broken spontaneously. The equations are symmetric; the ground state is not.
 
+That settled nonzero value is called the vacuum expectation value. It is not
+empty space doing nothing. It is the background value of the Higgs field that
+other particles move through.
+
 ### Eating Goldstone Bosons
 
 When a continuous symmetry is spontaneously broken, massless particles appear: Goldstone bosons. They correspond to motion along the valley.
@@ -333,6 +346,11 @@ Fermions also get mass from the Higgs. The Yukawa couplings connect left-handed 
 
 $$\mathcal{L}_{Yukawa} = y_e \bar{L} \phi e_R + y_u \bar{Q} \tilde{\phi} u_R + y_d \bar{Q} \phi d_R + \text{h.c.}$$
 
+This line is a compact part of the Lagrangian, the formula that says which
+field interactions are allowed. The $y$ values are Yukawa couplings. They set
+how strongly each fermion talks to the Higgs field, and therefore how much mass
+that fermion gets after symmetry breaking.
+
 When the Higgs gets a vacuum expectation value, these terms become mass terms. The masses are proportional to the Yukawa couplings.
 
 Why do the Yukawa couplings have the values they do? Why is the top quark so much heavier than the electron? The Standard Model leaves this unexplained.
@@ -344,6 +362,10 @@ The OPH connection is direct.
 ### Gauge as Gluing Redundancy
 
 In the standard presentation, gauge symmetry is a postulate. You write down a Lagrangian that's invariant under local transformations.
+
+A local transformation is a change of internal description that can vary from
+point to point. Gauge symmetry says such changes must not alter physical
+predictions.
 
 Gauge symmetry emerges from the redundancy in how observers glue their patches
 together.
@@ -360,6 +382,11 @@ Technically, the Hilbert space decomposes:
 
 $$\mathcal{H}_{collar} = \bigoplus_\alpha (\mathcal{H}_{left}^\alpha \otimes \mathcal{H}_{right}^\alpha)$$
 
+The direct-sum symbol means the boundary data split into sectors labeled by
+$\alpha$. The tensor-product symbol joins the left and right sides inside one
+sector. The formula is just the precise way to say that an edge carries a label
+both neighboring patches must respect.
+
 The labels alpha are the edge charges. In the bosonic gauge picture they become
 the sector labels from which the reconstructed boundary gauge group is
 recovered.
@@ -372,15 +399,21 @@ $$\alpha \otimes \beta = \bigoplus_\gamma N_{\alpha\beta}^\gamma \, \gamma$$
 
 define a tensor category. The Tannaka-Krein reconstruction theorem says, roughly, that if the charge sectors fuse, split, and travel with the right consistency properties, then the fusion rules recover the compact symmetry group behind them. The fusion table is central. The group is read off from how charges behave.
 
+For intuition, treat the fusion rules as a multiplication table for charges.
+If you know how every charge combines with every other charge, you have enough
+information to recover the symmetry that those charges are representing.
+
 The gauge group isn't put in by hand. It's reconstructed from how charges combine.
 
 There is one refinement caveat. A charge label seen at one cutoff counts in
-the final category only if it remains visible along a cofinal refinement
-chain. If it does, the directed colimit gives it one stable object. Later
-refinement cannot silently erase it or split it into a different charge
-without new overlap-visible data, or else the transport system has failed.
-This does not prove that every edge charge survives. It says that survival,
-once supplied by the transport premises, is unique and checkable.
+the final category only if it remains visible as the screen is described at
+finer and finer resolution. In the formal language, such a stable path is a
+cofinal refinement chain, and its stable endpoint is a directed colimit. The
+plain meaning is simpler: a real charge cannot vanish or split into a different
+charge just because the bookkeeping became more detailed. If that happened
+without new overlap-visible data, the transport system would have failed. This
+does not prove that every edge charge survives. It says that survival, once
+supplied by the transport premises, is unique and checkable.
 
 ### The Standard Model Factors
 
@@ -396,7 +429,13 @@ those two are in place, the remaining commuting charge direction is $U(1)$,
 and the sixth-integer hypercharge pattern sharpens the result to the Standard
 Model quotient.
 
-The same low-energy sector also fixes the counting. The minimal coupled carrier makes the quark doublet a color triplet and therefore fixes $N_c=3$. On the same one-Higgs quark branch, intrinsic CKM CP capability requires at least three generations, weak-sector ultraviolet consistency keeps the count finite, and the smallest viable answer is $N_g=3$. The Witten anomaly then remains as a consistency check on the resulting triplet-doublet structure.
+The representation words only say how a particle multiplet transforms. A weak
+doublet is a two-entry object rotated by the weak symmetry. A color triplet is a
+three-entry object rotated by the color symmetry. "Pseudoreal" and "complex"
+distinguish whether the mirror representation is effectively the same object or
+a genuinely different one.
+
+The same low-energy sector also fixes the counting. The minimal coupled carrier makes the quark doublet a color triplet and therefore fixes $N_c=3$. On the same one-Higgs quark branch, intrinsic CKM CP capability requires at least three generations, weak-sector ultraviolet consistency keeps the count finite, and the smallest viable answer is $N_g=3$. The Witten anomaly then remains as a consistency check on the resulting triplet-doublet structure. This anomaly is a global $SU(2)$ obstruction: the theory is consistent only when the number of left-handed weak doublets is even.
 
 ## 14.10 Hypercharge from Gluing Consistency
 
@@ -482,6 +521,11 @@ Anomaly cancellation works generation by generation. Each generation independent
 
 The CKM matrix describes how quarks mix under the weak force. In general, it's a unitary N_g × N_g matrix. The number of physical CP-violating phases is:
 
+CP means charge-parity reversal: swap particles with antiparticles and mirror
+space. A CP-violating phase is a built-in complex phase that lets those mirrored
+processes differ. In ordinary language, it is one source of matter-antimatter
+asymmetry in weak interactions.
+
 $$\text{(CP phases)} = \frac{(N_g - 1)(N_g - 2)}{2}$$
 
 For N_g = 1 or 2: 0 phases. **No intrinsic CKM CP capability.**
@@ -494,6 +538,10 @@ $$N_g \ge 3$$
 ### Weak-Sector UV Completability Limits
 
 Too many generations spoil asymptotic freedom. The SU(2) beta function coefficient is:
+
+Asymptotic freedom means an interaction gets weaker at shorter distances or
+higher energies. The beta function is the bookkeeping rule for how a coupling
+changes with scale.
 
 $$b_{SU(2)} = \frac{22}{3} - \frac{1}{3}N_g(N_c + 1) - \frac{1}{6}$$
 
@@ -510,15 +558,18 @@ Combining: $3 \le N_g \le 5$.
 
 ### The Minimal Viable Window
 
-CKM CP capability and weak-sector UV completability define the viable window:
+CKM CP capability and weak-sector UV completability define the viable window.
+Here UV completability means that the theory can keep making sense at shorter
+distances and higher energies, instead of breaking down immediately when the
+resolution is increased:
 
 $$3 \le N_g \le 5.$$
 
-A minimal admissible realization principle then picks the smallest viable realization:
+A minimal admissible realization principle then picks the smallest viable realization. "Minimal admissible" means the smallest option that still satisfies the consistency tests already listed:
 
 $$\boxed{N_g = 3}$$
 
-Refinement stability explains why extra unfixed Yukawa structure is disfavored. Among the allowed options, the smallest viable one wins. With $N_c=3$ and $N_g=3$, each generation carries four left-handed weak doublets, so the Witten anomaly is automatically satisfied on the realized branch.
+Refinement stability explains why extra unfixed Yukawa structure is disfavored. Among the allowed options, the smallest viable one wins. With $N_c=3$ and $N_g=3$, each generation carries four left-handed weak doublets, an even number, so the Witten anomaly is automatically satisfied on the realized branch.
 
 ## 14.13 Why Chirality?
 
@@ -702,18 +753,24 @@ But there was a problem. With just the Standard Model particle content, the thre
 
 OPH separates two ideas that are often fused together. Couplings can display
 unification-like running without the Standard Model being embedded in a larger
-simple group. One edge-mode heat-kernel construction reproduces MSSM-like
-one-loop running: entropy weights a representation by one copy of its
-dimension because one side of the entanglement cut is traced over, while loop
-corrections see both indices of the representation block. A second factor of
-the dimension returns in the running. That is what lets the beta-function
-shifts land near the familiar unification benchmark.
+simple group. A heat kernel is a standard way of weighting group
+representations with a diffusion-like smoothing parameter. In the edge-mode
+construction, that weighting reproduces MSSM-like one-loop running: entropy
+weights a representation by one copy of its dimension because one side of the
+entanglement cut is traced over, while loop corrections see both indices of the
+representation block. A second factor of the dimension returns in the running.
+That is what lets the beta-function shifts land near the familiar unification
+benchmark.
 
 At the unification-scale heat-kernel parameter $t_U \approx 1.64$, this gives:
 $$\Delta b_{\text{edge}} \approx (2.49,\ 4.38,\ 3.97)$$
 compared to the MSSM target $(2.50,\ 4.17,\ 4.00)$. The agreement is within 5%
 for all three coefficients in this edge-mode picture. What emerges here is
 unification-like running behavior, not an MSSM spectrum hidden inside OPH.
+
+MSSM means the Minimal Supersymmetric Standard Model, a popular extension of the
+Standard Model. OPH is not adding that particle spectrum here. It is comparing
+the running pattern of the couplings.
 
 The sharper structural prediction concerns *how* any unification-like closure would happen.
 

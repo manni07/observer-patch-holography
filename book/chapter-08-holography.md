@@ -143,6 +143,10 @@ He studied a stack of D3-branes. There are two ways to describe what happens at 
 
 **Description 2 (Closed strings)**: The geometry around the branes curves. Near the branes, spacetime looks like AdS_5 times S^5.
 
+The details are specialized, but the pattern is the part to keep. One language
+uses quantum fields without gravity on a boundary. The other language uses
+strings and gravity in a higher-dimensional interior.
+
 Maldacena proposed: **these two descriptions are the same theory**.
 
 The gauge theory on the boundary is equivalent to string theory (including gravity) in the bulk. This was the **AdS/CFT correspondence**.
@@ -176,6 +180,11 @@ The Poincare patch metric for AdS is:
 $$ds^2 = \frac{R^2}{z^2}\left(dz^2 + \eta_{\mu\nu} dx^\mu dx^\nu\right)$$
 
 where z > 0 is the radial coordinate and eta is the flat Minkowski metric.
+
+This formula is less important than its interpretation. It says AdS can be
+sliced into ordinary-looking flat spacetime layers, stacked along a new radial
+direction $z$. Moving in $z$ changes the scale at which the boundary theory is
+being viewed.
 
 As z goes to 0, you approach the boundary. Each slice of constant z looks like flat spacetime. As z increases, distances shrink by the factor 1/z.
 
@@ -282,6 +291,11 @@ record. HKLL explains how to read a local bulk description out of that record.
 Holography elegantly explains black hole thermodynamics.
 
 A CFT at finite temperature corresponds to a black hole in the bulk. The Hawking temperature of the black hole equals the CFT temperature.
+
+Finite temperature means the boundary theory is not in one sharp pure state. It
+is described statistically, like a many-body system in contact with a heat bath.
+In the dual bulk language, that same statistical state is represented by a
+black hole geometry.
 
 ### The Hawking-Page Transition
 

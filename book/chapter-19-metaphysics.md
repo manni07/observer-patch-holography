@@ -37,7 +37,7 @@ This dissolves the hard problem by showing it rested on a false premise: the ass
 
 ## 19.4 What the Model Doesn't Touch
 
-Dissolving the hard problem is different from solving the easy problems. Our framework says nothing about why *these* neural patterns correlate with *that* quale, why activity in V4 looks red while activity in auditory cortex sounds like music. Those are scientific questions requiring empirical investigation. The model just removes the philosophical obstacle that made them seem impossible in principle.
+Dissolving the hard problem is different from solving the easy problems. Our framework says nothing about why *these* neural patterns correlate with *that* quale, why activity in V4 looks red while activity in auditory cortex sounds like music. V4 is a region of the visual cortex strongly associated with color processing. Those are scientific questions requiring empirical investigation. The model just removes the philosophical obstacle that made them seem impossible in principle.
 
 Similarly, the model gives a structural way to discuss which physical systems count as observer patches. A thermostat, a bacterium, and a corporation can all be placed in the same consistency-and-record language, even though they occupy very different levels of organization.
 
@@ -158,6 +158,10 @@ than assumed, whether dynamics can grow out of synchronization pressure, and
 whether the pixel area and screen-capacity inputs can be folded back into first
 principles. The chapter does not treat these as loose decorations. They are the
 pressure points where metaphysics and physics meet.
+
+A sheaf condition is the mathematical version of a simple demand: local
+descriptions that agree on their overlaps should glue into one consistent
+description. That is the formal cousin of the book's observer-overlap rule.
 
 ## 19.11 Reverse Engineering Summary
 

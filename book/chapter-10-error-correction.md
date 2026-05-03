@@ -196,6 +196,11 @@ For a code with projector P onto the code space and error operators {E_a}, the c
 
 $$P E_a^\dagger E_b P = \alpha_{ab} P$$
 
+Here the code space is the protected subspace that stores the logical
+information. The error operators are the possible ways noise can disturb the
+physical carrier. The equation is a compact test for whether the protected
+information can survive those disturbances.
+
 Within the code space, all errors look the same up to a scalar. Errors don't move you between different logical states. The scalar can be detected as the syndrome and removed.
 
 This is the heart of the theorem. The formula says the error channel cannot

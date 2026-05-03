@@ -46,6 +46,10 @@ What does one observer actually experience in de Sitter space?
 
 As you look outward, galaxies recede faster and faster. At a critical distance $r_H = c/H$, the recession velocity equals the speed of light. Beyond this radius, light can never reach you.
 
+Here $H$ is the Hubble expansion rate for the de Sitter phase. The formula says
+that expansion itself creates a distance beyond which signals cannot overcome
+the stretching of space.
+
 This defines your **cosmological horizon**-the boundary of your causal access.
 
 Inside the horizon, you can use static coordinates. This region-the **static patch**-is all of de Sitter space that you can ever access.
@@ -129,6 +133,9 @@ Leonard Susskind and collaborators proposed **de Sitter complementarity**: opera
 
 Alice describes physics in her patch using her Hilbert space. Bob describes physics in his patch using his Hilbert space. Where their patches overlap, their descriptions must be consistent. In the complementarity reading adopted here, patch-relative descriptions are primary.
 
+A Hilbert space here is not a private mental space. It is the quantum state
+space for the degrees of freedom accessible inside one observer's horizon.
+
 This fits naturally with our model. Reality is a collection of consistent patches. You can't step outside and view the universe from nowhere.
 
 ## 13.6 Static Patch Holography
@@ -166,6 +173,11 @@ A crucial insight: the cosmological constant is not a local patch datum. Null
 modular probes reconstruct the stress tensor only up to a term proportional to
 the metric itself, so $\Lambda g_{ab}$ enters as the one global scale the local
 construction cannot erase.
+
+The symbol $\Lambda$ is the cosmological constant, the part of Einstein's
+equation that acts like a uniform large-scale tendency for space to accelerate.
+In this framework it is read as global capacity data rather than as one more
+local particle-physics coupling.
 
 So Lambda must be fixed by a **global** constraint: the total capacity of the screen. In natural units, the relationship is:
 
@@ -238,6 +250,10 @@ In reality, the Markov condition is only approximate. There's always some residu
 $$K_C = 2\pi B_C + K_C^{(\text{anom})} + \text{const}$$
 
 where the "anomaly" captures the deviation from perfect modular additivity. This anomaly contributes to the stress-energy:
+
+An anomaly here means a controlled leftover term, not a mistake. It is what
+remains when the ideal additivity of the modular bookkeeping is only
+approximately true.
 
 $$G_{00} + \Lambda g_{00} = 8\pi G \left( \langle T_{00} \rangle + \langle T_{00}^{\text{anom}} \rangle \right)$$
 

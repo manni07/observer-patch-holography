@@ -54,6 +54,11 @@ $\rho$. From it one forms the modular Hamiltonian, $K=-\ln\rho$. That operator
 generates a flow, and the thermal-time proposal reads that flow as the time the
 observer actually experiences.
 
+Here $\rho$ is the observer's density matrix, the quantum bookkeeping object for
+what the observer can know. The modular Hamiltonian is not necessarily the
+ordinary energy of the whole universe. It is the operator that generates the
+natural evolution of the restricted state the observer actually has access to.
+
 This is a strange move the first time one sees it. In ordinary mechanics, the
 Hamiltonian is given first and time evolution follows. Here the restricted
 state itself furnishes the clock. Time is tied to access, ignorance, and coarse
@@ -82,7 +87,24 @@ own dynamics.
 
 This abstract mathematics connects to reality through the Unruh effect.
 
-An observer accelerating uniformly sees only the **Rindler wedge**-part of spacetime. For the vacuum state restricted to this region, the Bisognano-Wichmann theorem shows that the modular Hamiltonian is exactly the generator of Lorentz boosts.
+First recall what a Lorentz boost is. In special relativity, two observers
+moving at constant velocity do not split space and time in the same way. A
+Lorentz boost is the transformation that converts one observer's space-time
+coordinates into the other's. It is like a rotation, but a rotation in
+spacetime: it tilts the time axis and one space axis while preserving the light
+cone and the spacetime interval.
+
+The word "generator" means the infinitesimal version of that transformation.
+Just as angular momentum generates ordinary rotations, the boost generator
+generates changes of inertial frame. A steadily accelerating observer can be
+thought of as passing through a sequence of nearby inertial frames. Step by
+step, their time evolution is built from tiny Lorentz boosts.
+
+An observer accelerating uniformly sees only the **Rindler wedge**, the part of
+spacetime from which signals can still reach that observer. A horizon forms
+behind them. For the vacuum state restricted to this wedge, the
+Bisognano-Wichmann theorem shows that the modular Hamiltonian is exactly the
+generator of Lorentz boosts.
 
 For an accelerating observer, a Lorentz boost *is* time translation. The modular flow equals ordinary time evolution.
 
@@ -238,7 +260,13 @@ where K is the Lorentz boost generator. The modular Hamiltonian-which generates 
 
 $$H_{mod} = 2\pi K$$
 
-Here's the punchline: **modular flow IS Lorentz boost** (in QFT wedges).
+In this wedge case, **modular flow is Lorentz boost**.
+
+This does not mean that every clock in the universe is literally an
+accelerating rocket clock. It means that, in this clean wedge example, the
+abstract modular flow attached to a restricted quantum state becomes a familiar
+geometric transformation from relativity. The theorem gives a bridge between
+operator algebra and spacetime motion.
 
 $$\Delta^{it} = e^{-2\pi i K t}$$
 

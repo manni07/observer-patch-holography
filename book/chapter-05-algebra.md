@@ -173,6 +173,11 @@ An observable is represented by a Hermitian operator A. The possible measurement
 
 $$P(a) = |\langle a|\psi\rangle|^2$$
 
+The vocabulary is compact but simple. Hermitian means the possible answers are
+real numbers. An eigenstate is a state in which the question already has a
+definite answer. The formula says that probability comes from how much the
+state points in the direction of that definite-answer state.
+
 In the standard textbook update rule, an ideal measurement updates the state to the eigenstate corresponding to the measured value.
 
 ### The Density Matrix
@@ -286,7 +291,12 @@ This connects directly to holography. When you restrict your view to a subregion
 
 Von Neumann algebras have beautiful modular structure discovered by Tomita and Takesaki in the 1970s. Type III examples are especially important in the local QFT setting discussed here.
 
-Given a von Neumann algebra M together with a cyclic separating state Ω (for example, the vacuum in standard local-QFT settings), there is a natural one-parameter group of transformations:
+The formal hypotheses have intimidating names. The useful picture is simpler:
+give an observer a rich enough menu of questions and a state that does not hide
+too much from that menu. The pair then carries its own preferred way of flowing
+from one description to the next.
+
+Given a von Neumann algebra M together with such a state Ω (for example, the vacuum in standard local-QFT settings), there is a natural one-parameter group of transformations:
 
 $$\sigma_t(A) = \Delta^{it} A \Delta^{-it}$$
 
@@ -298,7 +308,9 @@ These modular automorphisms satisfy a remarkable property. The state Ω is a **K
 
 $$\omega(A \sigma_{i}(B)) = \omega(BA)$$
 
-The KMS condition characterizes thermal equilibrium states.
+The KMS condition characterizes thermal equilibrium states. For a non-specialist,
+the important point is not the complex-time formula itself. KMS is the quantum
+signature of a state that behaves thermally with respect to the flow it carries.
 
 ### Time from Algebra
 
