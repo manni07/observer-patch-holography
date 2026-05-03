@@ -7,9 +7,14 @@
 **Quick links:** [website](https://floatingpragma.io/oph/) | [OPH Textbooks](https://learn.floatingpragma.io/) | [OPH Lab](https://oph-lab.floatingpragma.io)
 
 OPH is a reconstruction program for fundamental physics. It starts from finite
-observers on a finite holographic screen and works outward. Spacetime, gauge
-structure, particles, records, and observer synchronization are treated as
-consequences of overlap consistency, not as primitives.
+observers on a finite holographic screen and works outward. Its current axiom
+package is quantum-algebraic: patch algebras, states, trace/Born event
+probabilities on declared record surfaces, and generalized entropy are part of
+the working basis. OPH does not yet claim to derive quantum mechanics from
+pre-quantum primitives. Instead, it uses that algebraic-information basis to
+recover the observed effective universe: spacetime, gauge structure, particles,
+records, and observer synchronization are treated as consequences of overlap
+consistency, not as primitives.
 
 ## Where To Start
 
@@ -29,13 +34,16 @@ README, Paper 1, and the book are the broad overviews.
 ## What OPH Delivers
 
 Most theories begin by assuming spacetime, quantum fields, and a list of
-constants. OPH starts one step earlier, with finite observers on a finite
-holographic screen whose descriptions have to agree where their patches
-overlap. Push that requirement hard enough and a `3+1D` Lorentzian spacetime
-emerges, together with a Jacobson-style Einstein equation and the realized
-Standard Model quotient `SU(3) x SU(2) x U(1) / Z_6`, including the exact
-hypercharge lattice, the realized color triplet `N_c = 3`, and the generation
-count `N_g = 3`.
+constants. OPH starts one step earlier than spacetime and quantum field theory,
+with finite observers on a finite quantum-algebraic holographic screen whose
+descriptions have to agree where their patches overlap. Push that requirement
+hard enough and a `3+1D` Lorentzian spacetime emerges, together with a
+Jacobson-style Einstein equation and the realized Standard Model quotient
+`SU(3) x SU(2) x U(1) / Z_6`, including the exact hypercharge lattice, the
+realized color triplet `N_c = 3`, and the generation count `N_g = 3`. Quantum
+mechanics is treated as one effective algebraic description of the deeper OPH
+architecture, not as a formalism already derived here from a classical or
+pre-quantum substrate.
 
 The scale is set by two quantities: the total screen capacity
 `N_scr = log dim H_tot`, read from the de Sitter horizon, and the local pixel

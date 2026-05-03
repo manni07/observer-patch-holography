@@ -164,6 +164,12 @@ pixel size. From there the question is simple: how much of gravity, gauge
 structure, and the particle world can be forced from observer consistency
 alone?
 
+The current OPH basis is not pre-quantum in the technical sense. It starts with
+algebraic observables, states, trace/Born event probabilities on declared
+record surfaces, and generalized entropy. Quantum mechanics is one effective
+description carried by the deeper observer-patch architecture, not a formalism
+already derived in this book from classical primitives.
+
 This is where the reverse-engineering method matters. A good reverse engineer
 first works out the architecture, then checks how many knobs are really left.
 The book argues that most of the architecture is forced early. The sharp test
@@ -183,9 +189,10 @@ the smallest observational step available to the world encoded on that screen.
 The theory identifies these two descriptions at the same value. That is where
 the book's self-reference theme enters the physics.
 
-From this starting point, we derive constraints. We show how the mathematical
-structures of quantum mechanics and relativity emerge from consistency
-requirements. We trace the logic from axioms to consequences.
+From this starting point, we derive constraints. We show how relativity, gauge
+structure, and particle physics are organized by consistency requirements, and
+how the quantum-algebraic description fits as one effective language inside
+the same architecture. We trace the logic from axioms to consequences.
 
 The program targets the recovery of known physics, gravity and the Standard
 Model included, from this simple starting point. The answer is not inserted by

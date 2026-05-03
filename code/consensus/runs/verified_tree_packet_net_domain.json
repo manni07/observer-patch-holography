@@ -1,0 +1,100 @@
+{
+  "artifact": "oph_verified_tree_packet_net_domain",
+  "domain": {
+    "graph": {
+      "oriented_edges": [
+        "r-a",
+        "a-b",
+        "a-c"
+      ],
+      "parents": {
+        "a": "r",
+        "b": "a",
+        "c": "a"
+      },
+      "root": "r",
+      "vertices": [
+        "r",
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "hidden_gauge_labels_per_vertex": [
+      0,
+      1
+    ],
+    "packet_alphabet": [
+      0,
+      1,
+      2
+    ],
+    "repair": "for non-root i, if x_i != x_parent(i), set x_i := x_parent(i) and leave hidden labels fixed",
+    "state_space": "S_i = Z_3 x Z_2; interface projections read only the Z_3 packet",
+    "weights": {
+      "a-b": 1,
+      "a-c": 1,
+      "r-a": 5
+    }
+  },
+  "general_obstructions_isolated": [
+    "nonzero cycle holonomy on non-tree affine packet nets makes strict global consistency impossible",
+    "packet-closure failure prevents a microscopic instrument from pushing forward to autonomous packet dynamics",
+    "Petz recovery without full support requires an explicit support-domain restriction"
+  ],
+  "generated_utc": "2026-05-03T01:15:44Z",
+  "issue": 238,
+  "object_id": "ConsensusTreePacketRepairDomain_Issue238",
+  "petz_domain": {
+    "channel": "classical_full_support_petz_for_trace_D",
+    "cptp": true,
+    "formula": "R(mu_B)(b,d)=mu_B(b) sigma(d|b)",
+    "input_domain": "all diagonal B-packet distributions because gamma_sigma > 0",
+    "inverse_sqrt_bound": 1.7320508075688774,
+    "reference_sigma_B": {
+      "0": 0.3333333333333333,
+      "1": 0.3333333333333333,
+      "2": 0.3333333333333333
+    },
+    "sample_column_sums": {
+      "0": 1.0,
+      "1": 1.0,
+      "2": 1.0
+    },
+    "sample_conditional": {
+      "0": {
+        "0": 0.5,
+        "1": 0.25,
+        "2": 0.25
+      },
+      "1": {
+        "0": 0.25,
+        "1": 0.5,
+        "2": 0.25
+      },
+      "2": {
+        "0": 0.25,
+        "1": 0.25,
+        "2": 0.5
+      }
+    },
+    "support_gap_gamma_sigma": 0.3333333333333333,
+    "support_obstruction": "sigma_B(b)=0 with input mass at b makes the inverse sigma_B^{-1/2} undefined unless the domain is restricted",
+    "trace_norm_contractive": true
+  },
+  "quotient_compatibility": {
+    "descends_to_quotient": true,
+    "gauge_action": "independent permutations of the hidden Z_2 labels at each vertex",
+    "physical_law_use": "gauge-invariant observables factor through the quotient normal form on this verified branch",
+    "reason": "interface projections, potentials, enabled sites, and repairs depend only on packet labels x_i"
+  },
+  "role": "Nontrivial exported packet-net domain where repair completeness, Petz-domain control, and quotient compatibility are theorem-grade.",
+  "theorem_checks": {
+    "max_terminal_count_seen": 1,
+    "potential_step_bound": 7,
+    "repair_completeness": true,
+    "strict_lyapunov_descent": true,
+    "total_states_checked": 1296,
+    "unique_terminal_normal_form": true
+  }
+}

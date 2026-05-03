@@ -76,6 +76,8 @@ repair law includes the touched-overlap local-fit contract that yields Lyapunov 
 parenthesization-independent union-collar glue used for the local diamond. What sits above
 that step is repair completeness and, on the Petz branch, the support/CPTP clause stated later in
 Proposition~\ref{prop:petz-cptp}.
+A nontrivial exported rooted-tree packet domain where these clauses are proved is recorded in
+Definition~\ref{def:tree-packet-domain} and Theorem~\ref{thm:tree-packet-domain}.
 
 We also define a fitness functional over a finite candidate space of reconciliation laws and prove
 that replicator dynamics monotonically increases mean fitness (Theorem~\ref{thm:replicator}). This
@@ -228,6 +230,172 @@ $s\in C \iff \forall\, i\in V,\; T_i^\lambda(s)=s.$
 \end{assumption}
 
 Normal forms are exactly the globally consistent states. The dynamics is neither too weak (missing some inconsistencies) nor too strong (repairing things that were fine).
+
+\begin{definition}[Verified rooted-tree packet-net domain]\label{def:tree-packet-domain}
+Fix a finite rooted tree \(T=(V,E,r)\). For each non-root vertex \(i\), write \(p(i)\) for its
+parent and write \(w_i>0\) for the weight of the edge \(\{p(i),i\}\). Let \(A\) be a finite
+packet alphabet with \(|A|\ge2\), and let \(K_i\) be a finite hidden-label set. The patch state
+space is
+\[
+S_i=A\times K_i,
+\qquad
+s_i=(x_i,k_i).
+\]
+For every edge \(e=\{i,j\}\), the interface alphabet is \(I_e=A\), and both endpoint projections
+read the packet component:
+\[
+\pi_{i,e}(x_i,k_i)=x_i,
+\qquad
+\pi_{j,e}(x_j,k_j)=x_j.
+\]
+Thus \(e\) is consistent exactly when \(x_i=x_j\). Choose the weights so that
+\[
+w_i>\sum_{j:p(j)=i}w_j
+\qquad
+\text{for every non-root } i,
+\]
+with an empty sum equal to \(0\). Define
+\[
+\Phi(s)=\sum_{\{p(i),i\}\in E}w_i\,\mathbf 1[x_i\ne x_{p(i)}].
+\]
+The repair map at a non-root vertex \(i\) is
+\[
+T_i(s)_i=(x_{p(i)},k_i),
+\]
+with all other vertices unchanged; if \(x_i=x_{p(i)}\), the map is a no-op. The root repair map is
+the identity. The hidden labels \(k_i\) are acted on by arbitrary finite gauge relabelings and are
+not read by any interface projection.
+\end{definition}
+
+\begin{theorem}[Rooted-tree packet repair completeness and quotient closure]\label{thm:tree-packet-domain}
+On the domain of Definition~\ref{def:tree-packet-domain}, Assumption~\ref{ass:complete} is a
+theorem. Every enabled repair strictly decreases \(\Phi\). Every maximal asynchronous repair run
+terminates at the unique state
+\[
+x_i=x_r\quad\text{for all }i\in V,
+\]
+with all hidden labels \(k_i\) unchanged. The normal-form map descends to the quotient by hidden
+gauge relabeling. The four-vertex instance with edges \(r\!-\!a\), \(a\!-\!b\), \(a\!-\!c\),
+alphabet \(A=\mathbb Z_3\), hidden labels \(K_i=\mathbb Z_2\), and weights \(5,1,1\) is exported
+as \texttt{code/consensus/runs/verified\_tree\_packet\_net\_domain.json}.
+\end{theorem}
+
+\begin{proof}
+First, repair completeness is immediate from the rooted tree. If \(s\in C\), every edge has
+\(x_i=x_{p(i)}\), so every non-root repair is a no-op. Conversely, if every repair is a no-op,
+then \(x_i=x_{p(i)}\) for every non-root vertex, hence every edge is consistent and \(s\in C\).
+
+Let \(i\ne r\) be enabled. Only the parent edge \(\{p(i),i\}\) and child edges
+\(\{i,j\}\) with \(p(j)=i\) can change their contribution to \(\Phi\). The parent edge changes
+from inconsistent to consistent, contributing \(-w_i\). Each child edge can increase by at most
+its weight. Therefore
+\[
+\Phi(T_i(s))-\Phi(s)
+\le
+-w_i+\sum_{j:p(j)=i}w_j
+<0.
+\]
+So every enabled repair is accepted by the Lyapunov contract.
+
+Since \(\Phi\) takes finitely many values, every maximal repair run terminates. At a terminal
+state no non-root vertex differs from its parent, so the terminal packet label is \(x_r\) on every
+vertex. The root label and every hidden label are invariant under all repairs, so the terminal
+state is unique and independent of update order. Because interface projections, enabledness,
+\(\Phi\), and the repair maps depend only on \(x_i\), arbitrary relabelings of the hidden
+\(K_i\) commute with quotienting:
+\[
+q\circ T_i=\overline T_i\circ q.
+\]
+Thus the normal-form map descends to the hidden-label quotient.
+\end{proof}
+
+\begin{corollary}[Physical-law map on the verified packet domain]\label{cor:tree-packet-law}
+On the rooted-tree packet domain, every gauge-invariant observable
+\[
+M:\prod_i(A\times K_i)\to Y
+\]
+has a schedule-independent repaired value
+\[
+M(\operatorname{nf}(s)),
+\]
+and this value depends only on the quotient class of \(s\). Hence the promoted normal-form map is
+usable as physical law on this verified packet branch without adding a representative-level
+gauge-covariance assumption.
+\end{corollary}
+
+\begin{proof}
+Theorem~\ref{thm:tree-packet-domain} gives a unique terminal state for every asynchronous repair
+schedule and shows that the normal-form map descends to the quotient by hidden-label relabeling.
+A gauge-invariant observable factors through that quotient, so its value on the terminal state is
+independent of both the repair schedule and the hidden representative.
+\end{proof}
+
+\begin{proposition}[Classical full-support Petz packet domain]\label{prop:classical-petz-packet}
+Let \(B\) and \(D\) be finite packet alphabets, let the collar algebras be diagonal, and let
+\(\mathcal N:\mathbb C^{B\times D}\to\mathbb C^B\) be the marginal channel
+\((\mathcal N p)(b)=\sum_d p(b,d)\). Fix a reference state \(\sigma_{BD}\) with
+\(\sigma_B(b)>0\) for every \(b\). Let
+\[
+\gamma_\sigma:=\min_{b\in B}\sigma_B(b)>0.
+\]
+Define the Petz recovery channel
+\[
+\mathcal R_{\sigma,\mathcal N}(\mu)(b,d)
+=
+\mu(b)\,\sigma(d\mid b),
+\qquad
+\sigma(d\mid b):=\frac{\sigma_{BD}(b,d)}{\sigma_B(b)}.
+\]
+Then \(\mathcal R_{\sigma,\mathcal N}\) is stochastic, completely positive and trace preserving
+on the diagonal algebra, and \(\ell^1\)-contractive:
+\[
+\|\mathcal R_{\sigma,\mathcal N}(\mu)-\mathcal R_{\sigma,\mathcal N}(\nu)\|_1
+\le
+\|\mu-\nu\|_1.
+\]
+The support inverse is uniformly bounded on this domain by
+\[
+\|\sigma_B^{-1/2}\|\le \gamma_\sigma^{-1/2}.
+\]
+If a collar state has the exact classical Markov form
+\[
+\omega_{ABD}(a,b,d)=\omega_{AB}(a,b)\sigma(d\mid b),
+\]
+then \((\mathrm{id}_A\otimes\mathcal R_{\sigma,\mathcal N})(\omega_{AB})=\omega_{ABD}\).
+The support obstruction is exact: if \(\sigma_B(b)=0\) and an input assigns mass to \(b\), the
+Petz inverse on that sector is undefined unless the channel domain is restricted or a separate
+trace-preserving completion is declared.
+\end{proposition}
+
+\begin{proof}
+The displayed formula is the finite diagonal specialization of the Petz map
+\[
+\sigma_{BD}^{1/2}
+\left(\sigma_B^{-1/2}\mu\,\sigma_B^{-1/2}\otimes \mathbf 1_D\right)
+\sigma_{BD}^{1/2}.
+\]
+Full support of \(\sigma_B\) makes the inverse well defined, with support gap
+\(\gamma_\sigma>0\), hence \(\|\sigma_B^{-1/2}\|\le\gamma_\sigma^{-1/2}\). Nonnegativity is immediate, and
+\[
+\sum_{b,d}\mathcal R_{\sigma,\mathcal N}(\mu)(b,d)
+=
+\sum_b \mu(b)\sum_d\sigma(d\mid b)
+=
+\sum_b\mu(b),
+\]
+so the map is trace preserving. Diagonal positive trace-preserving maps are completely positive on
+the diagonal algebra. For signed diagonal inputs,
+\[
+\|\mathcal R_{\sigma,\mathcal N}(\mu)-\mathcal R_{\sigma,\mathcal N}(\nu)\|_1
+=
+\sum_{b,d}|\mu(b)-\nu(b)|\,\sigma(d\mid b)
+=
+\sum_b|\mu(b)-\nu(b)|,
+\]
+which gives the stated contraction. The exact Markov recovery identity follows by substitution.
+If \(\sigma_B(b)=0\), the factor \(\sigma_B^{-1/2}\) has no value on that sector; mass placed
+there by an input is outside the Petz support domain. That is the claimed obstruction.
+\end{proof}
 
 \begin{proposition}[Accepted repair moves are Lyapunov-decreasing]\label{prop:lyapunov-descent}
 For the accepted repair law of Definitions~\ref{def:repair} and \ref{def:localfit}, every enabled
@@ -430,10 +598,12 @@ q\circ T_i^\lambda
 \overline T_i^\lambda\circ q.
 \]
 This is the finite patch-net form of saying that the repair step is defined first on
-overlap-invariant physical data and only then lifted to hidden representatives. The open
-problem here is therefore not to invent a repair rule, but to establish repair completeness on
-the declared fixed-cutoff branch and the support/CPTP clause on the Petz branch where that
-channel is used. The touched-overlap local-fit contract gives Lyapunov \(\Phi\)-descent on
+overlap-invariant physical data and only then lifted to hidden representatives. The rooted-tree
+packet domain of Theorem~\ref{thm:tree-packet-domain} proves repair completeness and quotient
+descent on a nontrivial exported packet net, while Proposition~\ref{prop:classical-petz-packet}
+proves the classical full-support Petz clause used by that domain. The broader fixed-cutoff
+branch still requires repair completeness for the chosen exported packet net and the
+support/CPTP clause on the Petz branch where that channel is used. The touched-overlap local-fit contract gives Lyapunov \(\Phi\)-descent on
 accepted moves, and Proposition~\ref{prop:assocglue} together with
 Definition~\ref{def:assoc} supplies the quotient-local compatibility package used for the local
 diamond. Stability of that package under refinement or branch change is a separate question.
@@ -834,12 +1004,13 @@ references, and that companion ledger is the place to look up the definitions.
 
 This paper proves the fixed-point consensus spine of OPH: schedule-independent normal forms,
 holonomy obstructions, gauge-quotient invariance, and the fixed-cutoff operator-record theorem.
-It also gives a
-clean law-selection meta-model. The conditional relativity chain and the realized Standard Model
+It also proves the full repair-completeness, Petz-domain, and quotient-compatibility package on
+the rooted-tree packet-net domain of Theorem~\ref{thm:tree-packet-domain}, and gives a clean
+law-selection meta-model. The conditional relativity chain and the realized Standard Model
 structural chain are the recovered core. The capacity relation is separate and input-dependent.
 Downstream phenomenology requires additional premises beyond the consensus results proved here.
 
-\paragraph{Complexity status.}
+\paragraph{Complexity boundary.}
 On a fixed finite patch net, the accepted reconciliation dynamics is a finite-state asynchronous
 rewrite system on \(\Sigma\). Under Theorem~\ref{thm:confluence}, every accepted repair run has at
 most \(|\Phi(\Sigma)|-1\le |\Sigma|-1\) nontrivial steps, because each accepted move strictly
@@ -848,7 +1019,7 @@ therefore decidable by direct iteration of accepted local repairs. What this pap
 \emph{not} prove is a uniform polynomial-time bound, a sharper complexity-class placement for
 families of growing patch nets, or any hardness lower bound.
 
-\paragraph{Approximate-stability status.}
+\paragraph{Approximate-stability boundary.}
 The theorem-grade consensus statement is exact on the declared fixed-cutoff branch. Approximate
 control is presently collar-local: Theorem~\ref{thm:splice} gives the exact-Markov modulus
 \(\delta^{\mathrm M}_{A:B:D}(\varepsilon)\to0\) on one fixed finite-dimensional collar model and
@@ -859,7 +1030,7 @@ global noisy-consensus theorem asserting that arbitrarily long asynchronous appr
 sequences converge to a unique approximate quotient normal form with uniformly controlled
 accumulated error.
 
-\paragraph{Expressive-power status.}
+\paragraph{Expressive-power boundary.}
 The law-selection model of Theorem~\ref{thm:replicator} is a finite-candidate monotonicity result,
 not a universality theorem. For each fixed patch net the theorem package proves a
 finite-state exact reconciliation mechanism rather than an unbounded universal machine. A genuine
@@ -867,7 +1038,7 @@ universality claim would require an explicit uniform family of patch nets and re
 simulates arbitrary circuits or machines with stated encoding overhead and robustness under
 asynchronous schedules. No such theorem is supplied here.
 
-With that status split fixed, six explicit downstream directions are:
+With those boundaries explicit, six downstream directions are:
 
 \begin{enumerate}
 \item \textbf{Coarse-graining.} When does reconciliation commute with renormalization? If you coarse-grain the patch net and then reconcile, do you get the same result as reconciling first and then coarse-graining? The conditions under which these operations commute would connect the discrete model to continuum field theory.
@@ -876,7 +1047,7 @@ With that status split fixed, six explicit downstream directions are:
 
 \item \textbf{Observable-level confluence beyond the declared fixed-cutoff physical algebra.} Theorem~\ref{thm:obsconfluence} closes the fixed-cutoff quantum-lift statement when microscopic representatives differ by gauge relabelings globally or by sector/higher-gauge relabelings on the same declared quotient-local glued state. The open question is whether an analogous observable theorem survives on broader refinement-stable branches where the union-collar compatibility is only approximate or where the physical observable algebra itself changes under refinement.
 
-\item \textbf{Global approximate-consensus stability.} Theorem~\ref{thm:splice} and Theorem~\ref{thm:crdt} supply the collar-local perturbative controls carried by this paper. What is absent is a multi-step theorem showing that approximate recovery moves are repair-complete for overlap consistency, preserve support-local disjoint commutation and nested-collar restriction compatibility, satisfy the support/CPTP clause on the Petz branch where needed, and converge under long asynchronous schedules to a unique approximate quotient normal form with controlled accumulated error.
+\item \textbf{Global approximate-consensus stability.} Theorem~\ref{thm:splice} and Theorem~\ref{thm:crdt} supply the collar-local perturbative controls carried by this paper. The rooted-tree packet domain proves the exact finite repair package on one nontrivial exported domain. What is absent is a multi-step theorem showing that approximate recovery moves are repair-complete for arbitrary packet-closed exported overlap nets, preserve support-local disjoint commutation and nested-collar restriction compatibility, satisfy the support/CPTP clause on every Petz branch used there, and converge under long asynchronous schedules to a unique approximate quotient normal form with controlled accumulated error.
 
 \item \textbf{Expressive power / universality.} A universality claim would require an explicit uniform family of patch nets and repair laws that simulates arbitrary circuits or machines with stated encoding overhead and robustness under asynchronous schedules. This paper supplies no such construction, so universality is an external possibility rather than a theorem-grade output.
 
