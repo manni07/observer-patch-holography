@@ -150,15 +150,58 @@ The Standard Model is based on the gauge group:
 
 $$G_{SM} = SU(3) \times SU(2) \times U(1)$$
 
+Start with the word **group**. A group is a set of moves that can be followed
+by other moves, can be undone, and includes a do-nothing move. Rotations form a
+group: rotate a cup, rotate it again, and the result is still a rotation. Every
+rotation has an inverse rotation that takes you back.
+
+In physics, the moves are often not visible rotations of ordinary objects. They
+are transformations of fields. If the allowed transformations form a group,
+then physicists can ask how particles, forces, and charges respond to those
+moves.
+
+The letters name the kind of transformation:
+
+**U** means **unitary**. A unitary transformation preserves quantum
+probabilities, the way an ordinary rotation preserves length.
+
+**S** means **special**. For these matrix groups, it removes a shared overall
+phase. Mathematically this is the determinant-one condition. In practical
+terms, it leaves the nontrivial internal rotation while discarding a redundant
+common twist.
+
+The number says how many complex components the transformation acts on.
+$U(1)$ acts on one complex phase. It is a circle of possible phase rotations,
+written $e^{i\theta}$. $SU(2)$ acts on two-component objects, which is why it
+naturally organizes weak doublets. $SU(3)$ acts on three-component objects,
+which is why it naturally organizes the three color labels of quarks.
+
+$U(1)$ is abelian, which means the order of two transformations does not matter.
+$SU(2)$ and $SU(3)$ are non-abelian, which means the order can matter. That is
+why the weak and strong interactions have richer self-interactions than plain
+electromagnetism.
+
+The multiplication sign does not mean ordinary numerical multiplication. It
+means the Standard Model has three independent internal transformation systems
+running side by side. A particle can carry color, weak isospin, and
+hypercharge labels at the same time.
+
+A **gauge group** is a group of transformations that change the mathematical
+description without changing the physical situation. The word gauge adds one
+crucial feature: the transformation can be chosen locally. Different observers,
+or different points in spacetime, may use different internal bookkeeping
+choices, and the predictions must still agree. Gauge fields are what make that
+local agreement possible.
+
 $SU(3)$ carries the strong-force color bookkeeping. $SU(2)$ carries the weak
 interaction before symmetry breaking. $U(1)$ carries hypercharge and later
 feeds electromagnetism through its mixing with $SU(2)$.
 
 Where do these internal symmetries come from?
 
-This list is easy to memorize and easy to treat as a curiosity. It helps to slow down and say what it is doing. $SU(3)$ keeps track of the color bookkeeping that confines quarks. $SU(2)$ groups left-handed weak partners into doublets. $U(1)$ carries the leftover charge assignment that survives symmetry breaking and becomes ordinary electromagnetism. The real question of the chapter is why nature settles on exactly this trio instead of some nearby alternative.
+With the notation unpacked, the physical roles are less mysterious. $SU(3)$ keeps track of the color bookkeeping that confines quarks. $SU(2)$ groups left-handed weak partners into doublets. $U(1)$ carries the leftover charge assignment that survives symmetry breaking and becomes ordinary electromagnetism. The real question of the chapter is why nature settles on exactly this trio instead of some nearby alternative.
 
-For a reader meeting these groups for the first time, the useful picture is practical. They are the accounting systems that specify which transformations count as physically equivalent in the strong, weak, and electromagnetic sectors. The later Standard Model chapter asks why this accounting structure is so specific.
+The useful picture is practical. These groups are the accounting systems that specify which transformations count as physically equivalent in the strong, weak, and electromagnetic sectors. The later Standard Model chapter asks why this accounting structure is so specific.
 
 ### Extra Dimensions
 
