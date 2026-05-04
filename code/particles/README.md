@@ -31,6 +31,7 @@ part of this canonical tree.
 - [runs](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs)
 - [scripts](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/scripts)
 - [RESULTS_STATUS.md](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/RESULTS_STATUS.md)
+- [DERIVATION_GAP_LEDGER.md](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/DERIVATION_GAP_LEDGER.md)
 - [particle_mass_derivation_graph.svg](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/particle_mass_derivation_graph.svg)
 - [task_tracker.yaml](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/task_tracker.yaml)
 
@@ -92,6 +93,8 @@ The bridge to the auxiliary direct-top average `Q007TP` is open and tracked in
 
 - status table:
   [RESULTS_STATUS.md](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/RESULTS_STATUS.md)
+- systematic open-gap ledger after the compressed `P`-trunk simplification:
+  [DERIVATION_GAP_LEDGER.md](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/DERIVATION_GAP_LEDGER.md)
 - exact-fits-only diagnostic surface:
   [EXACT_FITS_ONLY.md](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/EXACT_FITS_ONLY.md)
 - exact non-hadron mass bundle:
@@ -196,6 +199,7 @@ python3 hadron/derive_runtime_schedule_receipt_n_therm_and_n_sep.py
 python3 hadron/derive_stable_channel_sequence_evaluation.py
 python3 hadron/derive_current_hadron_lane_audit.py
 python3 scripts/build_results_status_table.py
+python3 scripts/build_derivation_gap_ledger.py
 python3 scripts/build_exact_fit_surface.py
 python3 scripts/build_exact_nonhadron_mass_bundle.py
 python3 scripts/generate_mass_derivation_svg.py

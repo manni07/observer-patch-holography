@@ -31,6 +31,19 @@ If an external inverse-alpha value is supplied explicitly, the same outer
 equation reports the corresponding compare-only pixel ratio. The solver has no
 default reference constant.
 
+`emit_p_closure_trunk.py` is the compressed five-equation trunk emitter. It
+packages the current code path as:
+
+```text
+P -> M_U -> alpha_U -> alpha_i(m_Z) -> a0(P) -> alpha_in(P) -> P
+```
+
+and writes `runtime/p_closure_trunk_current.json`. That artifact is the
+canonical audit surface for the simplified chain, but not yet the certified live
+particle root. Promotion still requires the Ward-projected Thomson endpoint
+theorem, OPH-internal RG/matching closure, and an interval-level fixed-point
+certificate.
+
 ## Terms
 
 `P ratio (pixel size)` means the dimensionless screen-cell area
@@ -150,6 +163,20 @@ To emit the fixed-point witness:
 
 ```bash
 python3 fixed_point_witness.py --mode thomson_structured_running --precision 40 --output runtime/fixed_point_witness.json
+```
+
+To emit the compressed P-trunk artifact:
+
+```bash
+python3 emit_p_closure_trunk.py --output runtime/p_closure_trunk_current.json
+```
+
+The default trunk emitter uses the paper-compression asymptotic structured
+running profile so it is fast enough for routine ledger refreshes. To run the
+stronger exact one-loop continuation profile, pass:
+
+```bash
+python3 emit_p_closure_trunk.py --mode thomson_structured_running --precision 40 --su2-cutoff 120 --su3-cutoff 90 --output runtime/p_closure_trunk_exact.json
 ```
 
 To include an external inverse-alpha value as compare-only metadata, pass it

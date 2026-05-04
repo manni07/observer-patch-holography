@@ -1,0 +1,171 @@
+{
+  "artifact": "oph_p_closure_trunk_current",
+  "claim_boundary": "This artifact is the canonical compressed P-trunk candidate for the current code path. It is not yet the live particle-pipeline root: promotion requires the Ward-projected Thomson endpoint theorem, OPH-internal RG/matching/scheme closure, and an interval-level fixed-point certificate.",
+  "claim_status": "compressed_candidate_trunk_not_final_particle_root",
+  "closed_form_candidate": {
+    "formula": "P = phi + alpha_in(P) * sqrt(pi)",
+    "name": "golden_ratio_electromagnetic_width",
+    "phi": "1.61803398874989484820458683436",
+    "sqrt_pi": "1.77245385090551602729816748334"
+  },
+  "consumer_policy": {
+    "default_thomson_endpoint_allowed": false,
+    "hidden_external_alpha_allowed": false,
+    "may_feed_compare_or_audit_surfaces": true,
+    "may_feed_live_particle_predictions": false,
+    "torus_mode_interpretation_status": "speculative_not_pipeline_input"
+  },
+  "d10_source_point": {
+    "M_U": "0.00202607280774419116034077564727",
+    "alpha1_mz": "0.0168856674764318440137601446247",
+    "alpha2_mz": "0.0337778139337541569141122141596",
+    "alpha3_mz": "0.118335861572246030105716888773",
+    "alphaY_mz": "0.0101314004858591064082560867748",
+    "alpha_U": "0.0411242472349549643695354461671",
+    "alpha_em_inv_mz": "128.308268762616913741791069064",
+    "mZ_run": "0.0000000000000000075017658774990644454917568671",
+    "sin2w_mz": "0.230735179842653631449806002260",
+    "v": "0.0000000000000000201981101449977880823372136996"
+  },
+  "five_layer_chain": [
+    {
+      "claim_status": "implemented_paper_equation",
+      "formula": "M_U(P) = E_P * exp(-2*pi) * P^(1/6)",
+      "id": "layer_1_unification_scale",
+      "operation_type": "exp",
+      "output_keys": [
+        "M_U"
+      ],
+      "outputs": {
+        "M_U": "0.00202607280774419116034077564727"
+      }
+    },
+    {
+      "claim_status": "implemented_paper_equation",
+      "formula": "ellbar_SU2(4*pi^2*alpha2) + ellbar_SU3(4*pi^2*alpha3) = P/4",
+      "id": "layer_2_pixel_closure",
+      "operation_type": "heat_kernel_exp_sums",
+      "output_keys": [
+        "alpha_U"
+      ],
+      "outputs": {
+        "alpha_U": "0.0411242472349549643695354461671"
+      }
+    },
+    {
+      "claim_status": "implemented_with_declared_running_matching_conventions",
+      "formula": "alpha_i^-1(m_Z) = alpha_U^-1 + b_i/(2*pi) * log(M_U/m_Z)",
+      "id": "layer_3_running_couplings",
+      "operation_type": "log_linear",
+      "output_keys": [
+        "alpha1_mz",
+        "alpha2_mz",
+        "alpha3_mz"
+      ],
+      "outputs": {
+        "alpha1_mz": "0.0168856674764318440137601446247",
+        "alpha2_mz": "0.0337778139337541569141122141596",
+        "alpha3_mz": "0.118335861572246030105716888773"
+      }
+    },
+    {
+      "claim_status": "source_locked_d10_anchor",
+      "formula": "alpha_em^-1(m_Z^2;P) = alpha2^-1 + (5/3)*alpha1^-1",
+      "id": "layer_4_electroweak_mixing",
+      "operation_type": "linear",
+      "output_keys": [
+        "a0_alpha_em_inv_mz",
+        "sin2w_mz"
+      ],
+      "outputs": {
+        "a0_alpha_em_inv_mz": "128.308268762616913741791069064",
+        "sin2w_mz": "0.230735179842653631449806002260"
+      }
+    },
+    {
+      "claim_status": "paper_compression_asymptotic_structured_running_audit",
+      "formula": "alpha_in^-1(P) = a0(P) + Delta_Th(P)",
+      "id": "layer_5_structured_thomson_running",
+      "operation_type": "structured_log_linear_continuation",
+      "output_keys": [
+        "alpha_inv",
+        "Delta_Th_impl"
+      ],
+      "outputs": {
+        "Delta_Th_impl": "8.68575190010729139792757372925",
+        "alpha_inv": "136.994020662724205139718642793"
+      }
+    }
+  ],
+  "fixed_point_candidate": {
+    "P": "1.63097210492078846050203640439",
+    "alpha": "0.00729955037434895833333333333335",
+    "alpha_fixed_point_residual": "0.00000003828771370619821058637453",
+    "alpha_inv": "136.994020662724205139718642793",
+    "outer_equation_residual": "0.00000000000000000000000000000",
+    "source_anchor_alpha_inv_mz": "128.308268762616913741791069064"
+  },
+  "generated_utc": "2026-05-04T22:31:34Z",
+  "promotion_gates": [
+    {
+      "github_issue": 223,
+      "id": "ward_projected_thomson_endpoint",
+      "required_status": "source_emitted_zero_momentum_transport_theorem"
+    },
+    {
+      "github_issue": 32,
+      "id": "rg_matching_threshold_scheme",
+      "required_status": "OPH_internal_running_matching_and_scheme_theorem"
+    },
+    {
+      "github_issue": 223,
+      "id": "interval_fixed_point_certificate",
+      "required_status": "interval_existence_uniqueness_certificate_for_the_full_map"
+    },
+    {
+      "github_issue": 224,
+      "id": "particle_codepath_adoption",
+      "required_status": "all_live_particle_consumers_read_the_certified_trunk_artifact"
+    }
+  ],
+  "source_report_mode": "thomson_structured_running_asymptotic",
+  "source_report_precision": 18,
+  "structured_running": {
+    "epsilon_z6": "0.166666666666666666666666666667",
+    "integer_vectors": {
+      "n_d": [
+        6,
+        4,
+        2
+      ],
+      "n_e": [
+        7,
+        4,
+        3
+      ],
+      "n_u": [
+        6,
+        3,
+        0
+      ]
+    },
+    "koide_delta": "0.222222222222222222222222222222",
+    "lepton_delta_alpha_inv": "4.30915784652033317138513023722",
+    "mass_source": "internal_stage5_continuation",
+    "masses_gev": {
+      "b": "0.000000000000000000396728351407798239670737418466",
+      "c": "0.0000000000000000000661213919012997066117895697444",
+      "d": "0.000000000000000000000306117555098609752832359119188",
+      "e": "0.0000000000000000000000418161703753286651562065951262",
+      "mu": "0.00000000000000000000864634276127619416619005398818",
+      "s": "0.0000000000000000000110202319835499511019649282908",
+      "tau": "0.000000000000000000145414596631943438076386576486",
+      "u": "0.000000000000000000000306117555098609752832359119188"
+    },
+    "quark_delta_alpha_inv_naive": "4.93416686972133091685895423317",
+    "quark_delta_alpha_inv_screened": "4.37659405358695822654244349203",
+    "quark_screening_factor": "0.886997576114432673783199878200",
+    "total_delta_alpha_inv": "8.68575190010729139792757372925",
+    "transport_kernel": "asymptotic_log"
+  }
+}

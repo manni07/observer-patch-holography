@@ -1,0 +1,127 @@
+{
+  "artifact": "oph_particle_derivation_gap_ledger",
+  "generated_utc": "2026-05-04T22:31:38Z",
+  "p_trunk": {
+    "P": "1.63097210492078846050203640439",
+    "alpha_inv": "136.994020662724205139718642793",
+    "artifact_path": "P_derivation/runtime/p_closure_trunk_current.json",
+    "claim_status": "compressed_candidate_trunk_not_final_particle_root",
+    "exists": true,
+    "may_feed_live_particle_predictions": false,
+    "source_report_mode": "thomson_structured_running_asymptotic"
+  },
+  "promotion_policy": {
+    "compressed_p_trunk_is_live_prediction_root": false,
+    "reason": "The endpoint, RG/matching, and interval-certificate gates remain open.",
+    "torus_mode_language_allowed_in_pipeline": false
+  },
+  "purpose": "Systematic claim-safe queue after the five-equation P-trunk simplification.",
+  "rows": [
+    {
+      "current_boundary": "The compressed trunk can organize the code path, but it is not a certified live particle root until the endpoint and interval-certificate gates close.",
+      "github_issue": 224,
+      "id": "pclosure.compressed-trunk-artifact",
+      "lane": "P closure",
+      "next_action": "Keep emitting p_closure_trunk_current.json and use it only as audit metadata for now.",
+      "status": "candidate_artifact",
+      "target_surfaces": [
+        "code/P_derivation",
+        "code/particles"
+      ],
+      "title": "Make the five-equation P trunk the canonical audit artifact"
+    },
+    {
+      "current_boundary": "The current structured-running law is a continuation: lepton one-loop transport is implemented, while hadronic spectral transport, scheme matching, and interval error control are not theorem-grade.",
+      "github_issue": 223,
+      "id": "d10.ward-projected-thomson-endpoint",
+      "lane": "D10 electromagnetic endpoint",
+      "next_action": "Derive Delta_Th(P) from the same Ward-projected source family as a0(P), including rho_had(s;P), matching remainder, and certified quadrature bounds.",
+      "status": "open_theorem_gap",
+      "target_surfaces": [
+        "code/P_derivation/THOMSON_TRANSPORT_THEOREMS.md",
+        "code/particles/calibration"
+      ],
+      "title": "Close the Ward-projected U(1)_Q Thomson endpoint"
+    },
+    {
+      "current_boundary": "The D10 branch still uses declared running/matching conventions. The compressed P trunk makes this easier to see but does not prove those conventions from OPH.",
+      "github_issue": 32,
+      "id": "d10.rg-matching-threshold-scheme",
+      "lane": "D10 running and matching",
+      "next_action": "Turn the running/matching package into an OPH edge-sector theorem or explicitly keep it as a declared convention in every prediction surface.",
+      "status": "open_theorem_gap",
+      "target_surfaces": [
+        "paper compact D10 section",
+        "code/P_derivation",
+        "code/particles/calibration"
+      ],
+      "title": "Internalize RG matching, threshold placement, and scheme conversion"
+    },
+    {
+      "current_boundary": "Particle status surfaces still expose legacy metadata P=1.63094. This is acceptable only while the compressed trunk remains candidate/audit metadata.",
+      "github_issue": 224,
+      "id": "pclosure.live-codepath-adoption",
+      "lane": "P closure",
+      "next_action": "After issues 223 and 32 close, switch live particle builders to the certified trunk artifact and make compare-only or historical P paths non-default.",
+      "status": "blocked_pending_certified_root",
+      "target_surfaces": [
+        "code/particles/scripts",
+        "code/particles/runs/status",
+        "WebProjects OPH summaries"
+      ],
+      "title": "Replace live particle P consumers with the certified P root"
+    },
+    {
+      "current_boundary": "No public charged-lepton values are emitted on the theorem lane. The open object is the determinant-normalization / sector-isolated trace-lift identity beneath A_ch(P).",
+      "github_issue": null,
+      "id": "charged.determinant-normalization-transport",
+      "lane": "Charged leptons",
+      "next_action": "Prove 3 mu(r) = sum_e M_e^ch log q_e(r), equivalently zero normalization defect N_det(P), on the physical charged branch.",
+      "status": "open_source_theorem",
+      "target_surfaces": [
+        "code/particles/leptons",
+        "code/particles/runs/leptons"
+      ],
+      "title": "Close the P-to-charged affine anchor bridge"
+    },
+    {
+      "current_boundary": "The selected-class exact Yukawa theorem is live, but it is not a global classification of all quark frame classes.",
+      "github_issue": 198,
+      "id": "quark.selected-class-vs-global-classification",
+      "lane": "Quarks",
+      "next_action": "Either prove the global frame-class classification or keep every public exact-quark claim explicitly selected-class.",
+      "status": "selected_class_closed_global_classification_open",
+      "target_surfaces": [
+        "code/particles/flavor",
+        "particle paper quark section"
+      ],
+      "title": "Keep exact quark rows scoped to the selected public frame class"
+    },
+    {
+      "current_boundary": "The weighted-cycle absolute splitting lane is emitted, while PMNS angle/phase comparisons still show visible displacement from current central values.",
+      "github_issue": 117,
+      "id": "neutrino.pmns-status-and-absolute-rows",
+      "lane": "Neutrinos",
+      "next_action": "Do not hide PMNS residuals behind the exact absolute-splitting rows; either prove a better branch or leave the comparison tension explicit.",
+      "status": "theorem_rows_with_visible_comparison_tension",
+      "target_surfaces": [
+        "code/particles/neutrino",
+        "RESULTS_STATUS.md"
+      ],
+      "title": "Keep neutrino theorem rows and comparison tension separated"
+    },
+    {
+      "current_boundary": "The hadron lane is execution-contract-frozen. Symbolic simplification of P does not replace production QCD backend output and declared systematics.",
+      "github_issue": 153,
+      "id": "hadron.production-backend-systematics",
+      "lane": "Hadrons",
+      "next_action": "Implement/run the production backend dump path, validate writeback, and publish continuum/volume/chiral/statistical budgets.",
+      "status": "deferred_execution_contract",
+      "target_surfaces": [
+        "code/particles/hadron",
+        "code/particles/qcd"
+      ],
+      "title": "Execute the production hadron backend and publish systematics"
+    }
+  ]
+}

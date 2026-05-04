@@ -7,6 +7,7 @@ from decimal import Decimal
 import unittest
 
 from alpha_gap_audit import build_alpha_gap_audit
+from emit_p_closure_trunk import build_p_closure_trunk
 from paper_math import PaperMathContext, build_contraction_certificate, build_fixed_point_witness
 from transport_theorem_manifest import build_manifest
 
@@ -115,6 +116,39 @@ class FixedPointWitnessTests(unittest.TestCase):
         self.assertFalse(manifest["promotion_rule"]["codata_may_enter_solver"])
         self.assertTrue(manifest["promotion_rule"]["requires_source_emitted_hadronic_spectral_density"])
         self.assertTrue(all(not theorem["promotable_to_measured_alpha"] for theorem in manifest["theorems"]))
+
+    def test_p_closure_trunk_is_not_live_particle_root(self) -> None:
+        trunk = build_p_closure_trunk(
+            {
+                "mode": "synthetic",
+                "precision": 10,
+                "phi": "1.618",
+                "sqrt_pi": "1.772",
+                "p": "1.63",
+                "alpha": "0.0073",
+                "alpha_inv": "137",
+                "god_equation_residual": "0",
+                "alpha_fixed_point_residual": "0",
+                "source_anchor_alpha_inv": "128",
+                "structured_running": {"transport_kernel": "exact_1loop", "total_delta_alpha_inv": "9"},
+                "d10": {
+                    "mu_u": "1e-3",
+                    "mz_run": "91",
+                    "v": "246",
+                    "alpha_u": "0.04",
+                    "alpha1_mz": "0.017",
+                    "alpha2_mz": "0.034",
+                    "alpha3_mz": "0.118",
+                    "alpha_y_mz": "0.010",
+                    "alpha_em_inv_mz": "128",
+                    "sin2w_mz": "0.23",
+                },
+            }
+        )
+
+        self.assertEqual(trunk["claim_status"], "compressed_candidate_trunk_not_final_particle_root")
+        self.assertFalse(trunk["consumer_policy"]["may_feed_live_particle_predictions"])
+        self.assertEqual(trunk["five_layer_chain"][-1]["claim_status"], "structured_thomson_continuation_not_endpoint_theorem")
 
 
 if __name__ == "__main__":
