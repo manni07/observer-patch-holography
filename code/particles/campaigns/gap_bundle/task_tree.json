@@ -30,10 +30,12 @@
     {
       "acceptance_criteria": [
         "Treat issue 223, issue 32, and issue 224 as one electroweak root package.",
-        "Either define a source-emitted Ward-projected Thomson endpoint object with matching and interval-certificate requirements, or return the minimal obstruction list.",
+        "Return constructive forward progress: populate or refine one endpoint contract object, builder interface, certificate interface, or runnable local target.",
+        "If a route fails, replace it with an implementation-ready alternative; obstruction-only output is not an accepted result.",
         "Do not import measured alpha(0), a hidden Thomson endpoint, or a compare-only charged bundle as a solver input."
       ],
       "context_files": [
+        "reverse-engineering-reality/code/P_derivation/runtime/thomson_endpoint_contract_current.json",
         "reverse-engineering-reality/code/P_derivation/THOMSON_TRANSPORT_THEOREMS.md",
         "reverse-engineering-reality/code/P_derivation/paper_math.py"
       ],
@@ -46,7 +48,7 @@
       "parent_id": "particles.gapbundle",
       "primary_file": "reverse-engineering-reality/code/particles/campaigns/gap_bundle/packets/electroweak_root_bundle.md",
       "priority": 1,
-      "prompt_focus": "Close or sharply obstruct the coupled electroweak root package: compressed P trunk, Ward-projected Thomson endpoint, RG/matching, interval certificate, and live adoption gate.",
+      "prompt_focus": "Make constructive forward progress on the coupled electroweak root package: populate or refine a concrete endpoint object, certificate interface, or local builder target beneath the compressed P trunk.",
       "reference_context_files": [
         "reverse-engineering-reality/code/particles/campaigns/gap_bundle/issue_refs/issue_223.md",
         "reverse-engineering-reality/code/particles/campaigns/gap_bundle/issue_refs/issue_032.md",
@@ -67,7 +69,8 @@
     {
       "acceptance_criteria": [
         "Treat charged, quark, and neutrino source gaps as a shared excitation/trace-lift problem.",
-        "Either propose one reusable source theorem object or return the minimal separate obstructions.",
+        "Return constructive forward progress: instantiate one sector restriction of the source-normalized trace-lift schema or emit a machine-readable certificate interface for it.",
+        "If a shared theorem route fails, produce a concrete next implementation target; obstruction-only output is not an accepted result.",
         "Keep exact theorem rows, selected-class rows, and comparison-tension rows separated."
       ],
       "context_files": [
@@ -83,7 +86,7 @@
       "parent_id": "particles.gapbundle",
       "primary_file": "reverse-engineering-reality/code/particles/campaigns/gap_bundle/packets/spectrum_source_bundle.md",
       "priority": 2,
-      "prompt_focus": "Search for a shared source theorem across charged leptons, quarks, and neutrinos, or return the minimal lane-specific obstructions.",
+      "prompt_focus": "Make constructive forward progress on the source-normalized trace-lift schema across charged leptons, quarks, and neutrinos, ideally by instantiating a concrete charged determinant-normalization target.",
       "reference_context_files": [
         "reverse-engineering-reality/code/particles/campaigns/gap_bundle/issue_refs/issue_198.md",
         "reverse-engineering-reality/code/particles/campaigns/gap_bundle/issue_refs/issue_117.md"
@@ -103,12 +106,16 @@
     {
       "acceptance_criteria": [
         "Treat hadron production systematics and the hadronic Thomson spectral object as one coupled backend problem.",
-        "Either define the production artifact schema for rho_had(s;P) and its uncertainty budget, or return the smallest missing QCD primitive.",
+        "Return constructive forward progress: populate or refine the production spectral-measure schema, add a loader/builder target, or connect it to the endpoint contract.",
+        "If the stable-channel route is insufficient, replace it with an implementation-ready spectral-measure alternative; obstruction-only output is not an accepted result.",
         "Do not promote surrogate hadron artifacts without continuum, volume, chiral, and statistical budgets."
       ],
       "context_files": [
+        "reverse-engineering-reality/code/P_derivation/runtime/thomson_endpoint_contract_current.json",
         "reverse-engineering-reality/code/particles/hadron/OPH_HADRON_BACKEND_REFERENCE_SPEC.md",
         "reverse-engineering-reality/code/particles/hadron/backend_run_manifest.schema.json",
+        "reverse-engineering-reality/code/particles/hadron/ward_projected_spectral_measure.schema.json",
+        "reverse-engineering-reality/code/particles/runs/hadron/ward_projected_spectral_measure_contract.json",
         "reverse-engineering-reality/code/particles/runs/hadron/current_hadron_lane_audit.json"
       ],
       "depends_on": [],
@@ -147,6 +154,8 @@
         "reverse-engineering-reality/code/particles/campaigns/gap_bundle/packets/electroweak_root_bundle.md",
         "reverse-engineering-reality/code/particles/campaigns/gap_bundle/packets/spectrum_source_bundle.md",
         "reverse-engineering-reality/code/particles/campaigns/gap_bundle/packets/qcd_thomson_backend_bundle.md",
+        "reverse-engineering-reality/code/P_derivation/runtime/thomson_endpoint_contract_current.json",
+        "reverse-engineering-reality/code/particles/runs/hadron/ward_projected_spectral_measure_contract.json",
         "reverse-engineering-reality/code/particles/DERIVATION_GAP_LEDGER.md"
       ],
       "depends_on": [

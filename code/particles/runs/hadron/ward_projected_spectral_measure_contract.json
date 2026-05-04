@@ -1,0 +1,38 @@
+{
+  "artifact": "oph_ward_projected_spectral_measure_contract",
+  "constructive_next_artifact": "oph_qcd_ward_projected_hadronic_spectral_measure",
+  "forbidden_promotions": [
+    "stable_channel_only_backend_export",
+    "surrogate_hadron_artifact",
+    "free_quark_screened_ansatz",
+    "compare_only_external_Thomson_endpoint"
+  ],
+  "generated_utc": "2026-05-04T23:51:40Z",
+  "minimum_payload": {
+    "projection": {
+      "lane": "U(1)_Q",
+      "ward_projected": true,
+      "zero_momentum_endpoint_compatible": true
+    },
+    "required_budgets": [
+      "statistical_budget",
+      "continuum_budget",
+      "finite_volume_budget",
+      "chiral_budget",
+      "current_matching_budget",
+      "quadrature_budget",
+      "endpoint_remainder_budget"
+    ],
+    "spectral_requirements": [
+      "finite_volume_levels",
+      "ward_projected_residues",
+      "current_normalization",
+      "rho_had_or_primitive_measure",
+      "pushforward_rule_to_rho_had(s;P)"
+    ]
+  },
+  "promotion_allowed": false,
+  "schema": "particles/hadron/ward_projected_spectral_measure.schema.json",
+  "status": "constructive_contract_emitted_not_production_data",
+  "why_this_is_forward_progress": "The stable-channel hadron backend is not enough for the Thomson endpoint, so the next implementation target is now a concrete production export schema for the required Ward-projected electromagnetic spectral measure."
+}

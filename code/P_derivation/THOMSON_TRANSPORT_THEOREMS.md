@@ -148,6 +148,17 @@ with the subtraction chosen so that the same `a0(P)` scheme is used at
 This theorem is the main missing physics object. It must replace the current
 free-quark screened ansatz.
 
+Constructive implementation target:
+
+- `thomson_endpoint_contract.py`
+- `runtime/thomson_endpoint_contract_current.json`
+- `../particles/hadron/ward_projected_spectral_measure.schema.json`
+
+Workers should not return obstruction-only text for this branch. If the current
+free-quark screened route fails, the required replacement is a populated
+Ward-projected spectral-measure export or a code/schema patch that moves that
+export toward the endpoint builder.
+
 ## Theorem 4: Electroweak Matching Remainder
 
 **Status:** open as a bound.
@@ -260,4 +271,3 @@ all of the following are true:
 4. The final fixed-point map has an interval-level existence and uniqueness
    certificate.
 5. The CODATA/NIST value appears only in a final compare-only block.
-

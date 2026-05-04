@@ -29,6 +29,17 @@ engine can be coded without hidden conventions.
 This contract is **only** for the stable-channel branch. `rho` remains outside
 scope and stays a separate finite-volume scattering problem.
 
+The Ward-projected Thomson endpoint now has a constructive companion contract
+instead of an obstruction-only handoff:
+
+- schema: `ward_projected_spectral_measure.schema.json`
+- contract builder: `derive_ward_projected_spectral_measure_contract.py`
+- emitted artifact: `../runs/hadron/ward_projected_spectral_measure_contract.json`
+
+The stable-channel backend must not be promoted into this role. If the endpoint
+needs hadronic input, the next production object is the Ward-projected
+electromagnetic spectral-measure export, not another stable-mass export.
+
 ## 2. Gauge action
 
 Use the isotropic Wilson plaquette gauge action

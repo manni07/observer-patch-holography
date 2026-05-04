@@ -12,13 +12,20 @@ Surrogate hadron artifacts are not endpoint inputs.
 
 ## Worker Result
 
-`blocked`.
+`constructive_spectral_measure_contract_emitted`.
 
-The worker found that the current stable-channel hadron backend is not the QCD
-object needed by the Ward-projected Thomson endpoint.  It is a production/export
-surface for stable hadron rows such as `pi_iso` and `N_iso`, while the Thomson
-endpoint needs a Ward-projected electromagnetic current-current spectral
-measure.
+The first worker pass found that the current stable-channel hadron backend is
+not the QCD object needed by the Ward-projected Thomson endpoint.  That is not
+accepted as a stopping point; it has been converted into a constructive
+production schema:
+
+```text
+code/particles/hadron/ward_projected_spectral_measure.schema.json
+```
+
+The stable-channel backend remains a production/export surface for stable
+hadron rows such as `pi_iso` and `N_iso`, while the Thomson endpoint now has a
+separate Ward-projected electromagnetic current-current spectral-measure target.
 
 The future endpoint backend must emit either `rho_had(s;P)` directly or a more
 primitive production spectral measure whose pushforward defines it, with all
@@ -59,3 +66,7 @@ It must be non-surrogate and unquenched, and it must include:
 Stable masses, surrogate correlators, or the existing stable-channel backend
 cannot be promoted into this role without silently replacing a spectral-measure
 problem by a stable-mass problem.
+
+The next worker or local patch must populate this schema, add a loader/builder
+for it, or connect it to the endpoint contract.  Obstruction-only output is not
+an accepted result.

@@ -11,23 +11,20 @@ Default decision: `keep_candidate`.
 
 ## Integration Result
 
-`keep_candidate`.
+`keep_candidate_with_constructive_next_artifacts`.
 
-All three first-wave packets returned claim-safe blockers rather than closure
-proofs.  The compressed `P` trunk therefore remains candidate/audit metadata and
-must not be promoted into live particle builders.
+All three first-wave packets failed to close the full theorem gates, but the
+campaign now treats obstruction-only output as unacceptable.  The useful result
+is the constructive artifact set:
 
-Blocking results:
+- `code/P_derivation/runtime/thomson_endpoint_contract_current.json`
+- `code/particles/hadron/ward_projected_spectral_measure.schema.json`
+- `code/particles/runs/hadron/ward_projected_spectral_measure_contract.json`
 
-- Electroweak root: no theorem-grade `Delta_Th(P)` yet; the missing pieces are
-  `rho_had(s;P)`, OPH-derived RG/matching/scheme conversion, a certified
-  `Delta_EW^src(P)` treatment, and interval-level endpoint certification.
-- Spectrum source: only a reusable source-normalized trace-lift schema is
-  available; charged normalization remains open, quarks remain selected-class,
-  and neutrino PMNS comparison tension remains visible.
-- QCD/Thomson backend: the current stable-channel hadron backend is not the
-  Ward-projected electromagnetic spectral-measure export needed by the endpoint.
+The compressed `P` trunk remains candidate/audit metadata and must not be
+promoted into live particle builders until those constructive artifacts are
+populated and certified.
 
-Next local target: implement the missing production spectral-measure contract
-and the endpoint certificate interfaces before asking Chrome Pro for another
-proof/audit pass.
+Next local target: populate or load the production spectral-measure contract and
+wire it into the endpoint certificate interface before asking Chrome Pro for
+another proof/audit pass.

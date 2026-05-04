@@ -12,12 +12,19 @@ Measured `alpha(0)` must not enter the solver.
 
 ## Worker Result
 
-`blocked`.
+`constructive_endpoint_contract_emitted`.
 
-The worker narrowed the coupled #223/#32/#224 package to an exact closure
-contract rather than a promotable root.  The compressed `P` trunk can remain a
-candidate/audit artifact, but it cannot become the live particle root until the
-same D10 source branch emits a theorem-grade Thomson transport object:
+The first worker pass did not close #223/#32/#224, so the result has been
+converted into a constructive local contract rather than accepted as a no-go.
+The compressed `P` trunk can remain a candidate/audit artifact, and the next
+implementation target is now explicit:
+
+```text
+code/P_derivation/runtime/thomson_endpoint_contract_current.json
+```
+
+That artifact requires the same D10 source branch to emit a theorem-grade
+Thomson transport object:
 
 ```text
 T_Th(P) =
@@ -62,13 +69,14 @@ Delta_impl(P) =
 is useful as a reproducible diagnostic, but it is not an admissible theorem-path
 replacement for `Delta_Th(P)`.
 
-## Minimal Blockers
+## Constructive Work Items
 
-- No source-emitted Ward-projected hadronic spectral density `rho_had(s;P)` is
-  present.
-- RG matching, threshold placement, decoupling, and scheme conversion are not
-  yet derived from OPH source data.
-- `Delta_EW^src(P)` is not proved zero and is not emitted with a certified
-  bound.
-- The implemented lepton transport and local contraction outputs remain
-  continuation/numerical witnesses, not theorem-grade certificates.
+- Populate `sigma_q_scheme_lock`.
+- Populate `delta_lep_source_transport`.
+- Populate `rho_had_spectral_measure` from the hadron spectral-measure schema.
+- Populate `delta_ew_remainder`.
+- Populate `full_endpoint_interval_certificate`.
+
+Any future worker response on this packet must return one of those populated
+objects, a code/schema patch that moves one object forward, or a runnable local
+target.  Obstruction-only output is not an accepted result.

@@ -11,11 +11,11 @@ Do not hide selected-class scope or PMNS tension behind exact mass rows.
 
 ## Worker Result
 
-`blocked`.
+`constructive_trace_lift_schema_emitted`.
 
-The worker identified a reusable schema, but not a shared theorem object that
-can be promoted across charged leptons, quarks, and neutrinos without erasing
-their different claim tiers.
+The first worker pass identified a reusable schema but did not close the shared
+source theorem.  That is not accepted as an endpoint result; the constructive
+artifact to implement next is the source-normalized trace-lift descent.
 
 The reusable schema is a source-normalized trace-lift descent:
 
@@ -46,6 +46,11 @@ theorem.
 
 ## Direct-Use Conclusion
 
-Keep `SourceNormalizedTraceLiftDescent` as a candidate proof schema.  Do not use
-it to promote charged-lepton rows, globalize the quark theorem, or hide the
-neutrino PMNS residuals.
+Keep `SourceNormalizedTraceLiftDescent` as the implementation target.  The next
+worker or local patch must instantiate at least one sector restriction of the
+schema, preferably the charged determinant normalization surface
+`N_det(P) = 0`, or emit a machine-readable certificate interface for that
+restriction.  Do not use the schema to promote charged-lepton rows, globalize
+the quark theorem, or hide the neutrino PMNS residuals.
+
+Obstruction-only output is not an accepted result.
