@@ -181,6 +181,70 @@ def build_gap_rows() -> list[dict[str, Any]]:
     ]
 
 
+def build_bundles() -> list[dict[str, Any]]:
+    return [
+        {
+            "id": "electroweak-root-closure-bundle",
+            "status": "ready_for_parallel_research_packet",
+            "gap_ids": [
+                "pclosure.compressed-trunk-artifact",
+                "d10.ward-projected-thomson-endpoint",
+                "d10.rg-matching-threshold-scheme",
+                "pclosure.live-codepath-adoption",
+            ],
+            "promotion_question": (
+                "Can one source-emitted map Delta_Th(P), with declared matching and interval bounds, "
+                "certify the compressed P trunk as the live particle root without importing alpha(0)?"
+            ),
+        },
+        {
+            "id": "spectrum-source-bundle",
+            "status": "ready_for_parallel_research_packet",
+            "gap_ids": [
+                "charged.determinant-normalization-transport",
+                "quark.selected-class-vs-global-classification",
+                "neutrino.pmns-status-and-absolute-rows",
+            ],
+            "promotion_question": (
+                "Is there one OPH excitation dictionary and sector-isolated trace-lift theorem that "
+                "explains the charged affine anchor, quark selected-class boundary, and neutrino PMNS "
+                "comparison surface without hidden target fitting?"
+            ),
+        },
+        {
+            "id": "qcd-thomson-backend-bundle",
+            "status": "ready_for_parallel_research_packet",
+            "gap_ids": [
+                "d10.ward-projected-thomson-endpoint",
+                "hadron.production-backend-systematics",
+            ],
+            "promotion_question": (
+                "Can the hadron production backend emit the rho_had(s;P) object and uncertainty budget "
+                "needed by the Ward-projected Thomson endpoint, rather than leaving hadrons and alpha(0) "
+                "as separate deferred gaps?"
+            ),
+        },
+        {
+            "id": "particle-root-integration-gate",
+            "status": "blocked_until_bundle_packets_return",
+            "gap_ids": [
+                "pclosure.compressed-trunk-artifact",
+                "d10.ward-projected-thomson-endpoint",
+                "d10.rg-matching-threshold-scheme",
+                "pclosure.live-codepath-adoption",
+                "charged.determinant-normalization-transport",
+                "quark.selected-class-vs-global-classification",
+                "neutrino.pmns-status-and-absolute-rows",
+                "hadron.production-backend-systematics",
+            ],
+            "promotion_question": (
+                "Do the returned packets jointly close the endpoint, matching, interval, and source-object "
+                "requirements strongly enough to promote the compressed trunk into live particle builders?"
+            ),
+        },
+    ]
+
+
 def build_ledger() -> dict[str, Any]:
     rows = build_gap_rows()
     return {
@@ -188,11 +252,13 @@ def build_ledger() -> dict[str, Any]:
         "generated_utc": _now_utc(),
         "purpose": "Systematic claim-safe queue after the five-equation P-trunk simplification.",
         "p_trunk": _load_p_trunk_summary(),
+        "bundles": build_bundles(),
         "rows": rows,
         "promotion_policy": {
             "compressed_p_trunk_is_live_prediction_root": False,
             "reason": "The endpoint, RG/matching, and interval-certificate gates remain open.",
             "torus_mode_language_allowed_in_pipeline": False,
+            "address_remaining_blockers_one_by_one": False,
         },
     }
 
@@ -224,6 +290,22 @@ def render_markdown(ledger: dict[str, Any]) -> str:
     lines.extend(
         [
             "",
+            "## Bundle Execution Plan",
+            "",
+            "The remaining work is grouped into coupled closure packets rather than a one-blocker-at-a-time queue.",
+            "",
+            "| Bundle | Status | Gaps | Promotion question |",
+            "| --- | --- | --- | --- |",
+        ]
+    )
+    for bundle in ledger["bundles"]:
+        gaps = ", ".join(f"`{gap}`" for gap in bundle["gap_ids"])
+        lines.append(
+            f"| `{bundle['id']}` | `{bundle['status']}` | {gaps} | {bundle['promotion_question']} |"
+        )
+    lines.extend(
+        [
+            "",
             "## Remaining Gaps",
             "",
             "| ID | Lane | Status | Issue | Next action |",
@@ -241,6 +323,7 @@ def render_markdown(ledger: dict[str, Any]) -> str:
             "## Claim Policy",
             "",
             "- The compressed P trunk is an audit/candidate artifact until the endpoint and certificate gates close.",
+            "- The remaining blockers should be worked as coupled bundles, not as isolated one-off fixes.",
             "- The particle pipeline must keep compare-only, continuation, selected-class, and theorem-grade rows mechanically distinct.",
             "- Golden-ratio torus or resonance language is not a live derivation input unless a separate representation-to-spectrum theorem is supplied.",
         ]

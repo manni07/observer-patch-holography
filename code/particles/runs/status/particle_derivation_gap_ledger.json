@@ -1,6 +1,53 @@
 {
   "artifact": "oph_particle_derivation_gap_ledger",
-  "generated_utc": "2026-05-04T22:31:38Z",
+  "bundles": [
+    {
+      "gap_ids": [
+        "pclosure.compressed-trunk-artifact",
+        "d10.ward-projected-thomson-endpoint",
+        "d10.rg-matching-threshold-scheme",
+        "pclosure.live-codepath-adoption"
+      ],
+      "id": "electroweak-root-closure-bundle",
+      "promotion_question": "Can one source-emitted map Delta_Th(P), with declared matching and interval bounds, certify the compressed P trunk as the live particle root without importing alpha(0)?",
+      "status": "ready_for_parallel_research_packet"
+    },
+    {
+      "gap_ids": [
+        "charged.determinant-normalization-transport",
+        "quark.selected-class-vs-global-classification",
+        "neutrino.pmns-status-and-absolute-rows"
+      ],
+      "id": "spectrum-source-bundle",
+      "promotion_question": "Is there one OPH excitation dictionary and sector-isolated trace-lift theorem that explains the charged affine anchor, quark selected-class boundary, and neutrino PMNS comparison surface without hidden target fitting?",
+      "status": "ready_for_parallel_research_packet"
+    },
+    {
+      "gap_ids": [
+        "d10.ward-projected-thomson-endpoint",
+        "hadron.production-backend-systematics"
+      ],
+      "id": "qcd-thomson-backend-bundle",
+      "promotion_question": "Can the hadron production backend emit the rho_had(s;P) object and uncertainty budget needed by the Ward-projected Thomson endpoint, rather than leaving hadrons and alpha(0) as separate deferred gaps?",
+      "status": "ready_for_parallel_research_packet"
+    },
+    {
+      "gap_ids": [
+        "pclosure.compressed-trunk-artifact",
+        "d10.ward-projected-thomson-endpoint",
+        "d10.rg-matching-threshold-scheme",
+        "pclosure.live-codepath-adoption",
+        "charged.determinant-normalization-transport",
+        "quark.selected-class-vs-global-classification",
+        "neutrino.pmns-status-and-absolute-rows",
+        "hadron.production-backend-systematics"
+      ],
+      "id": "particle-root-integration-gate",
+      "promotion_question": "Do the returned packets jointly close the endpoint, matching, interval, and source-object requirements strongly enough to promote the compressed trunk into live particle builders?",
+      "status": "blocked_until_bundle_packets_return"
+    }
+  ],
+  "generated_utc": "2026-05-04T22:51:19Z",
   "p_trunk": {
     "P": "1.63097210492078846050203640439",
     "alpha_inv": "136.994020662724205139718642793",
@@ -11,6 +58,7 @@
     "source_report_mode": "thomson_structured_running_asymptotic"
   },
   "promotion_policy": {
+    "address_remaining_blockers_one_by_one": false,
     "compressed_p_trunk_is_live_prediction_root": false,
     "reason": "The endpoint, RG/matching, and interval-certificate gates remain open.",
     "torus_mode_language_allowed_in_pipeline": false

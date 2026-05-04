@@ -18,6 +18,12 @@ def test_gap_ledger_keeps_compressed_trunk_claim_safe() -> None:
 
     assert ledger["promotion_policy"]["compressed_p_trunk_is_live_prediction_root"] is False
     assert ledger["promotion_policy"]["torus_mode_language_allowed_in_pipeline"] is False
+    assert ledger["promotion_policy"]["address_remaining_blockers_one_by_one"] is False
     gap_ids = {row["id"] for row in ledger["rows"]}
     assert "d10.ward-projected-thomson-endpoint" in gap_ids
     assert "pclosure.live-codepath-adoption" in gap_ids
+    bundle_ids = {bundle["id"] for bundle in ledger["bundles"]}
+    assert "electroweak-root-closure-bundle" in bundle_ids
+    assert "spectrum-source-bundle" in bundle_ids
+    assert "qcd-thomson-backend-bundle" in bundle_ids
+    assert "particle-root-integration-gate" in bundle_ids

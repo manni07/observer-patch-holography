@@ -1,6 +1,6 @@
 # Particle Derivation Gap Ledger
 
-Generated: `2026-05-04T22:31:38Z`
+Generated: `2026-05-04T22:51:19Z`
 
 Systematic claim-safe queue after the five-equation P-trunk simplification.
 
@@ -13,6 +13,17 @@ Systematic claim-safe queue after the five-equation P-trunk simplification.
 - Candidate P: `1.63097210492078846050203640439`
 - Candidate alpha^-1: `136.994020662724205139718642793`
 - Source report mode: `thomson_structured_running_asymptotic`
+
+## Bundle Execution Plan
+
+The remaining work is grouped into coupled closure packets rather than a one-blocker-at-a-time queue.
+
+| Bundle | Status | Gaps | Promotion question |
+| --- | --- | --- | --- |
+| `electroweak-root-closure-bundle` | `ready_for_parallel_research_packet` | `pclosure.compressed-trunk-artifact`, `d10.ward-projected-thomson-endpoint`, `d10.rg-matching-threshold-scheme`, `pclosure.live-codepath-adoption` | Can one source-emitted map Delta_Th(P), with declared matching and interval bounds, certify the compressed P trunk as the live particle root without importing alpha(0)? |
+| `spectrum-source-bundle` | `ready_for_parallel_research_packet` | `charged.determinant-normalization-transport`, `quark.selected-class-vs-global-classification`, `neutrino.pmns-status-and-absolute-rows` | Is there one OPH excitation dictionary and sector-isolated trace-lift theorem that explains the charged affine anchor, quark selected-class boundary, and neutrino PMNS comparison surface without hidden target fitting? |
+| `qcd-thomson-backend-bundle` | `ready_for_parallel_research_packet` | `d10.ward-projected-thomson-endpoint`, `hadron.production-backend-systematics` | Can the hadron production backend emit the rho_had(s;P) object and uncertainty budget needed by the Ward-projected Thomson endpoint, rather than leaving hadrons and alpha(0) as separate deferred gaps? |
+| `particle-root-integration-gate` | `blocked_until_bundle_packets_return` | `pclosure.compressed-trunk-artifact`, `d10.ward-projected-thomson-endpoint`, `d10.rg-matching-threshold-scheme`, `pclosure.live-codepath-adoption`, `charged.determinant-normalization-transport`, `quark.selected-class-vs-global-classification`, `neutrino.pmns-status-and-absolute-rows`, `hadron.production-backend-systematics` | Do the returned packets jointly close the endpoint, matching, interval, and source-object requirements strongly enough to promote the compressed trunk into live particle builders? |
 
 ## Remaining Gaps
 
@@ -30,5 +41,6 @@ Systematic claim-safe queue after the five-equation P-trunk simplification.
 ## Claim Policy
 
 - The compressed P trunk is an audit/candidate artifact until the endpoint and certificate gates close.
+- The remaining blockers should be worked as coupled bundles, not as isolated one-off fixes.
 - The particle pipeline must keep compare-only, continuation, selected-class, and theorem-grade rows mechanically distinct.
 - Golden-ratio torus or resonance language is not a live derivation input unless a separate representation-to-spectrum theorem is supplied.
