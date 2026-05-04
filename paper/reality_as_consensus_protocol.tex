@@ -217,9 +217,9 @@ disjoint-commutation clause and the restriction-compatible union-collar package 
 Definition~\ref{def:assoc}. The
 parenthesization-independent quotient-local glue used there is supplied by
 Proposition~\ref{prop:assocglue} from the fixed-cutoff center-sector / higher-gauge gluing
-package. What the present theorem package assumes rather than derives is repair
-completeness. On the Petz branch, full CPTP action on all inputs also requires the support clause
-recorded later in Proposition~\ref{prop:petz-cptp}. On broader branches one must also prove that
+package. The theorem package takes repair completeness as an explicit branch condition.
+On the Petz branch, full CPTP action on all inputs also requires the support clause
+recorded in Proposition~\ref{prop:petz-cptp}. On broader branches one must also prove that
 the declared union-collar compatibility is preserved under refinement or branch change.
 \end{remark}
 
@@ -277,7 +277,7 @@ x_i=x_r\quad\text{for all }i\in V,
 with all hidden labels \(k_i\) unchanged. The normal-form map descends to the quotient by hidden
 gauge relabeling. The four-vertex instance with edges \(r\!-\!a\), \(a\!-\!b\), \(a\!-\!c\),
 alphabet \(A=\mathbb Z_3\), hidden labels \(K_i=\mathbb Z_2\), and weights \(5,1,1\) is exported
-as \texttt{code/consensus/runs/verified\_tree\_packet\_net\_domain.json}.
+as \path{code/consensus/runs/verified_tree_packet_net_domain.json}.
 \end{theorem}
 
 \begin{proof}
@@ -601,8 +601,8 @@ This is the finite patch-net form of saying that the repair step is defined firs
 overlap-invariant physical data and only then lifted to hidden representatives. The rooted-tree
 packet domain of Theorem~\ref{thm:tree-packet-domain} proves repair completeness and quotient
 descent on a nontrivial exported packet net, while Proposition~\ref{prop:classical-petz-packet}
-proves the classical full-support Petz clause used by that domain. The broader fixed-cutoff
-branch still requires repair completeness for the chosen exported packet net and the
+proves the classical full-support Petz clause used by that domain. A broader fixed-cutoff
+branch requires repair completeness for the chosen exported packet net and the
 support/CPTP clause on the Petz branch where that channel is used. The touched-overlap local-fit contract gives Lyapunov \(\Phi\)-descent on
 accepted moves, and Proposition~\ref{prop:assocglue} together with
 Definition~\ref{def:assoc} supplies the quotient-local compatibility package used for the local
