@@ -12,6 +12,6 @@ requirements are closed.
 | QCD/Thomson backend | hadron backend, hadronic endpoint | `rho_had(s;P)` production contract or missing QCD primitive |
 | Integration gate | all bundles | `promote` only if every gate closes; otherwise `keep_candidate` |
 
-Worker packets live in `campaign_packets/`. They are deliberately short so the
-Oracle completion pipeline writes a result packet instead of editing papers or
-live prediction code prematurely.
+The launchable campaign lives in `campaigns/gap_bundle/`. Its worker packets
+are deliberately short so the Oracle completion pipeline writes a result packet
+instead of editing papers or live prediction code prematurely.

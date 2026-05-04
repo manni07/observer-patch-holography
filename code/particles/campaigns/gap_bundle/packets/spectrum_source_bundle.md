@@ -1,11 +1,7 @@
 # Spectrum Source Bundle Packet
 
-## Scope
-
 Search for one shared OPH excitation/trace-lift source beneath charged leptons,
 quarks, and neutrinos.
-
-## Required Result
 
 Return `shared_source_candidate` only if one source object projects cleanly to
 the charged affine anchor, quark selected-class boundary, and neutrino PMNS
