@@ -6,7 +6,9 @@ from __future__ import annotations
 from decimal import Decimal
 import unittest
 
+from alpha_gap_audit import build_alpha_gap_audit
 from paper_math import PaperMathContext, build_contraction_certificate, build_fixed_point_witness
+from transport_theorem_manifest import build_manifest
 
 
 class FixedPointWitnessTests(unittest.TestCase):
@@ -69,6 +71,50 @@ class FixedPointWitnessTests(unittest.TestCase):
         self.assertTrue(certificate["alpha_interval"]["bracket_changes_sign"])
         self.assertTrue(certificate["sample_contraction_observed"])
         self.assertLess(Decimal(certificate["max_abs_centered_slope"]), Decimal("1"))
+
+    def test_alpha_gap_audit_keeps_compare_target_out_of_solver(self) -> None:
+        audit = build_alpha_gap_audit(
+            {
+                "mode": "synthetic",
+                "precision": 10,
+                "alpha_inv": "10",
+                "source_anchor_alpha_inv": "8",
+                "p": "1.2",
+                "phi": "1",
+                "sqrt_pi": "2",
+                "structured_running": {"total_delta_alpha_inv": "2"},
+            },
+            compare_alpha_inv=Decimal("11"),
+            compare_alpha_inv_uncertainty=Decimal("0.1"),
+        )
+
+        self.assertEqual(audit["claim_status"], "open_transport_gap_not_full_derivation")
+        self.assertEqual(audit["implemented_transport_delta_alpha_inv"], "2")
+        self.assertEqual(audit["required_transport_delta_alpha_inv"], "3")
+        self.assertEqual(audit["missing_transport_delta_alpha_inv"], "1")
+        self.assertEqual(audit["alpha_inv_gap_sigma"], "1E+1")
+
+    def test_transport_manifest_does_not_promote_open_theorems(self) -> None:
+        manifest = build_manifest(
+            {
+                "mode": "synthetic",
+                "precision": 10,
+                "alpha_inv": "10",
+                "source_anchor_alpha_inv": "8",
+                "p": "1.2",
+                "phi": "1",
+                "sqrt_pi": "2",
+                "structured_running": {"total_delta_alpha_inv": "2"},
+            }
+        )
+
+        self.assertEqual(
+            manifest["claim_status"],
+            "missing_theorems_scaffold_not_measured_alpha_derivation",
+        )
+        self.assertFalse(manifest["promotion_rule"]["codata_may_enter_solver"])
+        self.assertTrue(manifest["promotion_rule"]["requires_source_emitted_hadronic_spectral_density"])
+        self.assertTrue(all(not theorem["promotable_to_measured_alpha"] for theorem in manifest["theorems"]))
 
 
 if __name__ == "__main__":

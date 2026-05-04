@@ -154,6 +154,10 @@ Detailed particle outputs live in [code/particles/RESULTS_STATUS.md](code/partic
 - **Paper 4. [Reality as a Consensus Protocol](paper/reality_as_consensus_protocol.pdf)**: repair, fixed-point, and consensus picture.
 - **Paper 5. [Screen Microphysics and Observer Synchronization](paper/screen_microphysics_and_observer_synchronization.pdf)**: finite screen architecture, records, and observer synchronization.
 
+## Supplemental Papers
+
+- **[Observer-Patch Holography and the Dark Matter Phenomenon](extra/oph_dark_matter_paper.pdf)**: supplemental research note on dark-matter phenomenology, the MOND-like galaxy limit, SPARC diagnostics, repair transport, and compressed cosmology checks. Reproducibility code lives in [code/dark_matter](code/dark_matter/).
+
 ## More
 
 - **Website:** [floatingpragma.io/oph](https://floatingpragma.io/oph)

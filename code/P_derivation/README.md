@@ -98,6 +98,27 @@ The important claim-boundary caveat is:
 - A separate pending hardware note reports an optical-cavity check of the same
   fixed-point geometry; this is treated as corroborating engineering evidence.
 
+## Full derivation status
+
+`FULL_DERIVATION.md` records the complete derivation contract and the current
+open gap. `THOMSON_TRANSPORT_THEOREMS.md` records the theorem suite and its
+promotion rule. The short version is:
+
+- the D10 source map and the outer fixed-point witness are implemented
+- the current default readout gives
+  `alpha^-1 = 136.994835202256988279318800180784...`
+- the 2022 CODATA/NIST compare-only value is
+  `alpha^-1(0) = 137.035999177(21)`
+- the missing term is a source-only Thomson transport contribution of
+  `0.0411639747430117206811998192158...` in inverse-alpha units
+
+Run the audit after producing a report:
+
+```bash
+python3 alpha_gap_audit.py --report runtime/full_p_alpha_report_p80.json
+python3 transport_theorem_manifest.py --report runtime/full_p_alpha_report_p80.json
+```
+
 ## Usage
 
 From `reverse-engineering-reality/code/P_derivation/`:

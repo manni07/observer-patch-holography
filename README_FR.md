@@ -124,6 +124,10 @@ pas de simples entrées de quarks dans un tableau de comparaison rapide.
 - **Papier 4. [Reality as a Consensus Protocol](paper/reality_as_consensus_protocol.pdf)** : formulation point fixe, réparation, et consensus.
 - **Papier 5. [Screen Microphysics and Observer Synchronization](paper/screen_microphysics_and_observer_synchronization.pdf)** : architecture d'écran finie, enregistrements, et machinerie observateur.
 
+## Articles supplémentaires
+
+- **[Observer-Patch Holography and the Dark Matter Phenomenon](extra/oph_dark_matter_paper.pdf)** : note de recherche supplémentaire sur la phénoménologie de la matière noire, la limite galactique de type MOND, les diagnostics SPARC, le transport par réparation et les tests cosmologiques compressés. Le code de reproductibilité vit dans [code/dark_matter](code/dark_matter/).
+
 ## Plus
 
 - **Site officiel :** [floatingpragma.io/oph](https://floatingpragma.io/oph)
