@@ -26,6 +26,7 @@ THOMSON_CONTRACT = P_DERIVATION_ROOT / "runtime" / "thomson_endpoint_contract_cu
 RG_CONTRACT = P_DERIVATION_ROOT / "runtime" / "rg_matching_threshold_contract_current.json"
 DIRECT_TOP_CONTRACT = PARTICLES_ROOT / "runs" / "calibration" / "direct_top_bridge_contract.json"
 GAP_LEDGER = PARTICLES_ROOT / "runs" / "status" / "particle_derivation_gap_ledger.json"
+BLIND_PROVENANCE = PARTICLES_ROOT / "runs" / "status" / "blind_prediction_provenance.json"
 QUARK_CONTRACT = PARTICLES_ROOT / "runs" / "flavor" / "quark_lane_closure_contract.json"
 NEUTRINO_CONTRACT = PARTICLES_ROOT / "runs" / "neutrino" / "neutrino_lane_closure_contract.json"
 HADRON_SPECTRAL_CONTRACT = PARTICLES_ROOT / "runs" / "hadron" / "ward_projected_spectral_measure_contract.json"
@@ -90,6 +91,7 @@ def build_status() -> dict[str, Any]:
     rg = _load_json(RG_CONTRACT)
     direct_top = _load_json(DIRECT_TOP_CONTRACT)
     gap_ledger = _load_json(GAP_LEDGER)
+    blind_provenance = _load_json(BLIND_PROVENANCE)
     quark = _load_json(QUARK_CONTRACT)
     neutrino = _load_json(NEUTRINO_CONTRACT)
     hadron_spectral = _load_json(HADRON_SPECTRAL_CONTRACT)
@@ -124,6 +126,7 @@ def build_status() -> dict[str, Any]:
             "rg_matching_threshold_contract": _artifact_status(RG_CONTRACT, rg),
             "direct_top_bridge_contract": _artifact_status(DIRECT_TOP_CONTRACT, direct_top),
             "gap_ledger": _artifact_status(GAP_LEDGER, gap_ledger),
+            "blind_prediction_provenance": _artifact_status(BLIND_PROVENANCE, blind_provenance),
             "quark_lane_closure_contract": _artifact_status(QUARK_CONTRACT, quark),
             "neutrino_lane_closure_contract": _artifact_status(NEUTRINO_CONTRACT, neutrino),
             "hadron_spectral_measure_contract": _artifact_status(HADRON_SPECTRAL_CONTRACT, hadron_spectral),
@@ -171,6 +174,14 @@ def build_status() -> dict[str, Any]:
                 "closable_now": False,
                 "local_next_artifact": _rel(DIRECT_TOP_CONTRACT),
                 "chrome_workers": "only_for_independent_audit_of_a_proposed_response_kernel",
+            },
+            {
+                "issue": 234,
+                "title": "Blind-prediction provenance and convention-sensitivity audits",
+                "state": "open_provenance_ledger_emitted_sensitivity_open",
+                "closable_now": False,
+                "local_next_artifact": _rel(BLIND_PROVENANCE),
+                "chrome_workers": "only_for_audit_after_convention_sensitivity_sweep_exists",
             },
             {
                 "issue": 117,

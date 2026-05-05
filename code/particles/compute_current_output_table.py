@@ -105,6 +105,7 @@ RUNTIME_SURFACED_ARTIFACTS = (
     Path("runs/hadron/hadron_production_readiness_report.json"),
     Path("runs/status/particle_derivation_gap_ledger.json"),
     Path("runs/status/particle_pipeline_closure_status.json"),
+    Path("runs/status/blind_prediction_provenance.json"),
 )
 
 RUNTIME_EXTERNAL_OUTPUTS = (
@@ -179,6 +180,8 @@ def _copy_outputs(work_particles: Path, current_dir: Path) -> None:
         "runs/status/exact_nonhadron_masses_current.json",
         "runs/status/particle_derivation_gap_ledger.json",
         "runs/status/particle_pipeline_closure_status.json",
+        "runs/status/blind_prediction_provenance.json",
+        "BLIND_PREDICTION_PROVENANCE.md",
         "runs/calibration/direct_top_bridge_contract.json",
         "runs/flavor/quark_lane_closure_contract.json",
         "runs/neutrino/neutrino_lane_closure_contract.json",
@@ -223,6 +226,15 @@ def _seed_canonical_surface_artifacts(work_particles: Path) -> None:
         dst = work_particles / rel
         if not src.exists():
             raise FileNotFoundError(f"missing canonical surfaced artifact: {src}")
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src, dst)
+
+
+def _seed_external_p_derivation_artifacts(work_code: Path) -> None:
+    for src, rel_dst in RUNTIME_EXTERNAL_OUTPUTS:
+        if not src.exists():
+            raise FileNotFoundError(f"missing canonical external surfaced artifact: {src}")
+        dst = work_code / rel_dst
         dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(src, dst)
 
@@ -524,6 +536,7 @@ def build_runtime(runtime_root: Path, *, with_hadrons: bool, verbose: bool) -> P
         _run(step, cwd=work_code, verbose=verbose)
 
     _seed_canonical_surface_artifacts(work_particles)
+    _seed_external_p_derivation_artifacts(work_code)
     _run(["python3", "particles/calibration/derive_direct_top_bridge_contract.py"], cwd=work_code, verbose=verbose)
     if with_hadrons:
         for step in [
@@ -568,6 +581,7 @@ def build_runtime(runtime_root: Path, *, with_hadrons: bool, verbose: bool) -> P
     _run(status_cmd, cwd=work_code, verbose=verbose)
     _run(exact_nonhadron_cmd, cwd=work_code, verbose=verbose)
     _run(exact_fit_cmd, cwd=work_code, verbose=verbose)
+    _run(["python3", "particles/scripts/build_blind_prediction_provenance.py"], cwd=work_code, verbose=verbose)
     _run(svg_cmd, cwd=work_code, verbose=verbose)
     _copy_outputs(work_particles, current_dir)
     return current_dir

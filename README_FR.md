@@ -56,6 +56,13 @@ Sur la surface publique des constantes, `hbar` et `k_B` appartiennent à cette c
 
 Les sorties particules détaillées vivent dans [code/particles/RESULTS_STATUS.md](code/particles/RESULTS_STATUS.md) et [code/particles/EXACT_NONHADRON_MASSES.md](code/particles/EXACT_NONHADRON_MASSES.md).
 
+La frontière publique entre résultats fermés, résultats conditionnels et
+travaux ouverts est suivie dans [OPEN_PROBLEMS.md](OPEN_PROBLEMS.md). Les
+issues GitHub restent l'état canonique des tâches; ce registre indique le
+niveau de revendication, l'artefact manquant, le critère de clôture, la voie de
+falsification et la politique d'usage des workers Chrome Pro pour chaque issue
+ouverte.
+
 **Pile générale des théorèmes et dérivations**
 
 <p align="center">

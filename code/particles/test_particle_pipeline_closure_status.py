@@ -28,6 +28,7 @@ def test_particle_pipeline_closure_status_scope_locks_hadrons_and_workers() -> N
     assert gates[224]["state"] == "open_waiting_certified_root"
     assert gates[32]["state"] == "open_constructive_contract"
     assert gates[207]["state"] == "open_constructive_conversion_contract"
+    assert gates[234]["state"] == "open_provenance_ledger_emitted_sensitivity_open"
     assert gates[117]["closable_now"] is True
     assert gates[198]["closable_now"] is True
     assert status["latest_nonhadron_predictions"]["higgs"]["value"] == 125.1995304097179

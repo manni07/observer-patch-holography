@@ -1,6 +1,13 @@
 {
   "artifact": "oph_particle_pipeline_closure_status",
   "artifacts": {
+    "blind_prediction_provenance": {
+      "artifact": "oph_blind_prediction_provenance_audit",
+      "exists": true,
+      "path": "particles/runs/status/blind_prediction_provenance.json",
+      "promotion_allowed": false,
+      "status": "provenance_ledger_emitted_convention_sensitivity_contract_open"
+    },
     "direct_top_bridge_contract": {
       "artifact": "oph_direct_top_bridge_contract",
       "exists": true,
@@ -70,7 +77,7 @@
     "obstruction_only_worker_result_allowed": false,
     "p_trunk_candidate_only": true
   },
-  "generated_utc": "2026-05-05T00:09:32Z",
+  "generated_utc": "2026-05-05T00:23:08Z",
   "issue_gates": [
     {
       "chrome_workers": "not_useful_until_source_endpoint_packet_exists",
@@ -114,6 +121,14 @@
       "local_next_artifact": "particles/runs/calibration/direct_top_bridge_contract.json",
       "state": "open_constructive_conversion_contract",
       "title": "Direct-top codomain bridge"
+    },
+    {
+      "chrome_workers": "only_for_audit_after_convention_sensitivity_sweep_exists",
+      "closable_now": false,
+      "issue": 234,
+      "local_next_artifact": "particles/runs/status/blind_prediction_provenance.json",
+      "state": "open_provenance_ledger_emitted_sensitivity_open",
+      "title": "Blind-prediction provenance and convention-sensitivity audits"
     },
     {
       "chrome_workers": "not_needed",

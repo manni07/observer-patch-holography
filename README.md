@@ -126,6 +126,12 @@ those pieces sit on one scale. The detailed formulas live in the papers.
 
 Detailed particle outputs live in [code/particles/RESULTS_STATUS.md](code/particles/RESULTS_STATUS.md) and [code/particles/EXACT_NONHADRON_MASSES.md](code/particles/EXACT_NONHADRON_MASSES.md).
 
+The current public boundary between closed claims, conditional claims, and open
+work is tracked in [OPEN_PROBLEMS.md](OPEN_PROBLEMS.md). GitHub issues remain
+the canonical task state; the ledger records the claim level, missing artifact,
+closure criterion, falsification route, and Chrome Pro worker policy for each
+open issue.
+
 **OPH Stack**
 
 <p align="center">
