@@ -1,12 +1,21 @@
 # OPH Open Problem Ledger
 
-Generated: `2026-05-05T00:28:58Z` from live GitHub issues in `FloatingPragma/observer-patch-holography`.
+Generated: `2026-05-05T01:48:21Z` from live GitHub issues in `FloatingPragma/observer-patch-holography`.
 
 This is the public boundary between closed OPH claims, conditional claims, and open work. Dedicated GitHub issues remain canonical for task state; this ledger records the current claim level, missing artifact, closure criterion, falsification route, and Chrome Pro worker policy.
 
 Worker policy: local artifacts first; up to six Chrome Pro workers may be used only after a concrete theorem, audit, or implementation packet exists. Obstruction-only worker output is not accepted.
 
-Open issue count: `28`
+Open issue count: `25`
+
+## Closed Out-Of-Scope Records
+
+These are not solved derivations. They are closed as non-current-scope tasks because the required computation depends on a working OPH hadron backend and suitable hardware.
+
+| Issue | Status | Claim level | Closure note | Reopen criterion | Chrome policy |
+| --- | --- | --- | --- | --- | --- |
+| [#153](https://github.com/FloatingPragma/observer-patch-holography/issues/153) hadron backend/systematics | `closed_not_planned_out_of_scope_computationally_blocked` | `out of local scope` | Closed as out-of-scope, not solved. The current pipeline emits no hadron predictions until a working OPH hadron backend on suitable hardware publishes production output and systematics. | Production backend output and continuum/volume/chiral/statistical systematics are published. | Do not use Chrome workers for backend execution. |
+| [#157](https://github.com/FloatingPragma/observer-patch-holography/issues/157) nonperturbative QCD hadron branch | `closed_not_planned_out_of_scope_computationally_blocked` | `out of local scope` | Closed as out-of-scope, not solved. Compact-paper hadron claims remain suppressed until a working OPH backend emits the required nonperturbative QCD/hadron data. | Compact paper states the backend output and budgets or marks hadrons out-of-scope. | Do not use Chrome workers for backend execution. |
 
 ## archive-speculative
 
@@ -43,13 +52,6 @@ Open issue count: `28`
 | Issue | Claim level | Missing artifact / blocker | Closure criterion | Falsification route | Chrome policy |
 | --- | --- | --- | --- | --- | --- |
 | [#155](https://github.com/FloatingPragma/observer-patch-holography/issues/155) [OPH Task] continuations.strongcp.01-close-the-strong-cp-branch: Close the strong-CP branch | `open branch` | Strong-CP branch theorem or explicit continuation boundary. | Strong-CP mechanism is derived, falsified, or downgraded consistently across public surfaces. | The proposed OPH branch leaves theta_QCD unconstrained while claiming closure. | Use only after a concrete branch packet exists. |
-
-## hardware-gated-hadrons
-
-| Issue | Claim level | Missing artifact / blocker | Closure criterion | Falsification route | Chrome policy |
-| --- | --- | --- | --- | --- | --- |
-| [#153](https://github.com/FloatingPragma/observer-patch-holography/issues/153) [OPH Task] particles.e.33a-unquench-hadron-branch-and-publish-systematics: Unquench the hadron branch and publish systematics | `out of local scope` | Working OPH hadron backend on suitable hardware such as GLORB/Echosahedron. | Production backend output and continuum/volume/chiral/statistical systematics are published. | Surrogate local hadron artifacts are required as if they were production QCD outputs. | Do not use Chrome workers for backend execution. |
-| [#157](https://github.com/FloatingPragma/observer-patch-holography/issues/157) [OPH Task] papers.compact.e.33-close-the-nonperturbative-qcd-hadron-branch: 33. Close the nonperturbative QCD hadron branch | `out of local scope` | Nonperturbative QCD/hadron backend and systematics. | Compact paper states the backend output and budgets or marks hadrons out-of-scope. | Compact paper promotes hadron masses without production backend evidence. | Do not use Chrome workers for backend execution. |
 
 ## mar-formalization
 
@@ -121,7 +123,6 @@ Open issue count: `28`
 | Issue | Claim level | Missing artifact / blocker | Closure criterion | Falsification route | Chrome policy |
 | --- | --- | --- | --- | --- | --- |
 | [#66](https://github.com/FloatingPragma/observer-patch-holography/issues/66) [OPH Task] papers.reality.b.06-extend-cycle-holonomy-from-abelian-defects-to-the-full-oph-defect-hierarchy: 6. Extend cycle holonomy from abelian defects to the full OPH defect hierarchy | `theorem gap` | Extension from abelian cycle holonomy to the full OPH defect hierarchy. | Reality paper states the full hierarchy construction with hypotheses and proof boundary. | Nonabelian or higher-defect holonomy is incompatible with the proposed reconciliation law. | Use for proof search only after local hierarchy packet. |
-| [#70](https://github.com/FloatingPragma/observer-patch-holography/issues/70) [OPH Task] papers.reality.b.10-show-coarse-graining-commutes-with-reconciliation: 10. Show coarse-graining commutes with reconciliation | `theorem gap` | Proof that coarse-graining commutes with reconciliation. | Coarse-graining/reconciliation commutation theorem is stated and synchronized across reality surfaces. | A counterexample shows reconciliation depends on refinement order. | Use for proof audit after local counterexample search. |
 
 ## screen-microphysics
 

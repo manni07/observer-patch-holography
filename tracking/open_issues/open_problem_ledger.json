@@ -1,7 +1,36 @@
 {
   "artifact": "oph_open_problem_ledger",
-  "generated_utc": "2026-05-05T00:28:58Z",
-  "open_issue_count": 28,
+  "closed_out_of_scope_count": 2,
+  "closed_out_of_scope_records": [
+    {
+      "blocker": "Working OPH hadron backend on suitable hardware such as GLORB/Echosahedron.",
+      "chrome_policy": "Do not use Chrome workers for backend execution.",
+      "claim_level": "out of local scope",
+      "closed_status": "closed_not_planned_out_of_scope_computationally_blocked",
+      "closure": "Production backend output and continuum/volume/chiral/statistical systematics are published.",
+      "closure_note": "Closed as out-of-scope, not solved. The current pipeline emits no hadron predictions until a working OPH hadron backend on suitable hardware publishes production output and systematics.",
+      "falsification": "Surrogate local hadron artifacts are required as if they were production QCD outputs.",
+      "number": 153,
+      "phase": "hardware-gated-hadrons",
+      "title": "hadron backend/systematics",
+      "url": "https://github.com/FloatingPragma/observer-patch-holography/issues/153"
+    },
+    {
+      "blocker": "Nonperturbative QCD/hadron backend and systematics.",
+      "chrome_policy": "Do not use Chrome workers for backend execution.",
+      "claim_level": "out of local scope",
+      "closed_status": "closed_not_planned_out_of_scope_computationally_blocked",
+      "closure": "Compact paper states the backend output and budgets or marks hadrons out-of-scope.",
+      "closure_note": "Closed as out-of-scope, not solved. Compact-paper hadron claims remain suppressed until a working OPH backend emits the required nonperturbative QCD/hadron data.",
+      "falsification": "Compact paper promotes hadron masses without production backend evidence.",
+      "number": 157,
+      "phase": "hardware-gated-hadrons",
+      "title": "nonperturbative QCD hadron branch",
+      "url": "https://github.com/FloatingPragma/observer-patch-holography/issues/157"
+    }
+  ],
+  "generated_utc": "2026-05-05T01:48:21Z",
+  "open_issue_count": 25,
   "repo": "FloatingPragma/observer-patch-holography",
   "rows": [
     {
@@ -33,7 +62,7 @@
       "number": 32,
       "phase": "particle-rg",
       "title": "[OPH Task] papers.compact.e.26-derive-rg-matching-and-threshold-structure-from-oph: 26. Derive RG matching and threshold structure from OPH",
-      "updated_at": "2026-05-05T00:15:22Z",
+      "updated_at": "2026-05-05T00:34:55Z",
       "url": "https://github.com/FloatingPragma/observer-patch-holography/issues/32"
     },
     {
@@ -129,21 +158,6 @@
       "url": "https://github.com/FloatingPragma/observer-patch-holography/issues/66"
     },
     {
-      "blocker": "Proof that coarse-graining commutes with reconciliation.",
-      "chrome_policy": "Use for proof audit after local counterexample search.",
-      "claim_level": "theorem gap",
-      "closure": "Coarse-graining/reconciliation commutation theorem is stated and synchronized across reality surfaces.",
-      "falsification": "A counterexample shows reconciliation depends on refinement order.",
-      "labels": [
-        "surface: reality"
-      ],
-      "number": 70,
-      "phase": "reality-paper",
-      "title": "[OPH Task] papers.reality.b.10-show-coarse-graining-commutes-with-reconciliation: 10. Show coarse-graining commutes with reconciliation",
-      "updated_at": "2026-04-11T04:38:42Z",
-      "url": "https://github.com/FloatingPragma/observer-patch-holography/issues/70"
-    },
-    {
       "blocker": "No public theorem package or falsifiable closure artifact is defined.",
       "chrome_policy": "Do not spend Chrome workers until a precise theorem target exists.",
       "claim_level": "personal/open hypothesis",
@@ -177,23 +191,6 @@
       "url": "https://github.com/FloatingPragma/observer-patch-holography/issues/113"
     },
     {
-      "blocker": "Working OPH hadron backend on suitable hardware such as GLORB/Echosahedron.",
-      "chrome_policy": "Do not use Chrome workers for backend execution.",
-      "claim_level": "out of local scope",
-      "closure": "Production backend output and continuum/volume/chiral/statistical systematics are published.",
-      "falsification": "Surrogate local hadron artifacts are required as if they were production QCD outputs.",
-      "labels": [
-        "enhancement",
-        "surface: particles",
-        "dag:stage-gated"
-      ],
-      "number": 153,
-      "phase": "hardware-gated-hadrons",
-      "title": "[OPH Task] particles.e.33a-unquench-hadron-branch-and-publish-systematics: Unquench the hadron branch and publish systematics",
-      "updated_at": "2026-05-05T00:15:23Z",
-      "url": "https://github.com/FloatingPragma/observer-patch-holography/issues/153"
-    },
-    {
       "blocker": "Strong-CP branch theorem or explicit continuation boundary.",
       "chrome_policy": "Use only after a concrete branch packet exists.",
       "claim_level": "open branch",
@@ -211,23 +208,6 @@
       "title": "[OPH Task] continuations.strongcp.01-close-the-strong-cp-branch: Close the strong-CP branch",
       "updated_at": "2026-04-14T06:43:31Z",
       "url": "https://github.com/FloatingPragma/observer-patch-holography/issues/155"
-    },
-    {
-      "blocker": "Nonperturbative QCD/hadron backend and systematics.",
-      "chrome_policy": "Do not use Chrome workers for backend execution.",
-      "claim_level": "out of local scope",
-      "closure": "Compact paper states the backend output and budgets or marks hadrons out-of-scope.",
-      "falsification": "Compact paper promotes hadron masses without production backend evidence.",
-      "labels": [
-        "enhancement",
-        "surface: compact",
-        "dag:stage-gated"
-      ],
-      "number": 157,
-      "phase": "hardware-gated-hadrons",
-      "title": "[OPH Task] papers.compact.e.33-close-the-nonperturbative-qcd-hadron-branch: 33. Close the nonperturbative QCD hadron branch",
-      "updated_at": "2026-05-05T00:28:49Z",
-      "url": "https://github.com/FloatingPragma/observer-patch-holography/issues/157"
     },
     {
       "blocker": "Class-uniform public quark-frame descent and sigma classification.",
@@ -274,7 +254,7 @@
       "number": 207,
       "phase": "top-codomain-bridge",
       "title": "[OPH Task] particles.calibration.04-bridge-the-declared-d11-top-coordinate-to-the-direct-top-pdg-row: derive the direct-top conversion theorem or obstruction",
-      "updated_at": "2026-05-05T00:15:23Z",
+      "updated_at": "2026-05-05T00:34:55Z",
       "url": "https://github.com/FloatingPragma/observer-patch-holography/issues/207"
     },
     {
@@ -306,7 +286,7 @@
       "number": 223,
       "phase": "thomson-endpoint",
       "title": "[OPH Task] Close the Ward-projected Thomson endpoint theorem gap on the P-closure branch",
-      "updated_at": "2026-05-05T00:15:23Z",
+      "updated_at": "2026-05-05T00:34:55Z",
       "url": "https://github.com/FloatingPragma/observer-patch-holography/issues/223"
     },
     {
@@ -322,7 +302,7 @@
       "number": 224,
       "phase": "p-root-adoption",
       "title": "[OPH Task] Update all particle-derivation code paths to use the derived P closure root",
-      "updated_at": "2026-05-05T00:15:22Z",
+      "updated_at": "2026-05-05T00:34:55Z",
       "url": "https://github.com/FloatingPragma/observer-patch-holography/issues/224"
     },
     {
