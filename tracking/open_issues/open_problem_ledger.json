@@ -1,6 +1,6 @@
 {
   "artifact": "oph_open_problem_ledger",
-  "generated_utc": "2026-05-05T00:20:36Z",
+  "generated_utc": "2026-05-05T00:28:58Z",
   "open_issue_count": 28,
   "repo": "FloatingPragma/observer-patch-holography",
   "rows": [
@@ -221,12 +221,12 @@
       "labels": [
         "enhancement",
         "surface: compact",
-        "dag:ready-now"
+        "dag:stage-gated"
       ],
       "number": 157,
       "phase": "hardware-gated-hadrons",
       "title": "[OPH Task] papers.compact.e.33-close-the-nonperturbative-qcd-hadron-branch: 33. Close the nonperturbative QCD hadron branch",
-      "updated_at": "2026-04-14T03:16:50Z",
+      "updated_at": "2026-05-05T00:28:49Z",
       "url": "https://github.com/FloatingPragma/observer-patch-holography/issues/157"
     },
     {
@@ -402,7 +402,7 @@
       "number": 234,
       "phase": "particle-provenance",
       "title": "[OPH Task] Add blind-prediction provenance and convention-sensitivity audits for the quantitative particle outputs",
-      "updated_at": "2026-04-26T05:00:19Z",
+      "updated_at": "2026-05-05T00:28:03Z",
       "url": "https://github.com/FloatingPragma/observer-patch-holography/issues/234"
     },
     {
@@ -434,7 +434,7 @@
       "number": 236,
       "phase": "publication-ledger",
       "title": "[OPH Task] Add a consolidated open-problem ledger for unsolved OPH branches and missing closure artifacts",
-      "updated_at": "2026-04-26T05:00:20Z",
+      "updated_at": "2026-05-05T00:28:04Z",
       "url": "https://github.com/FloatingPragma/observer-patch-holography/issues/236"
     },
     {
