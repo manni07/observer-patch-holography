@@ -1,0 +1,33 @@
+#!/usr/bin/env python3
+"""Guard the simplified final particle-pipeline command."""
+
+from __future__ import annotations
+
+import pathlib
+import sys
+
+
+ROOT = pathlib.Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT / "scripts"))
+
+from build_final_particle_pipeline import build_steps  # noqa: E402
+
+
+def test_final_particle_pipeline_orders_contracts_before_predictions() -> None:
+    steps = list(build_steps())
+    ids = [step.id for step in steps]
+
+    assert ids[0:3] == [
+        "p_closure_trunk",
+        "thomson_endpoint_contract",
+        "rg_matching_threshold_contract",
+    ]
+    assert ids.index("pipeline_closure_status_bootstrap") < ids.index("blind_prediction_provenance")
+    assert ids.index("blind_prediction_provenance") < ids.index("pipeline_closure_status_finalize")
+    assert ids.index("pipeline_closure_status_finalize") < ids.index("final_end_to_end_predictions")
+    assert ids.index("final_end_to_end_predictions") < ids.index("derivation_chain_closure_matrix")
+    assert ids[-1] == "mass_derivation_svg"
+    scripts = {step.script for step in steps}
+    assert "particles/hadron/derive_ward_projected_spectral_measure_contract.py" in scripts
+    assert "particles/leptons/derive_charged_end_to_end_impossibility_theorem.py" in scripts
+    assert "particles/scripts/build_derivation_chain_closure_matrix.py" in scripts

@@ -8,7 +8,7 @@
     "free_quark_screened_ansatz",
     "compare_only_external_Thomson_endpoint"
   ],
-  "generated_utc": "2026-05-05T00:09:42Z",
+  "generated_utc": "2026-05-05T00:55:21Z",
   "hardware_gate": {
     "chrome_workers_useful_for_backend_execution": false,
     "expected_backend_class": "OPH hardware backend such as GLORB/Echosahedron",

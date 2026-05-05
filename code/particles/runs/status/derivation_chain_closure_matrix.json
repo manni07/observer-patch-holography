@@ -1,0 +1,202 @@
+{
+  "artifact": "oph_particle_derivation_chain_closure_matrix",
+  "closure_summary": {
+    "all_derivation_chains_claimed_closed": false,
+    "closed_or_scoped_chains": [
+      "structural_massless_bosons",
+      "higgs_top_declared_surface",
+      "selected_class_quarks",
+      "neutrino_absolute_attachment"
+    ],
+    "hardware_gated_chains": [
+      "hadrons"
+    ],
+    "policy": "Do not promote candidate, compare-only, witness-only, or hardware-gated chains as closed theorem predictions.",
+    "remaining_nonclosed_chains": [
+      "p_closure_root",
+      "electroweak_wz",
+      "charged_leptons",
+      "hadrons"
+    ]
+  },
+  "generated_utc": "2026-05-05T00:55:21Z",
+  "particle_five_gates": {
+    "153": {
+      "chrome_workers": "do_not_use_for_backend_execution",
+      "closable_now": false,
+      "issue": 153,
+      "local_next_artifact": "particles/runs/hadron/ward_projected_spectral_measure_contract.json",
+      "requires_oph_hardware_backend": true,
+      "state": "hardware_gated_out_of_scope",
+      "title": "Hadron backend and systematics"
+    },
+    "207": {
+      "chrome_workers": "only_for_independent_audit_of_a_proposed_response_kernel",
+      "closable_now": false,
+      "issue": 207,
+      "local_next_artifact": "particles/runs/calibration/direct_top_bridge_contract.json",
+      "state": "open_constructive_conversion_contract",
+      "title": "Direct-top codomain bridge"
+    },
+    "223": {
+      "chrome_workers": "not_useful_until_source_endpoint_packet_exists",
+      "closable_now": false,
+      "hadron_dependency_hardware_gated": true,
+      "issue": 223,
+      "local_next_artifact": "P_derivation/runtime/thomson_endpoint_contract_current.json",
+      "state": "open_constructive_contract",
+      "title": "Ward-projected Thomson endpoint"
+    },
+    "224": {
+      "chrome_workers": "not_useful_until_endpoint_and_interval_gates_close",
+      "closable_now": false,
+      "issue": 224,
+      "local_next_artifact": "P_derivation/runtime/p_closure_trunk_current.json",
+      "promotion_allowed": false,
+      "state": "open_waiting_certified_root",
+      "title": "Adopt certified derived P closure root"
+    },
+    "32": {
+      "chrome_workers": "only_after_beta_threshold_packet_is_populated",
+      "closable_now": false,
+      "issue": 32,
+      "local_next_artifact": "P_derivation/runtime/rg_matching_threshold_contract_current.json",
+      "state": "open_constructive_contract",
+      "title": "RG matching and threshold structure"
+    }
+  },
+  "provenance_status": "provenance_ledger_emitted_convention_sensitivity_contract_open",
+  "rows": [
+    {
+      "chain": "p_closure_root",
+      "claim_level": "compressed_candidate_trunk_not_final_particle_root",
+      "next_artifact": "code/P_derivation/runtime/rg_matching_threshold_contract_current.json + code/P_derivation/runtime/thomson_endpoint_contract_current.json",
+      "open_gates": [
+        32,
+        223,
+        224
+      ],
+      "outputs": {
+        "P": "1.63097210492078846050203640439",
+        "alpha_inv": "136.994020662724205139718642793"
+      },
+      "promotable": false,
+      "status": "candidate_not_live_root"
+    },
+    {
+      "chain": "structural_massless_bosons",
+      "claim_level": "structural",
+      "next_artifact": null,
+      "open_gates": [],
+      "outputs": {
+        "gluon": 0.0,
+        "graviton": 0.0,
+        "photon": 0.0
+      },
+      "promotable": true,
+      "status": "closed_structural_zero"
+    },
+    {
+      "chain": "electroweak_wz",
+      "claim_level": "exact_frozen_target_compare_only_adapter",
+      "next_artifact": "code/P_derivation/runtime/rg_matching_threshold_contract_current.json",
+      "open_gates": [
+        32,
+        223,
+        224
+      ],
+      "outputs": {
+        "w_boson": 80.377,
+        "z_boson": 91.18797809193725
+      },
+      "promotable": false,
+      "status": "compare_only_reproduction_not_prediction_theorem"
+    },
+    {
+      "chain": "higgs_top_declared_surface",
+      "claim_level": "exact_source_only_higgs_top_split_calibration_theorem",
+      "next_artifact": "code/particles/runs/calibration/direct_top_bridge_contract.json",
+      "open_gates": [
+        207
+      ],
+      "outputs": {
+        "higgs": 125.1995304097179,
+        "top_companion": 172.35235532883115
+      },
+      "promotable": true,
+      "status": "closed_on_declared_d10_d11_surface"
+    },
+    {
+      "chain": "charged_leptons",
+      "claim_level": "exact_target_anchored_current_family_witness",
+      "next_artifact": "code/particles/runs/leptons/charged_end_to_end_impossibility_theorem.json",
+      "nonclosure_theorem": "oph_charged_end_to_end_impossibility_theorem",
+      "open_gates": [
+        201
+      ],
+      "outputs": {
+        "electron": 0.0005109989499999994,
+        "muon": 0.10565837550000004,
+        "tau": 1.7769324651340912
+      },
+      "promotable": false,
+      "status": "current_family_witness_only_end_to_end_nonclosure_theorem"
+    },
+    {
+      "chain": "selected_class_quarks",
+      "claim_level": "selected_class_theorem_grade_exact_forward_quark_closure",
+      "next_artifact": "global quark frame classification or keep selected-class scope visible",
+      "open_gates": [
+        199,
+        207,
+        212
+      ],
+      "outputs": {
+        "bottom": 4.182999999999994,
+        "charm": 1.2729999999999992,
+        "down": 0.004699999999999999,
+        "strange": 0.09349999999999999,
+        "top": 172.35235532883115,
+        "up": 0.0021600000000000005
+      },
+      "promotable": true,
+      "status": "closed_selected_public_class_global_classification_open"
+    },
+    {
+      "chain": "neutrino_absolute_attachment",
+      "claim_level": "theorem_grade_weighted_cycle_absolute_attachment",
+      "next_artifact": null,
+      "open_gates": [],
+      "outputs": {
+        "electron_neutrino": 0.017454720257976796,
+        "muon_neutrino": 0.019481987935919015,
+        "tau_neutrino": 0.05307522145074924
+      },
+      "promotable": true,
+      "status": "closed_weighted_cycle_absolute_attachment_with_comparison_tension_visible",
+      "unit": "eV"
+    },
+    {
+      "chain": "hadrons",
+      "claim_level": "no_local_prediction_emitted",
+      "next_artifact": "real OPH hadron backend output and systematics",
+      "open_gates": [
+        153,
+        157
+      ],
+      "outputs": {},
+      "promotable": false,
+      "status": "hardware_gated_out_of_scope"
+    }
+  ],
+  "source_artifacts": {
+    "blind_provenance": "code/particles/runs/status/blind_prediction_provenance.json",
+    "final_predictions": "code/particles/runs/status/final_end_to_end_predictions.json",
+    "pipeline_status": "code/particles/runs/status/particle_pipeline_closure_status.json"
+  },
+  "status": "executable_nonhadron_chain_matrix_emitted",
+  "worker_policy": {
+    "chrome_pro_workers_needed_now": false,
+    "reason": "Remaining open chains need local theorem packets or OPH hadron hardware before worker audit is meaningful."
+  }
+}

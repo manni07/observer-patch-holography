@@ -77,7 +77,7 @@
     "obstruction_only_worker_result_allowed": false,
     "p_trunk_candidate_only": true
   },
-  "generated_utc": "2026-05-05T00:23:08Z",
+  "generated_utc": "2026-05-05T00:55:21Z",
   "issue_gates": [
     {
       "chrome_workers": "not_useful_until_source_endpoint_packet_exists",

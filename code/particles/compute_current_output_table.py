@@ -107,6 +107,8 @@ RUNTIME_SURFACED_ARTIFACTS = (
     Path("runs/status/particle_pipeline_closure_status.json"),
     Path("runs/status/blind_prediction_provenance.json"),
     Path("runs/status/final_end_to_end_predictions.json"),
+    Path("runs/status/derivation_chain_closure_matrix.json"),
+    Path("runs/leptons/charged_end_to_end_impossibility_theorem.json"),
 )
 
 RUNTIME_EXTERNAL_OUTPUTS = (
@@ -183,8 +185,10 @@ def _copy_outputs(work_particles: Path, current_dir: Path) -> None:
         "runs/status/particle_pipeline_closure_status.json",
         "runs/status/blind_prediction_provenance.json",
         "runs/status/final_end_to_end_predictions.json",
+        "runs/status/derivation_chain_closure_matrix.json",
         "BLIND_PREDICTION_PROVENANCE.md",
         "FINAL_END_TO_END_PREDICTIONS.md",
+        "DERIVATION_CHAIN_CLOSURE_MATRIX.md",
         "runs/calibration/direct_top_bridge_contract.json",
         "runs/flavor/quark_lane_closure_contract.json",
         "runs/neutrino/neutrino_lane_closure_contract.json",
@@ -584,8 +588,11 @@ def build_runtime(runtime_root: Path, *, with_hadrons: bool, verbose: bool) -> P
     _run(status_cmd, cwd=work_code, verbose=verbose)
     _run(exact_nonhadron_cmd, cwd=work_code, verbose=verbose)
     _run(exact_fit_cmd, cwd=work_code, verbose=verbose)
+    _run(["python3", "particles/scripts/build_particle_pipeline_closure_status.py"], cwd=work_code, verbose=verbose)
     _run(["python3", "particles/scripts/build_blind_prediction_provenance.py"], cwd=work_code, verbose=verbose)
+    _run(["python3", "particles/scripts/build_particle_pipeline_closure_status.py"], cwd=work_code, verbose=verbose)
     _run(["python3", "particles/scripts/build_final_end_to_end_predictions.py"], cwd=work_code, verbose=verbose)
+    _run(["python3", "particles/scripts/build_derivation_chain_closure_matrix.py"], cwd=work_code, verbose=verbose)
     _run(svg_cmd, cwd=work_code, verbose=verbose)
     _copy_outputs(work_particles, current_dir)
     return current_dir
