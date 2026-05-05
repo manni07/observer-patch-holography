@@ -216,9 +216,10 @@ LANES: List[Dict[str, Any]] = [
             "`m_H = 125.1995304097179 GeV` by the declared D11 Jacobian. The compare-only exact pair "
             "stays on disk only as a validation surface. The exact public running-top row is also "
             "carried by the selected-class quark theorem. The bridge to the auxiliary direct-top PDG "
-            "row is open and is tracked in `#207`."
+            "row is open, tracked in `#207`, and now has the constructive contract "
+            "`code/particles/runs/calibration/direct_top_bridge_contract.json`."
         ),
-        "tasks_text": "Ledger state: the exact source-only electroweak Higgs theorem is closed on the declared running, matching, and threshold surface; the one-scalar seed stays on disk as a lower-rank fixed-ray branch; the exact inverse slice remains compare-only; the direct-top bridge is open under `#207`.",
+        "tasks_text": "Ledger state: the exact source-only electroweak Higgs theorem is closed on the declared running, matching, and threshold surface; the one-scalar seed stays on disk as a lower-rank fixed-ray branch; the exact inverse slice remains compare-only; the direct-top bridge has a constructive contract under `#207`.",
         "prediction_surface": "Electroweak split-theorem surface with an exact Higgs row and a companion top coordinate on the declared Jacobian surface.",
         "particles": ["higgs"],
         "tasks": [],

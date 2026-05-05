@@ -31,8 +31,17 @@
       ],
       "id": "qcd-thomson-backend-bundle",
       "promotion_question": "Can the hadron production backend emit the rho_had(s;P) object and uncertainty budget needed by the Ward-projected Thomson endpoint, rather than leaving hadrons and alpha(0) as separate deferred gaps?",
-      "result": "Constructive result. The current stable-channel backend is not the endpoint object. The smallest missing primitive is production_ward_projected_hadronic_spectral_measure_export with continuum, volume, chiral, statistical, matching, quadrature, and endpoint budgets. The local implementation target is particles/hadron/ward_projected_spectral_measure.schema.json.",
-      "status": "constructive_spectral_measure_contract_emitted"
+      "result": "Constructive result with a scope lock. The current stable-channel backend is not the endpoint object, and the real hadron backend is not locally runnable. The missing primitive remains production_ward_projected_hadronic_spectral_measure_export, but #153 is hardware-gated on OPH hardware rather than assigned to Chrome workers or local surrogate code.",
+      "status": "hardware_gated_scope_lock_emitted"
+    },
+    {
+      "gap_ids": [
+        "calibration.direct-top-bridge"
+      ],
+      "id": "top-codomain-bridge-bundle",
+      "promotion_question": "Can the exact top coordinate be mapped into the auxiliary direct-top extraction codomain without using Q007TP as a calibration input?",
+      "result": "Constructive result. The exact top theorem row remains on Q007TP4. The auxiliary direct-top row Q007TP is now a compare-only codomain with a concrete response-kernel and uncertainty certificate target in particles/runs/calibration/direct_top_bridge_contract.json.",
+      "status": "constructive_conversion_contract_emitted"
     },
     {
       "gap_ids": [
@@ -43,6 +52,7 @@
         "charged.determinant-normalization-transport",
         "quark.selected-class-vs-global-classification",
         "neutrino.pmns-status-and-absolute-rows",
+        "calibration.direct-top-bridge",
         "hadron.production-backend-systematics"
       ],
       "id": "particle-root-integration-gate",
@@ -51,7 +61,7 @@
       "status": "keep_candidate_with_constructive_next_artifacts"
     }
   ],
-  "generated_utc": "2026-05-04T23:51:34Z",
+  "generated_utc": "2026-05-05T00:04:58Z",
   "p_trunk": {
     "P": "1.63097210492078846050203640439",
     "alpha_inv": "136.994020662724205139718642793",
@@ -64,6 +74,8 @@
   "promotion_policy": {
     "address_remaining_blockers_one_by_one": false,
     "compressed_p_trunk_is_live_prediction_root": false,
+    "hadron_backend_in_current_local_scope": false,
+    "hadron_backend_scope_reason": "Production hadrons require a real OPH hardware backend; local surrogate output is non-promoting.",
     "obstruction_only_worker_result_allowed": false,
     "reason": "The endpoint, RG/matching, and interval-certificate gates remain open.",
     "torus_mode_language_allowed_in_pipeline": false
@@ -164,12 +176,25 @@
       "title": "Keep neutrino theorem rows and comparison tension separated"
     },
     {
-      "current_boundary": "The hadron lane is execution-contract-frozen. Symbolic simplification of P does not replace production QCD backend output and declared systematics.",
+      "current_boundary": "The exact top coordinate uses the PDG cross-section codomain Q007TP4. The auxiliary direct-top entry Q007TP is a separate extraction codomain and remains compare-only until an extraction-response map and uncertainty propagation certificate are emitted.",
+      "github_issue": 207,
+      "id": "calibration.direct-top-bridge",
+      "lane": "D11/top codomain",
+      "next_action": "Populate the direct-top extraction response kernel or keep Q007TP compare-only while the theorem row remains anchored on Q007TP4.",
+      "status": "constructive_conversion_contract_emitted",
+      "target_surfaces": [
+        "code/particles/calibration",
+        "code/particles/runs/status"
+      ],
+      "title": "Bridge the exact top coordinate to the auxiliary direct-top PDG row"
+    },
+    {
+      "current_boundary": "The hadron lane is explicitly outside the current local pipeline because there is no working production hadron backend here. A credible backend is hardware-gated on OPH hardware such as GLORB/Echosahedron rather than on local Python or Chrome workers.",
       "github_issue": 153,
       "id": "hadron.production-backend-systematics",
       "lane": "Hadrons",
-      "next_action": "Implement/run the production backend dump path, validate writeback, and publish continuum/volume/chiral/statistical budgets.",
-      "status": "deferred_execution_contract",
+      "next_action": "Keep hadron rows suppressed, track #153 as a hardware-gated backend issue, and do not spend Oracle/Chrome workers on local surrogate backend promotion.",
+      "status": "hardware_gated_out_of_scope",
       "target_surfaces": [
         "code/particles/hadron",
         "code/particles/qcd"

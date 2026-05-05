@@ -1,0 +1,270 @@
+{
+  "artifact": "oph_particle_pipeline_closure_status",
+  "artifacts": {
+    "direct_top_bridge_contract": {
+      "artifact": "oph_direct_top_bridge_contract",
+      "exists": true,
+      "path": "particles/runs/calibration/direct_top_bridge_contract.json",
+      "promotion_allowed": false,
+      "status": "constructive_conversion_contract_emitted_not_direct_top_theorem"
+    },
+    "gap_ledger": {
+      "artifact": "oph_particle_derivation_gap_ledger",
+      "exists": true,
+      "path": "particles/runs/status/particle_derivation_gap_ledger.json",
+      "promotion_allowed": null,
+      "status": null
+    },
+    "hadron_spectral_measure_contract": {
+      "artifact": "oph_ward_projected_spectral_measure_contract",
+      "exists": true,
+      "path": "particles/runs/hadron/ward_projected_spectral_measure_contract.json",
+      "promotion_allowed": false,
+      "status": "constructive_contract_emitted_not_production_data"
+    },
+    "neutrino_lane_closure_contract": {
+      "artifact": "oph_neutrino_lane_closure_contract",
+      "exists": true,
+      "path": "particles/runs/neutrino/neutrino_lane_closure_contract.json",
+      "promotion_allowed": null,
+      "status": "theorem_grade_emitted"
+    },
+    "p_trunk": {
+      "artifact": "oph_p_closure_trunk_current",
+      "exists": true,
+      "path": "P_derivation/runtime/p_closure_trunk_current.json",
+      "promotion_allowed": null,
+      "status": "compressed_candidate_trunk_not_final_particle_root"
+    },
+    "quark_lane_closure_contract": {
+      "artifact": "oph_quark_lane_closure_contract",
+      "exists": true,
+      "path": "particles/runs/flavor/quark_lane_closure_contract.json",
+      "promotion_allowed": null,
+      "status": "target_free_public_exact_yukawa_derivation_closed"
+    },
+    "rg_matching_threshold_contract": {
+      "artifact": "oph_rg_matching_threshold_contract",
+      "exists": true,
+      "path": "P_derivation/runtime/rg_matching_threshold_contract_current.json",
+      "promotion_allowed": false,
+      "status": "constructive_contract_emitted_not_rg_matching_theorem"
+    },
+    "thomson_endpoint_contract": {
+      "artifact": "oph_ward_projected_thomson_endpoint_contract",
+      "exists": true,
+      "path": "P_derivation/runtime/thomson_endpoint_contract_current.json",
+      "promotion_allowed": false,
+      "status": "constructive_contract_emitted_not_endpoint_theorem"
+    }
+  },
+  "current_surface": {
+    "builder": "code/particles/compute_current_output_table.py",
+    "default_runtime_root": "temp/particles_runtime",
+    "simplification": "The current prediction pipeline is one disposable runtime surface plus this closure manifest, with hadron promotion excluded by scope.",
+    "source_repo": "reverse-engineering-reality/code"
+  },
+  "finalization_gates": {
+    "hadrons_suppressed_by_default": true,
+    "nonhadron_prediction_surface_buildable": true,
+    "obstruction_only_worker_result_allowed": false,
+    "p_trunk_candidate_only": true
+  },
+  "generated_utc": "2026-05-05T00:09:32Z",
+  "issue_gates": [
+    {
+      "chrome_workers": "not_useful_until_source_endpoint_packet_exists",
+      "closable_now": false,
+      "hadron_dependency_hardware_gated": true,
+      "issue": 223,
+      "local_next_artifact": "P_derivation/runtime/thomson_endpoint_contract_current.json",
+      "state": "open_constructive_contract",
+      "title": "Ward-projected Thomson endpoint"
+    },
+    {
+      "chrome_workers": "not_useful_until_endpoint_and_interval_gates_close",
+      "closable_now": false,
+      "issue": 224,
+      "local_next_artifact": "P_derivation/runtime/p_closure_trunk_current.json",
+      "promotion_allowed": false,
+      "state": "open_waiting_certified_root",
+      "title": "Adopt certified derived P closure root"
+    },
+    {
+      "chrome_workers": "only_after_beta_threshold_packet_is_populated",
+      "closable_now": false,
+      "issue": 32,
+      "local_next_artifact": "P_derivation/runtime/rg_matching_threshold_contract_current.json",
+      "state": "open_constructive_contract",
+      "title": "RG matching and threshold structure"
+    },
+    {
+      "chrome_workers": "do_not_use_for_backend_execution",
+      "closable_now": false,
+      "issue": 153,
+      "local_next_artifact": "particles/runs/hadron/ward_projected_spectral_measure_contract.json",
+      "requires_oph_hardware_backend": true,
+      "state": "hardware_gated_out_of_scope",
+      "title": "Hadron backend and systematics"
+    },
+    {
+      "chrome_workers": "only_for_independent_audit_of_a_proposed_response_kernel",
+      "closable_now": false,
+      "issue": 207,
+      "local_next_artifact": "particles/runs/calibration/direct_top_bridge_contract.json",
+      "state": "open_constructive_conversion_contract",
+      "title": "Direct-top codomain bridge"
+    },
+    {
+      "chrome_workers": "not_needed",
+      "closable_now": true,
+      "issue": 117,
+      "local_next_artifact": "particles/runs/neutrino/neutrino_lane_closure_contract.json",
+      "state": "closed_keep_visible_comparison_tension",
+      "title": "Neutrino splittings and mixing"
+    },
+    {
+      "chrome_workers": "not_needed",
+      "closable_now": true,
+      "issue": 198,
+      "local_next_artifact": "particles/runs/flavor/quark_lane_closure_contract.json",
+      "state": "closed_selected_class_scope_visible",
+      "title": "Selected public quark-frame sigma descent"
+    }
+  ],
+  "latest_nonhadron_predictions": {
+    "bottom_quark": {
+      "exact_kind": "selected_class_theorem_grade_exact_forward_quark_closure",
+      "promotable": true,
+      "scope": "selected_public_physical_quark_frame_class_only",
+      "unit": "GeV",
+      "value": 4.182999999999994
+    },
+    "charm_quark": {
+      "exact_kind": "selected_class_theorem_grade_exact_forward_quark_closure",
+      "promotable": true,
+      "scope": "selected_public_physical_quark_frame_class_only",
+      "unit": "GeV",
+      "value": 1.2729999999999992
+    },
+    "down_quark": {
+      "exact_kind": "selected_class_theorem_grade_exact_forward_quark_closure",
+      "promotable": true,
+      "scope": "selected_public_physical_quark_frame_class_only",
+      "unit": "GeV",
+      "value": 0.004699999999999999
+    },
+    "electron": {
+      "exact_kind": "exact_target_anchored_current_family_witness",
+      "promotable": false,
+      "scope": "current_family_only",
+      "unit": "GeV",
+      "value": 0.0005109989499999994
+    },
+    "electron_neutrino": {
+      "exact_kind": "theorem_grade_weighted_cycle_absolute_attachment",
+      "promotable": true,
+      "scope": "weighted_cycle_bridge_rigid_absolute_family",
+      "unit": "eV",
+      "value": 0.017454720257976796
+    },
+    "gluon": {
+      "exact_kind": "structural_zero",
+      "promotable": true,
+      "scope": "structural",
+      "unit": "GeV",
+      "value": 0.0
+    },
+    "graviton": {
+      "exact_kind": "structural_zero",
+      "promotable": true,
+      "scope": "structural",
+      "unit": "GeV",
+      "value": 0.0
+    },
+    "higgs": {
+      "exact_kind": "exact_source_only_higgs_top_split_calibration_theorem",
+      "promotable": true,
+      "scope": "declared_d10_d11_running_matching_threshold_surface_only",
+      "unit": "GeV",
+      "value": 125.1995304097179
+    },
+    "muon": {
+      "exact_kind": "exact_target_anchored_current_family_witness",
+      "promotable": false,
+      "scope": "current_family_only",
+      "unit": "GeV",
+      "value": 0.10565837550000004
+    },
+    "muon_neutrino": {
+      "exact_kind": "theorem_grade_weighted_cycle_absolute_attachment",
+      "promotable": true,
+      "scope": "weighted_cycle_bridge_rigid_absolute_family",
+      "unit": "eV",
+      "value": 0.019481987935919015
+    },
+    "photon": {
+      "exact_kind": "structural_zero",
+      "promotable": true,
+      "scope": "structural",
+      "unit": "GeV",
+      "value": 0.0
+    },
+    "strange_quark": {
+      "exact_kind": "selected_class_theorem_grade_exact_forward_quark_closure",
+      "promotable": true,
+      "scope": "selected_public_physical_quark_frame_class_only",
+      "unit": "GeV",
+      "value": 0.09349999999999999
+    },
+    "tau": {
+      "exact_kind": "exact_target_anchored_current_family_witness",
+      "promotable": false,
+      "scope": "current_family_only",
+      "unit": "GeV",
+      "value": 1.7769324651340912
+    },
+    "tau_neutrino": {
+      "exact_kind": "theorem_grade_weighted_cycle_absolute_attachment",
+      "promotable": true,
+      "scope": "weighted_cycle_bridge_rigid_absolute_family",
+      "unit": "eV",
+      "value": 0.05307522145074924
+    },
+    "top_quark": {
+      "exact_kind": "selected_class_theorem_grade_exact_forward_quark_closure",
+      "promotable": true,
+      "scope": "selected_public_physical_quark_frame_class_only",
+      "unit": "GeV",
+      "value": 172.35235532883115
+    },
+    "up_quark": {
+      "exact_kind": "selected_class_theorem_grade_exact_forward_quark_closure",
+      "promotable": true,
+      "scope": "selected_public_physical_quark_frame_class_only",
+      "unit": "GeV",
+      "value": 0.0021600000000000005
+    },
+    "w_boson": {
+      "exact_kind": "exact_frozen_target_compare_only_adapter",
+      "promotable": false,
+      "scope": "frozen_authoritative_target_surface",
+      "unit": "GeV",
+      "value": 80.377
+    },
+    "z_boson": {
+      "exact_kind": "exact_frozen_target_compare_only_adapter",
+      "promotable": false,
+      "scope": "frozen_authoritative_target_surface",
+      "unit": "GeV",
+      "value": 91.18797809193725
+    }
+  },
+  "purpose": "Single simplified closure gate for the current non-hadron particle pipeline.",
+  "scope": {
+    "chrome_workers_needed_now": false,
+    "current_pipeline_scope": "nonhadron_particles_plus_candidate_P_root_metadata",
+    "hadron_scope_reason": "Production hadrons require a working OPH hardware backend such as GLORB/Echosahedron; local surrogate code and Chrome workers are non-promoting for #153.",
+    "hadrons_in_current_local_scope": false
+  }
+}

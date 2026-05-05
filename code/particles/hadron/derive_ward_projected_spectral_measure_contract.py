@@ -26,11 +26,19 @@ def build_artifact() -> dict[str, Any]:
         "status": "constructive_contract_emitted_not_production_data",
         "schema": str(SCHEMA.relative_to(ROOT)),
         "promotion_allowed": False,
+        "current_local_scope": "hardware_gated_out_of_scope",
+        "hardware_gate": {
+            "requires_working_oph_hadron_backend": True,
+            "expected_backend_class": "OPH hardware backend such as GLORB/Echosahedron",
+            "chrome_workers_useful_for_backend_execution": False,
+            "local_surrogate_promotable": False,
+        },
         "constructive_next_artifact": "oph_qcd_ward_projected_hadronic_spectral_measure",
         "why_this_is_forward_progress": (
             "The stable-channel hadron backend is not enough for the Thomson endpoint, so the next "
             "implementation target is now a concrete production export schema for the required "
-            "Ward-projected electromagnetic spectral measure."
+            "Ward-projected electromagnetic spectral measure. The actual production run is out of "
+            "local scope until a working OPH hadron backend exists."
         ),
         "minimum_payload": {
             "projection": {

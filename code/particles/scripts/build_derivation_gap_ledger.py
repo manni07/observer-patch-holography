@@ -163,18 +163,36 @@ def build_gap_rows() -> list[dict[str, Any]]:
             "target_surfaces": ["code/particles/neutrino", "RESULTS_STATUS.md"],
         },
         {
+            "id": "calibration.direct-top-bridge",
+            "lane": "D11/top codomain",
+            "status": "constructive_conversion_contract_emitted",
+            "github_issue": 207,
+            "title": "Bridge the exact top coordinate to the auxiliary direct-top PDG row",
+            "current_boundary": (
+                "The exact top coordinate uses the PDG cross-section codomain Q007TP4. The auxiliary "
+                "direct-top entry Q007TP is a separate extraction codomain and remains compare-only "
+                "until an extraction-response map and uncertainty propagation certificate are emitted."
+            ),
+            "next_action": (
+                "Populate the direct-top extraction response kernel or keep Q007TP compare-only while "
+                "the theorem row remains anchored on Q007TP4."
+            ),
+            "target_surfaces": ["code/particles/calibration", "code/particles/runs/status"],
+        },
+        {
             "id": "hadron.production-backend-systematics",
             "lane": "Hadrons",
-            "status": "deferred_execution_contract",
+            "status": "hardware_gated_out_of_scope",
             "github_issue": 153,
             "title": "Execute the production hadron backend and publish systematics",
             "current_boundary": (
-                "The hadron lane is execution-contract-frozen. Symbolic simplification of P does not "
-                "replace production QCD backend output and declared systematics."
+                "The hadron lane is explicitly outside the current local pipeline because there is no "
+                "working production hadron backend here. A credible backend is hardware-gated on OPH "
+                "hardware such as GLORB/Echosahedron rather than on local Python or Chrome workers."
             ),
             "next_action": (
-                "Implement/run the production backend dump path, validate writeback, and publish "
-                "continuum/volume/chiral/statistical budgets."
+                "Keep hadron rows suppressed, track #153 as a hardware-gated backend issue, and do "
+                "not spend Oracle/Chrome workers on local surrogate backend promotion."
             ),
             "target_surfaces": ["code/particles/hadron", "code/particles/qcd"],
         },
@@ -225,7 +243,7 @@ def build_bundles() -> list[dict[str, Any]]:
         },
         {
             "id": "qcd-thomson-backend-bundle",
-            "status": "constructive_spectral_measure_contract_emitted",
+            "status": "hardware_gated_scope_lock_emitted",
             "gap_ids": [
                 "d10.ward-projected-thomson-endpoint",
                 "hadron.production-backend-systematics",
@@ -236,10 +254,26 @@ def build_bundles() -> list[dict[str, Any]]:
                 "as separate deferred gaps?"
             ),
             "result": (
-                "Constructive result. The current stable-channel backend is not the endpoint object. The smallest "
-                "missing primitive is production_ward_projected_hadronic_spectral_measure_export with "
-                "continuum, volume, chiral, statistical, matching, quadrature, and endpoint budgets. The "
-                "local implementation target is particles/hadron/ward_projected_spectral_measure.schema.json."
+                "Constructive result with a scope lock. The current stable-channel backend is not the endpoint "
+                "object, and the real hadron backend is not locally runnable. The missing primitive remains "
+                "production_ward_projected_hadronic_spectral_measure_export, but #153 is hardware-gated on "
+                "OPH hardware rather than assigned to Chrome workers or local surrogate code."
+            ),
+        },
+        {
+            "id": "top-codomain-bridge-bundle",
+            "status": "constructive_conversion_contract_emitted",
+            "gap_ids": [
+                "calibration.direct-top-bridge",
+            ],
+            "promotion_question": (
+                "Can the exact top coordinate be mapped into the auxiliary direct-top extraction codomain "
+                "without using Q007TP as a calibration input?"
+            ),
+            "result": (
+                "Constructive result. The exact top theorem row remains on Q007TP4. The auxiliary direct-top "
+                "row Q007TP is now a compare-only codomain with a concrete response-kernel and uncertainty "
+                "certificate target in particles/runs/calibration/direct_top_bridge_contract.json."
             ),
         },
         {
@@ -253,6 +287,7 @@ def build_bundles() -> list[dict[str, Any]]:
                 "charged.determinant-normalization-transport",
                 "quark.selected-class-vs-global-classification",
                 "neutrino.pmns-status-and-absolute-rows",
+                "calibration.direct-top-bridge",
                 "hadron.production-backend-systematics",
             ],
             "promotion_question": (
@@ -279,6 +314,8 @@ def build_ledger() -> dict[str, Any]:
         "promotion_policy": {
             "compressed_p_trunk_is_live_prediction_root": False,
             "reason": "The endpoint, RG/matching, and interval-certificate gates remain open.",
+            "hadron_backend_in_current_local_scope": False,
+            "hadron_backend_scope_reason": "Production hadrons require a real OPH hardware backend; local surrogate output is non-promoting.",
             "torus_mode_language_allowed_in_pipeline": False,
             "address_remaining_blockers_one_by_one": False,
             "obstruction_only_worker_result_allowed": False,

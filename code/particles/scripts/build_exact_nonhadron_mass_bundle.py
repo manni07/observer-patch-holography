@@ -114,7 +114,8 @@ def build_entries() -> list[dict[str, Any]]:
         "The top coordinate uses PDG "
         f"summary `{references['top_quark']['source']['summary_id']}`. The bridge to the auxiliary direct-top "
         f"entry `{references['top_quark_direct_aux']['source']['summary_id']}` is open and is tracked in "
-        "[#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207). The same exact sextet is also "
+        "[#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207) with the constructive contract "
+        "`code/particles/runs/calibration/direct_top_bridge_contract.json`. The same exact sextet is also "
         "realized on `current_family_only`. A separate restricted theorem "
         "surface emits a sector-attached `Sigma_ud^phys` element on "
         f"`{(quark_transport_lift or {}).get('theorem_scope', 'current_family_common_refinement_transport_frame_only')}`, "
@@ -228,7 +229,8 @@ def build_entries() -> list[dict[str, Any]]:
                 "At PDG quoting precision the Higgs row lands on the 2025 Higgs average. "
                 "The exact public running-top row uses the PDG 2025 cross-section entry `Q007TP4`. "
                 "The bridge to the auxiliary direct-top average `Q007TP` is open and is tracked in "
-                "[#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207)."
+                "[#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207) with the constructive contract "
+                "`code/particles/runs/calibration/direct_top_bridge_contract.json`."
                 if d11_exact_pair
                 else (
                 "Exact target-anchored Higgs calibration theorem on the declared D10/D11 surface."
@@ -444,7 +446,7 @@ def build_markdown(generated_utc: str, entries: list[dict[str, Any]]) -> str:
             else "The same sextet is also realized on the restricted current-family common-refinement transport-frame carrier, which emits explicit exact forward Yukawas `Y_u` and `Y_d` on that declared carrier."
         ),
         "For charged leptons, this bundle records the exact same-family witness surface. The theorem surface also contains the live same-label `q_e` readback, a source-side determinant character for a fixed formal source multiplicity vector, a conditional determinant-line lift, and an algebraic charged-mass readout once theorem-grade `A_ch(P)` is given. The open theorem is the determinant normalization attaching that source-side character to the physical charged determinant line.",
-        "The top coordinate uses the PDG 2025 cross-section mass entry `Q007TP4`. The bridge to the auxiliary direct-top entry `Q007TP` is open and is tracked in [#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207).",
+        "The top coordinate uses the PDG 2025 cross-section mass entry `Q007TP4`. The bridge to the auxiliary direct-top entry `Q007TP` is open and is tracked in [#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207) with the constructive contract `code/particles/runs/calibration/direct_top_bridge_contract.json`.",
         "",
         "| Particle | Exact Mass | Kind | Scope | Source |",
         "| --- | ---: | --- | --- | --- |",

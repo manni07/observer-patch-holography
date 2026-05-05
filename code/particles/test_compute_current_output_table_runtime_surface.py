@@ -68,6 +68,14 @@ def test_runtime_surface_preserves_repaired_neutrino_rows_and_canonical_refs(tmp
     assert exact_fit_entries["quark_current_family_exact_witness"]["supporting_scope_closure_artifact"] == (
         "code/particles/runs/flavor/quark_current_family_selected_sheet_closure.json"
     )
+    assert (current_dir / "P_derivation" / "runtime" / "p_closure_trunk_current.json").exists()
+    assert (current_dir / "P_derivation" / "runtime" / "thomson_endpoint_contract_current.json").exists()
+    assert (current_dir / "P_derivation" / "runtime" / "rg_matching_threshold_contract_current.json").exists()
+    assert (current_dir / "runs" / "status" / "particle_derivation_gap_ledger.json").exists()
+    assert (current_dir / "runs" / "status" / "particle_pipeline_closure_status.json").exists()
+    direct_top = json.loads((current_dir / "runs" / "calibration" / "direct_top_bridge_contract.json").read_text())
+    assert direct_top["status"] == "constructive_conversion_contract_emitted_not_direct_top_theorem"
+    assert direct_top["promotion_allowed"] is False
 
 
 def test_runtime_surface_with_hadrons_exercises_intermediate_hadron_lane(tmp_path: pathlib.Path) -> None:

@@ -1,0 +1,82 @@
+{
+  "artifact": "oph_rg_matching_threshold_contract",
+  "closure_gate": {
+    "closable_now": false,
+    "close_issue_when": [
+      "all RG coefficients have source status in beta_provenance_table",
+      "all matching and threshold placements have either OPH derivations or visible declared-convention status",
+      "the composed running map has an interval certificate used by the P fixed-point and particle surfaces"
+    ],
+    "reason": "The code path has an explicit declared running/matching surface, but the OPH-derived or declared status of every coefficient, threshold, and scheme conversion is not yet mechanically certified."
+  },
+  "constructive_objects": [
+    {
+      "id": "scheme_lock",
+      "kind": "certificate_interface",
+      "required_fields": [
+        "renormalization_scheme",
+        "normalization_of_U1",
+        "input_scale_definitions",
+        "conversion_maps",
+        "surfaces_using_the_scheme"
+      ],
+      "target_status": "one_scheme_used_by_unification_anchor_endpoint_and_mass_readouts"
+    },
+    {
+      "id": "threshold_map",
+      "kind": "builder_interface",
+      "required_fields": [
+        "particle_thresholds",
+        "superpartner_or_effective_thresholds",
+        "matching_scales",
+        "threshold_uncertainty_intervals",
+        "status_per_threshold"
+      ],
+      "target_status": "source_emitted_threshold_placements_or_declared_conventions"
+    },
+    {
+      "id": "beta_provenance_table",
+      "kind": "audit_table",
+      "required_fields": [
+        "gauge_group",
+        "matter_content",
+        "loop_order",
+        "coefficient",
+        "status",
+        "source_artifact_or_reference"
+      ],
+      "target_status": "every_beta_coefficient_is_oph_derived_declared_or_borrowed"
+    },
+    {
+      "id": "matching_interval_composition_certificate",
+      "kind": "certificate_interface",
+      "required_fields": [
+        "input_intervals",
+        "composed_map",
+        "roundoff_budget",
+        "matching_budget",
+        "threshold_budget",
+        "image_interval"
+      ],
+      "target_status": "interval_bound_for_composed_running_map"
+    }
+  ],
+  "forbidden_promotions": [
+    "silently_treating_declared_MSSM_running_as_OPH_derived",
+    "using_threshold_choices_as_hidden_fit_parameters",
+    "promoting_p_closure_root_without_interval_composition_certificate"
+  ],
+  "generated_utc": "2026-05-05T00:05:37Z",
+  "github_issue": 32,
+  "local_next_steps": [
+    "Populate beta_provenance_table from the existing D10/D11 builders.",
+    "Split threshold placements into OPH-derived, QFT-borrowed, and declared-convention entries.",
+    "Wire the interval-composition certificate into the compressed P trunk promotion gate."
+  ],
+  "promotion_allowed": false,
+  "status": "constructive_contract_emitted_not_rg_matching_theorem",
+  "worker_result_policy": {
+    "obstruction_only_result_allowed": false,
+    "required_if_primary_route_fails": "emit a smaller scheme-lock, threshold-map, beta-provenance, or interval-composition artifact"
+  }
+}

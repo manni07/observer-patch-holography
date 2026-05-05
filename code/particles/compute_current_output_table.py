@@ -22,6 +22,7 @@ from typing import Any
 CODE_ROOT = Path(__file__).resolve().parent
 RER_ROOT = CODE_ROOT.parents[1]
 WORKSPACE_ROOT = CODE_ROOT.parents[2]
+P_DERIVATION_ROOT = CODE_ROOT.parent / "P_derivation"
 DEFAULT_RUNTIME_ROOT = WORKSPACE_ROOT / "temp" / "particles_runtime"
 NEUTRINO_COMPARE_ONLY_FIT = Path("runs/neutrino/neutrino_compare_only_scale_fit.json")
 NEUTRINO_TWO_PARAMETER_EXACT_ADAPTER = Path("runs/neutrino/neutrino_two_parameter_exact_adapter.json")
@@ -42,7 +43,9 @@ EXCLUDE_NAMES = {
 RUNTIME_SURFACED_ARTIFACTS = (
     Path("runs/calibration/d10_ew_w_anchor_neutral_shear_factorization_official_pdg_2025_update.json"),
     Path("runs/calibration/d11_reference_exact_adapter.json"),
+    Path("runs/calibration/direct_top_bridge_contract.json"),
     Path("runs/flavor/forward_yukawas.json"),
+    Path("runs/flavor/quark_lane_closure_contract.json"),
     Path("runs/flavor/quark_current_family_exact_readout.json"),
     Path("runs/flavor/quark_current_family_selected_sheet_closure.json"),
     Path("runs/flavor/quark_current_family_quadratic_readout_theorem.json"),
@@ -52,6 +55,7 @@ RUNTIME_SURFACED_ARTIFACTS = (
     Path("runs/flavor/light_quark_isospin_overlap_defect_selector_law.json"),
     Path("runs/flavor/quark_d12_t1_value_law.json"),
     Path("runs/flavor/quark_physical_branch_repair_theorem.json"),
+    Path("runs/flavor/quark_public_exact_yukawa_end_to_end_theorem.json"),
     Path("runs/flavor/quark_relative_sheet_selector.json"),
     Path("runs/flavor/quark_sector_mean_split.json"),
     Path("runs/leptons/forward_charged_leptons.json"),
@@ -59,6 +63,7 @@ RUNTIME_SURFACED_ARTIFACTS = (
     Path("runs/leptons/lepton_current_family_exact_readout.json"),
     Path("runs/leptons/lepton_current_family_quadratic_readout_theorem.json"),
     Path("runs/neutrino/forward_neutrino_closure_bundle.json"),
+    Path("runs/neutrino/neutrino_lane_closure_contract.json"),
     Path("runs/neutrino/neutrino_bridge_rigidity_theorem.json"),
     Path("runs/neutrino/neutrino_absolute_attachment_theorem.json"),
     Path("runs/neutrino/exact_blocking_items.json"),
@@ -94,9 +99,27 @@ RUNTIME_SURFACED_ARTIFACTS = (
     Path("runs/hadron/stable_channel_groundstate_readout.json"),
     Path("runs/hadron/stable_channel_cfg_source_measure_payload.json"),
     Path("runs/hadron/hadron_surrogate_execution_bridge_status.json"),
+    Path("runs/hadron/ward_projected_spectral_measure_contract.json"),
     Path("runs/hadron/production_geometry_summary.json"),
     Path("runs/hadron/hadron_production_closure_validation_report.json"),
     Path("runs/hadron/hadron_production_readiness_report.json"),
+    Path("runs/status/particle_derivation_gap_ledger.json"),
+    Path("runs/status/particle_pipeline_closure_status.json"),
+)
+
+RUNTIME_EXTERNAL_OUTPUTS = (
+    (
+        P_DERIVATION_ROOT / "runtime" / "p_closure_trunk_current.json",
+        Path("P_derivation/runtime/p_closure_trunk_current.json"),
+    ),
+    (
+        P_DERIVATION_ROOT / "runtime" / "thomson_endpoint_contract_current.json",
+        Path("P_derivation/runtime/thomson_endpoint_contract_current.json"),
+    ),
+    (
+        P_DERIVATION_ROOT / "runtime" / "rg_matching_threshold_contract_current.json",
+        Path("P_derivation/runtime/rg_matching_threshold_contract_current.json"),
+    ),
 )
 
 GROUP_ORDER = ["Bosons", "Leptons", "Quarks", "Hadrons"]
@@ -154,6 +177,12 @@ def _copy_outputs(work_particles: Path, current_dir: Path) -> None:
         "runs/status/status_table_forward_current.json",
         "runs/status/exact_fits_only_current.json",
         "runs/status/exact_nonhadron_masses_current.json",
+        "runs/status/particle_derivation_gap_ledger.json",
+        "runs/status/particle_pipeline_closure_status.json",
+        "runs/calibration/direct_top_bridge_contract.json",
+        "runs/flavor/quark_lane_closure_contract.json",
+        "runs/neutrino/neutrino_lane_closure_contract.json",
+        "runs/hadron/ward_projected_spectral_measure_contract.json",
         "runs/neutrino/neutrino_compare_only_scale_fit.json",
         "runs/neutrino/neutrino_two_parameter_exact_adapter.json",
         "runs/neutrino/neutrino_exact_adapter_bridge_coordinate.json",
@@ -164,6 +193,12 @@ def _copy_outputs(work_particles: Path, current_dir: Path) -> None:
     for rel in outputs:
         src = work_particles / rel
         dst = current_dir / rel
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src, dst)
+    for src, rel_dst in RUNTIME_EXTERNAL_OUTPUTS:
+        if not src.exists():
+            raise FileNotFoundError(f"missing canonical external surfaced artifact: {src}")
+        dst = current_dir / rel_dst
         dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(src, dst)
 
@@ -489,6 +524,7 @@ def build_runtime(runtime_root: Path, *, with_hadrons: bool, verbose: bool) -> P
         _run(step, cwd=work_code, verbose=verbose)
 
     _seed_canonical_surface_artifacts(work_particles)
+    _run(["python3", "particles/calibration/derive_direct_top_bridge_contract.py"], cwd=work_code, verbose=verbose)
     if with_hadrons:
         for step in [
             ["python3", "particles/qcd/derive_lambda_msbar_descendant.py"],
