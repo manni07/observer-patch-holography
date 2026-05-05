@@ -302,7 +302,12 @@ For separated cofinal refinement systems, the consensus paper adds an inverse-li
 if finite-stage restriction maps commute with the quotient normal-form maps and holonomy maps,
 and if compatible families are visibly separated on cofinal finite stages, then finite normal
 forms and holonomy obstructions assemble into unique refinement-limit classes with finite-stage
-witnesses for nonzero holonomy. The same consensus surface is classified explicitly as a
+witnesses for nonzero holonomy. It also adds the RG-facing comparison: when a chosen
+coarse-graining channel shadows the finite-stage normal forms and obstruction maps with declared
+defects \(\varepsilon^n\) and \(\varepsilon^h\), reconciling first and then coarse-graining gives
+the same macroscopic law readout as coarse-graining first and then reconciling, up to
+\(\max\{\varepsilon^n,\varepsilon^h\}\); exact naturality is the zero-defect case. The same
+consensus surface is classified explicitly as a
 finite-state exact theorem package plus this conditional inverse-limit bridge: decidable
 normal-form computation with the Lyapunov step bound, collar-local approximate stability only
 through the splice and record controls, a verified rooted-tree packet-net subdomain, and no
@@ -2764,6 +2769,20 @@ then any refinement channel \(\Phi_{\ell\to L}\) compatible with Axiom 3 acts on
 \omega_L\!\bigl(R_{\ell\to L}(\lambda)\bigr).
 \]
 The resulting refinement-stable branch is simply a trajectory or invariant subset of this finite-dimensional multiplier map. Accordingly, when sections speak of a refinement-stable directed colimit of sectors, the refinement-stable qualifier means persistence along this MaxEnt branch itself; the extra ingredients are transportability, symmetry, and the bosonic fiber-functor clauses, and the MaxEnt/mixing package does not decide whether the resulting colimit is trivial or nontrivial.
+
+The consensus paper now makes the state-side coarse-graining connection explicit. Given quotient
+normal-form maps \(n_r\), obstruction maps \(h_r\), and coarse-graining maps
+\((\rho_{sr},\chi_{sr})\), reconciliation commutes with coarse-graining at the macroscopic readout
+scale whenever the two square defects
+\[
+d^Q_r(\rho_{sr}n_s(x),n_r\rho_{sr}(x)),
+\qquad
+d^{\mathcal H}_r(\chi_{sr}h_s(x),h_r\rho_{sr}(x))
+\]
+are controlled. Exact refinement naturality gives zero defect; approximate RG matching is
+theorem-grade only to the extent that these defects are bounded on the selected branch. This keeps
+the MaxEnt refinement map \(R_{\ell\to L}\) connected to the reconciliation law without promoting
+arbitrary coarse-graining channels to OPH laws.
 
 Relevant operators that are neither symmetry-forbidden nor retained in the selected constraint family are precisely the directions that try to push the flow off that stable branch.
 

@@ -31,7 +31,7 @@ The Fixed-Point Computation That Implements Physics}
 \OPHPaperReleaseBanner
 
 \begin{abstract}
-This paper gives the computational spine of Observer-Patch Holography. A universe is modeled as a finite network of observer patches that may disagree on their overlaps. Local repair moves try to reconcile those disagreements. When the repair law lowers the declared mismatch score and respects the overlap contract, the total inconsistency \(\Phi\) becomes a Lyapunov functional and the patch network converges to a unique schedule-independent physical world on the quotient. The paper also identifies the loop obstructions that block global consistency, explains why physical uniqueness lives on gauge-equivalence classes, carries the same normal-form and holonomy data through separated cofinal refinement systems, and gives a fixed-point account of stable records. This is the patch-net theorem package behind the broader relativity, gauge, particle, and observer branches.
+This paper gives the computational spine of Observer-Patch Holography. A universe is modeled as a finite network of observer patches that may disagree on their overlaps. Local repair moves try to reconcile those disagreements. When the repair law lowers the declared mismatch score and respects the overlap contract, the total inconsistency \(\Phi\) becomes a Lyapunov functional and the patch network converges to a unique schedule-independent physical world on the quotient. The paper also identifies the loop obstructions that block global consistency, explains why physical uniqueness lives on gauge-equivalence classes, carries the same normal-form and holonomy data through separated cofinal refinement systems, shows when coarse-graining and reconciliation commute up to controlled error, and gives a fixed-point account of stable records. This is the patch-net theorem package behind the broader relativity, gauge, particle, and observer branches.
 \end{abstract}
 
 \section{Introduction}
@@ -58,13 +58,14 @@ central or quantitatively stable approximately commuting projectors. These resul
 patch-net formulation used in the broader OPH literature, including the fixed-cutoff Bell/CHSH
 package on the companion microphysics surface.
 
-This paper proves five core results:
+This paper proves six core results:
 
 \begin{enumerate}
 \item \textbf{Asynchronous confluence.} For the declared accepted repair law, the local-fit contract makes \(\Phi\) a Lyapunov functional and hence gives termination, while the fixed-cutoff union-collar gluing package gives the local diamond on the physical quotient; under repair completeness, every initial state has a unique normal form, independent of update schedule (Theorem~\ref{thm:confluence}).
 \item \textbf{Cycle obstruction.} For affine overlap constraints over an abelian group, global consistency holds if and only if the holonomy vanishes on every cycle (Theorem~\ref{thm:holonomy}). The parity triangle gives the minimal frustrated example, and Theorem~\ref{thm:higherdefects} extends the same logic to the crossed-module higher-gauge defect hierarchy used later in the framework.
 \item \textbf{Gauge quotient and observable-level confluence.} When local repair is induced on the overlap-invariant quotient, the normal-form map descends to that quotient, and the induced terminal state on every declared physical observable algebra is unique there even when microscopic representatives differ by gauge or sector relabelings inside one quotient-local glued state (Theorems~\ref{thm:gauge}, \ref{thm:obsconfluence}).
 \item \textbf{Refinement-limit consensus classes.} On a separated cofinal refinement system whose restriction maps commute with the finite-stage normal-form and holonomy maps, the quotient normal forms and holonomy obstructions assemble into unique inverse-limit classes with finite-stage visibility (Theorem~\ref{thm:refinement-consensus}).
+\item \textbf{Coarse-graining compatibility.} On any refinement system whose coarse-graining maps shadow finite-stage normal forms and holonomy maps with declared errors, reconciling first and then coarse-graining gives the same macroscopic law data as coarse-graining first and then reconciling, up to those errors; in the exact natural case the error is zero (Theorem~\ref{thm:coarse-grain-consensus}).
 \item \textbf{Record algebra and stability.} On the fixed-cutoff observer-accessible surface, central record projectors carry Born/L\"uders measurement directly, and approximate record projectors inherit explicit \((\varepsilon,\delta_{\mathrm{rec}})\) stability bounds on the same event surface (Theorem~\ref{thm:crdt}).
 \end{enumerate}
 
@@ -885,6 +886,82 @@ leaves uniform complexity bounds, global noisy-consensus control, and automatic 
 naturality for arbitrary changing repair laws as separate branch conditions.
 \end{remark}
 
+\begin{definition}[Controlled coarse-graining / reconciliation square]\label{def:controlled-coarse-consensus}
+Fix refinement stages \(r\preceq s\). Let \(Q_r,Q_s\) be the physical quotient state spaces,
+\(n_r,n_s\) their finite-stage normal-form maps, and \(h_r,h_s\) their holonomy or
+higher-gauge obstruction maps. Let
+\[
+\rho_{sr}:Q_s\to Q_r,
+\qquad
+\chi_{sr}:\mathcal H_s\to\mathcal H_r
+\]
+be the coarse-graining maps on quotient states and obstruction data. Equip \(Q_r\) and
+\(\mathcal H_r\) with pseudometrics \(d^Q_r\) and \(d^{\mathcal H}_r\) that define the
+macroscopic readout scale at stage \(r\).
+
+The square is \((\varepsilon^n_{sr},\varepsilon^h_{sr})\)-controlled when, for every
+\(x\in Q_s\),
+\[
+d^Q_r\!\left(\rho_{sr}(n_s(x)),\,n_r(\rho_{sr}(x))\right)
+\le \varepsilon^n_{sr},
+\]
+and
+\[
+d^{\mathcal H}_r\!\left(\chi_{sr}(h_s(x)),\,h_r(\rho_{sr}(x))\right)
+\le \varepsilon^h_{sr}.
+\]
+The errors are \textbf{cofinally vanishing} when, for every fixed macroscopic stage \(r\) and
+every \(\delta>0\), there is a refinement stage \(s_0\succeq r\) such that
+\(\varepsilon^n_{sr},\varepsilon^h_{sr}<\delta\) for all \(s\succeq s_0\).
+\end{definition}
+
+\begin{theorem}[Coarse-graining commutes with reconciliation up to controlled error]\label{thm:coarse-grain-consensus}
+Suppose the refinement square of Definition~\ref{def:controlled-coarse-consensus} is
+\((\varepsilon^n_{sr},\varepsilon^h_{sr})\)-controlled. Define the coarse-stage consensus readout
+\[
+\mathcal C_r(y):=(n_r(y),h_r(y))
+\]
+and the fine-then-coarse readout
+\[
+\mathcal C_{s\to r}^{\mathrm{fine}}(x):=(\rho_{sr}(n_s(x)),\chi_{sr}(h_s(x))).
+\]
+Then, for every fine state \(x\in Q_s\), the product readout distance between
+\(\mathcal C_{s\to r}^{\mathrm{fine}}(x)\) and \(\mathcal C_r(\rho_{sr}(x))\) is bounded by
+\[
+\max\{\varepsilon^n_{sr},\varepsilon^h_{sr}\}.
+\]
+Thus reconciling at the fine stage and then coarse-graining gives the same macroscopic law data
+as coarse-graining first and reconciling at the coarse stage, up to the declared control errors.
+If the exact naturality clauses of Definition~\ref{def:refinement-consensus} hold, then
+\(\varepsilon^n_{sr}=\varepsilon^h_{sr}=0\). If the errors are cofinally vanishing, the two
+procedures determine the same cylinder values in the inverse-limit topology at every fixed
+macroscopic stage.
+\end{theorem}
+
+\begin{proof}
+The normal-form component of the product readout is bounded by the first inequality in
+Definition~\ref{def:controlled-coarse-consensus}, and the obstruction component is bounded by the
+second. Taking the maximum gives the stated product bound. Exact naturality is precisely the
+special case
+\[
+\rho_{sr}\circ n_s=n_r\circ\rho_{sr},
+\qquad
+\chi_{sr}\circ h_s=h_r\circ\rho_{sr},
+\]
+so both errors vanish there. Cofinal vanishing means that, for any fixed coarse cylinder and any
+desired readout tolerance, all sufficiently fine presentations give the same cylinder value
+within that tolerance, which is convergence in the inverse-limit topology.
+\end{proof}
+
+\begin{remark}[What remains to verify on a concrete RG branch]\label{rem:coarse-grain-scope}
+Theorem~\ref{thm:coarse-grain-consensus} is not a claim that arbitrary renormalization maps
+commute with arbitrary repair laws. It identifies the exact branch burden: derive or estimate the
+two square defects \(\varepsilon^n_{sr}\) and \(\varepsilon^h_{sr}\) from the chosen
+coarse-graining channel, recovery map, decoder, and obstruction readout. The exact refinement
+theorem is the zero-defect case; approximate RG matching is theorem-grade only when these defects
+are explicitly controlled.
+\end{remark}
+
 
 \section{Record Algebras and the Operator Observation Layer}
 
@@ -1120,6 +1197,7 @@ The bridge to physics works as follows in the broader companion corpus:
 \item Overlap Consistency, one of the canonical framework axioms, is the algebraic version of Definition~\ref{def:patchnet}.
 \item The recoverability clause of the canonical Recoverable Generalized Entropy axiom provides the collar factorization $\rho_{ABD} = \bigoplus_\alpha p_\alpha\,\rho^{(\alpha)}_{Ab_L^\alpha}\otimes\rho^{(\alpha)}_{b_R^\alpha D}$ and the declared Petz/Fawzi--Renner recovery channels from which the local repair moves are built (see Appendix~\ref{app:splice} and Definition~\ref{def:oph-repair-map}).
 \item Gauge symmetry as implementation hiding (Theorem~\ref{thm:gauge}) becomes the fixed-cutoff edge-sector package from which the compact-gauge branch, once its coherent refinement transport and compatible finite-fiber premises are supplied, conditionally reconstructs a compact gauge group and, on the realized MAR branch, fixes the Standard Model quotient $\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)/\mathbb{Z}_6$ together with the exact hypercharge lattice and the realized counts \(N_c=3\), \(N_g=3\).
+\item The coarse-graining compatibility theorem (Theorem~\ref{thm:coarse-grain-consensus}) is the link between the finite reconciliation protocol and the refinement/RG language used by the OPH branches: the macroscopic law space is stable when the selected coarse-graining channel shadows the normal-form and obstruction maps with controlled defects.
 \item Stable defects (Corollary~\ref{cor:defects}) become the topologically protected excitations identified with particles on the declared branch.
 \item The record-algebra theorem (Theorem~\ref{thm:crdt}) provides the formal basis for the fixed-cutoff observation layer, where records are carried by central or quantitatively stable approximately commuting projectors in overlap centers.
 \end{itemize}
@@ -1136,7 +1214,7 @@ references, and that companion ledger is the place to look up the definitions.
 
 This paper proves the fixed-point consensus spine of OPH: schedule-independent normal forms,
 holonomy obstructions, gauge-quotient invariance, separated cofinal refinement-limit consensus
-classes, and the fixed-cutoff operator-record theorem.
+classes, controlled coarse-graining compatibility, and the fixed-cutoff operator-record theorem.
 It also proves the full repair-completeness, Petz-domain, and quotient-compatibility package on
 the rooted-tree packet-net domain of Theorem~\ref{thm:tree-packet-domain}, and gives a clean
 law-selection meta-model. The conditional relativity chain and the realized Standard Model
@@ -1170,10 +1248,10 @@ mechanism. A universality claim would require an explicit uniform family of patc
 simulates arbitrary circuits or machines with stated encoding overhead and robustness under
 asynchronous schedules. No such theorem is supplied here.
 
-With those boundaries explicit, six downstream directions are:
+With those boundaries explicit, five downstream directions are:
 
 \begin{enumerate}
-\item \textbf{Coarse-graining.} When does reconciliation commute with renormalization? If you coarse-grain the patch net and then reconcile, do you get the same result as reconciling first and then coarse-graining? The conditions under which these operations commute would connect the discrete model to continuum field theory.
+\item \textbf{Sharper RG-shadowing estimates.} Theorem~\ref{thm:coarse-grain-consensus} closes the abstract reconciliation/coarse-graining square once its normal-form and obstruction defects are supplied. The open quantitative task is to derive model-specific or uniform bounds for \(\varepsilon^n_{sr}\) and \(\varepsilon^h_{sr}\) from concrete OPH coarse-graining channels and recovery decoders.
 
 \item \textbf{Defect classification and refinement-limit transportability.} The fixed-cutoff hierarchy extends from abelian frustrations to crossed-module classes \(q\in \check H^2(N,H\to G)\). The open task is to connect those higher-gauge defect sectors to the refinement-stable transportable sector category used in the broader compact-gauge reconstruction lane.
 
