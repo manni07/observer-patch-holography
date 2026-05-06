@@ -662,9 +662,9 @@ through the selected-class quark and weighted-cycle neutrino sectors.
 
 The fine-structure constant belongs here beside the weak sector. The endpoint
 package isolates the missing fixed-point contribution as
-$0.041163974743011720681199819215801821$ inverse-alpha units. At the pixel value
+$0.041164012378350542050005414212806738$ inverse-alpha units. At the pixel value
 mapped from the CODATA comparison, the required residual is
-$0.041465835978928681137459869870016982\ldots$ beyond the exact one-loop
+$0.041465861005223389065796874868111808\ldots$ beyond the exact one-loop
 continuation. That scalar has to come from the source-side electromagnetic
 transport, including the strong-interaction screening and scheme remainder.
 This is why the later mass tables should not be read as disconnected tricks or

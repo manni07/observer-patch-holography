@@ -68,6 +68,9 @@ def build_no_go(package: dict[str, Any]) -> dict[str, Any]:
         lambda_b = beta_candidate
         endpoint_delta_a = lepton_delta + quark_naive * (Decimal(1) - qcd_x + lambda_a * qcd_x * qcd_x)
         endpoint_delta_b = lepton_delta + quark_naive * (Decimal(1) - qcd_x + lambda_b * qcd_x * qcd_x)
+        target_equivalence_tolerance = Decimal(10) ** Decimal(-68)
+        screen_equivalent = quark_naive * (required_screen - implemented_screen)
+        cq_equivalent = quark_naive * qcd_x * qcd_x * c_q
 
     source_packet = {
         "P": d10["P"],
@@ -106,11 +109,12 @@ def build_no_go(package: dict[str, Any]) -> dict[str, Any]:
             },
             "target_equivalences": {
                 "missing_delta": +missing_delta,
-                "quark_naive_times_screen_gap": +(quark_naive * (required_screen - implemented_screen)),
-                "quark_naive_times_x2_cq": +(quark_naive * qcd_x * qcd_x * c_q),
+                "quark_naive_times_screen_gap": +screen_equivalent,
+                "quark_naive_times_x2_cq": +cq_equivalent,
+                "tolerance": +target_equivalence_tolerance,
                 "all_equal_to_precision": (
-                    missing_delta == quark_naive * (required_screen - implemented_screen)
-                    and missing_delta == quark_naive * qcd_x * qcd_x * c_q
+                    abs(missing_delta - screen_equivalent) <= target_equivalence_tolerance
+                    and abs(missing_delta - cq_equivalent) <= target_equivalence_tolerance
                 ),
             },
             "candidate_failures": {

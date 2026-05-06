@@ -144,9 +144,9 @@ $$
 
 The particle-side endpoint package tells us what is missing from the source
 calculation. At the candidate fixed point, the gap is
-$0.041163974743011720681199819215801821$ inverse-alpha units. At the pixel value
+$0.041164012378350542050005414212806738$ inverse-alpha units. At the pixel value
 above, the required source residual is
-$0.041465835978928681137459869870016982\ldots$ beyond the exact one-loop
+$0.041465861005223389065796874868111808\ldots$ beyond the exact one-loop
 continuation. This is a target for the source-side electromagnetic transport
 map, including the strong-interaction screening and scheme remainder.
 

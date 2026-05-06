@@ -1,6 +1,6 @@
 # Blind Prediction Provenance
 
-Generated: `2026-05-06T07:44:09Z`
+Generated: `2026-05-06T08:52:40Z`
 
 This ledger records target-use and convention-sensitivity status for the public quantitative particle rows.
 

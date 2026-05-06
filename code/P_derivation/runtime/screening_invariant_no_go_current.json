@@ -1,0 +1,74 @@
+{
+  "artifact": "oph_screening_invariant_no_go_certificate",
+  "candidate_failures": {
+    "c_Q_beta_EW_over_2Nc": {
+      "candidate": "0.6666666666666666666666666667",
+      "candidate_minus_required": "0.008640906739511230832563893430",
+      "inverse_alpha_overshoot": "0.0005445115672361146336008890914",
+      "passes": false
+    },
+    "missing_delta_equals_alpha_U": {
+      "candidate": "0.04112433619563048217762968225",
+      "missing_minus_candidate": "0.0003415248095929068881671926182",
+      "passes": false
+    }
+  },
+  "claim_status": "source_invariant_surface_does_not_determine_screening_scalar",
+  "compare_only_targets": {
+    "compare_alpha_inv": "137.035999177",
+    "implemented_transport_delta_alpha_inv": "8.686567842708528400985243306",
+    "missing_source_transport_delta_alpha_inv": "0.04146586100522338906579687487",
+    "required_screening_factor": "0.8954001326476587978082946242",
+    "required_transport_delta_alpha_inv": "8.728033703713751790051040181",
+    "residual_second_order_coefficient": "0.6580257599271554358341027732"
+  },
+  "generated_utc": "2026-05-06T08:52:39Z",
+  "github_issue": 235,
+  "nonidentifiability_witness": {
+    "endpoint_delta_difference": "0.04201037257245950369939776396",
+    "endpoint_delta_lambda_a": "8.686567842708528400985243306",
+    "endpoint_delta_lambda_b": "8.728578215280987904684641070",
+    "family": "S_lambda(P)=1-x(P)+lambda*x(P)^2",
+    "formula_for_difference": "quark_delta_alpha_inv_naive*x^2*(lambda_b-lambda_a)",
+    "lambda_a": "0",
+    "lambda_b": "0.6666666666666666666666666667",
+    "source_hash_independent_of_lambda": true
+  },
+  "promotion_allowed": false,
+  "required_source_object": {
+    "id": "ward_projected_qcd_screening_and_endpoint_remainder",
+    "required_primitives": [
+      "rho_had(s;P)",
+      "Delta_EW(P)",
+      "same_scheme_as_a0(P)",
+      "certified_quadrature_or_tail_bound",
+      "interval_fixed_point_certificate"
+    ],
+    "successor_github_issue": 235
+  },
+  "source_packet": {
+    "P": "1.63096820940395932487927984778264894133598285162792506066615075339077934",
+    "alpha1_mz": "0.0168857080389881618537064993056506113506510541832118793743783188429223615",
+    "alpha2_mz": "0.0337778894489080488323099742951062035087185022303271443455453230833684468",
+    "alpha3_mz": "0.118336027474450483489528543164038192618974830584730972130642113717102779",
+    "alphaY_mz": "0.0101314248233928971122238995833903668103906325099271276246269913057534169",
+    "alpha_U": "0.0411243361956304821776296822498884819818698588278493843972682952880859375",
+    "implemented_screening_factor": "0.886997417689497222193486974085381140729085014098007462394948670320756557",
+    "kernel_evaluation": "closed_form_one_loop",
+    "lepton_delta_alpha_inv": "4.30939786645220402713166737412737953004607541539065117532164689220403498",
+    "mZ_run": "0.0000000000000000075024032389859184088506985112442930948913765877457664128708071281328019",
+    "qcd_x": "0.113002582310502777806513025914618859270914985901992537605051329679243443",
+    "quark_delta_alpha_inv_naive": "4.93481704564398041403651733236928499040364065357436079847572472008251450",
+    "source_anchor_alpha_inv_mz": "128.307965473286248209948959819190019917623867679110780462581208582460997",
+    "transport_kernel": "exact_1loop",
+    "v": "0.0000000000000000201998032397252587525853333185631715349160470057714826336815105586560435"
+  },
+  "source_packet_hash": "3e735ebbf6bc61f287e5e39b2035e207863ff25bd1c8e3406c36bfd4149f574f",
+  "target_equivalences": {
+    "all_equal_to_precision": true,
+    "missing_delta": "0.04146586100522338906579687487",
+    "quark_naive_times_screen_gap": "0.04146586100522338906579687487",
+    "quark_naive_times_x2_cq": "0.04146586100522338906579687487",
+    "tolerance": "0.00000000000000000000000000000000000000000000000000000000000000000001"
+  }
+}

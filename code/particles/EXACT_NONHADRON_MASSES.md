@@ -1,6 +1,6 @@
 # Exact Non-Hadron Masses
 
-Generated: `2026-05-06T07:44:09Z`
+Generated: `2026-05-06T08:52:40Z`
 
 This bundle gives one exact mass output for every non-hadron particle on the declared OPH surfaces.
 It records exact-output surfaces rather than one uniform theorem tier.

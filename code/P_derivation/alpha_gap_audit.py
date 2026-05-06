@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any
 
 
-DEFAULT_REPORT = Path(__file__).resolve().parent / "runtime" / "full_p_alpha_report_p80.json"
+DEFAULT_REPORT = Path(__file__).resolve().parent / "runtime" / "full_p_alpha_report_current.json"
 CODATA_2022_ALPHA_INV = Decimal("137.035999177")
 CODATA_2022_ALPHA_INV_UNCERTAINTY = Decimal("0.000000021")
 

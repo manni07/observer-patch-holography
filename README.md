@@ -72,12 +72,12 @@ with `P = 1.63097210492078846050203640439` and
 promoted prediction tier. The weak-boson pair is compare-only; promotion
 requires the Ward-projected Thomson residual map together with the open
 RG/matching/threshold/scheme packet: scheme lock, threshold map, beta
-provenance, and interval composition. The endpoint package isolates the
-missing fixed-point contribution as
-`0.041163974743011720681199819215801821` inverse-alpha units. At the
+provenance, and interval composition. The closed-form endpoint audit isolates
+the missing fixed-point contribution as
+`0.041164012378350542050005414212806738` inverse-alpha units. At the
 CODATA-mapped pixel value, the source residual target is
-`0.041465835978928681137459869870016982` inverse-alpha units, equivalent to
-`S_required = 0.895400127551185647132725678585532880` in the quark-screening
+`0.041465861005223389065796874868111808` inverse-alpha units, equivalent to
+`S_required = 0.895400132647658797808294624161061733` in the quark-screening
 readout. The
 Higgs lane, selected-class quark rows, and weighted-cycle neutrino branch are
 separate scoped outputs. The available derivation gives no-go boundaries for
@@ -100,7 +100,7 @@ quick view here sticks to direct numeric rows and exact zeros.
 | --- | --- | --- | --- | --- |
 | Gravitational constant | G | 6.6742999959e-11 | 6.67430(15)e-11 | 0.00003σ |
 | Speed of light | c | 299792458 | 299792458 (exact) | match |
-| Fine-structure (inv) | α⁻¹(0) | candidate trunk gives 136.994020662724; endpoint package isolates 0.041163974743 missing at that root | 137.035999177(21) | source residual and matching certificates are work in progress |
+| Fine-structure (inv) | α⁻¹(0) | candidate trunk gives 136.994020662724; closed-form endpoint audit isolates 0.041164012378 on the structured-running root | 137.035999177(21) | source residual and matching certificates are work in progress |
 | Photon mass | m_γ | 0 eV | <1e-18 eV | below bound |
 | Gluon mass | m_g | 0 GeV | 0 GeV | match |
 | Graviton mass | m_grav | 0 eV | <1.76e-23 eV | below bound |

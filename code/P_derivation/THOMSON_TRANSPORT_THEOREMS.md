@@ -38,6 +38,35 @@ alpha_Th^-1(P) = a0(P) + Delta_Th(P).
 The missing source-only theorem is a derivation of `Delta_Th(P)` from the same
 Ward-projected `U(1)_Q` family as `a0(P)`.
 
+## Theorem 0: No Detuning-Only Thomson Bypass
+
+**Status:** closed no-go.
+
+The outer law
+
+```text
+P = phi + sqrt(pi) / A
+```
+
+defines the scalar fixed-point coordinate. It does not identify `A` with the
+Thomson endpoint unless the Ward-projected `U(1)_Q` endpoint map has been
+emitted on the same source branch.
+
+Proof sketch. The D10 source branch fixes `a0(P)`, the electromagnetic inverse
+coupling at `m_Z^2`. The Thomson endpoint is
+
+```text
+A_T(P) = a0(P) + Delta_Th(P).
+```
+
+The hadronic part of `Delta_Th(P)` is a subtracted dispersion functional of a
+positive Ward-projected spectral density `rho_had(s;P)`. Ward transversality,
+positivity, and the outer detuning equation constrain the form of the current
+correlator, but they do not determine that spectral density. Two admissible
+spectral densities can share the same D10 anchor and outer detuning coordinate
+while giving different zero-momentum transport integrals. Therefore the
+detuning coordinate alone cannot be promoted to `alpha_Th^-1(P)`.
+
 ## Theorem 1: Ward-Projected Source Lock
 
 **Status:** closed at criterion level in the paper, not a populated transport
@@ -85,7 +114,7 @@ This theorem identifies the correct lane. It does not by itself compute
 
 ## Theorem 2: Leptonic One-Loop Source Transport
 
-**Status:** implemented as a numerical continuation, conditional on the
+**Status:** implemented with the closed-form one-loop kernel, conditional on the
 Stage-5 charged-lepton mass emitter.
 
 Assume the source branch emits charged-lepton masses
@@ -116,7 +145,7 @@ What remains to promote this to theorem grade:
 
 1. prove that the Stage-5 lepton mass emitter is the source-only emitter on the
    same branch used by `a0(P)`;
-2. attach a certified quadrature error bound;
+2. evaluate the closed form in a directed-rounding interval backend;
 3. prove the scheme match between `a0(P)` and the zero-momentum readout.
 
 ## Theorem 3: Hadronic Spectral Transport
@@ -201,28 +230,28 @@ alpha_Th^-1(P) = a0(P) + Delta_Th(P)
 
 is the source-only Thomson endpoint on the Ward-projected `U(1)_Q` lane.
 
-At the p80 report root,
+At the runtime report root,
 
 ```text
-a0(P) = 128.308268057804920945587248022104657547...
+a0(P) = 128.308268045165213892552005990181778935...
 ```
 
 The compare-only CODATA target would require
 
 ```text
-Delta_Th(P) = 8.727731119195079054412751977895342453...
+Delta_Th(P) = 8.727731131834786107447994009818221065...
 ```
 
 The implemented exact one-loop continuation gives
 
 ```text
-Delta_impl(P) = 8.686567144452067333731552158679540632...
+Delta_impl(P) = 8.686567119456435565397988595605414327...
 ```
 
 so the source-only theorem must account for
 
 ```text
-Delta_missing(P) = 0.041163974743011720681199819215801821...
+Delta_missing(P) = 0.041164012378350542050005414212806738...
 ```
 
 without using the measured endpoint as an input.
@@ -234,16 +263,16 @@ the outer equation from the CODATA/NIST comparison value:
 P_C = 1.630968209403959324879279847782648941...
 a0(P_C) = 128.307965473286248209948959819190019918...
 Delta_required(P_C) = 8.728033703713751790051040180809980082...
-Delta_impl_exact(P_C) = 8.686567867734823108913580310939963101...
-Delta_source_residual(P_C) = 0.041465835978928681137459869870016982...
+Delta_impl_exact(P_C) = 8.686567842708528400985243305941868274...
+Delta_source_residual(P_C) = 0.041465861005223389065796874868111808...
 ```
 
 Equivalently, if \(x=N_c\alpha_3(m_Z;P_C)/\pi\) and the implemented quark
 screen is \(1-x\), the endpoint package requires
 
 ```text
-S_required(P_C) = 0.895400127551185647132725678585532880...
-c_Q(P_C) = 0.658025360816792342502465198049036592...
+S_required(P_C) = 0.895400132647658797808294624161061733...
+c_Q(P_C) = 0.658025759927155435834102773237102361...
 ```
 
 where \(c_Q=(S_{\rm required}-(1-x))/x^2\). This is a compact scalar form of

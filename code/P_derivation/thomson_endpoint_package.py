@@ -26,7 +26,7 @@ from alpha_gap_audit import (
 from paper_math import PaperMathContext, _dec, to_serializable
 
 
-DEFAULT_REPORT = Path(__file__).resolve().parent / "runtime" / "full_p_alpha_report_p80.json"
+DEFAULT_REPORT = Path(__file__).resolve().parent / "runtime" / "full_p_alpha_report_current.json"
 DEFAULT_OUT = Path(__file__).resolve().parent / "runtime" / "thomson_endpoint_package_current.json"
 
 
@@ -85,6 +85,8 @@ def _endpoint_at_compare_point(
             residual = compare_alpha_inv - implemented_endpoint
             return {
                 "transport_kernel": running["transport_kernel"],
+                "kernel_evaluation": running.get("kernel_evaluation"),
+                "quadrature_error_bound": running.get("quadrature_error_bound"),
                 "source_anchor_alpha_inv_mz": +d10.alpha_em_inv_mz,
                 "implemented_transport_delta_alpha_inv": +implemented_delta,
                 "implemented_endpoint_alpha_inv": +implemented_endpoint,

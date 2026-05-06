@@ -1,0 +1,80 @@
+{
+  "B_certificate": {
+    "B_center_at_compare_pixel": "136.9945333159947766109342031",
+    "B_image_target_using_L_B": {
+      "hi": "136.994533316192986304305466021175272502749183970701373031615950008100918546159389117020589968294",
+      "lo": "136.994533315796566917562940229088503880834663873196451814218808079613975453840610882979410031706"
+    },
+    "B_prime_abs_target": "100",
+    "definition": "a0 + Delta_lep_closed_form + (1 - Nc alpha3/pi) Delta_q_naive_closed_form",
+    "kernel": "closed_form_one_loop",
+    "quadrature_error": {
+      "hi": "0",
+      "lo": "0"
+    },
+    "requires_interval_D10_root_boxes": true,
+    "status": "target_bound_not_interval_AD_certificate"
+  },
+  "R_Q_certificate": {
+    "R_Q_image_required": {
+      "hi": "0.041465882203433082437059770911496119165336126803548185781191920386024546159389117020589968294",
+      "lo": "0.041465839807013695694533978824727497250816029298626968384049991899081453840610882979410031706"
+    },
+    "R_Q_prime_abs_target": "1000",
+    "codata_used": false,
+    "contract_artifact": "runtime/r_q_residual_contract_current.json",
+    "same_scheme_as_B_required": true,
+    "source_only": true,
+    "status": "missing_source_artifact"
+  },
+  "artifact": "oph_fine_structure_interval_certificate",
+  "blocking_items": [
+    "source-emitted R_Q(P) map",
+    "directed-rounding interval backend",
+    "interval D10 root boxes and derivative bounds",
+    "same-scheme Ward-projected spectral quadrature bound"
+  ],
+  "composition": {
+    "A_T_image_if_R_Q_contract_is_met": {
+      "hi": "137.035999198396419386742525792086768621914520097504921217397141928486943092318778234042179936588",
+      "lo": "137.035999155603580613257474207913231378085479902495078782602858071513056907681221765957820063412"
+    },
+    "R_Q_prime_ceiling_if_L_B_target_holds": "10494.84006034314249199470020",
+    "banach_conditional_pass": true,
+    "contraction_kappa_with_target_bounds": "0.1038241251151434117051522672",
+    "self_map_conditional_on_R_Q": false
+  },
+  "conclusion": {
+    "reason": "The Banach theorem is conditional until R_Q(P) and theorem-grade interval arithmetic are supplied.",
+    "unique_fixed_point_in_I_P": false
+  },
+  "constants": {
+    "I_A": {
+      "hi": "137.035999198",
+      "lo": "137.035999156"
+    },
+    "I_P": {
+      "hi": "1.63096820940594142181299247674308278444555545211544966675313646303321405546159389117020589968294",
+      "lo": "1.63096820940197722794617470934808521861876012975088712863624746040844487510870170564927346371830"
+    },
+    "phi": {
+      "hi": "1.6180339887498948482045868343656381177203091798057628621354486227052604628189024497072072042",
+      "lo": "1.6180339887498948482045868343656381177203091798057628621354486227052604628189024497072072042"
+    },
+    "sqrt_pi": {
+      "hi": "1.7724538509055160272981674833411451827975494561223871282138077898529112845910321813749506567",
+      "lo": "1.7724538509055160272981674833411451827975494561223871282138077898529112845910321813749506567"
+    }
+  },
+  "generated_utc": "2026-05-06T08:52:40Z",
+  "github_issue": 235,
+  "interval_backend": {
+    "library": "DecimalIntervalBackend",
+    "precision_bits": null,
+    "precision_decimal_digits": 96,
+    "promotion_backend_required": "arb_or_mpfi_directed_outward",
+    "rounding": "high_precision_decimal_with_explicit_padding_not_theorem_grade"
+  },
+  "promotion_allowed": false,
+  "status": "blocked_missing_R_Q"
+}

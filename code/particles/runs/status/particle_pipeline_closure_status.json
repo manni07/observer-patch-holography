@@ -22,6 +22,13 @@
       "promotion_allowed": false,
       "status": "hard_no_go_current_corpus_compare_only_direct_top_codomain"
     },
+    "fine_structure_interval_certificate": {
+      "artifact": "oph_fine_structure_interval_certificate",
+      "exists": true,
+      "path": "P_derivation/runtime/fine_structure_interval_certificate_current.json",
+      "promotion_allowed": false,
+      "status": "blocked_missing_R_Q"
+    },
     "gap_ledger": {
       "artifact": "oph_particle_derivation_gap_ledger",
       "exists": true,
@@ -64,12 +71,26 @@
       "promotion_allowed": null,
       "status": "target_free_public_exact_yukawa_derivation_closed"
     },
+    "r_q_residual_contract": {
+      "artifact": "oph_r_q_residual_map_contract",
+      "exists": true,
+      "path": "P_derivation/runtime/r_q_residual_contract_current.json",
+      "promotion_allowed": false,
+      "status": "blocked_missing_source_R_Q"
+    },
     "rg_matching_threshold_contract": {
       "artifact": "oph_rg_matching_threshold_contract",
       "exists": true,
       "path": "P_derivation/runtime/rg_matching_threshold_contract_current.json",
       "promotion_allowed": false,
       "status": "constructive_contract_emitted_not_rg_matching_theorem"
+    },
+    "screening_invariant_no_go": {
+      "artifact": "oph_screening_invariant_no_go_certificate",
+      "exists": true,
+      "path": "P_derivation/runtime/screening_invariant_no_go_current.json",
+      "promotion_allowed": false,
+      "status": "source_invariant_surface_does_not_determine_screening_scalar"
     },
     "thomson_endpoint_contract": {
       "artifact": "oph_ward_projected_thomson_endpoint_contract",
@@ -98,7 +119,7 @@
     "obstruction_only_worker_result_allowed": true,
     "p_trunk_candidate_only": true
   },
-  "generated_utc": "2026-05-06T07:44:09Z",
+  "generated_utc": "2026-05-06T08:52:40Z",
   "issue_gates": [
     {
       "chrome_workers": "not_needed_for_closed_package",
@@ -116,9 +137,12 @@
       "chrome_workers": "constructive_only_for_source_residual_map",
       "closable_now": false,
       "hadron_dependency_hardware_gated": true,
+      "interval_certificate_artifact": "P_derivation/runtime/fine_structure_interval_certificate_current.json",
       "issue": 235,
       "local_next_artifact": "P_derivation/runtime/thomson_endpoint_contract_current.json",
+      "no_go_artifact": "P_derivation/runtime/screening_invariant_no_go_current.json",
       "package_artifact": "P_derivation/runtime/thomson_endpoint_package_current.json",
+      "residual_contract_artifact": "P_derivation/runtime/r_q_residual_contract_current.json",
       "state": "open_source_residual_map_and_interval_certificate",
       "title": "Source residual map and interval certificate"
     },

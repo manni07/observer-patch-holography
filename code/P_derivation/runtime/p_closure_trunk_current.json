@@ -105,7 +105,7 @@
     "outer_equation_residual": "0.00000000000000000000000000000",
     "source_anchor_alpha_inv_mz": "128.308268762616913741791069064"
   },
-  "generated_utc": "2026-05-06T07:43:52Z",
+  "generated_utc": "2026-05-06T08:52:26Z",
   "promotion_gates": [
     {
       "github_issue": 235,
@@ -149,6 +149,7 @@
         0
       ]
     },
+    "kernel_evaluation": "asymptotic_log_formula",
     "koide_delta": "0.222222222222222222222222222222",
     "lepton_delta_alpha_inv": "4.30915784652033317138513023722",
     "mass_source": "internal_stage5_continuation",
@@ -162,6 +163,7 @@
       "tau": "0.000000000000000000145414596631943438076386576486",
       "u": "0.000000000000000000000306117555098609752832359119188"
     },
+    "quadrature_error_bound": null,
     "quark_delta_alpha_inv_naive": "4.93416686972133091685895423317",
     "quark_delta_alpha_inv_screened": "4.37659405358695822654244349203",
     "quark_screening_factor": "0.886997576114432673783199878200",

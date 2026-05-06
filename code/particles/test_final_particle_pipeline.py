@@ -17,9 +17,12 @@ def test_final_particle_pipeline_orders_contracts_before_predictions() -> None:
     steps = list(build_steps())
     ids = [step.id for step in steps]
 
-    assert ids[0:3] == [
+    assert ids[0:6] == [
         "p_closure_trunk",
         "thomson_endpoint_contract",
+        "thomson_endpoint_package",
+        "screening_invariant_no_go",
+        "fine_structure_interval_certificate",
         "rg_matching_threshold_contract",
     ]
     assert ids.index("pipeline_closure_status_bootstrap") < ids.index("blind_prediction_provenance")
@@ -28,6 +31,8 @@ def test_final_particle_pipeline_orders_contracts_before_predictions() -> None:
     assert ids.index("final_end_to_end_predictions") < ids.index("derivation_chain_closure_matrix")
     assert ids[-1] == "mass_derivation_svg"
     scripts = {step.script for step in steps}
+    assert "P_derivation/screening_invariant_no_go.py" in scripts
+    assert "P_derivation/thomson_endpoint_interval_certificate.py" in scripts
     assert "particles/hadron/derive_ward_projected_spectral_measure_contract.py" in scripts
     assert "particles/flavor/derive_quark_class_uniform_public_frame_descent_obstruction.py" in scripts
     assert "particles/leptons/derive_charged_end_to_end_impossibility_theorem.py" in scripts

@@ -1,0 +1,32 @@
+{
+  "artifact": "oph_r_q_residual_map_contract",
+  "forbidden_inputs": [
+    "CODATA/NIST alpha",
+    "compare_alpha_inv",
+    "P_C residual",
+    "S_required",
+    "c_Q target"
+  ],
+  "generated_utc": "2026-05-06T08:52:40Z",
+  "github_issue": 235,
+  "promotion_allowed": false,
+  "required_center_at_compare_pixel": "0.04146586100522338906579687487",
+  "required_image_on_I_P": {
+    "hi": "0.041465882203433082437059770911496119165336126803548185781191920386024546159389117020589968294",
+    "lo": "0.041465839807013695694533978824727497250816029298626968384049991899081453840610882979410031706"
+  },
+  "required_map": "R_Q(P)=Delta_had_src(P)+Delta_EW_src(P)-implemented_free_quark_screen_component(P)",
+  "required_prime_abs_target": "1000",
+  "same_branch_requirements": [
+    "same_D10_source_family_as_a0(P)",
+    "same_Ward_projected_U1_Q_current",
+    "same_matching_scheme_as_B(P)",
+    "certified_quadrature_or_tail_bound"
+  ],
+  "source_only_guard": {
+    "codata_used_to_construct_R_Q": false,
+    "comparison_values_allowed_only_for_target_interval": true,
+    "measured_endpoint_used_to_construct_R_Q": false
+  },
+  "status": "blocked_missing_source_R_Q"
+}

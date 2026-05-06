@@ -119,27 +119,29 @@ promotion rule. The short version is:
 
 - the D10 source map and the outer fixed-point witness are implemented
 - the default exact one-loop readout gives
-  `alpha^-1 = 136.994835202256988279318800180784...`
+  `alpha^-1 = 136.994835164621649457949994585787...`
 - the 2022 CODATA/NIST compare-only value is
   `alpha^-1(0) = 137.035999177(21)`
 - the missing term is a source-only Thomson transport contribution of
-  `0.0411639747430117206811998192158...` in inverse-alpha units
+  `0.0411640123783505420500054142128...` in inverse-alpha units
 - at the CODATA-mapped pixel point
   `P=1.630968209403959324879279847782648941...`, the endpoint package gives
   `a0(P)=128.307965473286248209948959819190019918...`,
   `Delta_required(P)=8.728033703713751790051040180809980082...`, and
-  `Delta_source_residual(P)=0.041465835978928681137459869870016982...`
+  `Delta_source_residual(P)=0.041465861005223389065796874868111808...`
 - the residual is equivalent to a required Ward-projected quark-screening factor
-  `S_required=0.895400127551185647132725678585532880...`, or
-  `c_Q=0.658025360816792342502465198049036592...` in the parameterization
+  `S_required=0.895400132647658797808294624161061733...`, or
+  `c_Q=0.658025759927155435834102773237102361...` in the parameterization
   `S=1-x+c_Q x^2`, with `x=N_c alpha_3(m_Z;P)/pi`
 
 Run the audit after producing a report:
 
 ```bash
-python3 alpha_gap_audit.py --report runtime/full_p_alpha_report_p80.json
-python3 thomson_endpoint_package.py --report runtime/full_p_alpha_report_p80.json
-python3 transport_theorem_manifest.py --report runtime/full_p_alpha_report_p80.json
+python3 alpha_gap_audit.py --report runtime/full_p_alpha_report_current.json
+python3 thomson_endpoint_package.py --report runtime/full_p_alpha_report_current.json
+python3 screening_invariant_no_go.py
+python3 thomson_endpoint_interval_certificate.py
+python3 transport_theorem_manifest.py --report runtime/full_p_alpha_report_current.json
 ```
 
 ## Usage

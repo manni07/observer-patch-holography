@@ -1,6 +1,6 @@
 # Particle Derivation Gap Ledger
 
-Generated: `2026-05-06T07:44:09Z`
+Generated: `2026-05-06T08:52:40Z`
 
 Systematic claim-safe queue after the five-equation P-trunk simplification.
 
@@ -40,7 +40,7 @@ The remaining work is grouped into coupled closure packets rather than a one-blo
 | --- | --- | --- | --- | --- |
 | `pclosure.compressed-trunk-artifact` | P closure | `candidate_artifact` | #224 | Keep emitting p_closure_trunk_current.json and use it as audit metadata. |
 | `d10.ward-projected-thomson-endpoint` | D10 electromagnetic endpoint | `closed_blocker_isolated_endpoint_package` | #223 | Keep the package as the closed blocker-isolation artifact for issue #223. |
-| `d10.source-residual-map-and-interval-certificate` | D10 electromagnetic endpoint | `open_source_residual_map_and_interval_certificate` | #235 | Emit a source-only residual map that matches the endpoint package, including rho_had(s;P) or an equivalent Ward-projected spectral primitive, matching remainder, and certified quadrature bounds. |
+| `d10.source-residual-map-and-interval-certificate` | D10 electromagnetic endpoint | `open_source_residual_map_and_interval_certificate` | #235 | Emit a source-only residual map that matches the endpoint package, including rho_had(s;P) or an equivalent Ward-projected spectral primitive, matching remainder, certified quadrature bounds, and the interval certificate for the final map. |
 | `d10.rg-matching-threshold-scheme` | D10 running and matching | `open_theorem_gap` | #32 | Turn the running/matching package into an OPH edge-sector theorem or explicitly keep it as a declared convention in every prediction surface. |
 | `pclosure.certified-codepath-adoption` | P closure | `blocked_pending_certified_root` | #224 | When issues 235 and 32 close, switch particle builders to the certified trunk artifact and make compare-only or historical P paths non-default. |
 | `charged.determinant-normalization-transport` | Charged leptons | `closed_corpus_limited_charged_end_to_end_no_go` | #201 | Keep charged masses suppressed on the public theorem lane. Reopen only for a theorem-grade uncentered trace lift proving 3 mu(r) = sum_e M_e^ch log q_e(r), equivalently zero normalization defect N_det(P), on the physical charged branch. |

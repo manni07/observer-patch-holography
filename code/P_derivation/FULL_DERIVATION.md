@@ -116,15 +116,15 @@ with a simple quark screening factor:
 That gives
 
 ```text
-Delta_impl(P) = 8.686567144452067333731552158679540632253260231830378...
+Delta_impl(P) = 8.68656711945643556539798859560541432657857...
 alpha_impl^-1 = a0(P) + Delta_impl(P)
-              = 136.994835202256988279318800180784198179291625677674792...
+              = 136.994835164621649457949994585787193262029...
 ```
 
 The closure residual is small:
 
 ```text
-alpha_fixed_point_residual = -1.1689e-29
+alpha_fixed_point_residual = 9.3529e-11
 ```
 
 So the fixed-point algebra has converged.
@@ -136,13 +136,13 @@ term would need to be
 
 ```text
 Delta_required(P) = 137.035999177 - a0(P)
-                  = 8.727731119195079054412751977895342452961634554155586...
+                  = 8.727731131834786107447994009818221064550...
 ```
 
 The transport term is short by
 
 ```text
-Delta_missing(P) = 0.041163974743011720681199819215801820708374322325208...
+Delta_missing(P) = 0.041164012378350542050005414212806737971...
 ```
 
 Equivalently,
@@ -217,9 +217,11 @@ can be compared with `137.035999177(21)`.
 After generating a full report, run:
 
 ```bash
-python3 alpha_gap_audit.py --report runtime/full_p_alpha_report_p80.json
-python3 thomson_endpoint_package.py --report runtime/full_p_alpha_report_p80.json
-python3 transport_theorem_manifest.py --report runtime/full_p_alpha_report_p80.json
+python3 alpha_gap_audit.py --report runtime/full_p_alpha_report_current.json
+python3 thomson_endpoint_package.py --report runtime/full_p_alpha_report_current.json
+python3 screening_invariant_no_go.py
+python3 thomson_endpoint_interval_certificate.py
+python3 transport_theorem_manifest.py --report runtime/full_p_alpha_report_current.json
 ```
 
 The command prints the implemented transport term, the required compare-only
@@ -234,10 +236,10 @@ CODATA-mapped pixel point it reports
 P_C = 1.630968209403959324879279847782648941...
 a0(P_C) = 128.307965473286248209948959819190019918...
 Delta_required(P_C) = 8.728033703713751790051040180809980082...
-Delta_impl_exact(P_C) = 8.686567867734823108913580310939963101...
-Delta_source_residual(P_C) = 0.041465835978928681137459869870016982...
-S_required(P_C) = 0.895400127551185647132725678585532880...
-c_Q(P_C) = 0.658025360816792342502465198049036592...
+Delta_impl_exact(P_C) = 8.686567842708528400985243305941868274...
+Delta_source_residual(P_C) = 0.041465861005223389065796874868111808...
+S_required(P_C) = 0.895400132647658797808294624161061733...
+c_Q(P_C) = 0.658025759927155435834102773237102361...
 ```
 
 The scalar \(c_Q\) is defined by \(S_{\rm required}=1-x+c_Qx^2\), with

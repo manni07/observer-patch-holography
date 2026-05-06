@@ -21,7 +21,7 @@
       "electroweak_wz"
     ]
   },
-  "generated_utc": "2026-05-06T07:44:09Z",
+  "generated_utc": "2026-05-06T08:52:40Z",
   "particle_five_gates": {
     "153": {
       "chrome_workers": "do_not_use_for_backend_execution",
@@ -85,9 +85,12 @@
       "chrome_workers": "constructive_only_for_source_residual_map",
       "closable_now": false,
       "hadron_dependency_hardware_gated": true,
+      "interval_certificate_artifact": "P_derivation/runtime/fine_structure_interval_certificate_current.json",
       "issue": 235,
       "local_next_artifact": "P_derivation/runtime/thomson_endpoint_contract_current.json",
+      "no_go_artifact": "P_derivation/runtime/screening_invariant_no_go_current.json",
       "package_artifact": "P_derivation/runtime/thomson_endpoint_package_current.json",
+      "residual_contract_artifact": "P_derivation/runtime/r_q_residual_contract_current.json",
       "state": "open_source_residual_map_and_interval_certificate",
       "title": "Source residual map and interval certificate"
     },
