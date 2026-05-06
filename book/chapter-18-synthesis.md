@@ -134,6 +134,11 @@ $$
 
 with $A_T(P)=\alpha_{\mathrm{em}}^{-1}(0;P)$.
 
+The value is forced in OPH because the same cell cannot choose one value for
+its geometry and another value for electromagnetic observation. The
+fine-structure constant is the electromagnetic width that makes both readings
+describe the same local pixel.
+
 This is the cleanest way to say what the fine-structure constant means in OPH.
 It is the nonzero detuning of a holographic screen cell. From the outside, the
 cell is displaced from perfect self-similar equilibrium. From the inside, the

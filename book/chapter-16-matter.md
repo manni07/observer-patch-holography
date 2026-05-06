@@ -94,6 +94,8 @@ The calculation starts with the golden-ratio screen balance, uses the boundary
 $\sqrt{\pi}$ normalization for the electromagnetic detuning, runs the source
 map through unification and electroweak mixing, and reads the endpoint through
 the Ward-projected electromagnetic channel.
+The value is forced because the pixel has one geometry and one electromagnetic
+readout, and those two descriptions meet at a single fixed point.
 
 The weak-boson pair and the familiar low-energy electromagnetic strength come
 from one continuous construction. The status ledger records the diagnostic

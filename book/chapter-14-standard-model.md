@@ -660,6 +660,9 @@ The calculation runs from golden-ratio entropy balance to the boundary
 $\sqrt{\pi}$ width, through the source map for the unification scale and
 running gauge couplings, into the electroweak anchor, and then through the
 Ward-projected electromagnetic channel to the Thomson endpoint.
+The value is forced because the same local pixel has to satisfy the outside
+geometry equation and the inside electromagnetic endpoint equation at the same
+time.
 
 The fine-structure constant belongs here beside the weak sector. It is the
 local electromagnetic width of the observer-supporting pixel. From there the

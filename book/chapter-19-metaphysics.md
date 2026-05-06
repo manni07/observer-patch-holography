@@ -85,6 +85,10 @@ with
 
 $$\alpha^{-1}(0)=137.035999177(21).$$
 
+The constant represents the electromagnetic width of the smallest
+observer-supporting pixel. Its value is forced because the inside and outside
+descriptions of that pixel have to land on the same number.
+
 Here the philosophical point is that a famous "free
 constant" is tied to the same local screen scale that organizes the particle
 sector.
