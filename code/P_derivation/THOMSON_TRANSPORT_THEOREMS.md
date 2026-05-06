@@ -214,7 +214,9 @@ bound.
 
 ## Theorem 5: Full Thomson Endpoint
 
-**Status:** endpoint package closed for issue #223; source residual and interval certificate tracked by issue #235.
+**Status:** endpoint package closed for issue #223; source-residual
+non-identifiability boundary closed for issue #235. Exact-alpha promotion
+requires the source spectral theorem named below.
 
 If Theorems 2, 3, and 4 are closed on the same source family and scheme, define
 
@@ -258,6 +260,77 @@ without using the measured endpoint as an input.
 
 The endpoint package also evaluates the same question at the pixel obtained by
 the outer equation from the CODATA/NIST comparison value:
+
+## Theorem 6: Corpus-Limited Non-Identifiability of `R_Q(P)`
+
+**Status:** closed no-go for the current corpus; issue #235 is closable as
+first missing lemma isolated, not as an alpha promotion.
+
+Let the current source corpus consist of the OPH axioms, realized Standard
+Model branch, D10 source packet, outer detuning equation, Ward-projected
+`U(1)_Q` lane criterion, and implemented closed-form baseline `B(P)`. This
+corpus determines `a0(P)` and the admissible electromagnetic lane. It does not
+determine a unique source residual
+
+```text
+R_Q(P) = Delta_had_src(P) + Delta_EW_src(P)
+         - Delta_q_screened_impl(P).
+```
+
+Reason. The hadronic endpoint is a subtracted dispersion functional of a
+positive Ward-projected spectral measure:
+
+```text
+Delta_had_src(P) = integral K_P(s) dmu_had^Q(s;P).
+```
+
+Ward transversality fixes the tensor form of the current correlator, positivity
+places `dmu_had^Q` in a positive cone, threshold support restricts its support,
+and the high-energy tail gives asymptotic conditions. Any finite package of
+such constraints can be written as finitely many linear conditions
+
+```text
+integral f_i(s;P) dmu(s;P) = c_i(P).
+```
+
+Choose more support points than there are constraints. There is a nonzero
+signed atomic perturbation `nu` that leaves all listed constraints fixed. Unless
+the endpoint kernel `K_P` lies in the span of the constraint kernels, which the
+current corpus does not prove, `integral K_P dnu` is nonzero. For a sufficiently
+small perturbation around a strictly positive baseline measure, both
+`mu + epsilon nu` and `mu - epsilon nu` remain admissible but produce different
+Thomson endpoint transports.
+
+The runtime screening witness gives the same obstruction in finite form:
+
+```text
+S_lambda(P) = 1 - x(P) + lambda x(P)^2,
+x(P) = N_c alpha_3(m_Z;P) / pi.
+```
+
+The source packet hash is independent of `lambda`, while different `lambda`
+values change the endpoint transport at the scale of the required residual.
+Therefore neither `S_required`, `c_Q`, nor a CODATA-mapped scalar residual can
+be promoted as an OPH derivation.
+
+The minimal new theorem is:
+
+```text
+WardProjectedHadronicSpectralEmission_Q:
+  OPH axioms + realized SM branch + D10 source packet
+  -> rho_had(s;P), Delta_EW_src(P), scheme lock,
+     quadrature/tail bound, derivative bound.
+```
+
+Only after that object is emitted can the conditional interval certificate be
+upgraded to a theorem-grade proof for
+
+```text
+G(P) = phi + sqrt(pi) / (B(P) + R_Q(P)).
+```
+
+This closes the #235 boundary as a blocker-isolation theorem. It does not close
+the exact fine-structure derivation.
 
 ```text
 P_C = 1.630968209403959324879279847782648941...

@@ -64,8 +64,9 @@ def build_payload() -> dict[str, Any]:
                 "alpha_inv": final_predictions["p_closure"]["alpha_inv"],
             },
             "promotable": False,
-            "open_gates": [32, 235, 224],
-            "next_artifact": "code/P_derivation/runtime/rg_matching_threshold_contract_current.json + code/P_derivation/runtime/thomson_endpoint_package_current.json",
+            "open_gates": [224],
+            "stage_gate": "WardProjectedHadronicSpectralEmission_Q + full interval certificate",
+            "next_artifact": "code/P_derivation/runtime/r_q_residual_contract_current.json + code/P_derivation/runtime/fine_structure_interval_certificate_current.json",
         },
         {
             "chain": "structural_massless_bosons",
@@ -85,8 +86,9 @@ def build_payload() -> dict[str, Any]:
                 "z_boson": predictions["z_boson"]["value"],
             },
             "promotable": False,
-            "open_gates": [32, 235, 224],
-            "next_artifact": "code/P_derivation/runtime/rg_matching_threshold_contract_current.json",
+            "open_gates": [224],
+            "stage_gate": "certified P root after source spectral endpoint",
+            "next_artifact": "code/P_derivation/runtime/r_q_residual_contract_current.json",
         },
         {
             "chain": "higgs_top_declared_surface",

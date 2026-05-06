@@ -7,8 +7,14 @@
     "S_required",
     "c_Q target"
   ],
-  "generated_utc": "2026-05-06T08:52:40Z",
+  "generated_utc": "2026-05-06T09:55:14Z",
   "github_issue": 235,
+  "issue_235_resolution": {
+    "close_recommendation": "close_as_first_missing_lemma_isolated",
+    "exact_alpha_promoted": false,
+    "first_missing_lemma": "source-emitted same-scheme Ward-projected R_Q(P)",
+    "minimal_new_theorem": "WardProjectedHadronicSpectralEmission_Q"
+  },
   "promotion_allowed": false,
   "required_center_at_compare_pixel": "0.04146586100522338906579687487",
   "required_image_on_I_P": {
@@ -28,5 +34,5 @@
     "comparison_values_allowed_only_for_target_interval": true,
     "measured_endpoint_used_to_construct_R_Q": false
   },
-  "status": "blocked_missing_source_R_Q"
+  "status": "closed_blocker_isolated_missing_source_R_Q"
 }

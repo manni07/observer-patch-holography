@@ -4,7 +4,7 @@ goal: "status-tiered particle-spectrum ledger from the candidate P-closure branc
 notes:
   - "Candidate branch values: P = 1.63097210492078846050203640439 and alpha_cand^-1 = 136.994020662724205139718642793."
   - "This ledger is conservative: compare-only rows, target-anchored witnesses, and corpus-limited no-go boundaries sit outside live target-free predictions."
-  - "Issues #199, #201, and #207 have corpus-limited no-go status; #223, #224, #32, and #234 have open-gate status."
+  - "Issues #199, #201, #207, #223, #235, and #32 have closed blocker, no-go, or declared-convention status; #224 and #234 have open-gate status."
 entries:
   - id: structural.massless.photon
     output_keys: ["m_gamma"]
@@ -48,7 +48,7 @@ entries:
       Z_compare_only_GeV: 91.18797809193725
       W_target_free_continuation_GeV: 80.37700001539531
       Z_target_free_continuation_GeV: 91.18797807794321
-    blocked_by: ["#223", "#224", "#32", "#234"]
+    blocked_by: ["#224", "#234", "WardProjectedHadronicSpectralEmission_Q stage gate"]
   - id: calibration.d11.higgs_top
     output_keys: ["crit_mt_MS", "crit_mt_pole", "crit_mH_tree"]
     label: "D11 Higgs/top calibration theorem"

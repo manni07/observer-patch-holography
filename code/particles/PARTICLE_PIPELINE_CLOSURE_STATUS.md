@@ -1,6 +1,6 @@
 # Particle Pipeline Closure Status
 
-Generated: `2026-05-06T08:52:40Z`
+Generated: `2026-05-06T09:55:14Z`
 
 Single simplified closure gate for the non-hadron particle pipeline.
 
@@ -16,9 +16,9 @@ Single simplified closure gate for the non-hadron particle pipeline.
 | Issue | State | Closable | Local next artifact | Chrome policy |
 | --- | --- | --- | --- | --- |
 | #223 | `closed_blocker_isolated_endpoint_package` | `True` | `P_derivation/runtime/thomson_endpoint_package_current.json` | not_needed_for_closed_package |
-| #235 | `open_source_residual_map_and_interval_certificate` | `False` | `P_derivation/runtime/thomson_endpoint_contract_current.json` | constructive_only_for_source_residual_map |
+| #235 | `closed_blocker_isolated_source_residual_no_go` | `True` | `P_derivation/runtime/thomson_endpoint_contract_current.json` | not_needed_until_source_spectral_object_exists |
 | #224 | `open_waiting_certified_root` | `False` | `P_derivation/runtime/p_closure_trunk_current.json` | not_useful_until_endpoint_and_interval_gates_close |
-| #32 | `open_constructive_contract` | `False` | `P_derivation/runtime/rg_matching_threshold_contract_current.json` | only_after_beta_threshold_packet_is_populated |
+| #32 | `closed_declared_convention_contract` | `True` | `P_derivation/runtime/rg_matching_threshold_contract_current.json` | not_needed_for_closed_contract |
 | #153 | `closed_out_of_scope_computationally_blocked` | `True` | `particles/runs/hadron/ward_projected_spectral_measure_contract.json` | do_not_use_for_backend_execution |
 | #157 | `closed_out_of_scope_computationally_blocked` | `True` | `particles/runs/hadron/ward_projected_spectral_measure_contract.json` | do_not_use_for_backend_execution |
 | #201 | `closed_corpus_limited_charged_end_to_end_no_go` | `True` | `particles/runs/leptons/charged_end_to_end_impossibility_theorem.json` | not_needed_until_new_uncentered_trace_lift_source_exists |

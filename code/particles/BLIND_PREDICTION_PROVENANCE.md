@@ -1,6 +1,6 @@
 # Blind Prediction Provenance
 
-Generated: `2026-05-06T08:52:40Z`
+Generated: `2026-05-06T09:55:14Z`
 
 This ledger records target-use and convention-sensitivity status for the public quantitative particle rows.
 
@@ -8,7 +8,7 @@ This ledger records target-use and convention-sensitivity status for the public 
 
 - Status: `provenance_ledger_emitted_convention_sensitivity_contract_open`
 - Closable: `False`
-- Reason: The row provenance ledger and blind workflow protocol exist, but convention sensitivity is still a contract because #32 has not supplied the scheme/threshold interval certificate.
+- Reason: The row provenance ledger and blind workflow protocol exist, but convention sensitivity remains a contract after #32 closes as a declared-convention boundary rather than a full OPH derivation of every scheme and threshold term.
 
 ## Rows
 
@@ -41,7 +41,7 @@ This ledger records target-use and convention-sensitivity status for the public 
 ## Convention Sensitivity
 
 - Status: `contract_open_not_quantified`
-- RG contract status: `constructive_contract_emitted_not_rg_matching_theorem`
-- Endpoint contract status: `constructive_contract_emitted_not_endpoint_theorem`
+- RG contract status: `closed_declared_convention_contract_not_rg_matching_theorem`
+- Endpoint contract status: `closed_blocker_isolated_not_endpoint_theorem`
 - Endpoint package status: `endpoint_package_computed_blocker_isolated`
 - Next artifact: populate beta_provenance_table, threshold_map, scheme_lock, and interval composition certificates

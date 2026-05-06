@@ -16,7 +16,7 @@
     "obstruction_only_worker_result_allowed": true,
     "p_trunk_candidate_only": true
   },
-  "generated_utc": "2026-05-06T08:52:40Z",
+  "generated_utc": "2026-05-06T09:55:14Z",
   "hadron_policy": {
     "github_issues": [
       153,
@@ -45,16 +45,20 @@
       "title": "Ward-projected Thomson endpoint package"
     },
     {
-      "chrome_workers": "constructive_only_for_source_residual_map",
-      "closable_now": false,
+      "chrome_workers": "not_needed_until_source_spectral_object_exists",
+      "closable_now": true,
+      "closed_as_first_missing_lemma_isolated": true,
+      "first_missing_lemma": "source-emitted same-scheme Ward-projected R_Q(P)",
       "hadron_dependency_hardware_gated": true,
       "interval_certificate_artifact": "P_derivation/runtime/fine_structure_interval_certificate_current.json",
       "issue": 235,
       "local_next_artifact": "P_derivation/runtime/thomson_endpoint_contract_current.json",
+      "minimal_new_theorem": "WardProjectedHadronicSpectralEmission_Q",
       "no_go_artifact": "P_derivation/runtime/screening_invariant_no_go_current.json",
       "package_artifact": "P_derivation/runtime/thomson_endpoint_package_current.json",
+      "promotion_allowed": false,
       "residual_contract_artifact": "P_derivation/runtime/r_q_residual_contract_current.json",
-      "state": "open_source_residual_map_and_interval_certificate",
+      "state": "closed_blocker_isolated_source_residual_no_go",
       "title": "Source residual map and interval certificate"
     },
     {
@@ -67,11 +71,13 @@
       "title": "Adopt certified derived P closure root"
     },
     {
-      "chrome_workers": "only_after_beta_threshold_packet_is_populated",
-      "closable_now": false,
+      "chrome_workers": "not_needed_for_closed_contract",
+      "closable_now": true,
+      "closed_as_declared_convention_contract": true,
       "issue": 32,
       "local_next_artifact": "P_derivation/runtime/rg_matching_threshold_contract_current.json",
-      "state": "open_constructive_contract",
+      "promotion_allowed": false,
+      "state": "closed_declared_convention_contract",
       "title": "RG matching and threshold structure"
     },
     {

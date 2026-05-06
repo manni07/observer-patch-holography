@@ -29,8 +29,14 @@ def build_contract() -> dict[str, Any]:
         "generated_utc": _now_utc(),
         "github_issue": 235,
         "closed_blocker_isolation_issue": 223,
-        "status": "constructive_contract_emitted_not_endpoint_theorem",
+        "status": "closed_blocker_isolated_not_endpoint_theorem",
         "promotion_allowed": False,
+        "issue_235_resolution": {
+            "close_recommendation": "close_as_first_missing_lemma_isolated",
+            "exact_alpha_promoted": False,
+            "first_missing_lemma": "source-emitted same-scheme Ward-projected R_Q(P)",
+            "minimal_new_theorem": "WardProjectedHadronicSpectralEmission_Q",
+        },
         "computed_package": "code/P_derivation/runtime/thomson_endpoint_package_current.json",
         "blocking_artifacts": {
             "screening_invariant_no_go": "code/P_derivation/runtime/screening_invariant_no_go_current.json",
@@ -40,6 +46,7 @@ def build_contract() -> dict[str, Any]:
         },
         "worker_result_policy": {
             "obstruction_only_result_allowed": False,
+            "constructive_no_go_result_allowed": True,
             "required_if_primary_route_fails": (
                 "emit an implementation-ready replacement object, builder interface, schema, "
                 "certificate interface, or runnable local target"

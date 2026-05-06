@@ -62,7 +62,7 @@
       "status": "keep_candidate_with_constructive_next_artifacts"
     }
   ],
-  "generated_utc": "2026-05-06T08:52:40Z",
+  "generated_utc": "2026-05-06T09:55:14Z",
   "p_trunk": {
     "P": "1.63097210492078846050203640439",
     "alpha_inv": "136.994020662724205139718642793",
@@ -97,7 +97,7 @@
       "title": "Make the five-equation P trunk the canonical audit artifact"
     },
     {
-      "current_boundary": "The structured-running law is a continuation. The endpoint package computes the residual inverse-alpha transport packet and isolates the first non-internalized object. The source-emitted QCD screening map, scheme remainder, and interval error control are carried by issue #235.",
+      "current_boundary": "The structured-running law is a continuation. The endpoint package computes the residual inverse-alpha transport packet and isolates the first non-internalized object. The source-residual non-identifiability boundary is closed in issue #235; the source-emitted QCD spectral map, scheme remainder, and interval error control are stage-gated.",
       "github_issue": 223,
       "id": "d10.ward-projected-thomson-endpoint",
       "lane": "D10 electromagnetic endpoint",
@@ -115,12 +115,12 @@
       "closed_issue_refs": [
         223
       ],
-      "current_boundary": "The endpoint package fixes the target residual, but no OPH source theorem emits the Ward-projected hadronic spectral measure, electroweak scheme remainder, or interval certificate for the full map. The screening-invariant no-go rejects fitted c_Q and detuning-only shortcuts from the current invariant packet.",
+      "current_boundary": "The endpoint package fixes the target residual and the current corpus proves non-identifiability of R_Q(P) from the existing D10 invariant packet. No OPH source theorem emits the Ward-projected hadronic spectral measure or same-scheme electroweak remainder. The screening-invariant no-go rejects fitted c_Q and detuning-only shortcuts.",
       "github_issue": 235,
       "id": "d10.source-residual-map-and-interval-certificate",
       "lane": "D10 electromagnetic endpoint",
-      "next_action": "Emit a source-only residual map that matches the endpoint package, including rho_had(s;P) or an equivalent Ward-projected spectral primitive, matching remainder, certified quadrature bounds, and the interval certificate for the final map.",
-      "status": "open_source_residual_map_and_interval_certificate",
+      "next_action": "Treat the next step as a stage gate outside the closed #235 issue: emit WardProjectedHadronicSpectralEmission_Q, including rho_had(s;P) or an equivalent Ward-projected spectral primitive, matching remainder, certified quadrature bounds, and the interval certificate for the final map.",
+      "status": "closed_blocker_isolated_source_residual_no_go",
       "target_surfaces": [
         "code/P_derivation/THOMSON_TRANSPORT_THEOREMS.md",
         "code/P_derivation/runtime/thomson_endpoint_contract_current.json",
@@ -132,12 +132,12 @@
       "title": "Emit the source-only Thomson residual map and interval certificate"
     },
     {
-      "current_boundary": "The D10 branch uses declared running/matching conventions. The compressed P trunk exposes that boundary without proving those conventions from OPH.",
+      "current_boundary": "The D10 branch uses declared running/matching conventions. Issue #32 is closed as a declared-convention contract, not as an OPH derivation of every coefficient, threshold, and conversion.",
       "github_issue": 32,
       "id": "d10.rg-matching-threshold-scheme",
       "lane": "D10 running and matching",
-      "next_action": "Turn the running/matching package into an OPH edge-sector theorem or explicitly keep it as a declared convention in every prediction surface.",
-      "status": "open_theorem_gap",
+      "next_action": "Keep the declared-convention status visible in prediction surfaces and require a separate theorem before treating those conventions as OPH-derived.",
+      "status": "closed_declared_convention_contract",
       "target_surfaces": [
         "paper compact D10 section",
         "code/P_derivation",
@@ -150,7 +150,7 @@
       "github_issue": 224,
       "id": "pclosure.certified-codepath-adoption",
       "lane": "P closure",
-      "next_action": "When issues 235 and 32 close, switch particle builders to the certified trunk artifact and make compare-only or historical P paths non-default.",
+      "next_action": "Switch particle builders only after the source spectral theorem stage gate emits R_Q(P), the interval certificate proves the full map, and the compressed trunk is promoted beyond candidate/audit metadata.",
       "status": "blocked_pending_certified_root",
       "target_surfaces": [
         "code/particles/scripts",

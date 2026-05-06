@@ -19,11 +19,15 @@ def test_interval_certificate_blocks_without_source_r_q() -> None:
 
     assert certificate["artifact"] == "oph_fine_structure_interval_certificate"
     assert certificate["github_issue"] == 235
-    assert certificate["status"] == "blocked_missing_R_Q"
+    assert certificate["status"] == "closed_blocker_isolated_missing_R_Q"
     assert certificate["promotion_allowed"] is False
+    assert certificate["issue_235_resolution"]["exact_alpha_promoted"] is False
     assert certificate["R_Q_certificate"]["status"] == "missing_source_artifact"
-    assert r_q_contract["status"] == "blocked_missing_source_R_Q"
+    assert r_q_contract["status"] == "closed_blocker_isolated_missing_source_R_Q"
     assert r_q_contract["promotion_allowed"] is False
+    assert r_q_contract["issue_235_resolution"]["first_missing_lemma"] == (
+        "source-emitted same-scheme Ward-projected R_Q(P)"
+    )
 
 
 def test_conditional_banach_budget_is_recorded() -> None:

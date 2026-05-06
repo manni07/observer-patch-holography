@@ -1,6 +1,6 @@
 # Particle Derivation Gap Ledger
 
-Generated: `2026-05-06T08:52:40Z`
+Generated: `2026-05-06T09:55:14Z`
 
 Systematic claim-safe queue after the five-equation P-trunk simplification.
 
@@ -40,9 +40,9 @@ The remaining work is grouped into coupled closure packets rather than a one-blo
 | --- | --- | --- | --- | --- |
 | `pclosure.compressed-trunk-artifact` | P closure | `candidate_artifact` | #224 | Keep emitting p_closure_trunk_current.json and use it as audit metadata. |
 | `d10.ward-projected-thomson-endpoint` | D10 electromagnetic endpoint | `closed_blocker_isolated_endpoint_package` | #223 | Keep the package as the closed blocker-isolation artifact for issue #223. |
-| `d10.source-residual-map-and-interval-certificate` | D10 electromagnetic endpoint | `open_source_residual_map_and_interval_certificate` | #235 | Emit a source-only residual map that matches the endpoint package, including rho_had(s;P) or an equivalent Ward-projected spectral primitive, matching remainder, certified quadrature bounds, and the interval certificate for the final map. |
-| `d10.rg-matching-threshold-scheme` | D10 running and matching | `open_theorem_gap` | #32 | Turn the running/matching package into an OPH edge-sector theorem or explicitly keep it as a declared convention in every prediction surface. |
-| `pclosure.certified-codepath-adoption` | P closure | `blocked_pending_certified_root` | #224 | When issues 235 and 32 close, switch particle builders to the certified trunk artifact and make compare-only or historical P paths non-default. |
+| `d10.source-residual-map-and-interval-certificate` | D10 electromagnetic endpoint | `closed_blocker_isolated_source_residual_no_go` | #235 | Treat the next step as a stage gate outside the closed #235 issue: emit WardProjectedHadronicSpectralEmission_Q, including rho_had(s;P) or an equivalent Ward-projected spectral primitive, matching remainder, certified quadrature bounds, and the interval certificate for the final map. |
+| `d10.rg-matching-threshold-scheme` | D10 running and matching | `closed_declared_convention_contract` | #32 | Keep the declared-convention status visible in prediction surfaces and require a separate theorem before treating those conventions as OPH-derived. |
+| `pclosure.certified-codepath-adoption` | P closure | `blocked_pending_certified_root` | #224 | Switch particle builders only after the source spectral theorem stage gate emits R_Q(P), the interval certificate proves the full map, and the compressed trunk is promoted beyond candidate/audit metadata. |
 | `charged.determinant-normalization-transport` | Charged leptons | `closed_corpus_limited_charged_end_to_end_no_go` | #201 | Keep charged masses suppressed on the public theorem lane. Reopen only for a theorem-grade uncentered trace lift proving 3 mu(r) = sum_e M_e^ch log q_e(r), equivalently zero normalization defect N_det(P), on the physical charged branch. |
 | `quark.selected-class-vs-global-classification` | Quarks | `selected_class_closed_global_classification_no_go` | #199 | Keep every public exact-quark claim explicitly selected-class. Reopen only for a new source-emitted global public-frame classifier artifact. |
 | `neutrino.pmns-status-and-absolute-rows` | Neutrinos | `theorem_rows_with_visible_comparison_tension` | #117 | Do not hide PMNS residuals behind the exact absolute-splitting rows; either prove a better branch or leave the comparison tension explicit. |

@@ -28,8 +28,9 @@ def build_contract() -> dict[str, Any]:
         "artifact": "oph_rg_matching_threshold_contract",
         "generated_utc": _now_utc(),
         "github_issue": 32,
-        "status": "constructive_contract_emitted_not_rg_matching_theorem",
+        "status": "closed_declared_convention_contract_not_rg_matching_theorem",
         "promotion_allowed": False,
+        "github_issue_state": "closed",
         "worker_result_policy": {
             "obstruction_only_result_allowed": False,
             "required_if_primary_route_fails": (
@@ -89,11 +90,12 @@ def build_contract() -> dict[str, Any]:
             },
         ],
         "closure_gate": {
-            "closable_now": False,
+            "closable_now": True,
+            "closed_as": "declared_convention_contract",
             "reason": (
-                "The code path has an explicit declared running/matching surface, but the OPH-derived "
-                "or declared status of every coefficient, threshold, and scheme conversion is not yet "
-                "mechanically certified."
+                "The code path has an explicit declared running/matching surface. This closes the "
+                "issue as a declared-convention contract, not as an OPH derivation of every "
+                "coefficient, threshold, and scheme conversion."
             ),
             "close_issue_when": [
                 "all RG coefficients have source status in beta_provenance_table",

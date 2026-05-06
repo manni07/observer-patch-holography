@@ -34,8 +34,9 @@ def test_gap_ledger_keeps_compressed_trunk_claim_safe() -> None:
     assert row_statuses["calibration.direct-top-bridge"] == "closed_current_corpus_codomain_no_go"
     assert row_statuses["d10.ward-projected-thomson-endpoint"] == "closed_blocker_isolated_endpoint_package"
     assert row_statuses["d10.source-residual-map-and-interval-certificate"] == (
-        "open_source_residual_map_and_interval_certificate"
+        "closed_blocker_isolated_source_residual_no_go"
     )
+    assert row_statuses["d10.rg-matching-threshold-scheme"] == "closed_declared_convention_contract"
     assert row_statuses["quark.selected-class-vs-global-classification"] == (
         "selected_class_closed_global_classification_no_go"
     )

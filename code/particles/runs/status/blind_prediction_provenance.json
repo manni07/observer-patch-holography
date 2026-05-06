@@ -7,10 +7,10 @@
       "at least one pre-reference workflow is exercised on a new or withheld output",
       "convention sensitivity intervals are quantified for public rows"
     ],
-    "reason": "The row provenance ledger and blind workflow protocol exist, but convention sensitivity is still a contract because #32 has not supplied the scheme/threshold interval certificate."
+    "reason": "The row provenance ledger and blind workflow protocol exist, but convention sensitivity remains a contract after #32 closes as a declared-convention boundary rather than a full OPH derivation of every scheme and threshold term."
   },
   "convention_sensitivity": {
-    "endpoint_contract_status": "constructive_contract_emitted_not_endpoint_theorem",
+    "endpoint_contract_status": "closed_blocker_isolated_not_endpoint_theorem",
     "endpoint_package_status": "endpoint_package_computed_blocker_isolated",
     "next_artifact": "populate beta_provenance_table, threshold_map, scheme_lock, and interval composition certificates",
     "required_objects": [
@@ -19,7 +19,7 @@
       "beta_provenance_table",
       "matching_interval_composition_certificate"
     ],
-    "rg_contract_status": "constructive_contract_emitted_not_rg_matching_theorem",
+    "rg_contract_status": "closed_declared_convention_contract_not_rg_matching_theorem",
     "status": "contract_open_not_quantified"
   },
   "finalization_gates": {
@@ -28,7 +28,7 @@
     "obstruction_only_worker_result_allowed": true,
     "p_trunk_candidate_only": true
   },
-  "generated_utc": "2026-05-06T08:52:40Z",
+  "generated_utc": "2026-05-06T09:55:14Z",
   "github_issue": 234,
   "pipeline_inputs": {
     "P": 1.630968209403959,

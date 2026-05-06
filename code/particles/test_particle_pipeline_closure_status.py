@@ -35,11 +35,14 @@ def test_particle_pipeline_closure_status_scope_locks_hadrons_and_workers() -> N
     assert gates[223]["closable_now"] is True
     assert gates[223]["successor_issue"] == 235
     assert gates[223]["chrome_workers"] == "not_needed_for_closed_package"
-    assert gates[235]["state"] == "open_source_residual_map_and_interval_certificate"
-    assert gates[235]["closable_now"] is False
-    assert gates[235]["chrome_workers"] == "constructive_only_for_source_residual_map"
+    assert gates[235]["state"] == "closed_blocker_isolated_source_residual_no_go"
+    assert gates[235]["closable_now"] is True
+    assert gates[235]["closed_as_first_missing_lemma_isolated"] is True
+    assert gates[235]["promotion_allowed"] is False
+    assert gates[235]["chrome_workers"] == "not_needed_until_source_spectral_object_exists"
     assert gates[224]["state"] == "open_waiting_certified_root"
-    assert gates[32]["state"] == "open_constructive_contract"
+    assert gates[32]["state"] == "closed_declared_convention_contract"
+    assert gates[32]["closable_now"] is True
     assert gates[207]["state"] == "closed_current_corpus_codomain_no_go"
     assert gates[207]["closable_now"] is True
     assert gates[201]["state"] == "closed_current_corpus_charged_end_to_end_no_go"

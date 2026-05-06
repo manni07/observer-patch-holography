@@ -81,8 +81,14 @@ def build_interval_certificate(
             "artifact": "oph_r_q_residual_map_contract",
             "generated_utc": _now_utc(),
             "github_issue": 235,
-            "status": "blocked_missing_source_R_Q",
+            "status": "closed_blocker_isolated_missing_source_R_Q",
             "promotion_allowed": False,
+            "issue_235_resolution": {
+                "close_recommendation": "close_as_first_missing_lemma_isolated",
+                "exact_alpha_promoted": False,
+                "first_missing_lemma": "source-emitted same-scheme Ward-projected R_Q(P)",
+                "minimal_new_theorem": "WardProjectedHadronicSpectralEmission_Q",
+            },
             "source_only_guard": {
                 "codata_used_to_construct_R_Q": False,
                 "measured_endpoint_used_to_construct_R_Q": False,
@@ -113,8 +119,14 @@ def build_interval_certificate(
             "artifact": "oph_fine_structure_interval_certificate",
             "generated_utc": _now_utc(),
             "github_issue": 235,
-            "status": "blocked_missing_R_Q",
+            "status": "closed_blocker_isolated_missing_R_Q",
             "promotion_allowed": False,
+            "issue_235_resolution": {
+                "close_recommendation": "close_as_first_missing_lemma_isolated",
+                "exact_alpha_promoted": False,
+                "first_missing_lemma": "source-emitted same-scheme Ward-projected R_Q(P)",
+                "minimal_new_theorem": "WardProjectedHadronicSpectralEmission_Q",
+            },
             "interval_backend": {
                 "library": "DecimalIntervalBackend",
                 "precision_bits": None,
@@ -162,7 +174,7 @@ def build_interval_certificate(
             ],
             "conclusion": {
                 "unique_fixed_point_in_I_P": False,
-                "reason": "The Banach theorem is conditional until R_Q(P) and theorem-grade interval arithmetic are supplied.",
+                "reason": "The Banach theorem is conditional until R_Q(P) and theorem-grade interval arithmetic are supplied. The current corpus isolates that source object but does not emit it.",
             },
         }
     )

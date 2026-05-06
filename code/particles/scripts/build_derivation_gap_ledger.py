@@ -79,8 +79,9 @@ def build_gap_rows() -> list[dict[str, Any]]:
             "current_boundary": (
                 "The structured-running law is a continuation. The endpoint package computes the "
                 "residual inverse-alpha transport packet and isolates the first non-internalized "
-                "object. The source-emitted QCD screening map, scheme remainder, and interval error "
-                "control are carried by issue #235."
+                "object. The source-residual non-identifiability boundary is closed in issue #235; "
+                "the source-emitted QCD spectral map, scheme remainder, and interval error control "
+                "are stage-gated."
             ),
             "next_action": (
                 "Keep the package as the closed blocker-isolation artifact for issue #223."
@@ -94,20 +95,22 @@ def build_gap_rows() -> list[dict[str, Any]]:
         {
             "id": "d10.source-residual-map-and-interval-certificate",
             "lane": "D10 electromagnetic endpoint",
-            "status": "open_source_residual_map_and_interval_certificate",
+            "status": "closed_blocker_isolated_source_residual_no_go",
             "github_issue": 235,
             "closed_issue_refs": [223],
             "title": "Emit the source-only Thomson residual map and interval certificate",
             "current_boundary": (
-                "The endpoint package fixes the target residual, but no OPH source theorem emits "
-                "the Ward-projected hadronic spectral measure, electroweak scheme remainder, or "
-                "interval certificate for the full map. The screening-invariant no-go rejects "
-                "fitted c_Q and detuning-only shortcuts from the current invariant packet."
+                "The endpoint package fixes the target residual and the current corpus proves "
+                "non-identifiability of R_Q(P) from the existing D10 invariant packet. No OPH "
+                "source theorem emits the Ward-projected hadronic spectral measure or same-scheme "
+                "electroweak remainder. The screening-invariant no-go rejects fitted c_Q and "
+                "detuning-only shortcuts."
             ),
             "next_action": (
-                "Emit a source-only residual map that matches the endpoint package, including "
-                "rho_had(s;P) or an equivalent Ward-projected spectral primitive, matching remainder, "
-                "certified quadrature bounds, and the interval certificate for the final map."
+                "Treat the next step as a stage gate outside the closed #235 issue: emit "
+                "WardProjectedHadronicSpectralEmission_Q, including rho_had(s;P) or an equivalent "
+                "Ward-projected spectral primitive, matching remainder, certified quadrature bounds, "
+                "and the interval certificate for the final map."
             ),
             "target_surfaces": [
                 "code/P_derivation/THOMSON_TRANSPORT_THEOREMS.md",
@@ -121,16 +124,17 @@ def build_gap_rows() -> list[dict[str, Any]]:
         {
             "id": "d10.rg-matching-threshold-scheme",
             "lane": "D10 running and matching",
-            "status": "open_theorem_gap",
+            "status": "closed_declared_convention_contract",
             "github_issue": 32,
             "title": "Internalize RG matching, threshold placement, and scheme conversion",
             "current_boundary": (
-                "The D10 branch uses declared running/matching conventions. The compressed P "
-                "trunk exposes that boundary without proving those conventions from OPH."
+                "The D10 branch uses declared running/matching conventions. Issue #32 is closed as "
+                "a declared-convention contract, not as an OPH derivation of every coefficient, "
+                "threshold, and conversion."
             ),
             "next_action": (
-                "Turn the running/matching package into an OPH edge-sector theorem or explicitly "
-                "keep it as a declared convention in every prediction surface."
+                "Keep the declared-convention status visible in prediction surfaces and require "
+                "a separate theorem before treating those conventions as OPH-derived."
             ),
             "target_surfaces": ["paper compact D10 section", "code/P_derivation", "code/particles/calibration"],
         },
@@ -146,8 +150,9 @@ def build_gap_rows() -> list[dict[str, Any]]:
                 "blocked while the compressed trunk remains candidate/audit metadata."
             ),
             "next_action": (
-                "When issues 235 and 32 close, switch particle builders to the certified trunk "
-                "artifact and make compare-only or historical P paths non-default."
+                "Switch particle builders only after the source spectral theorem stage gate emits "
+                "R_Q(P), the interval certificate proves the full map, and the compressed trunk is "
+                "promoted beyond candidate/audit metadata."
             ),
             "target_surfaces": ["code/particles/scripts", "code/particles/runs/status", "WebProjects OPH summaries"],
         },

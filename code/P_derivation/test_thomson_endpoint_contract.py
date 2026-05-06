@@ -13,11 +13,16 @@ def test_contract_requires_constructive_worker_outputs() -> None:
     assert payload["github_issue"] == 235
     assert payload["closed_blocker_isolation_issue"] == 223
     assert payload["promotion_allowed"] is False
+    assert payload["status"] == "closed_blocker_isolated_not_endpoint_theorem"
+    assert payload["issue_235_resolution"]["minimal_new_theorem"] == (
+        "WardProjectedHadronicSpectralEmission_Q"
+    )
     assert payload["computed_package"] == "code/P_derivation/runtime/thomson_endpoint_package_current.json"
     assert payload["blocking_artifacts"]["screening_invariant_no_go"].endswith(
         "screening_invariant_no_go_current.json"
     )
     assert payload["no_go_results"]["detuning_only_bypass"] == "closed_no_go"
+    assert payload["worker_result_policy"]["constructive_no_go_result_allowed"] is True
     assert payload["worker_result_policy"]["obstruction_only_result_allowed"] is False
     object_ids = {entry["id"] for entry in payload["constructive_objects"]}
     assert "rho_had_spectral_measure" in object_ids
