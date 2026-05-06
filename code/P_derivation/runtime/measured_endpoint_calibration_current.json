@@ -1,0 +1,59 @@
+{
+  "artifact": "oph_measured_fine_structure_endpoint_calibration",
+  "calibrated_values": {
+    "P_from_outer_equation": "1.6309682094039593248792798477826489413359828516279250606661507533907793398933432",
+    "P_standard_uncertainty": "0.0000000000019820969334088836974522356516566248083901261389013104692235854853243474195481078",
+    "alpha_0": "0.0072973525643314250302457952646916832280660213133653604957798803819933561573639928",
+    "alpha_inv_0": "137.035999177",
+    "alpha_inv_0_standard_uncertainty": "0.000000021",
+    "definition": "P = phi + sqrt(pi)/alpha_inv_0"
+  },
+  "codata_mapped_endpoint_requirement": {
+    "a0_alpha_inv_mz": "128.30796547328624820996110874175671618724547618036535646005342169635117784168285644078724728",
+    "implemented_transport_delta_alpha_inv": "8.6865678427085284009854425428859697682672217376487364233784577389993784459106783080961179590",
+    "missing_source_transport_delta_alpha_inv": "0.04146586100522338905344871535731404448730208198590711656812056464944371240646525111663476",
+    "required_screening_factor": "0.89540013264765879780580028318167064130770986481229164844830591011545242521273086888107864576",
+    "required_transport_delta_alpha_inv": "8.72803370371375179003889125824328381275452381963464353994657830364882215831714355921275272",
+    "residual_second_order_coefficient": "0.65802575992715543563823017023236005042492009907058639608566007832470711257322011342309305088"
+  },
+  "consumer_policy": {
+    "may_feed_compare_or_audit_surfaces": true,
+    "may_feed_numeric_prediction_tables": true,
+    "may_feed_public_plots_and_svg_values": true,
+    "may_feed_source_theorem_claim": false,
+    "must_show_caveat": "fine-structure endpoint uses measured Thomson-limit calibration pending source spectral payload"
+  },
+  "current_source_candidate": {
+    "P": "1.63097209569432901817967892561191884270169",
+    "alpha": "0.00729954516887664794921875",
+    "alpha_inv": "136.994835164621649457949994585787193262029",
+    "missing_inverse_alpha_units": "0.041164012378350542050005414212806737971",
+    "p_gap_implemented_minus_calibrated": "0.0000038862903696933003990778292699013657063242089711084969148420339247715484988"
+  },
+  "exact_alpha_promoted": false,
+  "external_input_role": "The measured Thomson-limit inverse fine-structure constant is inserted as a temporary calibration endpoint for numeric tables and displays. It is excluded from the source-only solver and from theorem promotion.",
+  "external_input_used": true,
+  "generated_utc": "2026-05-06T10:44:58Z",
+  "promotion_allowed": false,
+  "source_only_guard": {
+    "codata_enters_solver": false,
+    "may_satisfy_source_spectral_payload_gate": false,
+    "measured_endpoint_allowed_as_transport_input": false,
+    "must_be_labeled_external_calibration": true
+  },
+  "status": "measured_endpoint_insert_active_not_source_derivation",
+  "why_source_computation_is_blocked": {
+    "current_corpus_obstruction": {
+      "finite_volume_levels_populated": false,
+      "hadron_contract_status": "constructive_contract_emitted_not_production_data",
+      "production_dump_present": false,
+      "public_unsuppression_ready": false,
+      "smallest_live_residual_object": "backend_correlator_dump.production.json from real production RHMC/HMC execution on the theorem-emitted seeded family",
+      "source_measure_payload_populated": false,
+      "ward_projected_residues_populated": false
+    },
+    "local_hardware_boundary": "A source computation requires real finite-volume gauge-field production and spectral reconstruction on the theorem-emitted family, followed by continuum, chiral, finite-volume, current-matching, tail, and directed interval error certificates. That production payload is absent from this workspace and is outside the current local symbolic/code path.",
+    "nonidentifiability": "Distinct positive spectral-measure completions can agree on every invariant emitted by the current corpus while giving different Thomson moments. The endpoint therefore cannot be recovered by higher precision or more scalar algebra alone.",
+    "summary": "The missing object is a nonperturbative Ward-projected hadronic spectral measure, not an algebraic scalar. The current corpus has a schema and contract, but no production finite-volume vector levels, current residues, normalization, continuum pushforward, systematics budgets, or endpoint quadrature certificate."
+  }
+}

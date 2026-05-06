@@ -119,3 +119,43 @@ Therefore the current emitted invariant packet does not determine the Thomson
 endpoint functional. Exact fine-structure promotion requires a source-emitted
 spectral measure and same-scheme remainder; a scalar fitted to the measured
 endpoint cannot replace those objects.
+
+## Why the Hadronic Payload Is Unavailable Here
+
+The missing object is nonperturbative QCD data in the Ward-projected
+electromagnetic channel. It is not produced by increasing decimal precision in
+the D10 scalar map. The required payload must contain:
+
+- nonempty finite-volume vector-channel levels on the source family
+- Ward-projected current residues or weights with current normalization
+- positivity, threshold support, and the pushforward to `rho_Q(s;P)`
+- statistical, continuum, finite-volume, chiral, current-matching,
+  quadrature, and endpoint-remainder bounds
+- a same-subtraction scheme lock to `a0(P)`
+- a directed-rounding interval certificate for the fixed point
+
+The local workspace contains contracts and skeletons for this route. It does
+not contain the production finite-volume correlator dump or the derived
+spectral-measure artifact. The viable source route is a first-principles
+unquenched QCD/HVP computation on the OPH-emitted family, followed by the
+interval certificate above.
+
+## Temporary Measured Calibration
+
+For calibrated numeric tables and plots, the measured endpoint may be inserted
+through
+
+```text
+code/P_derivation/runtime/measured_endpoint_calibration_current.json
+```
+
+That artifact labels the input as external calibration and keeps theorem
+promotion disabled. It uses
+
+```text
+alpha^-1(0) = 137.035999177(21)
+P = 1.63096820940395932487927984778...
+```
+
+from the outer equation. It may feed calibrated displays with the stated caveat.
+It cannot satisfy the source-spectral theorem gate.

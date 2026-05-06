@@ -141,7 +141,40 @@ python3 thomson_endpoint_package.py --report runtime/full_p_alpha_report_current
 python3 screening_invariant_no_go.py
 python3 thomson_endpoint_interval_certificate.py
 python3 transport_theorem_manifest.py --report runtime/full_p_alpha_report_current.json
+python3 measured_endpoint_calibration.py
 ```
+
+## Measured endpoint calibration insert
+
+`measured_endpoint_calibration.py` emits
+`runtime/measured_endpoint_calibration_current.json`. This is the temporary
+calibrated surface for tables, plots, and public numeric displays that need a
+single fine-structure value before the source spectral payload exists.
+
+The inserted endpoint is the 2022 CODATA/NIST Thomson-limit comparison value
+
+```text
+alpha^-1(0) = 137.035999177(21)
+alpha(0)   = 0.007297352564331425...
+P          = 1.63096820940395932487927984778...
+```
+
+This artifact is external calibration. It has `promotion_allowed=false`,
+`exact_alpha_promoted=false`, and `external_input_used=true`. Consumers may use
+it for calibrated numeric prediction tables only if they keep the caveat:
+
+```text
+fine-structure endpoint uses measured Thomson-limit calibration pending source spectral payload
+```
+
+The source computation is blocked because the required object is a
+nonperturbative Ward-projected hadronic spectral measure, not a scalar that can
+be recovered by higher precision on the existing formulas. A source computation
+requires a production finite-volume gauge-field run, vector-current levels and
+residues, current normalization, continuum/chiral/finite-volume/current-matching
+budgets, a spectral pushforward, quadrature and tail bounds, and a directed
+interval fixed-point certificate. The current corpus has a schema and contract
+for that payload, but not the production payload itself.
 
 ## Usage
 
