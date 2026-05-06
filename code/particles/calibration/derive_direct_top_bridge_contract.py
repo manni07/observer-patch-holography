@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
-"""Emit the constructive bridge contract for the auxiliary direct-top row.
+"""Emit the direct-top codomain closure certificate.
 
 Chain role: keep the exact top coordinate on its current theorem surface while
-turning the open direct-top comparison into an implementation target.
+closing the auxiliary direct-top comparison as a current-corpus no-go.
 
 The current exact top coordinate is carried by the selected/current quark
 closure and uses the PDG cross-section top entry.  The direct-top PDG entry is a
 different extraction codomain, so closing the bridge requires an extraction
 response map and uncertainty propagation rather than replacing the theorem row
-with the auxiliary central value.
+with the auxiliary central value.  Since the current source corpus emits no such
+response map, the auxiliary row is compare-only.
 """
 
 from __future__ import annotations
@@ -70,13 +71,24 @@ def build_payload(
         "artifact": "oph_direct_top_bridge_contract",
         "generated_utc": _timestamp(),
         "github_issue": 207,
-        "status": "constructive_conversion_contract_emitted_not_direct_top_theorem",
+        "status": "hard_no_go_current_corpus_compare_only_direct_top_codomain",
         "promotion_allowed": False,
         "worker_result_policy": {
-            "obstruction_only_result_allowed": False,
-            "required_if_primary_route_fails": (
-                "emit a replacement extraction-response object, conversion theorem interface, "
-                "uncertainty-propagation certificate, or compare-only row patch"
+            "obstruction_only_result_allowed": True,
+            "pro_workers_needed_now": False,
+            "reason": "A new worker pass is not useful until a source-side extraction-response object exists.",
+        },
+        "closure_verdict": {
+            "issue_207_acceptance_met_as_obstruction": True,
+            "closure_kind": "hard_no_go_current_corpus",
+            "closed_theorem_grade_surface": "Q007TP4_cross_section_top_coordinate",
+            "blocked_surface": "Q007TP_auxiliary_direct_top_coordinate",
+            "auxiliary_row_policy": "compare_only_not_promotable",
+            "why_no_forward_bridge": (
+                "The current OPH/D10/D11/quark corpus emits a top coordinate in the PDG cross-section "
+                "codomain Q007TP4. It does not emit an extraction-response kernel, mass-scheme conversion, "
+                "or uncertainty-propagation certificate from Q007TP4 into the auxiliary direct-measurement "
+                "codomain Q007TP. Any such conversion would choose external experimental/MC response data."
             ),
         },
         "current_theorem_coordinate": {
@@ -140,22 +152,33 @@ def build_payload(
                 ],
             },
         ],
+        "formal_nonidentifiability_witness": {
+            "free_response_family": "m_direct(lambda) = m_Q007TP4 + lambda",
+            "source_constraints_on_lambda": "none emitted by the current corpus",
+            "lambda_matching_auxiliary_central_value_gev": direct_minus_coordinate,
+            "why_not_a_theorem": (
+                "Choosing lambda from the auxiliary Q007TP central value would use the direct-top row as an "
+                "input. Choosing lambda=0 would relabel Q007TP4 as Q007TP. Both choices satisfy the current "
+                "OPH top theorem data equally well because the extraction-response codomain is absent."
+            ),
+        },
         "closure_gate": {
-            "closable_now": False,
+            "closable_now": True,
             "reason": (
                 "The current exact top coordinate and the auxiliary direct-top average are compatible "
-                "as a comparison, but no source-side extraction-response map has been emitted."
+                "as a comparison, but no source-side extraction-response map has been emitted; therefore "
+                "the direct-top theorem bridge is closed as a no-go on the current corpus."
             ),
-            "close_issue_when": [
+            "reopen_only_when": [
                 "codomain metadata is explicit in the public status surfaces",
                 "a response kernel maps the current top coordinate into the direct-top codomain without using the direct-top central value as an input",
                 "the propagated interval overlaps or explains the auxiliary direct-top entry",
             ],
         },
         "local_next_steps": [
-            "Add derive_top_extraction_response_kernel.py only if a source-side or QFT extraction map is available.",
-            "Otherwise keep Q007TP as compare-only and keep Q007TP4 as the theorem row source.",
-            "Update the GitHub issue with this contract path instead of accepting a no-go packet.",
+            "Keep Q007TP as compare-only and keep Q007TP4 as the theorem row source.",
+            "Do not launch more workers for this lane unless a source-side or QFT extraction-response map is introduced.",
+            "Open a new issue only for a concrete response-kernel artifact, not for further border sharpening.",
         ],
         "forbidden_solver_inputs": [
             "Q007TP_direct_top_central_value_as_calibration_input",
@@ -166,7 +189,7 @@ def build_payload(
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Build the constructive direct-top bridge contract.")
+    parser = argparse.ArgumentParser(description="Build the direct-top codomain closure certificate.")
     parser.add_argument("--output", default=str(DEFAULT_OUT))
     parser.add_argument("--print-json", action="store_true")
     args = parser.parse_args()

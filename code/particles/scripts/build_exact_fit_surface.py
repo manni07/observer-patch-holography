@@ -131,8 +131,8 @@ def build_entries() -> list[dict[str, Any]]:
                 "That theorem emits `m_H = 125.1995304097179 GeV` and a companion top coordinate "
                 "`m_t = 172.3523553288312 GeV`. The Higgs row lands on the PDG 2025 Higgs average at quoted precision. "
                 "The exact public running-top row uses the PDG 2025 cross-section entry `Q007TP4`. "
-                "The bridge to the auxiliary direct-top average `Q007TP` is open and is tracked in "
-                "[#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207) with the constructive contract "
+                "The auxiliary direct-top average `Q007TP` is compare-only; "
+                "[#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207) is closed as a current-corpus no-go by "
                 "`code/particles/runs/calibration/direct_top_bridge_contract.json`."
             ),
         },
@@ -161,7 +161,8 @@ def build_entries() -> list[dict[str, Any]]:
                 "Exact on the ordered charged eigenvalue triple, with a closed ordered-three-point "
                 "readout theorem inside `current_family_only`, and with the scoped affine coordinate "
                 "`A_ch_current_family` closed on that same exact family. The charged theorem lane does not "
-                "emit a theorem-grade absolute anchor."
+                "emit a theorem-grade absolute anchor; [#201](https://github.com/FloatingPragma/observer-patch-holography/issues/201) "
+                "is closed as a current-corpus no-go by `code/particles/runs/leptons/charged_end_to_end_impossibility_theorem.json`."
             ),
         },
         {
@@ -205,9 +206,9 @@ def build_entries() -> list[dict[str, Any]]:
                 "quark family witness, with the internal same-family quadratic readout closed on the fixed "
                 "carrier and the selected-sheet exact closure packaged on `sigma_ref`. The top coordinate "
                 f"uses PDG summary `{references['top_quark']['source']['summary_id']}`. "
-                "The bridge to the auxiliary direct-top entry "
-                f"`{references['top_quark_direct_aux']['source']['summary_id']}` is open and is tracked in "
-                "[#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207). "
+                "The auxiliary direct-top entry "
+                f"`{references['top_quark_direct_aux']['source']['summary_id']}` is compare-only; "
+                "[#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207) is closed as a current-corpus no-go. "
                 "The declared scope is `current_family_only`. A separate restricted theorem chain emits a "
                 "sector-attached `Sigma_ud^phys` element on the explicit "
                 f"`{(quark_transport_lift or {}).get('theorem_scope', 'current_family_common_refinement_transport_frame_only')}` carrier, and the merged transport-frame theorem "
@@ -335,9 +336,9 @@ def build_entries() -> list[dict[str, Any]]:
                     "on that selected class, and "
                     f"`{quark_public_exact_yukawa['artifact']}` emits the exact PDG 2025 running-quark sextet together "
                     "with explicit exact forward Yukawas `Y_u` and `Y_d`. The top coordinate uses PDG summary "
-                    f"`{references['top_quark']['source']['summary_id']}`. The bridge to the auxiliary direct-top entry "
-                    f"`{references['top_quark_direct_aux']['source']['summary_id']}` is open and is tracked in "
-                    "[#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207) with the constructive contract "
+                    f"`{references['top_quark']['source']['summary_id']}`. The auxiliary direct-top entry "
+                    f"`{references['top_quark_direct_aux']['source']['summary_id']}` is compare-only; "
+                    "[#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207) is closed as a current-corpus no-go by "
                     "`code/particles/runs/calibration/direct_top_bridge_contract.json`. This is selected-class closure "
                     "only. It does not claim a global classification of all quark frame classes."
                 ),

@@ -127,8 +127,8 @@ source-only pair theorem.
   The Higgs row lands on the PDG 2025 Higgs average at quoted precision.
   The exact public running-top row uses the PDG 2025 cross-section entry
   `Q007TP4`.
-  The bridge to the auxiliary direct-top average `Q007TP` is open and tracked
-  in [#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207).
+  The auxiliary direct-top average `Q007TP` is compare-only; #207 is closed as
+  a current-corpus codomain no-go.
 - The compare-only exact Higgs/top inverse slice remains a validation surface.
   The target-anchored Higgs-only and top-side exactifier artifacts remain on
   disk as supporting witness surfaces beneath the source-only pair theorem.

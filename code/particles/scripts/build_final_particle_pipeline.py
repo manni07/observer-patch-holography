@@ -57,6 +57,16 @@ FINAL_PIPELINE_STEPS: tuple[PipelineStep, ...] = (
         "Refresh the direct-top codomain conversion contract.",
     ),
     PipelineStep(
+        "quark_off_canonical_p_evaluator_obstruction",
+        "particles/flavor/derive_quark_off_canonical_p_evaluator_obstruction.py",
+        "Refresh the off-canonical quark P-evaluator no-go certificate.",
+    ),
+    PipelineStep(
+        "quark_class_uniform_public_frame_descent_obstruction",
+        "particles/flavor/derive_quark_class_uniform_public_frame_descent_obstruction.py",
+        "Refresh the global public quark-frame descent no-go certificate.",
+    ),
+    PipelineStep(
         "charged_end_to_end_nonclosure",
         "particles/leptons/derive_charged_end_to_end_impossibility_theorem.py",
         "Refresh the charged-lepton end-to-end nonclosure theorem packet.",

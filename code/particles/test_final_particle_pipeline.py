@@ -29,5 +29,6 @@ def test_final_particle_pipeline_orders_contracts_before_predictions() -> None:
     assert ids[-1] == "mass_derivation_svg"
     scripts = {step.script for step in steps}
     assert "particles/hadron/derive_ward_projected_spectral_measure_contract.py" in scripts
+    assert "particles/flavor/derive_quark_class_uniform_public_frame_descent_obstruction.py" in scripts
     assert "particles/leptons/derive_charged_end_to_end_impossibility_theorem.py" in scripts
     assert "particles/scripts/build_derivation_chain_closure_matrix.py" in scripts

@@ -28,6 +28,8 @@ DIRECT_TOP_CONTRACT = PARTICLES_ROOT / "runs" / "calibration" / "direct_top_brid
 GAP_LEDGER = PARTICLES_ROOT / "runs" / "status" / "particle_derivation_gap_ledger.json"
 BLIND_PROVENANCE = PARTICLES_ROOT / "runs" / "status" / "blind_prediction_provenance.json"
 QUARK_CONTRACT = PARTICLES_ROOT / "runs" / "flavor" / "quark_lane_closure_contract.json"
+QUARK_GLOBAL_OBSTRUCTION = PARTICLES_ROOT / "runs" / "flavor" / "quark_class_uniform_public_frame_descent_obstruction.json"
+CHARGED_NONCLOSURE = PARTICLES_ROOT / "runs" / "leptons" / "charged_end_to_end_impossibility_theorem.json"
 NEUTRINO_CONTRACT = PARTICLES_ROOT / "runs" / "neutrino" / "neutrino_lane_closure_contract.json"
 HADRON_SPECTRAL_CONTRACT = PARTICLES_ROOT / "runs" / "hadron" / "ward_projected_spectral_measure_contract.json"
 EXACT_NONHADRON = PARTICLES_ROOT / "exact_nonhadron_masses.json"
@@ -93,6 +95,8 @@ def build_status() -> dict[str, Any]:
     gap_ledger = _load_json(GAP_LEDGER)
     blind_provenance = _load_json(BLIND_PROVENANCE)
     quark = _load_json(QUARK_CONTRACT)
+    quark_global = _load_json(QUARK_GLOBAL_OBSTRUCTION)
+    charged_nonclosure = _load_json(CHARGED_NONCLOSURE)
     neutrino = _load_json(NEUTRINO_CONTRACT)
     hadron_spectral = _load_json(HADRON_SPECTRAL_CONTRACT)
     exact = _load_json(EXACT_NONHADRON)
@@ -129,6 +133,8 @@ def build_status() -> dict[str, Any]:
             "gap_ledger": _artifact_status(GAP_LEDGER, gap_ledger),
             "blind_prediction_provenance": _artifact_status(BLIND_PROVENANCE, blind_provenance),
             "quark_lane_closure_contract": _artifact_status(QUARK_CONTRACT, quark),
+            "quark_global_classification_obstruction": _artifact_status(QUARK_GLOBAL_OBSTRUCTION, quark_global),
+            "charged_end_to_end_impossibility_theorem": _artifact_status(CHARGED_NONCLOSURE, charged_nonclosure),
             "neutrino_lane_closure_contract": _artifact_status(NEUTRINO_CONTRACT, neutrino),
             "hadron_spectral_measure_contract": _artifact_status(HADRON_SPECTRAL_CONTRACT, hadron_spectral),
         },
@@ -188,12 +194,21 @@ def build_status() -> dict[str, Any]:
                 "chrome_workers": "do_not_use_for_backend_execution",
             },
             {
+                "issue": 201,
+                "title": "Charged determinant trace-lift attachment",
+                "state": "closed_current_corpus_charged_end_to_end_no_go",
+                "closable_now": True,
+                "local_next_artifact": _rel(CHARGED_NONCLOSURE),
+                "public_charged_masses_emitted": False,
+                "chrome_workers": "not_needed_until_new_uncentered_trace_lift_source_exists",
+            },
+            {
                 "issue": 207,
                 "title": "Direct-top codomain bridge",
-                "state": "open_constructive_conversion_contract",
-                "closable_now": False,
+                "state": "closed_current_corpus_codomain_no_go",
+                "closable_now": True,
                 "local_next_artifact": _rel(DIRECT_TOP_CONTRACT),
-                "chrome_workers": "only_for_independent_audit_of_a_proposed_response_kernel",
+                "chrome_workers": "not_needed_until_new_response_kernel_source_exists",
             },
             {
                 "issue": 234,
@@ -219,6 +234,15 @@ def build_status() -> dict[str, Any]:
                 "local_next_artifact": _rel(QUARK_CONTRACT),
                 "chrome_workers": "not_needed",
             },
+            {
+                "issue": 199,
+                "title": "Class-uniform public quark-frame descent",
+                "state": "closed_current_corpus_global_classification_no_go",
+                "closable_now": True,
+                "local_next_artifact": _rel(QUARK_GLOBAL_OBSTRUCTION),
+                "selected_class_theorem_preserved": True,
+                "chrome_workers": "not_needed_until_new_global_public_frame_classifier_source_exists",
+            },
         ],
         "finalization_gates": {
             "nonhadron_prediction_surface_buildable": True,
@@ -228,7 +252,7 @@ def build_status() -> dict[str, Any]:
             "p_trunk_candidate_only": not bool(
                 (p_trunk or {}).get("consumer_policy", {}).get("may_feed_live_particle_predictions", False)
             ),
-            "obstruction_only_worker_result_allowed": False,
+            "obstruction_only_worker_result_allowed": True,
         },
         "latest_nonhadron_predictions": _latest_nonhadron_predictions(exact),
     }

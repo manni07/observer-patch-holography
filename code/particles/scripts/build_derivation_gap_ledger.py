@@ -117,32 +117,36 @@ def build_gap_rows() -> list[dict[str, Any]]:
         {
             "id": "charged.determinant-normalization-transport",
             "lane": "Charged leptons",
-            "status": "open_source_theorem",
-            "github_issue": None,
-            "title": "Close the P-to-charged affine anchor bridge",
+            "status": "closed_current_corpus_charged_end_to_end_no_go",
+            "github_issue": 201,
+            "title": "Keep the P-to-charged affine anchor bridge scoped as a no-go",
             "current_boundary": (
-                "No public charged-lepton values are emitted on the theorem lane. The open object is "
-                "the determinant-normalization / sector-isolated trace-lift identity beneath A_ch(P)."
+                "No public charged-lepton values are emitted on the theorem lane. The current corpus "
+                "does not prove the determinant-normalization / sector-isolated trace-lift identity "
+                "beneath A_ch(P), and the impossibility packet rules out end-to-end charged closure "
+                "from the present centered-data surface."
             ),
             "next_action": (
-                "Prove 3 mu(r) = sum_e M_e^ch log q_e(r), equivalently zero normalization defect "
-                "N_det(P), on the physical charged branch."
+                "Keep charged masses suppressed on the public theorem lane. Reopen only for a "
+                "theorem-grade uncentered trace lift proving 3 mu(r) = sum_e M_e^ch log q_e(r), "
+                "equivalently zero normalization defect N_det(P), on the physical charged branch."
             ),
             "target_surfaces": ["code/particles/leptons", "code/particles/runs/leptons"],
         },
         {
             "id": "quark.selected-class-vs-global-classification",
             "lane": "Quarks",
-            "status": "selected_class_closed_global_classification_open",
-            "github_issue": 198,
+            "status": "selected_class_closed_global_classification_no_go",
+            "github_issue": 199,
             "title": "Keep exact quark rows scoped to the selected public frame class",
             "current_boundary": (
-                "The selected-class exact Yukawa theorem is live, but it is not a global "
-                "classification of all quark frame classes."
+                "The selected-class exact Yukawa theorem is live. The stronger class-uniform/global "
+                "classification lane is closed as a current-corpus no-go because no source-emitted "
+                "ambient public-frame classifier or quotient-intrinsic sigma law exists."
             ),
             "next_action": (
-                "Either prove the global frame-class classification or keep every public exact-quark "
-                "claim explicitly selected-class."
+                "Keep every public exact-quark claim explicitly selected-class. Reopen only for a new "
+                "source-emitted global public-frame classifier artifact."
             ),
             "target_surfaces": ["code/particles/flavor", "particle paper quark section"],
         },
@@ -165,17 +169,17 @@ def build_gap_rows() -> list[dict[str, Any]]:
         {
             "id": "calibration.direct-top-bridge",
             "lane": "D11/top codomain",
-            "status": "constructive_conversion_contract_emitted",
+            "status": "closed_current_corpus_codomain_no_go",
             "github_issue": 207,
             "title": "Bridge the exact top coordinate to the auxiliary direct-top PDG row",
             "current_boundary": (
                 "The exact top coordinate uses the PDG cross-section codomain Q007TP4. The auxiliary "
-                "direct-top entry Q007TP is a separate extraction codomain and remains compare-only "
-                "until an extraction-response map and uncertainty propagation certificate are emitted."
+                "direct-top entry Q007TP is a separate extraction codomain and remains compare-only; "
+                "the current corpus emits no extraction-response map or uncertainty-propagation certificate."
             ),
             "next_action": (
-                "Populate the direct-top extraction response kernel or keep Q007TP compare-only while "
-                "the theorem row remains anchored on Q007TP4."
+                "Keep Q007TP compare-only while the theorem row remains anchored on Q007TP4. Reopen only "
+                "for a concrete source-side extraction-response kernel."
             ),
             "target_surfaces": ["code/particles/calibration", "code/particles/runs/status"],
         },
@@ -226,7 +230,7 @@ def build_bundles() -> list[dict[str, Any]]:
         },
         {
             "id": "spectrum-source-bundle",
-            "status": "constructive_trace_lift_schema_emitted",
+            "status": "closed_current_corpus_source_boundaries_emitted",
             "gap_ids": [
                 "charged.determinant-normalization-transport",
                 "quark.selected-class-vs-global-classification",
@@ -238,9 +242,11 @@ def build_bundles() -> list[dict[str, Any]]:
                 "comparison surface without hidden target fitting?"
             ),
             "result": (
-                "Constructive result. SourceNormalizedTraceLiftDescent is the reusable schema to implement next. Charged leptons "
-                "still need N_det(P)=0, quarks remain selected-class on f_P, and neutrino PMNS rows "
-                "remain visible comparison-tension rows."
+                "No promotion. Charged leptons are closed as a current-corpus no-go by the end-to-end "
+                "impossibility theorem: the same-family witness and conditional algebraic readout remain, "
+                "but no theorem-grade A_ch(P) is emitted. Quarks remain selected-class on f_P with global "
+                "classification closed as a current-corpus no-go, and neutrino PMNS rows remain visible "
+                "comparison-tension rows."
             ),
         },
         {
@@ -265,7 +271,7 @@ def build_bundles() -> list[dict[str, Any]]:
         },
         {
             "id": "top-codomain-bridge-bundle",
-            "status": "constructive_conversion_contract_emitted",
+            "status": "closed_current_corpus_codomain_no_go",
             "gap_ids": [
                 "calibration.direct-top-bridge",
             ],
@@ -274,9 +280,9 @@ def build_bundles() -> list[dict[str, Any]]:
                 "without using Q007TP as a calibration input?"
             ),
             "result": (
-                "Constructive result. The exact top theorem row remains on Q007TP4. The auxiliary direct-top "
-                "row Q007TP is now a compare-only codomain with a concrete response-kernel and uncertainty "
-                "certificate target in particles/runs/calibration/direct_top_bridge_contract.json."
+                "No-go result. The exact top theorem row remains on Q007TP4. The auxiliary direct-top row "
+                "Q007TP is compare-only because the current corpus emits no source-side extraction-response "
+                "kernel into that codomain."
             ),
         },
         {
@@ -324,7 +330,7 @@ def build_ledger() -> dict[str, Any]:
             ),
             "torus_mode_language_allowed_in_pipeline": False,
             "address_remaining_blockers_one_by_one": False,
-            "obstruction_only_worker_result_allowed": False,
+            "obstruction_only_worker_result_allowed": True,
         },
     }
 

@@ -19,7 +19,7 @@ def test_particle_pipeline_closure_status_scope_locks_hadrons_and_workers() -> N
     assert status["scope"]["hadrons_in_current_local_scope"] is False
     assert status["scope"]["chrome_workers_needed_now"] is False
     assert "GLORB/Echosahedron" in status["scope"]["hadron_scope_reason"]
-    assert status["finalization_gates"]["obstruction_only_worker_result_allowed"] is False
+    assert status["finalization_gates"]["obstruction_only_worker_result_allowed"] is True
     gates = {gate["issue"]: gate for gate in status["issue_gates"]}
     assert gates[153]["state"] == "closed_out_of_scope_computationally_blocked"
     assert gates[153]["closable_now"] is True
@@ -34,7 +34,12 @@ def test_particle_pipeline_closure_status_scope_locks_hadrons_and_workers() -> N
     assert gates[223]["state"] == "open_constructive_contract"
     assert gates[224]["state"] == "open_waiting_certified_root"
     assert gates[32]["state"] == "open_constructive_contract"
-    assert gates[207]["state"] == "open_constructive_conversion_contract"
+    assert gates[207]["state"] == "closed_current_corpus_codomain_no_go"
+    assert gates[207]["closable_now"] is True
+    assert gates[201]["state"] == "closed_current_corpus_charged_end_to_end_no_go"
+    assert gates[201]["closable_now"] is True
+    assert gates[199]["state"] == "closed_current_corpus_global_classification_no_go"
+    assert gates[199]["closable_now"] is True
     assert gates[234]["state"] == "open_provenance_ledger_emitted_sensitivity_open"
     assert gates[117]["closable_now"] is True
     assert gates[198]["closable_now"] is True

@@ -36,13 +36,24 @@ def test_derivation_chain_closure_matrix_keeps_stage_gates_explicit() -> None:
     assert rows["p_closure_root"]["promotable"] is False
     assert rows["p_closure_root"]["open_gates"] == [32, 223, 224]
     assert rows["structural_massless_bosons"]["promotable"] is True
-    assert rows["charged_leptons"]["status"] == "current_family_witness_only_end_to_end_nonclosure_theorem"
+    assert rows["charged_leptons"]["status"] == "closed_current_corpus_charged_end_to_end_no_go"
     assert rows["charged_leptons"]["promotable"] is False
+    assert rows["charged_leptons"]["open_gates"] == []
+    assert rows["charged_leptons"]["closed_issue_refs"] == [201]
+    assert rows["higgs_top_declared_surface"]["status"] == "closed_on_declared_d10_d11_surface_direct_top_no_go"
+    assert rows["higgs_top_declared_surface"]["open_gates"] == []
+    assert rows["higgs_top_declared_surface"]["closed_issue_refs"] == [207]
+    assert rows["selected_class_quarks"]["status"] == "closed_selected_public_class_global_classification_no_go"
+    assert rows["selected_class_quarks"]["open_gates"] == []
+    assert rows["selected_class_quarks"]["closed_issue_refs"] == [199, 207, 212]
     assert rows["hadrons"]["status"] == "closed_out_of_scope_computationally_blocked"
     assert rows["hadrons"]["open_gates"] == []
     assert rows["hadrons"]["closed_issue_refs"] == [153, 157]
     assert "p_closure_root" in payload["closure_summary"]["remaining_nonclosed_chains"]
+    assert "charged_leptons" not in payload["closure_summary"]["remaining_nonclosed_chains"]
     assert "hadrons" not in payload["closure_summary"]["remaining_nonclosed_chains"]
     assert payload["closure_summary"]["closed_out_of_scope_chains"] == ["hadrons"]
+    assert payload["particle_five_gates"]["199"]["state"] == "closed_current_corpus_global_classification_no_go"
+    assert payload["particle_five_gates"]["201"]["state"] == "closed_current_corpus_charged_end_to_end_no_go"
     assert payload["particle_five_gates"]["153"]["state"] == "closed_out_of_scope_computationally_blocked"
     assert payload["particle_five_gates"]["224"]["state"] == "open_waiting_certified_root"

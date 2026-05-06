@@ -5,6 +5,7 @@
     "closed_or_scoped_chains": [
       "structural_massless_bosons",
       "higgs_top_declared_surface",
+      "charged_leptons",
       "selected_class_quarks",
       "neutrino_absolute_attachment"
     ],
@@ -14,14 +15,13 @@
     "hardware_gated_chains": [
       "hadrons"
     ],
-    "policy": "Do not promote candidate, compare-only, witness-only, or hardware-gated chains as closed theorem predictions.",
+    "policy": "Do not promote candidate, compare-only, witness-only, current-corpus no-go, or hardware-gated chains as closed theorem predictions.",
     "remaining_nonclosed_chains": [
       "p_closure_root",
-      "electroweak_wz",
-      "charged_leptons"
+      "electroweak_wz"
     ]
   },
-  "generated_utc": "2026-05-05T01:44:15Z",
+  "generated_utc": "2026-05-06T04:16:19Z",
   "particle_five_gates": {
     "153": {
       "chrome_workers": "do_not_use_for_backend_execution",
@@ -34,12 +34,30 @@
       "state": "closed_out_of_scope_computationally_blocked",
       "title": "Hadron backend and systematics"
     },
+    "199": {
+      "chrome_workers": "not_needed_until_new_global_public_frame_classifier_source_exists",
+      "closable_now": true,
+      "issue": 199,
+      "local_next_artifact": "particles/runs/flavor/quark_class_uniform_public_frame_descent_obstruction.json",
+      "selected_class_theorem_preserved": true,
+      "state": "closed_current_corpus_global_classification_no_go",
+      "title": "Class-uniform public quark-frame descent"
+    },
+    "201": {
+      "chrome_workers": "not_needed_until_new_uncentered_trace_lift_source_exists",
+      "closable_now": true,
+      "issue": 201,
+      "local_next_artifact": "particles/runs/leptons/charged_end_to_end_impossibility_theorem.json",
+      "public_charged_masses_emitted": false,
+      "state": "closed_current_corpus_charged_end_to_end_no_go",
+      "title": "Charged determinant trace-lift attachment"
+    },
     "207": {
-      "chrome_workers": "only_for_independent_audit_of_a_proposed_response_kernel",
-      "closable_now": false,
+      "chrome_workers": "not_needed_until_new_response_kernel_source_exists",
+      "closable_now": true,
       "issue": 207,
       "local_next_artifact": "particles/runs/calibration/direct_top_bridge_contract.json",
-      "state": "open_constructive_conversion_contract",
+      "state": "closed_current_corpus_codomain_no_go",
       "title": "Direct-top codomain bridge"
     },
     "223": {
@@ -119,42 +137,47 @@
     {
       "chain": "higgs_top_declared_surface",
       "claim_level": "exact_source_only_higgs_top_split_calibration_theorem",
-      "next_artifact": "code/particles/runs/calibration/direct_top_bridge_contract.json",
-      "open_gates": [
+      "closed_issue_refs": [
         207
       ],
+      "codomain_obstruction": "hard_no_go_current_corpus_compare_only_direct_top_codomain",
+      "next_artifact": "code/particles/runs/calibration/direct_top_bridge_contract.json",
+      "open_gates": [],
       "outputs": {
         "higgs": 125.1995304097179,
         "top_companion": 172.35235532883115
       },
       "promotable": true,
-      "status": "closed_on_declared_d10_d11_surface"
+      "status": "closed_on_declared_d10_d11_surface_direct_top_no_go"
     },
     {
       "chain": "charged_leptons",
       "claim_level": "exact_target_anchored_current_family_witness",
-      "next_artifact": "code/particles/runs/leptons/charged_end_to_end_impossibility_theorem.json",
-      "nonclosure_theorem": "oph_charged_end_to_end_impossibility_theorem",
-      "open_gates": [
+      "closed_issue_refs": [
         201
       ],
+      "next_artifact": "code/particles/runs/leptons/charged_end_to_end_impossibility_theorem.json",
+      "nonclosure_theorem": "oph_charged_end_to_end_impossibility_theorem",
+      "open_gates": [],
       "outputs": {
         "electron": 0.0005109989499999994,
         "muon": 0.10565837550000004,
         "tau": 1.7769324651340912
       },
       "promotable": false,
-      "status": "current_family_witness_only_end_to_end_nonclosure_theorem"
+      "status": "closed_current_corpus_charged_end_to_end_no_go"
     },
     {
       "chain": "selected_class_quarks",
       "claim_level": "selected_class_theorem_grade_exact_forward_quark_closure",
-      "next_artifact": "global quark frame classification or keep selected-class scope visible",
-      "open_gates": [
+      "closed_issue_refs": [
         199,
         207,
         212
       ],
+      "global_classification_obstruction": "hard_no_go_current_corpus_global_classification_not_emitted",
+      "next_artifact": "code/particles/runs/flavor/quark_class_uniform_public_frame_descent_obstruction.json",
+      "open_gates": [],
       "outputs": {
         "bottom": 4.182999999999994,
         "charm": 1.2729999999999992,
@@ -164,7 +187,7 @@
         "up": 0.0021600000000000005
       },
       "promotable": true,
-      "status": "closed_selected_public_class_global_classification_open"
+      "status": "closed_selected_public_class_global_classification_no_go"
     },
     {
       "chain": "neutrino_absolute_attachment",
@@ -203,6 +226,6 @@
   "status": "executable_nonhadron_chain_matrix_emitted",
   "worker_policy": {
     "chrome_pro_workers_needed_now": false,
-    "reason": "Hadron issues #153/#157 are closed out-of-scope until OPH hadron hardware exists; the remaining in-scope open chains need local theorem packets before worker audit is meaningful."
+    "reason": "Hadron issues #153/#157 are closed out-of-scope until OPH hadron hardware exists; the remaining in-scope open P/electroweak chains need local theorem packets before worker audit is meaningful. The charged absolute-anchor, quark global-classification, and direct-top auxiliary-codomain lanes are already closed as current-corpus no-go boundaries."
   }
 }

@@ -1,6 +1,6 @@
 # Particle Pipeline Closure Status
 
-Generated: `2026-05-05T01:44:15Z`
+Generated: `2026-05-06T04:16:19Z`
 
 Single simplified closure gate for the current non-hadron particle pipeline.
 
@@ -20,10 +20,12 @@ Single simplified closure gate for the current non-hadron particle pipeline.
 | #32 | `open_constructive_contract` | `False` | `P_derivation/runtime/rg_matching_threshold_contract_current.json` | only_after_beta_threshold_packet_is_populated |
 | #153 | `closed_out_of_scope_computationally_blocked` | `True` | `particles/runs/hadron/ward_projected_spectral_measure_contract.json` | do_not_use_for_backend_execution |
 | #157 | `closed_out_of_scope_computationally_blocked` | `True` | `particles/runs/hadron/ward_projected_spectral_measure_contract.json` | do_not_use_for_backend_execution |
-| #207 | `open_constructive_conversion_contract` | `False` | `particles/runs/calibration/direct_top_bridge_contract.json` | only_for_independent_audit_of_a_proposed_response_kernel |
+| #201 | `closed_current_corpus_charged_end_to_end_no_go` | `True` | `particles/runs/leptons/charged_end_to_end_impossibility_theorem.json` | not_needed_until_new_uncentered_trace_lift_source_exists |
+| #207 | `closed_current_corpus_codomain_no_go` | `True` | `particles/runs/calibration/direct_top_bridge_contract.json` | not_needed_until_new_response_kernel_source_exists |
 | #234 | `open_provenance_ledger_emitted_sensitivity_open` | `False` | `particles/runs/status/blind_prediction_provenance.json` | only_for_audit_after_convention_sensitivity_sweep_exists |
 | #117 | `closed_keep_visible_comparison_tension` | `True` | `particles/runs/neutrino/neutrino_lane_closure_contract.json` | not_needed |
 | #198 | `closed_selected_class_scope_visible` | `True` | `particles/runs/flavor/quark_lane_closure_contract.json` | not_needed |
+| #199 | `closed_current_corpus_global_classification_no_go` | `True` | `particles/runs/flavor/quark_class_uniform_public_frame_descent_obstruction.json` | not_needed_until_new_global_public_frame_classifier_source_exists |
 
 ## Latest Non-Hadron Predictions
 
@@ -53,4 +55,4 @@ Single simplified closure gate for the current non-hadron particle pipeline.
 - `nonhadron_prediction_surface_buildable`: `True`
 - `hadrons_suppressed_by_default`: `True`
 - `p_trunk_candidate_only`: `True`
-- `obstruction_only_worker_result_allowed`: `False`
+- `obstruction_only_worker_result_allowed`: `True`

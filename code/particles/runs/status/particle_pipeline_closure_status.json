@@ -8,12 +8,19 @@
       "promotion_allowed": false,
       "status": "provenance_ledger_emitted_convention_sensitivity_contract_open"
     },
+    "charged_end_to_end_impossibility_theorem": {
+      "artifact": "oph_charged_end_to_end_impossibility_theorem",
+      "exists": true,
+      "path": "particles/runs/leptons/charged_end_to_end_impossibility_theorem.json",
+      "promotion_allowed": null,
+      "status": null
+    },
     "direct_top_bridge_contract": {
       "artifact": "oph_direct_top_bridge_contract",
       "exists": true,
       "path": "particles/runs/calibration/direct_top_bridge_contract.json",
       "promotion_allowed": false,
-      "status": "constructive_conversion_contract_emitted_not_direct_top_theorem"
+      "status": "hard_no_go_current_corpus_compare_only_direct_top_codomain"
     },
     "gap_ledger": {
       "artifact": "oph_particle_derivation_gap_ledger",
@@ -42,6 +49,13 @@
       "path": "P_derivation/runtime/p_closure_trunk_current.json",
       "promotion_allowed": null,
       "status": "compressed_candidate_trunk_not_final_particle_root"
+    },
+    "quark_global_classification_obstruction": {
+      "artifact": "oph_quark_class_uniform_public_frame_descent_obstruction",
+      "exists": true,
+      "path": "particles/runs/flavor/quark_class_uniform_public_frame_descent_obstruction.json",
+      "promotion_allowed": null,
+      "status": "hard_no_go_current_corpus_global_classification_not_emitted"
     },
     "quark_lane_closure_contract": {
       "artifact": "oph_quark_lane_closure_contract",
@@ -74,10 +88,10 @@
   "finalization_gates": {
     "hadrons_suppressed_by_default": true,
     "nonhadron_prediction_surface_buildable": true,
-    "obstruction_only_worker_result_allowed": false,
+    "obstruction_only_worker_result_allowed": true,
     "p_trunk_candidate_only": true
   },
-  "generated_utc": "2026-05-05T01:44:15Z",
+  "generated_utc": "2026-05-06T04:16:19Z",
   "issue_gates": [
     {
       "chrome_workers": "not_useful_until_source_endpoint_packet_exists",
@@ -128,11 +142,20 @@
       "title": "Nonperturbative QCD hadron branch"
     },
     {
-      "chrome_workers": "only_for_independent_audit_of_a_proposed_response_kernel",
-      "closable_now": false,
+      "chrome_workers": "not_needed_until_new_uncentered_trace_lift_source_exists",
+      "closable_now": true,
+      "issue": 201,
+      "local_next_artifact": "particles/runs/leptons/charged_end_to_end_impossibility_theorem.json",
+      "public_charged_masses_emitted": false,
+      "state": "closed_current_corpus_charged_end_to_end_no_go",
+      "title": "Charged determinant trace-lift attachment"
+    },
+    {
+      "chrome_workers": "not_needed_until_new_response_kernel_source_exists",
+      "closable_now": true,
       "issue": 207,
       "local_next_artifact": "particles/runs/calibration/direct_top_bridge_contract.json",
-      "state": "open_constructive_conversion_contract",
+      "state": "closed_current_corpus_codomain_no_go",
       "title": "Direct-top codomain bridge"
     },
     {
@@ -158,6 +181,15 @@
       "local_next_artifact": "particles/runs/flavor/quark_lane_closure_contract.json",
       "state": "closed_selected_class_scope_visible",
       "title": "Selected public quark-frame sigma descent"
+    },
+    {
+      "chrome_workers": "not_needed_until_new_global_public_frame_classifier_source_exists",
+      "closable_now": true,
+      "issue": 199,
+      "local_next_artifact": "particles/runs/flavor/quark_class_uniform_public_frame_descent_obstruction.json",
+      "selected_class_theorem_preserved": true,
+      "state": "closed_current_corpus_global_classification_no_go",
+      "title": "Class-uniform public quark-frame descent"
     }
   ],
   "latest_nonhadron_predictions": {

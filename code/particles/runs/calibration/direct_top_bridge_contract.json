@@ -8,13 +8,21 @@
     "value_gev": 172.5590883453979
   },
   "closure_gate": {
-    "closable_now": false,
-    "close_issue_when": [
+    "closable_now": true,
+    "reason": "The current exact top coordinate and the auxiliary direct-top average are compatible as a comparison, but no source-side extraction-response map has been emitted; therefore the direct-top theorem bridge is closed as a no-go on the current corpus.",
+    "reopen_only_when": [
       "codomain metadata is explicit in the public status surfaces",
       "a response kernel maps the current top coordinate into the direct-top codomain without using the direct-top central value as an input",
       "the propagated interval overlaps or explains the auxiliary direct-top entry"
-    ],
-    "reason": "The current exact top coordinate and the auxiliary direct-top average are compatible as a comparison, but no source-side extraction-response map has been emitted."
+    ]
+  },
+  "closure_verdict": {
+    "auxiliary_row_policy": "compare_only_not_promotable",
+    "blocked_surface": "Q007TP_auxiliary_direct_top_coordinate",
+    "closed_theorem_grade_surface": "Q007TP4_cross_section_top_coordinate",
+    "closure_kind": "hard_no_go_current_corpus",
+    "issue_207_acceptance_met_as_obstruction": true,
+    "why_no_forward_bridge": "The current OPH/D10/D11/quark corpus emits a top coordinate in the PDG cross-section codomain Q007TP4. It does not emit an extraction-response kernel, mass-scheme conversion, or uncertainty-propagation certificate from Q007TP4 into the auxiliary direct-measurement codomain Q007TP. Any such conversion would choose external experimental/MC response data."
   },
   "comparison_only_readout": {
     "combined_reference_sigma_gev": 0.7264278922454234,
@@ -75,17 +83,24 @@
     "post_hoc_shift_to_force_the_direct_top_average",
     "relabeling_Q007TP4_as_Q007TP_without_a_conversion_map"
   ],
-  "generated_utc": "2026-05-05T01:44:15Z",
+  "formal_nonidentifiability_witness": {
+    "free_response_family": "m_direct(lambda) = m_Q007TP4 + lambda",
+    "lambda_matching_auxiliary_central_value_gev": 0.20673301656674425,
+    "source_constraints_on_lambda": "none emitted by the current corpus",
+    "why_not_a_theorem": "Choosing lambda from the auxiliary Q007TP central value would use the direct-top row as an input. Choosing lambda=0 would relabel Q007TP4 as Q007TP. Both choices satisfy the current OPH top theorem data equally well because the extraction-response codomain is absent."
+  },
+  "generated_utc": "2026-05-06T04:16:36Z",
   "github_issue": 207,
   "local_next_steps": [
-    "Add derive_top_extraction_response_kernel.py only if a source-side or QFT extraction map is available.",
-    "Otherwise keep Q007TP as compare-only and keep Q007TP4 as the theorem row source.",
-    "Update the GitHub issue with this contract path instead of accepting a no-go packet."
+    "Keep Q007TP as compare-only and keep Q007TP4 as the theorem row source.",
+    "Do not launch more workers for this lane unless a source-side or QFT extraction-response map is introduced.",
+    "Open a new issue only for a concrete response-kernel artifact, not for further border sharpening."
   ],
   "promotion_allowed": false,
-  "status": "constructive_conversion_contract_emitted_not_direct_top_theorem",
+  "status": "hard_no_go_current_corpus_compare_only_direct_top_codomain",
   "worker_result_policy": {
-    "obstruction_only_result_allowed": false,
-    "required_if_primary_route_fails": "emit a replacement extraction-response object, conversion theorem interface, uncertainty-propagation certificate, or compare-only row patch"
+    "obstruction_only_result_allowed": true,
+    "pro_workers_needed_now": false,
+    "reason": "A new worker pass is not useful until a source-side extraction-response object exists."
   }
 }

@@ -83,7 +83,7 @@ def build_payload() -> dict[str, Any]:
     particle_five_gates = [
         gate
         for gate in pipeline["issue_gates"]
-        if gate["issue"] in {223, 224, 32, 153, 207}
+        if gate["issue"] in {223, 224, 32, 153, 199, 201, 207}
     ]
 
     return {

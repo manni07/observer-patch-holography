@@ -216,11 +216,11 @@ LANES: List[Dict[str, Any]] = [
             "top and Higgs channels, then reads out `m_t = 172.3523553288312 GeV` and "
             "`m_H = 125.1995304097179 GeV` by the declared D11 Jacobian. The compare-only exact pair "
             "stays on disk only as a validation surface. The exact public running-top row is also "
-            "carried by the selected-class quark theorem. The bridge to the auxiliary direct-top PDG "
-            "row is open, tracked in `#207`, and now has the constructive contract "
+            "carried by the selected-class quark theorem. The auxiliary direct-top PDG row is "
+            "compare-only; `#207` is closed as a current-corpus no-go by "
             "`code/particles/runs/calibration/direct_top_bridge_contract.json`."
         ),
-        "tasks_text": "Ledger state: the exact source-only electroweak Higgs theorem is closed on the declared running, matching, and threshold surface; the one-scalar seed stays on disk as a lower-rank fixed-ray branch; the exact inverse slice remains compare-only; the direct-top bridge has a constructive contract under `#207`.",
+        "tasks_text": "Ledger state: the exact source-only electroweak Higgs theorem is closed on the declared running, matching, and threshold surface; the one-scalar seed stays on disk as a lower-rank fixed-ray branch; the exact inverse slice remains compare-only; the direct-top auxiliary codomain is closed as a current-corpus no-go under `#207`.",
         "prediction_surface": "Electroweak split-theorem surface with an exact Higgs row and a companion top coordinate on the declared Jacobian surface.",
         "particles": ["higgs"],
         "tasks": [],
@@ -229,7 +229,7 @@ LANES: List[Dict[str, Any]] = [
         "key": "leptons",
         "title": "Charged Leptons",
         "summary": "The charged-lepton lane contains an exact same-family readout on the fixed ordered carrier, the live same-label `q_e` readback, a source-side determinant character `S_M` for a fixed formal source exponent vector, a conditional determinant-line lift on theorem-grade physical charged data, and an algebraic charged-mass readout from theorem-grade `A_ch(P)`.",
-        "takeaway": "The theorem surface contains the exact same-family witness, the live same-label `q_e` readback, the source-side determinant character for a fixed formal source exponent vector, the conditional determinant-line lift, and the downstream algebraic mass readout. The open source theorem is the sector-isolated trace-lift attachment `3 mu(r) = sum_e M_e^ch log q_e(r)`, equivalently zero determinant-normalization defect.",
+        "takeaway": "The theorem surface contains the exact same-family witness, the live same-label `q_e` readback, the source-side determinant character for a fixed formal source exponent vector, the conditional determinant-line lift, and the downstream algebraic mass readout. Issue #201 is closed as a current-corpus no-go because the live corpus does not emit the sector-isolated trace-lift attachment `3 mu(r) = sum_e M_e^ch log q_e(r)`, equivalently zero determinant-normalization defect.",
         "logic": (
             "The lane starts from the ordered charged package, proves that the realized support is a one-dimensional "
             "linear subray, exposes the canonical quadratic support-extension direction, maps that into the charged "
@@ -240,10 +240,10 @@ LANES: List[Dict[str, Any]] = [
             "`mu_phys(Y_e) = (1/3) * log(det(Y_e))`, together with the canonical uncentered lift and determinant-line section. "
             "Once theorem-grade `A_ch(P)` is given, the charged absolute scale and the charged mass triple are algebraic readouts. "
             "The live same-label `q_e` readback supplies a populated source-side determinant character for each fixed formal source exponent vector. "
-            "The unresolved step is the sector-isolated trace-lift attachment / determinant-normalization identity "
+            "The missing reopen object is the sector-isolated trace-lift attachment / determinant-normalization identity "
             "`3 mu(r) = sum_e M_e^ch log q_e(r)` on the charged determinant channel, beneath the broader D10 landing to the charged determinant line."
         ),
-        "tasks_text": "Frontier statement: the same-family witness, the live same-label `q_e` readback, the source-side determinant character for a fixed formal source exponent vector, the conditional determinant-line lift, and the algebraic mass readout are part of the charged theorem surface. The open source theorem is the sector-isolated trace-lift attachment / zero-normalization identity `3 mu(r) = sum_e M_e^ch log q_e(r)`.",
+        "tasks_text": "Frontier statement: the same-family witness, the live same-label `q_e` readback, the source-side determinant character for a fixed formal source exponent vector, the conditional determinant-line lift, and the algebraic mass readout are part of the charged theorem surface. #201 is closed as a current-corpus no-go; reopen only for a sector-isolated trace-lift attachment / zero-normalization identity `3 mu(r) = sum_e M_e^ch log q_e(r)`.",
         "prediction_surface": "Charged theorem surface with an exact same-family witness, a conditional determinant-line lift on theorem-grade physical charged data, and an algebraic charged-mass readout from theorem-grade `A_ch(P)`.",
         "particles": ["electron", "muon", "tau"],
         "tasks": ["papers.compact.e.30e-derive-d10-to-charged-determinant-line-landing"],

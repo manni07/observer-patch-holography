@@ -80,7 +80,7 @@ def test_runtime_surface_preserves_repaired_neutrino_rows_and_canonical_refs(tmp
     assert final_predictions["artifact"] == "oph_final_current_end_to_end_particle_predictions"
     assert (current_dir / "FINAL_END_TO_END_PREDICTIONS.md").exists()
     direct_top = json.loads((current_dir / "runs" / "calibration" / "direct_top_bridge_contract.json").read_text())
-    assert direct_top["status"] == "constructive_conversion_contract_emitted_not_direct_top_theorem"
+    assert direct_top["status"] == "hard_no_go_current_corpus_compare_only_direct_top_codomain"
     assert direct_top["promotion_allowed"] is False
 
 

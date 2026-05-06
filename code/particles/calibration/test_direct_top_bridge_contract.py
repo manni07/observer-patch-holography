@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the constructive direct-top bridge contract."""
+"""Validate the direct-top codomain closure certificate."""
 
 from __future__ import annotations
 
@@ -16,15 +16,18 @@ SCRIPT = ROOT / "particles" / "calibration" / "derive_direct_top_bridge_contract
 OUTPUT = ROOT / "particles" / "runs" / "calibration" / "direct_top_bridge_contract.json"
 
 
-def test_direct_top_bridge_contract_keeps_auxiliary_row_compare_only() -> None:
+def test_direct_top_bridge_contract_closes_auxiliary_row_as_current_corpus_no_go() -> None:
     subprocess.run([sys.executable, str(SCRIPT)], check=True, cwd=ROOT)
 
     payload = json.loads(OUTPUT.read_text(encoding="utf-8"))
     assert payload["artifact"] == "oph_direct_top_bridge_contract"
     assert payload["github_issue"] == 207
-    assert payload["status"] == "constructive_conversion_contract_emitted_not_direct_top_theorem"
+    assert payload["status"] == "hard_no_go_current_corpus_compare_only_direct_top_codomain"
     assert payload["promotion_allowed"] is False
-    assert payload["worker_result_policy"]["obstruction_only_result_allowed"] is False
+    assert payload["worker_result_policy"]["obstruction_only_result_allowed"] is True
+    assert payload["worker_result_policy"]["pro_workers_needed_now"] is False
+    assert payload["closure_verdict"]["issue_207_acceptance_met_as_obstruction"] is True
+    assert payload["closure_verdict"]["auxiliary_row_policy"] == "compare_only_not_promotable"
     assert payload["current_theorem_coordinate"]["pdg_summary_id"] == "Q007TP4"
     assert payload["auxiliary_direct_top_coordinate"]["pdg_summary_id"] == "Q007TP"
     assert payload["current_theorem_coordinate"]["value_gev"] == pytest.approx(172.35235532883115)
@@ -34,7 +37,11 @@ def test_direct_top_bridge_contract_keeps_auxiliary_row_compare_only() -> None:
         abs=1.0e-12,
     )
     assert payload["comparison_only_readout"]["within_combined_one_sigma"] is True
-    assert payload["closure_gate"]["closable_now"] is False
+    assert payload["closure_gate"]["closable_now"] is True
+    assert payload["formal_nonidentifiability_witness"]["lambda_matching_auxiliary_central_value_gev"] == pytest.approx(
+        0.20673301656675,
+        abs=1.0e-12,
+    )
     object_ids = {item["id"] for item in payload["constructive_objects"]}
     assert "cross_section_to_direct_top_response_kernel" in object_ids
     assert "direct_top_uncertainty_propagation" in object_ids

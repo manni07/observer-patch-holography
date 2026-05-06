@@ -16,6 +16,10 @@ FINAL_PREDICTIONS = PARTICLES_ROOT / "runs" / "status" / "final_end_to_end_predi
 PIPELINE_STATUS = PARTICLES_ROOT / "runs" / "status" / "particle_pipeline_closure_status.json"
 BLIND_PROVENANCE = PARTICLES_ROOT / "runs" / "status" / "blind_prediction_provenance.json"
 CHARGED_NONCLOSURE = PARTICLES_ROOT / "runs" / "leptons" / "charged_end_to_end_impossibility_theorem.json"
+QUARK_GLOBAL_OBSTRUCTION = (
+    PARTICLES_ROOT / "runs" / "flavor" / "quark_class_uniform_public_frame_descent_obstruction.json"
+)
+DIRECT_TOP_CONTRACT = PARTICLES_ROOT / "runs" / "calibration" / "direct_top_bridge_contract.json"
 DEFAULT_JSON_OUT = PARTICLES_ROOT / "runs" / "status" / "derivation_chain_closure_matrix.json"
 DEFAULT_MD_OUT = PARTICLES_ROOT / "DERIVATION_CHAIN_CLOSURE_MATRIX.md"
 
@@ -41,6 +45,8 @@ def build_payload() -> dict[str, Any]:
     pipeline = _load_json(PIPELINE_STATUS)
     provenance = _load_json(BLIND_PROVENANCE)
     charged_nonclosure = _load_json(CHARGED_NONCLOSURE)
+    quark_global = _load_json(QUARK_GLOBAL_OBSTRUCTION)
+    direct_top = _load_json(DIRECT_TOP_CONTRACT)
     predictions = _prediction_map(final_predictions)
     gates = _issue_map(pipeline)
 
@@ -80,19 +86,21 @@ def build_payload() -> dict[str, Any]:
         },
         {
             "chain": "higgs_top_declared_surface",
-            "status": "closed_on_declared_d10_d11_surface",
+            "status": "closed_on_declared_d10_d11_surface_direct_top_no_go",
             "claim_level": predictions["higgs"]["exact_kind"],
             "outputs": {
                 "higgs": predictions["higgs"]["value"],
                 "top_companion": predictions["top_quark"]["value"],
             },
             "promotable": True,
-            "open_gates": [207],
+            "open_gates": [],
+            "closed_issue_refs": [207],
             "next_artifact": "code/particles/runs/calibration/direct_top_bridge_contract.json",
+            "codomain_obstruction": direct_top.get("status"),
         },
         {
             "chain": "charged_leptons",
-            "status": "current_family_witness_only_end_to_end_nonclosure_theorem",
+            "status": "closed_current_corpus_charged_end_to_end_no_go",
             "claim_level": predictions["electron"]["exact_kind"],
             "outputs": {
                 "electron": predictions["electron"]["value"],
@@ -100,13 +108,14 @@ def build_payload() -> dict[str, Any]:
                 "tau": predictions["tau"]["value"],
             },
             "promotable": False,
-            "open_gates": [201],
+            "open_gates": [],
+            "closed_issue_refs": [201],
             "next_artifact": "code/particles/runs/leptons/charged_end_to_end_impossibility_theorem.json",
             "nonclosure_theorem": charged_nonclosure.get("artifact"),
         },
         {
             "chain": "selected_class_quarks",
-            "status": "closed_selected_public_class_global_classification_open",
+            "status": "closed_selected_public_class_global_classification_no_go",
             "claim_level": predictions["top_quark"]["exact_kind"],
             "outputs": {
                 "up": predictions["up_quark"]["value"],
@@ -117,8 +126,10 @@ def build_payload() -> dict[str, Any]:
                 "top": predictions["top_quark"]["value"],
             },
             "promotable": True,
-            "open_gates": [199, 207, 212],
-            "next_artifact": "global quark frame classification or keep selected-class scope visible",
+            "open_gates": [],
+            "closed_issue_refs": [199, 207, 212],
+            "next_artifact": "code/particles/runs/flavor/quark_class_uniform_public_frame_descent_obstruction.json",
+            "global_classification_obstruction": quark_global.get("proof_status"),
         },
         {
             "chain": "neutrino_absolute_attachment",
@@ -158,8 +169,9 @@ def build_payload() -> dict[str, Any]:
         if row["status"]
         in {
             "closed_structural_zero",
-            "closed_on_declared_d10_d11_surface",
-            "closed_selected_public_class_global_classification_open",
+            "closed_on_declared_d10_d11_surface_direct_top_no_go",
+            "closed_current_corpus_charged_end_to_end_no_go",
+            "closed_selected_public_class_global_classification_no_go",
             "closed_weighted_cycle_absolute_attachment_with_comparison_tension_visible",
         }
     ]
@@ -181,8 +193,8 @@ def build_payload() -> dict[str, Any]:
             "closed_out_of_scope_chains": ["hadrons"],
             "hardware_gated_chains": ["hadrons"],
             "policy": (
-                "Do not promote candidate, compare-only, witness-only, or hardware-gated chains as "
-                "closed theorem predictions."
+                "Do not promote candidate, compare-only, witness-only, current-corpus no-go, or "
+                "hardware-gated chains as closed theorem predictions."
             ),
         },
         "source_artifacts": {
@@ -194,10 +206,12 @@ def build_payload() -> dict[str, Any]:
             "chrome_pro_workers_needed_now": False,
             "reason": (
                 "Hadron issues #153/#157 are closed out-of-scope until OPH hadron hardware exists; "
-                "the remaining in-scope open chains need local theorem packets before worker audit is meaningful."
+                "the remaining in-scope open P/electroweak chains need local theorem packets before worker audit is meaningful. "
+                "The charged absolute-anchor, quark global-classification, and direct-top auxiliary-codomain lanes "
+                "are already closed as current-corpus no-go boundaries."
             ),
         },
-        "particle_five_gates": {str(issue): gates[issue] for issue in (32, 153, 207, 223, 224) if issue in gates},
+        "particle_five_gates": {str(issue): gates[issue] for issue in (32, 153, 199, 201, 207, 223, 224) if issue in gates},
         "provenance_status": provenance["status"],
         "rows": rows,
     }

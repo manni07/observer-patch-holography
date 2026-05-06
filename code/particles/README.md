@@ -88,8 +88,8 @@ electroweak running, matching, and threshold surface. It emits
 The Higgs row lands on the PDG 2025 Higgs average at quoted precision.
 The exact public running-top row uses the PDG 2025 cross-section entry
 `Q007TP4`.
-The bridge to the auxiliary direct-top average `Q007TP` is open and tracked in
-[#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207).
+The auxiliary direct-top average `Q007TP` is compare-only; #207 is closed as a
+current-corpus codomain no-go.
 
 ## Main Outputs
 
@@ -167,8 +167,9 @@ selector `sigma_ref`, and the restricted-scope affine mean package with
 `quark_d12_t1_value_law`, on the emitted D12 ray. The exact six-mass witness
 closes on `current_family_only` and matches the official PDG 2025 API running
 quark reference sextet exactly on that declared surface; its top coordinate is
-the PDG 2025 cross-section mass entry. The bridge to the auxiliary direct-top
-entry is open and is tracked in [#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207). A separate restricted theorem chain on the explicit
+the PDG 2025 cross-section mass entry. The auxiliary direct-top entry is
+compare-only; [#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207)
+is closed as a current-corpus codomain no-go. A separate restricted theorem chain on the explicit
 `current_family_common_refinement_transport_frame_only` carrier emits a
 sector-attached `Sigma_ud^phys` element, the exact physical sigma datum, the
 restricted absolute sector readout, the same sextet, and explicit exact
