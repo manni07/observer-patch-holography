@@ -28,6 +28,9 @@ def test_interval_certificate_blocks_without_source_r_q() -> None:
     assert r_q_contract["issue_235_resolution"]["first_missing_lemma"] == (
         "source-emitted same-scheme Ward-projected R_Q(P)"
     )
+    assert r_q_contract["source_spectral_theorem_status"] == (
+        "source_spectral_reduction_theorem_emitted_measure_payload_absent"
+    )
 
 
 def test_conditional_banach_budget_is_recorded() -> None:

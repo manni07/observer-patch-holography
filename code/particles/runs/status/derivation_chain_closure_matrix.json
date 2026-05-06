@@ -21,7 +21,7 @@
       "electroweak_wz"
     ]
   },
-  "generated_utc": "2026-05-06T09:55:14Z",
+  "generated_utc": "2026-05-06T10:15:20Z",
   "particle_five_gates": {
     "153": {
       "chrome_workers": "do_not_use_for_backend_execution",
@@ -73,16 +73,37 @@
       "title": "Ward-projected Thomson endpoint package"
     },
     "224": {
-      "chrome_workers": "not_useful_until_endpoint_and_interval_gates_close",
-      "closable_now": false,
+      "chrome_workers": "not_needed_for_guarded_codepath_closure",
+      "closable_now": true,
+      "closed_as_guarded_candidate_adoption": true,
       "issue": 224,
       "local_next_artifact": "P_derivation/runtime/p_closure_trunk_current.json",
       "promotion_allowed": false,
-      "state": "open_waiting_certified_root",
+      "stage_gate": "populated source spectral measure payload plus full interval certificate before live particle promotion",
+      "state": "closed_canonical_guarded_trunk_adoption",
       "title": "Adopt certified derived P closure root"
     },
+    "225": {
+      "chrome_workers": "not_needed_for_material_sync",
+      "closable_now": true,
+      "closed_as_material_update": true,
+      "issue": 225,
+      "local_next_artifact": "paper/deriving_the_particle_zoo_from_observer_consistency.tex",
+      "publish_performed": false,
+      "state": "closed_material_sync_no_live_publish",
+      "title": "Synchronize derived P closure values across material surfaces"
+    },
+    "234": {
+      "chrome_workers": "not_needed_for_closed_provenance_taxonomy",
+      "closable_now": true,
+      "closed_as_material_audit": true,
+      "issue": 234,
+      "local_next_artifact": "particles/runs/status/blind_prediction_provenance.json",
+      "state": "closed_provenance_ledger_and_declared_sensitivity_taxonomy",
+      "title": "Blind-prediction provenance and convention-sensitivity audits"
+    },
     "235": {
-      "chrome_workers": "not_needed_until_source_spectral_object_exists",
+      "chrome_workers": "not_needed_until_source_spectral_measure_payload_exists",
       "closable_now": true,
       "closed_as_first_missing_lemma_isolated": true,
       "first_missing_lemma": "source-emitted same-scheme Ward-projected R_Q(P)",
@@ -90,13 +111,14 @@
       "interval_certificate_artifact": "P_derivation/runtime/fine_structure_interval_certificate_current.json",
       "issue": 235,
       "local_next_artifact": "P_derivation/runtime/thomson_endpoint_contract_current.json",
-      "minimal_new_theorem": "WardProjectedHadronicSpectralEmission_Q",
+      "minimal_new_payload": "oph_qcd_ward_projected_hadronic_spectral_measure",
       "no_go_artifact": "P_derivation/runtime/screening_invariant_no_go_current.json",
       "package_artifact": "P_derivation/runtime/thomson_endpoint_package_current.json",
       "promotion_allowed": false,
       "residual_contract_artifact": "P_derivation/runtime/r_q_residual_contract_current.json",
+      "source_spectral_reduction": "source_spectral_reduction_theorem_emitted_measure_payload_absent",
       "state": "closed_blocker_isolated_source_residual_no_go",
-      "title": "Source residual map and interval certificate"
+      "title": "Source spectral measure payload and interval certificate"
     },
     "32": {
       "chrome_workers": "not_needed_for_closed_contract",
@@ -109,21 +131,22 @@
       "title": "RG matching and threshold structure"
     }
   },
-  "provenance_status": "provenance_ledger_emitted_convention_sensitivity_contract_open",
+  "provenance_status": "closed_provenance_ledger_and_declared_sensitivity_taxonomy",
   "rows": [
     {
       "chain": "p_closure_root",
       "claim_level": "compressed_candidate_trunk_not_final_particle_root",
-      "next_artifact": "code/P_derivation/runtime/r_q_residual_contract_current.json + code/P_derivation/runtime/fine_structure_interval_certificate_current.json",
-      "open_gates": [
+      "closed_issue_refs": [
         224
       ],
+      "next_artifact": "code/P_derivation/runtime/r_q_residual_contract_current.json + code/P_derivation/runtime/fine_structure_interval_certificate_current.json",
+      "open_gates": [],
       "outputs": {
         "P": "1.63097210492078846050203640439",
         "alpha_inv": "136.994020662724205139718642793"
       },
       "promotable": false,
-      "stage_gate": "WardProjectedHadronicSpectralEmission_Q + full interval certificate",
+      "stage_gate": "populated source spectral measure payload + full interval certificate",
       "status": "candidate_not_live_root"
     },
     {
@@ -142,16 +165,17 @@
     {
       "chain": "electroweak_wz",
       "claim_level": "exact_frozen_target_compare_only_adapter",
-      "next_artifact": "code/P_derivation/runtime/r_q_residual_contract_current.json",
-      "open_gates": [
+      "closed_issue_refs": [
         224
       ],
+      "next_artifact": "code/P_derivation/runtime/r_q_residual_contract_current.json",
+      "open_gates": [],
       "outputs": {
         "w_boson": 80.377,
         "z_boson": 91.18797809193725
       },
       "promotable": false,
-      "stage_gate": "certified P root after source spectral endpoint",
+      "stage_gate": "certified P root after populated source spectral measure payload",
       "status": "compare_only_reproduction_not_prediction_theorem"
     },
     {
@@ -246,6 +270,6 @@
   "status": "executable_nonhadron_chain_matrix_emitted",
   "worker_policy": {
     "chrome_pro_workers_needed_now": false,
-    "reason": "Hadron issues #153/#157 are closed out-of-scope pending OPH hadron hardware; the remaining in-scope open P/electroweak chains need a source-emitted residual map and interval certificate before worker audit is meaningful. The charged absolute-anchor, quark global-classification, and direct-top auxiliary-codomain lanes have corpus-limited no-go boundaries."
+    "reason": "Hadron issues #153/#157 are closed out-of-scope pending OPH hadron hardware; the remaining in-scope P/electroweak chains need a populated source spectral measure payload and interval certificate before worker audit is meaningful. The charged absolute-anchor, quark global-classification, and direct-top auxiliary-codomain lanes have corpus-limited no-go boundaries."
   }
 }

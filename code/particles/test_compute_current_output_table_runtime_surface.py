@@ -70,12 +70,13 @@ def test_runtime_surface_preserves_repaired_neutrino_rows_and_canonical_refs(tmp
     )
     assert (current_dir / "P_derivation" / "runtime" / "p_closure_trunk_current.json").exists()
     assert (current_dir / "P_derivation" / "runtime" / "thomson_endpoint_contract_current.json").exists()
+    assert (current_dir / "P_derivation" / "runtime" / "source_spectral_theorem_current.json").exists()
     assert (current_dir / "P_derivation" / "runtime" / "thomson_endpoint_package_current.json").exists()
     assert (current_dir / "P_derivation" / "runtime" / "rg_matching_threshold_contract_current.json").exists()
     assert (current_dir / "runs" / "status" / "particle_derivation_gap_ledger.json").exists()
     assert (current_dir / "runs" / "status" / "particle_pipeline_closure_status.json").exists()
     provenance = json.loads((current_dir / "runs" / "status" / "blind_prediction_provenance.json").read_text())
-    assert provenance["status"] == "provenance_ledger_emitted_convention_sensitivity_contract_open"
+    assert provenance["status"] == "closed_provenance_ledger_and_declared_sensitivity_taxonomy"
     assert (current_dir / "BLIND_PREDICTION_PROVENANCE.md").exists()
     final_predictions = json.loads((current_dir / "runs" / "status" / "final_end_to_end_predictions.json").read_text())
     assert final_predictions["artifact"] == "oph_final_current_end_to_end_particle_predictions"

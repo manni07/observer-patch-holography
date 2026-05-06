@@ -6,8 +6,11 @@ fixed-point witness into a measured fine-structure derivation.
 The theorem package is conditional. The lepton one-loop transport is
 implemented as a numerical kernel. The endpoint package computes the residual
 inverse-alpha packet that a source-only Ward-projected transport theorem must
-emit. The Ward-projected QCD screening map, the electroweak scheme remainder,
-and the interval certificate remain theorem burdens.
+emit. The source-spectral reduction theorem is emitted in
+`SOURCE_SPECTRAL_THEOREM.md` and
+`runtime/source_spectral_theorem_current.json`. The Ward-projected spectral
+measure payload, the electroweak scheme remainder, and the interval certificate
+remain theorem burdens.
 
 ## Objects
 
@@ -150,7 +153,8 @@ What remains to promote this to theorem grade:
 
 ## Theorem 3: Hadronic Spectral Transport
 
-**Status:** residual packet computed, source map open.
+**Status:** source-spectral reduction theorem emitted; source measure payload
+absent.
 
 The quark part cannot be theorem-grade if it is only a free-quark sum multiplied
 by a simple screening factor. A source-only theorem must emit a positive
@@ -176,15 +180,20 @@ Delta_had(P) = Integral[ W_had(s, m_Z(P)^2) * rho_had(s;P) ds ],
 with the subtraction chosen so that the same `a0(P)` scheme is used at
 `m_Z^2`.
 
-This theorem is the main missing physics object. It must replace the free-quark
-screened ansatz.
+The reduction theorem replaces the free-quark screened ansatz once a populated
+source measure exists. The local corpus contains the schema and contract, but
+does not contain the finite-volume levels, Ward-projected residues, current
+normalization, continuum pushforward, or systematics needed for the numerical
+spectral moment.
 
 Constructive implementation target:
 
 - `thomson_endpoint_contract.py`
 - `thomson_endpoint_package.py`
+- `source_spectral_theorem.py`
 - `runtime/thomson_endpoint_contract_current.json`
 - `runtime/thomson_endpoint_package_current.json`
+- `runtime/source_spectral_theorem_current.json`
 - `../particles/hadron/ward_projected_spectral_measure.schema.json`
 
 Workers should not return obstruction-only text for this branch. If the
@@ -216,7 +225,8 @@ bound.
 
 **Status:** endpoint package closed for issue #223; source-residual
 non-identifiability boundary closed for issue #235. Exact-alpha promotion
-requires the source spectral theorem named below.
+requires the populated source spectral measure payload and interval
+certificate.
 
 If Theorems 2, 3, and 4 are closed on the same source family and scheme, define
 
@@ -313,17 +323,18 @@ values change the endpoint transport at the scale of the required residual.
 Therefore neither `S_required`, `c_Q`, nor a CODATA-mapped scalar residual can
 be promoted as an OPH derivation.
 
-The minimal new theorem is:
+The emitted reduction theorem is:
 
 ```text
 WardProjectedHadronicSpectralEmission_Q:
   OPH axioms + realized SM branch + D10 source packet
-  -> rho_had(s;P), Delta_EW_src(P), scheme lock,
+  + source spectral measure payload
+  -> Delta_had_src(P), Delta_EW_src(P), scheme lock,
      quadrature/tail bound, derivative bound.
 ```
 
-Only after that object is emitted can the conditional interval certificate be
-upgraded to a theorem-grade proof for
+Only after the measure payload is populated can the conditional interval
+certificate be upgraded to a theorem-grade proof for
 
 ```text
 G(P) = phi + sqrt(pi) / (B(P) + R_Q(P)).

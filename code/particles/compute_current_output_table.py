@@ -122,6 +122,10 @@ RUNTIME_EXTERNAL_OUTPUTS = (
         Path("P_derivation/runtime/thomson_endpoint_contract_current.json"),
     ),
     (
+        P_DERIVATION_ROOT / "runtime" / "source_spectral_theorem_current.json",
+        Path("P_derivation/runtime/source_spectral_theorem_current.json"),
+    ),
+    (
         P_DERIVATION_ROOT / "runtime" / "thomson_endpoint_package_current.json",
         Path("P_derivation/runtime/thomson_endpoint_package_current.json"),
     ),

@@ -110,9 +110,8 @@ def build_p_closure_trunk(report: dict[str, Any]) -> dict[str, Any]:
         "claim_status": "compressed_candidate_trunk_not_final_particle_root",
         "claim_boundary": (
             "This artifact is the canonical compressed P-trunk candidate for the code path. "
-            "It is not the certified particle-pipeline root: promotion requires the Ward-projected "
-            "Thomson endpoint theorem, OPH-internal RG/matching/scheme closure, and an interval-level "
-            "fixed-point certificate."
+            "It is not the certified particle-pipeline root: promotion requires a populated source "
+            "spectral measure payload, same-scheme remainder, and interval-level fixed-point certificate."
         ),
         "closed_form_candidate": {
             "name": "golden_ratio_electromagnetic_width",
@@ -146,22 +145,27 @@ def build_p_closure_trunk(report: dict[str, Any]) -> dict[str, Any]:
             {
                 "id": "ward_projected_thomson_endpoint",
                 "github_issue": 235,
-                "required_status": "source_emitted_zero_momentum_transport_theorem",
+                "issue_status": "closed_blocker_isolated_source_residual_no_go",
+                "current_reduction_status": "source_spectral_reduction_theorem_emitted_measure_payload_absent",
+                "required_status": "populated_source_spectral_measure_payload_plus_same_scheme_interval_certificate",
             },
             {
                 "id": "rg_matching_threshold_scheme",
                 "github_issue": 32,
-                "required_status": "OPH_internal_running_matching_and_scheme_theorem",
+                "issue_status": "closed_declared_convention_contract",
+                "required_status": "declared_convention_status_visible_until_OPH_internal_theorem_exists",
             },
             {
                 "id": "interval_fixed_point_certificate",
                 "github_issue": 235,
-                "required_status": "interval_existence_uniqueness_certificate_for_the_full_map",
+                "issue_status": "closed_conditional_certificate_boundary",
+                "required_status": "interval_existence_uniqueness_certificate_after_R_Q_source_emission",
             },
             {
                 "id": "particle_codepath_adoption",
                 "github_issue": 224,
-                "required_status": "all_particle_consumers_read_the_certified_trunk_artifact",
+                "issue_status": "closed_canonical_guarded_trunk_adoption",
+                "required_status": "all_particle_consumers_read_the_guarded_trunk_artifact_for_audit_and_compare_surfaces",
             },
         ],
         "consumer_policy": {

@@ -17,6 +17,9 @@ from paper_math import PaperMathContext, _dec, to_serializable
 DEFAULT_PACKAGE = Path(__file__).resolve().parent / "runtime" / "thomson_endpoint_package_current.json"
 DEFAULT_OUT = Path(__file__).resolve().parent / "runtime" / "fine_structure_interval_certificate_current.json"
 DEFAULT_R_Q_OUT = Path(__file__).resolve().parent / "runtime" / "r_q_residual_contract_current.json"
+DEFAULT_SOURCE_SPECTRAL_THEOREM = (
+    Path(__file__).resolve().parent / "runtime" / "source_spectral_theorem_current.json"
+)
 
 DEFAULT_I_A_LO = Decimal("137.035999156")
 DEFAULT_I_A_HI = Decimal("137.035999198")
@@ -95,6 +98,10 @@ def build_interval_certificate(
                 "comparison_values_allowed_only_for_target_interval": True,
             },
             "required_map": "R_Q(P)=Delta_had_src(P)+Delta_EW_src(P)-implemented_free_quark_screen_component(P)",
+            "source_spectral_theorem_artifact": str(
+                DEFAULT_SOURCE_SPECTRAL_THEOREM.relative_to(DEFAULT_OUT.parent.parent)
+            ),
+            "source_spectral_theorem_status": "source_spectral_reduction_theorem_emitted_measure_payload_absent",
             "required_image_on_I_P": r_required.to_json(),
             "required_center_at_compare_pixel": +residual_center,
             "required_prime_abs_target": +l_r_target,
@@ -167,6 +174,7 @@ def build_interval_certificate(
                 "R_Q_prime_ceiling_if_L_B_target_holds": +r_prime_ceiling_if_lb,
             },
             "blocking_items": [
+                "populated source spectral measure payload",
                 "source-emitted R_Q(P) map",
                 "directed-rounding interval backend",
                 "interval D10 root boxes and derivative bounds",

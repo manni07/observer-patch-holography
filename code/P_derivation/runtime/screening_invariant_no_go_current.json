@@ -22,7 +22,7 @@
     "required_transport_delta_alpha_inv": "8.728033703713751790051040181",
     "residual_second_order_coefficient": "0.6580257599271554358341027732"
   },
-  "generated_utc": "2026-05-06T09:55:14Z",
+  "generated_utc": "2026-05-06T10:15:19Z",
   "github_issue": 235,
   "nonidentifiability_witness": {
     "endpoint_delta_difference": "0.04201037257245950369939776396",

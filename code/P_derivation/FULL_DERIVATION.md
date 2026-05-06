@@ -253,6 +253,7 @@ closed:   D10 source map P -> a0(P)
 closed:   outer/inner numerical fixed-point witness for the implemented map
 closed:   endpoint-package blocker isolation for issue #223
 closed:   source-residual non-identifiability boundary for issue #235
-stage:    WardProjectedHadronicSpectralEmission_Q source object for Delta_Th(P)
+closed:   WardProjectedHadronicSpectralEmission_Q source-spectral reduction theorem
+stage:    populated Ward-projected spectral measure payload for Delta_Th(P)
 stage:    interval-wide proof for the final full transport map after R_Q(P) is emitted
 ```

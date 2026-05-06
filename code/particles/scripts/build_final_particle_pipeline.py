@@ -67,6 +67,11 @@ FINAL_PIPELINE_STEPS: tuple[PipelineStep, ...] = (
         "Refresh the closed-out-of-scope hadronic spectral-measure contract.",
     ),
     PipelineStep(
+        "source_spectral_theorem",
+        "P_derivation/source_spectral_theorem.py",
+        "Refresh the Ward-projected source-spectral theorem artifact.",
+    ),
+    PipelineStep(
         "direct_top_bridge_contract",
         "particles/calibration/derive_direct_top_bridge_contract.py",
         "Refresh the direct-top codomain conversion contract.",

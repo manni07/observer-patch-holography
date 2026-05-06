@@ -1,0 +1,78 @@
+# Ward-Projected Source Spectral Theorem
+
+Status: source-spectral reduction theorem emitted. The source spectral measure
+payload is absent from the current corpus.
+
+## Statement
+
+Fix the D10 source family and the realized electromagnetic charge
+
+```text
+Q = T3 + Y.
+```
+
+Let the Ward-projected current-current correlator be
+
+```text
+Pi_Q^{mu nu}(q;P) = (q^mu q^nu - q^2 eta^{mu nu}) Pi_Q(q^2;P).
+```
+
+If the OPH source branch emits a positive `U(1)_Q` hadronic spectral measure
+`rho_Q(s;P)`, a same-subtraction scheme lock tying the measure to
+`a0(P)=alpha_em^-1(m_Z^2;P)`, and a source electroweak remainder
+`Delta_EW_src(P)`, then the source-only Thomson endpoint is
+
+```text
+A_T(P) =
+  a0(P)
+  + Delta_lep_src(P)
+  + mZ(P)^2/(3*pi) * integral rho_Q(s;P)/(s*(s+mZ(P)^2)) ds
+  + Delta_EW_src(P).
+```
+
+The fixed-point lane is
+
+```text
+P = phi + sqrt(pi)/A_T(P).
+```
+
+An interval certificate for this map gives a unique pixel value and the
+corresponding fine-structure constant.
+
+## Proof
+
+Ward projection selects the transverse electromagnetic channel, so the current
+two-point function has the scalar form above. Positivity follows from the
+source Hilbert-space spectral representation. A once-subtracted dispersion
+relation between the `m_Z` anchor and the zero-momentum endpoint gives the
+kernel
+
+```text
+mZ(P)^2/(3*pi*s*(s+mZ(P)^2)).
+```
+
+The charged-lepton part is the same closed one-loop kernel used by the D10
+transport code. The confined hadronic part is not a screened free-quark sum. It
+is the Ward-projected spectral moment of the source-emitted color-singlet
+measure. The electroweak remainder must be a zero theorem in the declared
+scheme or a source-bounded interval.
+
+With those objects supplied on the same D10 branch, `A_T(P)` is a source-only
+function. The Banach or monotonicity certificate then gives uniqueness of the
+pixel fixed point.
+
+## Current Corpus Boundary
+
+The local hadron files define the production export contract, but the finite
+volume levels, Ward-projected residues, continuum pushforward, and systematics
+are not populated. The artifact
+
+```text
+code/P_derivation/runtime/source_spectral_theorem_current.json
+```
+
+therefore records the reduction theorem and blocks exact-alpha promotion from
+the current corpus.
+
+Fitted scalars such as `c_Q`, `S_required`, or a residual inverse-alpha packet
+are rejected as source inputs. They are target diagnostics, not spectral data.

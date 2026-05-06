@@ -21,7 +21,7 @@ def test_derivation_chain_closure_matrix_keeps_stage_gates_explicit() -> None:
     assert payload["closure_summary"]["all_derivation_chains_claimed_closed"] is False
     assert payload["closure_summary"]["hardware_gated_chains"] == ["hadrons"]
     assert payload["worker_policy"]["chrome_pro_workers_needed_now"] is False
-    assert payload["provenance_status"] == "provenance_ledger_emitted_convention_sensitivity_contract_open"
+    assert payload["provenance_status"] == "closed_provenance_ledger_and_declared_sensitivity_taxonomy"
     rows = {row["chain"]: row for row in payload["rows"]}
     assert set(rows) == {
         "p_closure_root",
@@ -34,9 +34,10 @@ def test_derivation_chain_closure_matrix_keeps_stage_gates_explicit() -> None:
         "hadrons",
     }
     assert rows["p_closure_root"]["promotable"] is False
-    assert rows["p_closure_root"]["open_gates"] == [224]
+    assert rows["p_closure_root"]["open_gates"] == []
+    assert rows["p_closure_root"]["closed_issue_refs"] == [224]
     assert rows["p_closure_root"]["stage_gate"] == (
-        "WardProjectedHadronicSpectralEmission_Q + full interval certificate"
+        "populated source spectral measure payload + full interval certificate"
     )
     assert rows["structural_massless_bosons"]["promotable"] is True
     assert rows["charged_leptons"]["status"] == "closed_current_corpus_charged_end_to_end_no_go"
@@ -62,4 +63,6 @@ def test_derivation_chain_closure_matrix_keeps_stage_gates_explicit() -> None:
     assert payload["particle_five_gates"]["223"]["state"] == "closed_blocker_isolated_endpoint_package"
     assert payload["particle_five_gates"]["235"]["state"] == "closed_blocker_isolated_source_residual_no_go"
     assert payload["particle_five_gates"]["32"]["state"] == "closed_declared_convention_contract"
-    assert payload["particle_five_gates"]["224"]["state"] == "open_waiting_certified_root"
+    assert payload["particle_five_gates"]["224"]["state"] == "closed_canonical_guarded_trunk_adoption"
+    assert payload["particle_five_gates"]["225"]["state"] == "closed_material_sync_no_live_publish"
+    assert payload["particle_five_gates"]["234"]["state"] == "closed_provenance_ledger_and_declared_sensitivity_taxonomy"

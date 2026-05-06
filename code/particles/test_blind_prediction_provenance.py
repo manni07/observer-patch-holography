@@ -13,15 +13,15 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from build_blind_prediction_provenance import build_payload  # noqa: E402
 
 
-def test_blind_prediction_provenance_records_target_use_and_open_sensitivity_gate() -> None:
+def test_blind_prediction_provenance_records_target_use_and_declared_sensitivity_taxonomy() -> None:
     payload = build_payload()
 
     assert payload["artifact"] == "oph_blind_prediction_provenance_audit"
     assert payload["github_issue"] == 234
-    assert payload["status"] == "provenance_ledger_emitted_convention_sensitivity_contract_open"
+    assert payload["status"] == "closed_provenance_ledger_and_declared_sensitivity_taxonomy"
     assert payload["promotion_allowed"] is False
-    assert payload["closure_gate"]["closable_now"] is False
-    assert payload["convention_sensitivity"]["status"] == "contract_open_not_quantified"
+    assert payload["closure_gate"]["closable_now"] is True
+    assert payload["convention_sensitivity"]["status"] == "declared_taxonomy_emitted_numeric_sweep_stage_gated"
     row_map = {row["particle_id"]: row for row in payload["rows"]}
     assert row_map["photon"]["blind_status"] == "blind_structural"
     assert row_map["w_boson"]["row_class"] == "compare_only_reproduction"
@@ -30,5 +30,5 @@ def test_blind_prediction_provenance_records_target_use_and_open_sensitivity_gat
     assert row_map["top_quark"]["row_class"] == "selected_class_exact_theorem"
     assert row_map["electron_neutrino"]["target_use"] == "no_absolute_mass_target_input"
     workflows = {workflow["id"]: workflow for workflow in payload["preregistered_blind_workflows"]}
-    assert workflows["new_quantity_pre_reference_lock"]["status"] == "protocol_emitted_not_yet_exercised"
-    assert workflows["convention_sensitivity_sweep"]["status"] == "blocked_on_rg_matching_threshold_contract"
+    assert workflows["new_quantity_pre_reference_lock"]["status"] == "protocol_emitted_unexercised"
+    assert workflows["convention_sensitivity_sweep"]["status"] == "declared_taxonomy_emitted_numeric_sweep_stage_gated"

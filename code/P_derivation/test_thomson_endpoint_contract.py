@@ -21,11 +21,15 @@ def test_contract_requires_constructive_worker_outputs() -> None:
     assert payload["blocking_artifacts"]["screening_invariant_no_go"].endswith(
         "screening_invariant_no_go_current.json"
     )
+    assert payload["blocking_artifacts"]["source_spectral_theorem"].endswith(
+        "source_spectral_theorem_current.json"
+    )
     assert payload["no_go_results"]["detuning_only_bypass"] == "closed_no_go"
     assert payload["worker_result_policy"]["constructive_no_go_result_allowed"] is True
     assert payload["worker_result_policy"]["obstruction_only_result_allowed"] is False
     object_ids = {entry["id"] for entry in payload["constructive_objects"]}
     assert "rho_had_spectral_measure" in object_ids
+    assert "source_spectral_reduction_theorem" in object_ids
     assert "screening_invariant_no_go" in object_ids
     assert "delta_qcd_screening_and_endpoint_remainder" in object_ids
     assert "full_endpoint_interval_certificate" in object_ids

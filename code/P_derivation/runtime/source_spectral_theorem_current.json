@@ -1,0 +1,74 @@
+{
+  "accepted_source_payload_contract": {
+    "required_artifact": "oph_qcd_ward_projected_hadronic_spectral_measure",
+    "required_fields": [
+      "finite_volume_levels",
+      "ward_projected_residues",
+      "current_normalization",
+      "rho_had_or_measure",
+      "same_subtraction_as_a0",
+      "Delta_EW_zero_theorem_or_source_bound",
+      "fixed_point_self_map_and_uniqueness_certificate"
+    ],
+    "required_transport_wrapper": "oph_source_ward_projected_thomson_transport",
+    "schema": "particles/hadron/ward_projected_spectral_measure.schema.json"
+  },
+  "artifact": "oph_ward_projected_source_spectral_theorem",
+  "closed_reduction_theorem": {
+    "endpoint_map": "A_T(P)=a0(P)+Delta_lep_src(P)+Delta_had_src(P)+Delta_EW_src(P)",
+    "fixed_point_map": "P=phi+sqrt(pi)/A_T(P)",
+    "hadronic_transport": "Delta_had(P)=mZ(P)^2/(3*pi) * integral rho_Q(s;P)/(s*(s+mZ(P)^2)) ds",
+    "statement": "For a fixed D10 source family and the Ward-projected charge current Q=T3+Y, a positive source-emitted U(1)_Q spectral measure plus a same-scheme electroweak remainder determines the Thomson endpoint by the subtracted dispersion functional.",
+    "ward_projected_correlator": "Pi_Q^{mu nu}(q;P)=(q^mu q^nu-q^2 eta^{mu nu}) Pi_Q(q^2;P)"
+  },
+  "conclusion": {
+    "exact_alpha_emitted_from_current_corpus": false,
+    "exact_alpha_promotion_allowed_for_supplied_payload": false,
+    "reason": "The formal Ward-projected spectral reduction is emitted. The numerical fine-structure endpoint requires a populated source spectral measure and same-scheme remainder.",
+    "source_spectral_reduction_closed": true,
+    "source_transport_payload_accepted": false
+  },
+  "current_corpus_obstruction": {
+    "finite_volume_levels_populated": false,
+    "hadron_contract_status": "constructive_contract_emitted_not_production_data",
+    "production_dump_present": false,
+    "public_unsuppression_ready": false,
+    "smallest_live_residual_object": "backend_correlator_dump.production.json from real production RHMC/HMC execution on the theorem-emitted seeded family",
+    "source_measure_payload_populated": false,
+    "ward_projected_residues_populated": false
+  },
+  "external_inputs_used": false,
+  "generated_utc": "2026-05-06T10:15:20Z",
+  "github_issue": 235,
+  "nonidentifiability_corollary": {
+    "fitted_scalars_rejected": [
+      "missing_source_transport_delta_alpha_inv",
+      "required_screening_factor",
+      "residual_second_order_coefficient",
+      "c_Q",
+      "S_required"
+    ],
+    "statement": "The current D10 invariant packet fixes the mZ anchor, lepton kernel, naive quark kernel, and first-order screen. It contains no finite-volume vector levels, current residues, or continuum pushforward for rho_Q(s;P). Distinct positive spectral measures can share that packet and give different Thomson moments.",
+    "status": "closed_for_current_source_packet"
+  },
+  "promotion_allowed": false,
+  "source_only_guard": {
+    "accepted_artifact": "oph_source_ward_projected_thomson_transport",
+    "codata_allowed": false,
+    "free_quark_screen_promotable": false,
+    "measured_alpha_allowed": false,
+    "residual_fit_allowed": false
+  },
+  "source_payload_supplied": false,
+  "source_payload_validation": {
+    "promotion_allowed": false,
+    "reasons": [
+      "rho_had_missing",
+      "delta_EW_missing",
+      "fixed_point_certificate_missing"
+    ],
+    "status": "blocked_source_spectral_measure_missing"
+  },
+  "status": "source_spectral_reduction_theorem_emitted_measure_payload_absent",
+  "theorem_id": "WardProjectedHadronicSpectralEmission_Q"
+}

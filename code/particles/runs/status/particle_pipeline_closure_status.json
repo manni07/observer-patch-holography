@@ -6,7 +6,7 @@
       "exists": true,
       "path": "particles/runs/status/blind_prediction_provenance.json",
       "promotion_allowed": false,
-      "status": "provenance_ledger_emitted_convention_sensitivity_contract_open"
+      "status": "closed_provenance_ledger_and_declared_sensitivity_taxonomy"
     },
     "charged_end_to_end_impossibility_theorem": {
       "artifact": "oph_charged_end_to_end_impossibility_theorem",
@@ -117,9 +117,11 @@
     "hadrons_suppressed_by_default": true,
     "nonhadron_prediction_surface_buildable": true,
     "obstruction_only_worker_result_allowed": true,
-    "p_trunk_candidate_only": true
+    "p_trunk_candidate_only": true,
+    "paper_material_sync_complete_without_live_publish": true,
+    "source_spectral_stage_gate": "populated source spectral measure payload plus interval certificate"
   },
-  "generated_utc": "2026-05-06T09:55:14Z",
+  "generated_utc": "2026-05-06T10:15:20Z",
   "issue_gates": [
     {
       "chrome_workers": "not_needed_for_closed_package",
@@ -134,7 +136,7 @@
       "title": "Ward-projected Thomson endpoint package"
     },
     {
-      "chrome_workers": "not_needed_until_source_spectral_object_exists",
+      "chrome_workers": "not_needed_until_source_spectral_measure_payload_exists",
       "closable_now": true,
       "closed_as_first_missing_lemma_isolated": true,
       "first_missing_lemma": "source-emitted same-scheme Ward-projected R_Q(P)",
@@ -142,22 +144,35 @@
       "interval_certificate_artifact": "P_derivation/runtime/fine_structure_interval_certificate_current.json",
       "issue": 235,
       "local_next_artifact": "P_derivation/runtime/thomson_endpoint_contract_current.json",
-      "minimal_new_theorem": "WardProjectedHadronicSpectralEmission_Q",
+      "minimal_new_payload": "oph_qcd_ward_projected_hadronic_spectral_measure",
       "no_go_artifact": "P_derivation/runtime/screening_invariant_no_go_current.json",
       "package_artifact": "P_derivation/runtime/thomson_endpoint_package_current.json",
       "promotion_allowed": false,
       "residual_contract_artifact": "P_derivation/runtime/r_q_residual_contract_current.json",
+      "source_spectral_reduction": "source_spectral_reduction_theorem_emitted_measure_payload_absent",
       "state": "closed_blocker_isolated_source_residual_no_go",
-      "title": "Source residual map and interval certificate"
+      "title": "Source spectral measure payload and interval certificate"
     },
     {
-      "chrome_workers": "not_useful_until_endpoint_and_interval_gates_close",
-      "closable_now": false,
+      "chrome_workers": "not_needed_for_guarded_codepath_closure",
+      "closable_now": true,
+      "closed_as_guarded_candidate_adoption": true,
       "issue": 224,
       "local_next_artifact": "P_derivation/runtime/p_closure_trunk_current.json",
       "promotion_allowed": false,
-      "state": "open_waiting_certified_root",
+      "stage_gate": "populated source spectral measure payload plus full interval certificate before live particle promotion",
+      "state": "closed_canonical_guarded_trunk_adoption",
       "title": "Adopt certified derived P closure root"
+    },
+    {
+      "chrome_workers": "not_needed_for_material_sync",
+      "closable_now": true,
+      "closed_as_material_update": true,
+      "issue": 225,
+      "local_next_artifact": "paper/deriving_the_particle_zoo_from_observer_consistency.tex",
+      "publish_performed": false,
+      "state": "closed_material_sync_no_live_publish",
+      "title": "Synchronize derived P closure values across material surfaces"
     },
     {
       "chrome_workers": "not_needed_for_closed_contract",
@@ -209,11 +224,12 @@
       "title": "Direct-top codomain bridge"
     },
     {
-      "chrome_workers": "only_for_audit_after_convention_sensitivity_sweep_exists",
-      "closable_now": false,
+      "chrome_workers": "not_needed_for_closed_provenance_taxonomy",
+      "closable_now": true,
+      "closed_as_material_audit": true,
       "issue": 234,
       "local_next_artifact": "particles/runs/status/blind_prediction_provenance.json",
-      "state": "open_provenance_ledger_emitted_sensitivity_open",
+      "state": "closed_provenance_ledger_and_declared_sensitivity_taxonomy",
       "title": "Blind-prediction provenance and convention-sensitivity audits"
     },
     {

@@ -64,8 +64,9 @@ def build_payload() -> dict[str, Any]:
                 "alpha_inv": final_predictions["p_closure"]["alpha_inv"],
             },
             "promotable": False,
-            "open_gates": [224],
-            "stage_gate": "WardProjectedHadronicSpectralEmission_Q + full interval certificate",
+            "open_gates": [],
+            "closed_issue_refs": [224],
+            "stage_gate": "populated source spectral measure payload + full interval certificate",
             "next_artifact": "code/P_derivation/runtime/r_q_residual_contract_current.json + code/P_derivation/runtime/fine_structure_interval_certificate_current.json",
         },
         {
@@ -86,8 +87,9 @@ def build_payload() -> dict[str, Any]:
                 "z_boson": predictions["z_boson"]["value"],
             },
             "promotable": False,
-            "open_gates": [224],
-            "stage_gate": "certified P root after source spectral endpoint",
+            "open_gates": [],
+            "closed_issue_refs": [224],
+            "stage_gate": "certified P root after populated source spectral measure payload",
             "next_artifact": "code/P_derivation/runtime/r_q_residual_contract_current.json",
         },
         {
@@ -212,14 +214,14 @@ def build_payload() -> dict[str, Any]:
             "chrome_pro_workers_needed_now": False,
             "reason": (
                 "Hadron issues #153/#157 are closed out-of-scope pending OPH hadron hardware; "
-                "the remaining in-scope open P/electroweak chains need a source-emitted residual map and interval certificate before worker audit is meaningful. "
+                "the remaining in-scope P/electroweak chains need a populated source spectral measure payload and interval certificate before worker audit is meaningful. "
                 "The charged absolute-anchor, quark global-classification, and direct-top auxiliary-codomain lanes "
                 "have corpus-limited no-go boundaries."
             ),
         },
         "particle_five_gates": {
             str(issue): gates[issue]
-            for issue in (32, 153, 199, 201, 207, 223, 224, 235)
+            for issue in (32, 153, 199, 201, 207, 223, 224, 225, 234, 235)
             if issue in gates
         },
         "provenance_status": provenance["status"],

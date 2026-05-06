@@ -17,6 +17,7 @@ def test_gap_ledger_keeps_compressed_trunk_claim_safe() -> None:
     ledger = build_ledger()
 
     assert ledger["promotion_policy"]["compressed_p_trunk_is_certified_prediction_root"] is False
+    assert ledger["promotion_policy"]["p_trunk_issue_closed_as_guarded_candidate_adoption"] is True
     assert ledger["promotion_policy"]["torus_mode_language_allowed_in_pipeline"] is False
     assert ledger["promotion_policy"]["address_remaining_blockers_one_by_one"] is False
     assert ledger["promotion_policy"]["obstruction_only_worker_result_allowed"] is True
@@ -37,6 +38,8 @@ def test_gap_ledger_keeps_compressed_trunk_claim_safe() -> None:
         "closed_blocker_isolated_source_residual_no_go"
     )
     assert row_statuses["d10.rg-matching-threshold-scheme"] == "closed_declared_convention_contract"
+    assert row_statuses["pclosure.compressed-trunk-artifact"] == "closed_canonical_guarded_candidate_artifact"
+    assert row_statuses["pclosure.certified-codepath-adoption"] == "closed_guarded_codepath_adoption"
     assert row_statuses["quark.selected-class-vs-global-classification"] == (
         "selected_class_closed_global_classification_no_go"
     )
@@ -48,6 +51,7 @@ def test_gap_ledger_keeps_compressed_trunk_claim_safe() -> None:
     assert "particle-root-integration-gate" in bundle_ids
     bundle_statuses = {bundle["id"]: bundle["status"] for bundle in ledger["bundles"]}
     assert bundle_statuses["qcd-thomson-backend-bundle"] == "closed_out_of_scope_scope_lock_emitted"
+    assert bundle_statuses["electroweak-root-closure-bundle"] == "endpoint_package_closed_source_measure_payload_absent"
     assert bundle_statuses["top-codomain-bridge-bundle"] == "closed_current_corpus_codomain_no_go"
     assert bundle_statuses["spectrum-source-bundle"] == "closed_current_corpus_source_boundaries_emitted"
     assert bundle_statuses["particle-root-integration-gate"] == "keep_candidate_with_constructive_next_artifacts"

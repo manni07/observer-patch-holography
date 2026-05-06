@@ -4,6 +4,7 @@
     "interval_certificate": "code/P_derivation/runtime/fine_structure_interval_certificate_current.json",
     "residual_map_contract": "code/P_derivation/runtime/r_q_residual_contract_current.json",
     "screening_invariant_no_go": "code/P_derivation/runtime/screening_invariant_no_go_current.json",
+    "source_spectral_theorem": "code/P_derivation/runtime/source_spectral_theorem_current.json",
     "spectral_transport_validator": "code/P_derivation/thomson_spectral_transport.py"
   },
   "closed_blocker_isolation_issue": 223,
@@ -44,6 +45,18 @@
         "continuum_volume_chiral_statistical_matching_budgets"
       ],
       "target_status": "ward_projected_hadronic_spectral_measure_export"
+    },
+    {
+      "id": "source_spectral_reduction_theorem",
+      "kind": "theorem_artifact",
+      "local_artifact": "code/P_derivation/runtime/source_spectral_theorem_current.json",
+      "required_fields": [
+        "Ward_projected_transverse_correlator",
+        "subtracted_dispersion_kernel",
+        "source_payload_validation",
+        "nonidentifiability_corollary"
+      ],
+      "target_status": "reduction_closed_measure_payload_absent"
     },
     {
       "id": "screening_invariant_no_go",
@@ -113,7 +126,7 @@
     "free_quark_screened_ansatz_as_theorem_input",
     "charged_physical_values_imported_into_the_determinant_line"
   ],
-  "generated_utc": "2026-05-06T09:55:00Z",
+  "generated_utc": "2026-05-06T10:15:06Z",
   "github_issue": 235,
   "issue_235_resolution": {
     "close_recommendation": "close_as_first_missing_lemma_isolated",

@@ -29,6 +29,7 @@
   },
   "artifact": "oph_fine_structure_interval_certificate",
   "blocking_items": [
+    "populated source spectral measure payload",
     "source-emitted R_Q(P) map",
     "directed-rounding interval backend",
     "interval D10 root boxes and derivative bounds",
@@ -66,7 +67,7 @@
       "lo": "1.7724538509055160272981674833411451827975494561223871282138077898529112845910321813749506567"
     }
   },
-  "generated_utc": "2026-05-06T09:55:14Z",
+  "generated_utc": "2026-05-06T10:15:20Z",
   "github_issue": 235,
   "interval_backend": {
     "library": "DecimalIntervalBackend",

@@ -59,14 +59,16 @@ def build_gap_rows() -> list[dict[str, Any]]:
         {
             "id": "pclosure.compressed-trunk-artifact",
             "lane": "P closure",
-            "status": "candidate_artifact",
+            "status": "closed_canonical_guarded_candidate_artifact",
             "github_issue": 224,
+            "closed_issue_refs": [224],
             "title": "Make the five-equation P trunk the canonical audit artifact",
             "current_boundary": (
-                "The compressed trunk organizes the code path. It remains outside the certified "
-                "particle-root surface until the endpoint and interval-certificate gates close."
+                "The compressed trunk is the canonical guarded audit and compare artifact. It remains "
+                "outside the certified particle-root surface until the source spectral measure payload "
+                "and interval-certificate gates close."
             ),
-            "next_action": "Keep emitting p_closure_trunk_current.json and use it as audit metadata.",
+            "next_action": "Keep emitting p_closure_trunk_current.json and block live prediction promotion.",
             "target_surfaces": ["code/P_derivation", "code/particles"],
         },
         {
@@ -98,22 +100,23 @@ def build_gap_rows() -> list[dict[str, Any]]:
             "status": "closed_blocker_isolated_source_residual_no_go",
             "github_issue": 235,
             "closed_issue_refs": [223],
-            "title": "Emit the source-only Thomson residual map and interval certificate",
+            "title": "Populate the source spectral measure payload and interval certificate",
             "current_boundary": (
                 "The endpoint package fixes the target residual and the current corpus proves "
                 "non-identifiability of R_Q(P) from the existing D10 invariant packet. No OPH "
-                "source theorem emits the Ward-projected hadronic spectral measure or same-scheme "
-                "electroweak remainder. The screening-invariant no-go rejects fitted c_Q and "
-                "detuning-only shortcuts."
+                "source payload emits the Ward-projected hadronic spectral measure or same-scheme "
+                "electroweak remainder. The source-spectral reduction theorem is emitted, and the "
+                "screening-invariant no-go rejects fitted c_Q and detuning-only shortcuts."
             ),
             "next_action": (
-                "Treat the next step as a stage gate outside the closed #235 issue: emit "
-                "WardProjectedHadronicSpectralEmission_Q, including rho_had(s;P) or an equivalent "
-                "Ward-projected spectral primitive, matching remainder, certified quadrature bounds, "
+                "Populate the Ward-projected source spectral measure payload, including rho_had(s;P) "
+                "or an equivalent spectral primitive, matching remainder, certified quadrature bounds, "
                 "and the interval certificate for the final map."
             ),
             "target_surfaces": [
                 "code/P_derivation/THOMSON_TRANSPORT_THEOREMS.md",
+                "code/P_derivation/SOURCE_SPECTRAL_THEOREM.md",
+                "code/P_derivation/runtime/source_spectral_theorem_current.json",
                 "code/P_derivation/runtime/thomson_endpoint_contract_current.json",
                 "code/P_derivation/runtime/screening_invariant_no_go_current.json",
                 "code/P_derivation/runtime/fine_structure_interval_certificate_current.json",
@@ -141,18 +144,19 @@ def build_gap_rows() -> list[dict[str, Any]]:
         {
             "id": "pclosure.certified-codepath-adoption",
             "lane": "P closure",
-            "status": "blocked_pending_certified_root",
+            "status": "closed_guarded_codepath_adoption",
             "github_issue": 224,
+            "closed_issue_refs": [224],
             "title": "Replace particle P consumers with the certified P root",
             "current_boundary": (
-                "Particle status surfaces use the public display value P=1.630968209403959 "
-                "where the value is reader-facing. Certified particle-root adoption remains "
-                "blocked while the compressed trunk remains candidate/audit metadata."
+                "Particle status surfaces consume the canonical guarded trunk for audit and compare "
+                "surfaces. Live particle-root promotion remains blocked while the trunk remains "
+                "candidate metadata."
             ),
             "next_action": (
-                "Switch particle builders only after the source spectral theorem stage gate emits "
+                "Switch live particle builders only after the source spectral measure payload emits "
                 "R_Q(P), the interval certificate proves the full map, and the compressed trunk is "
-                "promoted beyond candidate/audit metadata."
+                "promoted beyond guarded candidate metadata."
             ),
             "target_surfaces": ["code/particles/scripts", "code/particles/runs/status", "WebProjects OPH summaries"],
         },
@@ -251,7 +255,7 @@ def build_bundles() -> list[dict[str, Any]]:
     return [
         {
             "id": "electroweak-root-closure-bundle",
-            "status": "endpoint_package_closed_source_residual_open",
+            "status": "endpoint_package_closed_source_measure_payload_absent",
             "gap_ids": [
                 "pclosure.compressed-trunk-artifact",
                 "d10.ward-projected-thomson-endpoint",
@@ -265,12 +269,13 @@ def build_bundles() -> list[dict[str, Any]]:
             ),
             "result": (
                 "Constructive result. The admissible endpoint object is explicit and the endpoint "
-                "package computes the residual inverse-alpha packet. Delta_Th(P) must split into "
+                "package computes the residual inverse-alpha packet. The source-spectral reduction "
+                "theorem is emitted. Delta_Th(P) must split into "
                 "source lepton transport, a Ward-projected hadronic spectral density rho_had(s;P), "
                 "a certified electroweak/scheme remainder, RG/matching certificates, quadrature bounds, "
                 "and an interval-level fixed-point certificate. The local implementation targets are "
                 "P_derivation/runtime/thomson_endpoint_contract_current.json and "
-                "P_derivation/runtime/thomson_endpoint_package_current.json."
+                "P_derivation/runtime/source_spectral_theorem_current.json."
             ),
         },
         {
@@ -367,7 +372,12 @@ def build_ledger() -> dict[str, Any]:
         "rows": rows,
         "promotion_policy": {
             "compressed_p_trunk_is_certified_prediction_root": False,
-            "reason": "The endpoint, RG/matching, and interval-certificate gates remain open.",
+            "p_trunk_issue_closed_as_guarded_candidate_adoption": True,
+            "reason": (
+                "The canonical guarded trunk is emitted for audit and compare surfaces. Live "
+                "prediction promotion waits on the populated source spectral measure payload, "
+                "same-scheme remainder, and interval certificate."
+            ),
             "hadron_backend_in_current_local_scope": False,
             "hadron_backend_scope_reason": (
                 "Production hadrons require a real OPH hardware backend. Issues #153/#157 are closed "

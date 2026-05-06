@@ -728,7 +728,7 @@ def public_exact_surface(row: Dict[str, Any], exact_entry: Dict[str, Any]) -> st
 def public_exact_caveat(row: Dict[str, Any], exact_entry: Dict[str, Any]) -> str:
     particle_id = row["particle_id"]
     if particle_id in {"w_boson", "z_boson"}:
-        return "Compare-only frozen-adapter row. Live promotion requires the candidate P root, the Thomson endpoint, and the RG/matching certificate."
+        return "Compare-only frozen-adapter row. Live promotion requires the candidate P root, source spectral measure payload, and interval certificate."
     if particle_id == "higgs":
         return "Exact Higgs row on the declared electroweak calibration surface. The companion top coordinate is carried by the same surface. The auxiliary direct-top average is compare-only."
     if particle_id in {"electron", "muon", "tau"}:

@@ -7,7 +7,7 @@
     "S_required",
     "c_Q target"
   ],
-  "generated_utc": "2026-05-06T09:55:14Z",
+  "generated_utc": "2026-05-06T10:15:20Z",
   "github_issue": 235,
   "issue_235_resolution": {
     "close_recommendation": "close_as_first_missing_lemma_isolated",
@@ -34,5 +34,7 @@
     "comparison_values_allowed_only_for_target_interval": true,
     "measured_endpoint_used_to_construct_R_Q": false
   },
+  "source_spectral_theorem_artifact": "runtime/source_spectral_theorem_current.json",
+  "source_spectral_theorem_status": "source_spectral_reduction_theorem_emitted_measure_payload_absent",
   "status": "closed_blocker_isolated_missing_source_R_Q"
 }

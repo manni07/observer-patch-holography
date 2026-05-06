@@ -1,6 +1,6 @@
 {
   "artifact": "oph_p_closure_trunk_current",
-  "claim_boundary": "This artifact is the canonical compressed P-trunk candidate for the code path. It is not the certified particle-pipeline root: promotion requires the Ward-projected Thomson endpoint theorem, OPH-internal RG/matching/scheme closure, and an interval-level fixed-point certificate.",
+  "claim_boundary": "This artifact is the canonical compressed P-trunk candidate for the code path. It is not the certified particle-pipeline root: promotion requires a populated source spectral measure payload, same-scheme remainder, and interval-level fixed-point certificate.",
   "claim_status": "compressed_candidate_trunk_not_final_particle_root",
   "closed_form_candidate": {
     "formula": "P = phi + alpha_in(P) * sqrt(pi)",
@@ -105,27 +105,32 @@
     "outer_equation_residual": "0.00000000000000000000000000000",
     "source_anchor_alpha_inv_mz": "128.308268762616913741791069064"
   },
-  "generated_utc": "2026-05-06T09:55:00Z",
+  "generated_utc": "2026-05-06T10:15:06Z",
   "promotion_gates": [
     {
+      "current_reduction_status": "source_spectral_reduction_theorem_emitted_measure_payload_absent",
       "github_issue": 235,
       "id": "ward_projected_thomson_endpoint",
-      "required_status": "source_emitted_zero_momentum_transport_theorem"
+      "issue_status": "closed_blocker_isolated_source_residual_no_go",
+      "required_status": "populated_source_spectral_measure_payload_plus_same_scheme_interval_certificate"
     },
     {
       "github_issue": 32,
       "id": "rg_matching_threshold_scheme",
-      "required_status": "OPH_internal_running_matching_and_scheme_theorem"
+      "issue_status": "closed_declared_convention_contract",
+      "required_status": "declared_convention_status_visible_until_OPH_internal_theorem_exists"
     },
     {
       "github_issue": 235,
       "id": "interval_fixed_point_certificate",
-      "required_status": "interval_existence_uniqueness_certificate_for_the_full_map"
+      "issue_status": "closed_conditional_certificate_boundary",
+      "required_status": "interval_existence_uniqueness_certificate_after_R_Q_source_emission"
     },
     {
       "github_issue": 224,
       "id": "particle_codepath_adoption",
-      "required_status": "all_particle_consumers_read_the_certified_trunk_artifact"
+      "issue_status": "closed_canonical_guarded_trunk_adoption",
+      "required_status": "all_particle_consumers_read_the_guarded_trunk_artifact_for_audit_and_compare_surfaces"
     }
   ],
   "source_report_mode": "thomson_structured_running_asymptotic",

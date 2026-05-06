@@ -42,6 +42,7 @@ def build_contract() -> dict[str, Any]:
             "screening_invariant_no_go": "code/P_derivation/runtime/screening_invariant_no_go_current.json",
             "interval_certificate": "code/P_derivation/runtime/fine_structure_interval_certificate_current.json",
             "residual_map_contract": "code/P_derivation/runtime/r_q_residual_contract_current.json",
+            "source_spectral_theorem": "code/P_derivation/runtime/source_spectral_theorem_current.json",
             "spectral_transport_validator": "code/P_derivation/thomson_spectral_transport.py",
         },
         "worker_result_policy": {
@@ -104,6 +105,18 @@ def build_contract() -> dict[str, Any]:
                     "current_normalization",
                     "pushforward_to_rho_had",
                     "continuum_volume_chiral_statistical_matching_budgets",
+                ],
+            },
+            {
+                "id": "source_spectral_reduction_theorem",
+                "kind": "theorem_artifact",
+                "target_status": "reduction_closed_measure_payload_absent",
+                "local_artifact": "code/P_derivation/runtime/source_spectral_theorem_current.json",
+                "required_fields": [
+                    "Ward_projected_transverse_correlator",
+                    "subtracted_dispersion_kernel",
+                    "source_payload_validation",
+                    "nonidentifiability_corollary",
                 ],
             },
             {

@@ -40,9 +40,8 @@ P -> M_U -> alpha_U -> alpha_i(m_Z) -> a0(P) -> alpha_in(P) -> P
 
 and writes `runtime/p_closure_trunk_current.json`. That artifact is the
 canonical audit surface for the simplified chain, but it is not the certified
-particle root. Promotion still requires the Ward-projected Thomson endpoint
-theorem, OPH-internal RG/matching closure, and an interval-level fixed-point
-certificate.
+particle root. Promotion requires a populated source spectral measure payload,
+same-scheme remainder, and an interval-level fixed-point certificate.
 
 ## Terms
 

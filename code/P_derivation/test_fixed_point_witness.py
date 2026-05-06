@@ -149,6 +149,15 @@ class FixedPointWitnessTests(unittest.TestCase):
         self.assertEqual(trunk["claim_status"], "compressed_candidate_trunk_not_final_particle_root")
         self.assertFalse(trunk["consumer_policy"]["may_feed_live_particle_predictions"])
         self.assertEqual(trunk["five_layer_chain"][-1]["claim_status"], "structured_thomson_continuation_not_endpoint_theorem")
+        self.assertEqual(
+            trunk["promotion_gates"][0]["required_status"],
+            "populated_source_spectral_measure_payload_plus_same_scheme_interval_certificate",
+        )
+        self.assertEqual(
+            trunk["promotion_gates"][0]["current_reduction_status"],
+            "source_spectral_reduction_theorem_emitted_measure_payload_absent",
+        )
+        self.assertEqual(trunk["promotion_gates"][-1]["issue_status"], "closed_canonical_guarded_trunk_adoption")
 
 
 if __name__ == "__main__":
