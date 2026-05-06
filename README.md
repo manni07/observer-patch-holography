@@ -54,11 +54,11 @@ areas. For the observed cosmological constant, the bare horizon area ratio is
 `N_scr = pi N_patch ≈ 3.31e122`. From the outside, `P` is a geometric cell size that sits
 slightly above the self-similar balance `φ = (1 + sqrt(5)) / 2`. From the
 inside, it becomes the smallest electromagnetic observation scale available to
-observers in the world encoded on that screen. OPH finds the fine-structure
-constant by asking for the nonzero detuning of a holographic screen cell such
-that the cell's outer geometric displacement from perfect self-similar
-equilibrium equals the electromagnetic observation scale emitted by the
-universe living on that same screen. The public pixel area
+observers in the world encoded on that screen. The fine-structure lane asks for
+the nonzero detuning of a holographic screen cell such that the cell's outer
+geometric displacement from perfect self-similar equilibrium equals the
+electromagnetic observation scale emitted by the universe living on that same
+screen. The public comparison pixel area
 `P = a_cell / l_P^2 = 1.630968209403959...` is the fixed point of
 `P = φ + α_em(P) sqrt(pi)` when the electromagnetic side is anchored to the
 2022 CODATA/NIST central value `α⁻¹(0) = 137.035999177`. The same fixed-point
@@ -70,9 +70,8 @@ synchronization. The particle pipeline records a nearby candidate-root lane
 with `P = 1.63097210492078846050203640439` and
 `alpha_cand^-1 = 136.994020662724205139718642793`. This root is outside the
 promoted prediction tier. The weak-boson pair is compare-only; promotion
-requires the Ward-projected Thomson residual map together with the open
-RG/matching/threshold/scheme packet: scheme lock, threshold map, beta
-provenance, and interval composition. The closed-form endpoint audit isolates
+requires a populated source spectral measure payload, same-scheme remainder,
+and interval certificate. The closed-form endpoint audit isolates
 the missing fixed-point contribution as
 `0.041164012378350542050005414212806738` inverse-alpha units. At the
 CODATA-mapped pixel value, the source residual target is

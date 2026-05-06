@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Smallest entrypoint for printing the derived fine-structure constant."""
+"""Smallest entrypoint for printing the current candidate fine-structure value."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from paper_math import compute_alpha
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Print the derived fine-structure constant.")
+    parser = argparse.ArgumentParser(description="Print the current candidate fine-structure value.")
     parser.add_argument("--precision", type=int, default=40, help="Decimal precision for the solver.")
     args = parser.parse_args()
 

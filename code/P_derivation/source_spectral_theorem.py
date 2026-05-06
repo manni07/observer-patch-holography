@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 from datetime import datetime, timezone
+from fractions import Fraction
 import json
 from pathlib import Path
 from typing import Any
@@ -57,6 +58,69 @@ def _bool_from_path(payload: dict[str, Any], *keys: str) -> bool:
 def _levels_populated(rho_levels: dict[str, Any]) -> bool:
     level_points = rho_levels.get("level_points")
     return isinstance(level_points, list) and len(level_points) > 0
+
+
+def _fraction_text(value: Fraction) -> str:
+    if value.denominator == 1:
+        return str(value.numerator)
+    return f"{value.numerator}/{value.denominator}"
+
+
+def _dimensionless_thomson_kernel(y: Fraction) -> Fraction:
+    return Fraction(1, 1) / (y * (y + 1))
+
+
+def _constructive_nonidentifiability_witness() -> dict[str, Any]:
+    """Return two current-corpus-compatible measures with unequal moments."""
+    weight = Fraction(1, 1)
+    support_a = Fraction(2, 1)
+    support_b = Fraction(3, 1)
+    moment_a = weight * _dimensionless_thomson_kernel(support_a)
+    moment_b = weight * _dimensionless_thomson_kernel(support_b)
+    moment_difference = moment_a - moment_b
+
+    common_projection = {
+        "source_family_id": "d10_running_tree",
+        "current": "U1_Q",
+        "same_anchor_a0": True,
+        "same_mZ": True,
+        "same_lepton_kernel": True,
+        "same_currently_emitted_hadron_fields": [],
+        "same_total_positive_weight": _fraction_text(weight),
+        "source_measure_payload_populated": False,
+    }
+
+    return {
+        "status": "constructive_counterexample_emitted",
+        "logical_form": (
+            "There exist two positive Ward-projected spectral-measure completions whose projection "
+            "to every invariant emitted by the current corpus is identical, while their Thomson "
+            "dispersion moments differ."
+        ),
+        "normalization": "Use y=s/mZ(P)^2 and omit the common positive factor 1/(3*pi*mZ(P)^2).",
+        "kernel": "k(y)=1/(y*(1+y))",
+        "common_current_corpus_projection": common_projection,
+        "measure_a": {
+            "description": "one positive atom at y=2",
+            "atoms": [{"support_y": _fraction_text(support_a), "weight": _fraction_text(weight)}],
+            "positive": True,
+        },
+        "measure_b": {
+            "description": "one positive atom at y=3",
+            "atoms": [{"support_y": _fraction_text(support_b), "weight": _fraction_text(weight)}],
+            "positive": True,
+        },
+        "dimensionless_thomson_moment_a": _fraction_text(moment_a),
+        "dimensionless_thomson_moment_b": _fraction_text(moment_b),
+        "dimensionless_thomson_moment_difference": _fraction_text(moment_difference),
+        "moments_equal": moment_a == moment_b,
+        "external_inputs_used": False,
+        "why_this_blocks_exact_alpha": (
+            "The current corpus emits no finite-volume vector levels, Ward-projected residues, "
+            "continuum pushforward, or same-scheme source remainder. The projection that the corpus "
+            "can see is therefore identical for these measures, but the endpoint functional is not."
+        ),
+    }
 
 
 def _current_corpus_obstruction(
@@ -159,13 +223,14 @@ def build_source_spectral_theorem(
         },
         "current_corpus_obstruction": obstruction,
         "nonidentifiability_corollary": {
-            "status": "closed_for_current_source_packet",
+            "status": "constructive_no_external_input_no_go_closed_for_current_source_packet",
             "statement": (
                 "The current D10 invariant packet fixes the mZ anchor, lepton kernel, naive quark "
                 "kernel, and first-order screen. It contains no finite-volume vector levels, "
                 "current residues, or continuum pushforward for rho_Q(s;P). Distinct positive "
                 "spectral measures can share that packet and give different Thomson moments."
             ),
+            "constructive_witness": _constructive_nonidentifiability_witness(),
             "fitted_scalars_rejected": [
                 "missing_source_transport_delta_alpha_inv",
                 "required_screening_factor",

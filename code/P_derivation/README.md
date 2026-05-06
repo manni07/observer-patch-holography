@@ -151,8 +151,8 @@ From `reverse-engineering-reality/code/P_derivation/`:
 python3 derive_p.py --mode thomson_structured_running --precision 40
 ```
 
-If you only want the shortest possible entrypoint that prints the derived
-fine-structure constant, use:
+If you only want the shortest possible entrypoint that prints the current
+candidate fine-structure value, use:
 
 ```bash
 python3 minimal_alpha.py --precision 40

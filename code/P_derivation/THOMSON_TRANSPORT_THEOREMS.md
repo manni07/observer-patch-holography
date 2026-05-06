@@ -294,6 +294,35 @@ positive Ward-projected spectral measure:
 Delta_had_src(P) = integral K_P(s) dmu_had^Q(s;P).
 ```
 
+The current-corpus no-go is constructive. In the dimensionless coordinate
+`y=s/mZ(P)^2`, remove the common positive factor `1/(3*pi*mZ(P)^2)` from the
+Thomson kernel and write
+
+```text
+k(y) = 1/(y*(1+y)).
+```
+
+The two positive atomic completions
+
+```text
+mu_A = delta(y-2)
+mu_B = delta(y-3)
+```
+
+have identical projection to the emitted current-corpus invariants: the D10
+source family, `U(1)_Q` lane, `a0(P)`, `mZ(P)`, lepton kernel, and the absence
+of populated finite-volume levels, residues, continuum pushforward, and
+same-scheme remainder. They even share the same total positive weight. But
+
+```text
+integral k dmu_A = 1/6,
+integral k dmu_B = 1/12.
+```
+
+Thus exact `alpha` is not determined by the current corpus. Any exact endpoint
+theorem must emit the missing measure/remainder data; it cannot infer them from
+the already-emitted invariant packet.
+
 Ward transversality fixes the tensor form of the current correlator, positivity
 places `dmu_had^Q` in a positive cone, threshold support restricts its support,
 and the high-energy tail gives asymptotic conditions. Any finite package of

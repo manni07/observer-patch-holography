@@ -665,8 +665,9 @@ package isolates the missing fixed-point contribution as
 $0.041164012378350542050005414212806738$ inverse-alpha units. At the pixel value
 mapped from the CODATA comparison, the required residual is
 $0.041465861005223389065796874868111808\ldots$ beyond the exact one-loop
-continuation. That scalar has to come from the source-side electromagnetic
-transport, including the strong-interaction screening and scheme remainder.
+continuation. The source-spectral reduction theorem gives the dispersion
+endpoint functional, but that scalar has to come from the source-side spectral
+measure payload, same-scheme remainder, and interval certificate.
 This is why the later mass tables should not be read as disconnected tricks or
 as a uniformly closed spectrum. They are different claim tiers around one
 fixed-point closure program. Hadrons belong to the later strong-binding descent
@@ -679,9 +680,9 @@ The interpretation is simple. The screen cell wants to sit at the golden-ratio
 balance point, the exact self-similar equilibrium of the local entropy
 hierarchy. A universe with observers cannot remain perfectly silent. It needs a
 small displacement so that records can form, photons can carry information, and
-measurements can leave durable traces. OPH reads the observed fine-structure
-constant as that small displacement, with the public comparison made at the
-Thomson limit.
+measurements can leave durable traces. The fine-structure lane treats the
+observed Thomson-limit value as the public comparison for that small
+displacement.
 
 ## 14.15 Why the Photon Is Inevitable
 

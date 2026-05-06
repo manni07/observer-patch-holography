@@ -43,10 +43,29 @@ def test_source_spectral_theorem_rejects_fitted_scalars() -> None:
     payload = build_source_spectral_theorem()
 
     assert payload["source_only_guard"]["residual_fit_allowed"] is False
+    assert payload["nonidentifiability_corollary"]["status"] == (
+        "constructive_no_external_input_no_go_closed_for_current_source_packet"
+    )
     rejected = set(payload["nonidentifiability_corollary"]["fitted_scalars_rejected"])
     assert "c_Q" in rejected
     assert "S_required" in rejected
     assert "missing_source_transport_delta_alpha_inv" in rejected
+
+
+def test_source_spectral_theorem_constructs_unequal_thomson_moments() -> None:
+    payload = build_source_spectral_theorem()
+    witness = payload["nonidentifiability_corollary"]["constructive_witness"]
+
+    assert witness["status"] == "constructive_counterexample_emitted"
+    assert witness["external_inputs_used"] is False
+    assert witness["common_current_corpus_projection"]["source_measure_payload_populated"] is False
+    assert witness["measure_a"]["positive"] is True
+    assert witness["measure_b"]["positive"] is True
+    assert witness["measure_a"]["atoms"][0]["weight"] == witness["measure_b"]["atoms"][0]["weight"]
+    assert witness["dimensionless_thomson_moment_a"] == "1/6"
+    assert witness["dimensionless_thomson_moment_b"] == "1/12"
+    assert witness["dimensionless_thomson_moment_difference"] == "1/12"
+    assert witness["moments_equal"] is False
 
 
 def test_source_spectral_theorem_accepts_complete_source_payload_contract() -> None:

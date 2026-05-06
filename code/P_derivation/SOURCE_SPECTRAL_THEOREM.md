@@ -76,3 +76,46 @@ the current corpus.
 
 Fitted scalars such as `c_Q`, `S_required`, or a residual inverse-alpha packet
 are rejected as source inputs. They are target diagnostics, not spectral data.
+
+## Constructive No-External-Input Closeout
+
+The current corpus cannot determine exact `alpha` without a populated source
+spectral payload. This is not just a caveat; it has an explicit countermodel.
+
+Use the dimensionless spectral coordinate
+
+```text
+y = s/mZ(P)^2
+```
+
+and remove the common positive factor `1/(3*pi*mZ(P)^2)` from the Thomson
+kernel. The remaining kernel is
+
+```text
+k(y) = 1/(y*(1+y)).
+```
+
+Consider two positive atomic Ward-projected measure completions:
+
+```text
+mu_A = delta(y-2)
+mu_B = delta(y-3).
+```
+
+Both project to the same invariants currently emitted by the corpus: the D10
+family, the `U(1)_Q` lane, the anchor `a0(P)`, `mZ(P)`, the lepton kernel, and
+the fact that no finite-volume levels, current residues, continuum
+pushforward, or same-scheme source remainder have been emitted. They also have
+the same total positive weight.
+
+Their Thomson moments differ:
+
+```text
+Integral k dmu_A = 1/6
+Integral k dmu_B = 1/12.
+```
+
+Therefore the current emitted invariant packet does not determine the Thomson
+endpoint functional. Exact fine-structure promotion requires a source-emitted
+spectral measure and same-scheme remainder; a scalar fitted to the measured
+endpoint cannot replace those objects.
