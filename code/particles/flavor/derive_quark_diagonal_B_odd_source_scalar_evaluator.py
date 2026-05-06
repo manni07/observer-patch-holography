@@ -34,12 +34,22 @@ def _timestamp() -> str:
 def build_artifact(source_readback: dict) -> dict:
     b_ord = [float(value) for value in source_readback["B_ord"]]
     b_norm_sq = float(source_readback["B_ord_norm_sq"])
+    j_b_u = source_readback.get("J_B_source_u")
+    j_b_d = source_readback.get("J_B_source_d")
+    payload_closed = j_b_u is not None and j_b_d is not None
     return {
         "artifact": "oph_quark_diagonal_B_odd_source_scalar_evaluator",
         "generated_utc": _timestamp(),
-        "proof_status": "pure_B_odd_projection_formula_closed_source_values_open",
+        "proof_status": (
+            "closed_public_selected_class_pure_B_odd_source_scalar_evaluator"
+            if payload_closed
+            else "pure_B_odd_projection_formula_closed_source_values_open"
+        ),
         "predictive_promotion_allowed": False,
         "source_artifact": source_readback.get("artifact"),
+        "source_readback_status": source_readback.get("proof_status"),
+        "source_payload_artifact": source_readback.get("source_payload_artifact"),
+        "source_payload_status": source_readback.get("source_payload_status"),
         "B_ord": b_ord,
         "B_ord_norm_sq": b_norm_sq,
         "J_B_functional_kind": "pure_B_odd_point_separating_projection",
@@ -48,15 +58,27 @@ def build_artifact(source_readback: dict) -> dict:
         "J_B_on_B_ord": 1.0,
         "J_B_on_center_vector": 0.0,
         "J_B_on_Q_ord": 0.0,
-        "J_B_source_u": None,
-        "J_B_source_d": None,
+        "J_B_source_u": j_b_u,
+        "J_B_source_d": j_b_d,
         "beta_u_diag_B_source_identification": "J_B_source_u",
         "beta_d_diag_B_source_identification": "J_B_source_d",
+        "beta_u_diag_B_source": j_b_u,
+        "beta_d_diag_B_source": j_b_d,
         "beta_u_diag_B_source_formula": "J_B_source_u",
         "beta_d_diag_B_source_formula": "J_B_source_d",
-        "predictive_J_B_source_law_status": "missing",
-        "smallest_constructive_missing_object": "source_readback_u_log_per_side_and_source_readback_d_log_per_side",
-        "next_single_residual_object": "source_readback_u_log_per_side_and_source_readback_d_log_per_side",
+        "source_readback_u_log_per_side": source_readback.get("source_readback_u_log_per_side"),
+        "source_readback_d_log_per_side": source_readback.get("source_readback_d_log_per_side"),
+        "predictive_J_B_source_law_status": "selected_public_class_closed" if payload_closed else "missing",
+        "smallest_constructive_missing_object": (
+            "off_canonical_pure_B_source_payload_family"
+            if payload_closed
+            else "source_readback_u_log_per_side_and_source_readback_d_log_per_side"
+        ),
+        "next_single_residual_object": (
+            "off_canonical_pure_B_source_payload_family"
+            if payload_closed
+            else "source_readback_u_log_per_side_and_source_readback_d_log_per_side"
+        ),
         "derived_scalar_pair_after_payload_emission": "J_B_source_u_and_J_B_source_d",
         "notes": [
             "This artifact isolates the odd projector that will read back the emitted pure-B payload pair.",

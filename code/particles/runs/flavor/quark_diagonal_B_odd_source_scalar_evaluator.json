@@ -11,23 +11,38 @@
   "J_B_on_B_ord": 1.0,
   "J_B_on_Q_ord": 0.0,
   "J_B_on_center_vector": 0.0,
-  "J_B_source_d": null,
-  "J_B_source_u": null,
+  "J_B_source_d": -0.06478785725166157,
+  "J_B_source_u": 0.06478785725166157,
   "artifact": "oph_quark_diagonal_B_odd_source_scalar_evaluator",
+  "beta_d_diag_B_source": -0.06478785725166157,
   "beta_d_diag_B_source_formula": "J_B_source_d",
   "beta_d_diag_B_source_identification": "J_B_source_d",
+  "beta_u_diag_B_source": 0.06478785725166157,
   "beta_u_diag_B_source_formula": "J_B_source_u",
   "beta_u_diag_B_source_identification": "J_B_source_u",
   "derived_scalar_pair_after_payload_emission": "J_B_source_u_and_J_B_source_d",
-  "generated_utc": "2026-04-26T05:11:10Z",
-  "next_single_residual_object": "source_readback_u_log_per_side_and_source_readback_d_log_per_side",
+  "generated_utc": "2026-05-06T03:51:41Z",
+  "next_single_residual_object": "off_canonical_pure_B_source_payload_family",
   "notes": [
     "This artifact isolates the odd projector that will read back the emitted pure-B payload pair.",
     "Once the payload pair source_readback_u_log_per_side and source_readback_d_log_per_side is emitted, J_B_source_u and J_B_source_d are fixed algebraically from its endpoints."
   ],
-  "predictive_J_B_source_law_status": "missing",
+  "predictive_J_B_source_law_status": "selected_public_class_closed",
   "predictive_promotion_allowed": false,
-  "proof_status": "pure_B_odd_projection_formula_closed_source_values_open",
-  "smallest_constructive_missing_object": "source_readback_u_log_per_side_and_source_readback_d_log_per_side",
-  "source_artifact": "oph_family_excitation_diagonal_common_gap_shift_source_readback"
+  "proof_status": "closed_public_selected_class_pure_B_odd_source_scalar_evaluator",
+  "smallest_constructive_missing_object": "off_canonical_pure_B_source_payload_family",
+  "source_artifact": "oph_family_excitation_diagonal_common_gap_shift_source_readback",
+  "source_payload_artifact": "oph_quark_d12_public_source_payload",
+  "source_payload_status": "closed_public_selected_class_pure_B_source_payload",
+  "source_readback_d_log_per_side": [
+    0.06478785725166157,
+    -0.0,
+    -0.06478785725166157
+  ],
+  "source_readback_status": "closed_public_selected_class_source_readback",
+  "source_readback_u_log_per_side": [
+    -0.06478785725166157,
+    0.0,
+    0.06478785725166157
+  ]
 }

@@ -35,6 +35,27 @@ DEFAULT_EDGE_SIGMA_U = 5.578418804072826
 DEFAULT_EDGE_SIGMA_D = 3.4210589139721543
 EXACT_SIGMA_TARGET_U = 5.573928426395543
 EXACT_SIGMA_TARGET_D = 3.296264198808688
+SHARED_EVALUATOR_RHO_REFERENCE = 1.2942849363777058
+SHARED_EVALUATOR_X2_REFERENCE = -0.5175863354681689
+SHARED_EVALUATOR_ALPHA_EXPONENT_UP = 0.42519503064369524
+SHARED_EVALUATOR_ALPHA_EXPONENT_DOWN = -0.5160176801329136
+SHARED_EVALUATOR_UP_ANCHORS = [
+    {"id": "up", "label": "up", "mass_gev": 0.00216},
+    {"id": "charm", "label": "charm", "mass_gev": 1.273},
+    {"id": "top", "label": "top", "mass_gev": 172.3523553288311},
+]
+SHARED_EVALUATOR_DOWN_ANCHORS = [
+    {"id": "down", "label": "down", "mass_gev": 0.0047},
+    {"id": "strange", "label": "strange", "mass_gev": 0.0935},
+    {"id": "bottom", "label": "bottom", "mass_gev": 4.183},
+]
+SELECTED_CLASS_PURE_B_STATUSES = {
+    "source_values_derived_from_source_emission",
+    "closed_public_selected_class_source_values",
+    "closed_public_selected_class_source_readback",
+    "closed_public_selected_class_pure_B_source_payload",
+}
+OFF_CANONICAL_PURE_B_STATUS = "closed_off_canonical_pure_B_payload_family"
 
 _BASE_T0 = np.asarray(
     [
@@ -306,4 +327,154 @@ def sigma_to_sector_means(
         "log_shift_d": log_shift_d,
         "g_u": g_ch * math.exp(log_shift_u),
         "g_d": g_ch * math.exp(log_shift_d),
+    }
+
+
+def shared_candidate_sigmas_from_alpha_u(alpha_u: float) -> dict[str, float]:
+    alpha_ratio = max(float(alpha_u), 1.0e-12) / ANCHOR_ALPHA_U
+    return {
+        "alpha_ratio": alpha_ratio,
+        "sigma_u_total_log_per_side": EXACT_SIGMA_TARGET_U
+        * math.pow(alpha_ratio, SHARED_EVALUATOR_ALPHA_EXPONENT_UP),
+        "sigma_d_total_log_per_side": EXACT_SIGMA_TARGET_D
+        * math.pow(alpha_ratio, SHARED_EVALUATOR_ALPHA_EXPONENT_DOWN),
+    }
+
+
+def shared_candidate_quark_masses_from_alpha_u(alpha_u: float) -> dict[str, Any]:
+    sigmas = shared_candidate_sigmas_from_alpha_u(alpha_u)
+    baseline_means = sigma_to_sector_means(
+        SHARED_EVALUATOR_RHO_REFERENCE,
+        SHARED_EVALUATOR_X2_REFERENCE,
+        1.0,
+        EXACT_SIGMA_TARGET_U,
+        EXACT_SIGMA_TARGET_D,
+    )
+    baseline_logs = sigma_to_even_logs(
+        SHARED_EVALUATOR_RHO_REFERENCE,
+        EXACT_SIGMA_TARGET_U,
+        EXACT_SIGMA_TARGET_D,
+    )
+    current_means = sigma_to_sector_means(
+        SHARED_EVALUATOR_RHO_REFERENCE,
+        SHARED_EVALUATOR_X2_REFERENCE,
+        1.0,
+        sigmas["sigma_u_total_log_per_side"],
+        sigmas["sigma_d_total_log_per_side"],
+    )
+    current_logs = sigma_to_even_logs(
+        SHARED_EVALUATOR_RHO_REFERENCE,
+        sigmas["sigma_u_total_log_per_side"],
+        sigmas["sigma_d_total_log_per_side"],
+    )
+
+    up_sector = []
+    for idx, anchor in enumerate(SHARED_EVALUATOR_UP_ANCHORS):
+        log_shift = (
+            current_means["log_shift_u"]
+            - baseline_means["log_shift_u"]
+            + current_logs["E_u_log"][idx]
+            - baseline_logs["E_u_log"][idx]
+        )
+        up_sector.append(
+            {
+                **anchor,
+                "baseline_mass_gev": anchor["mass_gev"],
+                "mass_gev": anchor["mass_gev"] * math.exp(log_shift),
+                "log_shift": log_shift,
+            }
+        )
+
+    down_sector = []
+    for idx, anchor in enumerate(SHARED_EVALUATOR_DOWN_ANCHORS):
+        log_shift = (
+            current_means["log_shift_d"]
+            - baseline_means["log_shift_d"]
+            + current_logs["E_d_log"][idx]
+            - baseline_logs["E_d_log"][idx]
+        )
+        down_sector.append(
+            {
+                **anchor,
+                "baseline_mass_gev": anchor["mass_gev"],
+                "mass_gev": anchor["mass_gev"] * math.exp(log_shift),
+                "log_shift": log_shift,
+            }
+        )
+
+    return {
+        **sigmas,
+        "rho_ord": SHARED_EVALUATOR_RHO_REFERENCE,
+        "x2": SHARED_EVALUATOR_X2_REFERENCE,
+        "up_sector": up_sector,
+        "down_sector": down_sector,
+    }
+
+
+def build_shared_p_driven_evaluator_contract(
+    *,
+    edge_statistics_bridge_status: str | None = None,
+    odd_response_proof_status: str | None = None,
+    pure_b_source_status: str | None = None,
+) -> dict[str, Any]:
+    blockers = ["default_universe_anchor_not_removed"]
+    if edge_statistics_bridge_status != "closed":
+        blockers.append("edge_statistics_bridge_not_closed")
+    if odd_response_proof_status != "closed":
+        blockers.append("off_canonical_odd_response_not_closed")
+    if pure_b_source_status == OFF_CANONICAL_PURE_B_STATUS:
+        pass
+    elif pure_b_source_status in SELECTED_CLASS_PURE_B_STATUSES:
+        blockers.append("off_canonical_pure_B_payload_family_not_closed")
+    else:
+        blockers.append("pure_B_source_payload_not_closed")
+
+    default_surface = shared_candidate_quark_masses_from_alpha_u(ANCHOR_ALPHA_U)
+    return {
+        "artifact": "oph_quark_p_driven_shared_evaluator_contract",
+        "proof_status": "candidate_only",
+        "runtime_status": "shared_candidate_evaluator",
+        "public_promotion_allowed": False,
+        "theorem_grade_closure": len(blockers) == 0,
+        "promotion_blockers": blockers,
+        "scope": (
+            "Browser-safe off-canonical quark motion contract matching the repo-side reduced "
+            "candidate evaluator. This is not the theorem-grade arbitrary-P flavor closure."
+        ),
+        "input_statuses": {
+            "edge_statistics_bridge_status": edge_statistics_bridge_status,
+            "odd_response_proof_status": odd_response_proof_status,
+            "pure_b_source_status": pure_b_source_status,
+        },
+        "evaluator_constants": {
+            "rho_ord": SHARED_EVALUATOR_RHO_REFERENCE,
+            "x2": SHARED_EVALUATOR_X2_REFERENCE,
+            "alpha_u_reference": ANCHOR_ALPHA_U,
+            "sigma_u_reference": EXACT_SIGMA_TARGET_U,
+            "sigma_d_reference": EXACT_SIGMA_TARGET_D,
+            "alpha_exponent_up": SHARED_EVALUATOR_ALPHA_EXPONENT_UP,
+            "alpha_exponent_down": SHARED_EVALUATOR_ALPHA_EXPONENT_DOWN,
+            "up_anchors": SHARED_EVALUATOR_UP_ANCHORS,
+            "down_anchors": SHARED_EVALUATOR_DOWN_ANCHORS,
+        },
+        "formulas": {
+            "sigma_u(P)": "sigma_u_reference * (alpha_U(P) / alpha_u_reference) ** alpha_exponent_up",
+            "sigma_d(P)": "sigma_d_reference * (alpha_U(P) / alpha_u_reference) ** alpha_exponent_down",
+            "sector_means": "same affine mean readback as p_driven_flavor_candidate.sigma_to_sector_means",
+            "centered_even_logs": "same ordered profile rays as p_driven_flavor_candidate.sigma_to_even_logs",
+            "mass_readout": "m_i(P) = m_i(anchor) * exp(delta mean + delta centered even log)",
+        },
+        "default_anchor_check": {
+            "alpha_u": ANCHOR_ALPHA_U,
+            "sigma_u_total_log_per_side": default_surface["sigma_u_total_log_per_side"],
+            "sigma_d_total_log_per_side": default_surface["sigma_d_total_log_per_side"],
+            "up_sector": default_surface["up_sector"],
+            "down_sector": default_surface["down_sector"],
+        },
+        "notes": [
+            "The exact default-universe masses are still anchor values, not arbitrary-P theorem emissions.",
+            "This contract exists to prevent browser/runtime drift while the theorem-grade off-canonical lane remains open.",
+            "Closing issue #212 still requires replacing this candidate contract with emitted off-canonical sigma and pure-B data.",
+            "Selected-class pure-B payload values do not by themselves close the arbitrary-P pure-B family.",
+        ],
     }
