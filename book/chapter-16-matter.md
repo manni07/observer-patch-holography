@@ -87,19 +87,25 @@ unbroken electromagnetic channel to the long-distance Thomson limit. The
 certified trunk emits the candidate
 
 $$
-\alpha_{\mathrm{cand}}^{-1}=136.994020662724205139718642793.
+\alpha_{\mathrm{cand}}^{-1}=136.994835164621649457949994585787193262029.
 $$
 
-The observed Thomson value $\alpha^{-1}(0)=137.035999177$ remains a comparison.
+The measured endpoint calibration uses
+$\alpha^{-1}(0)=137.035999177(21)$ and
+$P=1.630968209403959324879279847782648941\ldots$ for numeric displays. It is
+an external calibration insert. The observed Thomson value remains a comparison
+for the source theorem.
 The endpoint package isolates the missing fixed-point contribution as
 $0.041164012378350542050005414212806738$ inverse-alpha units. At the pixel value
 mapped from the CODATA comparison, the required source residual is
-$0.041465861005223389065796874868111808\ldots$ beyond the exact one-loop
+$0.041465861005223389053448715357314044\ldots$ beyond the exact one-loop
 continuation. The weak-boson pair and the familiar low-energy electromagnetic
 strength are meant to come from one continuous construction. The W/Z comparison
 rows and the candidate low-energy electromagnetic value occupy different claim
-tiers while the source residual map and the open
-RG/matching/threshold/scheme packet are work in progress.
+tiers while the source spectral measure payload, same-scheme remainder, and
+interval certificate are work in progress. The running, threshold, and matching
+packet is a declared-convention contract for this surface, not an OPH-internal
+derivation of every coefficient and conversion.
 
 The same electroweak core continues into the scalar and companion top values
 
@@ -138,8 +144,9 @@ the particle picture is larger than a handful of isolated numbers. OPH fixes
 the structural gauge reconstruction, the exact massless carriers, the declared
 Higgs/top surface, the selected-class running quark sextet with Yukawas, and one
 weighted-cycle neutrino family. It keeps the weak pair and fine-structure trunk
-on compare/candidate status until the source spectral measure payload,
-same-scheme remainder, and interval certificate close, and it records a no-go
+on compare/candidate status, with a measured endpoint calibration available for
+numeric displays, until the source spectral measure payload, same-scheme
+remainder, and interval certificate close, and it records a no-go
 for charged-lepton absolute masses in the available derivation.
 Hadrons require a separate nonperturbative bound-state step
 because protons, neutrons, and mesons are QCD composites rather than elementary

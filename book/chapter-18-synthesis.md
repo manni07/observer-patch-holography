@@ -139,9 +139,11 @@ Using the 2022 CODATA/NIST central value for the long-distance fine-structure
 constant as a comparison value, the outside reading gives
 
 $$
-P=1.630968209403959\ldots
+P=1.630968209403959324879279847782648941\ldots
 $$
 
+The calibrated numeric surface uses this measured endpoint for tables and
+plots, with theorem promotion disabled.
 The source-spectral reduction theorem gives the dispersion endpoint functional.
 The source spectral measure payload, same-scheme remainder, and interval
 certificate are work in progress.

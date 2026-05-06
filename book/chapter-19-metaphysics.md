@@ -78,11 +78,12 @@ Here $\alpha_{\mathrm{in}}(P)$ is the inside electromagnetic observation
 strength. At the 2022 CODATA/NIST comparison value
 $\alpha^{-1}(0)=137.035999177$, the outer reading gives
 
-$$P=1.630968209403959\ldots.$$
+$$P=1.630968209403959324879279847782648941\ldots.$$
 
-The source-spectral reduction theorem supplies the endpoint functional. The
-source spectral measure payload, same-scheme remainder, and interval certificate
-are work in progress. Here the philosophical point is that a famous "free
+The calibrated numeric surface can use this measured endpoint, with theorem
+promotion disabled. The source-spectral reduction theorem supplies the endpoint
+functional. The source spectral measure payload, same-scheme remainder, and
+interval certificate are work in progress. Here the philosophical point is that a famous "free
 constant" is tied to the same local screen scale that organizes the particle
 sector, while the exact source emission remains a stated theorem burden.
 

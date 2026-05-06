@@ -125,12 +125,12 @@ promotion rule. The short version is:
   `0.0411640123783505420500054142128...` in inverse-alpha units
 - at the CODATA-mapped pixel point
   `P=1.630968209403959324879279847782648941...`, the endpoint package gives
-  `a0(P)=128.307965473286248209948959819190019918...`,
-  `Delta_required(P)=8.728033703713751790051040180809980082...`, and
-  `Delta_source_residual(P)=0.041465861005223389065796874868111808...`
+  `a0(P)=128.307965473286248209961108741756716187...`,
+  `Delta_required(P)=8.728033703713751790038891258243283813...`, and
+  `Delta_source_residual(P)=0.041465861005223389053448715357314044...`
 - the residual is equivalent to a required Ward-projected quark-screening factor
-  `S_required=0.895400132647658797808294624161061733...`, or
-  `c_Q=0.658025759927155435834102773237102361...` in the parameterization
+  `S_required=0.895400132647658797805800283181670641...`, or
+  `c_Q=0.658025759927155435638230170232360050...` in the parameterization
   `S=1-x+c_Q x^2`, with `x=N_c alpha_3(m_Z;P)/pi`
 
 Run the audit after producing a report:

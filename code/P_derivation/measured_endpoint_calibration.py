@@ -121,10 +121,10 @@ def build_measured_endpoint_calibration(
             "why_source_computation_is_blocked": {
                 "summary": (
                     "The missing object is a nonperturbative Ward-projected hadronic spectral "
-                    "measure, not an algebraic scalar. The current corpus has a schema and "
-                    "contract, but no production finite-volume vector levels, current residues, "
-                    "normalization, continuum pushforward, systematics budgets, or endpoint "
-                    "quadrature certificate."
+                    "measure. It is outside the scalar algebra emitted by the current corpus. "
+                    "The current corpus has a schema and contract, with no production "
+                    "finite-volume vector levels, current residues, normalization, continuum "
+                    "pushforward, systematics budgets, or endpoint quadrature certificate."
                 ),
                 "current_corpus_obstruction": source_obstruction,
                 "local_hardware_boundary": (

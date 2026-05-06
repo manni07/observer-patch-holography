@@ -61,22 +61,26 @@ electromagnetic observation scale emitted by the universe living on that same
 screen. The public comparison pixel area
 `P = a_cell / l_P^2 = 1.630968209403959...` is the fixed point of
 `P = φ + α_em(P) sqrt(pi)` when the electromagnetic side is anchored to the
-2022 CODATA/NIST central value `α⁻¹(0) = 137.035999177`. The same fixed-point
-geometry is also probed in a separate optical-cavity hardware note.
+2022 CODATA/NIST central value `α⁻¹(0) = 137.035999177`. The calibrated
+endpoint surface uses `α(0) = 0.007297352564331425030245795264691683...` and
+`P = 1.630968209403959324879279847782648941...` for numeric displays, with an
+explicit external-calibration caveat. The same fixed-point geometry is also
+probed in a separate optical-cavity hardware note.
 
 The same local pixel scale drives the gravity readout, the fine-structure
 closure, gauge structure, scoped particle-mass rows, records, and observer
 synchronization. The particle pipeline records a nearby candidate-root lane
-with `P = 1.63097210492078846050203640439` and
-`alpha_cand^-1 = 136.994020662724205139718642793`. This root is outside the
+with `P = 1.63097209569432901817967892561191884270169` and
+`alpha_cand^-1 = 136.994835164621649457949994585787193262029`. This root is outside the
 promoted prediction tier. The weak-boson pair is compare-only; promotion
 requires a populated source spectral measure payload, same-scheme remainder,
-and interval certificate. The closed-form endpoint audit isolates
+and interval certificate. The measured endpoint calibration may feed numeric
+tables and plots, but not source-theorem claims. The closed-form endpoint audit isolates
 the missing fixed-point contribution as
 `0.041164012378350542050005414212806738` inverse-alpha units. At the
 CODATA-mapped pixel value, the source residual target is
-`0.041465861005223389065796874868111808` inverse-alpha units, equivalent to
-`S_required = 0.895400132647658797808294624161061733` in the quark-screening
+`0.041465861005223389053448715357314044` inverse-alpha units, equivalent to
+`S_required = 0.895400132647658797805800283181670641` in the quark-screening
 readout. The
 Higgs lane, selected-class quark rows, and weighted-cycle neutrino branch are
 separate scoped outputs. The available derivation gives no-go boundaries for
@@ -99,7 +103,7 @@ quick view here sticks to direct numeric rows and exact zeros.
 | --- | --- | --- | --- | --- |
 | Gravitational constant | G | 6.6742999959e-11 | 6.67430(15)e-11 | 0.00003σ |
 | Speed of light | c | 299792458 | 299792458 (exact) | match |
-| Fine-structure (inv) | α⁻¹(0) | candidate trunk gives 136.994020662724; closed-form endpoint audit isolates 0.041164012378 on the structured-running root | 137.035999177(21) | source residual and matching certificates are work in progress |
+| Fine-structure (inv) | α⁻¹(0) | measured calibration insert gives 137.035999177; source candidate gives 136.994835164622 with a 0.041164012378 endpoint gap | 137.035999177(21) | external calibration pending source spectral payload |
 | Photon mass | m_γ | 0 eV | <1e-18 eV | below bound |
 | Gluon mass | m_g | 0 GeV | 0 GeV | match |
 | Graviton mass | m_grav | 0 eV | <1.76e-23 eV | below bound |

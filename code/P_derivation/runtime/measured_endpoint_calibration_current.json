@@ -33,7 +33,7 @@
   "exact_alpha_promoted": false,
   "external_input_role": "The measured Thomson-limit inverse fine-structure constant is inserted as a temporary calibration endpoint for numeric tables and displays. It is excluded from the source-only solver and from theorem promotion.",
   "external_input_used": true,
-  "generated_utc": "2026-05-06T10:44:58Z",
+  "generated_utc": "2026-05-06T10:58:48Z",
   "promotion_allowed": false,
   "source_only_guard": {
     "codata_enters_solver": false,
@@ -54,6 +54,6 @@
     },
     "local_hardware_boundary": "A source computation requires real finite-volume gauge-field production and spectral reconstruction on the theorem-emitted family, followed by continuum, chiral, finite-volume, current-matching, tail, and directed interval error certificates. That production payload is absent from this workspace and is outside the current local symbolic/code path.",
     "nonidentifiability": "Distinct positive spectral-measure completions can agree on every invariant emitted by the current corpus while giving different Thomson moments. The endpoint therefore cannot be recovered by higher precision or more scalar algebra alone.",
-    "summary": "The missing object is a nonperturbative Ward-projected hadronic spectral measure, not an algebraic scalar. The current corpus has a schema and contract, but no production finite-volume vector levels, current residues, normalization, continuum pushforward, systematics budgets, or endpoint quadrature certificate."
+    "summary": "The missing object is a nonperturbative Ward-projected hadronic spectral measure. It is outside the scalar algebra emitted by the current corpus. The current corpus has a schema and contract, with no production finite-volume vector levels, current residues, normalization, continuum pushforward, systematics budgets, or endpoint quadrature certificate."
   }
 }

@@ -660,11 +660,14 @@ weak. The W and Z values are frozen-adapter checks. From there the same
 organized construction continues into the Higgs-top surface and is pushed
 through the selected-class quark and weighted-cycle neutrino sectors.
 
-The fine-structure constant belongs here beside the weak sector. The endpoint
-package isolates the missing fixed-point contribution as
+The fine-structure constant belongs here beside the weak sector. The measured
+endpoint calibration uses
+$\alpha^{-1}(0)=137.035999177(21)$ and
+$P=1.630968209403959324879279847782648941\ldots$ for numeric displays, with an
+external-calibration caveat. The endpoint package isolates the missing fixed-point contribution as
 $0.041164012378350542050005414212806738$ inverse-alpha units. At the pixel value
 mapped from the CODATA comparison, the required residual is
-$0.041465861005223389065796874868111808\ldots$ beyond the exact one-loop
+$0.041465861005223389053448715357314044\ldots$ beyond the exact one-loop
 continuation. The source-spectral reduction theorem gives the dispersion
 endpoint functional, but that scalar has to come from the source-side spectral
 measure payload, same-scheme remainder, and interval certificate.
@@ -845,7 +848,8 @@ Let's step back and see what the framework actually accounts for.
 
 **The particle structure.** Section 14.14 gives the concrete structure. The
 framework fixes the massless carriers. The particle surface carries a
-compare-only weak-boson pair, a candidate Thomson-limit fine-structure trunk, a
+compare-only weak-boson pair, a measured fine-structure calibration insert, a
+candidate Thomson-limit fine-structure trunk, a
 Higgs-top surface, a selected-class six-quark running-mass sector with Yukawas,
 and one weighted-cycle neutrino family with definite masses and Majorana
 phases. It also marks charged-lepton absolute masses, global public quark-frame
