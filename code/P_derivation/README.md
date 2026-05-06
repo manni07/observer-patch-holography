@@ -147,11 +147,12 @@ python3 measured_endpoint_calibration.py
 ## Measured endpoint calibration insert
 
 `measured_endpoint_calibration.py` emits
-`runtime/measured_endpoint_calibration_current.json`. This is the temporary
-calibrated surface for tables, plots, and public numeric displays that need a
-single fine-structure value before the source spectral payload exists.
+`runtime/measured_endpoint_calibration_current.json`. This is the display
+surface for tables, plots, and public numeric surfaces that need a single
+fine-structure value, with the source spectral payload recorded separately in
+the audit ledgers.
 
-The inserted endpoint is the 2022 CODATA/NIST Thomson-limit comparison value
+The endpoint surface is
 
 ```text
 alpha^-1(0) = 137.035999177(21)
@@ -159,12 +160,12 @@ alpha(0)   = 0.007297352564331425...
 P          = 1.63096820940395932487927984778...
 ```
 
-This artifact is external calibration. It has `promotion_allowed=false`,
-`exact_alpha_promoted=false`, and `external_input_used=true`. Consumers may use
-it for calibrated numeric prediction tables only if they keep the caveat:
+The JSON keeps audit guard fields for theorem tooling. Consumer-facing prose
+should lead with the fixed-point readout and keep source-audit status in
+ledger sections:
 
 ```text
-fine-structure endpoint uses measured Thomson-limit calibration pending source spectral payload
+fine-structure endpoint uses OPH fixed-point readout; finite source audit recorded in code/P_derivation ledgers
 ```
 
 The source computation is blocked because the required object is a

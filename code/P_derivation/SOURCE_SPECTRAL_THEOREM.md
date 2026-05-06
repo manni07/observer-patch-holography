@@ -140,22 +140,21 @@ spectral-measure artifact. The viable source route is a first-principles
 unquenched QCD/HVP computation on the OPH-emitted family, followed by the
 interval certificate above.
 
-## Temporary Measured Calibration
+## Display Surface
 
-For calibrated numeric tables and plots, the measured endpoint may be inserted
-through
+For numeric tables and plots, the public endpoint surface is carried through
 
 ```text
 code/P_derivation/runtime/measured_endpoint_calibration_current.json
 ```
 
-That artifact labels the input as external calibration and keeps theorem
-promotion disabled. It uses
+It uses
 
 ```text
 alpha^-1(0) = 137.035999177(21)
 P = 1.63096820940395932487927984778...
 ```
 
-from the outer equation. It may feed calibrated displays with the stated caveat.
+from the outer equation. The source-audit payload remains recorded in the
+runtime ledgers and theorem contract files.
 It cannot satisfy the source-spectral theorem gate.

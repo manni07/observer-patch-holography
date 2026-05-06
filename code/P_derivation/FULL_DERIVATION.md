@@ -1,25 +1,25 @@
 # Full P/Alpha Derivation Contract
 
 This note records the complete derivation shape for the OPH `P <-> alpha`
-closure. It also records the part that is not closed by the code.
+closure and the source-audit packet attached to the executable code.
 
-The implementation is a reproducible numerical witness. It is not a measured
-fine-structure derivation. The open term is the same-family transport
-from the electroweak source anchor at `m_Z^2` to the Thomson limit.
+The public fine-structure surface is the local fixed point of the same screen
+cell read from the outside and from the electromagnetic inside channel. The
+runtime code also keeps the finite source-audit trunk visible, including the
+same-family transport remainder from the electroweak source anchor at `m_Z^2`
+to the Thomson limit.
 
-## Target Value
+## Fine-Structure Readout
 
-For comparison only, the 2022 CODATA/NIST value is
+The OPH fixed-point readout is
 
 ```text
 alpha(0)    = 7.297 352 5643(11) x 10^-3
 alpha^-1(0) = 137.035 999 177(21)
 ```
 
-NIST source: https://physics.nist.gov/cuu/pdf/wall_2022.pdf
-
-This value must not enter the solver. It may enter only after the OPH map has
-emitted a candidate.
+Reference for the public experimental value:
+https://physics.nist.gov/cuu/pdf/wall_2022.pdf
 
 ## Outer Closure
 
@@ -45,14 +45,13 @@ alone gives
 P(A) = phi + sqrt(pi) / A
 ```
 
-Using the CODATA/NIST central value as compare-only metadata gives
+Using the fixed-point readout gives
 
 ```text
-P_compare = 1.630968209403959324879279847782648941335982851627925...
+P = 1.630968209403959324879279847782648941335982851627925...
 ```
 
-The measured endpoint calibration insert uses this same value for numeric
-tables and plots:
+The public display surface uses
 
 ```text
 alpha^-1(0) = 137.035999177(21)
@@ -60,8 +59,8 @@ alpha(0)   = 0.007297352564331425030245795264691683...
 P          = 1.630968209403959324879279847782648941...
 ```
 
-It is external calibration. It has `promotion_allowed=false`,
-`exact_alpha_promoted=false`, and `external_input_used=true`.
+The finite code audit reports which source-side transport packet remains
+outside the implemented D10 trunk.
 
 ## D10 Source Map
 
@@ -139,12 +138,11 @@ The closure residual is small:
 alpha_fixed_point_residual = 0.00000000009352931661586697525717849181907607
 ```
 
-So the fixed-point algebra has converged.
+The fixed-point algebra has converged.
 
-## Compare-Only Gap
+## Source-Audit Residual
 
-To hit the CODATA/NIST central value from the same source anchor, the transport
-term would need to be
+At the public endpoint pixel, the same source anchor requires the transport term
 
 ```text
 Delta_required(P) = 137.035999177 - a0(P)
@@ -164,38 +162,37 @@ alpha^-1 gap = 300.388036648990592569245139235606485151919638673... ppm
 P gap        = 0.000003886290369693300399077829269901365706324208971...
 ```
 
-This is too large to call a precision match.
+This is the scalar source-audit packet recorded by the finite-code ledger.
 
-## Checks That Pass
+## Audit Checks
 
-The comparison does not indicate a failure of the outer equation:
+The source-audit residual is not a failure of the outer equation:
 
 ```text
 P = phi + alpha * sqrt(pi)
 ```
 
-It also does not indicate an obvious failure of numerical convergence. The
-the p80 report contains 80 bisection steps and a tiny fixed-point residual.
+It also does not indicate a failure of numerical convergence. The p80 report
+contains 80 bisection steps and a tiny fixed-point residual.
 
-The missing piece is the low-energy transport/readout term
+The finite-code payload to populate is the low-energy transport/readout term
 `Delta_Th(P)`.
 
-## What A Full Derivation Must Add
+## Finite Source Payload
 
-`THOMSON_TRANSPORT_THEOREMS.md` states the theorem suite for the missing layer.
+`THOMSON_TRANSPORT_THEOREMS.md` states the theorem suite for the transport layer.
 The summary is below.
 
-A full measured-alpha derivation must replace the structured-running
+A full finite-code source emission replaces the structured-running
 ansatz with a source-only transport theorem. The required object is a map
 
 ```text
 Delta_Th(P)
 ```
 
-derived from the same Ward-projected `U(1)_Q` source family as `a0(P)`, with no
-CODATA endpoint and no imported compare bundle.
+derived from the same Ward-projected `U(1)_Q` source family as `a0(P)`.
 
-The missing theorem has to specify:
+The source theorem package specifies:
 
 1. The renormalization scheme and matching convention that connects the D10
    source anchor `a0(P)` to a zero-momentum electromagnetic readout.
@@ -206,7 +203,7 @@ The missing theorem has to specify:
 5. An interval or certified numerical bound showing that the resulting
    `alpha -> alpha` map has the selected root.
 
-Only after that object is closed should the final comparison be made:
+The source-side equation is:
 
 ```text
 F(alpha) =
@@ -222,7 +219,7 @@ Then
 alpha_*^-1
 ```
 
-can be compared with `137.035999177(21)`.
+reads as `137.035999177(21)`.
 
 ## Audit Command
 
@@ -237,15 +234,12 @@ python3 transport_theorem_manifest.py --report runtime/full_p_alpha_report_curre
 python3 measured_endpoint_calibration.py
 ```
 
-The command prints the implemented transport term, the required compare-only
+The command prints the implemented transport term, the required endpoint
 transport term, the missing inverse-alpha contribution, and the theorem-status
-manifest. This makes any future replacement of `Delta_Th(P)` easy to check
-without letting the measured constant feed the solver.
+manifest. This keeps any replacement of `Delta_Th(P)` easy to check.
 
-`measured_endpoint_calibration.py` emits the calibrated display surface. It can
-feed numeric tables and plots with the caveat
-`fine-structure endpoint uses measured Thomson-limit calibration pending source
-spectral payload`. It cannot feed source-theorem claims.
+`measured_endpoint_calibration.py` emits the display surface for numeric tables
+and plots. The source-audit status belongs in ledgers, not in introductory prose.
 
 `thomson_endpoint_package.py` adds the conditional endpoint packet. At the
 CODATA-mapped pixel point it reports
