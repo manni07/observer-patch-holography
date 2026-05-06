@@ -1,6 +1,6 @@
 {
   "artifact": "oph_final_current_end_to_end_particle_predictions",
-  "claim_status": "final_current_nonhadron_predictions_not_full_hadron_or_certified_P_root_release",
+  "claim_status": "final_nonhadron_predictions_without_full_hadron_or_certified_P_root_release",
   "direct_top_auxiliary_comparison": {
     "auxiliary_direct_top_codomain": "Q007TP",
     "auxiliary_direct_top_gev": 172.5590883453979,
@@ -16,7 +16,7 @@
     "obstruction_only_worker_result_allowed": true,
     "p_trunk_candidate_only": true
   },
-  "generated_utc": "2026-05-06T04:24:20Z",
+  "generated_utc": "2026-05-06T04:53:47Z",
   "hadron_policy": {
     "github_issues": [
       153,
@@ -61,7 +61,7 @@
     {
       "chrome_workers": "do_not_use_for_backend_execution",
       "closable_now": true,
-      "close_reason": "Current environment lacks a working OPH hadron backend; reopen only when GLORB/Echosahedron-class backend output and production systematics exist.",
+      "close_reason": "The local environment lacks a working OPH hadron backend; reopen only when GLORB/Echosahedron-class backend output and production systematics exist.",
       "closed_as_out_of_scope": true,
       "issue": 153,
       "local_next_artifact": "particles/runs/hadron/ward_projected_spectral_measure_contract.json",
@@ -303,7 +303,7 @@
     "loops": 4,
     "with_hadrons": false
   },
-  "scope": "current_nonhadron_particle_pipeline_with_hadrons_closed_out_of_scope",
+  "scope": "nonhadron_particle_pipeline_with_hadrons_closed_out_of_scope",
   "source_surfaces": {
     "direct_top_bridge": "code/particles/runs/calibration/direct_top_bridge_contract.json",
     "exact_nonhadron": "code/particles/exact_nonhadron_masses.json",

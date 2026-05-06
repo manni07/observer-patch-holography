@@ -89,7 +89,7 @@ The Higgs row lands on the PDG 2025 Higgs average at quoted precision.
 The exact public running-top row uses the PDG 2025 cross-section entry
 `Q007TP4`.
 The auxiliary direct-top average `Q007TP` is compare-only; #207 is closed as a
-current-corpus codomain no-go.
+corpus-limited codomain no-go.
 
 ## Main Outputs
 
@@ -169,7 +169,7 @@ closes on `current_family_only` and matches the official PDG 2025 API running
 quark reference sextet exactly on that declared surface; its top coordinate is
 the PDG 2025 cross-section mass entry. The auxiliary direct-top entry is
 compare-only; [#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207)
-is closed as a current-corpus codomain no-go. A separate restricted theorem chain on the explicit
+is closed as a corpus-limited codomain no-go. A separate restricted theorem chain on the explicit
 `current_family_common_refinement_transport_frame_only` carrier emits a
 sector-attached `Sigma_ud^phys` element, the exact physical sigma datum, the
 restricted absolute sector readout, the same sextet, and explicit exact

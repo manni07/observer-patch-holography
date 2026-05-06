@@ -40,6 +40,10 @@ def _issue_map(payload: dict[str, Any]) -> dict[int, dict[str, Any]]:
     return {int(gate["issue"]): gate for gate in payload["issue_gates"]}
 
 
+def _display_status(status: str) -> str:
+    return status.replace("current_corpus", "corpus_limited")
+
+
 def build_payload() -> dict[str, Any]:
     final_predictions = _load_json(FINAL_PREDICTIONS)
     pipeline = _load_json(PIPELINE_STATUS)
@@ -154,11 +158,11 @@ def build_payload() -> dict[str, Any]:
             "open_gates": [],
             "closed_issue_refs": [153, 157],
             "closure_reason": (
-                "The current environment has no working OPH hadron backend; local surrogate code "
+                "The local environment has no working OPH hadron backend; local surrogate code "
                 "and Chrome workers cannot promote hadron predictions."
             ),
             "next_artifact": (
-                "none in current scope; reopen only when a GLORB/Echosahedron-class OPH backend "
+                "none in local scope; reopen only when a GLORB/Echosahedron-class OPH backend "
                 "emits production hadron output and systematics"
             ),
         },
@@ -193,7 +197,7 @@ def build_payload() -> dict[str, Any]:
             "closed_out_of_scope_chains": ["hadrons"],
             "hardware_gated_chains": ["hadrons"],
             "policy": (
-                "Do not promote candidate, compare-only, witness-only, current-corpus no-go, or "
+                "Do not promote candidate, compare-only, witness-only, corpus-limited no-go, or "
                 "hardware-gated chains as closed theorem predictions."
             ),
         },
@@ -205,10 +209,10 @@ def build_payload() -> dict[str, Any]:
         "worker_policy": {
             "chrome_pro_workers_needed_now": False,
             "reason": (
-                "Hadron issues #153/#157 are closed out-of-scope until OPH hadron hardware exists; "
+                "Hadron issues #153/#157 are closed out-of-scope pending OPH hadron hardware; "
                 "the remaining in-scope open P/electroweak chains need local theorem packets before worker audit is meaningful. "
                 "The charged absolute-anchor, quark global-classification, and direct-top auxiliary-codomain lanes "
-                "are already closed as current-corpus no-go boundaries."
+                "have corpus-limited no-go boundaries."
             ),
         },
         "particle_five_gates": {str(issue): gates[issue] for issue in (32, 153, 199, 201, 207, 223, 224) if issue in gates},
@@ -226,7 +230,7 @@ def render_markdown(payload: dict[str, Any]) -> str:
         f"Status: `{payload['status']}`",
         f"All derivation chains claimed closed: `{payload['closure_summary']['all_derivation_chains_claimed_closed']}`",
         f"Remaining nonclosed chains: `{', '.join(payload['closure_summary']['remaining_nonclosed_chains'])}`",
-        f"Chrome Pro workers needed now: `{payload['worker_policy']['chrome_pro_workers_needed_now']}`",
+        f"Chrome Pro workers needed: `{payload['worker_policy']['chrome_pro_workers_needed_now']}`",
         f"Reason: {payload['worker_policy']['reason']}",
         "",
         "| Chain | Status | Promotable | Open gates | Outputs | Next artifact |",
@@ -237,7 +241,7 @@ def render_markdown(payload: dict[str, Any]) -> str:
         gates = ", ".join(f"#{issue}" for issue in row["open_gates"]) or "none"
         next_artifact = row["next_artifact"] or "none"
         lines.append(
-            f"| `{row['chain']}` | `{row['status']}` | `{row['promotable']}` | {gates} | {outputs} | {next_artifact} |"
+            f"| `{row['chain']}` | `{_display_status(row['status'])}` | `{row['promotable']}` | {gates} | {outputs} | {next_artifact} |"
         )
     return "\n".join(lines)
 

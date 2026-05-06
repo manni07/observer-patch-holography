@@ -157,13 +157,13 @@ Apply the overlap consistency condition. Any assignment where patches disagree g
 
 **Reality is the collection of local states that survives the consistency filter.**
 
-The hardness of the Quantum Marginal Problem tells us the filter is doing real work. The constraints are genuinely restrictive. This helps explain why overlap consistency is a nontrivial structural requirement rather than a vacuous one. It also suggests that the allowed state-space is highly structured rather than arbitrary.
+The hardness of the Quantum Marginal Problem tells us the filter is doing real work. The constraints are genuinely restrictive. This helps explain why overlap consistency is a nontrivial structural requirement, with real content. It also suggests that the allowed state-space is highly structured.
 
 Overlap conditions favor allowing correlations that exceed classical bounds.
 Bell-violating correlations can then be read as part of the quantum structure
 that helps keep patches consistent without a large hidden-variable overhead.
 
-In a universe built on observer agreement, the nonlocal correlations that so troubled Einstein are not inexplicable. They become part of the consistency structure rather than an unexplained add-on.
+In a universe built on observer agreement, the nonlocal correlations that so troubled Einstein are not inexplicable. They become part of the consistency structure, with no unexplained add-on.
 
 ## 6.4 Defining the Overlap
 
@@ -424,7 +424,7 @@ If Alice and Bob agree on their overlap (AB), and Bob and Carol agree on their o
 
 But beware of loops. Go from Alice to Bob to Carol and back to Alice-you should return with the same state on shared overlaps. If not, you have **frustration**: local assignments can't all be true simultaneously.
 
-This is analogous to gauge theory and geometry. Move a vector around a loop; if it comes back rotated, there is nontrivial holonomy. Holonomy is the leftover mismatch that appears after a full circuit. Likewise, a loop that does not close cleanly signals an obstruction to global gluing rather than a simple globally consistent assignment.
+This is analogous to gauge theory and geometry. Move a vector around a loop; if it comes back rotated, there is nontrivial holonomy. Holonomy is the leftover mismatch that appears after a full circuit. Likewise, a loop that does not close cleanly signals an obstruction to global gluing, with no simple globally consistent assignment.
 
 ## 6.11 Formal Statement
 

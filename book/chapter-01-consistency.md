@@ -21,11 +21,11 @@ This picture is so natural that it's hard to imagine alternatives. It's implicit
 
 Philosophers and scientists have long assumed something like a "view from nowhere," a complete description of reality that exists independently of any observer. Aristotle's substances, Descartes' *res extensa*, Newton's absolute space and time, and Laplace's demon (who knows the state of the universe at a single instant) are all versions of this idea. In modern terms, it's scientific realism: the world is out there, fully specified, whether or not anyone looks.
 
-There is a counter-tradition. Berkeley insisted that perception is primary. Kant split reality into *noumena* (things-in-themselves) and *phenomena* (appearances). Mach pressed for strictly relational physics. We don't adopt any of these wholesale, but our move rhymes with them: we take perspectives seriously as the starting point.
+There is a counter-tradition. Berkeley insisted that perception is primary. Kant split reality into *noumena* (things-in-themselves) and *phenomena* (appearances). Mach pressed for strictly relational physics. We use a narrower move that rhymes with them: we take perspectives seriously as the starting point.
 
 > **Sidebar: Philosophers of Perspective**
 >
-> We are not doing history of philosophy here, but it helps to name the lineage:
+> This is only a lineage marker:
 > - George Berkeley, *A Treatise Concerning the Principles of Human Knowledge* (1710): reality as inseparable from perception.
 > - Immanuel Kant, *Critique of Pure Reason* (1781): space and time as forms of intuition; phenomena vs noumena.
 > - Ernst Mach, *The Science of Mechanics* (1883): relational physics and critique of absolute space.
@@ -35,7 +35,7 @@ We take a narrower, operational step: **start from perspectives and demand consi
 
 ### Why the Intuitive Picture Fails
 
-But why abandon the intuitive picture at all? Because the universe gave us hints, strange, persistent, reproducible hints, that it cannot be correct.
+Why abandon the intuitive picture at all? Because the universe gave us hints, strange, persistent, reproducible hints, that it cannot be correct.
 
 Here's a thought experiment that illustrates the problem: imagine a cosmic record that contains **all** facts at one global instant. You might expect physics to supply the rules for such a record. But relativity says there is no unique global present. Quantum mechanics says not all properties can be simultaneously definite. Horizons say no observer can access everything. The record is not even well-defined.
 
@@ -45,7 +45,7 @@ Understanding those hints, and what they tell us about the actual structure of r
 
 ## 1.2 Hint #1: The Invariant Speed of Light
 
-The first major hint came from an experiment that was designed to confirm the intuitive picture and instead demolished it.
+The first major hint came from an experiment designed to confirm the intuitive picture. It demolished it instead.
 
 ### The Aether That Wasn't There
 

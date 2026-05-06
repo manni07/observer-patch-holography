@@ -50,6 +50,10 @@ def _load_p_trunk_summary() -> dict[str, Any]:
     }
 
 
+def _display_status(status: str) -> str:
+    return status.replace("current_corpus", "corpus_limited")
+
+
 def build_gap_rows() -> list[dict[str, Any]]:
     return [
         {
@@ -59,10 +63,10 @@ def build_gap_rows() -> list[dict[str, Any]]:
             "github_issue": 224,
             "title": "Make the five-equation P trunk the canonical audit artifact",
             "current_boundary": (
-                "The compressed trunk can organize the code path, but it is not a certified live "
-                "particle root until the endpoint and interval-certificate gates close."
+                "The compressed trunk organizes the code path. It remains outside the certified live "
+                "particle-root surface until the endpoint and interval-certificate gates close."
             ),
-            "next_action": "Keep emitting p_closure_trunk_current.json and use it only as audit metadata for now.",
+            "next_action": "Keep emitting p_closure_trunk_current.json and use it as audit metadata.",
             "target_surfaces": ["code/P_derivation", "code/particles"],
         },
         {
@@ -72,7 +76,7 @@ def build_gap_rows() -> list[dict[str, Any]]:
             "github_issue": 223,
             "title": "Close the Ward-projected U(1)_Q Thomson endpoint",
             "current_boundary": (
-                "The current structured-running law is a continuation: lepton one-loop transport is "
+                "The structured-running law is a continuation: lepton one-loop transport is "
                 "implemented, while hadronic spectral transport, scheme matching, and interval error "
                 "control are not theorem-grade."
             ),
@@ -89,8 +93,8 @@ def build_gap_rows() -> list[dict[str, Any]]:
             "github_issue": 32,
             "title": "Internalize RG matching, threshold placement, and scheme conversion",
             "current_boundary": (
-                "The D10 branch still uses declared running/matching conventions. The compressed P "
-                "trunk makes this easier to see but does not prove those conventions from OPH."
+                "The D10 branch uses declared running/matching conventions. The compressed P "
+                "trunk exposes that boundary without proving those conventions from OPH."
             ),
             "next_action": (
                 "Turn the running/matching package into an OPH edge-sector theorem or explicitly "
@@ -121,7 +125,7 @@ def build_gap_rows() -> list[dict[str, Any]]:
             "github_issue": 201,
             "title": "Keep the P-to-charged affine anchor bridge scoped as a no-go",
             "current_boundary": (
-                "No public charged-lepton values are emitted on the theorem lane. The current corpus "
+                "No public charged-lepton values are emitted on the theorem lane. The available corpus "
                 "does not prove the determinant-normalization / sector-isolated trace-lift identity "
                 "beneath A_ch(P), and the impossibility packet rules out end-to-end charged closure "
                 "from the present centered-data surface."
@@ -141,7 +145,7 @@ def build_gap_rows() -> list[dict[str, Any]]:
             "title": "Keep exact quark rows scoped to the selected public frame class",
             "current_boundary": (
                 "The selected-class exact Yukawa theorem is live. The stronger class-uniform/global "
-                "classification lane is closed as a current-corpus no-go because no source-emitted "
+                "classification lane is closed as a corpus-limited no-go because no source-emitted "
                 "ambient public-frame classifier or quotient-intrinsic sigma law exists."
             ),
             "next_action": (
@@ -175,7 +179,7 @@ def build_gap_rows() -> list[dict[str, Any]]:
             "current_boundary": (
                 "The exact top coordinate uses the PDG cross-section codomain Q007TP4. The auxiliary "
                 "direct-top entry Q007TP is a separate extraction codomain and remains compare-only; "
-                "the current corpus emits no extraction-response map or uncertainty-propagation certificate."
+                "the available corpus emits no extraction-response map or uncertainty-propagation certificate."
             ),
             "next_action": (
                 "Keep Q007TP compare-only while the theorem row remains anchored on Q007TP4. Reopen only "
@@ -191,10 +195,10 @@ def build_gap_rows() -> list[dict[str, Any]]:
             "related_github_issues": [153, 157],
             "title": "Execute the production hadron backend and publish systematics",
             "current_boundary": (
-                "The hadron lane is explicitly outside the current local pipeline. Issues #153 and "
-                "#157 are closed as out-of-scope/computationally blocked, not solved, because there "
+                "The hadron lane is explicitly outside the local pipeline. Issues #153 and "
+                "#157 are closed as out-of-scope/computationally blocked because there "
                 "is no working production hadron backend here. A credible backend is hardware-gated "
-                "on OPH hardware such as GLORB/Echosahedron rather than on local Python or Chrome workers."
+                "on OPH hardware such as GLORB/Echosahedron, outside local Python and Chrome workers."
             ),
             "next_action": (
                 "Keep hadron rows suppressed. Reopen only after a working OPH hadron backend emits "
@@ -221,7 +225,7 @@ def build_bundles() -> list[dict[str, Any]]:
                 "certify the compressed P trunk as the live particle root without importing alpha(0)?"
             ),
             "result": (
-                "Constructive result. The admissible endpoint object is now explicit: Delta_Th(P) must split into "
+                "Constructive result. The admissible endpoint object is explicit: Delta_Th(P) must split into "
                 "source lepton transport, a Ward-projected hadronic spectral density rho_had(s;P), "
                 "a certified electroweak/scheme remainder, RG/matching certificates, quadrature bounds, "
                 "and an interval-level fixed-point certificate. The local implementation target is "
@@ -242,10 +246,10 @@ def build_bundles() -> list[dict[str, Any]]:
                 "comparison surface without hidden target fitting?"
             ),
             "result": (
-                "No promotion. Charged leptons are closed as a current-corpus no-go by the end-to-end "
+                "No promotion. Charged leptons are closed as a corpus-limited no-go by the end-to-end "
                 "impossibility theorem: the same-family witness and conditional algebraic readout remain, "
                 "but no theorem-grade A_ch(P) is emitted. Quarks remain selected-class on f_P with global "
-                "classification closed as a current-corpus no-go, and neutrino PMNS rows remain visible "
+                "classification closed as a corpus-limited no-go, and neutrino PMNS rows remain visible "
                 "comparison-tension rows."
             ),
         },
@@ -258,15 +262,15 @@ def build_bundles() -> list[dict[str, Any]]:
             ],
             "promotion_question": (
                 "Can the hadron production backend emit the rho_had(s;P) object and uncertainty budget "
-                "needed by the Ward-projected Thomson endpoint, rather than leaving hadrons and alpha(0) "
-                "as separate deferred gaps?"
+                "needed by the Ward-projected Thomson endpoint with hadrons and alpha(0) handled in one "
+                "closed packet?"
             ),
             "result": (
-                "Constructive result with a scope lock. The current stable-channel backend is not the endpoint "
-                "object, and the real hadron backend is not locally runnable. The missing primitive remains "
+                "Constructive result with a scope lock. The stable-channel backend is outside the endpoint "
+                "object, and the real hadron backend is outside local execution. The missing primitive remains "
                 "production_ward_projected_hadronic_spectral_measure_export. Issues #153/#157 are closed "
-                "out-of-scope/computationally blocked until OPH hardware exists, rather than assigned to "
-                "Chrome workers or local surrogate code."
+                "out-of-scope/computationally blocked pending OPH hardware and outside Chrome workers or "
+                "local surrogate code."
             ),
         },
         {
@@ -281,7 +285,7 @@ def build_bundles() -> list[dict[str, Any]]:
             ),
             "result": (
                 "No-go result. The exact top theorem row remains on Q007TP4. The auxiliary direct-top row "
-                "Q007TP is compare-only because the current corpus emits no source-side extraction-response "
+                "Q007TP is compare-only because the available corpus emits no source-side extraction-response "
                 "kernel into that codomain."
             ),
         },
@@ -304,7 +308,7 @@ def build_bundles() -> list[dict[str, Any]]:
                 "requirements strongly enough to promote the compressed trunk into live particle builders?"
             ),
             "result": (
-                "No promotion. The first wave now emits constructive next artifacts, so the compressed P trunk "
+                "No promotion. The first wave emits constructive next artifacts, so the compressed P trunk "
                 "remains candidate/audit metadata until those artifacts are populated and certified."
             ),
         },
@@ -373,7 +377,7 @@ def render_markdown(ledger: dict[str, Any]) -> str:
     for bundle in ledger["bundles"]:
         gaps = ", ".join(f"`{gap}`" for gap in bundle["gap_ids"])
         lines.append(
-            f"| `{bundle['id']}` | `{bundle['status']}` | {gaps} | {bundle['promotion_question']} |"
+            f"| `{bundle['id']}` | `{_display_status(bundle['status'])}` | {gaps} | {bundle['promotion_question']} |"
         )
     lines.extend(
         [
@@ -383,7 +387,7 @@ def render_markdown(ledger: dict[str, Any]) -> str:
         ]
     )
     for bundle in ledger["bundles"]:
-        lines.append(f"- `{bundle['id']}`: `{bundle['status']}`. {bundle['result']}")
+        lines.append(f"- `{bundle['id']}`: `{_display_status(bundle['status'])}`. {bundle['result']}")
     lines.extend(
         [
             "",
@@ -396,7 +400,7 @@ def render_markdown(ledger: dict[str, Any]) -> str:
     for row in ledger["rows"]:
         issue = f"#{row['github_issue']}" if row.get("github_issue") is not None else "n/a"
         lines.append(
-            f"| `{row['id']}` | {row['lane']} | `{row['status']}` | {issue} | {row['next_action']} |"
+            f"| `{row['id']}` | {row['lane']} | `{_display_status(row['status'])}` | {issue} | {row['next_action']} |"
         )
     lines.extend(
         [

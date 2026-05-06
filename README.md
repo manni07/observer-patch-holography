@@ -65,20 +65,18 @@ universe living on that same screen. The closure is
 separate optical-cavity hardware note.
 
 From the same setup come gravity, gauge structure, a tiered particle surface,
-records, and observer synchronization. The current particle pipeline emits a
-candidate `P = 1.63097210492078846050203640439` and
-`alpha_cand^-1 = 136.994020662724205139718642793`, but that root is not yet a
-live prediction root. The weak-boson pair is compare-only until the
-Ward-projected Thomson endpoint and RG/matching certificates close; the Higgs
-lane, selected-class quark rows, and weighted-cycle neutrino branch remain
-separate scoped outputs. The charged-lepton absolute-mass lane, the stronger
-global quark-frame classification lane, and the auxiliary direct-top codomain
-are closed as current-corpus no-go boundaries rather than promoted derivations.
-Hadrons are not simple quark entries: their masses belong to the OPH
-hadron-backend problem. Issues #153 and #157 are closed as
-out-of-scope/computationally blocked, not solved; they should be reopened only
-when a working OPH hadron backend such as GLORB/Echosahedron emits production
-spectral data and systematics.
+records, and observer synchronization. The particle pipeline records the
+candidate values `P = 1.63097210492078846050203640439` and
+`alpha_cand^-1 = 136.994020662724205139718642793`. This root is outside the
+live prediction tier. The weak-boson pair is compare-only; live promotion
+requires the Ward-projected Thomson endpoint and RG/matching certificates. The
+Higgs lane, selected-class quark rows, and weighted-cycle neutrino branch are
+separate scoped outputs. The available derivation gives no-go boundaries for
+charged-lepton absolute masses, global quark-frame classification, and the
+auxiliary direct-top conversion. Hadron masses belong to the OPH hadron-backend
+problem. The hadron backend entries have out-of-scope/computationally blocked
+status. Reopening requires a working OPH hadron backend such as
+GLORB/Echosahedron with production spectral data and systematics.
 
 ### Selected Quantitative Rows
 
@@ -118,14 +116,12 @@ papers also carry the structural Standard Model derivations listed above and a
 neutrino family, but those do not collapse to one simple PDG or NIST row and
 are left out of this table.
 
-The current particle surface also reports compare-only `W/Z` values
-`80.377 GeV` and `91.18797809193725 GeV`, a Higgs value
-`m_H = 125.1995304097179 GeV`, and a selected-class top value
-`m_t = 172.35235532883115 GeV` on the PDG cross-section codomain `Q007TP4`.
-The auxiliary direct-top row `Q007TP` is compare-only. Charged-lepton values
-are target-anchored witness rows, not promoted predictions; issue #201 records
-the current-corpus no-go for the missing determinant-line attachment. The
-weighted-cycle neutrino branch emits
+The particle surface also reports compare-only `W/Z` values `80.377 GeV` and
+`91.18797809193725 GeV`, a Higgs value `m_H = 125.1995304097179 GeV`, and a
+selected-class top value `m_t = 172.35235532883115 GeV` using the PDG
+cross-section top-mass convention. The auxiliary direct-top average is
+compare-only. Charged-lepton values are target-anchored witness rows outside
+the promoted prediction tier. The weighted-cycle neutrino branch emits
 `(0.017454720257976796, 0.019481987935919015, 0.05307522145074924) eV` on its
 declared branch.
 

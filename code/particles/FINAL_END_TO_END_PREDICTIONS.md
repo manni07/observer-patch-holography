@@ -1,9 +1,9 @@
-# Final Current End-to-End Particle Predictions
+# Final End-to-End Particle Predictions
 
-Generated: `2026-05-06T04:24:20Z`
+Generated: `2026-05-06T04:53:47Z`
 
-Scope: `current_nonhadron_particle_pipeline_with_hadrons_closed_out_of_scope`
-Claim status: `final_current_nonhadron_predictions_not_full_hadron_or_certified_P_root_release`
+Scope: `nonhadron_particle_pipeline_with_hadrons_closed_out_of_scope`
+Claim status: `final_nonhadron_predictions_without_full_hadron_or_certified_P_root_release`
 
 ## P Closure
 
@@ -14,15 +14,15 @@ Claim status: `final_current_nonhadron_predictions_not_full_hadron_or_certified_
 
 ## Particle-Five Gates
 
-| Issue | State | Closable now | Local artifact | Worker policy |
+| Issue | State | Closable | Local artifact | Worker policy |
 | --- | --- | --- | --- | --- |
 | #223 | `open_constructive_contract` | `False` | `P_derivation/runtime/thomson_endpoint_contract_current.json` | not_useful_until_source_endpoint_packet_exists |
 | #224 | `open_waiting_certified_root` | `False` | `P_derivation/runtime/p_closure_trunk_current.json` | not_useful_until_endpoint_and_interval_gates_close |
 | #32 | `open_constructive_contract` | `False` | `P_derivation/runtime/rg_matching_threshold_contract_current.json` | only_after_beta_threshold_packet_is_populated |
 | #153 | `closed_out_of_scope_computationally_blocked` | `True` | `particles/runs/hadron/ward_projected_spectral_measure_contract.json` | do_not_use_for_backend_execution |
-| #201 | `closed_current_corpus_charged_end_to_end_no_go` | `True` | `particles/runs/leptons/charged_end_to_end_impossibility_theorem.json` | not_needed_until_new_uncentered_trace_lift_source_exists |
-| #207 | `closed_current_corpus_codomain_no_go` | `True` | `particles/runs/calibration/direct_top_bridge_contract.json` | not_needed_until_new_response_kernel_source_exists |
-| #199 | `closed_current_corpus_global_classification_no_go` | `True` | `particles/runs/flavor/quark_class_uniform_public_frame_descent_obstruction.json` | not_needed_until_new_global_public_frame_classifier_source_exists |
+| #201 | `closed_corpus_limited_charged_end_to_end_no_go` | `True` | `particles/runs/leptons/charged_end_to_end_impossibility_theorem.json` | not_needed_until_new_uncentered_trace_lift_source_exists |
+| #207 | `closed_corpus_limited_codomain_no_go` | `True` | `particles/runs/calibration/direct_top_bridge_contract.json` | not_needed_until_new_response_kernel_source_exists |
+| #199 | `closed_corpus_limited_global_classification_no_go` | `True` | `particles/runs/flavor/quark_class_uniform_public_frame_descent_obstruction.json` | not_needed_until_new_global_public_frame_classifier_source_exists |
 
 ## Predictions
 
@@ -49,11 +49,11 @@ Claim status: `final_current_nonhadron_predictions_not_full_hadron_or_certified_
 
 ## Direct-Top Auxiliary Comparison
 
-- Current top coordinate: `172.35235532883115 GeV` on `Q007TP4`
+- Top theorem coordinate: `172.35235532883115 GeV` on `Q007TP4`
 - Auxiliary direct-top coordinate: `172.5590883453979 GeV` on `Q007TP`
 - Difference: `0.20673301656674425 GeV`
 - Pull: `0.28458848947515303` combined sigma
-- Bridge status: `hard_no_go_current_corpus_compare_only_direct_top_codomain`
+- Bridge status: `hard_no_go_corpus_limited_compare_only_direct_top_codomain`
 
 ## Hadrons
 

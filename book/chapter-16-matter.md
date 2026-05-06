@@ -82,9 +82,9 @@ M_W^\dagger = 80.377\,\mathrm{GeV}, \qquad
 M_Z^\dagger = 91.18797809193725\,\mathrm{GeV}.
 $$
 
-Those rows are not promoted live predictions yet. The same family is supposed
-to follow the unbroken electromagnetic channel to the long-distance Thomson
-limit, but the current certified trunk instead emits the candidate
+Those rows are compare-only. The same family is supposed to follow the
+unbroken electromagnetic channel to the long-distance Thomson limit. The
+certified trunk emits the candidate
 
 $$
 \alpha_{\mathrm{cand}}^{-1}=136.994020662724205139718642793.
@@ -93,8 +93,8 @@ $$
 The observed Thomson value $\alpha^{-1}(0)=137.035999177$ remains a comparison
 until the Ward-projected endpoint and RG/matching certificates close. The
 weak-boson pair and the familiar low-energy electromagnetic strength are meant
-to come from one continuous construction, but they are not all on one promoted
-theorem tier yet.
+to come from one continuous construction. The W/Z comparison rows and the
+candidate low-energy electromagnetic value occupy different claim tiers.
 
 The same electroweak core continues into the scalar and companion top values
 
@@ -134,8 +134,8 @@ the structural gauge reconstruction, the exact massless carriers, the declared
 Higgs/top surface, the selected-class running quark sextet with Yukawas, and one
 weighted-cycle neutrino family. It keeps the weak pair and fine-structure trunk
 on compare/candidate status until endpoint and matching gates close, and it
-closes charged-lepton absolute masses as a current-corpus no-go rather than a
-promoted theorem. Hadrons require a separate nonperturbative bound-state step
+records a no-go for charged-lepton absolute masses in the available derivation.
+Hadrons require a separate nonperturbative bound-state step
 because protons, neutrons, and mesons are QCD composites rather than elementary
 particle rows.
 

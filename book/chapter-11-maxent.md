@@ -11,7 +11,7 @@ the stage; physics is the play.
 
 This is Newton's absolute time: "Absolute, true, and mathematical time, of itself, and from its own nature, flows equably without relation to anything external."
 
-The arrow of time, the fact that we remember yesterday but not tomorrow, that eggs break but don't unbreak, seems fundamental to this picture. Time has a direction, built into its very nature.
+The arrow of time feels fundamental in this picture. We remember yesterday. We do not remember tomorrow. Eggs break. They do not unbreak. Time has a direction, built into its very nature.
 
 General relativity and quantum theory broke that picture.
 
@@ -128,7 +128,7 @@ But why did the universe start with low entropy in the first place?
 
 The deeper answer to the arrow of time is the **Past principle**: the universe began in a state of extraordinarily low entropy.
 
-We're not riding a random fluctuation. We're riding the expansion from a very special initial condition-the Big Bang. The early universe was hot but smooth, with matter spread almost uniformly. That uniformity is low gravitational entropy.
+We are riding the expansion from a very special initial condition: the Big Bang. The early universe was hot and smooth, with matter spread almost uniformly. That uniformity is low gravitational entropy.
 
 Why was the Big Bang low entropy? Standard physics treats this as an unexplained initial condition. But our model offers a different perspective.
 

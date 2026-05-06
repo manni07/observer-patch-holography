@@ -82,7 +82,7 @@
   "current_surface": {
     "builder": "code/particles/compute_current_output_table.py",
     "default_runtime_root": "temp/particles_runtime",
-    "simplification": "The current prediction pipeline is one disposable runtime surface plus this closure manifest, with hadron promotion excluded by scope.",
+    "simplification": "The prediction pipeline is one disposable runtime surface plus this closure manifest, with hadron promotion excluded by scope.",
     "source_repo": "reverse-engineering-reality/code"
   },
   "finalization_gates": {
@@ -91,7 +91,7 @@
     "obstruction_only_worker_result_allowed": true,
     "p_trunk_candidate_only": true
   },
-  "generated_utc": "2026-05-06T04:24:20Z",
+  "generated_utc": "2026-05-06T04:53:47Z",
   "issue_gates": [
     {
       "chrome_workers": "not_useful_until_source_endpoint_packet_exists",
@@ -122,7 +122,7 @@
     {
       "chrome_workers": "do_not_use_for_backend_execution",
       "closable_now": true,
-      "close_reason": "Current environment lacks a working OPH hadron backend; reopen only when GLORB/Echosahedron-class backend output and production systematics exist.",
+      "close_reason": "The local environment lacks a working OPH hadron backend; reopen only when GLORB/Echosahedron-class backend output and production systematics exist.",
       "closed_as_out_of_scope": true,
       "issue": 153,
       "local_next_artifact": "particles/runs/hadron/ward_projected_spectral_measure_contract.json",
@@ -133,7 +133,7 @@
     {
       "chrome_workers": "do_not_use_for_backend_execution",
       "closable_now": true,
-      "close_reason": "The compact/paper hadron branch is outside the current computational scope until a working OPH hadron backend emits the Ward-projected spectral measure.",
+      "close_reason": "The compact/paper hadron branch is outside the computational scope pending a working OPH hadron backend that emits the Ward-projected spectral measure.",
       "closed_as_out_of_scope": true,
       "issue": 157,
       "local_next_artifact": "particles/runs/hadron/ward_projected_spectral_measure_contract.json",
@@ -320,11 +320,11 @@
       "value": 91.18797809193725
     }
   },
-  "purpose": "Single simplified closure gate for the current non-hadron particle pipeline.",
+  "purpose": "Single simplified closure gate for the non-hadron particle pipeline.",
   "scope": {
     "chrome_workers_needed_now": false,
     "current_pipeline_scope": "nonhadron_particles_plus_candidate_P_root_metadata",
-    "hadron_scope_reason": "Production hadrons require a working OPH hardware backend such as GLORB/Echosahedron. Issues #153 and #157 are closed as out-of-scope/computationally blocked for the current pipeline; local surrogate code and Chrome workers are non-promoting.",
+    "hadron_scope_reason": "Production hadrons require a working OPH hardware backend such as GLORB/Echosahedron. Issues #153 and #157 are closed as out-of-scope/computationally blocked for the pipeline; local surrogate code and Chrome workers are non-promoting.",
     "hadrons_in_current_local_scope": false
   }
 }

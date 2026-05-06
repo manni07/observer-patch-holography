@@ -143,7 +143,7 @@ In quantum mechanics we need a different stage. A **Hilbert space** is a vector 
 
 Why use it here? Because experiments show that adding possibilities changes outcomes. In the double-slit experiment, "left path" plus "right path" does not behave like a classical sum of probabilities. A Hilbert space is the simplest structure that matches that behavior.
 
-In quantum mechanics, this picture changes fundamentally. Questions are not sets but **projectors** on a Hilbert space. A projector P is an operator satisfying P² = P.
+In quantum mechanics, this picture changes fundamentally. Questions become **projectors** on a Hilbert space. A projector P is an operator satisfying P² = P.
 
 The crucial difference: projectors do not form a Boolean algebra. The distributive law fails:
 
@@ -174,8 +174,8 @@ An observable is represented by a Hermitian operator A. The possible measurement
 $$P(a) = |\langle a|\psi\rangle|^2$$
 
 The vocabulary is compact but simple. Hermitian means the possible answers are
-real numbers. An eigenstate is a state in which the question already has a
-definite answer. The formula says that probability comes from how much the
+real numbers. An eigenstate is a state in which the question has a definite
+answer. The formula says that probability comes from how much the
 state points in the direction of that definite-answer state.
 
 In the standard textbook update rule, an ideal measurement updates the state to the eigenstate corresponding to the measured value.

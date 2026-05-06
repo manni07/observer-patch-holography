@@ -1,10 +1,10 @@
 version: 1
 as_of: "2026-05-06"
-goal: "status-tiered particle-spectrum ledger from the current P-closure branch plus OPH axioms/theorem chain"
+goal: "status-tiered particle-spectrum ledger from the candidate P-closure branch plus OPH axioms/theorem chain"
 notes:
-  - "Current branch uses P = 1.63097210492078846050203640439 and alpha_cand^-1 = 136.994020662724205139718642793."
-  - "This ledger is conservative: compare-only rows, target-anchored witnesses, and current-corpus no-go boundaries are not promoted to live target-free predictions."
-  - "Issues #199, #201, and #207 are closed as current-corpus no-go boundaries; #223, #224, #32, and #234 remain open gates."
+  - "Candidate branch values: P = 1.63097210492078846050203640439 and alpha_cand^-1 = 136.994020662724205139718642793."
+  - "This ledger is conservative: compare-only rows, target-anchored witnesses, and corpus-limited no-go boundaries sit outside live target-free predictions."
+  - "Issues #199, #201, and #207 have corpus-limited no-go status; #223, #224, #32, and #234 have open-gate status."
 entries:
   - id: structural.massless.photon
     output_keys: ["m_gamma"]
@@ -41,7 +41,7 @@ entries:
     branch: D10
     oph_derived_piece: "candidate P-closed scale setting on the realized gauge/content branch"
     borrowed_qft_piece: "RG evolution, matching conventions, structured Thomson transport, and frozen reference comparison rows"
-    extra_ansatz: "printed D10 running/matching package; not live until P-root, Thomson endpoint, and RG/matching interval gates close"
+    extra_ansatz: "printed D10 running/matching package; live prediction requires P-root, Thomson endpoint, and RG/matching interval gates"
     numeric_outputs:
       alpha_cand_inv: 136.994020662724205139718642793
       W_compare_only_GeV: 80.377
@@ -56,12 +56,12 @@ entries:
     branch: D11
     oph_derived_piece: "D10 closure plus the exact Higgs lambda-side seed and the companion one-scalar D11 fixed-ray branch"
     borrowed_qft_piece: "printed running, matching, threshold, and pole-mass conversion layer"
-    extra_ansatz: "declared D10/D11 calibration surface; top uses the D10/D11 row, while the auxiliary Q007TP direct-top codomain is compare-only"
+    extra_ansatz: "declared D10/D11 calibration surface; top uses the D10/D11 row; the auxiliary Q007TP direct-top codomain is compare-only"
     numeric_outputs:
       Higgs_GeV: 125.1995304097179
       top_D10_D11_GeV: 172.35235532883115
     caveats:
-      - "#207 closes the auxiliary direct-top Q007TP codomain as a current-corpus no-go; do not merge it with the Q007TP4 top theorem row."
+      - "#207 assigns corpus-limited no-go status to the auxiliary direct-top Q007TP codomain; keep it separate from the Q007TP4 top theorem row."
     blocked_by: []
   - id: open.artifact.stage5_charged_surface
     output_keys: ["stage5_artifact_surface"]
@@ -70,7 +70,7 @@ entries:
     branch: audit
     oph_derived_piece: "n/a"
     borrowed_qft_piece: "n/a"
-    extra_ansatz: "charged-only artifact surface; still not a standalone physics claim tier"
+    extra_ansatz: "charged-only artifact surface outside standalone physics-claim status"
     blocked_by: []
   - id: continuation.flavor.charged_leptons
     output_keys: ["m_e", "m_mu", "m_tau"]
@@ -79,7 +79,7 @@ entries:
     branch: D12
     oph_derived_piece: "same-family exact witness, operator obstruction certificate, conditional determinant-line lift, and downstream algebraic readout conditional on a theorem-grade absolute anchor"
     borrowed_qft_piece: "target-anchored current-family comparison values"
-    extra_ansatz: "not a live public prediction; #201 closes the current-corpus absolute-mass lane as a no-go until theorem-grade C_e promotion plus uncentered trace lift exist"
+    extra_ansatz: "target-anchored witness outside live public prediction status; #201 assigns corpus-limited no-go status to the absolute-mass lane pending theorem-grade C_e promotion plus uncentered trace lift"
     numeric_outputs:
       electron_witness_GeV: 0.0005109989499999994
       muon_witness_GeV: 0.10565837550000004
@@ -92,7 +92,7 @@ entries:
     branch: D12
     oph_derived_piece: "target-free D12 mass bridge plus direct public sigma-datum descent on the physical quark frame class selected by P"
     borrowed_qft_piece: "QCD/EW running-mass comparison surface only"
-    extra_ansatz: "selected-class closure only; #199 closes global classification of all quark frame classes as a current-corpus no-go"
+    extra_ansatz: "selected-class closure only; #199 assigns corpus-limited no-go status to global classification of all quark frame classes"
     numeric_outputs:
       up_GeV: 0.0021600000000000005
       down_GeV: 0.004699999999999999
@@ -149,7 +149,7 @@ entries:
     branch: hadron_reference
     oph_derived_piece: "uses D10 alpha_s and quark-sector descendants"
     borrowed_qft_piece: "lattice QCD machinery"
-    extra_ansatz: "no promoted hadron mass predictions; issues #153/#157 are closed as out-of-scope/computationally blocked until a real production backend emits continuum, volume, chiral, and statistics budgets"
+    extra_ansatz: "no promoted hadron mass predictions; issues #153/#157 have out-of-scope/computationally blocked status pending a real production backend with continuum, volume, chiral, and statistics budgets"
     blocked_by:
       ["#153", "#157"]
   - id: open.full_zoo.claim
@@ -157,7 +157,7 @@ entries:
     label: "Integrated full-zoo high-precision claim"
     tier: open
     branch: release_gate
-    oph_derived_piece: "not yet closed"
+    oph_derived_piece: "work in progress"
     borrowed_qft_piece: "multiple declared layers required"
     extra_ansatz: "forbidden until no claimed sector remains continuation or open"
     blocked_by:

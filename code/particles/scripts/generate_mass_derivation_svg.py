@@ -73,7 +73,10 @@ COLORS = {
 STATUS_BAR = {
     "structural": "#38bdf8",
     "calibration": "#06b6d4",
+    "candidate_trunk_compare_only": "#06b6d4",
     "secondary_quantitative": "#8b5cf6",
+    "declared_surface_theorem": "#8b5cf6",
+    "target_anchored_witness_no_go_boundary": "#f59e0b",
     "selected_class_theorem": "#14b8a6",
     "continuation": "#f59e0b",
     "simulation_dependent": "#ef4444",
@@ -82,7 +85,10 @@ STATUS_BAR = {
 STATUS_TEXT = {
     "structural": "structural",
     "calibration": "electroweak closure",
+    "candidate_trunk_compare_only": "electroweak compare surface",
     "secondary_quantitative": "secondary",
+    "declared_surface_theorem": "declared-surface theorem",
+    "target_anchored_witness_no_go_boundary": "witness boundary",
     "selected_class_theorem": "selected-class theorem",
     "continuation": "continuation",
     "simulation_dependent": "out of scope",
@@ -123,18 +129,24 @@ GROUP_ROW_TEXT = {
 STATUS_EXPLAINER = {
     "structural": "exact structural theorem surface",
     "calibration": "implemented P-driven electroweak quantitative-closure surface",
+    "candidate_trunk_compare_only": "P-root candidate compare surface",
     "secondary_quantitative": "quantitative secondary branch with a separate proof package",
+    "declared_surface_theorem": "theorem surface on declared running and matching conventions",
+    "target_anchored_witness_no_go_boundary": "target-anchored witness with a corpus-limited no-go boundary",
     "selected_class_theorem": "theorem-grade closure on the public quark frame class selected by P",
-    "continuation": "declared continuation or witness surface rather than theorem-grade public output",
+    "continuation": "declared continuation or witness surface outside theorem-grade public output",
     "simulation_dependent": "closed out-of-scope surface with backend and systematics prerequisites",
 }
 
 STATUS_NEXT_STEP = {
     "structural": "This row belongs to the structural zero surface.",
     "calibration": "This row belongs to the implemented P-driven electroweak closure surface.",
+    "candidate_trunk_compare_only": "This row belongs to the P-root candidate compare surface.",
     "secondary_quantitative": "This row belongs to a quantitative secondary branch with its own proof surface.",
+    "declared_surface_theorem": "This row belongs to a theorem surface on declared running and matching conventions.",
+    "target_anchored_witness_no_go_boundary": "This row belongs to a target-anchored witness with a corpus-limited no-go boundary.",
     "selected_class_theorem": "This row belongs to a theorem-grade closure on the public quark frame class selected by P.",
-    "continuation": "This row belongs to a declared continuation or witness surface rather than a theorem-grade public output.",
+    "continuation": "This row belongs to a declared continuation or witness surface outside theorem-grade public output.",
     "simulation_dependent": "This row is closed out-of-scope until a backend bundle and publication-grade systematics exist.",
 }
 
@@ -183,18 +195,17 @@ LANES: List[Dict[str, Any]] = [
     {
         "key": "d10",
         "title": "Electroweak Closure Surface",
-        "summary": "This lane starts from the shared pixel ratio P, builds the electroweak running family, and emits the public W/Z mass surface together with the electromagnetic closure lane.",
-        "takeaway": "This lane uses the selected pixel ratio P to organize the electroweak sector. The W and Z rows are public outputs on this surface, while the low-energy electromagnetic closure remains a separate frontier.",
+        "summary": "This lane starts from the shared pixel ratio P, builds the electroweak running family, and records the W/Z comparison surface together with the electromagnetic endpoint lane.",
+        "takeaway": "This lane uses the selected pixel ratio P to organize the electroweak sector. The W and Z rows are comparison outputs. Low-energy electromagnetic closure is a separate frontier.",
         "logic": (
-            "From P the code builds the unification scale, solves the shared coupling constraint, gets the "
+            "From P the calculation builds the unification scale, solves the shared coupling constraint, gets the "
             "electroweak scale, runs the couplings to the Z scale, and emits the source basis that feeds the "
-            "mass chart. The W/Z theorem sits on that source trunk. The electromagnetic side is tracked "
-            "separately as an outer/inner closure problem for the same pixel. The running-family anchor at the "
-            "Z scale is a consistency surface, not the final zero-momentum closure by itself. The frozen W/Z pair "
-            "sits beneath the same source trunk as compare-only validation."
+            "mass chart. The W/Z rows sit on that source trunk as compare-only validation. The electromagnetic "
+            "side is tracked separately as an outer/inner closure problem for the same pixel. The running-family "
+            "anchor at the Z scale is a consistency surface outside final zero-momentum closure."
         ),
-        "tasks_text": "Frontier statement: this trunk fixes the W/Z mass lane, while the remaining electromagnetic frontier is the direct zero-momentum closure for the same pixel.",
-        "prediction_surface": "P-driven electroweak running family plus public W/Z mass lane. The low-energy electromagnetic row is tracked separately as a closure problem for the same pixel.",
+        "tasks_text": "Frontier statement: this trunk records the W/Z comparison lane. The electromagnetic frontier is the direct zero-momentum closure for the same pixel.",
+        "prediction_surface": "P-driven electroweak running family plus W/Z comparison lane. The low-energy electromagnetic row is tracked separately as a closure problem for the same pixel.",
         "particles": ["w_boson", "z_boson"],
         "tasks": [
             "particles.calibration.02-separate-p-resolution-from-d10-transport-mismatch",
@@ -203,33 +214,28 @@ LANES: List[Dict[str, Any]] = [
     },
     {
         "key": "d11",
-        "title": "D11 Higgs/Top Split Theorem",
-        "summary": "The D11 lane closes as one source-only split theorem on the declared D10/D11 running, matching, and threshold surface, while the old one-scalar seed remains only as a lower-rank fixed-ray branch.",
-        "takeaway": "The live electroweak theorem emits the exact Higgs row and a companion top coordinate from the forward repair tuple and the declared Jacobian surface.",
+        "title": "Higgs/Top Split Theorem",
+        "summary": "The Higgs/top lane closes as one source-only split theorem on the declared running, matching, and threshold surface. The one-scalar seed is a lower-rank fixed-ray branch.",
+        "takeaway": "The electroweak theorem emits the exact Higgs row and a companion top coordinate from the forward repair tuple and the declared readout surface.",
         "logic": (
-            "Take the D10 substrate, impose the critical-surface condition, then use the synchronized "
-            "transport core to emit the forward D10 repair tuple `(eta_source, beta_EW, lambda_EW, "
-            "tau2_tree_exact, delta_n_tree_exact)` on the declared running, matching, and threshold "
-            "surface. The fixed-ray certificate still records `pi_y = pi_lambda`, `eta_HT = 0`, and "
-            "`w_HT = 0` on the old one-scalar branch. The live theorem instead emits "
-            "`rho_HT = log(1 + tau2_tree_exact)` together with source-only residual selectors for the "
-            "top and Higgs channels, then reads out `m_t = 172.3523553288312 GeV` and "
-            "`m_H = 125.1995304097179 GeV` by the declared D11 Jacobian. The compare-only exact pair "
-            "stays on disk only as a validation surface. The exact public running-top row is also "
-            "carried by the selected-class quark theorem. The auxiliary direct-top PDG row is "
-            "compare-only; `#207` is closed as a current-corpus no-go by "
-            "`code/particles/runs/calibration/direct_top_bridge_contract.json`."
+            "Take the electroweak substrate, impose the critical-surface condition, then use the synchronized "
+            "transport core on the declared running, matching, and threshold surface. The fixed-ray certificate "
+            "is a lower-rank one-scalar branch. The split theorem emits a shared Higgs/top scalar together "
+            "with source-only residual selectors for the top and Higgs channels, then reads out "
+            "`m_t = 172.3523553288312 GeV` and `m_H = 125.1995304097179 GeV`. The compare-only exact pair "
+            "is a validation surface. The exact public running-top row is also carried by the selected-class "
+            "quark theorem. The auxiliary direct-top PDG row is compare-only with corpus-limited no-go status."
         ),
-        "tasks_text": "Ledger state: the exact source-only electroweak Higgs theorem is closed on the declared running, matching, and threshold surface; the one-scalar seed stays on disk as a lower-rank fixed-ray branch; the exact inverse slice remains compare-only; the direct-top auxiliary codomain is closed as a current-corpus no-go under `#207`.",
-        "prediction_surface": "Electroweak split-theorem surface with an exact Higgs row and a companion top coordinate on the declared Jacobian surface.",
+        "tasks_text": "Ledger state: the exact source-only electroweak Higgs theorem is closed on the declared running, matching, and threshold surface; the one-scalar seed is a lower-rank fixed-ray branch; the exact inverse slice is compare-only; the direct-top auxiliary conversion has corpus-limited no-go status.",
+        "prediction_surface": "Electroweak split-theorem surface with an exact Higgs row and a companion top coordinate on the declared readout surface.",
         "particles": ["higgs"],
         "tasks": [],
     },
     {
         "key": "leptons",
         "title": "Charged Leptons",
-        "summary": "The charged-lepton lane contains an exact same-family readout on the fixed ordered carrier, the live same-label `q_e` readback, a source-side determinant character `S_M` for a fixed formal source exponent vector, a conditional determinant-line lift on theorem-grade physical charged data, and an algebraic charged-mass readout from theorem-grade `A_ch(P)`.",
-        "takeaway": "The theorem surface contains the exact same-family witness, the live same-label `q_e` readback, the source-side determinant character for a fixed formal source exponent vector, the conditional determinant-line lift, and the downstream algebraic mass readout. Issue #201 is closed as a current-corpus no-go because the live corpus does not emit the sector-isolated trace-lift attachment `3 mu(r) = sum_e M_e^ch log q_e(r)`, equivalently zero determinant-normalization defect.",
+        "summary": "The charged-lepton lane contains an exact same-family readout, a source-side determinant character, a conditional determinant-line lift on theorem-grade physical charged data, and an algebraic charged-mass readout once the absolute anchor is supplied.",
+        "takeaway": "The theorem surface contains the exact same-family witness, the source-side determinant character, the conditional determinant-line lift, and the downstream algebraic mass readout. The available corpus does not emit the sector-isolated trace-lift attachment, so the absolute-mass row has corpus-limited no-go status.",
         "logic": (
             "The lane starts from the ordered charged package, proves that the realized support is a one-dimensional "
             "linear subray, exposes the canonical quadratic support-extension direction, maps that into the charged "
@@ -237,55 +243,48 @@ LANES: List[Dict[str, Any]] = [
             "primitive as a weighted midpoint-defect invariant, and then uses the endpoint-ratio breaker for sigma. "
             "On the fixed ordered three-point family, the exact same-family quadratic theorem closes the readout to one exact charged triple on that scope. "
             "The theorem-facing charged absolute lane contains a conditional determinant-line lift on theorem-grade physical charged data: "
-            "`mu_phys(Y_e) = (1/3) * log(det(Y_e))`, together with the canonical uncentered lift and determinant-line section. "
-            "Once theorem-grade `A_ch(P)` is given, the charged absolute scale and the charged mass triple are algebraic readouts. "
-            "The live same-label `q_e` readback supplies a populated source-side determinant character for each fixed formal source exponent vector. "
-            "The missing reopen object is the sector-isolated trace-lift attachment / determinant-normalization identity "
-            "`3 mu(r) = sum_e M_e^ch log q_e(r)` on the charged determinant channel, beneath the broader D10 landing to the charged determinant line."
+            "mean log determinant, together with the canonical uncentered lift and determinant-line section. "
+            "Once theorem-grade absolute charged data are supplied, the charged absolute scale and the charged mass triple are algebraic readouts. "
+            "The populated source-side determinant character exists for each fixed formal source exponent vector. "
+            "The required closure object is the sector-isolated trace-lift attachment on the charged determinant channel."
         ),
-        "tasks_text": "Frontier statement: the same-family witness, the live same-label `q_e` readback, the source-side determinant character for a fixed formal source exponent vector, the conditional determinant-line lift, and the algebraic mass readout are part of the charged theorem surface. #201 is closed as a current-corpus no-go; reopen only for a sector-isolated trace-lift attachment / zero-normalization identity `3 mu(r) = sum_e M_e^ch log q_e(r)`.",
-        "prediction_surface": "Charged theorem surface with an exact same-family witness, a conditional determinant-line lift on theorem-grade physical charged data, and an algebraic charged-mass readout from theorem-grade `A_ch(P)`.",
+        "tasks_text": "Frontier statement: the same-family witness, the source-side determinant character, the conditional determinant-line lift, and the algebraic mass readout are part of the charged theorem surface. The absolute-mass lane has corpus-limited no-go status. Reopening requires a sector-isolated trace-lift attachment.",
+        "prediction_surface": "Charged theorem surface with an exact same-family witness, a conditional determinant-line lift on theorem-grade physical charged data, and an algebraic charged-mass readout from theorem-grade absolute charged data.",
         "particles": ["electron", "muon", "tau"],
         "tasks": ["papers.compact.e.30e-derive-d10-to-charged-determinant-line-landing"],
     },
     {
         "key": "quarks",
         "title": "Quarks",
-        "summary": "The quark lane contains an exact official PDG 2025 API running-mass sextet on `current_family_only`, a restricted common-refinement transport-frame chain that emits sector-attached `Sigma_ud^phys`, the exact physical sigma datum, the same sextet, and explicit forward Yukawas `Y_u` and `Y_d` on its declared carrier, a separate internalized target-free mass bridge on the emitted D12 ray, and a closed selected-class public theorem on the physical quark frame class chosen by `P`.",
-        "takeaway": "The selected public physical quark frame class chosen by `P` carries the exact physical sigma datum, the exact PDG 2025 running-quark sextet, and explicit exact forward Yukawas `Y_u` and `Y_d`. This is selected-class closure only. It does not claim a global classification of all quark frame classes.",
+        "summary": "The quark lane contains an exact running-mass sextet, a restricted transport-frame chain, explicit forward Yukawas, a separate target-free mass bridge, and a closed selected-class public theorem on the physical quark frame class chosen by P.",
+        "takeaway": "The selected public physical quark frame class chosen by P carries the exact physical sigma datum, the exact PDG 2025 running-quark sextet, and explicit exact forward Yukawas. This is selected-class closure only. It does not claim a global classification of all quark frame classes.",
         "logic": (
             "The local quark path takes the shared flavor data, emits the quark sector mean split, assembles the "
-            "quark descent, builds the forward Yukawa matrices, and fixes the pure-B source-readback shell "
-            "`[-beta, 0, +beta]` on `B_ord = [-1, 0, 1]`. The even ordered-family surface is fixed by the mean split "
-            "and diagonal gap machinery. The maximal theorem-emitted package consists of the D12 mass ray "
-            "`D12_ud_mass_ray`, the negative selector closure `sigma_ref`, and the restricted-scope affine mean "
-            "package with `g_ch = 0.9231656602589082` on `shared_budget_only` and `(g_u, g_d) = "
-            "(0.7797392875757557, 0.12172551081512113)` on `current_family_only`. A separate target-free theorem "
-            "internalizes the light-quark overlap defect `Delta_ud_overlap = (1/6) * log(c_d / c_u)`, "
-            "equivalently `quark_d12_t1_value_law`, on the emitted D12 ray. The selected-sheet exact witness "
-            "reconstructs the six running quark values exactly on `current_family_only` against the official PDG 2025 API running-mass target surface, with the top coordinate taken from the PDG cross-section entry. A second restricted theorem "
-            "surface emits a sector-attached `Sigma_ud^phys` element on the explicit current-family common-refinement "
-            "transport-frame carrier, reconstructs the same sextet exactly on that carrier, and emits explicit exact "
-            "forward Yukawas `Y_u` and `Y_d`. A separate direct public descent theorem closes on the selected public "
-            "physical quark frame class chosen by `P`: diagonal rephasing is quotient-trivial on that selected class, "
-            "so the exact `Sigma_ud^phys` element and the exact sigma datum descend to target-free public data. The "
-            "affine mean law then emits `(g_u, g_d)` algebraically, and the exact forward construction emits the same "
-            "sextet together with explicit exact forward Yukawas `Y_u` and `Y_d`. The historical same-sheet selector "
-            "`sigma_ref` remains a lower-level object beneath that selected-class theorem. The theorem does not claim "
+            "quark descent, builds the forward Yukawa matrices, and fixes the ordered source-readback shell. The even "
+            "ordered-family surface is fixed by the mean split and diagonal gap machinery. The theorem-emitted package "
+            "contains the quark mass ray, the restricted-scope affine mean package, and a separate target-free theorem "
+            "for the light-quark overlap defect. The exact witness reconstructs the six running quark values exactly "
+            "against the official PDG 2025 running-mass target surface, with the top coordinate taken from the PDG "
+            "cross-section entry. A restricted theorem surface reconstructs the same sextet and emits explicit exact "
+            "forward Yukawas. A separate direct public descent theorem closes on the selected public physical quark "
+            "frame class chosen by P. Diagonal rephasing is quotient-trivial on that selected class, so the exact "
+            "physical sigma datum descends to target-free public data. The affine mean law then emits the quark means "
+            "algebraically, and the exact forward construction emits the same sextet together with explicit exact "
+            "forward Yukawas. The theorem does not claim "
             "a global classification of all quark frame classes."
         ),
-        "tasks_text": "Selected-class theorem statement: the public physical quark frame class chosen by `P` carries the exact physical sigma datum, the affine mean law emits `(g_u, g_d)` algebraically, and the exact forward construction emits the exact sextet together with explicit exact forward Yukawas `Y_u` and `Y_d`. Broader work concerns global classification or alternative upstream transfer routes, not a missing theorem on the selected class.",
-        "prediction_surface": "Public quark surface = theorem-grade exact sextet on the selected public physical quark frame class, explicit exact forward Yukawas on that selected class, the supporting `current_family_only` exact witness, the supporting restricted transport-frame exact chain, and the separate target-free D12 mass bridge on the emitted ray.",
+        "tasks_text": "Selected-class theorem statement: the public physical quark frame class chosen by P carries the exact physical sigma datum. The affine mean law emits the quark means algebraically, and the exact forward construction emits the exact sextet together with explicit exact forward Yukawas. Global classification and alternative transfer routes are separate work.",
+        "prediction_surface": "Public quark surface: theorem-grade exact sextet on the selected public physical quark frame class, explicit exact forward Yukawas on that selected class, supporting exact witness surfaces, and the separate target-free mass bridge on the emitted ray.",
         "particles": ["up_quark", "down_quark", "strange_quark", "charm_quark", "bottom_quark", "top_quark"],
         "tasks": [],
     },
     {
         "key": "neutrinos",
         "title": "Neutrinos",
-        "summary": "The neutrino lane closes the weighted-cycle PMNS/hierarchy branch and the bridge-rigid absolute family, with exact positive-segment adapters retained as diagnostic sidecars.",
+        "summary": "The neutrino lane closes the weighted-cycle mixing/hierarchy branch and the bridge-rigid absolute family, with exact positive-segment adapters retained as diagnostic sidecars.",
         "takeaway": "The weighted-cycle bridge-rigidity and absolute-attachment theorems emit one absolute neutrino family together with the PMNS and hierarchy observables. The positive-segment exact adapters sit below that theorem surface as compare-only diagnostics.",
         "logic": (
-            "The lane derives m_star = v^2 / mu_u from the D10 core, builds the family-response tensor, the "
+            "The lane derives the light-neutrino scale from the electroweak core, builds the family-response tensor, the "
             "Majorana holonomy lift, the pullback metric, the forward Majorana matrix, and the splitting/ordering "
             "bundle. The old selector-law branch is S3-isotropic and is ruled out for the physical "
             "atmospheric scale by the exact cap `max |Delta m^2| <= 8 a rho`. The repaired branch uses the "
@@ -312,17 +311,17 @@ LANES: List[Dict[str, Any]] = [
     {
         "key": "hadrons",
         "title": "Hadrons",
-        "summary": "The hadron lane is closed out-of-scope / computationally blocked: issues #153/#157 are not solved, and public masses require a working OPH backend export bundle with publication-complete systematics.",
-        "takeaway": "This lane depends on nonperturbative backend computation that is unavailable in the current local and Chrome-worker environment.",
+        "summary": "The hadron lane is closed out-of-scope / computationally blocked. Public masses require a working OPH backend export bundle with publication-complete systematics.",
+        "takeaway": "This lane depends on nonperturbative backend computation outside the local and Chrome-worker environment.",
         "logic": (
-            "The hadron path steps down from D10 and the local quark masses into Lambda_MSbar^(3), seeds the "
+            "The hadron path steps down from the electroweak and local quark masses into the strong scale, seeds the "
             "unquenched ensemble family, realizes deterministic cfg/source payload identifiers, attaches a fixed "
             "RHMC/HMC schedule shell and conditional execution receipt, then builds the stable-channel "
             "sequence population/evaluation shells and aggregates them into the ground-state readout surface. Numerical "
             "hadron masses require one production backend export bundle with publication-complete manifest provenance, real `pi_iso`, `N_iso_direct`, and `N_iso_exchange` arrays, the executed runtime receipt `(N_therm, N_sep)`, and then declared production continuum/volume/chiral/statistical systematics. "
             "The surrogate execution bridge is only a diagnostic proof that the schema closes; it is not a promotable hadron output surface."
         ),
-        "tasks_text": "Scope closure: #153/#157 are closed out-of-scope, not solved. Reopen only when a GLORB/Echosahedron-class OPH backend emits real correlator arrays and published statistical plus continuum/volume/chiral systematics on the seeded 2+1 QED-off stable-channel branch.",
+        "tasks_text": "Scope closure: the hadron backend lane is out-of-scope and computationally blocked. Reopening requires a GLORB/Echosahedron-class OPH backend with real correlator arrays and published statistical plus continuum/volume/chiral systematics on the seeded stable-channel branch.",
         "prediction_surface": "Closed-out-of-scope stable-channel hadron shell; public hadron rows are withheld because this lane requires a real backend bundle and publication-grade systematics.",
         "particles": ["proton", "neutron", "neutral_pion", "rho_770_0"],
         "tasks": [
@@ -710,6 +709,36 @@ def _format_exact_output(entry: Dict[str, Any]) -> str:
     return "n/a"
 
 
+def public_exact_surface(row: Dict[str, Any], exact_entry: Dict[str, Any]) -> str:
+    particle_id = row["particle_id"]
+    if particle_id in {"w_boson", "z_boson"}:
+        return "compare-only exact sidecar"
+    if particle_id == "higgs":
+        return "declared electroweak Higgs/top theorem surface"
+    if particle_id in {"electron", "muon", "tau"}:
+        return "target-anchored same-family witness"
+    if particle_id.endswith("_quark"):
+        return "selected-class exact quark theorem"
+    if particle_id.endswith("_neutrino"):
+        return "weighted-cycle absolute neutrino theorem"
+    return STATUS_EXPLAINER.get(row["status"], "tracked particle row")
+
+
+def public_exact_caveat(row: Dict[str, Any], exact_entry: Dict[str, Any]) -> str:
+    particle_id = row["particle_id"]
+    if particle_id in {"w_boson", "z_boson"}:
+        return "Compare-only frozen-adapter row. Live promotion requires the candidate P root, the Thomson endpoint, and the RG/matching certificate."
+    if particle_id == "higgs":
+        return "Exact Higgs row on the declared electroweak calibration surface. The companion top coordinate is carried by the same surface. The auxiliary direct-top average is compare-only."
+    if particle_id in {"electron", "muon", "tau"}:
+        return "Exact same-family witness. The charged-lepton absolute-mass lane has corpus-limited no-go status because the determinant-line attachment is absent."
+    if particle_id.endswith("_quark"):
+        return "Exact selected-class running quark row. The top coordinate uses the PDG cross-section mass convention. Global classification of all quark frame classes is outside this theorem."
+    if particle_id.endswith("_neutrino"):
+        return "Theorem-grade weighted-cycle absolute neutrino mass from the bridge-rigidity and absolute-attachment pair."
+    return STATUS_NEXT_STEP.get(row["status"], "")
+
+
 def particle_body(row: Dict[str, Any], exact_entry: Dict[str, Any] | None = None) -> List[str]:
     info = PARTICLE_INFO[row["particle_id"]]
     lines = [
@@ -719,10 +748,10 @@ def particle_body(row: Dict[str, Any], exact_entry: Dict[str, Any] | None = None
     if exact_entry is not None:
         lines.extend(
             [
-                f"Surface class: exact {exact_entry['exact_kind']} on {exact_entry['scope']}.",
+                f"Surface class: {public_exact_surface(row, exact_entry)}.",
                 f"OPH exact output: {_format_exact_output(exact_entry)}.",
                 f"Reference: {row['reference_display']}.",
-                f"Caveat: {exact_entry['note']}",
+                f"Caveat: {public_exact_caveat(row, exact_entry)}",
             ]
         )
     else:
@@ -905,7 +934,6 @@ def lane_panel_height(
     label_h = 28
     label_gap = 10
     section_gap = 20
-    task_gap = 28
 
     theorem_h = estimate_box_height(
         title=lane["summary"],
@@ -914,16 +942,13 @@ def lane_panel_height(
         title_size=20,
         body_size=15,
     )
-    if lane["tasks"]:
-        task_total_h = sum(task_card_height(tasks[task_id], inner_w) for task_id in lane["tasks"]) + task_gap * (len(lane["tasks"]) - 1)
-    else:
-        task_total_h = estimate_box_height(
-            title="Ledger blocker list",
-            body=[lane["tasks_text"]],
-            w=inner_w,
-            title_size=18,
-            body_size=15,
-        )
+    task_total_h = estimate_box_height(
+        title="Frontier status",
+        body=[lane["tasks_text"]],
+        w=inner_w,
+        title_size=18,
+        body_size=15,
+    )
     prediction_h = estimate_box_height(
         title="Prediction surface",
         body=[lane["prediction_surface"]],
@@ -973,7 +998,6 @@ def draw_lane_panel(
     label_h = 28
     label_gap = 10
     section_gap = 20
-    task_gap = 28
 
     theorem_h = estimate_box_height(
         title=lane["summary"],
@@ -982,18 +1006,13 @@ def draw_lane_panel(
         title_size=20,
         body_size=15,
     )
-    if lane["tasks"]:
-        task_heights = [task_card_height(tasks[task_id], inner_w) for task_id in lane["tasks"]]
-        task_total_h = sum(task_heights) + task_gap * (len(task_heights) - 1)
-    else:
-        task_heights = []
-        task_total_h = estimate_box_height(
-            title="Ledger blocker list",
-            body=[lane["tasks_text"]],
-            w=inner_w,
-            title_size=18,
-            body_size=15,
-        )
+    task_total_h = estimate_box_height(
+        title="Frontier status",
+        body=[lane["tasks_text"]],
+        w=inner_w,
+        title_size=18,
+        body_size=15,
+    )
     prediction_h = estimate_box_height(
         title="Prediction surface",
         body=[lane["prediction_surface"]],
@@ -1124,47 +1143,32 @@ def draw_lane_panel(
     )
     cursor += label_h + label_gap
 
-    if lane["tasks"]:
-        first_task_y = cursor
-        parts.append(draw_vertical_arrow(x + w / 2.0, theorem_y + theorem_h + 4, first_task_y - 6, color=COLORS["task_stroke"], dashed=True))
-        previous_bottom = None
-        for index, task_id in enumerate(lane["tasks"]):
-            task_y = cursor
-            task_markup, task_h = draw_task_card(tasks[task_id], inner_x, task_y, inner_w)
-            parts.append(task_markup)
-            if previous_bottom is not None:
-                parts.append(draw_vertical_arrow(x + w / 2.0, previous_bottom + 4, task_y - 6, color=COLORS["task_stroke"], dashed=True))
-            previous_bottom = task_y + task_h
-            cursor += task_h + task_gap
-        cursor -= task_gap
-        task_bottom = previous_bottom or first_task_y
-    else:
-        no_task_h = estimate_box_height(
-            title="Ledger blocker list",
-            body=[lane["tasks_text"]],
+    no_task_h = estimate_box_height(
+        title="Frontier status",
+        body=[lane["tasks_text"]],
+        w=inner_w,
+        title_size=18,
+        body_size=15,
+    )
+    parts.append(draw_vertical_arrow(x + w / 2.0, theorem_y + theorem_h + 4, cursor - 6, color=COLORS["green_note_stroke"], dashed=True))
+    parts.append(
+        draw_box(
+            x=inner_x,
+            y=cursor,
             w=inner_w,
+            h=no_task_h,
+            title="Frontier status",
+            body=[lane["tasks_text"]],
+            fill=COLORS["green_note_fill"],
+            stroke=COLORS["green_note_stroke"],
             title_size=18,
             body_size=15,
+            title_fill=COLORS["green_note_text"],
+            body_fill=COLORS["green_note_body"],
         )
-        parts.append(draw_vertical_arrow(x + w / 2.0, theorem_y + theorem_h + 4, cursor - 6, color=COLORS["green_note_stroke"], dashed=True))
-        parts.append(
-            draw_box(
-                x=inner_x,
-                y=cursor,
-                w=inner_w,
-                h=no_task_h,
-                title="Ledger blocker list",
-                body=[lane["tasks_text"]],
-                fill=COLORS["green_note_fill"],
-                stroke=COLORS["green_note_stroke"],
-                title_size=18,
-                body_size=15,
-                title_fill=COLORS["green_note_text"],
-                body_fill=COLORS["green_note_body"],
-            )
-        )
-        task_bottom = cursor + no_task_h
-        cursor += no_task_h
+    )
+    task_bottom = cursor + no_task_h
+    cursor += no_task_h
 
     cursor += section_gap
     parts.append(
@@ -1322,7 +1326,7 @@ def build_svg(results: Dict[str, Any], tasks: Dict[str, Dict[str, Any]], exact_b
         "Start with the OPH axioms plus the shared closure variable P and the extra input surface used by the neutrino lane.",
         "Then read each lane from top to bottom: implemented theorem content, named frontier objects, prediction surface, and the particle rows shown on the public table.",
         f"The badge reports {closedish} of {total_rows} tracked rows above continuation / simulation status. Those rows sit on structural, electroweak-closure, secondary quantitative, or selected-class theorem surfaces.",
-        "The broader UV/BW premise boundary sits above the particle lanes. Three cap-pair extraction witnesses are explicit on disk. On the local-Gibbs pullback branch, the Markov/recovery side is latent, so the missing clause inside the fixed-local-collar Markov/faithfulness datum is `eventual_fixed_local_collar_common_floor_on_modular_transport_marginals`, the common eventual floor on the finitely many modular-transport marginals feeding the faithful modular-defect term, followed by ordered null cut-pair rigidity.",
+        "The broader geometric-premise boundary sits above the particle lanes. Three cap-pair extraction witnesses are explicit. The open geometric clause concerns a common floor for the finitely many modular-transport marginals, followed by ordered null cut-pair rigidity.",
     ]
     scaffold_h = estimate_box_height(
         title="How to read the mass derivation chart",

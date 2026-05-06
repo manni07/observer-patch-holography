@@ -120,7 +120,7 @@ D11_NOTE = (
     "cross-section entry `Q007TP4`. The auxiliary direct-top average "
     "`Q007TP = 172.56 +- 0.31 GeV` is a compare-only extraction codomain; "
     "[#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207) is closed as a "
-    "current-corpus no-go by `code/particles/runs/calibration/direct_top_bridge_contract.json`. "
+    "corpus-limited no-go by `code/particles/runs/calibration/direct_top_bridge_contract.json`. "
     "The old one-scalar seed `sigma_D11_HT = alpha_u * cos(2*theta_W0) / sqrt(pi)` remains on disk as the fixed-ray companion branch beneath this split theorem. "
     "The compare-only exact Higgs/top inverse slice remains a validation surface and does not define the predictive lane. "
     "The repo-wide exact public top row is also carried by the selected-class quark theorem."
@@ -188,8 +188,8 @@ CHARGED_CONTINUATION_NOTE = (
     "`current_family_only`, the live same-label `q_e` readback, a source-side determinant character "
     "`S_M = sum_e M_e^ch log q_e` for a fixed formal source multiplicity vector, a conditional determinant-line lift on theorem-grade physical charged data, "
     "and the downstream algebraic readout from theorem-grade `A_ch(P)`. [#201](https://github.com/FloatingPragma/observer-patch-holography/issues/201) "
-    "is closed as a current-corpus no-go by `code/particles/runs/leptons/charged_end_to_end_impossibility_theorem.json`: "
-    "the current corpus does not emit the sector-isolated trace-lift attachment / determinant-normalization identity "
+    "is closed as a corpus-limited no-go by `code/particles/runs/leptons/charged_end_to_end_impossibility_theorem.json`: "
+    "the available corpus does not emit the sector-isolated trace-lift attachment / determinant-normalization identity "
     "`3 mu(r) = sum_e M_e^ch log q_e(r)`, equivalently zero normalization defect "
     "`N_det(P) = s_det(P) - sum_e M_e^ch log q_e(P)`, beneath the broader D10 landing to `s_det(P)`."
 )
@@ -222,7 +222,7 @@ QUARK_CONTINUATION_NOTE = (
     "The D12 mass bridge is target-free on the emitted ray, and the sextet uses the PDG 2025 cross-section top entry. "
     "The auxiliary direct-top entry remains compare-only; "
     "[#207](https://github.com/FloatingPragma/observer-patch-holography/issues/207) is closed as a "
-    "current-corpus no-go by `code/particles/runs/calibration/direct_top_bridge_contract.json`. "
+    "corpus-limited no-go by `code/particles/runs/calibration/direct_top_bridge_contract.json`. "
     "Scope: selected-class closure only; no global classification of quark frame classes. "
     "Synchronization anchor: [#198](https://github.com/FloatingPragma/observer-patch-holography/issues/198)."
 )
@@ -239,8 +239,8 @@ NEUTRINO_CONTINUATION_NOTE = (
     "The absolute attachment theorem then emits `B_nu = P_nu * C_nu = 6.696004159297337`, "
     "`lambda_nu = (m_star_eV / q_mean^p_nu) * P_nu * C_nu = 1.7237014208357415`, and therefore one absolute family "
     "`m_i = lambda_nu * mhat_i`, `Delta m^2_ij = lambda_nu^2 * Delta_hat_ij`. "
-    "The proof-facing neutrino lane therefore runs through the emitted theorem pair rather than through the compare-only adapter or the bridge corridor. "
-    "The two-parameter exact adapter, the bridge corridor, and the reduced-correction candidate audit remain on disk only as diagnostic surfaces beneath the theorem lane."
+    "The proof-facing neutrino lane uses the emitted theorem pair. The compare-only adapter, bridge corridor, "
+    "and reduced-correction candidate audit remain on disk as diagnostic surfaces beneath the theorem lane."
 )
 HADRON_CONTINUATION_NOTE = (
     "Rows are suppressed by default because hadrons are closed out-of-scope / computationally blocked on the current branch rather than paper-derived outputs. Issues #153/#157 are closed as not planned, not solved. The active hadron scaffold path is `derive_lambda_msbar_descendant.py -> "
@@ -457,13 +457,31 @@ def _deprogress_text(text: str) -> str:
         "already-emitted": "emitted",
         "already schedule-independent": "schedule-independent",
         "already downstream of": "downstream of",
+        "already used": "used",
+        "now exist": "exist",
+        "now explicit": "explicit",
         "now exactly checked": "checked explicitly",
         "now integrated": "integrated",
         "now gives": "gives",
+        "current-corpus": "corpus-limited",
+        "current corpus": "available corpus",
+        "The current corpus": "The available corpus",
+        "already emits": "emits",
+        "not yet": "not",
     }
     for source, target in replacements.items():
         text = text.replace(source, target)
     return text
+
+
+def _deprogress_payload(value: Any) -> Any:
+    if isinstance(value, str):
+        return _deprogress_text(value)
+    if isinstance(value, list):
+        return [_deprogress_payload(item) for item in value]
+    if isinstance(value, dict):
+        return {key: _deprogress_payload(item) for key, item in value.items()}
+    return value
 
 
 def format_gev(value: Optional[float]) -> str:
@@ -1070,23 +1088,23 @@ def build_majorana_phase_surface_rows(surface_state: Dict[str, Any]) -> List[Dic
 
     if theorem is None:
         alpha21_note = (
-            "Still absent on the current public surface, not declared unphysical. "
-            "The weighted-cycle branch already emits PMNS-type observables, masses, and splittings, "
-            "but no declared public Majorana readout artifact is available yet."
+            "Absent on the public surface, with no declaration of unphysical status. "
+            "The weighted-cycle branch emits PMNS-type observables, masses, and splittings, "
+            "with no declared public Majorana readout artifact."
         )
         alpha31_note = "Same current boundary as `alpha21^(Maj)`."
     else:
         blocker = str(
             theorem.get("public_promotion_blocker")
-            or "The repaired weighted-cycle branch has not yet been represented explicitly on the closed shared basis for public Majorana promotion."
+            or "The repaired weighted-cycle branch lacks an explicit representation on the closed shared basis for public Majorana promotion."
         )
         alpha21_note = (
-            "Still absent on the current public surface, not declared unphysical. "
+            "Absent on the public surface, with no declaration of unphysical status. "
             "A canonical Takagi readout candidate exists on the repaired weighted-cycle matrix, "
-            f"but public promotion remains open. {blocker}"
+            f"with public promotion open. {blocker}"
         )
         alpha31_note = (
-            "Same current boundary as `alpha21^(Maj)`: still absent on the current public surface while the weighted-cycle "
+            "Same boundary as `alpha21^(Maj)`: absent on the public surface while the weighted-cycle "
             f"candidate remains below the public-promotion blocker. {blocker}"
         )
 
@@ -1209,7 +1227,7 @@ def build_premise_boundaries() -> Dict[str, Any]:
             NEUTRINO_LAMBDA_BRIDGE_CANDIDATE
         )
     return {
-        "uv_bw_internalization": uv_boundary,
+        "uv_bw_internalization": _deprogress_payload(uv_boundary),
     }
 
 

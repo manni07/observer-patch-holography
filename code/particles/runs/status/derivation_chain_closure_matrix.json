@@ -15,18 +15,18 @@
     "hardware_gated_chains": [
       "hadrons"
     ],
-    "policy": "Do not promote candidate, compare-only, witness-only, current-corpus no-go, or hardware-gated chains as closed theorem predictions.",
+    "policy": "Do not promote candidate, compare-only, witness-only, corpus-limited no-go, or hardware-gated chains as closed theorem predictions.",
     "remaining_nonclosed_chains": [
       "p_closure_root",
       "electroweak_wz"
     ]
   },
-  "generated_utc": "2026-05-06T04:24:20Z",
+  "generated_utc": "2026-05-06T04:53:47Z",
   "particle_five_gates": {
     "153": {
       "chrome_workers": "do_not_use_for_backend_execution",
       "closable_now": true,
-      "close_reason": "Current environment lacks a working OPH hadron backend; reopen only when GLORB/Echosahedron-class backend output and production systematics exist.",
+      "close_reason": "The local environment lacks a working OPH hadron backend; reopen only when GLORB/Echosahedron-class backend output and production systematics exist.",
       "closed_as_out_of_scope": true,
       "issue": 153,
       "local_next_artifact": "particles/runs/hadron/ward_projected_spectral_measure_contract.json",
@@ -210,8 +210,8 @@
         153,
         157
       ],
-      "closure_reason": "The current environment has no working OPH hadron backend; local surrogate code and Chrome workers cannot promote hadron predictions.",
-      "next_artifact": "none in current scope; reopen only when a GLORB/Echosahedron-class OPH backend emits production hadron output and systematics",
+      "closure_reason": "The local environment has no working OPH hadron backend; local surrogate code and Chrome workers cannot promote hadron predictions.",
+      "next_artifact": "none in local scope; reopen only when a GLORB/Echosahedron-class OPH backend emits production hadron output and systematics",
       "open_gates": [],
       "outputs": {},
       "promotable": false,
@@ -226,6 +226,6 @@
   "status": "executable_nonhadron_chain_matrix_emitted",
   "worker_policy": {
     "chrome_pro_workers_needed_now": false,
-    "reason": "Hadron issues #153/#157 are closed out-of-scope until OPH hadron hardware exists; the remaining in-scope open P/electroweak chains need local theorem packets before worker audit is meaningful. The charged absolute-anchor, quark global-classification, and direct-top auxiliary-codomain lanes are already closed as current-corpus no-go boundaries."
+    "reason": "Hadron issues #153/#157 are closed out-of-scope pending OPH hadron hardware; the remaining in-scope open P/electroweak chains need local theorem packets before worker audit is meaningful. The charged absolute-anchor, quark global-classification, and direct-top auxiliary-codomain lanes have corpus-limited no-go boundaries."
   }
 }

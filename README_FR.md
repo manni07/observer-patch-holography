@@ -100,21 +100,20 @@ Les papiers contiennent aussi les dérivations structurelles du Modèle Standard
 ainsi qu'une famille neutrino, qui n'apparaît pas dans ce tableau faute de ligne de comparaison
 PDG/NIST directe à un seul nombre.
 
-La surface particules courante porte aussi des valeurs `W/Z` en comparaison seule
+La surface particules porte aussi des valeurs `W/Z` en comparaison seule
 `80.377 GeV` et `91.18797809193725 GeV`, une valeur Higgs
 `m_H = 125.1995304097179 GeV` et une valeur top sélectionnée
-`m_t = 172.35235532883115 GeV` sur le codomaine section efficace `Q007TP4`.
-La ligne top directe auxiliaire `Q007TP` reste en comparaison seule. Les masses
-des leptons chargés sont des témoins ancrés sur cible, pas des prédictions
-promues; l'issue #201 enregistre le no-go courant pour l'attachement manquant
-à la ligne de déterminant. La branche neutrino pondérée émet
+`m_t = 172.35235532883115 GeV` selon la convention PDG de masse top par section
+efficace. La ligne top directe auxiliaire reste en comparaison seule. Les
+masses des leptons chargés sont des témoins ancrés sur cible, hors du rang des
+prédictions promues. La branche neutrino pondérée émet
 `(0.017454720257976796, 0.019481987935919015, 0.05307522145074924) eV` sur sa
 branche déclarée. Les masses hadroniques demandent un backend hadronique OPH;
 elles ne sont pas de simples entrées de quarks dans un tableau de comparaison
-rapide. Les issues #153 et #157 sont fermées comme hors périmètre / bloquées
-computationnellement, non comme résolues; il faut les rouvrir seulement
-lorsqu'un backend hadronique OPH comme GLORB/Echosahedron produit des données
-spectrales et des systématiques de production.
+rapide. Les entrées de backend hadronique ont le statut hors périmètre /
+bloquées computationnellement. Leur réouverture demande un backend hadronique
+OPH comme GLORB/Echosahedron avec données spectrales et systématiques de
+production.
 
 **Pile de dérivation des particules**
 

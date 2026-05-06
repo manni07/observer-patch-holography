@@ -52,7 +52,7 @@ def _classify_entry(entry: dict[str, Any]) -> dict[str, Any]:
         convention_sensitivity = "inherits_declared_electroweak_surface"
     elif "target_anchored" in exact_kind:
         row_class = "target_anchored_witness"
-        target_use = "target_values_used_to_anchor_current_family_witness"
+        target_use = "target_values_used_to_anchor_family_witness"
         blind_status = "not_blind"
         convention_sensitivity = "not_promotable_until_source_attachment_closes"
     elif "selected_class" in exact_kind:
@@ -141,9 +141,9 @@ def build_payload() -> dict[str, Any]:
         "preregistered_blind_workflows": [
             {
                 "id": "new_quantity_pre_reference_lock",
-                "status": "protocol_emitted_not_yet_exercised",
+                "status": "protocol_emitted_unexercised",
                 "rule": (
-                    "For any future quantitative row not already used in construction, freeze the source artifacts, "
+                    "For any quantitative row outside construction inputs, freeze the source artifacts, "
                     "hash the runtime bundle, record allowed conventions, then fetch or reveal the external reference."
                 ),
                 "required_evidence": [
@@ -172,7 +172,7 @@ def build_payload() -> dict[str, Any]:
         "closure_gate": {
             "closable_now": False,
             "reason": (
-                "The row provenance ledger and blind workflow protocol now exist, but convention sensitivity "
+                "The row provenance ledger and blind workflow protocol exist, but convention sensitivity "
                 "is still a contract because #32 has not supplied the scheme/threshold interval certificate."
             ),
             "close_issue_when": [
@@ -195,7 +195,7 @@ def render_markdown(payload: dict[str, Any]) -> str:
         "## Closure Gate",
         "",
         f"- Status: `{payload['status']}`",
-        f"- Closable now: `{payload['closure_gate']['closable_now']}`",
+        f"- Closable: `{payload['closure_gate']['closable_now']}`",
         f"- Reason: {payload['closure_gate']['reason']}",
         "",
         "## Rows",

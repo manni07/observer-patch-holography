@@ -575,7 +575,7 @@ resolution is increased:
 
 $$3 \le N_g \le 5.$$
 
-A minimal admissible realization principle then picks the smallest viable realization. "Minimal admissible" means the smallest option that still satisfies the consistency tests already listed:
+A minimal admissible realization principle then picks the smallest viable realization. "Minimal admissible" means the smallest option that satisfies the listed consistency tests:
 
 $$\boxed{N_g = 3}$$
 
@@ -629,19 +629,19 @@ That picture has teeth. The model does not place particles on the stage and
 then ask whether they fit. It reads which particle types can exist from the way
 the algebra net closes on itself.
 
-### Where the Particle Story Stands
+### Particle Claim Tiers
 
-The particle picture can be told as one continuous line, but the current
-version has explicit stop signs. The framework fixes the Standard Model
+The particle picture can be told as one continuous line, with explicit claim
+tiers. The framework fixes the Standard Model
 quotient, the hypercharge lattice, and the generation-color counting. The same
 structure keeps the photon, gluons, and graviton on protected zero lines. From
-there the candidate P-closure trunk organizes the electroweak comparison
+there the candidate pixel-ratio trunk organizes the electroweak comparison
 surface, the Higgs-top surface, the selected-class running quark masses, and
-the weighted-cycle neutrino family. The weak-boson pair is still compare-only
-until the Thomson endpoint and RG/matching certificates close.
+the weighted-cycle neutrino family. The weak-boson pair is compare-only. Its
+live promotion requires the Thomson endpoint and RG/matching certificates.
 The charged-lepton absolute-mass lane, the stronger global quark-frame
-classification lane, and the auxiliary direct-top codomain are current-corpus
-no-go boundaries rather than solved derivations.
+classification lane, and the auxiliary direct-top conversion are no-go
+boundaries for the available derivation.
 
 ### How the Concrete Particle Rows Arise
 
@@ -652,21 +652,20 @@ labels of mass, spin, and helicity. This chapter supplies the realized gauge
 quotient, the hypercharge lattice, and the generation-color counting. Together
 they decide which charged excitations can exist and how they transform.
 
-Then comes the fixed-point closure. The current code emits a candidate local
-pixel ratio, not a promoted live prediction root. The electroweak sector remains
+Then comes the fixed-point closure. The calculation emits a candidate local
+pixel ratio outside the promoted live prediction tier. The electroweak sector is
 the cleanest comparison place because the data are sharp and hadronic clutter is
-weak, but the W and Z values are currently frozen-adapter checks. From there the
-same organized construction continues into the Higgs-top surface and is pushed
+weak. The W and Z values are frozen-adapter checks. From there the same
+organized construction continues into the Higgs-top surface and is pushed
 through the selected-class quark and weighted-cycle neutrino sectors.
 
 The fine-structure constant belongs here beside the weak sector, but the
-present candidate value is not yet the Thomson endpoint theorem. This is why
+candidate value is outside the Thomson endpoint theorem. This is why
 the later mass tables should not be read as disconnected tricks or as a
 uniformly closed spectrum. They are different claim tiers around one
 fixed-point closure program. Hadrons belong to the later strong-binding descent
-of the same picture, and in the current roadmap that descent waits for a real
-OPH hadron backend. Issues #153 and #157 are closed as out-of-scope /
-computationally blocked, not as solved derivations. Chapter 18 returns to the same local fixed point from the
+of the same picture, and that descent is work in progress because it requires a
+real OPH hadron backend. Chapter 18 returns to the same local fixed point from the
 outside-inside closure equation, which gives the whole particle sector an even
 tighter narrative spine.
 
@@ -838,13 +837,13 @@ Let's step back and see what the framework actually accounts for.
 **The zeros.** The photon and graviton masses are exactly zero. This is a symmetry-protected prediction. The photon's masslessness follows from U(1) gauge invariance being a genuine overlap redundancy; any mass would break the consistency of how charged patches glue together. Similarly, the graviton's masslessness follows from diffeomorphism invariance being the redundancy structure of bulk spacetime. Experimental and observational upper bounds are consistent with these predictions to extraordinary precision: the photon mass is constrained below ~10⁻¹⁸ eV, often summarized as ~27 orders of magnitude, and the graviton mass is constrained below ~10⁻²³ eV by gravitational-wave dispersion, often summarized as ~22 orders of magnitude.
 
 **The particle structure.** Section 14.14 gives the concrete structure. The
-framework fixes the massless carriers. The current particle surface carries a
+framework fixes the massless carriers. The particle surface carries a
 compare-only weak-boson pair, a candidate Thomson-limit fine-structure trunk, a
 Higgs-top surface, a selected-class six-quark running-mass sector with Yukawas,
 and one weighted-cycle neutrino family with definite masses and Majorana
 phases. It also marks charged-lepton absolute masses, global public quark-frame
-classification, and the auxiliary direct-top codomain as current-corpus no-go
-boundaries.
+classification, and the auxiliary direct-top conversion as no-go boundaries in
+the available derivation.
 
 The reason these numbers belong in one chapter is that the framework is trying
 to organize them with one local fixed-point structure. The same candidate pixel
@@ -857,14 +856,13 @@ constants, while keeping the open endpoint and matching gates visible.
 
 **Charge quantization.** All color-singlet particles have integer electric charge. No fractional charges like $\pm 1/3$ can exist outside hadrons. This follows from the global structure of the gauge group.
 
-**Gauge-mediated proton decay.** Gauge-mediated proton decay is forbidden. The gauge group is a product, not embedded in a larger simple group, so no leptoquark generators exist. Current experimental limits ($\tau_p > 10^{34}$ years) are consistent with this prediction.
+**Gauge-mediated proton decay.** Gauge-mediated proton decay is forbidden. The gauge group is a product group with no embedding in a larger simple group, so no leptoquark generators exist. Published experimental limits ($\tau_p > 10^{34}$ years) are consistent with this prediction.
 
 **Why hadrons are harder.** Quark masses are short-distance parameters.
 Hadrons are bound states. Their masses come from the nonperturbative dynamics
 of confined quarks and gluons, so they require a working OPH hadron backend,
-such as the GLORB/Echosahedron route, rather than reading off one more particle
-row. The current issue status for #153/#157 records that hardware gate, not a
-hadron-mass prediction.
+such as the GLORB/Echosahedron route. They cannot be read off as one more
+particle row. The hadron backend status records that hardware gate.
 
 ## 14.21 The Big Picture
 

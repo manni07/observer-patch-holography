@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the final current end-to-end particle prediction bundle."""
+"""Build the final end-to-end particle prediction bundle."""
 
 from __future__ import annotations
 
@@ -52,6 +52,10 @@ def _load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def _display_status(status: str) -> str:
+    return status.replace("current_corpus", "corpus_limited")
+
+
 def _prediction_entry(entry: dict[str, Any]) -> dict[str, Any]:
     if entry.get("mass_gev") is not None:
         value = float(entry["mass_gev"])
@@ -89,8 +93,8 @@ def build_payload() -> dict[str, Any]:
     return {
         "artifact": "oph_final_current_end_to_end_particle_predictions",
         "generated_utc": _now_utc(),
-        "scope": "current_nonhadron_particle_pipeline_with_hadrons_closed_out_of_scope",
-        "claim_status": "final_current_nonhadron_predictions_not_full_hadron_or_certified_P_root_release",
+        "scope": "nonhadron_particle_pipeline_with_hadrons_closed_out_of_scope",
+        "claim_status": "final_nonhadron_predictions_without_full_hadron_or_certified_P_root_release",
         "source_surfaces": {
             "p_trunk": "code/P_derivation/runtime/p_closure_trunk_current.json",
             "pipeline_status": "code/particles/runs/status/particle_pipeline_closure_status.json",
@@ -131,7 +135,7 @@ def build_payload() -> dict[str, Any]:
 
 def render_markdown(payload: dict[str, Any]) -> str:
     lines = [
-        "# Final Current End-to-End Particle Predictions",
+        "# Final End-to-End Particle Predictions",
         "",
         f"Generated: `{payload['generated_utc']}`",
         "",
@@ -147,12 +151,12 @@ def render_markdown(payload: dict[str, Any]) -> str:
         "",
         "## Particle-Five Gates",
         "",
-        "| Issue | State | Closable now | Local artifact | Worker policy |",
+        "| Issue | State | Closable | Local artifact | Worker policy |",
         "| --- | --- | --- | --- | --- |",
     ]
     for gate in payload["particle_five_issue_gates"]:
         lines.append(
-            f"| #{gate['issue']} | `{gate['state']}` | `{gate['closable_now']}` | "
+            f"| #{gate['issue']} | `{_display_status(gate['state'])}` | `{gate['closable_now']}` | "
             f"`{gate['local_next_artifact']}` | {gate['chrome_workers']} |"
         )
     lines.extend(
@@ -175,11 +179,11 @@ def render_markdown(payload: dict[str, Any]) -> str:
             "",
             "## Direct-Top Auxiliary Comparison",
             "",
-            f"- Current top coordinate: `{direct['current_top_coordinate_gev']} GeV` on `{direct['current_top_codomain']}`",
+            f"- Top theorem coordinate: `{direct['current_top_coordinate_gev']} GeV` on `{direct['current_top_codomain']}`",
             f"- Auxiliary direct-top coordinate: `{direct['auxiliary_direct_top_gev']} GeV` on `{direct['auxiliary_direct_top_codomain']}`",
             f"- Difference: `{direct['direct_minus_current_coordinate_gev']} GeV`",
             f"- Pull: `{direct['pull_in_combined_sigma']}` combined sigma",
-            f"- Bridge status: `{direct['bridge_status']}`",
+            f"- Bridge status: `{_display_status(direct['bridge_status'])}`",
             "",
             "## Hadrons",
             "",

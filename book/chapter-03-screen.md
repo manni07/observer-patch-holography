@@ -244,7 +244,7 @@ Not in a simple sense. Different patches represent different observers, or the s
 
 What creates the sense of time? The internal structure of the quantum state provides a natural flow: the **modular flow** from quantum statistical mechanics. For a thermal state, modular flow generates time evolution, and the thermal time principle provides an important interpretive-organizational guide.
 
-For now, "flow" only means an internal rule for ordering changes. Think of it
+Here, "flow" only means an internal rule for ordering changes. Think of it
 as the clock a subsystem inherits from its own state, not a clock imposed from
 outside. Chapter 11 returns to this slowly and gives the physics behind the
 phrase.

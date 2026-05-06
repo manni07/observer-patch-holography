@@ -102,12 +102,12 @@ Do not picture this as an ordinary arm twist. Human shoulders are the wrong
 prop for the lesson.
 
 Use a belt, a ribbon, or a plate attached to ribbons. Hold one end fixed and
-rotate the other end by 360 degrees. The belt now carries a twist that cannot be
+rotate the other end by 360 degrees. The belt carries a twist that cannot be
 removed while both ends keep the same orientation. Rotate the end by another
 360 degrees, and the doubled twist can be combed away without rotating the end
 again.
 
-The belt is not a spinor, but it shows the topology spinors obey. A 360-degree
+The belt is not a spinor. It shows the topology spinors obey. A 360-degree
 rotation lands on the other lift in the double cover. A 720-degree rotation
 returns to the starting lift.
 

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Build the single closure-status manifest for the particle pipeline.
 
-This is the simplified issue gate for the current pipeline: non-hadron particle
-predictions are finalized through the disposable runtime surface, while hadron
-production is closed out-of-scope until OPH backend hardware exists.
+This is the simplified issue gate for the particle pipeline: non-hadron
+particle predictions are finalized through the disposable runtime surface,
+while hadron production is closed out-of-scope pending OPH backend hardware.
 """
 
 from __future__ import annotations
@@ -63,6 +63,10 @@ def _artifact_status(path: Path, payload: dict[str, Any] | None) -> dict[str, An
     }
 
 
+def _display_status(status: str) -> str:
+    return status.replace("current_corpus", "corpus_limited")
+
+
 def _latest_nonhadron_predictions(exact_payload: dict[str, Any] | None) -> dict[str, dict[str, Any]]:
     if not exact_payload:
         return {}
@@ -105,13 +109,13 @@ def build_status() -> dict[str, Any]:
     return {
         "artifact": "oph_particle_pipeline_closure_status",
         "generated_utc": _now_utc(),
-        "purpose": "Single simplified closure gate for the current non-hadron particle pipeline.",
+        "purpose": "Single simplified closure gate for the non-hadron particle pipeline.",
         "scope": {
             "current_pipeline_scope": "nonhadron_particles_plus_candidate_P_root_metadata",
             "hadrons_in_current_local_scope": False,
             "hadron_scope_reason": (
                 "Production hadrons require a working OPH hardware backend such as GLORB/Echosahedron. "
-                "Issues #153 and #157 are closed as out-of-scope/computationally blocked for the current "
+                "Issues #153 and #157 are closed as out-of-scope/computationally blocked for the "
                 "pipeline; local surrogate code and Chrome workers are non-promoting."
             ),
             "chrome_workers_needed_now": False,
@@ -121,7 +125,7 @@ def build_status() -> dict[str, Any]:
             "default_runtime_root": "temp/particles_runtime",
             "source_repo": "reverse-engineering-reality/code",
             "simplification": (
-                "The current prediction pipeline is one disposable runtime surface plus this closure "
+                "The prediction pipeline is one disposable runtime surface plus this closure "
                 "manifest, with hadron promotion excluded by scope."
             ),
         },
@@ -174,7 +178,7 @@ def build_status() -> dict[str, Any]:
                 "requires_oph_hardware_backend": True,
                 "closed_as_out_of_scope": True,
                 "close_reason": (
-                    "Current environment lacks a working OPH hadron backend; reopen only when "
+                    "The local environment lacks a working OPH hadron backend; reopen only when "
                     "GLORB/Echosahedron-class backend output and production systematics exist."
                 ),
                 "chrome_workers": "do_not_use_for_backend_execution",
@@ -188,8 +192,8 @@ def build_status() -> dict[str, Any]:
                 "requires_oph_hardware_backend": True,
                 "closed_as_out_of_scope": True,
                 "close_reason": (
-                    "The compact/paper hadron branch is outside the current computational scope "
-                    "until a working OPH hadron backend emits the Ward-projected spectral measure."
+                    "The compact/paper hadron branch is outside the computational scope pending "
+                    "a working OPH hadron backend that emits the Ward-projected spectral measure."
                 ),
                 "chrome_workers": "do_not_use_for_backend_execution",
             },
@@ -268,19 +272,19 @@ def render_markdown(status: dict[str, Any]) -> str:
         "",
         "## Scope",
         "",
-        f"- Current scope: `{status['scope']['current_pipeline_scope']}`",
-        f"- Hadrons in current local scope: `{status['scope']['hadrons_in_current_local_scope']}`",
-        f"- Chrome workers needed now: `{status['scope']['chrome_workers_needed_now']}`",
+        f"- Scope: `{status['scope']['current_pipeline_scope']}`",
+        f"- Hadrons in local scope: `{status['scope']['hadrons_in_current_local_scope']}`",
+        f"- Chrome workers needed: `{status['scope']['chrome_workers_needed_now']}`",
         f"- Hadron scope reason: {status['scope']['hadron_scope_reason']}",
         "",
         "## Issue Gates",
         "",
-        "| Issue | State | Closable now | Local next artifact | Chrome policy |",
+        "| Issue | State | Closable | Local next artifact | Chrome policy |",
         "| --- | --- | --- | --- | --- |",
     ]
     for gate in status["issue_gates"]:
         lines.append(
-            f"| #{gate['issue']} | `{gate['state']}` | `{gate['closable_now']}` | "
+            f"| #{gate['issue']} | `{_display_status(gate['state'])}` | `{gate['closable_now']}` | "
             f"`{gate['local_next_artifact']}` | {gate['chrome_workers']} |"
         )
 

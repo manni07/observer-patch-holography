@@ -157,13 +157,13 @@ exactly where that comparison structure has to live.
 
 ### Why This Is Not "dS/CFT"
 
-When physicists say "de Sitter holography is unsolved," they typically mean: we don't have an AdS/CFT-like duality with a clean boundary CFT at infinity. The classic dS/CFT proposal puts a Euclidean CFT at future infinity, but this leads to notorious problems-potential non-unitarity, complex weights, and no clear operational access for any observer.
+When physicists say "de Sitter holography is unsolved," they typically mean: no AdS/CFT-like duality with a clean boundary CFT at infinity is available. The classic dS/CFT proposal puts a Euclidean CFT at future infinity. This leads to notorious problems: potential non-unitarity, complex weights, and no clear operational access for any observer.
 
-Our model takes a different path entirely. We're not trying to do "AdS/CFT but
-with positive Lambda." We're doing static-patch holography. The boundary is
-the observer's horizon, not future infinity. The construction asks for local
-algebras and overlap consistency, not one global CFT. Each observer has a
-horizon screen, and observer-dependence is embraced as fundamental.
+Our model takes a different path entirely. It uses static-patch holography with
+positive Lambda. The boundary is the observer's horizon, not future infinity.
+The construction asks for local algebras and overlap consistency, without one
+global CFT. Each observer has a horizon screen, and observer-dependence is
+embraced as fundamental.
 
 This is a fundamental shift in target. The "unsolved problem" of dS holography is about finding a global boundary theory at infinity. We solve a different problem: how do local observer patches, each bounded by a horizon, yield consistent physics?
 

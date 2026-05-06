@@ -53,13 +53,13 @@ and black-hole saturation is what turns that pressure into the familiar area law
 
 In 1993, Dutch physicist Gerard 't Hooft made a wild suggestion. He proposed that this isn't just true for black holes. It is true for everything.
 
-**The Holographic Principle**: The maximum information in any region of space is proportional to its surface area, not its volume.
+**The Holographic Principle**: The maximum information in any region of space is proportional to its surface area. Volume is the wrong counting variable.
 
 If the holographic principle is true, then the 3D world we experience is somehow encoded on 2D surfaces. The third dimension is an illusion-a convenient description of correlations on a boundary.
 
-Leonard Susskind developed these ideas further, connecting them to string theory. But the holographic principle remained vague-a principle, not a calculation.
+Leonard Susskind developed these ideas further, connecting them to string theory. The holographic principle still remained vague: a principle, without a calculation.
 
-Information capacity scales with area, not volume. The bulk seems three-dimensional, but all its information fits on a two-dimensional surface.
+Information capacity scales with area. The bulk seems three-dimensional, while its information fits on a two-dimensional surface.
 
 ## 8.3 The First-Principles Reframing: Boundaries Are Consistency Ledgers
 

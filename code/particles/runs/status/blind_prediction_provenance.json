@@ -7,7 +7,7 @@
       "at least one pre-reference workflow is exercised on a new or withheld output",
       "convention sensitivity intervals are quantified for public rows"
     ],
-    "reason": "The row provenance ledger and blind workflow protocol now exist, but convention sensitivity is still a contract because #32 has not supplied the scheme/threshold interval certificate."
+    "reason": "The row provenance ledger and blind workflow protocol exist, but convention sensitivity is still a contract because #32 has not supplied the scheme/threshold interval certificate."
   },
   "convention_sensitivity": {
     "endpoint_contract_status": "constructive_contract_emitted_not_endpoint_theorem",
@@ -27,7 +27,7 @@
     "obstruction_only_worker_result_allowed": true,
     "p_trunk_candidate_only": true
   },
-  "generated_utc": "2026-05-06T04:24:20Z",
+  "generated_utc": "2026-05-06T04:53:47Z",
   "github_issue": 234,
   "pipeline_inputs": {
     "P": 1.63094,
@@ -46,8 +46,8 @@
         "pre_reference_runtime_output",
         "post_reference_comparison_only_delta"
       ],
-      "rule": "For any future quantitative row not already used in construction, freeze the source artifacts, hash the runtime bundle, record allowed conventions, then fetch or reveal the external reference.",
-      "status": "protocol_emitted_not_yet_exercised"
+      "rule": "For any quantitative row outside construction inputs, freeze the source artifacts, hash the runtime bundle, record allowed conventions, then fetch or reveal the external reference.",
+      "status": "protocol_emitted_unexercised"
     },
     {
       "id": "convention_sensitivity_sweep",
@@ -163,7 +163,7 @@
       "scope": "current_family_only",
       "source_artifact": "code/particles/runs/leptons/lepton_current_family_exact_readout.json",
       "supporting_scope_closure_artifact": "code/particles/runs/leptons/lepton_current_family_affine_anchor_theorem.json",
-      "target_use": "target_values_used_to_anchor_current_family_witness",
+      "target_use": "target_values_used_to_anchor_family_witness",
       "unit": "GeV",
       "value": 0.0005109989499999994
     },
@@ -177,7 +177,7 @@
       "scope": "current_family_only",
       "source_artifact": "code/particles/runs/leptons/lepton_current_family_exact_readout.json",
       "supporting_scope_closure_artifact": "code/particles/runs/leptons/lepton_current_family_affine_anchor_theorem.json",
-      "target_use": "target_values_used_to_anchor_current_family_witness",
+      "target_use": "target_values_used_to_anchor_family_witness",
       "unit": "GeV",
       "value": 0.10565837550000004
     },
@@ -191,7 +191,7 @@
       "scope": "current_family_only",
       "source_artifact": "code/particles/runs/leptons/lepton_current_family_exact_readout.json",
       "supporting_scope_closure_artifact": "code/particles/runs/leptons/lepton_current_family_affine_anchor_theorem.json",
-      "target_use": "target_values_used_to_anchor_current_family_witness",
+      "target_use": "target_values_used_to_anchor_family_witness",
       "unit": "GeV",
       "value": 1.7769324651340912
     },

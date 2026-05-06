@@ -10,7 +10,7 @@
       ],
       "id": "electroweak-root-closure-bundle",
       "promotion_question": "Can one source-emitted map Delta_Th(P), with declared matching and interval bounds, certify the compressed P trunk as the live particle root without importing alpha(0)?",
-      "result": "Constructive result. The admissible endpoint object is now explicit: Delta_Th(P) must split into source lepton transport, a Ward-projected hadronic spectral density rho_had(s;P), a certified electroweak/scheme remainder, RG/matching certificates, quadrature bounds, and an interval-level fixed-point certificate. The local implementation target is P_derivation/runtime/thomson_endpoint_contract_current.json.",
+      "result": "Constructive result. The admissible endpoint object is explicit: Delta_Th(P) must split into source lepton transport, a Ward-projected hadronic spectral density rho_had(s;P), a certified electroweak/scheme remainder, RG/matching certificates, quadrature bounds, and an interval-level fixed-point certificate. The local implementation target is P_derivation/runtime/thomson_endpoint_contract_current.json.",
       "status": "constructive_endpoint_contract_emitted"
     },
     {
@@ -21,7 +21,7 @@
       ],
       "id": "spectrum-source-bundle",
       "promotion_question": "Is there one OPH excitation dictionary and sector-isolated trace-lift theorem that explains the charged affine anchor, quark selected-class boundary, and neutrino PMNS comparison surface without hidden target fitting?",
-      "result": "No promotion. Charged leptons are closed as a current-corpus no-go by the end-to-end impossibility theorem: the same-family witness and conditional algebraic readout remain, but no theorem-grade A_ch(P) is emitted. Quarks remain selected-class on f_P with global classification closed as a current-corpus no-go, and neutrino PMNS rows remain visible comparison-tension rows.",
+      "result": "No promotion. Charged leptons are closed as a corpus-limited no-go by the end-to-end impossibility theorem: the same-family witness and conditional algebraic readout remain, but no theorem-grade A_ch(P) is emitted. Quarks remain selected-class on f_P with global classification closed as a corpus-limited no-go, and neutrino PMNS rows remain visible comparison-tension rows.",
       "status": "closed_current_corpus_source_boundaries_emitted"
     },
     {
@@ -30,8 +30,8 @@
         "hadron.production-backend-systematics"
       ],
       "id": "qcd-thomson-backend-bundle",
-      "promotion_question": "Can the hadron production backend emit the rho_had(s;P) object and uncertainty budget needed by the Ward-projected Thomson endpoint, rather than leaving hadrons and alpha(0) as separate deferred gaps?",
-      "result": "Constructive result with a scope lock. The current stable-channel backend is not the endpoint object, and the real hadron backend is not locally runnable. The missing primitive remains production_ward_projected_hadronic_spectral_measure_export. Issues #153/#157 are closed out-of-scope/computationally blocked until OPH hardware exists, rather than assigned to Chrome workers or local surrogate code.",
+      "promotion_question": "Can the hadron production backend emit the rho_had(s;P) object and uncertainty budget needed by the Ward-projected Thomson endpoint with hadrons and alpha(0) handled in one closed packet?",
+      "result": "Constructive result with a scope lock. The stable-channel backend is outside the endpoint object, and the real hadron backend is outside local execution. The missing primitive remains production_ward_projected_hadronic_spectral_measure_export. Issues #153/#157 are closed out-of-scope/computationally blocked pending OPH hardware and outside Chrome workers or local surrogate code.",
       "status": "closed_out_of_scope_scope_lock_emitted"
     },
     {
@@ -40,7 +40,7 @@
       ],
       "id": "top-codomain-bridge-bundle",
       "promotion_question": "Can the exact top coordinate be mapped into the auxiliary direct-top extraction codomain without using Q007TP as a calibration input?",
-      "result": "No-go result. The exact top theorem row remains on Q007TP4. The auxiliary direct-top row Q007TP is compare-only because the current corpus emits no source-side extraction-response kernel into that codomain.",
+      "result": "No-go result. The exact top theorem row remains on Q007TP4. The auxiliary direct-top row Q007TP is compare-only because the available corpus emits no source-side extraction-response kernel into that codomain.",
       "status": "closed_current_corpus_codomain_no_go"
     },
     {
@@ -57,11 +57,11 @@
       ],
       "id": "particle-root-integration-gate",
       "promotion_question": "Do the returned packets jointly close the endpoint, matching, interval, and source-object requirements strongly enough to promote the compressed trunk into live particle builders?",
-      "result": "No promotion. The first wave now emits constructive next artifacts, so the compressed P trunk remains candidate/audit metadata until those artifacts are populated and certified.",
+      "result": "No promotion. The first wave emits constructive next artifacts, so the compressed P trunk remains candidate/audit metadata until those artifacts are populated and certified.",
       "status": "keep_candidate_with_constructive_next_artifacts"
     }
   ],
-  "generated_utc": "2026-05-06T04:24:20Z",
+  "generated_utc": "2026-05-06T04:53:47Z",
   "p_trunk": {
     "P": "1.63097210492078846050203640439",
     "alpha_inv": "136.994020662724205139718642793",
@@ -83,11 +83,11 @@
   "purpose": "Systematic claim-safe queue after the five-equation P-trunk simplification.",
   "rows": [
     {
-      "current_boundary": "The compressed trunk can organize the code path, but it is not a certified live particle root until the endpoint and interval-certificate gates close.",
+      "current_boundary": "The compressed trunk organizes the code path. It remains outside the certified live particle-root surface until the endpoint and interval-certificate gates close.",
       "github_issue": 224,
       "id": "pclosure.compressed-trunk-artifact",
       "lane": "P closure",
-      "next_action": "Keep emitting p_closure_trunk_current.json and use it only as audit metadata for now.",
+      "next_action": "Keep emitting p_closure_trunk_current.json and use it as audit metadata.",
       "status": "candidate_artifact",
       "target_surfaces": [
         "code/P_derivation",
@@ -96,7 +96,7 @@
       "title": "Make the five-equation P trunk the canonical audit artifact"
     },
     {
-      "current_boundary": "The current structured-running law is a continuation: lepton one-loop transport is implemented, while hadronic spectral transport, scheme matching, and interval error control are not theorem-grade.",
+      "current_boundary": "The structured-running law is a continuation: lepton one-loop transport is implemented, while hadronic spectral transport, scheme matching, and interval error control are not theorem-grade.",
       "github_issue": 223,
       "id": "d10.ward-projected-thomson-endpoint",
       "lane": "D10 electromagnetic endpoint",
@@ -109,7 +109,7 @@
       "title": "Close the Ward-projected U(1)_Q Thomson endpoint"
     },
     {
-      "current_boundary": "The D10 branch still uses declared running/matching conventions. The compressed P trunk makes this easier to see but does not prove those conventions from OPH.",
+      "current_boundary": "The D10 branch uses declared running/matching conventions. The compressed P trunk exposes that boundary without proving those conventions from OPH.",
       "github_issue": 32,
       "id": "d10.rg-matching-threshold-scheme",
       "lane": "D10 running and matching",
@@ -137,7 +137,7 @@
       "title": "Replace live particle P consumers with the certified P root"
     },
     {
-      "current_boundary": "No public charged-lepton values are emitted on the theorem lane. The current corpus does not prove the determinant-normalization / sector-isolated trace-lift identity beneath A_ch(P), and the impossibility packet rules out end-to-end charged closure from the present centered-data surface.",
+      "current_boundary": "No public charged-lepton values are emitted on the theorem lane. The available corpus does not prove the determinant-normalization / sector-isolated trace-lift identity beneath A_ch(P), and the impossibility packet rules out end-to-end charged closure from the present centered-data surface.",
       "github_issue": 201,
       "id": "charged.determinant-normalization-transport",
       "lane": "Charged leptons",
@@ -150,7 +150,7 @@
       "title": "Keep the P-to-charged affine anchor bridge scoped as a no-go"
     },
     {
-      "current_boundary": "The selected-class exact Yukawa theorem is live. The stronger class-uniform/global classification lane is closed as a current-corpus no-go because no source-emitted ambient public-frame classifier or quotient-intrinsic sigma law exists.",
+      "current_boundary": "The selected-class exact Yukawa theorem is live. The stronger class-uniform/global classification lane is closed as a corpus-limited no-go because no source-emitted ambient public-frame classifier or quotient-intrinsic sigma law exists.",
       "github_issue": 199,
       "id": "quark.selected-class-vs-global-classification",
       "lane": "Quarks",
@@ -176,7 +176,7 @@
       "title": "Keep neutrino theorem rows and comparison tension separated"
     },
     {
-      "current_boundary": "The exact top coordinate uses the PDG cross-section codomain Q007TP4. The auxiliary direct-top entry Q007TP is a separate extraction codomain and remains compare-only; the current corpus emits no extraction-response map or uncertainty-propagation certificate.",
+      "current_boundary": "The exact top coordinate uses the PDG cross-section codomain Q007TP4. The auxiliary direct-top entry Q007TP is a separate extraction codomain and remains compare-only; the available corpus emits no extraction-response map or uncertainty-propagation certificate.",
       "github_issue": 207,
       "id": "calibration.direct-top-bridge",
       "lane": "D11/top codomain",
@@ -189,7 +189,7 @@
       "title": "Bridge the exact top coordinate to the auxiliary direct-top PDG row"
     },
     {
-      "current_boundary": "The hadron lane is explicitly outside the current local pipeline. Issues #153 and #157 are closed as out-of-scope/computationally blocked, not solved, because there is no working production hadron backend here. A credible backend is hardware-gated on OPH hardware such as GLORB/Echosahedron rather than on local Python or Chrome workers.",
+      "current_boundary": "The hadron lane is explicitly outside the local pipeline. Issues #153 and #157 are closed as out-of-scope/computationally blocked because there is no working production hadron backend here. A credible backend is hardware-gated on OPH hardware such as GLORB/Echosahedron, outside local Python and Chrome workers.",
       "github_issue": 153,
       "id": "hadron.production-backend-systematics",
       "lane": "Hadrons",
