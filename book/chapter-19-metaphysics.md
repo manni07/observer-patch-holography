@@ -60,12 +60,12 @@ Here's a question that keeps physicists and philosophers up at night: Why does t
 The standard framing assumes laws are eternal Platonic truths, mathematical
 structures that exist independently of physical reality and somehow "govern"
 it. But then their specific form becomes inexplicable. Why should the
-low-energy fine structure constant land near $1/137$, more precisely at the
-2022 CODATA/NIST central value $\alpha^{-1}(0)=137.035999177$? Why three spatial
+low-energy fine structure constant land near $1/137$, more precisely at
+$\alpha^{-1}(0)=137.035999177(21)$? Why three spatial
 dimensions, not four or seven?
 
-The fine-structure lane does not treat the public Thomson-limit value as a
-solver input. It appears as a comparison target for the $P$ closure. The local
+The fine-structure lane treats the public Thomson-limit value as a fixed-point
+readout of the same local screen cell. The local
 pixel ratio $P=a_{\mathrm{cell}}/\ell_P^2$ is given two readings. From outside
 the encoded world, $P$ is the area of one screen cell in Planck units, sitting
 slightly above the exact golden-ratio balance point $\varphi$. From inside the

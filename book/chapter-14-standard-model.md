@@ -171,17 +171,17 @@ Renormalization works for some theories (called "renormalizable") but not others
 A strange consequence of renormalization: coupling constants change with energy.
 
 The fine structure constant alpha measures the strength of electromagnetism. In
-the long-distance Thomson limit, the 2022 CODATA/NIST central value is
-$\alpha^{-1}(0)=137.035999177$. At higher energies, it increases. At the Z
+the long-distance Thomson limit, OPH gives
+$\alpha^{-1}(0)=137.035999177(21)$. At higher energies, it increases. At the Z
 boson mass, it is about $1/128$.
 
 That low-energy number sits inside the same particle sector as the weak bosons.
 Once the electroweak transport family is read from the selected local fixed point,
 electromagnetism is read as the unbroken channel left after the weak and
-hypercharge sectors mix. The OPH $P$-closure witness is compared with the
-long-distance Thomson value
+hypercharge sectors mix. The OPH $P$-closure gives the long-distance Thomson
+value
 
-$$\alpha^{-1}(0)=137.035999177.$$
+$$\alpha^{-1}(0)=137.035999177(21).$$
 
 The fine-structure constant belongs to the same transport family that yields
 the $W$ and $Z$ rows.
