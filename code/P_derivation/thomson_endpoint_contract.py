@@ -32,11 +32,25 @@ def build_contract() -> dict[str, Any]:
         "status": "constructive_contract_emitted_not_endpoint_theorem",
         "promotion_allowed": False,
         "computed_package": "code/P_derivation/runtime/thomson_endpoint_package_current.json",
+        "blocking_artifacts": {
+            "screening_invariant_no_go": "code/P_derivation/runtime/screening_invariant_no_go_current.json",
+            "interval_certificate": "code/P_derivation/runtime/fine_structure_interval_certificate_current.json",
+            "residual_map_contract": "code/P_derivation/runtime/r_q_residual_contract_current.json",
+            "spectral_transport_validator": "code/P_derivation/thomson_spectral_transport.py",
+        },
         "worker_result_policy": {
             "obstruction_only_result_allowed": False,
             "required_if_primary_route_fails": (
                 "emit an implementation-ready replacement object, builder interface, schema, "
                 "certificate interface, or runnable local target"
+            ),
+        },
+        "no_go_results": {
+            "detuning_only_bypass": "closed_no_go",
+            "screening_scalar_from_current_invariants": "closed_no_go",
+            "reason": (
+                "The outer detuning coordinate and the current D10 invariant packet do not determine "
+                "the zero-momentum Ward-projected current-current spectral transport."
             ),
         },
         "endpoint_formula": {
@@ -86,6 +100,18 @@ def build_contract() -> dict[str, Any]:
                 ],
             },
             {
+                "id": "screening_invariant_no_go",
+                "kind": "non_identifiability_certificate",
+                "target_status": "current_source_invariant_surface_does_not_determine_c_Q",
+                "local_artifact": "code/P_derivation/runtime/screening_invariant_no_go_current.json",
+                "required_fields": [
+                    "source_packet_hash",
+                    "compare_only_targets",
+                    "lambda_family_witness",
+                    "candidate_failures",
+                ],
+            },
+            {
                 "id": "delta_ew_remainder",
                 "kind": "certificate_interface",
                 "target_status": "zero_identity_or_source_bound",
@@ -112,6 +138,7 @@ def build_contract() -> dict[str, Any]:
                 "id": "full_endpoint_interval_certificate",
                 "kind": "certificate_interface",
                 "target_status": "interval_existence_uniqueness_for_full_map",
+                "local_artifact": "code/P_derivation/runtime/fine_structure_interval_certificate_current.json",
                 "required_fields": [
                     "alpha_interval",
                     "G_interval_image",
@@ -123,12 +150,18 @@ def build_contract() -> dict[str, Any]:
         ],
         "local_next_steps": [
             "Use thomson_endpoint_package.py to compute the residual endpoint packet from the internal report.",
+            "Use screening_invariant_no_go.py to reject fitted c_Q and low-height invariant shortcuts.",
+            "Use thomson_endpoint_interval_certificate.py to emit the blocked Banach certificate and R_Q contract.",
             "Populate a source-emitted Ward-projected QCD screening and endpoint-remainder map matching that packet.",
             "Upgrade the interval certificate only after the endpoint builder uses source-emitted transport.",
         ],
         "forbidden_solver_inputs": [
             "measured_alpha_0",
             "CODATA_or_NIST_Thomson_endpoint",
+            "compare_alpha_inv",
+            "P_C_residual",
+            "S_required",
+            "c_Q_target",
             "free_quark_screened_ansatz_as_theorem_input",
             "charged_physical_values_imported_into_the_determinant_line",
         ],

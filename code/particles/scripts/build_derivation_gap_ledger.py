@@ -101,16 +101,20 @@ def build_gap_rows() -> list[dict[str, Any]]:
             "current_boundary": (
                 "The endpoint package fixes the target residual, but no OPH source theorem emits "
                 "the Ward-projected hadronic spectral measure, electroweak scheme remainder, or "
-                "interval certificate for the full map."
+                "interval certificate for the full map. The screening-invariant no-go rejects "
+                "fitted c_Q and detuning-only shortcuts from the current invariant packet."
             ),
             "next_action": (
                 "Emit a source-only residual map that matches the endpoint package, including "
                 "rho_had(s;P) or an equivalent Ward-projected spectral primitive, matching remainder, "
-                "and certified quadrature bounds."
+                "certified quadrature bounds, and the interval certificate for the final map."
             ),
             "target_surfaces": [
                 "code/P_derivation/THOMSON_TRANSPORT_THEOREMS.md",
                 "code/P_derivation/runtime/thomson_endpoint_contract_current.json",
+                "code/P_derivation/runtime/screening_invariant_no_go_current.json",
+                "code/P_derivation/runtime/fine_structure_interval_certificate_current.json",
+                "code/P_derivation/runtime/r_q_residual_contract_current.json",
                 "code/particles/hadron/ward_projected_spectral_measure.schema.json",
             ],
         },

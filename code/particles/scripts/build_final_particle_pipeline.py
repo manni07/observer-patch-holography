@@ -47,6 +47,16 @@ FINAL_PIPELINE_STEPS: tuple[PipelineStep, ...] = (
         "Refresh the computed conditional Thomson endpoint package.",
     ),
     PipelineStep(
+        "screening_invariant_no_go",
+        "P_derivation/screening_invariant_no_go.py",
+        "Refresh the screening-invariant non-identifiability certificate.",
+    ),
+    PipelineStep(
+        "fine_structure_interval_certificate",
+        "P_derivation/thomson_endpoint_interval_certificate.py",
+        "Refresh the blocked fine-structure interval certificate and R_Q contract.",
+    ),
+    PipelineStep(
         "rg_matching_threshold_contract",
         "P_derivation/rg_matching_threshold_contract.py",
         "Refresh the RG/matching/threshold contract.",

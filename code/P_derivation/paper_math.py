@@ -363,6 +363,47 @@ class PaperMathContext:
         charge_squared: Decimal,
         multiplicity: Decimal,
     ) -> Decimal:
+        """Closed-form one-loop transport kernel.
+
+        This evaluates
+
+            (2 N Q^2 / pi) int_0^1 x(1-x) log(1 + z x(1-x)) dx,
+
+        with z=q^2/m^2.  Writing a=z/4, the integral is
+
+            -5/18 + 1/(6a)
+            + ((2a-1) sqrt(1+a) asinh(sqrt(a))) / (6 a^(3/2)).
+
+        Decimal has no asinh primitive, so asinh(sqrt(a)) is evaluated as
+        log(sqrt(a) + sqrt(1+a)).
+        """
+        with localcontext() as ctx:
+            ctx.prec = self.work_precision
+            z = (q_scale * q_scale) / (mass * mass)
+            a = z / Decimal(4)
+            sqrt_a = a.sqrt()
+            sqrt_one_plus_a = (self.one + a).sqrt()
+            asinh_sqrt_a = (sqrt_a + sqrt_one_plus_a).ln()
+            integral = (
+                -Decimal(5) / Decimal(18)
+                + self.one / (Decimal(6) * a)
+                + (
+                    (Decimal(2) * a - self.one)
+                    * sqrt_one_plus_a
+                    * asinh_sqrt_a
+                    / (Decimal(6) * a * sqrt_a)
+                )
+            )
+            return +(Decimal(2) * multiplicity * charge_squared / self.pi * integral)
+
+    def fermion_transport_kernel_simpson_audit(
+        self,
+        q_scale: Decimal,
+        mass: Decimal,
+        charge_squared: Decimal,
+        multiplicity: Decimal,
+    ) -> Decimal:
+        """Legacy Simpson evaluator kept only for regression audits."""
         with localcontext() as ctx:
             ctx.prec = self.work_precision
             z = (q_scale * q_scale) / (mass * mass)
@@ -453,6 +494,10 @@ class PaperMathContext:
                 "quark_delta_alpha_inv_naive": +quark_naive,
                 "quark_delta_alpha_inv_screened": +quark_screened,
                 "total_delta_alpha_inv": +total,
+                "kernel_evaluation": (
+                    "closed_form_one_loop" if kernel == "exact_1loop" else "asymptotic_log_formula"
+                ),
+                "quadrature_error_bound": +(Decimal(0)) if kernel == "exact_1loop" else None,
             }
 
     def structured_thomson_running(self, d10: D10Point) -> dict[str, Any]:
