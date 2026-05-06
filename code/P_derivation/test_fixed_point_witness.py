@@ -4,12 +4,22 @@
 from __future__ import annotations
 
 from decimal import Decimal
+import json
+from pathlib import Path
 import unittest
 
 from alpha_gap_audit import build_alpha_gap_audit
 from emit_p_closure_trunk import build_p_closure_trunk
-from paper_math import PaperMathContext, build_contraction_certificate, build_fixed_point_witness, build_report
+from paper_math import (
+    PaperMathContext,
+    build_contraction_certificate,
+    build_fixed_point_witness,
+    build_report,
+)
 from transport_theorem_manifest import build_manifest
+
+
+RUNTIME_REPORT = Path(__file__).resolve().parent / "runtime" / "full_p_alpha_report_current.json"
 
 
 class FixedPointWitnessTests(unittest.TestCase):
@@ -58,6 +68,14 @@ class FixedPointWitnessTests(unittest.TestCase):
             report["promotion_gates"][0]["minimal_new_theorem"],
             "WardProjectedHadronicSpectralEmission_Q",
         )
+
+    def test_checked_in_full_report_current_has_exact_alpha_guard(self) -> None:
+        payload = json.loads(RUNTIME_REPORT.read_text(encoding="utf-8"))
+
+        self.assertEqual(payload["artifact"], "oph_p_alpha_fixed_point_report")
+        self.assertFalse(payload["promotion_allowed"])
+        self.assertFalse(payload["exact_alpha_promoted"])
+        self.assertFalse(payload["consumer_policy"]["hidden_external_alpha_allowed"])
 
     def test_witness_keeps_explicit_compare_value_out_of_solver_inputs(self) -> None:
         witness = build_fixed_point_witness(

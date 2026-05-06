@@ -14,16 +14,18 @@ SCRIPT = ROOT / "rg_matching_threshold_contract.py"
 OUTPUT = ROOT / "runtime" / "rg_matching_threshold_contract_current.json"
 
 
-def test_rg_matching_threshold_contract_is_constructive_and_nonpromoting() -> None:
+def test_rg_matching_threshold_contract_is_declared_and_nonpromoting() -> None:
     subprocess.run([sys.executable, str(SCRIPT)], check=True, cwd=ROOT)
 
     payload = json.loads(OUTPUT.read_text(encoding="utf-8"))
     assert payload["artifact"] == "oph_rg_matching_threshold_contract"
     assert payload["github_issue"] == 32
-    assert payload["status"] == "constructive_contract_emitted_not_rg_matching_theorem"
+    assert payload["status"] == "closed_declared_convention_contract_not_rg_matching_theorem"
     assert payload["promotion_allowed"] is False
+    assert payload["github_issue_state"] == "closed"
     assert payload["worker_result_policy"]["obstruction_only_result_allowed"] is False
-    assert payload["closure_gate"]["closable_now"] is False
+    assert payload["closure_gate"]["closable_now"] is True
+    assert payload["closure_gate"]["closed_as"] == "declared_convention_contract"
     object_ids = {item["id"] for item in payload["constructive_objects"]}
     assert object_ids == {
         "scheme_lock",

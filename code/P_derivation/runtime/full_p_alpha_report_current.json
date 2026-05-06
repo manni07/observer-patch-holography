@@ -2,6 +2,15 @@
   "alpha": "0.00729954516887664794921875",
   "alpha_fixed_point_residual": "0.00000000009352931661586697525717849181907607",
   "alpha_inv": "136.994835164621649457949994585787193262029",
+  "artifact": "oph_p_alpha_fixed_point_report",
+  "claim_boundary": "This report emits a reproducible P/alpha fixed-point candidate for the declared readout mode. It is not an exact fine-structure derivation: promotion requires a source-emitted Ward-projected Thomson endpoint map and a theorem-grade interval fixed-point certificate.",
+  "claim_status": "candidate_fixed_point_report_not_exact_alpha_derivation",
+  "consumer_policy": {
+    "default_thomson_endpoint_allowed": false,
+    "hidden_external_alpha_allowed": false,
+    "may_feed_compare_or_audit_surfaces": true,
+    "may_feed_live_particle_predictions": false
+  },
   "d10": {
     "alpha1_mz": "0.0168856675723846279186994816910360781893569",
     "alpha2_mz": "0.0337778141123933213698522438673291294896931",
@@ -17,6 +26,7 @@
     "sin2w_mz": "0.230735179912559707405874899471932136115457",
     "v": "0.0000000000000000201981141501497927823950387069326273326834"
   },
+  "exact_alpha_promoted": false,
   "god_equation_residual": "0.00000000000000000000000000000000000000000",
   "iterations": [
     {
@@ -224,6 +234,25 @@
   "p": "1.63097209569432901817967892561191884270169",
   "phi": "1.61803398874989484820458683436563811772031",
   "precision": 30,
+  "promotion_allowed": false,
+  "promotion_gates": [
+    {
+      "github_issue": 235,
+      "id": "source_spectral_measure_payload",
+      "minimal_new_theorem": "WardProjectedHadronicSpectralEmission_Q",
+      "required_status": "populated_source_spectral_measure_payload"
+    },
+    {
+      "github_issue": 235,
+      "id": "same_scheme_endpoint_remainder",
+      "required_status": "source_emitted_same_scheme_R_Q_of_P"
+    },
+    {
+      "github_issue": 235,
+      "id": "interval_fixed_point_certificate",
+      "required_status": "theorem_grade_interval_existence_uniqueness_certificate"
+    }
+  ],
   "source_anchor_alpha_inv": "128.308268045165213892552005990181778935450",
   "sqrt_pi": "1.77245385090551602729816748334114518279755",
   "structured_running": {

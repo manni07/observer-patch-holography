@@ -16,6 +16,7 @@ from pathlib import Path
 from typing import Any
 
 from thomson_spectral_transport import (
+    THEOREM_GRADE_REQUIRED_FIELDS,
     blocked_missing_source_transport,
     validate_source_transport_payload,
 )
@@ -211,15 +212,7 @@ def build_source_spectral_theorem(
             "schema": str(DEFAULT_SCHEMA.relative_to(ROOT)),
             "required_artifact": "oph_qcd_ward_projected_hadronic_spectral_measure",
             "required_transport_wrapper": "oph_source_ward_projected_thomson_transport",
-            "required_fields": [
-                "finite_volume_levels",
-                "ward_projected_residues",
-                "current_normalization",
-                "rho_had_or_measure",
-                "same_subtraction_as_a0",
-                "Delta_EW_zero_theorem_or_source_bound",
-                "fixed_point_self_map_and_uniqueness_certificate",
-            ],
+            "required_fields": list(THEOREM_GRADE_REQUIRED_FIELDS),
         },
         "current_corpus_obstruction": obstruction,
         "nonidentifiability_corollary": {

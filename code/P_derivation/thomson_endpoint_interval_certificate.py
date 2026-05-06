@@ -12,6 +12,7 @@ from typing import Any
 
 from interval_backend import DecimalIntervalBackend, Interval
 from paper_math import PaperMathContext, _dec, to_serializable
+from thomson_spectral_transport import validate_source_transport_payload
 
 
 DEFAULT_PACKAGE = Path(__file__).resolve().parent / "runtime" / "thomson_endpoint_package_current.json"
@@ -187,6 +188,54 @@ def build_interval_certificate(
         }
     )
     return certificate, r_q_contract
+
+
+def build_source_payload_interval_certificate(source_transport_payload: dict[str, Any]) -> dict[str, Any]:
+    """Build the source-only interval theorem certificate for a supplied payload.
+
+    Unlike ``build_interval_certificate``, this path does not take a CODATA or
+    compare-alpha interval.  The source payload must carry the endpoint image,
+    derivative bound, directed-rounding backend certificate, and fixed-point
+    enclosure.
+    """
+    validation = validate_source_transport_payload(source_transport_payload).to_json()
+    interval_certificate = validation.get("interval_certificate", {})
+    promotion_allowed = bool(validation["promotion_allowed"])
+    return to_serializable(
+        {
+            "artifact": "oph_source_fine_structure_interval_certificate",
+            "generated_utc": _now_utc(),
+            "github_issue": 235,
+            "status": (
+                "source_interval_theorem_closed_for_supplied_payload"
+                if promotion_allowed
+                else "blocked_source_interval_payload_incomplete"
+            ),
+            "promotion_allowed": promotion_allowed,
+            "external_inputs_used": False,
+            "codata_or_nist_input_used": False,
+            "source_payload_validation": validation,
+            "exact_interval_theorem": interval_certificate.get(
+                "theorem",
+                {
+                    "map": "G(P)=phi+sqrt(pi)/A_T(P)",
+                    "self_map_condition": "G(I_P) subset I_P",
+                    "uniqueness_condition": "sqrt(pi) * sup|A_T'(P)| / inf(A_T(I_P))^2 < 1",
+                },
+            ),
+            "certified_intervals": interval_certificate.get("certified_intervals"),
+            "bounds": interval_certificate.get("bounds"),
+            "conclusion": {
+                "exact_alpha_emitted_from_supplied_payload": promotion_allowed,
+                "reason": (
+                    "The supplied source payload carries a theorem-grade interval fixed-point "
+                    "certificate."
+                    if promotion_allowed
+                    else "Exact alpha still requires the populated source spectral measure payload and interval certificate fields."
+                ),
+            },
+        }
+    )
 
 
 def parse_args() -> argparse.Namespace:

@@ -11,7 +11,11 @@ external fine-structure comparison values out of the source path.
 from __future__ import annotations
 
 from dataclasses import dataclass
+from decimal import Decimal, InvalidOperation, localcontext
 from typing import Any
+
+from interval_backend import Interval
+from paper_math import decimal_pi
 
 
 FORBIDDEN_SOURCE_KEYS = {
@@ -31,19 +35,135 @@ FORBIDDEN_SOURCE_KEYS = {
     "required_transport_delta_alpha_inv",
 }
 
+SOURCE_SYSTEMATICS_BUDGETS = (
+    "statistical_budget",
+    "continuum_budget",
+    "finite_volume_budget",
+    "chiral_budget",
+    "current_matching_budget",
+    "quadrature_budget",
+    "endpoint_remainder_budget",
+)
+
+ENDPOINT_COMPONENT_INTERVALS = (
+    "a0_image",
+    "Delta_lep_image",
+    "Delta_had_image",
+    "Delta_EW_image",
+    "R_Q_image",
+)
+
+THEOREM_GRADE_REQUIRED_FIELDS = (
+    "artifact",
+    "source_only",
+    "source_family_id",
+    "current",
+    "scheme.same_subtraction_as_a0",
+    "scheme.scheme_id",
+    "scheme.normalization_convention",
+    "interval_backend.theorem_grade",
+    "interval_backend.directed_outward_rounding",
+    "interval_backend.library",
+    "interval_backend.certificate",
+    "p_interval",
+    "endpoint_map.alpha_inv_image",
+    "endpoint_map.derivative_abs_bound",
+    "endpoint_map.components.a0_image",
+    "endpoint_map.components.Delta_lep_image",
+    "endpoint_map.components.Delta_had_image",
+    "endpoint_map.components.Delta_EW_image",
+    "endpoint_map.components.R_Q_image",
+    "endpoint_map.transport_error_bound",
+    "fixed_point_certificate.G_image",
+    "fixed_point_certificate.contraction_kappa",
+    "source_measure.artifact",
+    "source_measure.finite_volume_levels",
+    "source_measure.ward_projected_residues",
+    "source_measure.current_normalization",
+    "source_measure.rho_had_or_measure",
+    "source_measure.transport_moment_certificate",
+    "source_measure.systematics.*.bound_interval",
+    "source_measure.guards",
+    "delta_EW.zero_theorem_or_source_bound",
+)
+
 
 @dataclass(frozen=True)
 class TransportValidation:
     status: str
     promotion_allowed: bool
     reasons: tuple[str, ...]
+    interval_certificate: dict[str, Any] | None = None
+    required_fields: tuple[str, ...] = THEOREM_GRADE_REQUIRED_FIELDS
 
     def to_json(self) -> dict[str, Any]:
-        return {
+        payload = {
             "status": self.status,
             "promotion_allowed": self.promotion_allowed,
             "reasons": list(self.reasons),
+            "required_fields": list(self.required_fields),
         }
+        if self.interval_certificate is not None:
+            payload["interval_certificate"] = self.interval_certificate
+        return payload
+
+
+def _dedupe(items: list[str]) -> tuple[str, ...]:
+    return tuple(dict.fromkeys(items))
+
+
+def _decimal_to_json(value: Decimal) -> str:
+    return format(value, "f")
+
+
+def _interval_to_json(value: Interval) -> dict[str, str]:
+    return {"lo": _decimal_to_json(value.lo), "hi": _decimal_to_json(value.hi)}
+
+
+def _parse_decimal(value: Any, field: str, reasons: list[str]) -> Decimal | None:
+    if value is None:
+        reasons.append(f"required_field_missing:{field}")
+        return None
+    try:
+        parsed = Decimal(str(value))
+    except (InvalidOperation, ValueError):
+        reasons.append(f"invalid_decimal:{field}")
+        return None
+    if not parsed.is_finite():
+        reasons.append(f"nonfinite_decimal:{field}")
+        return None
+    return parsed
+
+
+def _parse_nonnegative_decimal(value: Any, field: str, reasons: list[str]) -> Decimal | None:
+    parsed = _parse_decimal(value, field, reasons)
+    if parsed is not None and parsed < 0:
+        reasons.append(f"negative_decimal:{field}")
+    return parsed
+
+
+def _parse_interval(value: Any, field: str, reasons: list[str], *, positive: bool = False) -> Interval | None:
+    if not isinstance(value, dict):
+        reasons.append(f"required_interval_missing:{field}")
+        return None
+    if "lo" not in value or "hi" not in value:
+        reasons.append(f"required_interval_endpoint_missing:{field}")
+        return None
+    lo = _parse_decimal(value["lo"], f"{field}.lo", reasons)
+    hi = _parse_decimal(value["hi"], f"{field}.hi", reasons)
+    if lo is None or hi is None:
+        return None
+    if lo > hi:
+        reasons.append(f"invalid_interval_order:{field}")
+        return None
+    if positive and lo <= 0:
+        reasons.append(f"nonpositive_interval:{field}")
+        return None
+    return Interval(lo, hi)
+
+
+def _has_bound_interval(payload: Any) -> bool:
+    return isinstance(payload, dict) and isinstance(payload.get("bound_interval"), dict)
 
 
 def _walk_keys(payload: Any, prefix: str = "") -> set[str]:
@@ -64,6 +184,259 @@ def _walk_keys(payload: Any, prefix: str = "") -> set[str]:
 def source_payload_forbidden_keys(payload: dict[str, Any]) -> set[str]:
     keys = _walk_keys(payload)
     return {key for key in keys if key in FORBIDDEN_SOURCE_KEYS}
+
+
+def _validate_interval_backend(payload: dict[str, Any], reasons: list[str]) -> None:
+    backend = payload.get("interval_backend")
+    if not isinstance(backend, dict):
+        reasons.append("required_field_missing:interval_backend")
+        return
+
+    if backend.get("theorem_grade") is not True:
+        reasons.append("interval_backend_not_theorem_grade")
+    if backend.get("directed_outward_rounding") is not True:
+        reasons.append("interval_backend_not_directed_outward")
+
+    library = str(backend.get("library", "")).strip()
+    if not library:
+        reasons.append("required_field_missing:interval_backend.library")
+    elif library.lower() in {"decimal", "decimalintervalbackend", "decimal_interval_backend"}:
+        reasons.append("interval_backend_library_not_certified")
+
+    if not (backend.get("certificate") or backend.get("proof_artifact")):
+        reasons.append("required_field_missing:interval_backend.certificate")
+
+
+def _validate_source_measure(payload: dict[str, Any], reasons: list[str]) -> None:
+    measure = payload.get("source_measure") or payload.get("spectral_measure")
+    if not isinstance(measure, dict):
+        reasons.append("required_field_missing:source_measure")
+        return
+
+    if measure.get("artifact") != "oph_qcd_ward_projected_hadronic_spectral_measure":
+        reasons.append("source_measure_artifact_mismatch")
+
+    if not isinstance(measure.get("finite_volume_levels"), list) or not measure["finite_volume_levels"]:
+        reasons.append("required_field_missing:source_measure.finite_volume_levels")
+
+    residues = measure.get("ward_projected_residues")
+    if not isinstance(residues, list) or not residues:
+        reasons.append("required_field_missing:source_measure.ward_projected_residues")
+
+    has_current_normalization = bool(measure.get("current_normalization"))
+    if isinstance(residues, list) and residues:
+        has_current_normalization = has_current_normalization or all(
+            isinstance(item, dict) and bool(item.get("current_normalization")) for item in residues
+        )
+    if not has_current_normalization:
+        reasons.append("required_field_missing:source_measure.current_normalization")
+
+    rho = measure.get("rho_had_or_measure")
+    if not isinstance(rho, dict):
+        reasons.append("required_field_missing:source_measure.rho_had_or_measure")
+    else:
+        if rho.get("support_variable") != "s":
+            reasons.append("source_measure_support_variable_mismatch")
+        positivity = str(rho.get("positivity_status", "")).lower()
+        if not any(token in positivity for token in ("certified", "proved", "positive")):
+            reasons.append("source_measure_positivity_not_certified")
+        if not rho.get("pushforward_rule"):
+            reasons.append("required_field_missing:source_measure.rho_had_or_measure.pushforward_rule")
+
+    moment = measure.get("transport_moment_certificate")
+    if not isinstance(moment, dict):
+        reasons.append("required_field_missing:source_measure.transport_moment_certificate")
+    else:
+        if not moment.get("kernel"):
+            reasons.append("required_field_missing:source_measure.transport_moment_certificate.kernel")
+        _parse_interval(
+            moment.get("Delta_had_image"),
+            "source_measure.transport_moment_certificate.Delta_had_image",
+            reasons,
+        )
+        _parse_nonnegative_decimal(
+            moment.get("quadrature_error_bound"),
+            "source_measure.transport_moment_certificate.quadrature_error_bound",
+            reasons,
+        )
+        _parse_nonnegative_decimal(
+            moment.get("tail_bound"),
+            "source_measure.transport_moment_certificate.tail_bound",
+            reasons,
+        )
+
+    systematics = measure.get("systematics")
+    if not isinstance(systematics, dict):
+        reasons.append("required_field_missing:source_measure.systematics")
+    else:
+        for budget_name in SOURCE_SYSTEMATICS_BUDGETS:
+            budget = systematics.get(budget_name)
+            if not _has_bound_interval(budget):
+                reasons.append(f"required_field_missing:source_measure.systematics.{budget_name}.bound_interval")
+            else:
+                _parse_interval(
+                    budget["bound_interval"],
+                    f"source_measure.systematics.{budget_name}.bound_interval",
+                    reasons,
+                )
+
+    guards = measure.get("guards")
+    if not isinstance(guards, dict):
+        reasons.append("required_field_missing:source_measure.guards")
+    else:
+        if guards.get("stable_channel_only") is not False:
+            reasons.append("source_measure_guard_stable_channel_only_not_false")
+        if guards.get("surrogate_hadron_artifact") is not False:
+            reasons.append("source_measure_guard_surrogate_not_false")
+        if guards.get("compare_only_external_endpoint") is not False:
+            reasons.append("source_measure_guard_compare_endpoint_not_false")
+
+
+def _validate_delta_ew(payload: dict[str, Any], reasons: list[str]) -> None:
+    delta_ew = payload.get("delta_EW")
+    if not isinstance(delta_ew, dict):
+        reasons.append("delta_EW_missing")
+        return
+
+    if delta_ew.get("zero_theorem"):
+        return
+
+    source_bound = delta_ew.get("source_bound")
+    if source_bound is None:
+        reasons.append("delta_EW_zero_or_bound_missing")
+        return
+    _parse_interval(source_bound, "delta_EW.source_bound", reasons)
+
+
+def build_source_transport_interval_certificate(
+    payload: dict[str, Any],
+    *,
+    precision: int = 96,
+) -> dict[str, Any]:
+    """Build and validate the source-only interval fixed-point certificate.
+
+    The theorem decision is made from source-supplied intervals and backend
+    proof metadata.  CODATA/NIST or compare endpoint keys are rejected before
+    promotion can occur.
+    """
+    reasons: list[str] = []
+    forbidden = sorted(source_payload_forbidden_keys(payload))
+    if forbidden:
+        reasons.append("forbidden_external_or_compare_key:" + ",".join(forbidden))
+
+    _validate_interval_backend(payload, reasons)
+
+    p_interval = _parse_interval(payload.get("p_interval"), "p_interval", reasons, positive=True)
+
+    endpoint = payload.get("endpoint_map")
+    if not isinstance(endpoint, dict):
+        reasons.append("required_field_missing:endpoint_map")
+        endpoint = {}
+
+    alpha_inv_image = _parse_interval(
+        endpoint.get("alpha_inv_image") or endpoint.get("A_T_image"),
+        "endpoint_map.alpha_inv_image",
+        reasons,
+        positive=True,
+    )
+    derivative_bound = _parse_nonnegative_decimal(
+        endpoint.get("derivative_abs_bound") or endpoint.get("A_T_prime_abs_bound"),
+        "endpoint_map.derivative_abs_bound",
+        reasons,
+    )
+    _parse_nonnegative_decimal(endpoint.get("transport_error_bound"), "endpoint_map.transport_error_bound", reasons)
+
+    components = endpoint.get("components")
+    if not isinstance(components, dict):
+        reasons.append("required_field_missing:endpoint_map.components")
+    else:
+        for field in ENDPOINT_COMPONENT_INTERVALS:
+            _parse_interval(components.get(field), f"endpoint_map.components.{field}", reasons)
+
+    fixed_point = payload.get("fixed_point_certificate")
+    if not isinstance(fixed_point, dict):
+        reasons.append("fixed_point_certificate_missing")
+        fixed_point = {}
+
+    claimed_g_image = _parse_interval(
+        fixed_point.get("G_image"),
+        "fixed_point_certificate.G_image",
+        reasons,
+        positive=True,
+    )
+    claimed_kappa = _parse_nonnegative_decimal(
+        fixed_point.get("contraction_kappa"),
+        "fixed_point_certificate.contraction_kappa",
+        reasons,
+    )
+
+    computed_g_image: Interval | None = None
+    computed_kappa: Decimal | None = None
+    alpha_interval: Interval | None = None
+    if p_interval is not None and alpha_inv_image is not None and derivative_bound is not None:
+        with localcontext() as ctx:
+            ctx.prec = precision
+            pi = decimal_pi(precision + 8)
+            sqrt_pi = +pi.sqrt()
+            phi = +((Decimal(1) + Decimal(5).sqrt()) / Decimal(2))
+            computed_g_image = Interval(
+                +(phi + sqrt_pi / alpha_inv_image.hi),
+                +(phi + sqrt_pi / alpha_inv_image.lo),
+            )
+            computed_kappa = +(sqrt_pi * derivative_bound / (alpha_inv_image.lo * alpha_inv_image.lo))
+            alpha_interval = Interval(+(Decimal(1) / alpha_inv_image.hi), +(Decimal(1) / alpha_inv_image.lo))
+
+    if computed_g_image is not None and claimed_g_image is not None:
+        if not computed_g_image.subset_of(claimed_g_image):
+            reasons.append("fixed_point_G_image_does_not_enclose_outer_map")
+        if p_interval is not None and not claimed_g_image.subset_of(p_interval):
+            reasons.append("fixed_point_self_map_failed")
+
+    if computed_kappa is not None and claimed_kappa is not None:
+        if claimed_kappa >= 1:
+            reasons.append("fixed_point_uniqueness_failed")
+        if computed_kappa > claimed_kappa:
+            reasons.append("fixed_point_contraction_kappa_too_small")
+
+    if fixed_point.get("self_map_pass") is not True:
+        reasons.append("fixed_point_self_map_missing")
+    if fixed_point.get("uniqueness_pass") is not True:
+        reasons.append("fixed_point_uniqueness_missing")
+
+    promotion_allowed = not reasons
+    return {
+        "artifact": "oph_source_transport_interval_certificate",
+        "status": (
+            "source_interval_certificate_satisfied"
+            if promotion_allowed
+            else "blocked_source_interval_certificate_failed"
+        ),
+        "promotion_allowed": promotion_allowed,
+        "external_inputs_used": False,
+        "reasons": list(_dedupe(reasons)),
+        "theorem": {
+            "map": "G(P)=phi+sqrt(pi)/A_T(P)",
+            "source_endpoint": "A_T(P)=a0(P)+Delta_lep_src(P)+Delta_had_src(P)+Delta_EW_src(P)",
+            "self_map_condition": "G(I_P) subset I_P",
+            "uniqueness_condition": "sqrt(pi) * sup|A_T'(P)| / inf(A_T(I_P))^2 < 1",
+            "alpha_interval_consequence": "alpha_* in 1/A_T(I_P)",
+        },
+        "certified_intervals": {
+            "I_P": _interval_to_json(p_interval) if p_interval is not None else None,
+            "A_T_image": _interval_to_json(alpha_inv_image) if alpha_inv_image is not None else None,
+            "claimed_G_image": _interval_to_json(claimed_g_image) if claimed_g_image is not None else None,
+            "decimal_audit_G_image": _interval_to_json(computed_g_image) if computed_g_image is not None else None,
+            "alpha_interval": _interval_to_json(alpha_interval) if alpha_interval is not None else None,
+        },
+        "bounds": {
+            "A_T_prime_abs_bound": _decimal_to_json(derivative_bound) if derivative_bound is not None else None,
+            "claimed_contraction_kappa": _decimal_to_json(claimed_kappa) if claimed_kappa is not None else None,
+            "decimal_audit_contraction_kappa": (
+                _decimal_to_json(computed_kappa) if computed_kappa is not None else None
+            ),
+        },
+        "required_fields": list(THEOREM_GRADE_REQUIRED_FIELDS),
+    }
 
 
 def validate_source_transport_payload(payload: dict[str, Any]) -> TransportValidation:
@@ -88,46 +461,31 @@ def validate_source_transport_payload(payload: dict[str, Any]) -> TransportValid
     scheme = payload.get("scheme", {})
     if not isinstance(scheme, dict) or not scheme.get("same_subtraction_as_a0", False):
         reasons.append("scheme_not_locked_to_a0")
-
-    rho = payload.get("rho_had")
-    if not isinstance(rho, dict):
-        reasons.append("rho_had_missing")
     else:
-        if not rho.get("positivity_certificate", False):
-            reasons.append("rho_had_positivity_missing")
-        if not rho.get("threshold_support", False):
-            reasons.append("rho_had_threshold_support_missing")
-        if not rho.get("ope_tail_certificate", False):
-            reasons.append("rho_had_ope_tail_missing")
-        if not rho.get("quadrature_error_bound"):
-            reasons.append("rho_had_quadrature_bound_missing")
+        if not scheme.get("scheme_id"):
+            reasons.append("required_field_missing:scheme.scheme_id")
+        if not scheme.get("normalization_convention"):
+            reasons.append("required_field_missing:scheme.normalization_convention")
 
-    delta_ew = payload.get("delta_EW")
-    if not isinstance(delta_ew, dict):
-        reasons.append("delta_EW_missing")
-    elif not (delta_ew.get("zero_theorem") or delta_ew.get("source_bound")):
-        reasons.append("delta_EW_zero_or_bound_missing")
+    _validate_source_measure(payload, reasons)
+    _validate_delta_ew(payload, reasons)
+    interval_certificate = build_source_transport_interval_certificate(payload)
+    reasons.extend(interval_certificate["reasons"])
+    reasons_tuple = _dedupe(reasons)
 
-    fixed_point = payload.get("fixed_point_certificate")
-    if not isinstance(fixed_point, dict):
-        reasons.append("fixed_point_certificate_missing")
-    else:
-        if not fixed_point.get("self_map_pass", False):
-            reasons.append("fixed_point_self_map_missing")
-        if not fixed_point.get("uniqueness_pass", False):
-            reasons.append("fixed_point_uniqueness_missing")
-
-    if reasons:
+    if reasons_tuple:
         return TransportValidation(
             status="blocked_source_transport_contract_failed",
             promotion_allowed=False,
-            reasons=tuple(reasons),
+            reasons=reasons_tuple,
+            interval_certificate=interval_certificate,
         )
 
     return TransportValidation(
-        status="source_transport_contract_satisfied",
+        status="source_transport_interval_certificate_satisfied",
         promotion_allowed=True,
         reasons=(),
+        interval_certificate=interval_certificate,
     )
 
 
@@ -136,7 +494,9 @@ def blocked_missing_source_transport() -> dict[str, Any]:
         status="blocked_source_spectral_measure_missing",
         promotion_allowed=False,
         reasons=(
-            "rho_had_missing",
+            "required_field_missing:source_measure",
+            "required_field_missing:interval_backend",
+            "required_field_missing:endpoint_map",
             "delta_EW_missing",
             "fixed_point_certificate_missing",
         ),
