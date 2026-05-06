@@ -1,6 +1,6 @@
 # Prologue: Physicists Are Hackers
 
-*For Douglas Adams, and for my wife Noon.*
+*For my wife Noon, and for Douglas Adams.*
 
 > Core idea, in plain English: there is no single objective camera angle on reality.
 > There are only local, subjective perspectives, and physics is the rulebook that keeps them consistent where they overlap.

@@ -33,7 +33,7 @@
   "gamma32_d_lifted_formula": "gamma32_d_base + tau_d_log_per_side",
   "gamma32_u_base": 2.4367069283148712,
   "gamma32_u_lifted_formula": "gamma32_u_base + tau_u_log_per_side",
-  "generated_utc": "2026-03-27T16:49:29Z",
+  "generated_utc": "2026-05-06T03:51:24Z",
   "notes": [
     "This is the smallest next family after the current closed quadratic surface is exhausted.",
     "It does not reopen the old four-gap branch; it adds one diagonal gap-shift slot per sector.",

@@ -73,8 +73,8 @@
     0.23902871445675228,
     2.6757356427716235
   ],
-  "J_B_source_d": null,
-  "J_B_source_u": null,
+  "J_B_source_d": -0.06478785725166157,
+  "J_B_source_u": 0.06478785725166157,
   "Phi_d": [
     [
       0.0,
@@ -179,7 +179,7 @@
   ],
   "artifact": "oph_quark_sector_descent",
   "b_odd_source_scalar_evaluator_artifact": "oph_quark_diagonal_B_odd_source_scalar_evaluator",
-  "b_odd_source_scalar_evaluator_status": "pure_B_odd_projection_formula_closed_source_values_open",
+  "b_odd_source_scalar_evaluator_status": "closed_public_selected_class_pure_B_odd_source_scalar_evaluator",
   "budget_neutrality_certificate": {
     "delta_logg_q": 0.0,
     "status": "closed",
@@ -220,7 +220,7 @@
   "g_ch": 0.9231656602589082,
   "g_d": 0.12172551081512113,
   "g_u": 0.7797392875757557,
-  "generated_utc": "2026-04-26T05:11:10Z",
+  "generated_utc": "2026-05-06T03:51:15Z",
   "hierarchy_driver_status": "candidate_spread_values_populated",
   "metadata": {
     "note": "Candidate odd quark-sector descent built from an explicit shared charged response seed plus the separate odd-response-law artifact. The local shape map is explicit and coefficient-free on the current single-kappa ray. The reduced even family is fixed as a trace-zero quadratic on the ordered branch coordinate; when a current-family spread pair is available, the centered even-log profiles are read back directly from the exported spread map. If the next diagonal gap-shift family is later populated, the builder can lift those logs by B_ord without reopening the old larger branch. A compact current-family sector-mean split may refine g_u and g_d without changing those rays. No reference-fit exact-readout artifact is consumed here.",

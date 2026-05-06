@@ -24,7 +24,7 @@
   "equal_gap_residual_d_formula": "delta_E_d_diag_log_per_side_source - tau_d_log_per_side * B_ord",
   "equal_gap_residual_u": null,
   "equal_gap_residual_u_formula": "delta_E_u_diag_log_per_side_source - tau_u_log_per_side * B_ord",
-  "generated_utc": "2026-03-27T16:49:29Z",
+  "generated_utc": "2026-05-06T03:51:24Z",
   "input_kind": "closed_current_surface_plus_diagonal_B_mode",
   "normalized_coordinate_x2": -0.5175863354681689,
   "notes": [
