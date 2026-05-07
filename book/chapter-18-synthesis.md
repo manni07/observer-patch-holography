@@ -260,6 +260,9 @@ The local-ruler ledger records three technical boundaries. The weak pair is a
 validation row. Charged-lepton absolute masses are target-anchored witnesses.
 Hadron masses require the OPH strong-binding backend with production spectral
 data and systematics.
+The selected-class quark theorem leaves strong CP open: the available corpus
+does not derive $\theta_{\mathrm{QCD}}$, does not emit physical $\bar\theta$,
+and does not prove that the physical strong-CP phase vanishes.
 
 The next chapter turns to the deepest interpretive question. If observers,
 meaning, and world belong to one structure, what exactly should be said about

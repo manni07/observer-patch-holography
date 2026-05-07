@@ -78,6 +78,7 @@ def test_render_markdown_includes_neutrino_oscillation_section() -> None:
         reference_payload=reference_payload,
         surface_state=surface_state,
         premise_boundaries=premise_boundaries,
+        companion_status_rows=[],
     )
     assert "## Neutrino Oscillation Comparison" in markdown
     assert "| theta12 | weighted_cycle_dimensionless |" in markdown

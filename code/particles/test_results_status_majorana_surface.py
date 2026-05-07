@@ -164,6 +164,7 @@ def test_render_markdown_includes_majorana_phase_section() -> None:
         reference_payload=reference_payload,
         surface_state=surface_state,
         premise_boundaries=premise_boundaries,
+        companion_status_rows=[],
     )
     assert "## Majorana Phase Surface" in markdown
     assert "| alpha21^(Maj) | theorem_grade | 153.618518 deg |" in markdown

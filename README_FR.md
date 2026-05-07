@@ -166,6 +166,12 @@ chargés sont des témoins ancrés sur cible. La moyenne directe auxiliaire du t
 est une ligne de validation. Les masses hadroniques demandent le backend OPH de
 liaison forte avec données spectrales de production et systématiques.
 
+Le théorème des quarks sur classe sélectionnée laisse la CP forte comme branche
+compagnon ouverte : le corpus disponible ne dérive pas `theta_QCD`, n'émet pas
+le `bar(theta)` physique et ne prouve pas que la phase CP forte physique
+s'annule. L'issue `#155` suit ce pont entre phase, anomalie et angle
+topologique.
+
 ## Guide du dépôt
 
 - **[`paper/`](paper)** : PDF, sources LaTeX et métadonnées de release.

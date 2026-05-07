@@ -200,6 +200,11 @@ target-anchored witness rows. The auxiliary direct-top average is a validation
 row. Hadron masses require the OPH strong-binding backend with production
 spectral data and systematics.
 
+The selected-class quark theorem leaves strong CP as an open companion branch:
+the available corpus does not derive `theta_QCD`, does not emit physical
+`bar(theta)`, and does not prove that the physical strong-CP phase vanishes.
+Issue `#155` tracks that phase, anomaly, and topological-angle bridge.
+
 ## Repository Guide
 
 - **[`paper/`](paper):** PDFs, LaTeX sources, and release metadata.

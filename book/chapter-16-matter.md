@@ -139,7 +139,10 @@ the structural gauge reconstruction, the exact massless carriers, the declared
 Higgs/top surface, the selected-class running quark sextet with Yukawas, and one
 weighted-cycle neutrino family. The late status ledger records the weak
 validation pair, the fine-structure audit trunk, and the charged-lepton
-absolute-mass no-go boundary.
+absolute-mass no-go boundary. The selected-class quark theorem leaves strong
+CP open: the available corpus does not derive $\theta_{\mathrm{QCD}}$, does
+not emit physical $\bar\theta$, and does not prove that the physical strong-CP
+phase vanishes.
 Hadrons require a separate nonperturbative bound-state step
 because protons, neutrons, and mesons are QCD composites rather than elementary
 particle rows.
