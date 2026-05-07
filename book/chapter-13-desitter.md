@@ -28,6 +28,14 @@ Distant supernovae were fainter than expected-farther away than a decelerating u
 
 Something is pushing the cosmos apart. Something is fighting gravity and winning. The teams called it "dark energy."
 
+The supernova result also rested on older work. Henrietta Leavitt's study of
+Cepheid variable stars gave astronomy a way to climb the cosmic distance
+ladder. Edwin Hubble's expansion law made the universe dynamical. Walter Baade,
+Allan Sandage, Vera Rubin, Kent Ford, and many others sharpened the large-scale
+picture long before the 1998 teams found acceleration. Cosmology is a relay
+race. The de Sitter clue entered this book through a century of measurements,
+calibrations, and arguments about what the sky was actually saying.
+
 ### The Cosmological Constant Returns
 
 A positive cosmological constant Lambda > 0 creates a kind of "anti-gravity"-a repulsive force that grows with distance. At early times, when matter density was high, gravity dominated. But as the universe expanded and matter diluted, Lambda took over.
@@ -52,6 +60,8 @@ the stretching of space.
 
 This defines your **cosmological horizon**-the boundary of your causal access.
 
+![A de Sitter static patch gives one observer a finite horizon screen whose capacity scales with area.](../assets/book_diagrams/desitter-static-patch.svg){width=78%}
+
 Inside the horizon, you can use static coordinates. This region-the **static patch**-is all of de Sitter space that you can ever access.
 
 ### De Sitter Fits Our Framework
@@ -75,6 +85,12 @@ $$T_{dS} = \frac{\hbar H}{2\pi k_B}$$
 
 For our universe, this is about 10^{-30} Kelvin-undetectable. During inflation, horizon-scale quantum fluctuations were stretched and later seeded structure formation; the de Sitter temperature is one thermodynamic way of characterizing that regime.
 
+The symbols echo earlier horizon physics. $T_{dS}$ is the de Sitter
+temperature. $\hbar$ is Planck's constant divided by $2\pi$. $H$ is the Hubble
+rate for the de Sitter phase. $k_B$ is Boltzmann's constant, which converts
+energy units into temperature units. The denominator $2\pi$ is the same
+circle factor that appears in Unruh and Hawking horizon temperatures.
+
 This temperature does not mean that empty space is glowing brightly around us. It means that an observer confined to one static patch sees the horizon as a thermal environment. Part of the quantum state is inaccessible beyond the horizon, and that loss of access has the same thermodynamic signature that horizons have elsewhere in gravitational physics.
 
 ### Why This Temperature? The Unruh Connection
@@ -96,6 +112,11 @@ If the horizon has temperature, it must have entropy:
 $$S_{dS} = \frac{A}{4\ell_P^2} = \frac{\pi c^5}{G\hbar H^2}$$
 
 This is the entropy associated with one de Sitter static patch-the logarithm of the effective number of states accessible within that patch.
+
+Here $A$ is the horizon area, $\ell_P$ is the Planck length, $c$ is the speed
+of light, $G$ is Newton's gravitational constant, and $H$ again sets the
+de Sitter expansion rate. The first expression is the area law. The second is
+the same law after writing the horizon radius in terms of $H$.
 
 For the late-time horizon of our universe, $R_{dS} \approx 1.66 \times 10^{26}$ m. The bare radius-squared count is
 
@@ -187,6 +208,13 @@ In the book's reading, the observed $\Lambda$ is the way the world announces
 its total screen capacity. It is the global size parameter carried by every
 consistent patch.
 
+The symbol $\mathcal H_{\text{tot}}$ means the total Hilbert space available to
+the screen, and $\dim$ means its dimension, the number of independent quantum
+state directions before taking the logarithm. The logarithm converts that
+dimension into entropy. This equation is not a local particle-mass formula. It
+is a capacity formula: a larger total state space corresponds to a smaller
+positive cosmological constant.
+
 ### Many Observers, One Lambda
 
 The philosophical stance of our model-"no objective reality, only subjective perspectives that must agree on overlaps"-maps naturally onto de Sitter static patch intuition. Each timelike observer has their own horizon, their own patch. There's no operational access to a single global description.
@@ -212,6 +240,12 @@ Information sent toward the horizon gets thermalized, mixed with all the other q
 $$t_{scrambling} \sim \frac{1}{H}\ln S \sim \frac{280}{H}$$
 
 For our universe, this is about 4 trillion years. Black holes are the standard saturators of the chaos bound in holographic settings, and de Sitter is often discussed as a fast-scrambling horizon with analogous scaling.
+
+$t_{scrambling}$ is the time needed for initially localized information to
+become thoroughly mixed across the horizon degrees of freedom. The symbol
+$\sim$ means "scales like," not exact equality. $S$ is the de Sitter entropy.
+The number 280 comes from the logarithm of the huge entropy associated with
+our late-time horizon.
 
 The smooth, empty appearance of the de Sitter vacuum can be read as highly scrambled information in this perspective.
 
@@ -255,6 +289,12 @@ An anomaly here means a controlled leftover term, not a mistake. It is what
 remains when the ideal additivity of the modular bookkeeping is only
 approximately true.
 
+$K_C$ is the modular Hamiltonian associated with cap $C$. $B_C$ is the
+geometric boost-like generator that would appear in the ideal local form.
+$K_C^{(\text{anom})}$ is the extra contribution left when the ideal Markov
+recovery condition is imperfect. The constant shifts the zero of modular
+energy and has no direct observational role.
+
 $$G_{00} + \Lambda g_{00} = 8\pi G \left( \langle T_{00} \rangle + \langle T_{00}^{\text{anom}} \rangle \right)$$
 
 The coefficient is fixed by the derivation: $\frac{15}{8\pi^2} \approx 0.19$.
@@ -297,6 +337,12 @@ $$g_{\text{obs}} \approx \sqrt{a_0 \cdot g_b}$$
 
 where $g_b$ is the Newtonian acceleration from baryons. For a galaxy this gives
 the flat-rotation-curve behavior astronomers actually see.
+
+$g_{\text{obs}}$ is the effective acceleration inferred from the observed
+rotation curve. $g_b$ is the acceleration expected from visible baryonic matter
+alone: stars, gas, and dust. $a_0$ is the acceleration scale supplied above by
+the de Sitter horizon. The square root is the same scaling that makes flat
+galaxy rotation curves lead to the baryonic Tully-Fisher relation.
 
 The same picture yields the baryonic Tully-Fisher relation:
 

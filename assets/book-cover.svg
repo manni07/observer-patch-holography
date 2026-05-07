@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #0d1117; }
+      .grid { fill: none; stroke: #161b22; stroke-width: 1; }
+      .terminal-text { font-family: 'Fira Code', 'Courier New', monospace; font-size: 14px; fill: #7ee787; }
+      .terminal-muted { font-family: 'Fira Code', 'Courier New', monospace; font-size: 14px; fill: #8b949e; }
+      .title { font-family: 'Fira Code', 'Courier New', monospace; font-size: 46px; font-weight: bold; fill: #c9d1d9; letter-spacing: 2px; }
+      .subtitle { font-family: 'Fira Code', 'Courier New', monospace; font-size: 56px; font-weight: bold; fill: #ffffff; letter-spacing: 4px; }
+      .glitch-cyan { font-family: 'Fira Code', 'Courier New', monospace; font-size: 56px; font-weight: bold; fill: #00ffff; letter-spacing: 4px; opacity: 0.7; }
+      .glitch-magenta { font-family: 'Fira Code', 'Courier New', monospace; font-size: 56px; font-weight: bold; fill: #ff0055; letter-spacing: 4px; opacity: 0.7; }
+      .math-box { fill: #161b22; stroke: #30363d; stroke-width: 2px; rx: 6px; }
+      .math-text { font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 34px; font-style: italic; fill: #58a6ff; }
+      .subscript { font-size: 20px; }
+      .author-label { font-family: 'Fira Code', 'Courier New', monospace; font-size: 16px; fill: #8b949e; letter-spacing: 2px; }
+      .author-name { font-family: 'Fira Code', 'Courier New', monospace; font-size: 26px; font-weight: bold; fill: #c9d1d9; letter-spacing: 2px; }
+      .footer-link { font-family: 'Fira Code', 'Courier New', monospace; font-size: 12px; fill: #484f58; letter-spacing: 1px; }
+    </style>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" class="grid"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="100%" height="100%" class="bg"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+
+  <!-- DEFCON Style Terminal Header -->
+  <text x="40" y="60" class="terminal-text">root@pragma:~# <tspan fill="#c9d1d9">./init_oph --book</tspan></text>
+  <text x="40" y="85" class="terminal-muted">Fetching observer consistency protocols...</text>
+  <text x="40" y="110" class="terminal-muted">Connecting to floatingpragma.io...</text>
+
+  <!-- Main Title Area -->
+  <text x="300" y="320" class="title" text-anchor="middle">REVERSE</text>
+  <text x="300" y="380" class="title" text-anchor="middle">ENGINEERING</text>
+
+  <!-- Subtle Minimalist Glitch Effect -->
+  <text x="303" y="460" class="glitch-cyan" text-anchor="middle">REALITY</text>
+  <text x="297" y="460" class="glitch-magenta" text-anchor="middle">REALITY</text>
+  <text x="300" y="460" class="subtitle" text-anchor="middle">REALITY</text>
+
+  <!-- Central OPH Equation Box -->
+  <rect x="120" y="550" width="360" height="90" class="math-box"/>
+  <text x="300" y="606" class="math-text" text-anchor="middle">
+    𝒫 = φ + α<tspan class="subscript" baseline-shift="sub">em</tspan>(𝒫)√π
+  </text>
+  <text x="140" y="606" class="terminal-muted" font-size="28" font-weight="bold">[</text>
+  <text x="460" y="606" class="terminal-muted" font-size="28" font-weight="bold">]</text>
+
+  <!-- Author Identification -->
+  <text x="300" y="780" class="author-label" text-anchor="middle">// WRITTEN BY</text>
+  <text x="300" y="815" class="author-name" text-anchor="middle">BERNHARD MUELLER</text>
+
+  <!-- Branding Links -->
+  <text x="300" y="870" class="footer-link" text-anchor="middle">
+    HTTPS://FLOATINGPRAGMA.IO | HTTPS://FLOATINGPRAGMA.IO/OPH
+  </text>
+</svg>

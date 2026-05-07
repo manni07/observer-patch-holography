@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Observer loop of world, records, and understanding</title>
+  <desc id="desc">Reality produces observers; observers create records; records support models; models feed back into engineered reality.</desc>
+  <rect width="960" height="520" fill="#f8f5ef"/>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#2e2a25"/>
+    </marker>
+  </defs>
+  <circle cx="480" cy="260" r="165" fill="#fffaf0" stroke="#2e2a25" stroke-width="4"/>
+  <g fill="#fffaf0" stroke="#2e2a25" stroke-width="3">
+    <rect x="395" y="54" width="170" height="62" rx="10"/>
+    <rect x="670" y="229" width="170" height="62" rx="10"/>
+    <rect x="395" y="404" width="170" height="62" rx="10"/>
+    <rect x="120" y="229" width="170" height="62" rx="10"/>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#2e2a25" font-size="22" font-weight="700" text-anchor="middle">
+    <text x="480" y="92">world</text>
+    <text x="755" y="267">observers</text>
+    <text x="480" y="442">records</text>
+    <text x="205" y="267">models</text>
+  </g>
+  <path d="M567 86 C675 112 747 168 756 218" stroke="#2e2a25" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M755 298 C730 380 635 428 575 436" stroke="#2e2a25" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M390 436 C310 418 233 358 209 301" stroke="#2e2a25" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M208 219 C225 150 310 102 390 86" stroke="#2e2a25" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+  <text x="480" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#2e2a25" font-weight="700">self-description</text>
+</svg>

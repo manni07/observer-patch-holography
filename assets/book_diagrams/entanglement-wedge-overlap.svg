@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-labelledby="title desc">
+  <title id="title">Overlapping entanglement wedges</title>
+  <desc id="desc">Two boundary regions reconstruct wedge-shaped bulk regions that overlap in the interior.</desc>
+  <rect width="960" height="500" fill="#f5f6ef"/>
+  <path d="M110 405 C270 90 690 90 850 405" fill="none" stroke="#2e2a25" stroke-width="5"/>
+  <path d="M210 405 C310 200 470 170 560 405 Z" fill="#68a691" opacity="0.42" stroke="#2e2a25" stroke-width="3"/>
+  <path d="M400 405 C490 170 650 200 750 405 Z" fill="#c85b43" opacity="0.42" stroke="#2e2a25" stroke-width="3"/>
+  <path d="M402 405 C440 292 515 252 560 405 Z" fill="#6f5d8f" opacity="0.55"/>
+  <g fill="#2e2a25" font-family="Arial, sans-serif" font-weight="700" font-size="25">
+    <text x="195" y="452">boundary A</text>
+    <text x="635" y="452">boundary B</text>
+    <text x="410" y="210">shared bulk</text>
+    <text x="382" y="242">reconstruction</text>
+  </g>
+  <circle cx="310" cy="405" r="12" fill="#68a691"/>
+  <circle cx="655" cy="405" r="12" fill="#c85b43"/>
+</svg>

@@ -44,6 +44,15 @@ observers. That third route is the anthropic principle in its bare form.
 Fine-tuning reveals that laws are not unique. There are many possible laws,
 and what we observe is filtered by the fact that we are here to observe it.
 
+This line of thought was shaped by many different communities. Dicke and
+Carter made anthropic reasoning part of modern cosmology. Weinberg used it to
+think about the cosmological constant before cosmic acceleration was observed.
+Inflationary cosmology, string theory, quantum measurement theory, and
+statistical learning all gave physicists different versions of selection in a
+space of possibilities. The book does not need all of those proposals to be
+right. It needs the shared lesson: what becomes real to observers is often the
+part of a larger possibility space that can survive a filter.
+
 ## 17.3 The First-Principles Reframing: Laws Are Survivors
 
 The harder question is why the laws look like these and not some nearby
@@ -123,6 +132,11 @@ Here $A$ is the area of the boundary and $G$ is Newton's gravitational constant.
 The formula is the black-hole entropy scaling in plain form: storage capacity
 grows like area, not volume.
 
+More precisely, in units where $\hbar=c=k_B=1$, the entropy scale is
+$A/(4G)$. The area $A$ belongs to the bounding screen. The constant $G$ sets
+the gravitational unit of area. Calling the result "bits" is a reader-friendly
+translation of entropy into information capacity.
+
 What are physical laws? They are statements that reduce the amount of
 information needed to describe the world. If energy is conserved, you do not
 need to track a different value at every moment. If the electron mass is
@@ -190,6 +204,14 @@ predict better spread further. The history of science is memetic evolution.
 Phlogiston lost to oxygen. Steady-state cosmology lost to Big Bang. Memes that
 fit the data survive the selection pressure of empirical testing.
 
+Science is therefore not a chain of solitary revelations. Lavoisier's oxygen
+chemistry depended on careful balances and a community willing to make mass
+accounting decisive. Big Bang cosmology drew on general relativity, galaxy
+redshifts, nuclear physics, radio astronomy, and the discovery of the cosmic
+microwave background by Penzias and Wilson. Darwin himself shared the stage
+with Alfred Russel Wallace. Good ideas survive because many observers can
+stress them from different sides.
+
 ### The Simulator Meme
 
 Here is a striking observation: among all the memes that have evolved in human culture, one stands out as unique.
@@ -231,6 +253,14 @@ Physics has laws because the consistency requirement forces reality into structu
 
 This statement cuts to the heart of the model. Lorentz invariance is not an arbitrary symmetry. It exists because different observers moving through the same region must arrive at consistent descriptions. Gauge symmetry is not a mathematical curiosity. It exists because overlapping patches must identify shared observables without ambiguity. Conservation laws are not coincidences. They exist because the same quantities must be conserved across all perspectives.
 
+The selection filter is severe. A candidate law must support stable records,
+local repair, transport across overlaps, and enough redundancy for many
+observers to check the same fact. A beautiful equation that cannot survive
+those tests is like a mutation that cannot reproduce. It may be imaginable,
+but it does not become part of a public world.
+
+![Candidate patterns become public physics only after passing consistency, record, compression, and observer-support filters.](../assets/book_diagrams/selection-filters.svg){width=80%}
+
 The laws are not imposed from outside. They are the conditions that make agreement possible.
 
 ### Co-Evolution of Laws and Observers
@@ -250,6 +280,49 @@ Physical laws are **coordination protocols**, like TCP/IP for the internet.
 TCP/IP is not a law of nature. It emerged because it works. Computers that follow the protocol can exchange data. Computers that do not follow it are isolated.
 
 Similarly, physical laws are conventions that enable consistent communication between observer patches. The laws we observe are the protocols that survived. They work. They enable agreement. They persist.
+
+### Darwin, Wallace, and the Discipline of Selection
+
+Darwin did not discover evolution by imagining change in the abstract. He
+spent years gathering small stubborn facts: island species, barnacles, fossils,
+domesticated breeding records, geographical ranges, and the selective power of breeders.
+Alfred Russel Wallace independently found the same principle through field
+experience in the Amazon and Malay Archipelago. Natural selection became
+persuasive because it organized a huge mess of observations with one filter:
+variants that reproduce better become more common.
+
+The analogy in this chapter should be handled with the same discipline. OPH
+does not say that equations literally have children, or that constants wander
+around like animals. It says that public physical structure must pass filters
+before it can belong to a stable observer world. A candidate pattern must fit
+inside the finite screen capacity. It must support local records. It must
+allow patches to repair mismatches. It must be compressible enough to be
+learned and reused. It must permit observers complex enough to do the
+comparing. Those are selection pressures.
+
+The same idea appears at several scales. In quantum Darwinism, pointer states
+survive because the environment redundantly records them. In scientific
+practice, theories survive because many laboratories, instruments, and
+communities can reproduce their predictions. In cosmic-selection stories,
+parameters are considered through the structures they permit. OPH adds the
+observer-overlap version: a law survives if it can act as a coordination
+protocol across finite patches.
+
+The symbol work in this chapter is correspondingly light but important.
+When the text says a black-hole entropy budget scales like $A/(4G)$ or
+$A/(4\ell_P^2)$, it is pointing at a finite selection environment. $A$ is
+area. $G$ is Newton's constant when units keep it explicit. $\ell_P$ is the
+Planck length when the same idea is written in Planck-area units. Patterns
+that demand more independent information than the screen can carry are not
+available as public laws. When the text speaks of compression, it means that
+a law must summarize many observations with fewer bits than a raw lookup
+table would need. A universe with no compressible regularities could still
+have events, but it could not have science in the sense this book needs.
+
+That is the human moral of the chapter. The laws we write down are not
+private revelations. They are proposals submitted to a harsh public filter.
+They survive only when many observers can use them to coordinate expectation,
+measurement, memory, and action.
 
 ## 17.9 Reverse Engineering Summary
 

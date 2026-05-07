@@ -6,8 +6,6 @@
 > There are only local, subjective perspectives, and physics is the rulebook that keeps them consistent where they overlap.
 > If you are not a physicist, you are in the right place; this book is written as a reverse-engineering book, not a math-first textbook.
 
-Whether your interest begins with **simulation theory** or with the hope of a **theory of everything**, this book gives the long-form OPH answer. OPH is presented here as a concrete observer-consistent information architecture. Quantum mechanics, relativity, gauge structure, and particle physics appear as effective descriptions of deeper overlap-consistency rules.
-
 More precisely, OPH models reality as an observer-based fixed-point consensus
 process. Finite observer patches compare overlap-visible records, repair
 checkable mismatch, and settle into the stable public world that survives those
@@ -234,6 +232,8 @@ from observer consistency to that reconstructed world.
 Chapters 1-12 cover the observer-first framework and structural tools.
 Chapters 13-17 carry the main physics arc.
 Chapters 18-19 gather the synthesis and interpretation.
+The appendices provide the slower symbol ledger, concept glossary, equation
+walkthroughs, and extended historical interludes.
 The epilogue turns the picture outward one final time.
 
 ## Begin

@@ -15,6 +15,8 @@ The arrow of time feels fundamental in this picture. We remember yesterday. We d
 
 General relativity and quantum theory broke that picture.
 
+![Known constraints select a least-biased state, and the restricted algebra-state pair carries an internal modular clock.](../assets/book_diagrams/maxent-clock.svg){width=78%}
+
 ## 11.2 The Surprising Hint: Time Is Not Fundamental
 
 ### The Scandal of the Second Law
@@ -36,6 +38,12 @@ The Wheeler-DeWitt equation-the analog of Schroedinger's equation for the univer
 $$H\Psi = 0$$
 
 The Hamiltonian acting on the wavefunction of the universe gives zero. There is no explicit external time derivative in this formalism, so the universe can look *frozen* at the fundamental level.
+
+$H$ is the Hamiltonian constraint, the operator that would normally generate
+time evolution. $\Psi$ is the wavefunction of the universe in this formal
+setting. The equation does not say that nothing happens in experience. It says
+that the fundamental constraint equation has no outside time parameter built
+into it.
 
 This is the **problem of time** in quantum gravity. If the fundamental description has no time, where does time come from?
 
@@ -114,6 +122,11 @@ $$T_{Unruh} = \frac{\hbar a}{2\pi k_B c}$$
 
 The Unruh effect isn't a separate phenomenon-it's Tomita-Takesaki theory applied to spacetime. The "time" experienced by an observer is determined by their restricted access to the quantum state.
 
+$T_{Unruh}$ is the temperature seen by the accelerating observer. $a$ is the
+observer's proper acceleration. The constants are the same ones used in the
+black-hole temperature formulas. The larger the acceleration, the hotter the
+restricted vacuum appears.
+
 This is the first major payoff of the chapter. The mathematics does not stay abstract. Restrict the vacuum to what one observer can access, and the restriction behaves like a thermal state with its own clock.
 
 This is also the point where modular theory stops sounding like rarefied operator algebra and starts sounding like lived physics. Restriction generates both a temperature and a time flow. Losing access to part of the state has thermodynamic and temporal consequences.
@@ -158,6 +171,11 @@ $$P(x) = \frac{1}{Z} e^{-\beta E(x)}$$
 
 Thermal states are ubiquitous because they're the unique states of maximum ignorance given energy constraints.
 
+In the entropy formula, $p_i$ is the probability of outcome $i$. In the
+Boltzmann distribution, $P(x)$ is the probability of state $x$, $E(x)$ is its
+energy, $\beta$ is inverse temperature, and $Z$ is the partition function that
+normalizes all probabilities so they add to 1.
+
 ## 11.6 Time on the Holographic Screen
 
 Each observer has a patch $P$ on the holographic screen. The global state
@@ -170,6 +188,11 @@ This density matrix defines a modular Hamiltonian:
 $$K_P = -\ln \rho_P$$
 
 which generates modular time $t_P$ for that observer.
+
+$\bar P$ means the complement of patch $P$, everything outside the patch. The
+trace over $\bar P$ discards inaccessible degrees of freedom and leaves the
+state available to the observer. The logarithm then turns that restricted
+state into the modular generator for the patch.
 
 **Every observer has their own emergent clock.**
 

@@ -40,6 +40,11 @@ $$T = \frac{\hbar c^3}{8\pi G M k_B}$$
 
 For a solar-mass black hole, this is about 60 nanokelvin-undetectably cold. But for small black holes, the temperature can be significant. The radiation carries energy away. Black holes evaporate.
 
+$T$ is the Hawking temperature. $M$ is the black-hole mass. The constants
+$\hbar$, $c$, $G$, and $k_B$ are Planck's constant divided by $2\pi$, the
+speed of light, Newton's gravitational constant, and Boltzmann's constant.
+Because $M$ is in the denominator, smaller black holes are hotter.
+
 Here's the problem. Hawking's calculation showed the radiation is thermal-random, uncorrelated noise carrying no information about what fell in. If you throw a book into a black hole and wait for evaporation, all you get out is random static.
 
 If this is true, information is destroyed. A pure quantum state (the book) becomes a mixed thermal state (the radiation). This violates **unitarity**-the foundational principle that quantum evolution preserves information.
@@ -130,6 +135,10 @@ $$H(X) = -\sum_x p(x) \log p(x)$$
 
 This measures uncertainty-how many yes/no questions you'd need to ask, on average, to learn the outcome.
 
+$X$ is the random variable, $x$ labels one possible outcome, and $p(x)$ is the
+probability of that outcome. The sum adds the uncertainty contribution from
+each possible outcome.
+
 Examples make the meaning concrete. A fair coin has $H=1$ bit, one yes-or-no
 question. A heavily loaded coin at 99% heads has about $0.08$ bits, because
 there is very little uncertainty left. A certain outcome has $H=0$.
@@ -142,6 +151,10 @@ $$I(X:Y) = H(X) - H(X|Y) = H(X) + H(Y) - H(X,Y)$$
 
 If X and Y are independent, I(X:Y) = 0-knowing one tells you nothing about the other. If they're perfectly correlated, mutual information equals entropy-knowing one determines the other.
 
+$H(X|Y)$ means the uncertainty left about $X$ after $Y$ is known. $H(X,Y)$ is
+the joint entropy of the pair. Mutual information is the amount of uncertainty
+that disappears when one variable is used to predict the other.
+
 ### Conditional Mutual Information: The Recovery Metric
 
 Here's where recovery comes in. The conditional mutual information measures correlation between X and Y *given* knowledge of Z:
@@ -149,6 +162,10 @@ Here's where recovery comes in. The conditional mutual information measures corr
 $$I(X:Y|Z) = H(X|Z) + H(Y|Z) - H(X,Y|Z)$$
 
 If I(X:Y|Z) = 0, then X and Y are **conditionally independent given Z**. Once you know Z, learning Y tells you nothing new about X.
+
+The vertical bar again means "given." Conditional mutual information asks how
+much extra connection remains between $X$ and $Y$ after the mediator $Z$ has
+already been supplied.
 
 This is the mathematical definition of "Z screens X from Y." All information that Y has about X is contained in Z.
 
@@ -161,6 +178,10 @@ We say X goes to Y goes to Z forms a **Markov chain** if X and Z are conditional
 $$p(x,z|y) = p(x|y) \cdot p(z|y)$$
 
 This is equivalent to I(X:Z|Y) = 0.
+
+The equation says that once $Y$ is known, the joint probability for $X$ and
+$Z$ factors into two separate probabilities. In ordinary language, $Y$ carries
+all the information that connects the two ends.
 
 ### The Screening Property
 
@@ -287,11 +308,18 @@ Here $\varepsilon(B)$ measures how much correlation can bypass the separator.
 Its form follows the geometry of the separator itself, with natural candidates
 including boundary-size scaling or exponential decay with separation.
 
+$A$, $B$, and $C$ are regions or patches. $B$ is the separator. The small
+quantity $\varepsilon(B)$ is the allowed leakage past that separator. Exact
+Markov screening would set it to zero. Realistic geometry permits a small
+nonzero remainder.
+
 ### Screening Through the Separator
 
 If region B sits between regions A and C, then B approximately screens A from C. The correlations between A and C are almost entirely mediated through B.
 
 The "almost" is quantified by ε(B). Larger separators allow more "leakage"-more correlation that bypasses the screen.
+
+![A cap, a thin collar, and the exterior form the A-B-D split used in recoverability arguments.](../assets/book_diagrams/collar-tripartition.svg){width=70%}
 
 ### Constructive Gluing (Tree Covers)
 

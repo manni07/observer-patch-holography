@@ -162,6 +162,8 @@ There is no God's-eye view. There is no absolute description of reality that exi
 
 This is the turnaround: **subjective perspectives are primary**. The “objective world” is the fixed point of consistency across many observer patches.
 
+![Many initial local descriptions can be repaired in different orders, yet converge to one shared normal form when the overlap rules close.](../assets/book_diagrams/consensus-funnel.svg){width=72%}
+
 This is the **overlap test**: If two observers share a region of experience, their accounts must agree in that overlap.
 
 ### A Simple Example

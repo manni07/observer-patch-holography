@@ -13,6 +13,15 @@ The Standard Model looked powerful and fragile at once, full of symmetry and
 fine balance. The message hidden inside all of this was easy to miss. The old
 starting point was too simple.
 
+No one person found that message. It was assembled from many traditions:
+thermodynamics, quantum theory, relativity, information theory, algebra,
+particle physics, cosmology, condensed matter, computation, and experimental
+engineering. Some names have appeared in this book because a story needs
+handles. Behind each handle sits a field of technicians, students, instrument
+builders, theorists, critics, and data analysts. OPH is best read in that
+spirit. It is a proposed synthesis of accumulated constraints, not a rejection
+of the accumulated work.
+
 ## 18.2 The Observer-First Turn
 
 This book takes the hint seriously. Physics begins with finite observers,
@@ -41,6 +50,8 @@ moves are in place, the whole architecture becomes legible.
 
 This is the hidden spine of the book. Overlap gives the rule. Entropy gives the
 selection principle. Minimality gives the economy.
+
+![The book's main ingredients form one spine from finite screens to shared public reality.](../assets/book_diagrams/synthesis-spine.svg){width=78%}
 
 ## 18.4 How Spacetime Appears
 
@@ -71,6 +82,12 @@ itself. The group that emerges is
 $$
 SU(3)\times SU(2)\times U(1)/\mathbb Z_6.
 $$
+
+This quotient notation means that the strong, weak, and hypercharge symmetry
+systems share a small common center that should not be counted six separate
+ways. $SU(3)$ carries color, $SU(2)$ carries weak doublet structure, and
+$U(1)$ carries hypercharge. The $\mathbb Z_6$ quotient is the discrete
+identification that makes the Standard Model charge lattice fit together.
 
 The color triplet follows from the minimal coupled carrier, and the
 three-generation count follows from CKM phase counting, weak-sector
@@ -111,6 +128,11 @@ $$
 acts as the ruler from which the electroweak scale, the low-energy
 electromagnetic coupling, and the gravity-facing readout are displayed.
 
+$a_{\mathrm{cell}}$ is the effective area assigned to one screen cell.
+$\ell_P$ is the Planck length. Dividing by $\ell_P^2$ makes $P$
+dimensionless: it is a pure ratio between the cell area and the Planck-area
+unit.
+
 The striking part is that this local ruler can be read from two sides of the
 same world. Feed a trial value of $P$ through the electroweak chain and the
 theory returns an inner electromagnetic observation scale. Closure asks for the
@@ -133,6 +155,13 @@ P=\phi+\frac{\sqrt{\pi}}{A_T(P)}
 $$
 
 with $A_T(P)=\alpha_{\mathrm{em}}^{-1}(0;P)$.
+
+The symbol $\phi$ is the golden ratio. $\alpha_{\mathrm{in}}(P)$ is the
+inner electromagnetic readout produced when the trial pixel value $P$ is sent
+through the OPH transport chain. $A_T(P)$ is the Thomson-limit inverse
+electromagnetic coupling computed from that trial value. The fixed point is
+the value of $P$ for which the geometric pixel and the electromagnetic readout
+name the same local scale.
 
 The value is forced in OPH because the same cell cannot choose one value for
 its geometry and another value for electromagnetic observation. The
@@ -162,11 +191,21 @@ $$
 \alpha^{-1}(0)=137.035999177(21).
 $$
 
+The ellipsis means the decimal continues. The notation $(21)$ on
+$\alpha^{-1}(0)$ means uncertainty in the last quoted digits. The number is
+the inverse fine-structure constant at zero momentum, the low-energy
+electromagnetic strength familiar from precision physics.
+
 The source-only audit row emits inverse alpha
 $136.994835164621649457949994585787193262029$ at pixel
 $1.63097209569432901817967892561191884270169$. The displayed endpoint uses the
 same OPH fixed-point equation with measured
 \(e^+e^-\to\mathrm{hadrons}\) input for the empirical hadronic contribution.
+
+The phrase $e^+e^-\to\mathrm{hadrons}$ names electron-positron annihilation
+into strongly interacting composite particles. It is not decorative detail.
+Those data help account for the hadronic contribution to the long-distance
+electromagnetic running used in the displayed endpoint.
 
 Alex Osika's optical-cavity hardware work probes the same fixed-point geometry.
 The apparatus is not a miniature universe. It is a controlled physical
@@ -257,6 +296,12 @@ That architecture does more than tidy up puzzles. It turns the universe into a
 much stranger object than classical physics ever imagined. There is no view
 from nowhere. There are views from somewhere, and a shared reality is what
 appears when those views can lock into one coherent public record.
+
+That is the human side of the synthesis as well. Physics advances because many
+partial views are forced to meet. A detector group sees one artifact. A
+mathematician sees an obstruction. A cosmologist sees a horizon. A quantum
+information theorist sees a code. A good theory earns its keep by making those
+views mutually legible without erasing their differences.
 
 The structure is not a flat list. The gauge quotient, charge lattice, counting
 chain, massless carriers, Lorentz geometry, Einstein relation, electroweak

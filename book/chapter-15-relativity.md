@@ -26,6 +26,11 @@ $$c = \frac{1}{\sqrt{\epsilon_0 \mu_0}} \approx 3 \times 10^8 \text{ m/s}$$
 
 This was the speed of light. Maxwell had discovered that light is an electromagnetic wave.
 
+$c$ is the speed of light in vacuum. $\epsilon_0$ is the electric permittivity
+of free space, and $\mu_0$ is the magnetic permeability of free space. Maxwell
+did not put light into the theory by hand. The wave speed fell out of the
+electric and magnetic constants and matched the measured speed of light.
+
 But there was a puzzle. Speed relative to what?
 
 ### The Aether principle
@@ -84,6 +89,11 @@ The mathematics falls out elegantly. Define:
 $$\gamma = \frac{1}{\sqrt{1 - v^2/c^2}}$$
 
 This is the Lorentz factor. For everyday speeds, gamma is essentially 1. For v = 0.9c, gamma = 2.3. As v approaches c, gamma goes to infinity.
+
+Here $v$ is the relative speed between inertial observers. The ratio $v/c$
+measures that speed as a fraction of light speed. The square root in the
+denominator is why nothing with mass reaches $c$: as $v$ approaches $c$,
+$\gamma$ grows without bound.
 
 Time dilation:
 
@@ -220,6 +230,12 @@ On the left: the Einstein tensor G, which describes the curvature of spacetime, 
 
 On the right: the stress-energy tensor T, which describes the distribution of matter and energy.
 
+The indices $\mu$ and $\nu$ label spacetime directions. $g_{\mu\nu}$ is the
+metric, the object that tells spacetime how to measure intervals. $G_{\mu\nu}$
+is built from the curvature of that metric. $\Lambda$ is the cosmological
+constant. $T_{\mu\nu}$ is the stress-energy tensor. The coefficient
+$8\pi G/c^4$ sets the strength of gravity in ordinary units.
+
 John Wheeler summarized it: "Spacetime tells matter how to move; matter tells spacetime how to curve."
 
 ### Gravitational Time Dilation
@@ -278,6 +294,12 @@ This modular flow provides the observer's natural notion of time on that patch.
 Here $A$ is any observable the patch can ask about. The formula says how that
 question changes as the patch's internal clock advances.
 
+$\rho_P$ is the reduced density matrix for patch $P$. The logarithm turns the
+state into its modular Hamiltonian $K_P$. The map $\sigma_t$ is the modular
+time evolution, and $t$ is the modular time parameter. The exponentials are the
+operator version of changing a question by flowing it forward and then back
+through the patch's internal clock.
+
 ### Geometric Modular Flow on Caps
 
 Consider a cap $C$ on the sphere $S^2$. In the smooth regime, the cap's
@@ -298,6 +320,8 @@ claim is that the state-defined clock becomes a geometric boost.
 That is the bridge. The clock defined by the state becomes the same clock
 spacetime symmetry was looking for.
 
+![Modular flow on a cap acts like an internal clock whose smooth limit becomes geometric motion on the screen.](../assets/book_diagrams/modular-flow-cap.svg){width=78%}
+
 ### Conformal Symmetry Is Lorentz Symmetry
 
 The crucial fact is that the group of orientation-preserving conformal
@@ -306,6 +330,13 @@ transformations of $S^2$ is
 $$\text{Conf}^+(S^2) \cong PSL(2, \mathbb{C}) \cong SO^+(3,1)$$
 
 The conformal group of the sphere is isomorphic to the Lorentz group.
+
+$\text{Conf}^+(S^2)$ is the orientation-preserving conformal group of the
+two-sphere. $PSL(2,\mathbb C)$ is the projective special linear group acting
+by Moebius transformations. $SO^+(3,1)$ is the proper orthochronous Lorentz
+group, the part of the Lorentz group connected to ordinary rotations and
+boosts. The symbol $\cong$ means "is isomorphic to": the groups have the same
+structure even though they are written in different languages.
 
 Moebius transformations of the complex plane (which is the Riemann sphere S^2) are exactly Lorentz transformations of the celestial sphere that a relativistic observer sees.
 
@@ -394,6 +425,12 @@ The first law relates entropy variation to modular energy:
 
 $$\delta S_C = \delta \langle K_C \rangle$$
 
+$S_{\text{gen}}(C)$ is the generalized entropy associated with cap $C$.
+$\langle A\rangle$ is the expected area term, $G$ is Newton's constant, and
+$S_{\text{bulk}}(C)$ is the entropy of the bulk quantum fields assigned to the
+cap. The symbol $\delta$ means a small allowed variation. The equality says
+that a small entropy change matches a small modular-energy change.
+
 On the special type-I realization where one may write $K_C = 2\pi B_C + \text{const}$, this becomes:
 
 $$\delta S_C = 2\pi \delta \langle B_C \rangle$$
@@ -420,6 +457,8 @@ generator, and the same half-line derivative identifies that generator with
 the local null-stress charge on that family. The same lightlike bridge then
 feeds the bounded-interval transport and tensor reconstruction used by the
 framework.
+
+![Near a cap boundary point, the curved screen geometry straightens into a null light ray.](../assets/book_diagrams/null-blowup.svg){width=82%}
 
 ### The Einstein Equation
 
@@ -449,6 +488,12 @@ $$G_{ab} + \Lambda g_{ab} = 8\pi G \langle T_{ab} \rangle$$
 This is the semiclassical Einstein equation, obtained by combining the
 thermodynamic argument with patch consistency in the scaling regime.
 
+The lower-case indices $a,b$ again label spacetime directions. The angle
+brackets around $T_{ab}$ mean expectation value: matter is still quantum, so
+the geometry responds to the averaged stress-energy seen in the effective
+state. This is why the equation is semiclassical. Geometry is classical in the
+approximation, while matter retains quantum expectation values.
+
 ### The Derivation Chain
 
 The chain is straightforward. MaxEnt selects the equilibrium state among
@@ -468,6 +513,8 @@ follows in the same effective regime.
 **Geodesic motion.** For pressureless matter ("dust"), $T^{ab} = \rho u^a u^b$. Conservation gives $\nabla_a(\rho u^a u^b) = 0$. Working this out yields the geodesic equation: $u^a \nabla_a u^b = 0$. Free particles follow the straightest paths through curved spacetime. No additional postulate is needed. It follows from the Einstein equation in the same effective regime.
 
 **Newton's laws.** In the weak-field, slow-motion limit, the Einstein equation reduces to Newton's gravitational law: $\nabla^2 \Phi = 4\pi G \rho$. Geodesic motion becomes $\ddot{\mathbf{x}} = -\nabla \Phi$. This is Newton's second law with gravitational force.
+
+![Einstein's equation reduces to Poisson's equation, gravitational potential, and Newton's force law in the weak-field slow-motion limit.](../assets/book_diagrams/newton-limit.svg){width=82%}
 
 So classical mechanics is a derived consequence. The familiar laws of motion and gravity emerge from the deeper framework when we consider the appropriate limit. Newton's physics remains valid in its domain and belongs to the effective level.
 
@@ -592,7 +639,7 @@ This lands near the empirical MOND acceleration scale. The proximity matters
 because it ties galaxy-scale anomalies back to the same de Sitter capacity
 logic that shaped the horizon from the start.
 
-## 15.14 Reverse Engineering Summary
+## 15.13 Reverse Engineering Summary
 
 The old picture treated time as universal, gravity as a force, and geometry as
 a fixed stage. Relativity overturns each part. The speed of light forces time

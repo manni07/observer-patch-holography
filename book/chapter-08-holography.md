@@ -21,6 +21,8 @@ Black holes broke that picture.
 
 The first hint came from black holes.
 
+![Boundary cells can carry the correlated ledger from which interior events are reconstructed.](../assets/book_diagrams/boundary-ledger.svg){width=80%}
+
 In the 1970s, Bekenstein and Hawking showed that black hole entropy is proportional to surface area, not volume. A black hole with twice the horizon area has twice the entropy-twice the information content. This was strange. Normal systems have entropy proportional to volume. A box twice as big can hold twice as much stuff.
 
 But black holes are different. Their information lives on the surface:
@@ -28,6 +30,11 @@ But black holes are different. Their information lives on the surface:
 $$S_{BH} = \frac{k_B c^3}{4 G \hbar} A = \frac{A}{4 \ell_P^2}$$
 
 In entropy units, black hole entropy is $A/(4\ell_P^2)$; in bits this becomes $A/(4\ell_P^2 \ln 2)$.
+
+$S_{BH}$ is Bekenstein-Hawking entropy. $A$ is horizon area. The constants
+$k_B$, $c$, $G$, and $\hbar$ convert the area law into ordinary physical
+units. The Planck length $\ell_P$ packages those constants into one length
+scale, so the second expression reads as area counted in Planck units.
 
 ### The Bekenstein Bound
 
@@ -48,6 +55,10 @@ The original **Bekenstein bound** is
 $$S \leq \frac{2\pi R E}{\hbar c}$$
 
 and black-hole saturation is what turns that pressure into the familiar area law. Together they show that gravity pushes information storage toward boundary scaling.
+
+Here $S$ is entropy, $R$ is the radius of the system, and $E$ is its total
+energy. The bound says that a finite region with finite energy cannot carry
+unlimited information.
 
 ### The Holographic Principle
 
@@ -171,6 +182,12 @@ $$\langle \mathcal{O}(x) \mathcal{O}(y) \rangle = \frac{C}{|x-y|^{2\Delta}}$$
 
 No characteristic scale means power-law decay-the same form at all distances.
 
+$\mathcal O(x)$ is an operator inserted at position $x$. The number $\lambda$
+rescales distances. $\Delta$ is the scaling dimension, which tells how strongly
+the operator changes under zooming. $C$ is a normalization constant, and
+$|x-y|$ is the distance between insertions. The power law is the signature of a
+theory with no preferred length scale.
+
 **Central charge**: Every CFT has a number c that counts degrees of freedom.
 
 ## 8.7 Inside the Soup Can: AdS Geometry
@@ -201,6 +218,12 @@ Witten, Gubser, Klebanov, and Polyakov wrote down the precise formula for this t
 $$Z_{gravity}[\phi \to \phi_0] = \left\langle \exp\left(\int d^d x \, \phi_0(x) \mathcal{O}(x)\right) \right\rangle_{CFT}$$
 
 This is the working dictionary between bulk and boundary. The left-hand side asks the gravity theory for its partition function while the bulk field $\phi$ is forced to approach the boundary profile $\phi_0$. The right-hand side asks the boundary theory for the generating functional obtained by turning on a source $\phi_0(x)$ for the operator $\mathcal{O}(x)$.
+
+$Z_{gravity}$ is the gravitational partition function, a compact object that
+encodes all bulk amplitudes. The integral $\int d^d x$ runs over the
+$d$-dimensional boundary. The angle brackets mean expectation value in the
+CFT. The exponential collects the effect of turning on the source throughout
+the boundary theory.
 
 The formula earns its keep because it turns a bulk question into a boundary
 calculation. Fix the boundary data, and the bulk tells you how the interior

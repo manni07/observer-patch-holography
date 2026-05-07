@@ -31,6 +31,13 @@ $$\eta_{max} = 1 - \frac{T_{cold}}{T_{hot}}$$
 
 It doesn't matter how clever your design is. Nature sets a limit.
 
+The notation is deliberately plain. The Greek letter $\eta$ names efficiency,
+the fraction of heat input that can become useful work. $T_{hot}$ is the
+temperature of the hot reservoir and $T_{cold}$ is the temperature of the cold
+reservoir. Both temperatures must be absolute temperatures, measured from
+absolute zero. Carnot's result says that an engine works only because heat can
+fall from hot to cold. No clever gears can beat that temperature ratio.
+
 Rudolf Clausius gave this limit a name: **entropy**. He stated the Second Law of Thermodynamics: in an isolated system, entropy never decreases.
 
 But Clausius's entropy was phenomenological-it described what happens without explaining why. The explanation came from Ludwig Boltzmann.
@@ -51,6 +58,18 @@ to the same macrostate.
 $$S = k_B \ln W$$
 
 where $W$ is the number of microstates compatible with the macrostate.
+$S$ is entropy. $k_B$ is Boltzmann's constant, the conversion factor between
+microscopic counting and ordinary thermodynamic units. The logarithm appears
+because independent choices multiply their microstate counts, while entropy is
+additive. If one box has $W_1$ possibilities and another has $W_2$, the pair
+has $W_1W_2$ possibilities, and $\ln(W_1W_2)=\ln W_1+\ln W_2$.
+
+Boltzmann did not win this argument by rhetoric. He was working in a period
+when many leading physicists still doubted that atoms were real. The entropy
+formula became part of a larger historical turn: chemistry, kinetic theory,
+Brownian motion, and later Perrin's experiments all converged on the same
+conclusion. The statistical view of heat was not one person's guess. It was a
+collective reconstruction of matter from many clues.
 
 ### Why Entropy Increases
 
@@ -65,6 +84,8 @@ As the gas evolves randomly, it wanders through microstates. It spends almost al
 **The hint**: The Second Law is not a new force. It is statistics. Entropy increases because high-entropy states are overwhelmingly more probable.
 
 **The lesson**: Irreversibility doesn't come from the laws-it comes from initial conditions and counting.
+
+![Record formation consumes low-entropy resources and exports the cost as heat and waste entropy.](../assets/book_diagrams/entropy-arrow.svg){width=78%}
 
 ### The Reversibility Paradox
 
@@ -130,6 +151,12 @@ In 1948, Claude Shannon created information theory. He needed a measure of uncer
 $$H = -\sum_i p_i \log p_i$$
 
 This closely parallels the Gibbs/Shannon entropy formula, and Boltzmann's $S = k_B \ln W$ appears as the equal-probability special case.
+
+Here $H$ is Shannon entropy, the average missing information before the
+message is known. The index $i$ labels the possible messages or outcomes, and
+$p_i$ is the probability of outcome $i$. The minus sign is present because
+probabilities lie between 0 and 1, so their logarithms are negative. The
+formula turns uncertainty into a number.
 
 The connection is not coincidence. Thermodynamic and information-theoretic entropy share the same core counting logic, though the standard formulas are written in slightly different settings.
 
@@ -316,6 +343,51 @@ curve when information is preserved. In the low-energy regimes relevant to the
 book, entanglement commonly tracks boundary area more closely than bulk
 volume. None of this looks accidental. All of it points toward a world in
 which information has a budget, storage has a geometry, and memory has a cost.
+
+### A Short History of the Arrow
+
+The arrow of time is a collective discovery because every generation found a
+different face of the same constraint. Carnot was not trying to solve the
+philosophy of time. He was trying to understand engines. Clausius did not
+begin with black holes. He named entropy because heat engines forced him to
+distinguish usable energy from unavailable energy. Boltzmann did not have
+quantum information theory. He had atoms, probabilities, and the courage to
+say that thermodynamics was counting. Gibbs turned that counting into a
+general statistical language. Planck used entropy in the route to quantum
+theory. Shannon rediscovered an information-theoretic cousin while studying
+communication. Landauer then showed that information processing itself pays a
+thermodynamic price. Bekenstein and Hawking put entropy on horizons. Page,
+Hayden, Preskill, Almheiri, Engelhardt, Marolf, Maxfield, Penington, and many
+others turned black-hole entropy into a sharp quantum-information problem.
+
+That chain is important because entropy is easy to misread as a single
+metaphor. In this book it is not a metaphor. It is the same accounting idea
+appearing in different physical costumes. An engine loses useful work because
+heat spreads. A gas equilibrates because most microscopic arrangements look
+equilibrated at coarse resolution. A memory costs energy because erasure
+removes alternatives. A black hole carries entropy because a horizon hides
+microscopic distinctions behind a finite area. A public record exists because
+some physical system has been driven into a durable low-entropy correlation
+with what happened.
+
+The reader should also notice how modest the formulas are. Carnot's
+$\eta_{max}=1-T_{cold}/T_{hot}$ does not say how to build a particular engine.
+It says what no engine can beat. Boltzmann's $S=k_B\ln W$ does not list every
+molecule. It says what matters after coarse-graining: how many microscopic
+possibilities fit the same macroscopic description. Shannon's
+$H=-\sum_i p_i\log_2 p_i$ does not care whether the messages are poems,
+voltages, or detector clicks. It measures uncertainty in a probability
+distribution. The horizon bound $S(P)\leq \mathrm{Area}(P)/(4\ell_P^2)$ does
+not tell us the detailed microstates of quantum gravity. It says the storage
+budget scales like area.
+
+Together those equations explain why observers cannot be free-floating
+witnesses. To observe, an observer must couple to something. To remember, the
+observer must build a physical record. To compare records, observers must
+send, receive, and stabilize information. All of that happens under an
+entropy budget. If OPH treats public reality as a consensus process, entropy
+is the cost accounting for that process. Agreement requires records, and
+records require an arrow.
 
 ---
 

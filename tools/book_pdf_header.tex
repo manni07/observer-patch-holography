@@ -10,6 +10,8 @@
 \usepackage{enumitem}
 \usepackage{fvextra}
 \usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{tikz}
 \usepackage{xurl}
 
 \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
@@ -21,6 +23,11 @@
 \definecolor{Muted}{HTML}{6B7280}
 \definecolor{Rule}{HTML}{D5DEE5}
 \definecolor{CodeBg}{HTML}{F4F7F9}
+\definecolor{CoverBg}{HTML}{080C12}
+\definecolor{CoverInk}{HTML}{F3F7FA}
+\definecolor{CoverMuted}{HTML}{AAB5C4}
+\definecolor{CoverCyan}{HTML}{5DE3F2}
+\definecolor{CoverGold}{HTML}{F4C24A}
 
 \color{Ink}
 \providecommand{\hypersetup}[1]{}
@@ -102,22 +109,30 @@
 \setlength{\cftbeforesecskip}{0.12em}
 
 \makeatletter
+\newcommand{\@subtitle}{}
+\providecommand{\subtitle}[1]{\gdef\@subtitle{#1}}
 \renewcommand{\maketitle}{%
   \begin{titlepage}
     \thispagestyle{empty}
-    \centering
-    \vspace*{0.16\textheight}
-    {\Large\scshape\color{Accent}Floating Pragma\par}
-    \vspace{1.2cm}
-    {\Huge\bfseries\color{Ink}\@title\par}
-    \vspace{0.9cm}
-    {\color{Accent}\rule{0.62\linewidth}{1pt}\par}
-    \vfill
-    {\Large\itshape\color{Ink}\@author\par}
-    \vspace{0.35cm}
-    {\small\color{Muted}\@date\par}
-    \vspace*{0.08\textheight}
+    \IfFileExists{assets/book-cover.pdf}{%
+      \begin{tikzpicture}[remember picture,overlay]
+        \node[inner sep=0pt] at (current page.center){%
+          \includegraphics[width=\paperwidth,height=\paperheight]{assets/book-cover.pdf}%
+        };
+      \end{tikzpicture}%
+      \null
+    }{%
+      \noindent
+      \colorbox{CoverBg}{\parbox[c][\paperheight][c]{\paperwidth}{\centering
+        {\fontsize{30}{36}\selectfont\bfseries\color{CoverInk}\@title\par}
+        \vspace{0.2in}
+        {\Large\itshape\color{CoverMuted}\@subtitle\par}
+        \vspace{0.5in}
+        {\Large\scshape\color{CoverInk}\@author\par}
+      }}%
+    }
   \end{titlepage}
+  \clearpage
 }
 \makeatother
 

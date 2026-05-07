@@ -88,6 +88,13 @@ $$\alpha^{-1}(0)=137.035999177(21).$$
 The constant represents the electromagnetic width of the smallest
 observer-supporting pixel. Its value is forced because the inside and outside
 descriptions of that pixel have to land on the same number.
+
+The symbol $\varphi$ is the golden ratio. $P$ is the pixel area ratio
+$a_{\mathrm{cell}}/\ell_P^2$, the area of a screen cell in Planck-area units.
+$\sqrt{\pi}$ is the boundary Gaussian normalization already used in the local
+ruler discussion. The inverse $\alpha^{-1}(0)$ is the long-distance
+fine-structure readout. The parenthesized digits again indicate the quoted
+uncertainty in the final digits.
 For the displayed Thomson endpoint, the hadronic spectral contribution has a
 separate empirical \(e^+e^-\to\mathrm{hadrons}\) payload class. The source-only
 audit row is kept in the technical ledger.
@@ -161,6 +168,8 @@ This tension generates most of the problems we've discussed: consciousness, quan
 
 The observer-first reading drops the view-from-nowhere assumption. There is no perspective-free inventory waiting behind every local viewpoint. There are only views from somewhere: patches on the holographic screen, finite observers, and the records they can compare. Objectivity is the overlap-stable summary of those partial views.
 
+![Reality, observers, records, and models form a loop in which the world becomes partially explicit to itself.](../assets/book_diagrams/observer-loop.svg){width=78%}
+
 The consistency constraints are rigid. Not every perspective survives. The physics we discover is the physics that can be coherently maintained across all surviving perspectives. That's why it's so reliable, so predictive, so shockingly precise. It's been filtered by the harshest criterion imaginable: self-consistency across all possible observers.
 
 ## 19.9 The Hacker and the Hacked
@@ -190,6 +199,51 @@ pressure points where metaphysics and physics meet.
 A sheaf condition is the mathematical version of a simple demand: local
 descriptions that agree on their overlaps should glue into one consistent
 description. That is the formal cousin of the book's observer-overlap rule.
+
+### Philosophy After the Equations
+
+The final metaphysical move should not erase the mathematics that made it
+possible. The book's claim is not that experience is magic, or that the world
+is whatever an observer wishes it to be. It is almost the opposite. Once
+experience is treated as patch-internal and public reality is treated as
+overlap-stable, the constraints become severe. A private impression becomes a
+public fact only if it can be anchored in records, compared through shared
+interfaces, and kept coherent with the rest of the world.
+
+That lets older philosophical language be translated into technical pressure.
+The "view from nowhere" becomes the demand for a global description that no
+finite observer actually occupies. A "phenomenal point of view" becomes the
+inside of a bounded, record-making process. A "law of nature" becomes a
+stable regularity that survives comparison across patches. A "meaning" is no
+longer a label attached from outside the universe. It is a pattern stabilized
+inside the universe by observers who remember, interpret, and coordinate.
+
+This is why the chapter treats sheaves as more than a mathematical aside. A
+sheaf begins with local data. If the local descriptions agree on overlaps, a
+global section may be glued. If they do not agree, the obstruction is real.
+Translated back into the book's language, objectivity is the successful
+gluing of perspective-bound descriptions. The metaphor is not perfect because
+quantum states, non-commuting algebras, and recoverability add extra
+structure. But the sheaf image captures the discipline: local agreement is
+the route to public world, and failed agreement is a diagnostic, not an
+embarrassment.
+
+The strange-loop language also needs discipline. Douglas Hofstadter used
+strange loops to describe systems that climb levels and return to themselves.
+Godel's theorem is one mathematical inspiration, Escher's drawings are a
+visual one, and self-reference in computation is another. OPH's loop is not a
+claim that the future causes the past in ordinary time. It is a structural
+claim: a world can produce observers who model the world, and those models
+can become part of the same world they describe. From inside subjective time
+that feels like a history. From the full structural view it is a
+self-consistency condition.
+
+The humility here is important. The metaphysical reading is a continuation of
+the physics, not a replacement for it. If the overlap conditions fail, if the
+particle ledger fails, if the dark-sector continuation fails, or if the
+recoverability claims cannot be sharpened, the interpretation must change.
+That is a feature. A metaphysics worthy of physics should remain exposed to
+physics.
 
 ## 19.11 Reverse Engineering Summary
 

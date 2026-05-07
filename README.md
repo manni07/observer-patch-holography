@@ -211,7 +211,7 @@ Issue `#155` tracks that phase, anomaly, and topological-angle bridge.
 ## Repository Guide
 
 - **[`paper/`](paper):** PDFs, LaTeX sources, and release metadata.
-- **[`book/`](book):** OPH Book source. Print-PDF build notes live in [`book/README.md`](book/README.md).
+- **[`book/`](book):** OPH Book source and generated downloadable PDF. Print-PDF build notes live in [`book/README.md`](book/README.md).
 - **[`code/`](code):** computational material, particle outputs, and experiments.
 - **[`HADRON.md`](HADRON.md):** policy for QCD-limited particle rows, empirical
   \(e^+e^-\to\mathrm{hadrons}\) input, and fine-structure hadron closure.

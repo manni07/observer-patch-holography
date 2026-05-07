@@ -38,9 +38,27 @@ $$|\psi_L\rangle = \alpha|000\rangle + \beta|111\rangle$$
 
 This isn't copying-it's entangling. The information about alpha and beta is spread across correlations between the three qubits.
 
+The subscript $L$ means "logical." $|\psi_L\rangle$ is the protected qubit as
+seen by the code, while the three slots inside $|000\rangle$ and
+$|111\rangle$ are the physical qubits that carry it. The amplitudes $\alpha$
+and $\beta$ are the same amplitudes that would describe one unencoded qubit.
+The code has not made three independent copies. It has hidden one logical
+state in a three-body pattern.
+
 To detect errors without measuring the data, you measure **parity**-whether pairs of qubits match. This reveals which qubit flipped without revealing whether the qubits are 0 or 1. The superposition survives.
 
+![A logical qubit is not copied into several carriers; it is hidden in a pattern that can survive local damage.](../assets/book_diagrams/error-correction-layers.svg){width=80%}
+
 Quantum error correction is possible. Information can be protected without copying by spreading it across entangled patterns. The universe permits robust quantum information.
+
+That discovery came from a crowded decade. Shor gave the first shock. Andrew
+Steane found a different route using classical coding ideas. Calderbank,
+Shor, and Steane connected quantum codes to a broad algebraic family. Gottesman
+showed how stabilizer codes could be handled with a practical symbolic
+calculus. Knill and Laflamme then gave the clean condition for when a code can
+correct a set of errors. The modern surface-code program adds engineers,
+experimentalists, and many thousands of calibration decisions. The phrase
+"quantum error correction" now names a community achievement, not a lone trick.
 
 ## 10.3 The First-Principles Reframing: Reality Is Error-Corrected
 
@@ -95,6 +113,11 @@ $$C = 1 - H_2(p)$$
 
 Below this rate, there exist codes that make error probability arbitrarily small. Above this rate, errors are inevitable.
 
+Here $C$ is channel capacity, the maximum reliable information rate. The
+function $H_2(p)$ is the binary entropy of a bit that flips with probability
+$p$. If the channel is nearly noiseless, $p$ is small and the capacity is near
+1 bit per use. If the channel is pure confusion, the capacity collapses.
+
 Shannon's theorem says: **arbitrarily reliable communication is possible even in a noisy world**, as long as information is encoded into the right subspace.
 
 ### The Hamming Code
@@ -124,6 +147,12 @@ Shor's nine-qubit code nests a phase-flip code inside a bit-flip code:
 $$|0_L\rangle = \frac{(|000\rangle + |111\rangle)^{\otimes 3}}{2\sqrt{2}}$$
 
 This corrects any single-qubit error. The encoding spreads information so thoroughly that local noise cannot destroy it.
+
+The tensor-power symbol $\otimes 3$ means "take three independent blocks of
+the same three-qubit cat state." The denominator $2\sqrt{2}$ normalizes the
+nine-qubit superposition. Shor's code is doing two jobs at once: it protects
+against bit flips and phase flips by nesting one repetition idea inside
+another.
 
 ### The Surface Code
 
@@ -201,6 +230,13 @@ information. The error operators are the possible ways noise can disturb the
 physical carrier. The equation is a compact test for whether the protected
 information can survive those disturbances.
 
+The projector $P$ keeps only the code space. $E_a$ and $E_b$ are possible
+error operators, and the dagger means the adjoint operation, the quantum
+version of reversing an operator in an inner product. The numbers
+$\alpha_{ab}$ form a small matrix of syndrome data. The condition says that
+inside the protected subspace, errors can change the syndrome, but they cannot
+learn or scramble the logical message itself.
+
 Within the code space, all errors look the same up to a scalar. Errors don't move you between different logical states. The scalar can be detected as the syndrome and removed.
 
 This is the heart of the theorem. The formula says the error channel cannot
@@ -242,7 +278,58 @@ Error correction costs energy.
 
 When you detect an error, you learn information (the syndrome). That information must eventually be erased. Erasing a bit costs at least k_B T ln 2 of energy-**Landauer's principle**.
 
+In formula form the cost is $k_B T\ln 2$. $k_B$ is Boltzmann's constant, $T$ is
+temperature, and $\ln 2$ appears because one erased bit removes two possible
+logical states. This is why error correction is never only abstract
+bookkeeping. A real observer must pay thermodynamic rent for stable records.
+
 Maintaining a stable code space requires continuous free energy input. **Observers spend energy to keep records consistent.**
+
+### Why Error Correction Is More Than a Metaphor
+
+Error correction is sometimes described as a metaphor for spacetime. The
+chapter uses a stronger reading. The laboratory codes and the holographic
+codes share an actual structural problem: how can a message remain available
+when no single local carrier is trusted?
+
+In a classical repetition code the answer is visible. Store 000 for logical
+0 and 111 for logical 1. If one bit flips, majority vote repairs it. Quantum
+codes cannot do that, because an unknown state
+$\alpha|0\rangle+\beta|1\rangle$ cannot be copied into three independent
+versions. The protected information must be stored in correlations. The
+syndrome measurement asks only which error happened, not which logical state
+was present. That distinction is the miracle. The code learns enough to
+repair the carrier while refusing to learn the protected message.
+
+The Knill-Laflamme equation
+
+$$P E_a^\dagger E_b P=\alpha_{ab}P$$
+
+is the compact version of that miracle. $P$ projects onto the code subspace.
+$E_a$ and $E_b$ are possible errors. The adjoint dagger is the quantum
+operation that reverses an operator inside an inner product. The matrix
+$\alpha_{ab}$ records syndrome information. The right-hand side being
+proportional to $P$ means that, inside the code space, the error process has
+not learned the logical state. If the environment could tell whether the code
+stored $|0_L\rangle$ or $|1_L\rangle$, the information would have leaked and
+correction would fail.
+
+Holographic reconstruction has the same flavor. A bulk degree of freedom is
+not stored at one boundary pixel. It is encoded across an extended boundary
+region. Erase some of the boundary and the bulk operator can still be
+reconstructed from what remains, as long as the entanglement wedge supports
+it. The formula is not identical to a lab surface code, and gravity only
+gives approximate codes at finite $N$. But the logic is close enough to be
+one of the central clues of modern quantum gravity.
+
+This is also the right place to remember the engineering community. A
+threshold theorem is a theorem, but a working protected qubit is a long
+industrial and experimental campaign. It requires materials, fabrication,
+cryogenics, microwave control, lasers or traps, calibration, decoding
+algorithms, and patient accounting of every error source. Physics becomes
+public through that labor. The same is true in the book's cosmological
+language: a public world is not a pristine message sitting untouched. It is a
+message continually protected by redundancy, repair, and thermodynamic work.
 
 ## 10.12 Reverse Engineering Summary
 

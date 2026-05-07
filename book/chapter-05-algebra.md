@@ -22,6 +22,17 @@ $$[X, P] = XP - PX = i\hbar$$
 
 This is the **commutator**, and it's the heart of quantum mechanics.
 
+The symbols are the whole lesson. $X$ is the position operator. $P$ is the
+momentum operator. Writing $XP$ means "ask the momentum question after the
+position question" in the algebraic order used by operators, while $PX$ means
+the reverse order. The bracket $[X,P]$ measures the failure of those two orders
+to agree. The number $i$ is the imaginary unit and $\hbar$ is Planck's
+constant divided by $2\pi$. Nature is not saying that our instruments are
+clumsy. It is saying that these two questions do not belong to one classical
+spreadsheet of pre-existing answers.
+
+![When questions do not commute, asking A then B can be a different physical operation from asking B then A.](../assets/book_diagrams/question-algebra-order.svg){width=78%}
+
 **The hint**: Observable quantities don't commute. The order of questions changes the answers.
 
 **The lesson**: Objects don't have pre-existing values for all properties. Measurement is not passive reading-it's active intervention.
@@ -103,6 +114,11 @@ $$\Delta X \cdot \Delta P \geq \frac{\hbar}{2}$$
 
 The more precisely you know position, the less precisely you can know momentum, and vice versa.
 
+$\Delta X$ and $\Delta P$ mean the spreads, or standard deviations, of repeated
+position and momentum measurements prepared in the same state. The inequality
+does not refer to one bad measurement. It refers to the shape of the state
+itself. A quantum state cannot make both spreads vanish.
+
 This does not come from clumsy measurement devices. It is a fundamental feature
 of reality. There is no state that has both precise position and precise
 momentum. Such a state does not exist.
@@ -132,6 +148,12 @@ Thomas Bayes and Pierre-Simon Laplace developed the rules for updating probabili
 $$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$$
 
 This "Bayesian update" is how rational agents modify beliefs in light of evidence. If two observers start with the same priors and observe the same evidence, this rule guarantees they reach the same posteriors.
+
+The vertical bar means "given." $P(A|B)$ is the probability of $A$ after
+learning $B$. $P(A)$ is the prior probability of $A$, $P(B|A)$ says how likely
+the evidence $B$ would be if $A$ were true, and $P(B)$ normalizes the result.
+Bayes' rule is a small equation with a large moral for this book: shared
+evidence can make separate observers converge.
 
 This is a form of consistency. Bayesian reasoning ensures that observers who share information will converge.
 
@@ -166,6 +188,13 @@ The phases matter. In the double-slit experiment, the probability is |α + β|²
 $$|α + β|^2 = |α|^2 + |β|^2 + 2\text{Re}(α^*β)$$
 
 The cross term $2\text{Re}(α^*β)$ creates interference patterns.
+
+The ket symbols $|\uparrow\rangle$ and $|\downarrow\rangle$ name two possible
+spin states. The coefficients $\alpha$ and $\beta$ are amplitudes, not ordinary
+probabilities. Their squared magnitudes become probabilities only when the
+question is asked. The star in $\alpha^*$ means complex conjugation, and
+$\text{Re}$ means "take the real part." Interference enters through the cross
+term because amplitudes add before probabilities are formed.
 
 ### Observables as Operators
 
@@ -356,6 +385,53 @@ spacelike-separated regions. Non-commutativity is the feature that makes the
 quantum consistency problem genuinely hard.
 
 The algebraic structure is not optional. It is what the hints from quantum mechanics force us to accept. OPH then explores a stronger interpretation: non-commutativity is deeply tied to the difficulty of global consistency, not an arbitrary extra feature. The "strangeness" of quantum mechanics is thereby read as part of the price of a structured reality, not as a standalone theorem from consistency alone.
+
+### The People Behind the Algebra
+
+Quantum mechanics can look like a finished cathedral, but it was built under
+pressure by people solving incompatible puzzles. Planck introduced the quantum
+of action in 1900 while trying to fit black-body radiation. Einstein used
+light quanta to explain the photoelectric effect. Bohr used quantized orbits
+to account for hydrogen spectra, even though the picture was internally
+strained. Sommerfeld, Wilson, and others refined the old quantum theory until
+its failures became too precise to ignore. Heisenberg then threw away
+unobservable electron orbits. Born saw matrices. Jordan helped formalize the
+rules. Schrodinger found wave mechanics. Dirac showed that the matrix and wave
+pictures belonged to one transformation theory. Von Neumann put the Hilbert
+space structure on a rigorous footing.
+
+The historical point is not ornamental. It tells us why the algebra should be
+taken seriously. The non-commuting product was not invented because anyone
+wanted nature to be strange. It was forced by spectral lines, scattering,
+atomic stability, and the failure of the old orbit picture. The notation
+$XP\neq PX$ is therefore not a philosophical slogan. It is a compressed
+record of a long experimental and mathematical reconstruction.
+
+The same is true for the uncertainty relation. When the book writes
+$\Delta X\,\Delta P\geq \hbar/2$, the symbol $\Delta X$ means the spread of
+position outcomes prepared in a given state, and $\Delta P$ means the spread
+of momentum outcomes in that same state. It does not merely say that a human
+observer is clumsy. It says a state that makes the position question sharply
+answerable cannot also make the momentum question sharply answerable. The
+restriction belongs to the algebra of questions.
+
+That is why OPH puts algebras on patches. A patch is not just a region of
+space with a box of facts inside it. It is a region with a menu of possible
+questions, and the menu has structure. Some questions can be asked together.
+Some cannot. Some are related by transformation. Some commute with questions
+in a distant patch and therefore respect causal independence. The overlap
+problem is then the problem of making these local menus agree where they
+refer to the same shared records.
+
+The chapter also introduces modular flow because the algebra-state pair is
+already richer than a static database. A state tells the algebra how
+expectation values are assigned. In favorable cases the pair carries a
+natural internal flow, written
+$\sigma_t(A)=\Delta^{it}A\Delta^{-it}$. Here $A$ is an observable, $t$ is the
+flow parameter, and $\Delta$ is the modular operator built from the algebra
+and state. This is the first glimpse of a recurring OPH pattern: once the
+right local structure is specified, time-like behavior can be read from the
+inside rather than imposed by an external clock.
 
 The next chapter develops the overlap consistency condition in detail: exactly how must measurements on shared regions agree?
 

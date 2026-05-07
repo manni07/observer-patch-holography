@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-labelledby="title desc">
+  <title id="title">Logical information protected by redundant physical carriers</title>
+  <desc id="desc">A logical message is distributed through several physical carriers. One damaged carrier can be repaired from the others.</desc>
+  <rect width="960" height="500" fill="#f7f5ef"/>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#2e2a25"/>
+    </marker>
+  </defs>
+  <rect x="365" y="58" width="230" height="82" rx="12" fill="#405d73" stroke="#2e2a25" stroke-width="3"/>
+  <text x="480" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#fffaf0">logical qubit</text>
+  <g fill="#fffaf0" stroke="#2e2a25" stroke-width="3">
+    <rect x="120" y="255" width="132" height="88" rx="10"/>
+    <rect x="310" y="255" width="132" height="88" rx="10"/>
+    <rect x="500" y="255" width="132" height="88" rx="10"/>
+    <rect x="690" y="255" width="132" height="88" rx="10"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2e2a25" text-anchor="middle">
+    <text x="186" y="308">carrier</text>
+    <text x="376" y="308">carrier</text>
+    <text x="566" y="308">carrier</text>
+    <text x="756" y="308">carrier</text>
+  </g>
+  <g stroke="#2e2a25" stroke-width="4" fill="none" marker-end="url(#arrow)">
+    <path d="M440 145 L205 248"/>
+    <path d="M468 145 L380 248"/>
+    <path d="M492 145 L560 248"/>
+    <path d="M520 145 L735 248"/>
+  </g>
+  <path d="M690 255 L822 343 M822 255 L690 343" stroke="#c85b43" stroke-width="8" stroke-linecap="round"/>
+  <path d="M255 390 C375 438 595 438 705 390" fill="none" stroke="#68a691" stroke-width="7" stroke-linecap="round"/>
+  <text x="480" y="458" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#2e2a25">damage is local, recovery uses the encoded pattern</text>
+</svg>

@@ -4,6 +4,7 @@ This directory contains the canonical Markdown source for the OPH book:
 
 - `prologue.md`
 - `chapter-01-*.md` through `chapter-19-*.md`
+- `appendix-*.md`
 - `epilogue.md`
 
 ## Print PDF Build
@@ -15,9 +16,9 @@ cd reverse-engineering-reality
 python3 tools/build_book_pdf.py
 ```
 
-This writes the finished PDF to the workspace root as:
+This writes the finished PDF inside this repo as:
 
-- `../reverse-engineering-reality-book.pdf`
+- `book/reverse-engineering-reality-book.pdf`
 
 The build also writes temporary intermediate files under:
 
@@ -45,6 +46,8 @@ Current output style:
 
 - trade-book trim (`6in x 9in`)
 - two-sided layout
+- full-page cover using `assets/book-cover.svg`
+- curated inline diagrams from `assets/book_diagrams/`
 - chapter-level table of contents
 - widow/orphan control
 - running headers
@@ -52,7 +55,9 @@ Current output style:
 
 ## Notes
 
-- The builder automatically combines the prologue, numbered chapters, and epilogue in order.
+- The builder automatically combines the prologue, numbered chapters, appendices, and epilogue in order.
 - Unnumbered front/back matter gets corrected running heads (`Prologue`, `Epilogue`).
 - SVG assets referenced by the book are converted to PDF during the build.
 - A few long inline scientific expressions are normalized into TeX-safe forms before compilation.
+- `book/reverse-engineering-reality-book.pdf` is a release artifact. Rebuild it before publishing
+  whenever book chapters or public release materials change.

@@ -177,7 +177,7 @@ topologique.
 ## Guide du dépôt
 
 - **[`paper/`](paper)** : PDF, sources LaTeX et métadonnées de release.
-- **[`book/`](book)** : source du livre OPH.
+- **[`book/`](book)** : source du livre OPH et PDF téléchargeable généré.
 - **[`code/`](code)** : sorties calculatoires, surface particules et expériences.
 - **[`assets/`](assets)** : schémas et figures publics.
 - **[`extra/`](extra)** : notes publiques maintenues, objections, comptes rendus expérimentaux et quelques essais de support.

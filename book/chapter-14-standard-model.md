@@ -84,6 +84,22 @@ $$P(x) = |\psi(x)|^2$$
 
 The electron isn't smeared out. It's genuinely indeterminate. The wave function doesn't describe where the electron is. It describes the probabilities of where you might find it.
 
+The early formulas introduce the basic quantum dictionary. In Planck's
+$E=nhf$, $E$ is energy, $n$ is a whole-number quantum count, $h$ is Planck's
+constant, and $f$ is frequency. In Bohr's $L=n\hbar$, $L$ is angular momentum
+and $\hbar=h/(2\pi)$. In de Broglie's $\lambda=h/p$, $\lambda$ is wavelength
+and $p$ is momentum. In Schrodinger's equation, $\psi$ is the wave function,
+$m$ is mass, $V$ is potential energy, and $\nabla^2$ measures spatial
+curvature of the wave. Born's rule, $P(x)=|\psi(x)|^2$, turns the wave
+function into a probability density for detection at position $x$.
+
+That dictionary was assembled by many people under pressure from experiment.
+Planck's blackbody curve, Einstein's photons, Bohr's spectral lines, de
+Broglie's matter waves, Schrodinger's wave mechanics, Heisenberg's matrices,
+Born's probability rule, Dirac's relativistic equation, and Feynman's diagrams
+are different steps in one long reconstruction. The Standard Model inherits
+that whole history.
+
 ### Heisenberg's Uncertainty
 
 Werner Heisenberg approached quantum mechanics differently. Instead of waves, he focused on observables: things you can actually measure.
@@ -123,6 +139,13 @@ The Dirac equation describes spin-1/2 particles like electrons:
 $$i\hbar \gamma^\mu \partial_\mu \psi - mc\psi = 0$$
 
 The equation had a problem: it predicted states with negative energy. An electron could fall into these states, releasing infinite energy.
+
+The matrices $\gamma^\mu$ are Dirac gamma matrices. They package spin and
+relativity into one algebraic object. The derivative $\partial_\mu$ measures
+change in the spacetime direction $\mu$. The field $\psi$ is now a spinor
+field rather than a single nonrelativistic wave, and $mc$ carries the particle
+mass scale. Dirac's compact line says that spin, antimatter, and special
+relativity belong together.
 
 Dirac's solution was audacious. The negative energy states are filled. The vacuum is a sea of negative-energy electrons. What we call a "positron" is a hole in this sea.
 
@@ -239,6 +262,12 @@ three-component special-unitary symmetry, $SU(2)$ is its two-component cousin,
 and $U(1)$ is the circle-like symmetry behind a single conserved charge. The
 subscripts say which physical bookkeeping each factor carries.
 
+$G_{SM}$ means "the Standard Model gauge group." The subscript $C$ means color.
+The subscript $L$ means left-handed weak isospin. The subscript $Y$ means
+hypercharge, the charge that mixes with weak isospin to produce ordinary
+electric charge after symmetry breaking. The product sign means the three
+symmetry systems are present together.
+
 **SU(3)_C** is the color group. Quarks carry color charge: red, green, or blue. Gluons carry color-anticolor combinations. The strong force binds quarks into colorless combinations.
 
 **SU(2)_L** is the weak isospin group. It acts only on left-handed particles.
@@ -326,6 +355,12 @@ $$V(\phi) = -\mu^2|\phi|^2 + \lambda|\phi|^4$$
 
 This is symmetric under rotations in field space. But the minimum isn't at zero. It's in a circular valley at radius v = mu/sqrt(lambda).
 
+$\phi$ is the Higgs field. $\mu$ and $\lambda$ are parameters of the
+potential. The negative quadratic term pushes the field away from zero, while
+the positive quartic term keeps the energy from running off to infinity. The
+nonzero radius of the valley is the vacuum expectation value that feeds masses
+to the weak bosons and fermions.
+
 The field "falls" to some point in this valley. The symmetry is broken spontaneously. The equations are symmetric; the ground state is not.
 
 That settled nonzero value is called the vacuum expectation value. It is not
@@ -350,6 +385,13 @@ This line is a compact part of the Lagrangian, the formula that says which
 field interactions are allowed. The $y$ values are Yukawa couplings. They set
 how strongly each fermion talks to the Higgs field, and therefore how much mass
 that fermion gets after symmetry breaking.
+
+The barred fields are conjugate fields. $L$ is a left-handed lepton doublet,
+$Q$ is a left-handed quark doublet, and $e_R$, $u_R$, and $d_R$ are
+right-handed charged-lepton, up-type-quark, and down-type-quark singlets.
+$\tilde{\phi}$ is the Higgs doublet arranged with the conjugate weak charge.
+"h.c." means Hermitian conjugate, the companion term required to make the
+Lagrangian real.
 
 When the Higgs gets a vacuum expectation value, these terms become mass terms. The masses are proportional to the Yukawa couplings.
 
@@ -391,6 +433,12 @@ The labels alpha are the edge charges. In the bosonic gauge picture they become
 the sector labels from which the reconstructed boundary gauge group is
 recovered.
 
+The letter $\mathcal H$ names a Hilbert space, the quantum state space for a
+piece of the system. "Collar" means the thin overlap zone near a boundary. The
+superscript $\alpha$ says that each left and right Hilbert space belongs to one
+shared edge-charge sector. The formula is not an extra postulate about
+particles. It is the bookkeeping form that makes boundary agreement possible.
+
 ### Fusion Rules Define the Group
 
 When you concatenate collars, edge charges fuse. The fusion rules:
@@ -410,8 +458,16 @@ For intuition, treat the fusion rules as a multiplication table for charges.
 If you know how every charge combines with every other charge, you have enough
 information to recover the symmetry that those charges are representing.
 
+The labels $\alpha$, $\beta$, and $\gamma$ are charge sectors. The tensor
+symbol $\otimes$ means "combine these sectors." The integers
+$N_{\alpha\beta}^{\gamma}$ count how many times sector $\gamma$ appears when
+$\alpha$ and $\beta$ fuse. A tensor category is the organized collection of
+these sectors, their fusions, their duals, and their consistency rules.
+
 The gauge group isn't put in by hand. It is reconstructed from the persistent
 sector data rather than guessed in advance.
+
+![Tannaka-Krein reconstruction reads a compact gauge group from the way edge sectors fuse and represent one another.](../assets/book_diagrams/tannaka-krein.svg){width=82%}
 
 There is one refinement caveat. A charge label seen at one cutoff counts in
 the final category only if it remains visible as the screen is described at
@@ -484,6 +540,13 @@ fixed by anomaly freedom together with Yukawa invariance and the absolute
 values fixed by standard normalization. There is nothing to tune. The
 sixth-integer lattice is exactly the one compatible with the physical quotient
 \((SU(3)\times SU(2)\times U(1))/\mathbb Z_6\).
+
+The $Y$ symbols are hypercharges. $Q$ labels the left-handed quark doublet,
+$L$ the left-handed lepton doublet, $H$ the Higgs doublet, and $u$, $d$, and
+$e$ the up-type quark, down-type quark, and charged lepton singlet sectors.
+$N_c$ is the number of colors. The boxed line is the familiar charge lattice
+written before electroweak mixing turns hypercharge and weak isospin into
+ordinary electric charge.
 
 That is what makes the derivation satisfying. The equations are not decorative bookkeeping. They explain why the charges come out in the strange pattern we observe. Quarks carry third-integer charges because the weak interaction, the Higgs couplings, and anomaly cancellation all have to coexist in one self-consistent chiral theory.
 
@@ -578,6 +641,8 @@ $$3 \le N_g \le 5.$$
 A minimal admissible realization principle then picks the smallest viable realization. "Minimal admissible" means the smallest option that satisfies the listed consistency tests:
 
 $$\boxed{N_g = 3}$$
+
+![The generation-count window starts at three for intrinsic CP capability and closes above five from weak-sector ultraviolet consistency.](../assets/book_diagrams/generation-count.svg){width=84%}
 
 Refinement stability explains why extra unfixed Yukawa structure is disfavored. Among the allowed options, the smallest viable one wins. With $N_c=3$ and $N_g=3$, each generation carries four left-handed weak doublets, an even number, so the Witten anomaly is automatically satisfied on the realized branch.
 

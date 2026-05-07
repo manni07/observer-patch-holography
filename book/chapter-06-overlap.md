@@ -58,6 +58,11 @@ $$S = 2\sqrt{2} \approx 2.83$$
 
 That's a 41% violation. Not subtle. Testable.
 
+This $S$ is the Bell-CHSH correlation score, not entropy. The vertical bars
+mean absolute value. A local hidden-variable model can arrange many patterns,
+but it cannot push this score above 2. Quantum mechanics can reach
+$2\sqrt{2}$ for the right entangled state and measurement angles.
+
 ### What Makes This So Strange
 
 Let me be concrete. Alice and Bob each receive one particle from an entangled pair. They're far apart-on different continents, different planets, it doesn't matter. Each chooses randomly whether to measure their particle along angle A1 or A2 (for Alice) or B1 or B2 (for Bob).
@@ -125,6 +130,12 @@ $$\langle O \rangle_A = \int O(s)\rho_A(s)ds = \int O(s)\rho_B(s)ds = \langle O 
 
 Here's the key fact for tree-like overlap structures: if marginals agree on overlaps, you can glue them into a joint distribution. If Alice's distribution over variable X matches Bob's marginal over X, and Bob's distribution over variable Y matches Carol's marginal over Y, there is a joint distribution P(X,Y,Z) that reproduces all the marginals.
 
+The angle brackets mean expectation value, the average result predicted for
+observable $O$. The variable $s$ labels a classical state, and $\rho_A(s)$ and
+$\rho_B(s)$ are Alice's and Bob's probability distributions over those states.
+The integrals add the observable's value over all possible states, weighted by
+the probabilities each observer assigns.
+
 In general overlap graphs, the classical marginal problem can still fail and is computationally hard; agreement on pairwise overlaps is not always sufficient.
 
 ### Why Quantum Consistency Is Hard
@@ -184,11 +195,20 @@ $$R = P_A \cap P_B$$
 
 This region R is the "Looking Glass." It contains observables common to both. For reality to be consistent, **Alice and Bob must agree on the state of the Looking Glass.**
 
+$P_A$ and $P_B$ are Alice's and Bob's patches. The symbol $\cap$ means
+intersection. $R$ is the part both patches contain.
+
 In a simple finite-dimensional toy model, Alice describes her patch with density matrix rho_A and Bob describes his with rho_B. Then consistency on the overlap can be pictured as equality of the reduced descriptions on region R:
 
 $$\text{Tr}_{A \setminus R}(\rho_A) = \text{Tr}_{B \setminus R}(\rho_B)$$
 
 This is only the toy-model picture. More generally, the right statement is that the two restricted states agree on the shared overlap algebra.
+
+The set-minus symbol $\setminus$ means "remove this part." Alice traces out
+the part of her patch outside the overlap, and Bob does the same. If the two
+reduced density matrices match, their descriptions agree on the shared region.
+
+![Overlap consistency means both patches assign the same state to the shared region.](../assets/book_diagrams/overlap-consistency.svg){width=76%}
 
 ### The Mathematical Translation
 
@@ -199,6 +219,11 @@ A density matrix is quantum mechanics' way of describing partial knowledge. If y
 $$\rho = p_1|\psi_1\rangle\langle\psi_1| + p_2|\psi_2\rangle\langle\psi_2|$$
 
 The "trace" operation (Tr) is how you marginalize-how you focus on one part of a system while ignoring the rest. If Alice has access to particles A and B but Bob only has access to B, then "Tr_A" traces out particle A, leaving just the description of B.
+
+In this density matrix, $p_1$ and $p_2$ are probabilities. The kets
+$|\psi_1\rangle$ and $|\psi_2\rangle$ are possible pure states. The paired bra
+and ket $|\psi\rangle\langle\psi|$ is the projector onto that state. A density
+matrix is therefore a weighted quantum mixture of possible state assignments.
 
 The consistency condition says: when Alice traces out everything Bob can't see, and Bob traces out everything Alice can't see, they'd better end up with the same description of the overlap.
 
@@ -260,6 +285,11 @@ $$S(\rho_A) = S(\rho_{BC})$$
 
 The entropy of A equals the entropy of BC. This is a consequence of entanglement structure.
 
+Here $\rho_A$ is the reduced density matrix of subsystem $A$, and
+$\rho_{BC}$ is the reduced density matrix of the joint subsystem made from
+$B$ and $C$. For a pure total state, the entropy of one side of a split equals
+the entropy of the other side.
+
 If AB is maximally entangled, then rho_A is maximally mixed: S(rho_A) = 1 bit.
 
 So S(rho_BC) = 1 bit.
@@ -281,6 +311,12 @@ The **W state**:
 $$|W\rangle = \frac{1}{\sqrt{3}}(|001\rangle + |010\rangle + |100\rangle)$$
 
 In the W state, every pair has some entanglement, but none is maximal. The entanglement is spread around, diluted.
+
+The GHZ state is named after Greenberger, Horne, and Zeilinger. The W state is
+named for the shape of its entanglement pattern rather than for a person. The
+normalizing factors $1/\sqrt{2}$ and $1/\sqrt{3}$ make total probability 1.
+The three slots in each ket are the three qubits. These two states show that
+"three-party entanglement" is not one thing. It has distinct species.
 
 Quantum agreement is a budget. Spend it on one overlap and you have less for another.
 
@@ -443,11 +479,20 @@ $$\omega_i|_{\mathcal{A}(P_i \cap P_j)} = \omega_j|_{\mathcal{A}(P_i \cap P_j)}$
 
 The restrictions to the overlap algebra must be the same state.
 
+$\omega_i$ and $\omega_j$ are the states assigned by observers $i$ and $j$.
+$\mathcal A(P_i\cap P_j)$ is the algebra of observables available on their
+shared patch. The vertical restriction bar means "look only at this shared
+algebra."
+
 In plainer English: for any observable O that both Alice and Bob can measure:
 
 $$\omega_i(O) = \omega_j(O)$$
 
 They must assign the same expectation value.
+
+$O$ is any observable in the overlap. The equation says that the two observers
+do not need identical private descriptions everywhere, but they must make the
+same predictions for questions both can actually ask.
 
 ### The Patch Graph
 

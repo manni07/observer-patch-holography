@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">Synthesis spine from screens to observers</title>
+  <desc id="desc">The book's main ingredients align into one spine ending in shared public reality.</desc>
+  <rect width="960" height="560" fill="#f8f5ef"/>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#2e2a25"/>
+    </marker>
+  </defs>
+  <path d="M480 74 V486" stroke="#2e2a25" stroke-width="6" marker-end="url(#arrow)"/>
+  <g fill="#fffaf0" stroke="#2e2a25" stroke-width="3">
+    <rect x="250" y="52" width="460" height="54" rx="8"/>
+    <rect x="250" y="126" width="460" height="54" rx="8"/>
+    <rect x="250" y="200" width="460" height="54" rx="8"/>
+    <rect x="250" y="274" width="460" height="54" rx="8"/>
+    <rect x="250" y="348" width="460" height="54" rx="8"/>
+    <rect x="250" y="422" width="460" height="54" rx="8"/>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#2e2a25" font-size="23" font-weight="700" text-anchor="middle">
+    <text x="480" y="87">finite screen</text>
+    <text x="480" y="161">local algebras and overlap</text>
+    <text x="480" y="235">entropy, recovery, and codes</text>
+    <text x="480" y="309">modular time and symmetry</text>
+    <text x="480" y="383">matter and constants</text>
+    <text x="480" y="457">shared public reality</text>
+  </g>
+</svg>

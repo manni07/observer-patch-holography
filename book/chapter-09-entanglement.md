@@ -42,6 +42,13 @@ $$S(A) \propto |\partial A|$$
 
 This is the **area law** for entanglement entropy. Only degrees of freedom near the boundary-within a correlation length of the cut-contribute to the entanglement.
 
+Read the notation literally. $A$ is the region being studied. $\partial A$ is
+its boundary, the cut between inside and outside. $S(A)$ is the entropy seen
+by an observer who has access to $A$ but not to its complement. The symbol
+$\propto$ means "is proportional to." The equation says that the dominant
+entropy comes from the cut surface, not from the volume of stuff enclosed by
+the cut.
+
 Space is not a passive container. It's woven from quantum correlations. The vacuum is entangled across every boundary you can draw. Cut the entanglement, and you cut the connectivity of space itself.
 
 ## 9.3 The First-Principles Reframing: Space Emerges from Entanglement
@@ -69,6 +76,16 @@ The deep implication: **geometry encodes entanglement**.
 
 That sentence is easy to repeat and easy to misunderstand. The claim is not that geometry and entanglement vaguely resemble each other. The claim is that the amount of quantum correlation across a cut determines the size of the bulk surface associated with that cut. Entropy is doing geometric work. If the boundary state ties two regions together strongly, the bulk description between them is correspondingly thick and connected.
 
+This idea did not arrive as one person's finished vision. Bekenstein and
+Hawking made black holes count states. Srednicki and many others showed how
+ordinary quantum fields produce area-law entanglement. Maldacena gave the
+AdS/CFT setting in which a boundary theory and a gravitational bulk could be
+compared. Ryu and Takayanagi found the sharp area formula. Hubeny, Rangamani,
+Takayanagi, Faulkner, Lewkowycz, Maldacena, Engelhardt, Wall, Harlow, and many
+others then turned the slogan into a working toolkit. OPH uses that inherited
+toolkit. It is not replacing the accumulated labor. It is asking what common
+observer-first architecture those clues are pointing toward.
+
 ### A Simple Example
 
 Consider a 2D CFT on an interval of length L. The entanglement entropy is:
@@ -81,6 +98,12 @@ The central charge counts, roughly, how many independent quantum degrees of
 freedom the CFT has. The UV cutoff is the shortest distance the calculation
 allows. Without it, the field theory would keep counting arbitrarily tiny
 correlations across the boundary of the interval.
+
+$S$ is the entanglement entropy of the interval. $L$ is the interval length.
+$\epsilon$ is the short-distance cutoff, the smallest distance the effective
+field theory is allowed to resolve. The logarithm appears because a
+two-dimensional conformal field theory organizes correlations scale by scale.
+The formula is compact, but every symbol carries a physical role.
 
 In AdS_3, the minimal "surface" is a geodesic-a shortest path through the bulk. Compute its length using the AdS metric. Divide by 4G.
 
@@ -98,6 +121,12 @@ Quantum mechanics allows a stronger pattern and reaches the Tsirelson limit
 
 $$|S| \leq 2\sqrt{2}.$$
 
+This $S$ is not entropy. It is the Bell-CHSH correlation combination, a number
+built from four correlation measurements chosen by the two experimenters. The
+vertical bars mean absolute value. Classical local hidden-variable models keep
+that number at or below 2. Quantum mechanics permits a larger value, but not an
+arbitrary one. The ceiling $2\sqrt{2}$ is the quantum limit.
+
 That stronger pattern has been observed. The 2015 loophole-free Bell tests
 closed the major loopholes at the same time and ruled out the simple local
 hidden-variable models Einstein hoped would survive.
@@ -111,6 +140,13 @@ The total state is pure, while each qubit by itself is maximally mixed:
 $$\rho_A = \frac{1}{2}|0\rangle\langle0| + \frac{1}{2}|1\rangle\langle1|.$$
 
 The whole is ordered in a way the parts are not. That is the operational signature of entanglement.
+
+The ket $|\Phi^+\rangle$ names one Bell state. The symbols $|00\rangle$ and
+$|11\rangle$ mean that the two qubits are both 0 or both 1. The factor
+$1/\sqrt{2}$ normalizes the state so total probability is 1. The matrix
+$\rho_A$ is the state seen by an observer who can access only qubit $A$.
+Because that observer has ignored the other qubit, the local state looks like
+a fair coin even though the two-qubit state is perfectly ordered.
 
 Chapter 6 gives the overlap-consistency reading of Bell correlations. The lesson needed here is narrower. Space cannot be built out of classical bookkeeping alone. The vacuum correlations used in this chapter belong to the same experimentally compulsory quantum structure.
 
@@ -129,6 +165,12 @@ The strongest evidence comes from the **thermofield double state**:
 $$|\text{TFD}\rangle = \sum_n e^{-\beta E_n/2} |n\rangle_L |n\rangle_R$$
 
 This state lives on two copies of a system. It is an entangled purification of a thermal state at temperature T = 1/beta.
+
+The sum runs over energy states labeled by $n$. $E_n$ is the energy of state
+$n$. The subscripts $L$ and $R$ label the left and right copies of the system.
+$\beta$ is inverse temperature, equal to $1/(k_B T)$ when Boltzmann's constant
+is kept explicit. The exponential weights higher-energy states less strongly,
+just as in ordinary thermal physics.
 
 "Purification" means that a mixed, thermal-looking state can be treated as part
 of a larger pure state if we include a second auxiliary copy. The thermal
@@ -194,6 +236,12 @@ $$\tau_{A:BC} \geq \tau_{A:B} + \tau_{A:C}$$
 
 This forces the entanglement network to be sparse. You can't make a complete graph where everything is equally close to everything else. You're pushed toward a lattice-like structure with modest connectivity.
 
+The symbol $\tau$ is the tangle, a measure of how much entanglement one system
+shares with another. The label $A:BC$ means "system $A$ compared with the joint
+system made from $B$ and $C$." The inequality says that entanglement cannot be
+freely duplicated. If $A$ uses up its entanglement budget with $B$, less is
+available for $C$.
+
 That's what locality means. Things can only be near a limited number of other things. Geometry emerges from the constraints of entanglement monogamy.
 
 ## 9.9 Entanglement Wedges and Reconstruction
@@ -201,6 +249,8 @@ That's what locality means. Things can only be near a limited number of other th
 The RT surface divides the bulk into pieces. The region between a boundary region A and its RT surface is called the **entanglement wedge** of A.
 
 **Subregion duality**: The physics inside the entanglement wedge can be reconstructed from boundary region A alone.
+
+![Two boundary regions can reconstruct overlapping entanglement wedges, forcing agreement on the shared bulk region.](../assets/book_diagrams/entanglement-wedge-overlap.svg){width=78%}
 
 ### Overlapping Wedges
 
@@ -245,6 +295,53 @@ That is the direction the evidence points. Ryu-Takayanagi works in the
 settings where it should. Area-law scaling is widespread in the regimes that
 matter here. Entanglement wedge reconstruction works in explicit examples.
 Black-hole information is read through encoded radiation rather than deletion.
+
+### Entanglement as a Discovery Chain
+
+Entanglement has one of the strangest histories in physics because it began
+as a complaint. Einstein, Podolsky, and Rosen used it in 1935 to argue that
+quantum mechanics could not be complete. Schrodinger answered by naming the
+phenomenon and emphasizing that entanglement was not a small detail. It was
+the distinctive feature of quantum theory. For decades the issue looked
+philosophical. Then John Bell found the inequality that moved the argument
+from taste to experiment. Clauser, Freedman, Aspect, Zeilinger, and many
+others turned the test into a laboratory program. Modern loophole-free Bell
+experiments now make the point hard to evade: the world does not carry local
+classical instruction sheets that determine all possible measurement results.
+
+The later holographic story is just as communal. Bekenstein and Hawking made
+horizons thermodynamic. 't Hooft and Susskind drew the boundary-first lesson.
+Maldacena supplied the AdS/CFT laboratory. Ryu and Takayanagi wrote the
+minimal-area formula that made entanglement look geometric. Hubeny,
+Rangamani, and Takayanagi extended it to time-dependent cases. Van Raamsdonk
+emphasized that changing entanglement can change connectivity. Swingle,
+Pastawski, Hayden, Preskill, Yoshida, Almheiri, Engelhardt, Penington, and
+many others connected tensor networks, error correction, wedges, and islands.
+
+That history matters because the formula
+
+$$S(A)=\frac{\mathrm{Area}(\gamma_A)}{4G_N}$$
+
+is easy to admire without digesting. $S(A)$ is the entanglement entropy of
+boundary region $A$. The surface $\gamma_A$ is the bulk extremal surface
+anchored to the boundary of $A$. $G_N$ is Newton's gravitational constant.
+The equation says that a quantum-information quantity on a boundary is
+measured by a geometric area in the bulk. If area changes, entropy changes.
+If entropy changes, the emergent geometry changes.
+
+The Bell inequality in the same chapter uses the symbol $S$ in a different
+way. There it is not entropy. It is the CHSH combination of correlations,
+usually written as a sum and difference of expectation values for four
+measurement settings. The classical limit is $|S|\leq 2$. Quantum theory can
+reach $2\sqrt 2$. The repeated letter is unfortunate but common. The book
+uses context to distinguish them: entropy $S(A)$ belongs to regions and
+areas, while Bell $S$ belongs to correlation tests.
+
+OPH needs both meanings. Bell-type entanglement says local classical
+bookkeeping is too small. RT-type entanglement says quantum bookkeeping can
+be geometric. Entanglement wedges then say that two observers may reconstruct
+the same interior region from different boundary data. If they do, agreement
+is not optional. The shared wedge is the geometric version of an overlap.
 
 ## 9.12 Reverse Engineering Summary
 

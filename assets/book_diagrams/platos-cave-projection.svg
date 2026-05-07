@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Projection from source to shadow to reconstructed model</title>
+  <desc id="desc">A source object casts a shadow on a wall. Several observers compare partial shadows and reconstruct a shared model.</desc>
+  <rect width="960" height="520" fill="#f7f4ec"/>
+  <rect x="600" y="70" width="235" height="360" rx="8" fill="#fffaf0" stroke="#2e2a25" stroke-width="3"/>
+  <path d="M253 250 L600 116 L600 390 Z" fill="#e8d6ad" opacity="0.48"/>
+  <circle cx="192" cy="250" r="52" fill="#c85b43" stroke="#2e2a25" stroke-width="4"/>
+  <rect x="142" y="305" width="104" height="36" rx="18" fill="#405d73" stroke="#2e2a25" stroke-width="4"/>
+  <ellipse cx="680" cy="250" rx="48" ry="92" fill="#8b8f95" opacity="0.72"/>
+  <path d="M674 162 C708 222 708 279 673 338" fill="none" stroke="#2e2a25" stroke-width="4"/>
+  <g fill="#2e2a25" font-family="Arial, sans-serif" font-size="24" font-weight="700">
+    <text x="133" y="102">source</text>
+    <text x="635" y="102">screen record</text>
+    <text x="355" y="468">shared reconstruction</text>
+  </g>
+  <g stroke="#2e2a25" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M340 390 C410 320 508 320 575 390"/>
+    <circle cx="340" cy="390" r="18" fill="#68a691"/>
+    <circle cx="460" cy="350" r="18" fill="#68a691"/>
+    <circle cx="575" cy="390" r="18" fill="#68a691"/>
+    <path d="M360 382 L440 358"/>
+    <path d="M480 358 L555 382"/>
+  </g>
+</svg>

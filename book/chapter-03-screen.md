@@ -12,6 +12,10 @@ $$\text{Information} \propto V$$
 
 If you have a box and you divide it in half, each half should hold half the information. If you double the size of a room, you should be able to fit twice as many things in it.
 
+The symbol $V$ means volume. The proportionality sign says that, in this
+ordinary intuition, information capacity should grow in direct proportion to
+the amount of three-dimensional space available.
+
 This seems so obvious that nobody questioned it for most of physics history.
 
 And it's wrong.
@@ -68,6 +72,12 @@ where $\ell_P = \sqrt{\hbar G/c^3} \approx 1.6 \times 10^{-35}$ m is the Planck 
 
 The entropy of a black hole is proportional to its surface area, measured in Planck units.
 
+In Hawking's temperature formula, $T_H$ is the black-hole temperature, $M$ is
+the black-hole mass, $G$ is Newton's gravitational constant, $c$ is the speed
+of light, $\hbar$ is Planck's constant divided by $2\pi$, and $k_B$ is
+Boltzmann's constant. Larger black holes are colder because $M$ sits in the
+denominator.
+
 ### The Surprising Conclusion
 
 **The hint**: Information scales with area, not volume.
@@ -111,6 +121,10 @@ The Schwarzschild radius of a black hole of mass $M$ is:
 $$R_s = \frac{2GM}{c^2}$$
 
 For the Sun, this is about 3 kilometers. For Earth, it's about 9 millimeters. Any mass compressed within its Schwarzschild radius becomes a black hole.
+
+$R_s$ is the Schwarzschild radius. The formula says that the critical radius
+grows linearly with mass $M$. Compress the same mass inside that radius and
+the escape velocity at the boundary reaches light speed.
 
 The horizon is not a physical surface. You could cross it without noticing anything special. But once you're inside, the geometry of spacetime is such that all paths-even light paths-lead inward.
 
@@ -173,6 +187,11 @@ The metric is:
 
 $$ds^2 = d\theta^2 + \sin^2\theta \, d\phi^2$$
 
+$S^2$ means the two-dimensional surface of a unit sphere, not the solid ball
+inside it. The set notation says: take all points $(x,y,z)$ in ordinary
+three-dimensional real space whose distance from the origin is 1. The metric
+$ds^2$ then tells you how to measure tiny distances along that curved surface.
+
 ### Spherical Harmonics
 
 Any function on the sphere can be expanded in **spherical harmonics**, $Y_\ell^m(\theta, \phi)$. These are the natural modes of vibration of the sphere.
@@ -196,6 +215,8 @@ You cannot see the whole screen. Some parts are hidden by your horizon or by ins
 Another observer, at a different location or with different instruments, accesses a different patch. Where patches overlap, observers can compare notes.
 
 If the screen is a sphere $S^2$ and observer $i$ sees patch $P_i$, then two observers can compare data on the overlap $P_i \cap P_j$. That overlap is the seed of consistency.
+
+![Two observer patches on the S^2 screen share a lens-shaped overlap where their descriptions can be compared.](../assets/book_diagrams/s2-screen.svg){width=74%}
 
 ### A Concrete Example
 

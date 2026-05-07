@@ -14,8 +14,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 WORKSPACE_ROOT = REPO_ROOT.parent
 BOOK_DIR = REPO_ROOT / "book"
 HEADER_FILE = REPO_ROOT / "tools" / "book_pdf_header.tex"
-DEFAULT_OUTPUT = WORKSPACE_ROOT / "reverse-engineering-reality-book.pdf"
+DEFAULT_OUTPUT = REPO_ROOT / "book" / "reverse-engineering-reality-book.pdf"
 BUILD_DIR = WORKSPACE_ROOT / "temp" / "book_pdf_build"
+BOOK_COVER_ASSET = REPO_ROOT / "assets" / "book-cover.svg"
 
 TITLE = "Reverse Engineering Reality"
 SUBTITLE = "Observer Patch Holography as a Theory of Everything"
@@ -109,7 +110,8 @@ def chapter_key(path: Path) -> int:
 
 def source_files() -> list[Path]:
     chapters = sorted(BOOK_DIR.glob("chapter-*.md"), key=chapter_key)
-    return [BOOK_DIR / "prologue.md", *chapters, BOOK_DIR / "epilogue.md"]
+    appendices = sorted(BOOK_DIR.glob("appendix-*.md"))
+    return [BOOK_DIR / "prologue.md", *chapters, *appendices, BOOK_DIR / "epilogue.md"]
 
 
 def ensure_tool(name: str) -> None:
@@ -122,14 +124,19 @@ def run(cmd: list[str], cwd: Path | None = None) -> None:
 
 
 def convert_svg_assets(out_dir: Path) -> dict[str, Path]:
-    assets = {
-        "../assets/pixel-constant.svg": REPO_ROOT / "assets" / "pixel-constant.svg",
-        "../assets/OPH_Unification_Diagram.svg": REPO_ROOT / "assets" / "OPH_Unification_Diagram.svg",
-    }
+    assets = [
+        BOOK_COVER_ASSET,
+        REPO_ROOT / "assets" / "pixel-constant.svg",
+        REPO_ROOT / "assets" / "OPH_Unification_Diagram.svg",
+        *sorted((REPO_ROOT / "assets" / "book_diagrams").glob("*.svg")),
+    ]
     out_dir.mkdir(parents=True, exist_ok=True)
     converted: dict[str, Path] = {}
-    for original_ref, source_path in assets.items():
-        output_path = out_dir / f"{source_path.stem}.pdf"
+    for source_path in assets:
+        relative_path = source_path.relative_to(REPO_ROOT)
+        original_ref = f"../{relative_path.as_posix()}"
+        output_path = out_dir / relative_path.with_suffix(".pdf").relative_to("assets")
+        output_path.parent.mkdir(parents=True, exist_ok=True)
         run(
             [
                 "rsvg-convert",
@@ -154,7 +161,7 @@ def rewrite_heading(line: str, unnumbered: bool) -> str:
     title = re.sub(r"^Chapter\s+\d+:\s*", "", title)
     title = re.sub(r"^\d+(?:\.\d+)*\s+", "", title)
 
-    if len(marks) == 1 and unnumbered:
+    if unnumbered:
         return f"{marks} {title} {{.unnumbered}}\n"
     return f"{marks} {title}\n"
 
@@ -206,6 +213,14 @@ def normalize_tex_symbols(text: str) -> str:
     text = text.replace(
         "\\[\n  (m_{\\nu_e},m_{\\nu_\\mu},m_{\\nu_\\tau})=\n  (0.017454720257976796,\\ 0.019481987935919015,\\ 0.05307522145074924)\\,\\mathrm{eV},\n  \\]",
         "\\[\n\\begin{aligned}\n(m_{\\nu_e},m_{\\nu_\\mu},m_{\\nu_\\tau})={}&(0.017454720257976796,\\\\\n&0.019481987935919015,\\ 0.05307522145074924)\\,\\mathrm{eV},\n\\end{aligned}\n\\]",
+    )
+    text = text.replace(
+        "\\[\n\\alpha^{-1}(0)=137.035999177(21), \\qquad\nP=1.630968209403959324879279847782648941\\ldots.\n\\]",
+        "\\[\n\\begin{aligned}\n\\alpha^{-1}(0)&=137.035999177(21),\\\\\nP&=1.630968209403959324879279847782648941\\ldots.\n\\end{aligned}\n\\]",
+    )
+    text = text.replace(
+        "The source-only audit row emits inverse alpha\n\\(136.994835164621649457949994585787193262029\\) at pixel\n\\(1.63097209569432901817967892561191884270169\\). The displayed endpoint\nuses the same OPH fixed-point equation",
+        "The source-only audit row emits inverse alpha and pixel values\n\\[\n\\begin{aligned}\n\\alpha^{-1}_{\\mathrm{source}}&=136.994835164621649457949994585787193262029,\\\\\nP_{\\mathrm{source}}&=1.63097209569432901817967892561191884270169.\n\\end{aligned}\n\\]\nThe displayed endpoint uses the same OPH fixed-point equation",
     )
     return text
 
@@ -315,6 +330,7 @@ def build(output: Path) -> None:
             "-X",
             "compile",
             tex_path.name,
+            "--keep-logs",
             f"--outdir={BUILD_DIR}",
         ],
         cwd=BUILD_DIR,

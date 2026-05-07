@@ -2,6 +2,8 @@
 
 ## 16.1 The Intuitive Picture: Matter Is Stuff, Motion Is Force
 
+![Matter becomes public through a ladder of stability: screen excitations, protected particles, atoms, and classical records.](../assets/book_diagrams/matter-stability-ladder.svg){width=78%}
+
 Before we get technical, let's state the common-sense picture most of us grew
 up with.
 
@@ -59,6 +61,16 @@ lattice, the realized color triplet $N_c=3$, and the generation count $N_g=3$.
 Those are structural
 answers about what kinds of matter can exist at all.
 
+This is where the book leans heavily on the collective history of particle
+physics. Rutherford showed that atoms have small nuclei. Chadwick found the
+neutron. Anderson saw the positron. Yukawa predicted a meson-like carrier of
+the nuclear force. Gell-Mann and Zweig organized hadrons into quarks. Glashow,
+Weinberg, and Salam gave the electroweak theory. Gross, Wilczek, and Politzer
+explained asymptotic freedom. The Higgs mechanism was built by several groups,
+and the LHC collaborations turned it into a discovery. OPH enters after that
+century of work. Its question is not how to replace the ladder, but why the
+ladder has this shape.
+
 From there the particle structure enters in a definite order. The structural
 carriers come first. The photon, the eight gluons, and the graviton are
 massless because they sit along redundancy directions of the overlap and
@@ -82,6 +94,13 @@ M_W^\dagger = 80.377\,\mathrm{GeV}, \qquad
 M_Z^\dagger = 91.18797809193725\,\mathrm{GeV}.
 $$
 
+$M_W$ and $M_Z$ are the masses of the charged weak boson and the neutral weak
+boson. A GeV is a billion electronvolts, a standard particle-physics energy
+unit used as a mass unit through $E=mc^2$. The dagger marks the frozen
+adapter comparison values used by the public calculation surface. They are not
+new particles. They are reference values for checking the same weak-boson
+transport family.
+
 The same family follows the unbroken electromagnetic channel to the
 long-distance Thomson limit. The fixed point gives
 
@@ -89,6 +108,12 @@ $$
 \alpha^{-1}(0)=137.035999177(21), \qquad
 P=1.630968209403959324879279847782648941\ldots.
 $$
+
+$\alpha$ is the electromagnetic fine-structure constant. The inverse
+$\alpha^{-1}(0)$ is quoted in the long-distance, zero-momentum Thomson limit.
+The number in parentheses gives the uncertainty in the last digits. $P$ is the
+screen pixel ratio, the local ruler that the OPH fixed-point calculation reads
+from both geometric and electromagnetic sides.
 
 The calculation starts with the golden-ratio screen balance, uses the boundary
 $\sqrt{\pi}$ normalization for the electromagnetic detuning, runs the source
@@ -108,6 +133,10 @@ $$
 (m_H,m_t)=(125.1995304097179,\ 172.3523553288312)\,\mathrm{GeV}.
 $$
 
+$m_H$ is the Higgs-boson mass and $m_t$ is the top-quark mass on this
+calculation surface. They are paired because the Higgs and top sectors are
+strongly linked in the electroweak bookkeeping.
+
 The quark sector gives the running mass structure
 
 $$
@@ -126,6 +155,12 @@ Running means the quoted mass depends on the energy scale at which the quark is
 probed. This is normal in quantum field theory. It is why a quark mass in a
 short-distance table is not the same kind of number as a proton mass measured in
 the lab.
+
+The subscripts name quark flavors: up, down, strange, charm, bottom, and top.
+The first line gives the lighter triplet and the second gives the heavier
+triplet. The aligned equation layout keeps the two families readable, but the
+important physical point is that these are quark-level running masses before
+strong binding turns quarks into hadrons.
 
 The neutrino sector is concrete as well:
 
@@ -153,6 +188,13 @@ Majorana phases are extra neutrino mixing phases that matter if neutrinos are
 their own antiparticles in the relevant sense. QCD is quantum chromodynamics,
 the strong-interaction theory that binds quarks and gluons into hadrons.
 
+The neutrino labels $\nu_e$, $\nu_\mu$, and $\nu_\tau$ refer to the electron,
+muon, and tau neutrino sectors. Their masses are quoted in eV rather than GeV
+because neutrinos are extraordinarily light. The symbols
+$\theta_{\mathrm{QCD}}$ and $\bar\theta$ name strong-CP angles, parameters
+that would measure a CP-violating strong-interaction phase. The chapter says
+plainly that this corpus does not derive their physical vanishing.
+
 ## 16.5 What Is a Particle?
 
 By the time the book reaches matter, the old billiard-ball picture has fallen
@@ -170,6 +212,11 @@ $$E^2 = p^2 + m^2$$
 
 feels so deep. It is symmetry speaking. Particles are universal because those
 symmetry roles are universal.
+
+This formula uses natural units with $c=1$. $E$ is energy, $p$ is momentum,
+and $m$ is rest mass. In ordinary units the relation reads
+$E^2=p^2c^2+m^2c^4$. The compact version is used because the chapter is
+tracking the symmetry structure, not converting units.
 
 ## 16.6 What Is Energy?
 
@@ -235,6 +282,12 @@ effective action is part of the EFT
 bridge. Once that bridge is in place, the stationary-action description
 follows in the usual semiclassical limit.
 
+The coordinate $q$ is the generalized position of the system, and $\dot q$ is
+its time derivative, the generalized velocity. The partial derivatives ask how
+the Lagrangian changes if position or velocity is varied while the other
+quantity is held fixed. The Euler-Lagrange equation is the compact rule that
+selects the path whose action is stationary.
+
 Historically it is called "least" action, but what really survives is
 **stationary** action: small variations do not change the path to first order.
 
@@ -299,6 +352,51 @@ absolute masses are target-anchored witnesses, source-only hadron masses require
 the OPH strong-binding backend with production spectral data and systematics,
 and empirical hadron closure rows use the separate
 \(e^+e^-\to\mathrm{hadrons}\) payload class.
+
+### Matter as a Public Achievement
+
+The ordinary word "matter" hides several layers of stabilization. At the
+lowest level relevant to this chapter are quantum fields and excitations.
+Those excitations carry charges, transform under symmetries, and interact
+through the allowed carriers. At the next level some excitations become
+long-lived particles. Electrons are stable in ordinary conditions because no
+lighter charged particle is available for them to decay into while preserving
+charge and energy. Protons are stable for all practical purposes, at least on
+observed timescales, because baryon-number-violating routes are either absent
+or fantastically suppressed. Neutrons are unstable when free but stable inside
+many nuclei. Already the word "particle" is an achievement of symmetry,
+kinematics, and allowed decay channels.
+
+Atoms add another layer. The electron's small mass, the electromagnetic
+coupling, quantum exclusion, and nuclear structure together make chemistry
+possible. Molecules add shape and bonding. Macroscopic objects add
+decoherence and redundant environmental records. A chair is not public
+because it is more fundamental than a quark. It is public because enormous
+numbers of microscopic degrees of freedom have settled into patterns that
+scatter light, resist pressure, leave traces, and can be sampled by many
+observers without being destroyed.
+
+The history of matter physics is correspondingly collective. Dalton revived
+atomic theory for chemistry. Mendeleev saw order in the periodic table before
+the electron, nucleus, or quantum mechanics explained it. Thomson discovered
+the electron. Rutherford inferred the nucleus. Moseley tied atomic number to
+nuclear charge. Chadwick found the neutron. Pauli, Fermi, Yukawa, Anderson,
+Powell, Gell-Mann, Zweig, Glashow, Salam, Weinberg, Higgs, Englert, Brout,
+Kibble, 't Hooft, Veltman, Kobayashi, Maskawa, Cabibbo, Lederman, Perl, and
+many experimental teams turned the particle zoo into the Standard Model.
+Modern mass measurements then require colliders, detectors, lattice QCD,
+spectral fits, and global averaging groups.
+
+This is why the ledger language in the chapter is careful. The weak-boson
+pair is a validation row because the framework can be checked against already
+known values. Charged-lepton absolute masses are target-anchored witnesses
+because empirical anchors enter. Hadron masses require the strong-binding
+backend because most of a proton's mass is not the bare quark masses. It is
+QCD binding energy, confinement, condensates, and dynamics. The public matter
+we touch is therefore a layered consensus object: symmetry tells us what can
+be conserved, quantum field theory tells us what can propagate, QCD tells us
+how quarks bind, decoherence tells us what becomes classical, and observer
+overlap tells us what can become a shared fact.
 
 We've seen that spacetime, particles, and classical physics all emerge from the screen through consistency requirements. But why these particular laws? Why these constants? Could the universe have been different?
 
