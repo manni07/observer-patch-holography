@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://oph.local/schemas/hadron/empirical_ee_hadronic_spectral_measure.schema.json",
+  "title": "OPH empirical e+e- hadronic spectral measure export",
+  "type": "object",
+  "required": [
+    "artifact",
+    "format_version",
+    "source_compilation",
+    "data_release",
+    "row_class",
+    "guards",
+    "energy_grid",
+    "R_values",
+    "covariance",
+    "correction_policy",
+    "region_policy",
+    "kernel",
+    "integral"
+  ],
+  "properties": {
+    "artifact": {
+      "const": "oph_empirical_ee_hadronic_spectral_measure"
+    },
+    "format_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "source_compilation": {
+      "type": "object",
+      "required": ["id", "name", "url", "citation"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1},
+        "url": {"type": "string", "minLength": 1},
+        "citation": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": true
+    },
+    "data_release": {
+      "type": "object",
+      "required": ["release_id", "retrieved_utc"],
+      "properties": {
+        "release_id": {"type": "string", "minLength": 1},
+        "retrieved_utc": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "row_class": {
+      "const": "oph_plus_empirical_hadron_closure"
+    },
+    "guards": {
+      "type": "object",
+      "required": [
+        "source_only",
+        "empirical_hadron_closure",
+        "external_cross_section_data_used",
+        "promotable_as_oph_source_theorem",
+        "usable_for_public_final_values"
+      ],
+      "properties": {
+        "source_only": {"const": false},
+        "empirical_hadron_closure": {"const": true},
+        "external_cross_section_data_used": {"const": true},
+        "promotable_as_oph_source_theorem": {"const": false},
+        "usable_for_public_final_values": {"const": true}
+      },
+      "additionalProperties": true
+    },
+    "energy_grid": {
+      "type": "object",
+      "required": ["variable", "unit", "values"],
+      "properties": {
+        "variable": {"enum": ["sqrt_s", "s"]},
+        "unit": {"enum": ["GeV", "GeV^2"]},
+        "values": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "number"}
+        }
+      },
+      "additionalProperties": true
+    },
+    "R_values": {
+      "type": "object",
+      "required": ["definition", "values"],
+      "properties": {
+        "definition": {"type": "string", "minLength": 1},
+        "values": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "number"}
+        }
+      },
+      "additionalProperties": true
+    },
+    "covariance": {
+      "type": "object",
+      "required": ["statistical", "systematic"],
+      "properties": {
+        "statistical": {"type": "object"},
+        "systematic": {"type": "object"},
+        "correlations": {"type": "object"}
+      },
+      "additionalProperties": true
+    },
+    "correction_policy": {
+      "type": "object",
+      "required": [
+        "radiative_corrections",
+        "vacuum_polarization_undressing",
+        "final_state_radiation"
+      ],
+      "properties": {
+        "radiative_corrections": {"type": "string", "minLength": 1},
+        "vacuum_polarization_undressing": {"type": "string", "minLength": 1},
+        "final_state_radiation": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": true
+    },
+    "region_policy": {
+      "type": "object",
+      "required": [
+        "exclusive_channel_sum",
+        "inclusive_region",
+        "pQCD_tail"
+      ],
+      "properties": {
+        "exclusive_channel_sum": {"type": "string", "minLength": 1},
+        "inclusive_region": {"type": "string", "minLength": 1},
+        "pQCD_tail": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": true
+    },
+    "kernel": {
+      "type": "object",
+      "required": ["name", "formula", "target"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "formula": {"type": "string", "minLength": 1},
+        "target": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": true
+    },
+    "integral": {
+      "type": "object",
+      "required": ["value", "uncertainty", "unit", "method"],
+      "properties": {
+        "value": {"type": "number"},
+        "uncertainty": {"type": "number", "minimum": 0},
+        "unit": {"type": "string", "minLength": 1},
+        "method": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

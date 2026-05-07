@@ -75,7 +75,9 @@ The same local pixel scale drives the gravity readout, the fine-structure
 closure, gauge structure, scoped particle-mass rows, records, and observer
 synchronization. The particle pipeline carries that scale into the weak sector,
 the Higgs lane, selected-class quark rows, and the weighted-cycle neutrino
-branch. Hadrons require the OPH strong-binding backend.
+branch. Hadrons require either the OPH strong-binding backend or an explicitly
+marked empirical hadron closure. The operating policy for those rows is in
+[`HADRON.md`](HADRON.md).
 
 ### Selected Quantitative Rows
 
@@ -197,8 +199,9 @@ public endpoint pixel, with
 
 The weak-boson pair is a validation row. Charged-lepton absolute masses are
 target-anchored witness rows. The auxiliary direct-top average is a validation
-row. Hadron masses require the OPH strong-binding backend with production
-spectral data and systematics.
+row. Hadron-controlled rows use the policy in [`HADRON.md`](HADRON.md):
+source-only OPH values stay separate from OPH plus empirical hadron closure
+values built from measured \(e^+e^-\to\mathrm{hadrons}\) data.
 
 The selected-class quark theorem leaves strong CP as an open companion branch:
 the available corpus does not derive `theta_QCD`, does not emit physical
@@ -210,6 +213,8 @@ Issue `#155` tracks that phase, anomaly, and topological-angle bridge.
 - **[`paper/`](paper):** PDFs, LaTeX sources, and release metadata.
 - **[`book/`](book):** OPH Book source. Print-PDF build notes live in [`book/README.md`](book/README.md).
 - **[`code/`](code):** computational material, particle outputs, and experiments.
+- **[`HADRON.md`](HADRON.md):** policy for QCD-limited particle rows, empirical
+  \(e^+e^-\to\mathrm{hadrons}\) input, and fine-structure hadron closure.
 - **[`assets/`](assets):** public diagrams and figures.
 - **[`extra/`](extra):** maintained public notes such as objections, experimental write-ups, and selected supporting essays.
 

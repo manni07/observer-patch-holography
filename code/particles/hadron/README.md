@@ -16,6 +16,12 @@ frontier is production execution:
 So the first promotable outputs on the current branch are isospin-symmetric
 `pi_iso` and `N_iso`, not fully physical `p`, `n`, or `pi^0`.
 
+The public output policy for QCD-limited rows is documented in
+[`../../../HADRON.md`](../../../HADRON.md). That policy separates source-only
+OPH values from OPH plus empirical hadron closure values. The empirical
+fine-structure closure uses measured `e+e- -> hadrons` data as the strongest
+available substitute for a production OPH hadronic spectral payload.
+
 ## Core Files
 
 - runtime receipt:
@@ -32,6 +38,8 @@ So the first promotable outputs on the current branch are isospin-symmetric
   [validate_production_hadron_closure.py](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/hadron/validate_production_hadron_closure.py)
 - one-shot production writeback:
   [run_production_backend_writeback.py](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/hadron/run_production_backend_writeback.py)
+- empirical `e+e- -> hadrons` source registry:
+  [empirical_ee_hadrons_sources.yaml](/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/hadron/empirical_ee_hadrons_sources.yaml)
 
 ## Active Artifacts
 

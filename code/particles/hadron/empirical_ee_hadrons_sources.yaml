@@ -1,0 +1,132 @@
+artifact: oph_empirical_ee_hadrons_source_registry
+status: source_registry_plan
+purpose: >
+  Source registry for empirical hadronic spectral input used by the
+  OPH plus empirical hadron closure surface. This registry does not promote
+  empirical data to a source-only OPH theorem.
+
+row_class:
+  empirical_output: oph_plus_empirical_hadron_closure
+  source_only_output: source_only_oph
+  comparison_output: compare_only
+
+physics_policy:
+  nonperturbative_qcd_barrier: true
+  perturbative_qcd_role:
+    - high_energy_tail
+    - matching_window_cross_check
+    - continuum_region_consistency_check
+  perturbative_qcd_not_sufficient_for:
+    - low_energy_resonance_region
+    - rho_omega_phi_structure
+    - source_only_ward_projected_spectral_measure
+
+fine_structure_empirical_payload:
+  artifact: oph_empirical_ee_hadronic_spectral_measure
+  source_only: false
+  empirical_hadron_closure: true
+  external_cross_section_data_used: true
+  promotable_as_oph_source_theorem: false
+  usable_for_public_final_values: true
+  target_runtime_consumer:
+    - code/P_derivation/empirical_thomson_endpoint.py
+    - code/P_derivation/runtime/measured_endpoint_calibration_current.json
+  required_fields:
+    - source_compilation
+    - data_release
+    - energy_grid
+    - R_values
+    - statistical_covariance
+    - systematic_covariance
+    - radiative_corrections
+    - vacuum_polarization_undressing
+    - final_state_radiation_policy
+    - exclusive_channel_sum_policy
+    - inclusive_region_policy
+    - pQCD_tail_policy
+    - kernel
+    - integral_value
+    - integral_uncertainty
+
+candidate_sources:
+  - id: pdg_hadronic_xsections_r_ratio
+    role: primary_open_data_seed
+    url: https://pdg.lbl.gov/current/xsect/
+    source_type: compiled_R_ratio_and_cross_section_data
+    notes:
+      - PDG exposes data files and plots for e+e- hadronic annihilation.
+      - The current public URL redirects to the hosted hadronic cross-section data files.
+      - The source notes separate normalization and point-to-point systematic errors where possible.
+    required_ingest_checks:
+      - parse_header_and_column_metadata
+      - preserve_experiment_and_channel_labels
+      - preserve_statistical_and_systematic_components
+      - verify_bare_cross_section_or_R_convention
+
+  - id: hepdata_ee_hadrons
+    role: channel_level_and_inclusive_cross_check
+    url: https://www.hepdata.net/
+    source_type: experiment_level_tables
+    notes:
+      - HEPData contains inclusive R measurements and exclusive hadronic final-state tables.
+      - Useful for reconstructing or auditing the low-energy exclusive sum.
+    required_ingest_checks:
+      - store_record_doi_or_inspire_id
+      - preserve_covariance_when_available
+      - track_born_or_dressed_cross_section_status
+
+  - id: alphaqed_jegerlehner
+    role: running_alpha_reference_implementation
+    url: https://www-com.physik.hu-berlin.de/~fjeger/software.html
+    source_type: reference_code
+    notes:
+      - alphaQED provides hadronic contributions to the effective electromagnetic coupling.
+      - Use as an independent implementation cross-check, not as an opaque replacement for the OPH payload.
+    required_ingest_checks:
+      - record_package_version
+      - record_hadronic_data_release
+      - compare_integral_against_local_kernel
+
+  - id: knt19
+    role: data_driven_hvp_compilation_cross_check
+    url: https://arxiv.org/abs/1911.00367
+    source_type: published_compilation
+    notes:
+      - Re-evaluates HVP contributions using updated e+e- -> hadrons data.
+      - Includes running alpha at the Z scale among its outputs.
+    required_ingest_checks:
+      - record_equation_and_table_numbers_used
+      - record_correlation_policy
+      - compare_delta_alpha_had_mz
+
+  - id: dhmz_hvptools
+    role: independent_data_combination_cross_check
+    url: https://arxiv.org/abs/1010.4180
+    source_type: published_compilation_and_tooling
+    notes:
+      - Uses HVPTools and e+e- hadronic cross-section data combination.
+      - Useful for stress-testing experimental correlations and channel sums.
+    required_ingest_checks:
+      - record_hvptools_version_or_reference
+      - record_channel_sum_policy
+      - compare_integral_and_uncertainty_budget
+
+  - id: muon_g2_theory_initiative_2025
+    role: current_hvp_policy_context
+    url: https://muon-gm2-theory.illinois.edu/white-paper-25/
+    source_type: field_status_review
+    notes:
+      - Provides current context on HVP, lattice calculations, e+e- data, tau data, and tensions.
+      - Use for policy language and uncertainty treatment, not as a direct data table.
+    required_ingest_checks:
+      - cite_policy_context_only
+      - do_not_use_as_raw_spectral_measure
+
+implementation_targets:
+  source_registry: code/particles/hadron/empirical_ee_hadrons_sources.yaml
+  empirical_schema: code/particles/hadron/empirical_ee_hadronic_spectral_measure.schema.json
+  ingest_script: code/particles/hadron/ingest_empirical_ee_hadrons.py
+  normalized_payload: code/particles/runs/hadron/empirical_ee_hadronic_spectral_measure.json
+  endpoint_script: code/P_derivation/empirical_thomson_endpoint.py
+  endpoint_artifact: code/P_derivation/runtime/empirical_thomson_endpoint_current.json
+
