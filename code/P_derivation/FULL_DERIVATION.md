@@ -9,6 +9,10 @@ runtime code also keeps the finite source-audit trunk visible, including the
 same-family transport remainder from the electroweak source anchor at `m_Z^2`
 to the Thomson limit.
 
+The public numeric row has output class `oph_plus_empirical_hadron_closure`.
+The source-only audit row has output class `source_only_oph`. The two rows are
+kept separate.
+
 ## Fine-Structure Readout
 
 The OPH fixed-point readout is
@@ -18,7 +22,7 @@ alpha(0)    = 7.297 352 5643(11) x 10^-3
 alpha^-1(0) = 137.035 999 177(21)
 ```
 
-Reference for the public experimental value:
+Reference for the empirical endpoint value:
 https://physics.nist.gov/cuu/pdf/wall_2022.pdf
 
 ## First-Principles Computation
@@ -42,6 +46,17 @@ P          = 1.630968209403959324879279847782648941...
 alpha(0)  = 0.007297352564331425030245795264691683...
 alpha^-1  = 137.035999177(21)
 ```
+
+The source-only audit row emitted by the available transport package is
+
+```text
+P_source_audit          = 1.63097209569432901817967892561191884270169
+alpha_source_audit^-1   = 136.994835164621649457949994585787193262029
+```
+
+The OPH plus empirical hadron closure row uses a separate `e+e- -> hadrons`
+payload class for the hadronic endpoint contribution. The source-only audit row
+is recorded separately.
 
 ## Outer Closure
 
@@ -260,8 +275,9 @@ The command prints the implemented transport term, the required endpoint
 transport term, the missing inverse-alpha contribution, and the theorem-status
 manifest. This keeps any replacement of `Delta_Th(P)` easy to check.
 
-`measured_endpoint_calibration.py` emits the display surface for numeric tables
-and plots. The source-audit status belongs in ledgers, not in introductory prose.
+`measured_endpoint_calibration.py` emits the OPH plus empirical hadron closure
+surface for numeric tables and plots. The source-audit status belongs in
+ledgers, not in introductory prose.
 
 `thomson_endpoint_package.py` adds the conditional endpoint packet. At the
 public endpoint pixel it reports
@@ -290,4 +306,5 @@ closed:   source-residual non-identifiability boundary for issue #235
 closed:   WardProjectedHadronicSpectralEmission_Q source-spectral reduction theorem
 stage:    populated Ward-projected spectral measure payload for Delta_Th(P)
 stage:    interval-wide proof for the final full transport map after R_Q(P) is emitted
+empirical: OPH plus empirical hadron closure display row for alpha(0)
 ```

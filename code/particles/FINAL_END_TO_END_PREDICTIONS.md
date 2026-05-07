@@ -1,9 +1,9 @@
 # Final End-to-End Particle Predictions
 
-Generated: `2026-05-07T03:01:04Z`
+Generated: `2026-05-07T03:51:58Z`
 
-Scope: `nonhadron_particle_pipeline_with_hadrons_closed_out_of_scope`
-Claim status: `final_nonhadron_predictions_without_full_hadron_or_certified_P_root_release`
+Scope: `nonhadron_particle_pipeline_with_empirical_hadron_closure_policy`
+Claim status: `final_nonhadron_predictions_with_separate_empirical_hadron_closure_surface`
 
 ## P Closure
 
@@ -56,6 +56,16 @@ Claim status: `final_nonhadron_predictions_without_full_hadron_or_certified_P_ro
 | `muon_neutrino` | `0.019481987935919015 eV` | `theorem_grade_weighted_cycle_absolute_attachment` | `weighted_cycle_bridge_rigid_absolute_family` | `True` |
 | `tau_neutrino` | `0.05307522145074924 eV` | `theorem_grade_weighted_cycle_absolute_attachment` | `weighted_cycle_bridge_rigid_absolute_family` | `True` |
 
+## Fine Structure
+
+| Output class | alpha^-1(0) | P | Status |
+| --- | ---: | ---: | --- |
+| `source_only_oph` | `136.994835164621649457949994585787193262029` | `1.63097209569432901817967892561191884270169` | `source_audit_without_hadronic_spectral_payload` |
+| `oph_plus_empirical_hadron_closure` | `137.035999177` | `1.6309682094039593248792798477826489413359828516279250606661507533907793398933432` | `oph_plus_empirical_hadron_closure_endpoint` |
+
+- Empirical residual at the public endpoint pixel: `0.04146586100522338905344871535731404448730208198590711656812056464944371240646525111663476` inverse-alpha units
+- Empirical payload policy: `schema_and_source_registry_present_without_integrated_dataset`
+
 ## Direct-Top Auxiliary Comparison
 
 - Top theorem coordinate: `172.35235532883115 GeV` on `Q007TP4`
@@ -66,5 +76,7 @@ Claim status: `final_nonhadron_predictions_without_full_hadron_or_certified_P_ro
 
 ## Hadrons
 
-- Predictions emitted: `False`
-- Reason: Hadrons require a working OPH hadron backend on suitable hardware such as GLORB/Echosahedron. Issues #153/#157 are closed out-of-scope/computationally blocked, not solved, and no hadron predictions are emitted.
+- Source-only hadron predictions emitted: `False`
+- Empirical hadron closure allowed for display: `True`
+- Policy artifact: `HADRON.md`
+- Reason: Source-only hadron outputs require a working OPH hadron backend. Empirical hadron closure values stay in a separate output class; the e+e- spectral payload has a source registry and schema.

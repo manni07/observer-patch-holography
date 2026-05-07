@@ -25,14 +25,16 @@
     "status": "declared_taxonomy_emitted_numeric_sweep_stage_gated"
   },
   "finalization_gates": {
-    "hadrons_suppressed_by_default": true,
+    "empirical_hadron_closure_policy_documented": true,
+    "empirical_hadron_spectral_dataset_integrated": false,
     "nonhadron_prediction_surface_buildable": true,
     "obstruction_only_worker_result_allowed": true,
     "p_trunk_candidate_only": true,
     "paper_material_sync_complete_without_live_publish": true,
+    "source_only_hadrons_suppressed_by_default": true,
     "source_spectral_stage_gate": "populated source spectral measure payload plus interval certificate"
   },
-  "generated_utc": "2026-05-07T03:01:04Z",
+  "generated_utc": "2026-05-07T03:51:58Z",
   "github_issue": 234,
   "pipeline_inputs": {
     "P": 1.630968209403959,

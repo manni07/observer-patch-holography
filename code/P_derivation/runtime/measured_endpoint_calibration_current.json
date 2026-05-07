@@ -21,7 +21,7 @@
     "may_feed_numeric_prediction_tables": true,
     "may_feed_public_plots_and_svg_values": true,
     "may_feed_source_theorem_claim": false,
-    "must_show_caveat": "fine-structure endpoint uses measured Thomson-limit calibration pending source spectral payload"
+    "must_show_caveat": "fine-structure endpoint uses OPH plus empirical hadron closure; source-only spectral payload is absent"
   },
   "current_source_candidate": {
     "P": "1.63097209569432901817967892561191884270169",
@@ -30,18 +30,28 @@
     "missing_inverse_alpha_units": "0.041164012378350542050005414212806737971",
     "p_gap_implemented_minus_calibrated": "0.0000038862903696933003990778292699013657063242089711084969148420339247715484988"
   },
+  "empirical_hadron_closure": {
+    "dispersion_payload_status": "schema_and_source_registry_present_without_integrated_dataset",
+    "empirical_payload_schema": "code/particles/hadron/empirical_ee_hadronic_spectral_measure.schema.json",
+    "external_cross_section_data_integrated": false,
+    "measured_thomson_endpoint_used": true,
+    "row_class": "oph_plus_empirical_hadron_closure",
+    "source_only_theorem_status": "not_promoted",
+    "source_registry": "code/particles/hadron/empirical_ee_hadrons_sources.yaml"
+  },
   "exact_alpha_promoted": false,
-  "external_input_role": "The measured Thomson-limit inverse fine-structure constant is inserted as a temporary calibration endpoint for numeric tables and displays. It is excluded from the source-only solver and from theorem promotion.",
+  "external_input_role": "The measured Thomson-limit inverse fine-structure constant supplies the empirical hadron-completed endpoint for numeric tables and displays. It is excluded from the source-only solver and from theorem promotion.",
   "external_input_used": true,
-  "generated_utc": "2026-05-06T10:58:48Z",
+  "generated_utc": "2026-05-07T03:51:58Z",
   "promotion_allowed": false,
+  "row_class": "oph_plus_empirical_hadron_closure",
   "source_only_guard": {
     "codata_enters_solver": false,
     "may_satisfy_source_spectral_payload_gate": false,
     "measured_endpoint_allowed_as_transport_input": false,
     "must_be_labeled_external_calibration": true
   },
-  "status": "measured_endpoint_insert_active_not_source_derivation",
+  "status": "oph_plus_empirical_hadron_closure_endpoint",
   "why_source_computation_is_blocked": {
     "current_corpus_obstruction": {
       "finite_volume_levels_populated": false,

@@ -64,12 +64,17 @@ FINAL_PIPELINE_STEPS: tuple[PipelineStep, ...] = (
     PipelineStep(
         "hadron_spectral_measure_contract",
         "particles/hadron/derive_ward_projected_spectral_measure_contract.py",
-        "Refresh the closed-out-of-scope hadronic spectral-measure contract.",
+        "Refresh the source-backend hadronic spectral-measure contract.",
     ),
     PipelineStep(
         "source_spectral_theorem",
         "P_derivation/source_spectral_theorem.py",
         "Refresh the Ward-projected source-spectral theorem artifact.",
+    ),
+    PipelineStep(
+        "measured_endpoint_calibration",
+        "P_derivation/measured_endpoint_calibration.py",
+        "Refresh the OPH plus empirical hadron closure endpoint artifact.",
     ),
     PipelineStep(
         "direct_top_bridge_contract",

@@ -14,10 +14,13 @@ ROOT = Path(__file__).resolve().parents[2]
 PARTICLES_ROOT = ROOT / "particles"
 P_ROOT = ROOT / "P_derivation"
 P_TRUNK = P_ROOT / "runtime" / "p_closure_trunk_current.json"
+MEASURED_ENDPOINT = P_ROOT / "runtime" / "measured_endpoint_calibration_current.json"
 PIPELINE_STATUS = PARTICLES_ROOT / "runs" / "status" / "particle_pipeline_closure_status.json"
 EXACT_NONHADRON = PARTICLES_ROOT / "exact_nonhadron_masses.json"
 RESULTS_STATUS = PARTICLES_ROOT / "results_status.json"
 DIRECT_TOP = PARTICLES_ROOT / "runs" / "calibration" / "direct_top_bridge_contract.json"
+EMPIRICAL_EE_REGISTRY = PARTICLES_ROOT / "hadron" / "empirical_ee_hadrons_sources.yaml"
+EMPIRICAL_EE_SCHEMA = PARTICLES_ROOT / "hadron" / "empirical_ee_hadronic_spectral_measure.schema.json"
 DEFAULT_JSON_OUT = PARTICLES_ROOT / "runs" / "status" / "final_end_to_end_predictions.json"
 DEFAULT_MD_OUT = PARTICLES_ROOT / "FINAL_END_TO_END_PREDICTIONS.md"
 
@@ -76,8 +79,47 @@ def _prediction_entry(entry: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _fine_structure_surface(measured_endpoint: dict[str, Any]) -> dict[str, Any]:
+    calibrated = measured_endpoint["calibrated_values"]
+    source_candidate = measured_endpoint["current_source_candidate"]
+    endpoint_requirement = measured_endpoint["codata_mapped_endpoint_requirement"]
+    return {
+        "source_only_oph": {
+            "row_class": "source_only_oph",
+            "status": "source_audit_without_hadronic_spectral_payload",
+            "alpha_inv": source_candidate["alpha_inv"],
+            "alpha": source_candidate["alpha"],
+            "P": source_candidate["P"],
+            "missing_inverse_alpha_units": source_candidate["missing_inverse_alpha_units"],
+            "p_gap_implemented_minus_empirical": source_candidate["p_gap_implemented_minus_calibrated"],
+            "promotable_as_exact_source_theorem": False,
+        },
+        "oph_plus_empirical_hadron_closure": {
+            "row_class": "oph_plus_empirical_hadron_closure",
+            "status": measured_endpoint["status"],
+            "alpha_inv": calibrated["alpha_inv_0"],
+            "alpha_inv_standard_uncertainty": calibrated["alpha_inv_0_standard_uncertainty"],
+            "alpha": calibrated["alpha_0"],
+            "P": calibrated["P_from_outer_equation"],
+            "P_standard_uncertainty": calibrated["P_standard_uncertainty"],
+            "required_transport_delta_alpha_inv": endpoint_requirement["required_transport_delta_alpha_inv"],
+            "implemented_transport_delta_alpha_inv": endpoint_requirement["implemented_transport_delta_alpha_inv"],
+            "missing_source_transport_delta_alpha_inv": endpoint_requirement[
+                "missing_source_transport_delta_alpha_inv"
+            ],
+            "required_screening_factor": endpoint_requirement["required_screening_factor"],
+            "residual_second_order_coefficient": endpoint_requirement[
+                "residual_second_order_coefficient"
+            ],
+            "promotable_as_exact_source_theorem": False,
+        },
+        "empirical_payload_policy": measured_endpoint["empirical_hadron_closure"],
+    }
+
+
 def build_payload() -> dict[str, Any]:
     p_trunk = _load_json(P_TRUNK)
+    measured_endpoint = _load_json(MEASURED_ENDPOINT)
     pipeline = _load_json(PIPELINE_STATUS)
     exact = _load_json(EXACT_NONHADRON)
     results = _load_json(RESULTS_STATUS)
@@ -93,15 +135,25 @@ def build_payload() -> dict[str, Any]:
     return {
         "artifact": "oph_final_current_end_to_end_particle_predictions",
         "generated_utc": _now_utc(),
-        "scope": "nonhadron_particle_pipeline_with_hadrons_closed_out_of_scope",
-        "claim_status": "final_nonhadron_predictions_without_full_hadron_or_certified_P_root_release",
+        "scope": "nonhadron_particle_pipeline_with_empirical_hadron_closure_policy",
+        "claim_status": "final_nonhadron_predictions_with_separate_empirical_hadron_closure_surface",
         "source_surfaces": {
             "p_trunk": "code/P_derivation/runtime/p_closure_trunk_current.json",
+            "measured_endpoint_calibration": (
+                "code/P_derivation/runtime/measured_endpoint_calibration_current.json"
+            ),
             "thomson_endpoint_package": "code/P_derivation/runtime/thomson_endpoint_package_current.json",
             "pipeline_status": "code/particles/runs/status/particle_pipeline_closure_status.json",
             "exact_nonhadron": "code/particles/exact_nonhadron_masses.json",
             "results_status": "code/particles/results_status.json",
             "direct_top_bridge": "code/particles/runs/calibration/direct_top_bridge_contract.json",
+            "hadron_policy": "HADRON.md",
+            "empirical_ee_hadrons_source_registry": (
+                "code/particles/hadron/empirical_ee_hadrons_sources.yaml"
+            ),
+            "empirical_ee_hadronic_spectral_measure_schema": (
+                "code/particles/hadron/empirical_ee_hadronic_spectral_measure.schema.json"
+            ),
         },
         "p_closure": {
             "P": p_trunk["fixed_point_candidate"]["P"],
@@ -110,16 +162,27 @@ def build_payload() -> dict[str, Any]:
             "may_feed_live_particle_predictions": p_trunk["consumer_policy"]["may_feed_live_particle_predictions"],
         },
         "runtime_inputs": results.get("inputs", {}),
+        "output_classes": [
+            "source_only_oph",
+            "oph_plus_empirical_hadron_closure",
+            "compare_only",
+            "work_in_progress",
+        ],
+        "fine_structure": _fine_structure_surface(measured_endpoint),
         "finalization_gates": pipeline["finalization_gates"],
         "particle_five_issue_gates": particle_five_gates,
         "companion_open_branches": list(pipeline.get("companion_status_branches", [])),
         "predictions": predictions,
         "hadron_policy": {
-            "predictions_emitted": False,
+            "source_only_hadron_predictions_emitted": False,
+            "empirical_hadron_closure_allowed_for_display": True,
+            "policy_artifact": "HADRON.md",
+            "source_registry": str(EMPIRICAL_EE_REGISTRY.relative_to(ROOT)),
+            "empirical_payload_schema": str(EMPIRICAL_EE_SCHEMA.relative_to(ROOT)),
             "reason": (
-                "Hadrons require a working OPH hadron backend on suitable hardware such as "
-                "GLORB/Echosahedron. Issues #153/#157 are closed out-of-scope/computationally "
-                "blocked, not solved, and no hadron predictions are emitted."
+                "Source-only hadron outputs require a working OPH hadron backend. Empirical "
+                "hadron closure values stay in a separate output class; the e+e- spectral payload "
+                "has a source registry and schema."
             ),
             "github_issues": [153, 157],
         },
@@ -194,6 +257,30 @@ def render_markdown(payload: dict[str, Any]) -> str:
     lines.extend(
         [
             "",
+            "## Fine Structure",
+            "",
+            "| Output class | alpha^-1(0) | P | Status |",
+            "| --- | ---: | ---: | --- |",
+        ]
+    )
+    fine = payload["fine_structure"]
+    source_only = fine["source_only_oph"]
+    empirical = fine["oph_plus_empirical_hadron_closure"]
+    lines.append(
+        f"| `source_only_oph` | `{source_only['alpha_inv']}` | `{source_only['P']}` | "
+        f"`{source_only['status']}` |"
+    )
+    lines.append(
+        f"| `oph_plus_empirical_hadron_closure` | `{empirical['alpha_inv']}` | "
+        f"`{empirical['P']}` | `{empirical['status']}` |"
+    )
+    lines.extend(
+        [
+            "",
+            f"- Empirical residual at the public endpoint pixel: "
+            f"`{empirical['missing_source_transport_delta_alpha_inv']}` inverse-alpha units",
+            f"- Empirical payload policy: `{fine['empirical_payload_policy']['dispersion_payload_status']}`",
+            "",
             "## Direct-Top Auxiliary Comparison",
             "",
             f"- Top theorem coordinate: `{direct['current_top_coordinate_gev']} GeV` on `{direct['current_top_codomain']}`",
@@ -204,7 +291,9 @@ def render_markdown(payload: dict[str, Any]) -> str:
             "",
             "## Hadrons",
             "",
-            f"- Predictions emitted: `{payload['hadron_policy']['predictions_emitted']}`",
+            f"- Source-only hadron predictions emitted: `{payload['hadron_policy']['source_only_hadron_predictions_emitted']}`",
+            f"- Empirical hadron closure allowed for display: `{payload['hadron_policy']['empirical_hadron_closure_allowed_for_display']}`",
+            f"- Policy artifact: `{payload['hadron_policy']['policy_artifact']}`",
             f"- Reason: {payload['hadron_policy']['reason']}",
         ]
     )

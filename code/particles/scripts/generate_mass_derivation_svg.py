@@ -116,8 +116,8 @@ PARTICLE_INFO: Dict[str, Dict[str, str]] = {
     "tau_neutrino": {"symbol": "nu_tau", "plain": "Extremely light neutral lepton of the tau family."},
     "proton": {"symbol": "p", "plain": "Stable positively charged hadron found in atomic nuclei."},
     "neutron": {"symbol": "n", "plain": "Neutral hadron found in atomic nuclei."},
-    "neutral_pion": {"symbol": "pi0 proxy", "plain": "Light meson placeholder row withheld from the public table because the hadron lane is closed out-of-scope."},
-    "rho_770_0": {"symbol": "rho(770)0 proxy", "plain": "Vector-meson placeholder row withheld from the public table because the hadron lane is closed out-of-scope."},
+    "neutral_pion": {"symbol": "pi0 proxy", "plain": "Light meson placeholder row withheld from the source-only table because the hadron backend is absent."},
+    "rho_770_0": {"symbol": "rho(770)0 proxy", "plain": "Vector-meson placeholder row withheld from the source-only table because the hadron backend is absent."},
 }
 
 GROUP_ROW_TEXT = {
@@ -136,7 +136,7 @@ STATUS_EXPLAINER = {
     "target_anchored_witness_no_go_boundary": "target-anchored witness with a corpus-limited no-go boundary",
     "selected_class_theorem": "theorem-grade closure on the public quark frame class selected by P",
     "continuation": "declared continuation or witness surface outside theorem-grade public output",
-    "simulation_dependent": "closed out-of-scope surface with backend and systematics prerequisites",
+    "simulation_dependent": "source-backend-absent surface with empirical closure policy",
 }
 
 STATUS_NEXT_STEP = {
@@ -148,7 +148,7 @@ STATUS_NEXT_STEP = {
     "target_anchored_witness_no_go_boundary": "This row belongs to a target-anchored witness with a corpus-limited no-go boundary.",
     "selected_class_theorem": "This row belongs to a theorem-grade closure on the public quark frame class selected by P.",
     "continuation": "This row belongs to a declared continuation or witness surface outside theorem-grade public output.",
-    "simulation_dependent": "This row is closed out-of-scope until a backend bundle and publication-grade systematics exist.",
+    "simulation_dependent": "This source-only row requires a backend bundle and publication-grade systematics. Empirical closure values use a separate e+e- payload class.",
 }
 
 PARTICLE_TITLE = {
@@ -312,8 +312,8 @@ LANES: List[Dict[str, Any]] = [
     {
         "key": "hadrons",
         "title": "Hadrons",
-        "summary": "The hadron lane is closed out-of-scope / computationally blocked. Public masses require a working OPH backend export bundle with publication-complete systematics.",
-        "takeaway": "This lane depends on nonperturbative backend computation outside the local and Chrome-worker environment.",
+        "summary": "The source-only hadron lane requires a working OPH backend export bundle with publication-complete systematics. Empirical closure values use a separate e+e- payload class.",
+        "takeaway": "This lane splits source-only backend outputs from empirical data-driven closure outputs.",
         "logic": (
             "The hadron path steps down from the electroweak and local quark masses into the strong scale, seeds the "
             "unquenched ensemble family, realizes deterministic cfg/source payload identifiers, attaches a fixed "
@@ -322,8 +322,8 @@ LANES: List[Dict[str, Any]] = [
             "hadron masses require one production backend export bundle with publication-complete manifest provenance, real `pi_iso`, `N_iso_direct`, and `N_iso_exchange` arrays, the executed runtime receipt `(N_therm, N_sep)`, and then declared production continuum/volume/chiral/statistical systematics. "
             "The surrogate execution bridge is only a diagnostic proof that the schema closes; it is not a promotable hadron output surface."
         ),
-        "tasks_text": "Scope closure: the hadron backend lane is out-of-scope and computationally blocked. Reopening requires a GLORB/Echosahedron-class OPH backend with real correlator arrays and published statistical plus continuum/volume/chiral systematics on the seeded stable-channel branch.",
-        "prediction_surface": "Closed-out-of-scope stable-channel hadron shell; public hadron rows are withheld because this lane requires a real backend bundle and publication-grade systematics.",
+        "tasks_text": "Source-only scope: the hadron backend lane requires a GLORB/Echosahedron-class OPH backend with real correlator arrays and published statistical plus continuum/volume/chiral systematics on the seeded stable-channel branch. Empirical closure scope: e+e- spectral data can feed a separate display class.",
+        "prediction_surface": "Stable-channel hadron shell with source-backend prerequisites; source-only public hadron rows are withheld, while empirical closure rows use a separate data-driven class.",
         "particles": ["proton", "neutron", "neutral_pion", "rho_770_0"],
         "tasks": [
             "papers.compact.e.33-close-the-nonperturbative-qcd-hadron-branch",
@@ -728,7 +728,7 @@ def public_exact_surface(row: Dict[str, Any], exact_entry: Dict[str, Any]) -> st
 def public_exact_caveat(row: Dict[str, Any], exact_entry: Dict[str, Any]) -> str:
     particle_id = row["particle_id"]
     if particle_id in {"w_boson", "z_boson"}:
-        return "Compare-only frozen-adapter row. Live promotion requires the candidate P root, source spectral measure payload, and interval certificate."
+        return "Compare-only frozen-adapter row. Promotion requires the candidate P root, source spectral measure payload, and interval certificate."
     if particle_id == "higgs":
         return "Exact Higgs row on the declared electroweak calibration surface. The companion top coordinate is carried by the same surface. The auxiliary direct-top average is compare-only."
     if particle_id in {"electron", "muon", "tau"}:

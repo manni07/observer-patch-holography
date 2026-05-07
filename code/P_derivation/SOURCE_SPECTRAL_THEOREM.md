@@ -134,13 +134,13 @@ the D10 scalar map. The required payload must contain:
 - a same-subtraction scheme lock to `a0(P)`
 - a directed-rounding interval certificate for the fixed point
 
-The local workspace contains contracts and skeletons for this route. It does
-not contain the production finite-volume correlator dump or the derived
-spectral-measure artifact. The viable source route is a first-principles
+The local workspace contains contracts and skeletons for this route. The
+production finite-volume correlator dump and the derived spectral-measure
+artifact are absent. The viable source route is a first-principles
 unquenched QCD/HVP computation on the OPH-emitted family, followed by the
 interval certificate above.
 
-## Display Surface
+## Empirical Display Surface
 
 For numeric tables and plots, the public endpoint surface is carried through
 
@@ -155,6 +155,8 @@ alpha^-1(0) = 137.035999177(21)
 P = 1.63096820940395932487927984778...
 ```
 
-from the outer equation. The source-audit payload remains recorded in the
-runtime ledgers and theorem contract files.
-It cannot satisfy the source-spectral theorem gate.
+from the outer equation. This row class is OPH plus empirical hadron closure,
+with a separate `e+e- -> hadrons` payload class for the empirical hadronic
+endpoint contribution through the policy in `../../HADRON.md`. The source-audit
+payload remains recorded in the runtime ledgers and theorem contract files. It
+cannot satisfy the source-spectral theorem gate.

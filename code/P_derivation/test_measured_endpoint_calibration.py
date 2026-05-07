@@ -37,10 +37,14 @@ def test_measured_endpoint_calibration_is_external_and_nonpromoting() -> None:
     )
 
     assert payload["artifact"] == "oph_measured_fine_structure_endpoint_calibration"
-    assert payload["status"] == "measured_endpoint_insert_active_not_source_derivation"
+    assert payload["status"] == "oph_plus_empirical_hadron_closure_endpoint"
+    assert payload["row_class"] == "oph_plus_empirical_hadron_closure"
     assert payload["promotion_allowed"] is False
     assert payload["exact_alpha_promoted"] is False
     assert payload["external_input_used"] is True
+    assert payload["empirical_hadron_closure"]["measured_thomson_endpoint_used"] is True
+    assert payload["empirical_hadron_closure"]["external_cross_section_data_integrated"] is False
+    assert payload["empirical_hadron_closure"]["source_only_theorem_status"] == "not_promoted"
     assert payload["source_only_guard"]["codata_enters_solver"] is False
     assert payload["source_only_guard"]["may_satisfy_source_spectral_payload_gate"] is False
     assert payload["consumer_policy"]["may_feed_numeric_prediction_tables"] is True

@@ -16,19 +16,29 @@ from build_particle_pipeline_closure_status import build_status  # noqa: E402
 def test_particle_pipeline_closure_status_scope_locks_hadrons_and_workers() -> None:
     status = build_status()
 
-    assert status["scope"]["hadrons_in_current_local_scope"] is False
-    assert status["scope"]["chrome_workers_needed_now"] is False
+    assert status["scope"]["source_only_hadrons_in_current_local_scope"] is False
+    assert status["scope"]["empirical_hadron_closure_surface"] is True
+    assert status["scope"]["chrome_workers_needed"] is False
     assert "GLORB/Echosahedron" in status["scope"]["hadron_scope_reason"]
     assert status["finalization_gates"]["obstruction_only_worker_result_allowed"] is True
+    assert status["finalization_gates"]["empirical_hadron_closure_policy_documented"] is True
+    assert status["finalization_gates"]["empirical_hadron_spectral_dataset_integrated"] is False
+    assert status["artifacts"]["measured_endpoint_calibration"]["status"] == (
+        "oph_plus_empirical_hadron_closure_endpoint"
+    )
+    assert status["artifacts"]["empirical_ee_hadrons_source_registry"]["exists"] is True
+    assert status["artifacts"]["empirical_ee_hadronic_spectral_measure_schema"]["exists"] is True
     gates = {gate["issue"]: gate for gate in status["issue_gates"]}
     assert gates[153]["state"] == "closed_out_of_scope_computationally_blocked"
     assert gates[153]["closable_now"] is True
     assert gates[153]["requires_oph_hardware_backend"] is True
+    assert gates[153]["empirical_hadron_closure_allowed"] is True
     assert gates[153]["closed_as_out_of_scope"] is True
     assert gates[153]["chrome_workers"] == "do_not_use_for_backend_execution"
     assert gates[157]["state"] == "closed_out_of_scope_computationally_blocked"
     assert gates[157]["closable_now"] is True
     assert gates[157]["requires_oph_hardware_backend"] is True
+    assert gates[157]["empirical_hadron_closure_allowed"] is True
     assert gates[157]["closed_as_out_of_scope"] is True
     assert gates[157]["chrome_workers"] == "do_not_use_for_backend_execution"
     assert gates[223]["state"] == "closed_blocker_isolated_endpoint_package"

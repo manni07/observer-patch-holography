@@ -155,19 +155,19 @@ def build_payload() -> dict[str, Any]:
         },
         {
             "chain": "hadrons",
-            "status": "closed_out_of_scope_computationally_blocked",
-            "claim_level": "no_local_prediction_emitted",
+            "status": "source_backend_absent_empirical_closure_policy_emitted",
+            "claim_level": "source_only_absent_empirical_rows_separate",
             "outputs": {},
             "promotable": False,
             "open_gates": [],
             "closed_issue_refs": [153, 157],
             "closure_reason": (
-                "The local environment has no working OPH hadron backend; local surrogate code "
-                "and Chrome workers cannot promote hadron predictions."
+                "Source-only hadron prediction requires a working OPH hadron backend. Empirical "
+                "hadron closure uses a separate e+e- payload class."
             ),
             "next_artifact": (
-                "none in local scope; reopen only when a GLORB/Echosahedron-class OPH backend "
-                "emits production hadron output and systematics"
+                "HADRON.md + code/particles/hadron/empirical_ee_hadrons_sources.yaml + "
+                "code/particles/hadron/empirical_ee_hadronic_spectral_measure.schema.json"
             ),
         },
     ]
@@ -187,7 +187,7 @@ def build_payload() -> dict[str, Any]:
         row["chain"]
         for row in rows
         if row["chain"] not in closed_or_scoped
-        and row["status"] != "closed_out_of_scope_computationally_blocked"
+        and row["status"] != "source_backend_absent_empirical_closure_policy_emitted"
     ]
 
     return {
@@ -198,11 +198,11 @@ def build_payload() -> dict[str, Any]:
             "all_derivation_chains_claimed_closed": False,
             "closed_or_scoped_chains": closed_or_scoped,
             "remaining_nonclosed_chains": remaining_nonclosed,
-            "closed_out_of_scope_chains": ["hadrons"],
-            "hardware_gated_chains": ["hadrons"],
+            "source_backend_absent_chains": ["hadrons"],
+            "empirical_closure_policy_chains": ["hadrons"],
             "policy": (
                 "Do not promote candidate, compare-only, witness-only, corpus-limited no-go, or "
-                "hardware-gated chains as closed theorem predictions."
+                "source-backend-absent chains as closed theorem predictions."
             ),
         },
         "source_artifacts": {
@@ -213,8 +213,8 @@ def build_payload() -> dict[str, Any]:
         "worker_policy": {
             "chrome_pro_workers_needed_now": False,
             "reason": (
-                "Hadron issues #153/#157 are closed out-of-scope pending OPH hadron hardware; "
-                "the remaining in-scope P/electroweak chains need a populated source spectral measure payload and interval certificate before worker audit is meaningful. "
+                "Hadron issues #153/#157 have a source-backend boundary and an empirical closure policy surface; "
+                "the P/electroweak source-only chain needs a populated source spectral measure payload and interval certificate. "
                 "The charged absolute-anchor, quark global-classification, and direct-top auxiliary-codomain lanes "
                 "have corpus-limited no-go boundaries."
             ),

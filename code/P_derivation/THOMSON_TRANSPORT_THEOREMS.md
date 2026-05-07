@@ -268,17 +268,19 @@ Delta_missing(P) = 0.041164012378350542050005414212806738...
 
 without using the measured endpoint as an input.
 
-The measured endpoint can be used as a temporary calibration insert for
-numeric tables and plots. The calibration artifact is
+The measured endpoint can be used as an OPH plus empirical hadron closure row
+for numeric tables and plots. The endpoint artifact is
 
 ```text
 runtime/measured_endpoint_calibration_current.json
 ```
 
 and it carries `external_input_used=true`, `promotion_allowed=false`, and
-`exact_alpha_promoted=false`. It does not close this theorem. Its purpose is to
-keep the displayed numerical surface coherent while the nonperturbative
-Ward-projected source spectral payload remains absent.
+`exact_alpha_promoted=false`. It does not close the source-only theorem. Its
+purpose is to keep the displayed numerical surface coherent while the
+nonperturbative Ward-projected source spectral payload remains absent. The
+empirical row uses a separate `e+e- -> hadrons` payload class through the
+policy in `HADRON.md`.
 
 The endpoint package also evaluates the same question at the pixel obtained by
 the outer equation from the CODATA/NIST comparison value:

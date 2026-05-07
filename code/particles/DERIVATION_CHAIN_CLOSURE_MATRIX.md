@@ -1,12 +1,12 @@
 # Particle Derivation Chain Closure Matrix
 
-Generated: `2026-05-07T03:01:04Z`
+Generated: `2026-05-07T03:51:58Z`
 
 Status: `executable_nonhadron_chain_matrix_emitted`
 All derivation chains claimed closed: `False`
 Remaining nonclosed chains: `p_closure_root, electroweak_wz`
 Chrome Pro workers needed: `False`
-Reason: Hadron issues #153/#157 are closed out-of-scope pending OPH hadron hardware; the remaining in-scope P/electroweak chains need a populated source spectral measure payload and interval certificate before worker audit is meaningful. The charged absolute-anchor, quark global-classification, and direct-top auxiliary-codomain lanes have corpus-limited no-go boundaries.
+Reason: Hadron issues #153/#157 have a source-backend boundary and an empirical closure policy surface; the P/electroweak source-only chain needs a populated source spectral measure payload and interval certificate. The charged absolute-anchor, quark global-classification, and direct-top auxiliary-codomain lanes have corpus-limited no-go boundaries.
 
 | Chain | Status | Promotable | Open gates | Outputs | Next artifact |
 | --- | --- | --- | --- | --- | --- |
@@ -17,4 +17,4 @@ Reason: Hadron issues #153/#157 are closed out-of-scope pending OPH hadron hardw
 | `charged_leptons` | `closed_corpus_limited_charged_end_to_end_no_go` | `False` | none | `electron=0.0005109989499999994`, `muon=0.10565837550000004`, `tau=1.7769324651340912` | code/particles/runs/leptons/charged_end_to_end_impossibility_theorem.json |
 | `selected_class_quarks` | `closed_selected_public_class_global_classification_no_go` | `True` | none | `up=0.0021600000000000005`, `down=0.004699999999999999`, `strange=0.09349999999999999`, `charm=1.2729999999999992`, `bottom=4.182999999999994`, `top=172.35235532883115` | code/particles/runs/flavor/quark_class_uniform_public_frame_descent_obstruction.json |
 | `neutrino_absolute_attachment` | `closed_weighted_cycle_absolute_attachment_with_comparison_tension_visible` | `True` | none | `electron_neutrino=0.017454720257976796`, `muon_neutrino=0.019481987935919015`, `tau_neutrino=0.05307522145074924` | none |
-| `hadrons` | `closed_out_of_scope_computationally_blocked` | `False` | none | n/a | none in local scope; reopen only when a GLORB/Echosahedron-class OPH backend emits production hadron output and systematics |
+| `hadrons` | `source_backend_absent_empirical_closure_policy_emitted` | `False` | none | n/a | HADRON.md + code/particles/hadron/empirical_ee_hadrons_sources.yaml + code/particles/hadron/empirical_ee_hadronic_spectral_measure.schema.json |

@@ -201,7 +201,7 @@ The weak-boson pair is a validation row. Charged-lepton absolute masses are
 target-anchored witness rows. The auxiliary direct-top average is a validation
 row. Hadron-controlled rows use the policy in [`HADRON.md`](HADRON.md):
 source-only OPH values stay separate from OPH plus empirical hadron closure
-values built from measured \(e^+e^-\to\mathrm{hadrons}\) data.
+values carried by the empirical \(e^+e^-\to\mathrm{hadrons}\) payload class.
 
 The selected-class quark theorem leaves strong CP as an open companion branch:
 the available corpus does not derive `theta_QCD`, does not emit physical

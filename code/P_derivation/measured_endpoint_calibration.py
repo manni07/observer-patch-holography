@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Emit the measured fine-structure endpoint as an external calibration insert."""
+"""Emit the empirical fine-structure endpoint display surface."""
 
 from __future__ import annotations
 
@@ -40,10 +40,11 @@ def build_measured_endpoint_calibration(
     compare_alpha_inv_uncertainty: Decimal = CODATA_2022_ALPHA_INV_UNCERTAINTY,
     precision: int = 80,
 ) -> dict[str, Any]:
-    """Build a non-promoting calibration artifact from a measured endpoint.
+    """Build a non-promoting empirical endpoint artifact from a measured endpoint.
 
-    This object is explicit about its external input.  It may feed calibrated
-    numeric displays, but it cannot satisfy the source-only theorem gate.
+    This object is explicit about its external input. It may feed the OPH plus
+    empirical hadron closure display surface, but it cannot satisfy the
+    source-only theorem gate.
     """
     ctx = PaperMathContext(precision=precision, su2_cutoff=80, su3_cutoff=60)
     gap = build_alpha_gap_audit(
@@ -72,15 +73,27 @@ def build_measured_endpoint_calibration(
         {
             "artifact": "oph_measured_fine_structure_endpoint_calibration",
             "generated_utc": _now_utc(),
-            "status": "measured_endpoint_insert_active_not_source_derivation",
+            "status": "oph_plus_empirical_hadron_closure_endpoint",
+            "row_class": "oph_plus_empirical_hadron_closure",
             "promotion_allowed": False,
             "exact_alpha_promoted": False,
             "external_input_used": True,
             "external_input_role": (
-                "The measured Thomson-limit inverse fine-structure constant is inserted as a "
-                "temporary calibration endpoint for numeric tables and displays. It is excluded "
-                "from the source-only solver and from theorem promotion."
+                "The measured Thomson-limit inverse fine-structure constant supplies the empirical "
+                "hadron-completed endpoint for numeric tables and displays. It is excluded from "
+                "the source-only solver and from theorem promotion."
             ),
+            "empirical_hadron_closure": {
+                "measured_thomson_endpoint_used": True,
+                "external_cross_section_data_integrated": False,
+                "source_registry": "code/particles/hadron/empirical_ee_hadrons_sources.yaml",
+                "empirical_payload_schema": (
+                    "code/particles/hadron/empirical_ee_hadronic_spectral_measure.schema.json"
+                ),
+                "dispersion_payload_status": "schema_and_source_registry_present_without_integrated_dataset",
+                "row_class": "oph_plus_empirical_hadron_closure",
+                "source_only_theorem_status": "not_promoted",
+            },
             "source_only_guard": {
                 "codata_enters_solver": False,
                 "measured_endpoint_allowed_as_transport_input": False,
@@ -147,8 +160,8 @@ def build_measured_endpoint_calibration(
                 "may_feed_compare_or_audit_surfaces": True,
                 "may_feed_source_theorem_claim": False,
                 "must_show_caveat": (
-                    "fine-structure endpoint uses measured Thomson-limit calibration pending "
-                    "source spectral payload"
+                    "fine-structure endpoint uses OPH plus empirical hadron closure; source-only "
+                    "spectral payload is absent"
                 ),
             },
         }
@@ -156,7 +169,7 @@ def build_measured_endpoint_calibration(
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Emit the measured alpha calibration artifact.")
+    parser = argparse.ArgumentParser(description="Emit the empirical alpha endpoint artifact.")
     parser.add_argument("--report", default=str(DEFAULT_REPORT))
     parser.add_argument("--source-spectral-theorem", default=str(DEFAULT_SOURCE_THEOREM))
     parser.add_argument("--output", default=str(DEFAULT_OUT))

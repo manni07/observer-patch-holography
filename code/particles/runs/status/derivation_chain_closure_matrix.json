@@ -9,25 +9,26 @@
       "selected_class_quarks",
       "neutrino_absolute_attachment"
     ],
-    "closed_out_of_scope_chains": [
+    "empirical_closure_policy_chains": [
       "hadrons"
     ],
-    "hardware_gated_chains": [
-      "hadrons"
-    ],
-    "policy": "Do not promote candidate, compare-only, witness-only, corpus-limited no-go, or hardware-gated chains as closed theorem predictions.",
+    "policy": "Do not promote candidate, compare-only, witness-only, corpus-limited no-go, or source-backend-absent chains as closed theorem predictions.",
     "remaining_nonclosed_chains": [
       "p_closure_root",
       "electroweak_wz"
+    ],
+    "source_backend_absent_chains": [
+      "hadrons"
     ]
   },
-  "generated_utc": "2026-05-07T03:01:04Z",
+  "generated_utc": "2026-05-07T03:51:58Z",
   "particle_five_gates": {
     "153": {
       "chrome_workers": "do_not_use_for_backend_execution",
       "closable_now": true,
-      "close_reason": "The local environment lacks a working OPH hadron backend; reopen only when GLORB/Echosahedron-class backend output and production systematics exist.",
+      "close_reason": "Source-only hadron prediction is outside the local environment. Empirical hadron closure has a separate output class with an e+e- source registry and schema.",
       "closed_as_out_of_scope": true,
+      "empirical_hadron_closure_allowed": true,
       "issue": 153,
       "local_next_artifact": "particles/runs/hadron/ward_projected_spectral_measure_contract.json",
       "requires_oph_hardware_backend": true,
@@ -249,17 +250,17 @@
     },
     {
       "chain": "hadrons",
-      "claim_level": "no_local_prediction_emitted",
+      "claim_level": "source_only_absent_empirical_rows_separate",
       "closed_issue_refs": [
         153,
         157
       ],
-      "closure_reason": "The local environment has no working OPH hadron backend; local surrogate code and Chrome workers cannot promote hadron predictions.",
-      "next_artifact": "none in local scope; reopen only when a GLORB/Echosahedron-class OPH backend emits production hadron output and systematics",
+      "closure_reason": "Source-only hadron prediction requires a working OPH hadron backend. Empirical hadron closure uses a separate e+e- payload class.",
+      "next_artifact": "HADRON.md + code/particles/hadron/empirical_ee_hadrons_sources.yaml + code/particles/hadron/empirical_ee_hadronic_spectral_measure.schema.json",
       "open_gates": [],
       "outputs": {},
       "promotable": false,
-      "status": "closed_out_of_scope_computationally_blocked"
+      "status": "source_backend_absent_empirical_closure_policy_emitted"
     }
   ],
   "source_artifacts": {
@@ -270,6 +271,6 @@
   "status": "executable_nonhadron_chain_matrix_emitted",
   "worker_policy": {
     "chrome_pro_workers_needed_now": false,
-    "reason": "Hadron issues #153/#157 are closed out-of-scope pending OPH hadron hardware; the remaining in-scope P/electroweak chains need a populated source spectral measure payload and interval certificate before worker audit is meaningful. The charged absolute-anchor, quark global-classification, and direct-top auxiliary-codomain lanes have corpus-limited no-go boundaries."
+    "reason": "Hadron issues #153/#157 have a source-backend boundary and an empirical closure policy surface; the P/electroweak source-only chain needs a populated source spectral measure payload and interval certificate. The charged absolute-anchor, quark global-classification, and direct-top auxiliary-codomain lanes have corpus-limited no-go boundaries."
   }
 }

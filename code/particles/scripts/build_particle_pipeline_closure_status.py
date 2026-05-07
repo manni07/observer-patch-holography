@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Build the single closure-status manifest for the particle pipeline.
 
-This is the simplified issue gate for the particle pipeline: non-hadron
-particle predictions are finalized through the disposable runtime surface,
-while hadron production is closed out-of-scope pending OPH backend hardware.
+This issue gate keeps source-only rows, empirical hadron closure rows,
+compare-only rows, and work-in-progress rows mechanically separate.
 """
 
 from __future__ import annotations
@@ -22,6 +21,7 @@ DEFAULT_JSON_OUT = PARTICLES_ROOT / "runs" / "status" / "particle_pipeline_closu
 DEFAULT_MD_OUT = PARTICLES_ROOT / "PARTICLE_PIPELINE_CLOSURE_STATUS.md"
 
 P_TRUNK = P_DERIVATION_ROOT / "runtime" / "p_closure_trunk_current.json"
+MEASURED_ENDPOINT = P_DERIVATION_ROOT / "runtime" / "measured_endpoint_calibration_current.json"
 THOMSON_CONTRACT = P_DERIVATION_ROOT / "runtime" / "thomson_endpoint_contract_current.json"
 THOMSON_PACKAGE = P_DERIVATION_ROOT / "runtime" / "thomson_endpoint_package_current.json"
 SCREENING_NO_GO = P_DERIVATION_ROOT / "runtime" / "screening_invariant_no_go_current.json"
@@ -36,6 +36,8 @@ QUARK_GLOBAL_OBSTRUCTION = PARTICLES_ROOT / "runs" / "flavor" / "quark_class_uni
 CHARGED_NONCLOSURE = PARTICLES_ROOT / "runs" / "leptons" / "charged_end_to_end_impossibility_theorem.json"
 NEUTRINO_CONTRACT = PARTICLES_ROOT / "runs" / "neutrino" / "neutrino_lane_closure_contract.json"
 HADRON_SPECTRAL_CONTRACT = PARTICLES_ROOT / "runs" / "hadron" / "ward_projected_spectral_measure_contract.json"
+EMPIRICAL_EE_REGISTRY = PARTICLES_ROOT / "hadron" / "empirical_ee_hadrons_sources.yaml"
+EMPIRICAL_EE_SCHEMA = PARTICLES_ROOT / "hadron" / "empirical_ee_hadronic_spectral_measure.schema.json"
 EXACT_NONHADRON = PARTICLES_ROOT / "exact_nonhadron_masses.json"
 RESULTS_STATUS = PARTICLES_ROOT / "results_status.json"
 
@@ -116,6 +118,7 @@ def _latest_nonhadron_predictions(exact_payload: dict[str, Any] | None) -> dict[
 
 def build_status() -> dict[str, Any]:
     p_trunk = _load_json(P_TRUNK)
+    measured_endpoint = _load_json(MEASURED_ENDPOINT)
     thomson = _load_json(THOMSON_CONTRACT)
     thomson_package = _load_json(THOMSON_PACKAGE)
     screening_no_go = _load_json(SCREENING_NO_GO)
@@ -136,28 +139,30 @@ def build_status() -> dict[str, Any]:
     return {
         "artifact": "oph_particle_pipeline_closure_status",
         "generated_utc": _now_utc(),
-        "purpose": "Single simplified closure gate for the non-hadron particle pipeline.",
+        "purpose": "Single closure gate for source-only rows and empirical hadron closure rows.",
         "scope": {
-            "current_pipeline_scope": "nonhadron_particles_plus_candidate_P_root_metadata",
-            "hadrons_in_current_local_scope": False,
+            "current_pipeline_scope": "source_only_rows_plus_empirical_hadron_closure_policy",
+            "source_only_hadrons_in_current_local_scope": False,
+            "empirical_hadron_closure_surface": True,
             "hadron_scope_reason": (
-                "Production hadrons require a working OPH hardware backend such as GLORB/Echosahedron. "
-                "Issues #153 and #157 are closed as out-of-scope/computationally blocked for the "
-                "pipeline; local surrogate code and Chrome workers are non-promoting."
+                "Source-only hadron rows require a working OPH hardware backend such as "
+                "GLORB/Echosahedron. Empirical hadron closure stays in a separate output class; "
+                "the e+e- spectral payload has a source registry and schema."
             ),
-            "chrome_workers_needed_now": False,
+            "chrome_workers_needed": False,
         },
         "current_surface": {
             "builder": "code/particles/compute_current_output_table.py",
             "default_runtime_root": "temp/particles_runtime",
             "source_repo": "reverse-engineering-reality/code",
             "simplification": (
-                "The prediction pipeline is one disposable runtime surface plus this closure "
-                "manifest, with hadron promotion excluded by scope."
+                "The prediction pipeline keeps source-only OPH, OPH plus empirical hadron closure, "
+                "compare-only, and work-in-progress rows mechanically distinct."
             ),
         },
         "artifacts": {
             "p_trunk": _artifact_status(P_TRUNK, p_trunk),
+            "measured_endpoint_calibration": _artifact_status(MEASURED_ENDPOINT, measured_endpoint),
             "thomson_endpoint_contract": _artifact_status(THOMSON_CONTRACT, thomson),
             "thomson_endpoint_package": _artifact_status(THOMSON_PACKAGE, thomson_package),
             "screening_invariant_no_go": _artifact_status(SCREENING_NO_GO, screening_no_go),
@@ -172,6 +177,18 @@ def build_status() -> dict[str, Any]:
             "charged_end_to_end_impossibility_theorem": _artifact_status(CHARGED_NONCLOSURE, charged_nonclosure),
             "neutrino_lane_closure_contract": _artifact_status(NEUTRINO_CONTRACT, neutrino),
             "hadron_spectral_measure_contract": _artifact_status(HADRON_SPECTRAL_CONTRACT, hadron_spectral),
+            "empirical_ee_hadrons_source_registry": {
+                "path": _rel(EMPIRICAL_EE_REGISTRY),
+                "exists": EMPIRICAL_EE_REGISTRY.exists(),
+                "status": "source_registry_present",
+                "row_class": "oph_plus_empirical_hadron_closure",
+            },
+            "empirical_ee_hadronic_spectral_measure_schema": {
+                "path": _rel(EMPIRICAL_EE_SCHEMA),
+                "exists": EMPIRICAL_EE_SCHEMA.exists(),
+                "status": "schema_present",
+                "row_class": "oph_plus_empirical_hadron_closure",
+            },
         },
         "issue_gates": [
             {
@@ -242,10 +259,11 @@ def build_status() -> dict[str, Any]:
                 "closable_now": True,
                 "local_next_artifact": _rel(HADRON_SPECTRAL_CONTRACT),
                 "requires_oph_hardware_backend": True,
+                "empirical_hadron_closure_allowed": True,
                 "closed_as_out_of_scope": True,
                 "close_reason": (
-                    "The local environment lacks a working OPH hadron backend; reopen only when "
-                    "GLORB/Echosahedron-class backend output and production systematics exist."
+                    "Source-only hadron prediction is outside the local environment. Empirical "
+                    "hadron closure has a separate output class with an e+e- source registry and schema."
                 ),
                 "chrome_workers": "do_not_use_for_backend_execution",
             },
@@ -256,10 +274,12 @@ def build_status() -> dict[str, Any]:
                 "closable_now": True,
                 "local_next_artifact": _rel(HADRON_SPECTRAL_CONTRACT),
                 "requires_oph_hardware_backend": True,
+                "empirical_hadron_closure_allowed": True,
                 "closed_as_out_of_scope": True,
                 "close_reason": (
-                    "The compact/paper hadron branch is outside the computational scope pending "
-                    "a working OPH hadron backend that emits the Ward-projected spectral measure."
+                    "The compact/paper source-only hadron branch is outside the computational "
+                    "scope. The empirical hadron closure surface is the data-driven display path "
+                    "with an e+e- source registry and schema."
                 ),
                 "chrome_workers": "do_not_use_for_backend_execution",
             },
@@ -327,9 +347,11 @@ def build_status() -> dict[str, Any]:
         "companion_status_branches": _companion_status_branches(gap_ledger),
         "finalization_gates": {
             "nonhadron_prediction_surface_buildable": True,
-            "hadrons_suppressed_by_default": bool(
+            "source_only_hadrons_suppressed_by_default": bool(
                 (results_status or {}).get("inputs", {}).get("hadron_profile", "suppressed") == "suppressed"
             ),
+            "empirical_hadron_closure_policy_documented": True,
+            "empirical_hadron_spectral_dataset_integrated": False,
             "p_trunk_candidate_only": not bool(
                 (p_trunk or {}).get("consumer_policy", {}).get("may_feed_live_particle_predictions", False)
             ),
@@ -352,8 +374,9 @@ def render_markdown(status: dict[str, Any]) -> str:
         "## Scope",
         "",
         f"- Scope: `{status['scope']['current_pipeline_scope']}`",
-        f"- Hadrons in local scope: `{status['scope']['hadrons_in_current_local_scope']}`",
-        f"- Chrome workers needed: `{status['scope']['chrome_workers_needed_now']}`",
+        f"- Source-only hadrons in local scope: `{status['scope']['source_only_hadrons_in_current_local_scope']}`",
+        f"- Empirical hadron closure surface: `{status['scope']['empirical_hadron_closure_surface']}`",
+        f"- Chrome workers needed: `{status['scope']['chrome_workers_needed']}`",
         f"- Hadron scope reason: {status['scope']['hadron_scope_reason']}",
         "",
         "## Issue Gates",

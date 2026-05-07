@@ -80,8 +80,8 @@ the architecture cannot break. The weak pair, the low-energy electromagnetic
 coupling, the Higgs-top surface, a running quark sector, and one
 weighted-cycle neutrino family all sit inside the same reconstruction. The late
 ledger records the scope of the weak validation pair, charged-lepton witnesses,
-and hadron backend. Hadrons add the strong-binding problem on top of that
-particle-level picture.
+source-only hadron backend rows, and empirical hadron closure rows. Hadrons add
+the strong-binding problem on top of that particle-level picture.
 
 The particle words here refer to roles explained in Chapters 12-16: color is the
 three-way strong-force bookkeeping, CKM phases describe quark mixing under the
@@ -161,6 +161,13 @@ and
 $$
 \alpha^{-1}(0)=137.035999177(21).
 $$
+
+The source-only audit row emits inverse alpha
+$136.994835164621649457949994585787193262029$ at pixel
+$1.63097209569432901817967892561191884270169$. The displayed endpoint uses the
+same OPH fixed-point equation with measured
+\(e^+e^-\to\mathrm{hadrons}\) input for the empirical hadronic contribution.
+
 Alex Osika's optical-cavity hardware work probes the same fixed-point geometry.
 The apparatus is not a miniature universe. It is a controlled physical
 implementation of the closure idea: a device whose geometry and readout are

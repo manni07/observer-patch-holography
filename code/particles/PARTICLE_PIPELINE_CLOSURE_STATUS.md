@@ -1,15 +1,16 @@
 # Particle Pipeline Closure Status
 
-Generated: `2026-05-07T03:01:04Z`
+Generated: `2026-05-07T03:51:58Z`
 
-Single simplified closure gate for the non-hadron particle pipeline.
+Single closure gate for source-only rows and empirical hadron closure rows.
 
 ## Scope
 
-- Scope: `nonhadron_particles_plus_candidate_P_root_metadata`
-- Hadrons in local scope: `False`
+- Scope: `source_only_rows_plus_empirical_hadron_closure_policy`
+- Source-only hadrons in local scope: `False`
+- Empirical hadron closure surface: `True`
 - Chrome workers needed: `False`
-- Hadron scope reason: Production hadrons require a working OPH hardware backend such as GLORB/Echosahedron. Issues #153 and #157 are closed as out-of-scope/computationally blocked for the pipeline; local surrogate code and Chrome workers are non-promoting.
+- Hadron scope reason: Source-only hadron rows require a working OPH hardware backend such as GLORB/Echosahedron. Empirical hadron closure stays in a separate output class; the e+e- spectral payload has a source registry and schema.
 
 ## Issue Gates
 
@@ -62,7 +63,9 @@ Single simplified closure gate for the non-hadron particle pipeline.
 ## Finalization Gates
 
 - `nonhadron_prediction_surface_buildable`: `True`
-- `hadrons_suppressed_by_default`: `True`
+- `source_only_hadrons_suppressed_by_default`: `True`
+- `empirical_hadron_closure_policy_documented`: `True`
+- `empirical_hadron_spectral_dataset_integrated`: `False`
 - `p_trunk_candidate_only`: `True`
 - `obstruction_only_worker_result_allowed`: `True`
 - `paper_material_sync_complete_without_live_publish`: `True`

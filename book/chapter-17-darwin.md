@@ -154,9 +154,10 @@ Within OPH, that census is uneven. Some particles sit on especially clean
 structural results: photon, gluons, graviton, $W$, and $Z$. The Higgs and top
 are tied together on one electroweak surface, and the neutrino sector
 has definite masses of its own. Quarks close on a selected public frame class.
-Charged leptons wait for the last attachment between determinant character and
-physical mass scale. Composite particles like hadrons demand stronger
-computational control of the strong interaction.
+Charged leptons have a determinant-character attachment boundary before a
+promoted physical mass-scale row. Composite particles like hadrons demand
+stronger computational control of the strong interaction; empirical hadron
+closure values use a separate \(e^+e^-\to\mathrm{hadrons}\) payload class.
 
 ### Topological Protection
 

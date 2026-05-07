@@ -22,6 +22,18 @@
       "promotion_allowed": false,
       "status": "hard_no_go_current_corpus_compare_only_direct_top_codomain"
     },
+    "empirical_ee_hadronic_spectral_measure_schema": {
+      "exists": true,
+      "path": "particles/hadron/empirical_ee_hadronic_spectral_measure.schema.json",
+      "row_class": "oph_plus_empirical_hadron_closure",
+      "status": "schema_present"
+    },
+    "empirical_ee_hadrons_source_registry": {
+      "exists": true,
+      "path": "particles/hadron/empirical_ee_hadrons_sources.yaml",
+      "row_class": "oph_plus_empirical_hadron_closure",
+      "status": "source_registry_present"
+    },
     "fine_structure_interval_certificate": {
       "artifact": "oph_fine_structure_interval_certificate",
       "exists": true,
@@ -42,6 +54,13 @@
       "path": "particles/runs/hadron/ward_projected_spectral_measure_contract.json",
       "promotion_allowed": false,
       "status": "constructive_contract_emitted_not_production_data"
+    },
+    "measured_endpoint_calibration": {
+      "artifact": "oph_measured_fine_structure_endpoint_calibration",
+      "exists": true,
+      "path": "P_derivation/runtime/measured_endpoint_calibration_current.json",
+      "promotion_allowed": false,
+      "status": "oph_plus_empirical_hadron_closure_endpoint"
     },
     "neutrino_lane_closure_contract": {
       "artifact": "oph_neutrino_lane_closure_contract",
@@ -119,18 +138,20 @@
   "current_surface": {
     "builder": "code/particles/compute_current_output_table.py",
     "default_runtime_root": "temp/particles_runtime",
-    "simplification": "The prediction pipeline is one disposable runtime surface plus this closure manifest, with hadron promotion excluded by scope.",
+    "simplification": "The prediction pipeline keeps source-only OPH, OPH plus empirical hadron closure, compare-only, and work-in-progress rows mechanically distinct.",
     "source_repo": "reverse-engineering-reality/code"
   },
   "finalization_gates": {
-    "hadrons_suppressed_by_default": true,
+    "empirical_hadron_closure_policy_documented": true,
+    "empirical_hadron_spectral_dataset_integrated": false,
     "nonhadron_prediction_surface_buildable": true,
     "obstruction_only_worker_result_allowed": true,
     "p_trunk_candidate_only": true,
     "paper_material_sync_complete_without_live_publish": true,
+    "source_only_hadrons_suppressed_by_default": true,
     "source_spectral_stage_gate": "populated source spectral measure payload plus interval certificate"
   },
-  "generated_utc": "2026-05-07T03:01:04Z",
+  "generated_utc": "2026-05-07T03:51:58Z",
   "issue_gates": [
     {
       "chrome_workers": "not_needed_for_closed_package",
@@ -196,8 +217,9 @@
     {
       "chrome_workers": "do_not_use_for_backend_execution",
       "closable_now": true,
-      "close_reason": "The local environment lacks a working OPH hadron backend; reopen only when GLORB/Echosahedron-class backend output and production systematics exist.",
+      "close_reason": "Source-only hadron prediction is outside the local environment. Empirical hadron closure has a separate output class with an e+e- source registry and schema.",
       "closed_as_out_of_scope": true,
+      "empirical_hadron_closure_allowed": true,
       "issue": 153,
       "local_next_artifact": "particles/runs/hadron/ward_projected_spectral_measure_contract.json",
       "requires_oph_hardware_backend": true,
@@ -207,8 +229,9 @@
     {
       "chrome_workers": "do_not_use_for_backend_execution",
       "closable_now": true,
-      "close_reason": "The compact/paper hadron branch is outside the computational scope pending a working OPH hadron backend that emits the Ward-projected spectral measure.",
+      "close_reason": "The compact/paper source-only hadron branch is outside the computational scope. The empirical hadron closure surface is the data-driven display path with an e+e- source registry and schema.",
       "closed_as_out_of_scope": true,
+      "empirical_hadron_closure_allowed": true,
       "issue": 157,
       "local_next_artifact": "particles/runs/hadron/ward_projected_spectral_measure_contract.json",
       "requires_oph_hardware_backend": true,
@@ -404,11 +427,12 @@
       "value": 91.18797809193725
     }
   },
-  "purpose": "Single simplified closure gate for the non-hadron particle pipeline.",
+  "purpose": "Single closure gate for source-only rows and empirical hadron closure rows.",
   "scope": {
-    "chrome_workers_needed_now": false,
-    "current_pipeline_scope": "nonhadron_particles_plus_candidate_P_root_metadata",
-    "hadron_scope_reason": "Production hadrons require a working OPH hardware backend such as GLORB/Echosahedron. Issues #153 and #157 are closed as out-of-scope/computationally blocked for the pipeline; local surrogate code and Chrome workers are non-promoting.",
-    "hadrons_in_current_local_scope": false
+    "chrome_workers_needed": false,
+    "current_pipeline_scope": "source_only_rows_plus_empirical_hadron_closure_policy",
+    "empirical_hadron_closure_surface": true,
+    "hadron_scope_reason": "Source-only hadron rows require a working OPH hardware backend such as GLORB/Echosahedron. Empirical hadron closure stays in a separate output class; the e+e- spectral payload has a source registry and schema.",
+    "source_only_hadrons_in_current_local_scope": false
   }
 }

@@ -110,10 +110,10 @@ prédictions promues. La branche neutrino pondérée émet
 `(0.017454720257976796, 0.019481987935919015, 0.05307522145074924) eV` sur sa
 branche déclarée. Les masses hadroniques demandent un backend hadronique OPH;
 elles ne sont pas de simples entrées de quarks dans un tableau de comparaison
-rapide. Les entrées de backend hadronique ont le statut hors périmètre /
-bloquées computationnellement. Leur réouverture demande un backend hadronique
-OPH comme GLORB/Echosahedron avec données spectrales et systématiques de
-production.
+rapide. Les lignes hadroniques gardent deux surfaces séparées : les masses
+source demandent un backend hadronique OPH comme GLORB/Echosahedron avec
+données spectrales et systématiques de production; la fermeture empirique
+utilise une classe séparée de charge utile \(e^+e^-\to\mathrm{hadrons}\).
 
 **Pile de dérivation des particules**
 
@@ -163,8 +163,10 @@ public du point final, avec
 
 La paire faible est une ligne de validation. Les masses absolues des leptons
 chargés sont des témoins ancrés sur cible. La moyenne directe auxiliaire du top
-est une ligne de validation. Les masses hadroniques demandent le backend OPH de
-liaison forte avec données spectrales de production et systématiques.
+est une ligne de validation. Les lignes hadroniques source demandent le backend
+OPH de liaison forte avec données spectrales de production et systématiques; la
+fermeture empirique utilise une classe séparée de charge utile
+\(e^+e^-\to\mathrm{hadrons}\).
 
 Le théorème des quarks sur classe sélectionnée laisse la CP forte comme branche
 compagnon ouverte : le corpus disponible ne dérive pas `theta_QCD`, n'émet pas

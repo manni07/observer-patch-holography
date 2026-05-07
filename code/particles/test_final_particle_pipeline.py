@@ -33,6 +33,7 @@ def test_final_particle_pipeline_orders_contracts_before_predictions() -> None:
     scripts = {step.script for step in steps}
     assert "P_derivation/screening_invariant_no_go.py" in scripts
     assert "P_derivation/thomson_endpoint_interval_certificate.py" in scripts
+    assert "P_derivation/measured_endpoint_calibration.py" in scripts
     assert "particles/hadron/derive_ward_projected_spectral_measure_contract.py" in scripts
     assert "particles/flavor/derive_quark_class_uniform_public_frame_descent_obstruction.py" in scripts
     assert "particles/leptons/derive_charged_end_to_end_impossibility_theorem.py" in scripts

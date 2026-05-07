@@ -99,7 +99,8 @@ readout, and those two descriptions meet at a single fixed point.
 
 The weak-boson pair and the familiar low-energy electromagnetic strength come
 from one continuous construction. The status ledger records the diagnostic
-source trunk and endpoint residual.
+source trunk, the endpoint residual, and the empirical hadron closure row that
+uses a separate \(e^+e^-\to\mathrm{hadrons}\) payload class.
 
 The same electroweak core continues into the scalar and companion top values
 
@@ -145,7 +146,8 @@ not emit physical $\bar\theta$, and does not prove that the physical strong-CP
 phase vanishes.
 Hadrons require a separate nonperturbative bound-state step
 because protons, neutrons, and mesons are QCD composites rather than elementary
-particle rows.
+particle rows. Source-only hadron masses require an OPH backend. Empirical
+hadron closure uses a separate \(e^+e^-\to\mathrm{hadrons}\) payload class.
 
 Majorana phases are extra neutrino mixing phases that matter if neutrinos are
 their own antiparticles in the relevant sense. QCD is quantum chromodynamics,
@@ -293,8 +295,10 @@ of everyday life is the public face of a quantum reality that becomes
 shareable only after decoherence and redundancy have done their work.
 
 Ledger details: the weak-boson pair is a validation row, charged-lepton
-absolute masses are target-anchored witnesses, and hadron masses require the OPH
-strong-binding backend with production spectral data and systematics.
+absolute masses are target-anchored witnesses, source-only hadron masses require
+the OPH strong-binding backend with production spectral data and systematics,
+and empirical hadron closure rows use the separate
+\(e^+e^-\to\mathrm{hadrons}\) payload class.
 
 We've seen that spacetime, particles, and classical physics all emerge from the screen through consistency requirements. But why these particular laws? Why these constants? Could the universe have been different?
 

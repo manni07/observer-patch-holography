@@ -28,8 +28,12 @@ def test_gap_ledger_keeps_compressed_trunk_claim_safe() -> None:
     assert "pclosure.certified-codepath-adoption" in gap_ids
     assert "qcd.strong-cp-angle" in gap_ids
     assert "calibration.direct-top-bridge" in gap_ids
+    assert "hadron.empirical-ee-spectral-closure" in gap_ids
     row_statuses = {row["id"]: row["status"] for row in ledger["rows"]}
-    assert row_statuses["hadron.production-backend-systematics"] == "closed_out_of_scope_computationally_blocked"
+    assert row_statuses["hadron.production-backend-systematics"] == (
+        "source_backend_absent_empirical_policy_emitted"
+    )
+    assert row_statuses["hadron.empirical-ee-spectral-closure"] == "policy_scaffold_emitted_dataset_absent"
     assert row_statuses["charged.determinant-normalization-transport"] == (
         "closed_current_corpus_charged_end_to_end_no_go"
     )
@@ -53,9 +57,13 @@ def test_gap_ledger_keeps_compressed_trunk_claim_safe() -> None:
     assert "top-codomain-bridge-bundle" in bundle_ids
     assert "particle-root-integration-gate" in bundle_ids
     bundle_statuses = {bundle["id"]: bundle["status"] for bundle in ledger["bundles"]}
-    assert bundle_statuses["qcd-thomson-backend-bundle"] == "closed_out_of_scope_scope_lock_emitted"
+    assert bundle_statuses["qcd-thomson-backend-bundle"] == (
+        "source_backend_boundary_empirical_policy_emitted"
+    )
     assert bundle_statuses["electroweak-root-closure-bundle"] == "endpoint_package_closed_source_measure_payload_absent"
     assert bundle_statuses["top-codomain-bridge-bundle"] == "closed_current_corpus_codomain_no_go"
     assert bundle_statuses["spectrum-source-bundle"] == "closed_current_corpus_source_boundaries_emitted"
     assert bundle_statuses["strong-cp-closure-bundle"] == "open_physical_invariant_gap"
     assert bundle_statuses["particle-root-integration-gate"] == "keep_candidate_with_constructive_next_artifacts"
+    assert ledger["promotion_policy"]["empirical_hadron_closure_class_declared"] is True
+    assert ledger["promotion_policy"]["empirical_hadron_closure_source_only"] is False

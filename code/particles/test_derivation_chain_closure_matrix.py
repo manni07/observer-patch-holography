@@ -19,7 +19,8 @@ def test_derivation_chain_closure_matrix_keeps_stage_gates_explicit() -> None:
     assert payload["artifact"] == "oph_particle_derivation_chain_closure_matrix"
     assert payload["status"] == "executable_nonhadron_chain_matrix_emitted"
     assert payload["closure_summary"]["all_derivation_chains_claimed_closed"] is False
-    assert payload["closure_summary"]["hardware_gated_chains"] == ["hadrons"]
+    assert payload["closure_summary"]["source_backend_absent_chains"] == ["hadrons"]
+    assert payload["closure_summary"]["empirical_closure_policy_chains"] == ["hadrons"]
     assert payload["worker_policy"]["chrome_pro_workers_needed_now"] is False
     assert payload["provenance_status"] == "closed_provenance_ledger_and_declared_sensitivity_taxonomy"
     rows = {row["chain"]: row for row in payload["rows"]}
@@ -50,13 +51,13 @@ def test_derivation_chain_closure_matrix_keeps_stage_gates_explicit() -> None:
     assert rows["selected_class_quarks"]["status"] == "closed_selected_public_class_global_classification_no_go"
     assert rows["selected_class_quarks"]["open_gates"] == []
     assert rows["selected_class_quarks"]["closed_issue_refs"] == [199, 207, 212]
-    assert rows["hadrons"]["status"] == "closed_out_of_scope_computationally_blocked"
+    assert rows["hadrons"]["status"] == "source_backend_absent_empirical_closure_policy_emitted"
     assert rows["hadrons"]["open_gates"] == []
     assert rows["hadrons"]["closed_issue_refs"] == [153, 157]
     assert "p_closure_root" in payload["closure_summary"]["remaining_nonclosed_chains"]
     assert "charged_leptons" not in payload["closure_summary"]["remaining_nonclosed_chains"]
     assert "hadrons" not in payload["closure_summary"]["remaining_nonclosed_chains"]
-    assert payload["closure_summary"]["closed_out_of_scope_chains"] == ["hadrons"]
+    assert payload["closure_summary"]["source_backend_absent_chains"] == ["hadrons"]
     assert payload["particle_five_gates"]["199"]["state"] == "closed_current_corpus_global_classification_no_go"
     assert payload["particle_five_gates"]["201"]["state"] == "closed_current_corpus_charged_end_to_end_no_go"
     assert payload["particle_five_gates"]["153"]["state"] == "closed_out_of_scope_computationally_blocked"

@@ -42,7 +42,7 @@ Observer Consistency}
 \OPHPaperReleaseBanner
 
 \begin{abstract}
-Observer-Patch Holography turns the particle problem into a forward calculation from one local screen scale. The \(P\)-closure branch compresses into five executable layers: unification scale, heat-kernel pixel closure, running transport, electroweak mixing, and Ward-projected Thomson transport. The fixed point gives \(\alpha^{-1}(0)=137.035999177(21)\) and \(P=1.630968209403959324879279847782648941\ldots\). The same pixel scale propagates into structural massless carriers, the weak sector, the Higgs/top row, selected-class running quarks, and a weighted-cycle neutrino absolute-mass branch. Hadrons require the separate OPH strong-binding backend. The status ledger records the exact scope of validation rows, charged-lepton witnesses, and backend-dependent hadron rows.
+Observer-Patch Holography turns the particle problem into a forward calculation from one local screen scale. The \(P\)-closure branch compresses into five executable layers: unification scale, heat-kernel pixel closure, running transport, electroweak mixing, and Ward-projected Thomson transport. The fixed point gives \(\alpha^{-1}(0)=137.035999177(21)\) and \(P=1.630968209403959324879279847782648941\ldots\). The same pixel scale propagates into structural massless carriers, the weak sector, the Higgs/top row, selected-class running quarks, and a weighted-cycle neutrino absolute-mass branch. Hadrons split into source-only backend rows and empirical \(e^+e^-\to\mathrm{hadrons}\) closure rows. The status ledger records the exact scope of validation rows, charged-lepton witnesses, source-only audit rows, and empirical hadron closure rows.
 \end{abstract}
 
 \section{Introduction}
@@ -185,7 +185,9 @@ with the detailed endpoint ledger in Section~\ref{sec:particle-premise-ledger}. 
 screen-capacity input \(N_{\mathrm{scr}}\) belongs to the cosmological-capacity branch and
 only to legacy capacity-level neutrino side estimates. Structural carriers, quantitative outputs,
 exact sidecars, and continuation lanes are therefore downstream branches of one common premise
-ledger. Section~\ref{sec:particle-premise-ledger}
+ledger. The public fine-structure display row uses the OPH fixed-point equation with empirical
+hadron-completed Thomson input, while the source-only audit row stays separate in the ledger.
+Section~\ref{sec:particle-premise-ledger}
 records that ledger in full.
 
 \section{P-Closure and the Reverse-Engineering Strategy}
@@ -349,7 +351,7 @@ Higgs/top surface & \(m_H=125.1995304097179~\mathrm{GeV}\), \(m_t=172.3523553288
 Charged leptons & \(m_e,m_\mu,m_\tau\) witness values & same-family charged readback \\
 Selected-class quarks & exact running sextet on \(f_P\) & selected public quark frame \\
 Neutrino absolute attachment & \(0.017454720257976796,0.019481987935919015,0.05307522145074924~\mathrm{eV}\) & weighted-cycle absolute branch \\
-Hadrons & backend-dependent strong-binding descent & OPH hadron backend \\
+Hadrons & source-only strong-binding descent plus empirical \(e^+e^-\to\mathrm{hadrons}\) closure surface & OPH hadron backend for source-only masses; measured hadron data for empirical closure rows \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -368,7 +370,7 @@ Higgs/top stage & exact source-only split theorem on the declared D10/D11 runnin
 Quark family & selected-class theorem + exact supporting surfaces & shared excitation dictionary \(\rightarrow\) D12 mass bridge \(\rightarrow\) selected public quark frame class \(f_P\)\newline \(\rightarrow\) direct public sigma-datum descent \(\rightarrow\) affine mean law\newline \(\rightarrow\) ordered three-point readout \(\rightarrow\) exact forward construction & exact running quark sextet on the selected public quark frame class \(f_P\), together with explicit exact forward Yukawas \(Y_u,Y_d\) on that selected class & selected-class closure only.\newline The exact sextet matches the official PDG 2025 API running-quark surface, with the top coordinate taken from the PDG cross-section entry.\newline The auxiliary direct-top PDG row is compare-only; issue \#207 is closed as a corpus-limited no-go.\newline The stronger class-uniform/global public-frame classification is not emitted; issue \#199 is closed as a corpus-limited no-go without weakening the selected-class theorem.\newline Strong CP remains open: the available corpus does not derive \(\theta_{\mathrm{QCD}}\), does not emit physical \(\bar\theta\), and does not prove that the physical strong-CP phase vanishes.\newline Supporting exact surfaces:\newline same-family witness on \ophid{current_family_only};\newline restricted common-refinement transport-frame theorem on \ophid{current_family_common_refinement_transport_frame_only}.\newline Both realize the same sextet and explicit exact forward Yukawas.\newline Separate target-free mass bridge:\newline \(\Delta_{ud}^{\mathrm{overlap}}=\tfrac16\log(c_d/c_u)\), equivalently\newline \(\Theta_{ud}^{\mathrm{mass}}=\text{\ophid{quark_d12_t1_value_law}}\), on the emitted D12 mass ray.\newline Historical lower selector:\newline \(\sigma_{\mathrm{ref}}\) is a negative same-label sheet selector statement beneath the selected-class theorem.\newline No global classification of all quark frame classes is claimed \\
 Charged leptons & continuation + exact sidecar witness & shared excitation dictionary \(\rightarrow\) ordered charged carrier \(\rightarrow\) exact centered readback \(\rightarrow\) conditional determinant-line lift & exact same-carrier centered readback together with the exact same-family charged triple on a target-anchored witness & public charged masses are not emitted from \(P\).\newline The theorem lane does not emit a theorem-grade sector-isolated charged determinant exponent vector.\newline It does not attach a source-side determinant character to the physical charged determinant line.\newline The conditional determinant-line lift and algebraic mass readout apply only on theorem-grade physical charged data \\
 Neutrinos & continuation + emitted bridge invariant + diagnostic sidecars & same-label scalar certificate \(\rightarrow\) weighted-cycle branch \(\rightarrow\) bridge rigidity \(\rightarrow\) absolute attachment \(\rightarrow\) shared-basis transport readout & emitted absolute masses, central splittings, and the physical Majorana pair \((\alpha_{21}^{(\mathrm{Maj})},\alpha_{31}^{(\mathrm{Maj})})=(153.618518^\circ,257.003241^\circ)\) on the weighted-cycle branch, with bridge invariant \(C_\nu\) above emitted proxy \(P_\nu\) and paper-facing amplitude \(B_\nu\) & theorem-grade on the declared weighted-cycle branch; the exact positive-segment adapter, bridge corridor, and correction audit are diagnostic-only and do not feed back into theorem state \\
-Hadrons & closed out-of-scope / computationally blocked & Ward-projected spectral-measure contract for an OPH hadron backend & no paper-derived hadron masses & no local, Chrome-worker, or surrogate backend is promotable. Issues \#153/\#157 are closed as out-of-scope, not as derivations; a promotable row requires a working OPH hadron backend, such as GLORB/Echosahedron, with the Ward-projected hadronic spectral measure and systematics \\
+Hadrons & source backend absent; empirical closure policy emitted & Ward-projected spectral-measure contract for an OPH hadron backend, plus empirical \(e^+e^-\to\mathrm{hadrons}\) source registry and payload schema & no source-only hadron masses; empirical hadron closure rows are separate from source-only OPH rows & Source-only hadron prediction requires a working OPH hadron backend, such as GLORB/Echosahedron, with the Ward-projected hadronic spectral measure and systematics. The empirical closure surface uses a separate \(e^+e^-\to\mathrm{hadrons}\) payload class and cannot promote the source-only theorem \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -460,8 +462,11 @@ the conditional endpoint package requires
 \Delta_{\mathrm{source}}(P)=0.041465861005223389053448715357314044\ldots.
 \]
 That scalar belongs to the source-side hadronic spectral transport and
-scheme-remainder map. The source transport excludes an inserted comparison
-endpoint. The electroweak status ledger records the residual map and the
+scheme-remainder map. The OPH plus empirical hadron closure surface supplies
+the display row through the measured Thomson endpoint while the
+\(e^+e^-\to\mathrm{hadrons}\) payload class records the data-driven hadron
+path. The source-only transport row excludes an inserted comparison endpoint. The
+electroweak status ledger records the residual map and the
 RG/matching/threshold/scheme packet.
 The electroweak \(W/Z\) row is therefore compare-only. Charged leptons carry a corpus-limited
 no-go because the determinant trace-lift attachment from the D10 descendants of \(P\) to physical charged data is absent. The auxiliary
@@ -469,8 +474,9 @@ direct-top PDG row differs from the theorem coordinate by \(0.20673301656674425~
 or \(0.28458848947515303\) combined standard deviations, because Q007TP and Q007TP4 are distinct
 extraction codomains; issue \#207 is closed as a corpus-limited no-go because the direct-top response kernel is absent. Neutrino absolute masses are
 not directly measured, and PMNS-angle residuals remain visible comparison tension outside the
-theorem branch. Hadrons have no emitted prediction because the required
-Ward-projected hadronic spectral measure must come from a working OPH hadron backend.
+theorem branch. Source-only hadron masses have no emitted prediction because the
+required Ward-projected hadronic spectral measure must come from a working OPH
+hadron backend. Empirical hadron closure rows carry a separate row class.
 
 \paragraph{Local unification surface.}
 The bosonic rows carry one cross-lane statement. The same pixel input \(P\), fixed on the
@@ -590,10 +596,10 @@ Charged leptons & tau lepton & continuation gap & \(n/a\); same exact centered-r
 Neutrinos & \(\nu_e\) & weighted-cycle theorem branch & \(0.017454720257976796~\mathrm{eV}\); the weighted-cycle branch emits \(\theta_{12}=34.2259^\circ\), \(\theta_{23}=49.7228^\circ\), \(\theta_{13}=8.68636^\circ\), \(\delta=305.581^\circ\), \(J=-0.02753\), \(\Delta m_{21}^2/\Delta m_{32}^2=0.03072111\), \(\alpha_{21}^{(\mathrm{Maj})}=153.618518^\circ\), \(\alpha_{31}^{(\mathrm{Maj})}=257.003241^\circ\), the bridge invariant \(C_\nu=0.9994295999075177\), the emitted proxy \(P_\nu=6.699825740519345\), the paper-facing amplitude \(B_\nu=6.696004159297337\), and \(\lambda_\nu=1.7237014208357415\) & closed on the declared weighted-cycle theorem branch; the positive-segment adapter, bridge corridor, and bridge-coordinate sidecars are diagnostic-only and do not feed back into theorem state \\
 Neutrinos & \(\nu_\mu\) & weighted-cycle theorem branch & \(0.019481987935919015~\mathrm{eV}\); same weighted-cycle theorem branch as the electron-neutrino row & same bridge-invariant / induced-amplitude package and same diagnostic-only retirement rule for the positive-segment adapter and bridge corridor \\
 Neutrinos & \(\nu_\tau\) & weighted-cycle theorem branch & \(0.05307522145074924~\mathrm{eV}\); same weighted-cycle theorem branch as the electron-neutrino row & same bridge-invariant / induced-amplitude package and same diagnostic-only retirement rule for the positive-segment adapter and bridge corridor \\
-Hadrons & proton & closed out-of-scope / computationally blocked & no emitted prediction & issues \#153/\#157 are closed out-of-scope, not solved; reopening requires a working OPH hadron backend, such as GLORB/Echosahedron, plus a Ward-projected spectral-measure export and production systematics; surrogate rows are non-promoting \\
-Hadrons & neutron & closed out-of-scope / computationally blocked & no emitted prediction & same OPH-backend gate, with isospin-resolved hadron systematics deferred \\
-Hadrons & neutral pion proxy & closed out-of-scope / computationally blocked & no emitted prediction & same OPH-backend gate; local stable-channel surrogate output is not a paper prediction \\
-Hadrons & \(\rho(770)^0\) proxy & closed out-of-scope / computationally blocked & no emitted prediction & same OPH-backend gate, plus finite-volume resonance extraction after the backend exists \\
+Hadrons & proton & source backend absent; empirical closure policy emitted & no source-only emitted prediction & source-only prediction requires a working OPH hadron backend, such as GLORB/Echosahedron, plus a Ward-projected spectral-measure export and production systematics; empirical closure rows use a separate \(e^+e^-\to\mathrm{hadrons}\) payload class \\
+Hadrons & neutron & source backend absent; empirical closure policy emitted & no source-only emitted prediction & same OPH-backend gate, with isospin-resolved hadron systematics in the backend row class \\
+Hadrons & neutral pion proxy & source backend absent; empirical closure policy emitted & no source-only emitted prediction & same OPH-backend gate; local stable-channel surrogate output is not a paper prediction \\
+Hadrons & \(\rho(770)^0\) proxy & source backend absent; empirical closure policy emitted & no source-only emitted prediction & same OPH-backend gate, plus finite-volume resonance extraction in the backend row class \\
 \end{longtable}
 \normalsize
 
@@ -1356,13 +1362,13 @@ The endpoint ledger records the source-locked anchor from the runtime candidate,
 \[
 a_0(P)=128.308268045165213892552005990181778935450\ldots,
 \]
-and the fixed-point display value
+and the OPH plus empirical hadron closure display value
 \[
 \alpha_{\mathrm{Th}}^{-1}=137.035999177.
 \]
 The repository's \texttt{code/P\_derivation} witness path records the source-side audit trunk without
-a built-in reference inverse-\(\alpha\) value. The public endpoint value is excluded as a closure-solve
-input.
+a built-in reference inverse-\(\alpha\) value. The public endpoint value is excluded as a
+source-only closure-solve input.
 The source-side audit trunk emits
 \[
 \alpha_{\mathrm{cand}}^{-1}=136.994835164621649457949994585787193262029,
@@ -1370,9 +1376,9 @@ The source-side audit trunk emits
 so the difference from the endpoint readout is recorded as an endpoint-and-matching audit packet.
 
 \begin{remark}
-The public experimental reference is the Thomson-limit inverse fine-structure constant. The
+The empirical closure reference is the Thomson-limit inverse fine-structure constant. The
 source anchor \(a_0(P)=128.308268045165213892552005990181778935450\ldots\) is the electroweak-scale running-family value at
-\(m_Z^2\), not the low-energy endpoint. The 2022 CODATA/NIST reference value is
+\(m_Z^2\), while the display row is the low-energy endpoint. The 2022 CODATA/NIST reference value is
 \(\alpha^{-1}=137.035999177(21)\)~\cite{codata2022}.
 \end{remark}
 
@@ -2513,15 +2519,17 @@ continuations beneath the bridge-rigidity invariant \(C_\nu\) and its induced pa
 
 \section{Hadrons, QCD, and the Emergence of Ordinary Matter}
 
-The hadron derivation is the most operationally demanding part of the whole particle program, and
-it is explicitly outside the local prediction scope. The artifact is not a hadron
-mass row but a Ward-projected spectral-measure contract for a backend. Closing the lane
-requires a working OPH hadron backend, such as GLORB/Echosahedron, that can emit real
-Ward-projected hadronic spectral data with manifest provenance and production systematics. Local
-surrogates, ordinary Chrome/Oracle workers, and bookkeeping scripts cannot promote this sector.
-Issues \#153 and \#157 are therefore closed as out-of-scope/computationally blocked, not as solved
-hadron derivations. Accordingly, the hadron rows are not derived outputs of this paper. The derivation nevertheless
-keeps the mathematical execution bridge, deterministic runtime receipt, writeback/evaluation path,
+The hadron derivation is the most operationally demanding part of the particle program. The
+source-only artifact is a Ward-projected spectral-measure contract for a backend. A source-only
+hadron mass row requires a working OPH hadron backend, such as GLORB/Echosahedron, that can emit
+real Ward-projected hadronic spectral data with manifest provenance and production systematics.
+Local surrogates, ordinary Chrome/Oracle workers, and bookkeeping scripts cannot promote this
+sector. Issues \#153 and \#157 are closed as source-backend boundaries with an empirical closure
+policy documented. The empirical closure row class uses a separate
+\(e^+e^-\to\mathrm{hadrons}\) payload class for the hadronic spectral contribution and stays
+separate from source-only OPH rows. The
+source-only derivation nevertheless keeps the mathematical execution bridge, deterministic runtime
+receipt, writeback/evaluation path,
 and surrogate validation machinery as non-promoting scaffolding for the backend lane.
 
 \subsection{Seeded \(2+1\) family and unquenched measure}
@@ -2643,17 +2651,17 @@ two-point sequences; write the backend bundle; convert that bundle into the repo
 dump; then let the existing jackknife and forward-window machinery emit
 \(a m_{X,\mathrm{ground}}\), \(R_X\), \(m_X[\mathrm{GeV}]\), and the published
 \(\sigma_{\mathrm{stat}}\), \(\delta_{\mathrm{cont}}\), \(\delta_{\mathrm{vol}}\), and
-\(\delta_{\chi}\) fields. In that sense the hadron lane is analysis-complete but
-execution-incomplete.
+\(\delta_{\chi}\) fields. This gives a complete source-only execution contract and a separate
+empirical display policy.
 
 The engineering burden is therefore asymmetric. Local execution is sufficient for manifest
 generation, surrogate validation, and downstream readout tests, because those stages operate on a
 tiny correlator payload. The physical branch is different: it needs backend hardware and execution
-semantics that are not present in the repository environment. This paper therefore treats
+semantics that are absent from the repository environment. This paper therefore treats
 GLORB/Echosahedron-class OPH hardware, or an equivalent working OPH hadron backend, as the
-promotion gate. Until such a backend emits the Ward-projected spectral measure and its uncertainty
-budget, production hadron masses are not planned deliverables of the particle pipeline, and
-the closed issue status of \#153/\#157 should be read only as a scope boundary.
+source-only promotion gate. Production hadron masses enter the particle pipeline only with a
+backend-emitted Ward-projected spectral measure and its uncertainty budget. The closed issue status
+of \#153/\#157 is a scope boundary.
 
 \subsection{Stable-channel correlators, effective masses, and forward windows}
 
@@ -3186,19 +3194,20 @@ gravity chain, and it does not erase the reported bosonic and quark outputs.
 
 \section{Conclusion}
 
-The particle-spectrum derivation is nontrivial and much more concrete than a qualitative aspiration. It is
-not a uniformly closed derivation of the full particle zoo. The structural theorem surface fixes
-the realized Standard Model branch and the exact massless carrier sectors. The completion
-pipeline then closes or scopes four non-hadron chains: structural massless carriers, the Higgs/top
-row on the declared D10/D11 surface, selected-class quarks on \(f_P\), and neutrino absolute
-attachment on the weighted-cycle branch. It also refuses to promote four chains: the candidate
-\(P\)-closure root, the electroweak \(W/Z\) row, the charged-lepton absolute-mass landing, and
-hadrons. The \(W/Z\) row is a frozen compare-only adapter until the Ward-projected Thomson endpoint
-and the RG/matching/threshold/scheme certificate packet close. In the charged lane the theorem surface carries an exact
+The particle-spectrum derivation is nontrivial and much more concrete than a qualitative aspiration.
+The structural theorem surface fixes the realized Standard Model branch and the exact massless
+carrier sectors. The completion pipeline closes or scopes four non-hadron chains: structural
+massless carriers, the Higgs/top row on the declared D10/D11 surface, selected-class quarks on
+\(f_P\), and neutrino absolute attachment on the weighted-cycle branch. The ledger also marks four
+separate row classes: the candidate \(P\)-closure source audit, the electroweak \(W/Z\) validation
+row, the charged-lepton absolute-mass landing, and the hadron backend plus empirical closure split.
+The \(W/Z\) row is a frozen compare-only adapter; theorem promotion requires the Ward-projected
+Thomson endpoint and the RG/matching/threshold/scheme certificate packet. In the charged lane the theorem surface carries an exact
 same-family witness, a conditional determinant-line lift, and an algebraic mass readout from
 theorem-grade \(A_{\mathrm{ch}}(P)\), while the source landing from the D10 quantitative
-descendants of \(P\) to physical charged data is closed as a corpus-limited no-go. Hadrons require a working OPH hadron backend,
-so issues \#153/\#157 are closed out-of-scope rather than treated as paper predictions.
+descendants of \(P\) to physical charged data is closed as a corpus-limited no-go. Source-only
+hadron masses require a working OPH hadron backend. Empirical hadron closure values use a
+separate \(e^+e^-\to\mathrm{hadrons}\) payload class.
 
 That accounting belongs on the page because it is part of the derivation. The paper puts the
 structural results, the fixed-point fine-structure value, the emitted quantitative rows, and the
@@ -3208,7 +3217,7 @@ product presentation of the realized quotient branch, and the same surface fixes
 \(P/4\). The particle spectrum is therefore organized by one local screen scale rather than by a
 list of unrelated particle inputs. The ledger records scope boundaries for the weak validation
 pair, charged-lepton witnesses, direct-top auxiliary codomain, strong-CP phase status,
-neutrino comparison tension, and hadron backend.
+neutrino comparison tension, source-only hadron backend rows, and empirical hadron closure rows.
 
 \appendix
 \input{tex_fragments/PARTICLE_TECHNICAL_SUPPLEMENT_PORT.tex}

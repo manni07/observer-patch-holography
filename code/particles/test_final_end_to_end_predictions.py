@@ -18,8 +18,17 @@ def test_final_end_to_end_predictions_include_particle_five_gates_and_values() -
 
     assert payload["artifact"] == "oph_final_current_end_to_end_particle_predictions"
     assert payload["p_closure"]["may_feed_live_particle_predictions"] is False
-    assert payload["hadron_policy"]["predictions_emitted"] is False
+    assert payload["hadron_policy"]["source_only_hadron_predictions_emitted"] is False
+    assert payload["hadron_policy"]["empirical_hadron_closure_allowed_for_display"] is True
     assert payload["hadron_policy"]["github_issues"] == [153, 157]
+    assert payload["fine_structure"]["source_only_oph"]["row_class"] == "source_only_oph"
+    assert payload["fine_structure"]["source_only_oph"]["alpha_inv"].startswith("136.994835")
+    assert payload["fine_structure"]["oph_plus_empirical_hadron_closure"]["row_class"] == (
+        "oph_plus_empirical_hadron_closure"
+    )
+    assert payload["fine_structure"]["oph_plus_empirical_hadron_closure"]["alpha_inv"] == "137.035999177"
+    assert payload["fine_structure"]["empirical_payload_policy"]["source_only_theorem_status"] == "not_promoted"
+    assert payload["fine_structure"]["empirical_payload_policy"]["external_cross_section_data_integrated"] is False
     gates = {gate["issue"]: gate for gate in payload["particle_five_issue_gates"]}
     assert set(gates) == {32, 153, 199, 201, 207, 223, 224, 225, 234, 235}
     assert gates[153]["state"] == "closed_out_of_scope_computationally_blocked"

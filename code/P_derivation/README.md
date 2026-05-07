@@ -49,8 +49,10 @@ P -> M_U -> alpha_U -> alpha_i(m_Z) -> a0(P) -> alpha_in(P) -> P
 
 and writes `runtime/p_closure_trunk_current.json`. That artifact is the
 canonical audit surface for the simplified chain, but it is not the certified
-particle root. Promotion requires a populated source spectral measure payload,
-same-scheme remainder, and an interval-level fixed-point certificate.
+particle root. Source-only promotion requires a populated source spectral
+measure payload, same-scheme remainder, and an interval-level fixed-point
+certificate. The public display row can also use the OPH plus empirical hadron
+closure surface defined in `../../HADRON.md`.
 
 ## Terms
 
@@ -154,13 +156,13 @@ python3 transport_theorem_manifest.py --report runtime/full_p_alpha_report_curre
 python3 measured_endpoint_calibration.py
 ```
 
-## Measured endpoint calibration insert
+## Empirical endpoint insert
 
 `measured_endpoint_calibration.py` emits
-`runtime/measured_endpoint_calibration_current.json`. This is the display
-surface for tables, plots, and public numeric surfaces that need a single
-fine-structure value, with the source spectral payload recorded separately in
-the audit ledgers.
+`runtime/measured_endpoint_calibration_current.json`. This is the OPH plus
+empirical hadron closure surface for tables, plots, and public numeric surfaces
+that need a single fine-structure value. The source-only spectral payload stays
+separate in the audit ledgers.
 
 The endpoint surface is
 
@@ -170,12 +172,12 @@ alpha(0)   = 0.007297352564331425...
 P          = 1.63096820940395932487927984778...
 ```
 
-The JSON keeps audit guard fields for theorem tooling. Consumer-facing prose
-should lead with the fixed-point readout and keep source-audit status in
-ledger sections:
+The JSON keeps audit guard fields for theorem tooling and carries row class
+`oph_plus_empirical_hadron_closure`. Consumer-facing prose should lead with the
+fixed-point readout and keep source-audit status in ledger sections:
 
 ```text
-fine-structure endpoint uses OPH fixed-point readout; finite source audit recorded in code/P_derivation ledgers
+fine-structure endpoint uses OPH plus empirical hadron closure; finite source audit recorded in code/P_derivation ledgers
 ```
 
 The source computation is blocked because the required object is a
@@ -184,8 +186,9 @@ be recovered by higher precision on the existing formulas. A source computation
 requires a production finite-volume gauge-field run, vector-current levels and
 residues, current normalization, continuum/chiral/finite-volume/current-matching
 budgets, a spectral pushforward, quadrature and tail bounds, and a directed
-interval fixed-point certificate. The current corpus has a schema and contract
-for that payload, but not the production payload itself.
+interval fixed-point certificate. The corpus has a schema and contract
+for that payload. The empirical hadron closure path uses a separate
+`e+e- -> hadrons` payload class through the policy in `../../HADRON.md`.
 
 ## Usage
 

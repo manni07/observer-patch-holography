@@ -252,21 +252,45 @@ def build_gap_rows() -> list[dict[str, Any]]:
         {
             "id": "hadron.production-backend-systematics",
             "lane": "Hadrons",
-            "status": "closed_out_of_scope_computationally_blocked",
+            "status": "source_backend_absent_empirical_policy_emitted",
             "github_issue": 153,
             "related_github_issues": [153, 157],
             "title": "Execute the production hadron backend and publish systematics",
             "current_boundary": (
-                "The hadron lane is explicitly outside the local pipeline. Issues #153 and "
-                "#157 are closed as out-of-scope/computationally blocked because there "
-                "is no working production hadron backend here. A credible backend is hardware-gated "
-                "on OPH hardware such as GLORB/Echosahedron, outside local Python and Chrome workers."
+                "Source-only hadron prediction requires a working production hadron backend. "
+                "Issues #153 and #157 are source-backend boundaries because there is no production "
+                "hadron backend in the local environment. A credible backend is gated on "
+                "OPH hardware such as GLORB/Echosahedron, outside local Python and Chrome workers. "
+                "The empirical closure surface uses a separate e+e- payload class."
             ),
             "next_action": (
-                "Keep hadron rows suppressed. Reopen only after a working OPH hadron backend emits "
-                "production hadron output, Ward-projected spectral data, and systematics."
+                "Keep source-only hadron rows suppressed. Use empirical hadron closure rows only "
+                "through the documented e+e- spectral payload. Promote source-only hadron rows "
+                "only after a working OPH hadron backend emits production hadron output, "
+                "Ward-projected spectral data, and systematics."
             ),
             "target_surfaces": ["code/particles/hadron", "code/particles/qcd"],
+        },
+        {
+            "id": "hadron.empirical-ee-spectral-closure",
+            "lane": "Hadrons",
+            "status": "policy_scaffold_emitted_dataset_absent",
+            "github_issue": None,
+            "title": "Populate the empirical e+e- -> hadrons payload for closure rows",
+            "current_boundary": (
+                "The empirical output class is declared in HADRON.md. The source registry and schema "
+                "exist, while the integrated e+e- spectral dataset and dispersion artifact are absent."
+            ),
+            "next_action": (
+                "Populate oph_empirical_ee_hadronic_spectral_measure from PDG, HEPData, alphaQED, "
+                "or an equivalent documented compilation, then feed the empirical Thomson endpoint builder."
+            ),
+            "target_surfaces": [
+                "HADRON.md",
+                "code/particles/hadron/empirical_ee_hadrons_sources.yaml",
+                "code/particles/hadron/empirical_ee_hadronic_spectral_measure.schema.json",
+                "code/P_derivation",
+            ],
         },
     ]
 
@@ -338,22 +362,21 @@ def build_bundles() -> list[dict[str, Any]]:
         },
         {
             "id": "qcd-thomson-backend-bundle",
-            "status": "closed_out_of_scope_scope_lock_emitted",
+            "status": "source_backend_boundary_empirical_policy_emitted",
             "gap_ids": [
                 "d10.ward-projected-thomson-endpoint",
                 "hadron.production-backend-systematics",
+                "hadron.empirical-ee-spectral-closure",
             ],
             "promotion_question": (
-                "Can the hadron production backend emit the rho_had(s;P) object and uncertainty budget "
-                "needed by the Ward-projected Thomson endpoint with hadrons and alpha(0) handled in one "
-                "closed packet?"
+                "Can the source-only backend or the empirical e+e- spectral payload supply the "
+                "Ward-projected hadronic term needed by the Thomson endpoint with row class recorded?"
             ),
             "result": (
-                "Constructive result with a scope lock. The stable-channel backend is outside the endpoint "
-                "object, and the real hadron backend is outside local execution. The missing primitive remains "
-                "production_ward_projected_hadronic_spectral_measure_export. Issues #153/#157 are closed "
-                "out-of-scope/computationally blocked pending OPH hardware and outside Chrome workers or "
-                "local surrogate code."
+                "Constructive result with two surfaces. The source-only primitive remains "
+                "production_ward_projected_hadronic_spectral_measure_export and requires a real OPH "
+                "hadron backend. The empirical surface uses a separate e+e- payload class and "
+                "cannot promote the source-only theorem."
             ),
         },
         {
@@ -385,6 +408,7 @@ def build_bundles() -> list[dict[str, Any]]:
                 "neutrino.pmns-status-and-absolute-rows",
                 "calibration.direct-top-bridge",
                 "hadron.production-backend-systematics",
+                "hadron.empirical-ee-spectral-closure",
             ],
             "promotion_question": (
                 "Do the returned packets jointly close the endpoint, matching, interval, and source-object "
@@ -417,9 +441,12 @@ def build_ledger() -> dict[str, Any]:
             ),
             "hadron_backend_in_current_local_scope": False,
             "hadron_backend_scope_reason": (
-                "Production hadrons require a real OPH hardware backend. Issues #153/#157 are closed "
-                "as out-of-scope/computationally blocked; local surrogate output is non-promoting."
+                "Source-only production hadrons require a real OPH hardware backend. Issues #153/#157 "
+                "are source-backend boundaries; local surrogate output is non-promoting and empirical "
+                "hadron closure uses a separate e+e- payload class."
             ),
+            "empirical_hadron_closure_class_declared": True,
+            "empirical_hadron_closure_source_only": False,
             "torus_mode_language_allowed_in_pipeline": False,
             "address_remaining_blockers_one_by_one": False,
             "obstruction_only_worker_result_allowed": True,

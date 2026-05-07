@@ -668,8 +668,10 @@ The fine-structure constant belongs here beside the weak sector. It is the
 local electromagnetic width of the observer-supporting pixel. From there the
 same construction continues into the weak sector, the Higgs-top surface, the
 selected-class quark sector, and the weighted-cycle neutrino branch. Hadrons
-belong to the later strong-binding descent of the same picture, which requires
-a real OPH hadron backend.
+belong to the later strong-binding descent of the same picture. Source-only
+hadron masses require a real OPH hadron backend. The displayed fine-structure
+endpoint uses the measured Thomson value, while the empirical
+\(e^+e^-\to\mathrm{hadrons}\) payload class records the data-driven hadron path.
 
 The interpretation is simple. The screen cell wants to sit at the golden-ratio
 balance point, the exact self-similar equilibrium of the local entropy
@@ -864,9 +866,9 @@ constants, while keeping the open endpoint and matching gates visible.
 
 **Why hadrons are harder.** Quark masses are short-distance parameters.
 Hadrons are bound states. Their masses come from the nonperturbative dynamics
-of confined quarks and gluons, so they require a working OPH hadron backend,
-such as the GLORB/Echosahedron route. They cannot be read off as one more
-particle row. The hadron backend status records that hardware gate.
+of confined quarks and gluons. Source-only hadron masses require a working OPH
+hadron backend, such as the GLORB/Echosahedron route. Empirical hadron closure
+uses a separate \(e^+e^-\to\mathrm{hadrons}\) payload class.
 
 ## 14.21 The Big Picture
 
