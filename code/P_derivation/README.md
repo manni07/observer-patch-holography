@@ -190,6 +190,18 @@ interval fixed-point certificate. The corpus has a schema and contract
 for that payload. The empirical hadron closure path uses a separate
 `e+e- -> hadrons` payload class through the policy in `../../HADRON.md`.
 
+`EMPIRICAL_HADRON_SCHEME_BRIDGE.md` records the direct PDG/CERN
+`Delta alpha_had^(5)(M_Z)` diagnostic. Raw PDG/CERN hadronic-running values are
+dimensionless denominator shifts, not additive OPH inverse-alpha packets. With
+the current OPH source anchor and lepton packet, direct insertion of the PDG
+row `Delta alpha_had^(5)(M_Z)=0.02761` gives
+`alpha^-1(0)=136.382895072695577...`. Hitting the NIST/CODATA comparison value
+with that same hadron row would require a same-scheme source-anchor bridge of
+`0.6350718999845777629...` inverse-alpha units, or a hadronic denominator shift
+of `0.0322443435578872888...`, outside the PDG/CERN range. Therefore raw PDG
+hadronic running is an empirical diagnostic until a source-side scheme bridge or
+same-scheme Ward-projected endpoint map is supplied.
+
 ## Usage
 
 From `reverse-engineering-reality/code/P_derivation/`:
@@ -203,6 +215,13 @@ candidate fine-structure value, use:
 
 ```bash
 python3 minimal_alpha.py --precision 40
+```
+
+To run the compact PDG/CERN hadron-input diagnostic:
+
+```bash
+python3 fine_structure_fixed_point_demo.py
+python3 fine_structure_fixed_point_demo.py --compare-alpha-inv 137.035999177
 ```
 
 To emit a full JSON report:

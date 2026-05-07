@@ -170,6 +170,7 @@ tiers live in the papers.
 ## Supplemental Papers
 
 - **[Observer-Patch Holography and the Dark Matter Phenomenon](extra/oph_dark_matter_paper.pdf)**: supplemental research note on dark-matter phenomenology, the MOND-like galaxy limit, SPARC diagnostics, repair transport, and compressed cosmology checks. Reproducibility code lives in [code/dark_matter](code/dark_matter/).
+- **[Thinking as Patch-Net Fixed-Point Search](extra/thinking_as_patch_net_fixed_point_search.pdf)**: supplemental paper modeling neural computation, thinking, consciousness, and qualia as self-reading fixed-point consensus across recurrent observer patches. Source TeX lives beside the PDF in [extra/](extra/).
 
 ## More
 

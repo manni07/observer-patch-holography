@@ -136,6 +136,7 @@ utilise une classe séparée de charge utile \(e^+e^-\to\mathrm{hadrons}\).
 ## Articles supplémentaires
 
 - **[Observer-Patch Holography and the Dark Matter Phenomenon](extra/oph_dark_matter_paper.pdf)** : note de recherche supplémentaire sur la phénoménologie de la matière noire, la limite galactique de type MOND, les diagnostics SPARC, le transport par réparation et les tests cosmologiques compressés. Le code de reproductibilité vit dans [code/dark_matter](code/dark_matter/).
+- **[Thinking as Patch-Net Fixed-Point Search](extra/thinking_as_patch_net_fixed_point_search.pdf)** : article supplémentaire qui modélise le calcul neuronal, la pensée, la conscience et les qualia comme consensus de point fixe auto-lisant entre patches observateurs récurrents. La source TeX vit à côté du PDF dans [extra/](extra/).
 
 ## Plus
 
