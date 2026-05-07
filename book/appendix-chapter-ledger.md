@@ -77,8 +77,8 @@ not necessarily a human mind. It is any physical system capable of receiving
 signals, forming records, updating internal state, and participating in a
 network of comparisons. A detector, a laboratory, a biological nervous
 system, and a future engineered patch-federation can all instantiate parts of
-that role at different scales. The point is not to blur them together. The
-point is to identify the formal surface they share: bounded access,
+that role at different scales. The aim is to identify the formal surface they
+share: bounded access,
 record-making, and overlap comparison.
 
 The **normal form** language matters. In computation, a normal form is a
@@ -152,7 +152,7 @@ The human chain is older than physics departments. It includes oral argument,
 geometry, astronomy, logic, theology, optics, mechanics, and eventually
 experimental science. A modern reader should not treat philosophy as a failed
 version of physics. Philosophy was the first debugging environment for
-assumptions that instruments could not yet test.
+assumptions beyond the instruments of the time.
 
 ## Chapter 3: The Holographic Screen
 
@@ -385,13 +385,13 @@ Sitter space has a global boundary and negative cosmological constant. Our
 universe is closer to de Sitter, with positive cosmological constant and
 observer-dependent horizons. OPH takes the boundary-encoding lesson but
 rebuilds it around static patches, finite screen capacity, and overlap
-agreement rather than a single global CFT at infinity.
+agreement, not a single global CFT at infinity.
 
 The human lineage runs through Bekenstein, Hawking, Gibbons, Perry, 't Hooft,
 Susskind, Maldacena, Witten, Gubser, Klebanov, Polyakov, Ryu, Takayanagi,
 Hubeny, Rangamani, Hamilton, Kabat, Lifschytz, Lowe, and many others. The
-chapter's job is to show why boundary-first physics is no longer an exotic
-option. It is one of the most successful clues quantum gravity has produced.
+chapter's job is to show why boundary-first physics is an essential clue. It
+is one of the most successful clues quantum gravity has produced.
 
 ## Chapter 9: Entanglement
 
@@ -415,7 +415,7 @@ $$|\Phi^+\rangle=\frac{|00\rangle+|11\rangle}{\sqrt2}.$$
 The kets $|00\rangle$ and $|11\rangle$ are two-qubit basis states. The
 factor $1/\sqrt2$ normalizes the state so total probability is one. If one
 qubit is considered alone, its reduced density matrix looks maximally mixed,
-even though the pair as a whole is pure. This is why entanglement is not just
+even though the pair as a whole is pure. This is why entanglement is more than
 ignorance. The correlations belong to the joint state.
 
 The monogamy inequality, written with a tangle $\tau$, says that entanglement
@@ -447,7 +447,7 @@ $$|\psi_L\rangle=\alpha|000\rangle+\beta|111\rangle$$
 
 uses $|\psi_L\rangle$ for the encoded logical state. $\alpha$ and $\beta$ are
 complex amplitudes. The basis states $|000\rangle$ and $|111\rangle$ are
-physical three-qubit states. The point is that the code has not made three
+physical three-qubit states. The key fact is that the code has not made three
 copies of an unknown qubit. It has stored one logical state in correlations.
 
 The Knill-Laflamme condition
@@ -480,7 +480,7 @@ spacetime stop looking like separate subjects.
 ## Chapter 11: MaxEnt and the Arrow
 
 Chapter 11 asks where time comes from when no external clock is allowed to
-stand outside the universe. The answer is not one idea but a stack: entropy,
+stand outside the universe. The answer is a stack: entropy,
 records, restricted access, maximum entropy inference, and modular flow.
 
 The MaxEnt distribution is usually written
@@ -490,7 +490,7 @@ $$p_i=\frac{e^{-\beta E_i}}{Z}.$$
 $p_i$ is the probability of state $i$. $E_i$ is its energy. $\beta$ is inverse
 temperature, often $1/(k_BT)$. $Z$ is the partition function that normalizes
 the probabilities so they sum to one. Jaynes taught physicists to read this
-not merely as a heat-bath trick but as principled inference: choose the least
+as principled inference, not as a heat-bath trick: choose the least
 biased distribution compatible with known constraints.
 
 The Wheeler-DeWitt equation is often summarized as
@@ -725,7 +725,7 @@ minimum.
 The chapter lists particle masses and couplings, and the notes distinguish
 their status. A validation row checks the framework against known values. A
 target-anchored witness uses an empirical anchor. A source-only prediction
-depends only on declared source inputs. A hadron row is not just quark masses
+depends only on declared source inputs. A hadron row is more than quark masses
 because QCD binding dominates hadron mass.
 
 The matter-stability diagram shows the ladder: screen excitations,
@@ -777,12 +777,12 @@ filter questions.
 
 Chapter 18 gathers the machinery into one sentence: reality is the
 consistency of observations across overlapping perspectives. The sentence is
-short because the previous chapters did the work. It now includes finite
+short because the earlier chapters did the work. It includes finite
 screens, algebras, overlaps, entropy, recovery, holography, entanglement,
 codes, modular time, symmetry, de Sitter capacity, particle structure,
 classical matter, and selection.
 
-The symbol ledger in this chapter is mostly referential. The Standard Model
+The symbol ledger is mostly referential. The Standard Model
 quotient by $\mathbb Z_6$ says that a shared discrete center is identified
 across the gauge factors. The pixel ratio $P$ is the local fixed point. The
 fine-structure constant $\alpha$ measures electromagnetic coupling, and
@@ -826,7 +826,7 @@ ratio when it appears. $P$ is the local pixel ratio. $\sqrt\pi$ appears as a
 geometric normalization in the screen-side story. $\alpha^{-1}$ is the
 inverse fine-structure constant. Each symbol should be read as part of the
 fixed-point bookkeeping, not as numerology. The claim stands or falls by the
-declared equations and audit rows.
+declared equations and numerical checks.
 
 The observer-loop diagram shows the metaphysical closure: world, observers,
 records, and models feed back into one self-description. The loop is
@@ -850,19 +850,19 @@ The key terms are **boundary-sector label**, **interior conditional state**,
 and **interface**. A boundary-sector label tells how the observer pattern
 glues to its environment. An interior conditional state is the inside pattern
 specified relative to that interface. Conditional independence means that,
-once the relevant boundary data are fixed, inside and outside no longer need
+once the relevant boundary data are fixed, inside and outside do not need
 extra direct information about each other to make compatible predictions.
 
 The recovery language does not promise technological immortality. It says
 that OPH's operational surface contains exact or approximate restoration
 statements for accessible checkpoint data under controlled interface
-conditions. That is already enough to change the category of the question.
+conditions. That is enough to change the category of the question.
 Continuation becomes an engineering and identity problem with mathematical
 boundaries, not a purely mythic or literary hope.
 
 The human chain includes memory research, neuroscience, quantum information,
 cybernetics, computer science, philosophy of personal identity, cryonics
-debates, and future hardware work. The epilogue should be read as an open
+debates, and hardware design. The epilogue should be read as an open
 program. It is the point where the book's reverse-engineering posture turns
 back toward possible action.
 
@@ -873,7 +873,7 @@ for quick orientation, not formal completeness.
 
 **$A$** usually means area. In entropy formulas it is often a horizon or
 boundary area. When the book says capacity scales with $A$, it means that
-gravity counts independent information by boundary area rather than bulk
+gravity counts independent information by boundary area, not bulk
 volume.
 
 **$\ell_P$** is the Planck length. It is built from $G$, $\hbar$, and $c$.
@@ -913,8 +913,8 @@ quoted because the low-energy value is about 137.
 subsystem. It can describe pure states, mixtures, and reduced states obtained
 by tracing out inaccessible degrees of freedom.
 
-**$\omega$** is often a state as a functional on an algebra. Instead of being
-written as a matrix, it assigns expectation values to observables.
+**$\omega$** is often a state as a functional on an algebra. Written this way,
+it assigns expectation values to observables without needing a matrix display.
 
 **$\mathcal A(P)$** is the algebra of observables associated with patch $P$.
 The algebra records which questions can be asked and how they combine.

@@ -8,7 +8,7 @@ The universe is either static, with things staying roughly as they are, or
 decelerating, with gravity pulling everything together and slowing expansion.
 This is the natural expectation from Newton through Einstein.
 
-Einstein himself added a "cosmological constant" to his equations in 1917 to create a static universe-a universe that neither expanded nor contracted. When Hubble discovered the universe is expanding, Einstein dropped the constant, calling it his "greatest blunder."
+Einstein himself added a "cosmological constant" to his equations in 1917 to create a static universe, a universe that neither expanded nor contracted. When Hubble discovered the universe is expanding, Einstein dropped the constant, calling it his "greatest blunder."
 
 Even after accepting expansion, the expectation was deceleration. Gravity attracts. The mutual pull of all the matter in the universe should slow the expansion, like a ball thrown upward gradually slowing. Eventually, the expansion might stop or even reverse.
 
@@ -38,7 +38,7 @@ calibrations, and arguments about what the sky was actually saying.
 
 ### The Cosmological Constant Returns
 
-A positive cosmological constant Lambda > 0 creates a kind of "anti-gravity"-a repulsive force that grows with distance. At early times, when matter density was high, gravity dominated. But as the universe expanded and matter diluted, Lambda took over.
+A positive cosmological constant Lambda > 0 creates a repulsive large-scale tendency that grows with distance. At early times, when matter density was high, gravity dominated. As the universe expanded and matter diluted, Lambda took over.
 
 The expansion began accelerating about 5 billion years ago. The universe is about 68% dark energy.
 
@@ -64,18 +64,18 @@ This defines your **cosmological horizon**-the boundary of your causal access.
 
 Inside the horizon, you can use static coordinates. This region-the **static patch**-is all of de Sitter space that you can ever access.
 
-### De Sitter Fits Our Framework
+### De Sitter Fits OPH
 
 **The de Sitter horizon is the natural holographic screen.**
 
-The fit is almost too neat. Observers have finite patches, and the static patch
+The fit is tight. Observers have finite patches, and the static patch
 is bounded by a horizon. The patch boundary is an $S^2$, exactly the geometry
 the framework wants. The entropy is finite through the Gibbons-Hawking area
 law. No observer sees beyond the horizon, so there is no God's-eye view.
 Observer equivalence is built in because de Sitter is maximally symmetric.
 Time is patch-dependent because there is no preferred global clock.
 
-The static patch is not a limitation to be overcome. It's the natural arena for physics from an observer's perspective.
+The static patch is the natural arena for physics from an observer's perspective.
 
 ## 13.4 The Gibbons-Hawking Temperature
 
@@ -103,7 +103,7 @@ $$T_U = \frac{\hbar a}{2\pi c k_B}$$
 
 So the de Sitter and Unruh temperatures are locally linked, but they should not be identified by assigning every static-patch observer the same acceleration $a = cH$.
 
-This has an important implication for our model: **de Sitter horizons automatically satisfy the same thermodynamic relations as Rindler horizons**. This is standard Gibbons-Hawking thermodynamics.
+This has an important implication for OPH: **de Sitter horizons satisfy the same thermodynamic relations as Rindler horizons**. This is standard Gibbons-Hawking thermodynamics.
 
 ### Finite Entropy
 
@@ -139,7 +139,7 @@ effective description laid over a screen with a hard budget.
 Jacobson's derivation of Einstein's equations requires horizons with a
 temperature proportional to surface gravity, an entropy proportional to area,
 and a first law tying heat to entropy. De Sitter thermodynamics supplies that
-structure. In our model it becomes the natural thermodynamic backdrop for the
+structure. In OPH it becomes the natural thermodynamic backdrop for the
 gravity relation recovered from observer-patch consistency.
 
 ## 13.5 The Problem of Time in De Sitter
@@ -150,14 +150,14 @@ De Sitter has no spatial boundary. The only boundary is the horizon-and the hori
 
 ### Horizon Complementarity
 
-Leonard Susskind and collaborators proposed **de Sitter complementarity**: operationally, physics should be described patch by patch rather than by privileging a single global observer description.
+Leonard Susskind and collaborators proposed **de Sitter complementarity**: operationally, physics should be described patch by patch, without privileging a single global observer description.
 
 Alice describes physics in her patch using her Hilbert space. Bob describes physics in his patch using his Hilbert space. Where their patches overlap, their descriptions must be consistent. In the complementarity reading adopted here, patch-relative descriptions are primary.
 
 A Hilbert space here is not a private mental space. It is the quantum state
 space for the degrees of freedom accessible inside one observer's horizon.
 
-This fits naturally with our model. Reality is a collection of consistent patches. You can't step outside and view the universe from nowhere.
+This fits naturally with OPH. Reality is a collection of consistent patches. You can't step outside and view the universe from nowhere.
 
 ## 13.6 Static Patch Holography
 
@@ -171,22 +171,22 @@ The three-dimensional bulk inside the horizon is encoded holographically on the 
 
 When an object falls toward the horizon, it gets redshifted and appears to freeze onto the surface, its information smeared across the screen.
 
-The horizon is the natural screen in this chapter. It is the last place where
+The horizon is the natural screen for cosmology. It is the last place where
 an observer can still trade signals with the rest of the patch. If physics is
 organized around what observers can compare, then the cosmological horizon is
 exactly where that comparison structure has to live.
 
-### Why This Is Not "dS/CFT"
+### Why This Is Not dS/CFT
 
 When physicists say "de Sitter holography is unsolved," they typically mean: no AdS/CFT-like duality with a clean boundary CFT at infinity is available. The classic dS/CFT proposal puts a Euclidean CFT at future infinity. This leads to notorious problems: potential non-unitarity, complex weights, and no clear operational access for any observer.
 
-Our model takes a different path entirely. It uses static-patch holography with
+OPH takes a different path. It uses static-patch holography with
 positive Lambda. The boundary is the observer's horizon, not future infinity.
 The construction asks for local algebras and overlap consistency, without one
 global CFT. Each observer has a horizon screen, and observer-dependence is
-embraced as fundamental.
+part of the setup.
 
-This is a fundamental shift in target. The "unsolved problem" of dS holography is about finding a global boundary theory at infinity. We solve a different problem: how do local observer patches, each bounded by a horizon, yield consistent physics?
+This is a different target. The "unsolved problem" of dS holography is about finding a global boundary theory at infinity. OPH asks how local observer patches, each bounded by a horizon, yield consistent physics.
 
 ### Lambda as Global Capacity
 
@@ -197,8 +197,8 @@ construction cannot erase.
 
 The symbol $\Lambda$ is the cosmological constant, the part of Einstein's
 equation that acts like a uniform large-scale tendency for space to accelerate.
-In this framework it is read as global capacity data rather than as one more
-local particle-physics coupling.
+OPH reads it as global capacity data, not as one more local particle-physics
+coupling.
 
 So Lambda must be fixed by a **global** constraint: the total capacity of the screen. In natural units, the relationship is:
 
@@ -217,9 +217,9 @@ positive cosmological constant.
 
 ### Many Observers, One Lambda
 
-The philosophical stance of our model-"no objective reality, only subjective perspectives that must agree on overlaps"-maps naturally onto de Sitter static patch intuition. Each timelike observer has their own horizon, their own patch. There's no operational access to a single global description.
+The philosophical stance of OPH, no objective camera angle and only perspectives that must agree on overlaps, maps naturally onto de Sitter static-patch intuition. Each timelike observer has a horizon and a patch. There is no operational access to a single global description.
 
-But Lambda is the one thing that **can** be shared across overlaps. It's a global capacity constraint that all consistent overlapping descriptions inherit. Different observers see different patches, but they all see the same Lambda-encoded in the finite size of their horizons.
+Lambda is the one thing that **can** be shared across overlaps. It is a global capacity constraint that all consistent overlapping descriptions inherit. Different observers see different patches, and they all see the same Lambda encoded in the finite size of their horizons.
 
 ### The Cosmology Picture
 
@@ -273,7 +273,7 @@ screen.
 
 There's another cosmic mystery we haven't addressed: dark matter. Galaxies rotate too fast. Galaxy clusters hold together too tightly. The cosmic microwave background fluctuations require extra gravitational pull. The standard explanation: invisible particles that interact gravitationally but not electromagnetically.
 
-Our framework suggests a different route.
+OPH suggests a different route.
 
 ### The Modular Anomaly
 
@@ -302,7 +302,7 @@ The coefficient is fixed by the derivation: $\frac{15}{8\pi^2} \approx 0.19$.
 ### Why This Is "Dark"
 
 The anomalous term $T_{00}^{\text{anom}}$ is dark by construction. It arises
-from information structure rather than from Standard Model fields, it
+from information structure, not from Standard Model fields, it
 gravitates, and it does not couple electromagnetically. That gives it exactly
 the profile a dark component ought to have.
 
@@ -312,7 +312,7 @@ The de Sitter horizon introduces an unavoidable IR length scale:
 
 $$r_{dS} = \sqrt{\frac{3}{\Lambda}} \approx 1.66 \times 10^{26} \text{ m}$$
 
-Galaxy rotation anomalies are an IR phenomenon-they appear at large distances where accelerations are tiny. Any modification from the modular anomaly must be controlled by this scale.
+Galaxy rotation anomalies are an infrared phenomenon. They appear at large distances where accelerations are tiny. Any modification from the modular anomaly must be controlled by this scale.
 
 A natural acceleration benchmark, carrying the anomaly coefficient, is:
 
@@ -349,14 +349,14 @@ The same picture yields the baryonic Tully-Fisher relation:
 $$V^4 = G \cdot M_b \cdot a_0^{(\text{OPH})}$$
 
 This has the observed Tully-Fisher form, with its normalization set by screen
-capacity. The dark sector is then read as an infrared correction to gravity
-rather than as a new species of particle. The cosmological constant and the
+capacity. The dark sector is then read as an infrared correction to gravity,
+not as a new species of particle. The cosmological constant and the
 galaxy-scale anomaly sit inside one de Sitter picture.
 
 ---
 
-We've established the arena: a finite static patch bounded by a holographic horizon. But what populates this arena? What are the particles and forces we observe, and why do they have the peculiar properties they do?
+The arena is a finite static patch bounded by a holographic horizon. What populates this arena? What are the particles and forces we observe, and why do they have the peculiar properties they do?
 
-In the next chapter, we'll see that the Standard Model of particle physics is not fundamental. It **emerges from consistency requirements**-the gluing conditions between observer patches force gauge symmetry, and the requirement for anomaly-free gluing determines the particle content.
+The next chapter treats the Standard Model of particle physics as an effective structure. It **emerges from consistency requirements**: the gluing conditions between observer patches force gauge symmetry, and the requirement for anomaly-free gluing determines the particle content.
 
 This is **Chapter 14: The Standard Model from Consistency**.

@@ -45,7 +45,7 @@ $\hbar$, $c$, $G$, and $k_B$ are Planck's constant divided by $2\pi$, the
 speed of light, Newton's gravitational constant, and Boltzmann's constant.
 Because $M$ is in the denominator, smaller black holes are hotter.
 
-Here's the problem. Hawking's calculation showed the radiation is thermal-random, uncorrelated noise carrying no information about what fell in. If you throw a book into a black hole and wait for evaporation, all you get out is random static.
+The problem was severe. Hawking's calculation showed the radiation is thermal-random, uncorrelated noise carrying no information about what fell in. If you throw a book into a black hole and wait for evaporation, all you get out is random static.
 
 If this is true, information is destroyed. A pure quantum state (the book) becomes a mixed thermal state (the radiation). This violates **unitarity**-the foundational principle that quantum evolution preserves information.
 
@@ -104,8 +104,8 @@ Imagine you're sending a message through a bad phone line. You say "yes," but st
 
 Shannon's answer: you can't eliminate noise, but you can beat it with **redundancy**.
 
-Here is the simplest example. Instead of sending a single bit, send it three
-times. A zero becomes `000`. A one becomes `111`.
+A simple example is repetition coding. Send a single bit three times. A zero
+becomes `000`. A one becomes `111`.
 
 Suppose noise flips one bit. You receive "010." Majority vote says the original was "0"-two zeros versus one one. The information survives.
 
@@ -157,15 +157,15 @@ that disappears when one variable is used to predict the other.
 
 ### Conditional Mutual Information: The Recovery Metric
 
-Here's where recovery comes in. The conditional mutual information measures correlation between X and Y *given* knowledge of Z:
+Recovery enters through conditional mutual information, which measures correlation between X and Y *given* knowledge of Z:
 
 $$I(X:Y|Z) = H(X|Z) + H(Y|Z) - H(X,Y|Z)$$
 
 If I(X:Y|Z) = 0, then X and Y are **conditionally independent given Z**. Once you know Z, learning Y tells you nothing new about X.
 
 The vertical bar again means "given." Conditional mutual information asks how
-much extra connection remains between $X$ and $Y$ after the mediator $Z$ has
-already been supplied.
+much extra connection remains between $X$ and $Y$ after the mediator $Z$ is
+supplied.
 
 This is the mathematical definition of "Z screens X from Y." All information that Y has about X is contained in Z.
 
@@ -365,7 +365,7 @@ The recovery rule resolves one of physics' most famous puzzles.
 
 In 1974, Stephen Hawking made a disturbing discovery. Black holes aren't quite black-they emit faint radiation due to quantum effects near the event horizon.
 
-Here's the problem. Hawking's calculation showed the radiation is thermal-random, uncorrelated noise carrying no information about what fell in. If you throw a book into a black hole and wait for evaporation, all you get out is random static.
+The information problem returns. Hawking's calculation showed the radiation is thermal-random, uncorrelated noise carrying no information about what fell in. If you throw a book into a black hole and wait for evaporation, all you get out is random static.
 
 If this is true, information is destroyed. A pure quantum state (the book) becomes a mixed thermal state (the radiation). This violates unitarity-the foundational principle that quantum evolution preserves information.
 
@@ -413,8 +413,8 @@ After Page time, an island appears. The interior of the black hole-the **island*
 The island formula reproduces the Page curve in semiclassical holographic
 models and makes the encoding picture vivid. Alice's diary may be physically
 inside the black hole, yet its information does not need to live in an
-autonomous interior tensor factor. The black-hole lesson of this chapter is
-that recovery and encoding belong to the basic architecture.
+autonomous interior tensor factor. The black-hole lesson is that recovery and
+encoding belong to the basic architecture.
 
 ## 7.11 Spacetime as Error Correction
 
@@ -466,7 +466,7 @@ The recovery rule has a startling implication: in this recoverability picture, n
 
 If the universe is unitary and holographic encoding is robust, information is not simply destroyed; it is redistributed into increasingly nonlocal correlations of the full quantum state.
 
-The Library of Alexandria? The scrolls burned, but the information scrambled into smoke, heat, and light. That radiation spread across the cosmos at light speed. It is diluted across an unimaginably vast region of space-but it's still there. In principle, with a computer the size of the observable universe, you could run the Petz map and watch the smoke reconstitute into Sophocles.
+The Library of Alexandria? The scrolls burned, and the information scrambled into smoke, heat, and light. That radiation spread across the cosmos at light speed. It is diluted across an unimaginably vast region of space. In principle, with a computer the size of the observable universe, you could run the Petz map and watch the smoke reconstitute into Sophocles.
 
 Paleontology and astronomy use weak versions of this. Fossils preserve information about creatures from millions of years ago. Astronomy records light that has traveled for billions of years before reaching our telescopes. The cosmic microwave background is one vivid example of very old information preserved in radiation.
 

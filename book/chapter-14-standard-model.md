@@ -102,7 +102,7 @@ that whole history.
 
 ### Heisenberg's Uncertainty
 
-Werner Heisenberg approached quantum mechanics differently. Instead of waves, he focused on observables: things you can actually measure.
+Werner Heisenberg approached quantum mechanics differently. He focused on observables: things you can actually measure.
 
 In June 1925, suffering from hay fever on the island of Helgoland, Heisenberg developed matrix mechanics. Observable quantities became matrices. When he tried to calculate, he discovered something strange: the order of multiplication matters.
 
@@ -142,8 +142,8 @@ The equation had a problem: it predicted states with negative energy. An electro
 
 The matrices $\gamma^\mu$ are Dirac gamma matrices. They package spin and
 relativity into one algebraic object. The derivative $\partial_\mu$ measures
-change in the spacetime direction $\mu$. The field $\psi$ is now a spinor
-field rather than a single nonrelativistic wave, and $mc$ carries the particle
+change in the spacetime direction $\mu$. The field $\psi$ is a spinor
+field, not a single nonrelativistic wave, and $mc$ carries the particle
 mass scale. Dirac's compact line says that spin, antimatter, and special
 relativity belong together.
 
@@ -233,7 +233,7 @@ The electron is stable. The muon and tau decay quickly.
 
 ### Three Generations
 
-Here's something strange. The fermions come in three copies. The up and down quarks, plus the electron and its neutrino, form the first generation. The charm and strange quarks, plus the muon and its neutrino, form the second. The top and bottom, plus the tau and its neutrino, form the third.
+The fermions come in a strange pattern: three copies. The up and down quarks, plus the electron and its neutrino, form the first generation. The charm and strange quarks, plus the muon and its neutrino, form the second. The top and bottom, plus the tau and its neutrino, form the third.
 
 Why three? No one knows. The charged members of the second and third generations are heavier copies of the first, while the neutrino sector has its own mixing pattern. Almost all ordinary matter uses only first-generation particles.
 
@@ -279,8 +279,8 @@ The subscripts matter. L means "left-handed." The weak force distinguishes left 
 
 ## 14.6 Chirality: Nature's Handedness
 
-Here's something deeply strange about the Standard Model. Nature treats left and
-right differently.
+Nature treats left and right differently. This is one of the deepest
+asymmetries in the Standard Model.
 
 ### What Is Chirality?
 
@@ -332,7 +332,7 @@ The famous charges do not float freely. Thirds of an electron
 charge are not decorative details. They are the values that let the structure
 hold.
 
-### Connection to Our Model
+### Connection to OPH
 
 The same issue appears in geometric dress. Glue observer patches around
 a loop and return to the starting point. If some leftover phase remains, the
@@ -450,8 +450,8 @@ roughly, that if the fixed-cutoff charge sectors fuse, split, carry duals,
 remain transportable across patches, persist coherently under refinement, and
 admit compatible finite-dimensional multiplicity spaces, then the resulting
 refinement-limit category recovers the compact symmetry group behind them. The
-fusion table is central, but it is used together with the refinement transport
-and fiber data rather than by itself. The group is read off from how charges
+fusion table is central, and it is used together with the refinement transport
+and fiber data. The group is read off from how charges
 behave in that full persistent sector package.
 
 For intuition, treat the fusion rules as a multiplication table for charges.
@@ -465,7 +465,7 @@ $\alpha$ and $\beta$ fuse. A tensor category is the organized collection of
 these sectors, their fusions, their duals, and their consistency rules.
 
 The gauge group isn't put in by hand. It is reconstructed from the persistent
-sector data rather than guessed in advance.
+sector data, not guessed in advance.
 
 ![Tannaka-Krein reconstruction reads a compact gauge group from the way edge sectors fuse and represent one another.](../assets/book_diagrams/tannaka-krein.svg){width=82%}
 
@@ -552,7 +552,7 @@ That is what makes the derivation satisfying. The equations are not decorative b
 
 ## 14.11 The Number of Colors: Why N_c = 3
 
-In the full argument, the color count is fixed directly by the same coupled carrier that emits the $SU(3)$ factor. The global $SU(2)$ anomaly is still important, but here it checks the realized structure rather than determining the count.
+In the full argument, the color count is fixed directly by the same coupled carrier that emits the $SU(3)$ factor. The global $SU(2)$ anomaly is an important check on the realized structure. It is not what determines the count.
 
 ### The Coupled Color Carrier
 
@@ -583,8 +583,8 @@ With $N_c=3$, this becomes
 $$N_c + 1 = 4,$$
 
 which is even. So Witten's anomaly is satisfied generation by generation. In
-this derivation it confirms the realized triplet-doublet structure rather than
-selecting the color count.
+this derivation it confirms the realized triplet-doublet structure. It does not
+select the color count.
 
 ## 14.12 Why Three Generations?
 
@@ -633,7 +633,7 @@ Combining: $3 \le N_g \le 5$.
 
 CKM CP capability and weak-sector UV completability define the viable window.
 Here UV completability means that the theory can keep making sense at shorter
-distances and higher energies, instead of breaking down immediately when the
+distances and higher energies, with no immediate breakdown when the
 resolution is increased:
 
 $$3 \le N_g \le 5.$$
@@ -711,8 +711,8 @@ conversion boundary.
 Stable patterns on the screen matter because they land on the particle rows a
 physicist actually cares about. First comes the structural side. Chapter 15
 supplies Lorentz kinematics, so stable excitations sort themselves by the usual
-labels of mass, spin, and helicity. This chapter supplies the realized gauge
-quotient, the hypercharge lattice, and the generation-color counting. Together
+labels of mass, spin, and helicity. The realized gauge quotient, hypercharge
+lattice, and generation-color counting supply the particle-side structure. Together
 they decide which charged excitations can exist and how they transform.
 
 Then comes the fixed-point closure. The same screen cell is read twice. From the
@@ -765,10 +765,10 @@ closing cleanly.
 
 The graviton follows the same pattern, this time on the geometric side.
 Chapter 15 argues that once modular flow on screen caps becomes
-geometric, the sphere is no longer carrying abstract bookkeeping alone. It is
+geometric, the sphere carries more than abstract bookkeeping. It is
 carrying the compressed information that observers read as spacetime.
 
-Geometry in this framework is allowed to respond, bend, and fluctuate. Once it
+In OPH, geometry is allowed to respond, bend, and fluctuate. Once it
 does, the effective theory needs a massless spin-2 messenger for those
 fluctuations. Physics gives that messenger a familiar name: the graviton.
 
@@ -782,7 +782,7 @@ another, which is exactly what the construction forbids.
 
 The claim that a theoretical model "predicts gravity" is significant. String theory is famous for this: it was discovered that consistent string theories necessarily contain a massless spin-2 excitation that couples universally, a graviton. This was one of string theory's great selling points: gravity emerges from the consistency requirements of the theory.
 
-Our model makes the same claim, but the logical structure is different. In string theory, you start with strings propagating in a background spacetime, quantize them, and discover that the spectrum includes a graviton. The graviton's existence is tied to the specific dynamics of string vibrations.
+OPH makes a related claim with a different logical structure. In string theory, you start with strings propagating in a background spacetime, quantize them, and discover that the spectrum includes a graviton. The graviton's existence is tied to the specific dynamics of string vibrations.
 
 Start with observers on a holographic screen, impose consistency conditions on
 how their descriptions must agree, and the low-energy effective description
@@ -865,7 +865,7 @@ Traditional Grand Unified Theories achieve unification by embedding the Standard
 But Super-Kamiokande has been watching for proton decay since 1996. The experimental limit is
 $\tau_p > 10^{34}$ years, a thousand times longer than predicted. The simplest GUTs are dead.
 
-Our model takes a different path. The gauge group is not embedded in anything
+OPH takes a different path. The gauge group is not embedded in anything
 larger. On the transported bosonic refinement-ladder branch, Tannaka-Krein
 reconstruction builds the gauge group from the persistent charge-sector data,
 yielding the product structure:
@@ -874,7 +874,7 @@ $$G_{\mathrm{phys}} = \mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1) 
 
 There is no larger group. No X and Y bosons. No leptoquark generators. Any
 coupling closure happens geometrically, with all three couplings sharing a
-common "diffusion time" on the edge, instead of algebraically through group
+common "diffusion time" on the edge, not algebraically through group
 embedding.
 
 The prediction is stark: **gauge-mediated proton decay is forbidden**.
@@ -883,11 +883,11 @@ This is one of the cleanest experimental forks in the road. A simple-group unifi
 
 The claim is unusually valuable. Many high-energy ideas differ
 mainly in elegance or ultraviolet taste. Proton decay is harsher. Either the
-detector sees the relevant channel or it keeps not seeing it. This chapter
-places OPH on the null-decay side for structural reasons.
+detector sees the relevant channel or it keeps not seeing it. OPH lands on the
+null-decay side for structural reasons.
 
 This is a unique experimental signature. Standard SUSY GUTs predict both
-precision unification and proton decay. Our model separates those questions:
+precision unification and proton decay. OPH separates those questions:
 the full connected gauge group has only the product-group adjoint content and
 no mixed leptoquark generators, so gauge-mediated proton decay is forbidden,
 while the edge-mode construction can display MSSM-like unification-style
@@ -922,7 +922,7 @@ electroweak scale, the low-energy electromagnetic endpoint, and the effective
 gravitational coupling. The reader does not need
 every intermediate symbol to see the point. OPH is attempting to tie
 electroweak masses, the Higgs/top surface, electromagnetism at low energy, and
-Newton's constant to one common structure instead of treating them as unrelated
+Newton's constant to one common structure without treating them as unrelated
 constants, while keeping the open endpoint and matching gates visible.
 
 **Charge quantization.** All color-singlet particles have integer electric charge. No fractional charges like $\pm 1/3$ can exist outside hadrons. This follows from the global structure of the gauge group.
@@ -963,6 +963,6 @@ weighted-cycle neutrino family, and a running quark sector on a selected
 physical basis. Strongly coupled bound states add the QCD problem on top of
 that particle-level structure.
 
-This chapter has shown how particles emerge from the screen as stable patterns that transform under emergent symmetries. The natural sequel is spacetime itself. If the particle inventory is fixed by consistency, can geometry be fixed the same way?
+Particles emerge from the screen as stable patterns that transform under emergent symmetries. The natural sequel is spacetime itself. If the particle inventory is fixed by consistency, can geometry be fixed the same way?
 
 That's the question of **Chapter 15: Relativity from Modular Time**.

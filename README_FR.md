@@ -169,9 +169,9 @@ fermeture empirique utilise une classe séparée de charge utile
 \(e^+e^-\to\mathrm{hadrons}\).
 
 Le théorème des quarks sur classe sélectionnée laisse la CP forte comme branche
-compagnon ouverte : le corpus disponible ne dérive pas `theta_QCD`, n'émet pas
-le `bar(theta)` physique et ne prouve pas que la phase CP forte physique
-s'annule. L'issue `#155` suit ce pont entre phase, anomalie et angle
+compagnon ouverte : le corpus disponible ne dérive pas l'angle theta de QCD,
+n'émet pas l'angle CP fort physique et ne prouve pas que la phase CP forte
+physique s'annule. L'issue `#155` suit ce pont entre phase, anomalie et angle
 topologique.
 
 ## Guide du dépôt

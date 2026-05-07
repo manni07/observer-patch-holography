@@ -274,11 +274,11 @@ General relativity predicts that sufficient mass concentrated in a small enough 
 
 In 2019, the Event Horizon Telescope photographed the shadow of the black hole at the center of galaxy M87. In 2022, they imaged Sagittarius A*, the black hole at the center of our own galaxy.
 
-Black holes exist, and the observed strong-field data match general relativity extremely well in the regimes tested so far.
+Black holes exist, and the observed strong-field data match general relativity extremely well in tested regimes.
 
 ## 15.8 Recovering Special Relativity from the Screen
 
-Here is the connection to the model.
+The OPH connection is direct.
 
 ### Time as Modular Flow
 
@@ -305,7 +305,7 @@ through the patch's internal clock.
 Consider a cap $C$ on the sphere $S^2$. In the smooth regime, the cap's
 thermal time stops feeling like abstract algebra and starts behaving like an
 actual motion on the sphere. This is where the construction turns into
-relativity. A clock is no longer just a formal device inside the math. Its flow becomes the
+relativity. A clock becomes more than a formal device inside the math. Its flow becomes the
 same kind of geometric motion that later shows up as boosts and time
 translations.
 
@@ -352,13 +352,13 @@ rigidity hypotheses identify that motion with the conformal action.
 
 ### Why There Is No Privileged Reference Frame
 
-This deserves careful explanation, because it addresses a natural worry about our model.
+This deserves careful explanation, because it addresses a natural worry about OPH.
 
 If reality is a quantum system on a 2D sphere, with qubits arranged on a fixed lattice, why isn't there a "God's eye view" of the whole sphere? Wouldn't that be a privileged reference frame?
 
-The answer is that **there is no observer outside the sphere**. The model does not include any external vantage point. Observers are not users viewing a simulation. They are patterns *within* the qubit data itself.
+The answer is that **there is no observer outside the sphere**. OPH does not include any external vantage point. Observers are not users viewing a simulation. They are patterns *within* the qubit data itself.
 
-Think about what an observer actually is in this model. An observer is a stable correlation pattern among some subset of the screen degrees of freedom. This pattern has access only to its patch $P_O \subset S^2$. No observer can access the entire sphere simultaneously. The "global state" $\omega$ exists mathematically, but no entity within the model can observe it.
+Think about what an observer actually is in OPH. An observer is a stable correlation pattern among some subset of the screen degrees of freedom. This pattern has access only to its patch $P_O \subset S^2$. No observer can access the entire sphere simultaneously. The "global state" $\omega$ exists mathematically, but no entity within OPH can observe it.
 
 Consider two observers with overlapping patches. Each has a modular flow, a
 local clock. When their descriptions are compared, the admissible
@@ -399,15 +399,15 @@ thermodynamic relation that becomes Einstein's equation.
 
 ### Jacobson's Insight (1995, 2016)
 
-The core idea predates our framework. In 1995, Ted Jacobson showed that
+The thermodynamic route predates OPH. In 1995, Ted Jacobson showed that
 Einstein's equations can be derived from thermodynamics. Horizon entropy scales
 with area, heat becomes energy flux across a horizon, and temperature scales
 with surface gravity. Demand that the first law hold for every local horizon
 and Einstein's equation appears as the geometry required by that bookkeeping.
 
-### What Our Framework Adds
+### What OPH Adds
 
-Our framework provides the selection rule that makes entanglement equilibrium
+OPH provides the selection rule that makes entanglement equilibrium
 natural. The global state maximizes entropy subject to overlap consistency
 constraints. On the realized cap-label-preserving MaxEnt family, admissible
 fixed-cap variations satisfy
@@ -554,13 +554,13 @@ General relativity is the natural effective dynamics associated with this compre
 
 ## 15.11 What the Framework Resolves
 
-These conventional physics questions have natural answers in our model.
+These conventional physics questions have natural answers in OPH.
 
 ### The Planck Scale: Not a Mystery
 
 In standard physics, people ask: "What happens at the Planck scale? Does spacetime break down?"
 
-Our model dissolves this question. The holographic screen with its algebra net at UV scale ℓ_UV is the fundamental description. Spacetime geometry doesn't "break down" at small scales because spacetime was never fundamental. It emerges from the screen.
+OPH dissolves this question. The holographic screen with its algebra net at UV scale ℓ_UV is the fundamental description. Spacetime geometry doesn't "break down" at small scales because spacetime was never fundamental. It emerges from the screen.
 
 The Planck scale marks where the emergent geometric description becomes unreliable. Below this scale, you must use the screen description directly. There's no mysterious "quantum foam" or "spacetime fluctuations." There's just the algebra net, which is perfectly well-defined.
 
@@ -577,7 +577,7 @@ the Gibbons-Hawking entropy is $S = A/(4G)$. For the late-time de Sitter
 horizon, this gives a bare radius-squared ratio near $1.05\times10^{122}$ and
 an entropy capacity near $3.31\times10^{122}$.
 
-The "problem" exists only if you compute vacuum energy using QFT and assume that calculation is fundamental. We don't. In this framework, Lambda is fixed by the global-capacity relation rather than by a local QFT vacuum-energy sum. QFT vacuum fluctuations are emergent phenomena, not fundamental contributions to the stress tensor.
+The "problem" exists only if you compute vacuum energy using QFT and assume that calculation is fundamental. OPH fixes Lambda by the global-capacity relation, not by a local QFT vacuum-energy sum. QFT vacuum fluctuations are emergent phenomena, not fundamental contributions to the stress tensor.
 
 The observed small value of Lambda isn't a fine-tuning miracle. It's simply what the screen structure produces. Understanding why the screen has this particular capacity is a question about initial conditions, not about cancellation of quantum corrections.
 
@@ -586,14 +586,13 @@ The observed small value of Lambda isn't a fine-tuning miracle. It's simply what
 Fundamental data live on the screen, while the bulk, including black hole
 interiors, is emergent.
 
-That changes the bookkeeping. The boundary-sector structure blocks a naive factorization into independent inside and outside Hilbert spaces. The recovery measure from Chapter 7, small conditional mutual information, supports an interior-encoding statement: in the controlled regime, the interior partner is approximately recoverable from outside-plus-radiation data instead of existing as a separate fundamental tensor factor.
+That changes the bookkeeping. The boundary-sector structure blocks a naive factorization into independent inside and outside Hilbert spaces. The recovery measure from Chapter 7, small conditional mutual information, supports an interior-encoding statement: in the controlled regime, the interior partner is approximately recoverable from outside-plus-radiation data, not present as a separate fundamental tensor factor.
 
 This is the sense in which OPH softens the information paradox. The fundamental store of information is the screen, not an autonomous bulk interior.
 
-The important point for this chapter is simpler. Information belongs to the
-screen bookkeeping, and the interior is encoded rather than stored in a second
-independent vault. Page curves and islands show the same lesson in the cleanest
-holographic examples.
+The important point is simpler. Information belongs to the screen bookkeeping,
+and the interior is encoded, not stored in a second independent vault. Page
+curves and islands show the same lesson in the cleanest holographic examples.
 
 ## 15.12 Dark Sector: The Modular Anomaly
 
@@ -630,7 +629,7 @@ to read the same information-recovery term.
 ### The MOND Scale
 
 This anomaly is tied to the cosmological constant. The only
-available large-scale length at this stage is the de Sitter radius, and from it
+available large-scale length in this construction is the de Sitter radius, and from it
 the construction singles out a characteristic acceleration:
 
 $$a_0 = \frac{15}{8\pi^2} c^2 \sqrt{\frac{\Lambda}{3}} \approx 1.0 \times 10^{-10} \text{ m/s}^2$$

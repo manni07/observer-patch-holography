@@ -2,7 +2,7 @@
 
 ## 4.1 The Irreversibility Puzzle
 
-Here's what seems obvious: if you know the rules perfectly, you should be able to run them backward.
+The ordinary intuition says perfect knowledge of the rules should let you run them backward.
 
 The laws of physics are deterministic and time-reversible. Newton's equations
 work just as well backward as forward. If you film billiard balls colliding and
@@ -89,7 +89,7 @@ As the gas evolves randomly, it wanders through microstates. It spends almost al
 
 ### The Reversibility Paradox
 
-But here's the puzzle that tormented Boltzmann's contemporaries.
+Boltzmann's contemporaries faced a puzzle.
 
 The microscopic laws are time-reversible. If you film molecules bouncing and play the film backward, you see a valid process. Nothing in the laws distinguishes past from future.
 
@@ -107,7 +107,7 @@ This idea-that the arrow of time traces back to a special beginning-is called th
 
 The early universe was extremely hot-billions of degrees and far beyond ordinary laboratory scales. Hot systems usually have high entropy. So how was it low entropy?
 
-Here's the key: **gravity reverses the usual intuition**.
+**Gravity reverses the usual intuition**.
 
 For a gas in a box with no gravity, uniform is high entropy-it's the most probable configuration. But for a self-gravitating system, uniform is *low* entropy. Gravity wants to clump matter together. Stars, galaxies, and black holes are gravitationally collapsed states with far more microstates than uniform distribution.
 
@@ -132,7 +132,7 @@ laws.
 
 **The hint**: The microscopic laws are time-symmetric. Irreversibility is statistical, not fundamental. The arrow traces to the low-entropy initial condition.
 
-**The reframing**: Here is where our model offers something surprising. The Past principle is usually taken as a brute fact-an unexplained initial condition. But this picture suggests a possible consistency-based explanation for why low-entropy beginnings are structurally important.
+**The reframing**: OPH gives the Past principle a consistency role. Standard physics usually treats the low-entropy beginning as a brute fact, an unexplained initial condition. This picture suggests why low-entropy beginnings are structurally important.
 
 Consider: for observers to exist at all, they must be able to form consistent records. Records require entropy gradients-you can only write information by pushing entropy somewhere else. A universe in thermal equilibrium has no observers, no records, no consistency-checking, no reality in the sense we've been developing.
 
@@ -162,7 +162,7 @@ The connection is not coincidence. Thermodynamic and information-theoretic entro
 
 **Entropy measures missing information.**
 
-In thermodynamics, you're missing information about the microstate. In communication, you're missing information about the message. The mathematics is closely related rather than literally identical in every setting.
+In thermodynamics, you're missing information about the microstate. In communication, you're missing information about the message. The mathematics shares the same counting logic across different settings.
 
 ### Landauer's Principle
 
@@ -199,7 +199,7 @@ written `Tr`, is the matrix version of summing over all possibilities.
 
 ### The Entanglement Puzzle
 
-Here's where it gets weird.
+The weirdness appears in a simple quantum pair.
 
 Consider two qubits in a **Bell state**:
 
@@ -229,7 +229,7 @@ Entanglement entropy measures quantum correlation between parts.
 
 ## 4.6 The Area Law Hint
 
-Here is one of the most important discoveries in quantum gravity.
+One of the most important discoveries in quantum gravity came from black holes.
 
 Take a quantum field theory. Pick a region A. Ask: how entangled is A with the rest?
 
@@ -297,7 +297,7 @@ This is strong evidence for holographic encoding, but it is not by itself an OPH
 
 ## 4.8 Entropy on the Observer Screen
 
-Here is the connection to the model.
+The OPH connection is direct.
 
 Each observer has a finite patch on the holographic screen. In this screen-language summary, the entropy budget is tied to the patch area:
 

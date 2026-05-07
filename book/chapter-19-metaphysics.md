@@ -4,13 +4,13 @@
 
 ## 19.1 The Zombie That Couldn't Exist
 
-In 1996, philosopher David Chalmers asked us to imagine a zombie. Not the shambling undead of horror films, but something far stranger: a creature physically identical to you in every way (same neurons firing, same behaviors, same words coming out of its mouth) but with nobody home. No inner experience. No "what it's like" to be it. The lights are on, but no one's watching.
+In 1996, philosopher David Chalmers asked us to imagine a zombie. This is not the shambling undead of horror films. It is something far stranger: a creature physically identical to you in every way, with the same neurons firing, the same behaviors, and the same words coming out of its mouth, but with nobody home. No inner experience. No "what it's like" to be it. The lights are on, with no one watching.
 
 Chalmers argued that such a zombie is *conceivable*. You can imagine it without contradiction. And if you can conceive of it, then consciousness must be something over and above the physical facts. This is the "hard problem": even if we mapped every neuron and explained every behavior, we'd still have to explain why there's *experience* at all.
 
 The hard problem has haunted philosophy for three decades. Physicalists insist zombies are impossible; dualists see them as proof that mind transcends matter; mysterians throw up their hands and declare consciousness forever beyond human understanding.
 
-Our model offers a different response: zombies aren't just impossible; they're *incoherent*. The question assumes something that doesn't exist.
+OPH gives a different response: zombies are *incoherent*. The question assumes something that doesn't exist.
 
 ## 19.2 The Ether Move, One Last Time
 
@@ -18,7 +18,7 @@ Remember the luminiferous ether? Nineteenth-century physicists couldn't imagine 
 
 The hard problem has the same structure. It asks: "How does subjective experience arise from an objective physical world?"
 
-But what if there is no objective physical world for experience to arise from?
+What if there is no objective physical world for experience to arise from?
 
 This is the conceptual shift we've been building toward throughout this book. There is no God's-eye view. There is no complete description of reality that exists independently of any observer. There are only observer perspectives, patches on the holographic screen, and "objective reality" is the structure that emerges when these perspectives must agree where they overlap.
 
@@ -31,13 +31,13 @@ observer. The patch has access to certain algebras of observables, maintains
 certain records, and participates in consistency relations with other patches.
 The "what it's like" is part of what patch-hood means from the inside.
 
-A philosophical zombie would be a patch that does everything a conscious observer does (maintains records, enforces consistency, participates in overlap agreements) but has no interior experience. But in our framework, doing those things *is* having an interior experience. There's no gap between the function and the feel. The zombie concept tries to pry apart two things that were never separate.
+A philosophical zombie would be a patch that does everything a conscious observer does, maintaining records, enforcing consistency, and participating in overlap agreements, while having no interior experience. In OPH, doing those things *is* having an interior experience. There is no gap between the function and the feel. The zombie concept tries to pry apart two things that were never separate.
 
 This dissolves the hard problem by showing it rested on a false premise: the assumption that you could have a complete objective description and then ask where experience fits in. There is no such description. The most fundamental level is perspectival.
 
 ## 19.4 What the Model Doesn't Touch
 
-Dissolving the hard problem is different from solving the easy problems. Our framework says nothing about why *these* neural patterns correlate with *that* quale, why activity in V4 looks red while activity in auditory cortex sounds like music. V4 is a region of the visual cortex strongly associated with color processing. Those are scientific questions requiring empirical investigation. The model just removes the philosophical obstacle that made them seem impossible in principle.
+Dissolving the hard problem is different from solving the easy problems. OPH says nothing about why *these* neural patterns correlate with *that* quale, why activity in V4 looks red while activity in auditory cortex sounds like music. V4 is a region of the visual cortex strongly associated with color processing. Those are scientific questions requiring empirical investigation. The framework removes the philosophical obstacle that made them seem impossible in principle.
 
 Similarly, the model gives a structural way to discuss which physical systems count as observer patches. A thermostat, a bacterium, and a corporation can all be placed in the same consistency-and-record language, even though they occupy very different levels of organization.
 
@@ -47,7 +47,7 @@ Quantum mechanics has its own philosophical zombie: the measurement problem. In 
 
 But what counts as a measurement? When exactly does collapse happen? Does consciousness cause collapse, as some early physicists speculated? The interpretations multiply: Copenhagen, many-worlds, pilot waves, objective collapse, relational quantum mechanics, QBism. Each tries to explain how an objective quantum state connects to the definite outcomes observers actually see.
 
-Our model cuts through this by removing the problematic assumption: that the measurement problem is about a single observer-independent state description that must somehow connect to lived experience.
+OPH cuts through this by removing the problematic assumption: that the measurement problem is about a single observer-independent state description that must somehow connect to lived experience.
 
 The formalism can still contain a global quantum state, but no observer occupies a God's-eye position outside the system. What observers actually have are patch-level descriptions. A "superposition" isn't a bizarre state where something is really in two places at once; it's an incomplete description that admits multiple compatible continuations. When two patches that had no shared access come to share access to a system, their descriptions must agree on that overlap. That agreement is what we call "measurement." The "collapse" is just what consistency looks like from one patch's perspective.
 
@@ -55,7 +55,7 @@ The measurement problem evaporates because there was never an objective wavefunc
 
 ## 19.6 Why These Laws? Why This Universe?
 
-Here's a question that keeps physicists and philosophers up at night: Why does the universe have the specific laws it does? Why these particles, these forces, these constants?
+One question keeps physicists and philosophers up at night: Why does the universe have the specific laws it does? Why these particles, these forces, these constants?
 
 The standard framing assumes laws are eternal Platonic truths, mathematical
 structures that exist independently of physical reality and somehow "govern"
@@ -91,13 +91,13 @@ descriptions of that pixel have to land on the same number.
 
 The symbol $\varphi$ is the golden ratio. $P$ is the pixel area ratio
 $a_{\mathrm{cell}}/\ell_P^2$, the area of a screen cell in Planck-area units.
-$\sqrt{\pi}$ is the boundary Gaussian normalization already used in the local
+$\sqrt{\pi}$ is the boundary Gaussian normalization used in the local
 ruler discussion. The inverse $\alpha^{-1}(0)$ is the long-distance
 fine-structure readout. The parenthesized digits again indicate the quoted
 uncertainty in the final digits.
 For the displayed Thomson endpoint, the hadronic spectral contribution has a
 separate empirical \(e^+e^-\to\mathrm{hadrons}\) payload class. The source-only
-audit row is kept in the technical ledger.
+calculation is kept in the technical ledger.
 
 Here the philosophical point is that a famous "free
 constant" is tied to the same local screen scale that organizes the particle
@@ -105,7 +105,7 @@ sector.
 
 Some invoke the anthropic principle: the constants must be compatible with observers existing, or we wouldn't be here to ask. But this feels like giving up on explanation.
 
-Our model shows a different picture. Laws aren't eternal truths imposed from outside. They're survivors of a selection process. The consistency constraints that must hold for observer patches to coherently glue together filter the space of possible physics. Most candidate laws fail: they create inconsistencies, they can't form stable observers, they don't survive comparison across patches. The laws we see are the ones that passed the filter.
+OPH gives a different picture. Laws are not eternal truths imposed from outside. They are survivors of a selection process. The consistency constraints that must hold for observer patches to coherently glue together filter the space of possible physics. Most candidate laws fail: they create inconsistencies, they can't form stable observers, they don't survive comparison across patches. The laws we see are the ones that passed the filter.
 
 This is a structural selection principle. The universe is compatible with us
 because we are the kind of thing that can exist in a universe that passes the
@@ -117,11 +117,11 @@ Why does anything exist at all?
 
 This is the oldest question in philosophy. Leibniz asked it. Heidegger called it the fundamental question of metaphysics. It seems unanswerable: any explanation of existence would itself be something that exists, requiring further explanation.
 
-But notice the hidden assumption: that "nothing" is the default state, and existence requires justification. Our model inverts this.
+Notice the hidden assumption: that "nothing" is the default state, and existence requires justification. OPH inverts this.
 
 Consider: what would "nothing" actually look like? Not empty space (that's still something, with geometry and quantum fields). True nothing would be the absence of all structure, all information, all distinction. But a state with no information *is* indistinguishable from random noise. It has no features that could distinguish it from anything else.
 
-The process described by the model, observer patches enforcing consistency and
+The process described by OPH, observer patches enforcing consistency and
 carving stable structures from the space of possibilities, is precisely how
 *something* emerges from what would otherwise be undifferentiated noise. The
 first moment of meaning arrives when one piece of data becomes causally
@@ -130,7 +130,7 @@ information exists, there is no "there" there.
 
 Some philosophers have called this "selector theory": non-existence isn't the natural default that existence must overcome. Rather, undifferentiated nothing and structured something lie on a continuum, and the consistency constraints we've described are what carve out the structured regions.
 
-Others have spoken of "strange loops," reality creating itself through self-reference, like a hand drawing the hand that draws it. Our framework gives this intuition formal backing: the axioms support a self-consistent structure in which both the states and the laws that govern them emerge together, like a universe that writes its own operating system.
+Others have spoken of "strange loops," reality creating itself through self-reference, like a hand drawing the hand that draws it. OPH gives this intuition formal backing: the axioms support a self-consistent structure in which both the states and the laws that govern them emerge together, like a universe that writes its own operating system.
 
 There is a deeper version of the same idea. Reality may permit a strange-loop interpretation.
 
@@ -143,7 +143,7 @@ everything.
 
 Consider the trajectory: reality is computational. Within this computation, physical evolution produces complex structures. Biological evolution produces minds. Memetic evolution produces ideas. Among these ideas, the understanding of reality's computational nature eventually emerges. Armed with this understanding, observers can simulate reality itself.
 
-This chapter explores the strange-loop hypothesis: **reality may evolve observers who discover how reality works and simulate it, closing the loop of self-creation**.
+The strange-loop hypothesis is sharper: **reality may evolve observers who discover how reality works and simulate it, closing the loop of self-creation**.
 
 We are not watching from outside. We are patterns within a self-simulating system. The simulation runs on itself, through us, through our understanding. Escher's hands draw each other. Reality simulates the observers who simulate reality.
 
@@ -190,11 +190,11 @@ The weirdness of quantum mechanics, the relativity of simultaneity, the holograp
 The philosophical picture earns its weight only when it keeps making contact
 with physics. The deep questions are clear: whether overlap consistency can be
 formalized as a complete sheaf condition, whether quantum structure itself can
-be forced by consistency, whether spacetime dimensionality can be driven rather
-than assumed, whether dynamics can grow out of synchronization pressure, and
+be forced by consistency, whether spacetime dimensionality can be driven instead
+of assumed, whether dynamics can grow out of synchronization pressure, and
 whether the pixel area and screen-capacity inputs can be folded back into first
-principles. The chapter does not treat these as loose decorations. They are the
-pressure points where metaphysics and physics meet.
+principles. The chapter treats these as pressure points where metaphysics and
+physics meet.
 
 A sheaf condition is the mathematical version of a simple demand: local
 descriptions that agree on their overlaps should glue into one consistent
@@ -202,13 +202,11 @@ description. That is the formal cousin of the book's observer-overlap rule.
 
 ### Philosophy After the Equations
 
-The final metaphysical move should not erase the mathematics that made it
-possible. The book's claim is not that experience is magic, or that the world
-is whatever an observer wishes it to be. It is almost the opposite. Once
-experience is treated as patch-internal and public reality is treated as
-overlap-stable, the constraints become severe. A private impression becomes a
-public fact only if it can be anchored in records, compared through shared
-interfaces, and kept coherent with the rest of the world.
+The final metaphysical move should preserve the mathematics that made it
+possible. The book makes a constrained claim: experience is patch-internal,
+and public reality is overlap-stable. A private impression becomes a public
+fact only if it can be anchored in records, compared through shared interfaces,
+and kept coherent with the rest of the world.
 
 That lets older philosophical language be translated into technical pressure.
 The "view from nowhere" becomes the demand for a global description that no

@@ -68,8 +68,7 @@ the nuclear force. Gell-Mann and Zweig organized hadrons into quarks. Glashow,
 Weinberg, and Salam gave the electroweak theory. Gross, Wilczek, and Politzer
 explained asymptotic freedom. The Higgs mechanism was built by several groups,
 and the LHC collaborations turned it into a discovery. OPH enters after that
-century of work. Its question is not how to replace the ladder, but why the
-ladder has this shape.
+century of work. Its question is why the ladder has this shape.
 
 From there the particle structure enters in a definite order. The structural
 carriers come first. The photon, the eight gluons, and the graviton are
@@ -180,7 +179,7 @@ CP open: the available corpus does not derive $\theta_{\mathrm{QCD}}$, does
 not emit physical $\bar\theta$, and does not prove that the physical strong-CP
 phase vanishes.
 Hadrons require a separate nonperturbative bound-state step
-because protons, neutrons, and mesons are QCD composites rather than elementary
+because protons, neutrons, and mesons are QCD composites, not elementary
 particle rows. Source-only hadron masses require an OPH backend. Empirical
 hadron closure uses a separate \(e^+e^-\to\mathrm{hadrons}\) payload class.
 
@@ -189,7 +188,7 @@ their own antiparticles in the relevant sense. QCD is quantum chromodynamics,
 the strong-interaction theory that binds quarks and gluons into hadrons.
 
 The neutrino labels $\nu_e$, $\nu_\mu$, and $\nu_\tau$ refer to the electron,
-muon, and tau neutrino sectors. Their masses are quoted in eV rather than GeV
+muon, and tau neutrino sectors. Their masses are quoted in eV, not GeV,
 because neutrinos are extraordinarily light. The symbols
 $\theta_{\mathrm{QCD}}$ and $\bar\theta$ name strong-CP angles, parameters
 that would measure a CP-violating strong-interaction phase. The chapter says
@@ -299,9 +298,9 @@ environment, and when observers coarse-grain over microscopic details.
 
 ### Why Decoherence Matters for Consistency
 
-Decoherence is crucial. In this framework it is part of what makes a stable shared classical description possible, not a lucky accident bolted on afterward.
+Decoherence is essential to OPH. It is part of what makes a stable shared classical description possible, not a lucky accident bolted on afterward.
 
-Here's why. The overlap condition demands that observers agree on shared observables. But quantum mechanics permits states that are superpositions, "both A and B." If macroscopic interference remained broadly accessible at everyday scales, different observers sampling different environmental fragments would fail to recover a single robust public record.
+The overlap condition demands that observers agree on shared observables. Quantum mechanics permits states that are superpositions, "both A and B." If macroscopic interference remained broadly accessible at everyday scales, different observers sampling different environmental fragments would fail to recover a single robust public record.
 
 Decoherence solves this by rapidly entangling macroscopic objects with their environments. This entanglement has a specific structure: it correlates the object's state with environmental "records" that can be accessed by multiple observers independently.
 
@@ -328,7 +327,7 @@ So classical physics is the **stable, compressible limit** of the deeper quantum
 
 This resolves an old puzzle: why does the quantum world give rise to classical physics at all?
 
-In the standard picture, classical physics is an approximation that breaks down at small scales. But our model inverts this: classical physics is what emerges when consistency constraints are satisfied. The classical world isn't the fundamental reality poorly approximating quantum mechanics-it's the consistent core that multiple observers can share.
+In the standard picture, classical physics is an approximation that breaks down at small scales. OPH inverts this: classical physics is what emerges when consistency constraints are satisfied. The classical world is not fundamental reality poorly approximating quantum mechanics. It is the consistent core that multiple observers can share.
 
 The quantum world is larger but less shareable. Superpositions exist, but they can't be consistently communicated. When you try to share quantum information broadly, decoherence kicks in, and you're left with classical correlations.
 
@@ -350,13 +349,13 @@ shareable only after decoherence and redundancy have done their work.
 Ledger details: the weak-boson pair is a validation row, charged-lepton
 absolute masses are target-anchored witnesses, source-only hadron masses require
 the OPH strong-binding backend with production spectral data and systematics,
-and empirical hadron closure rows use the separate
+and empirical hadron closure checks use the separate
 \(e^+e^-\to\mathrm{hadrons}\) payload class.
 
 ### Matter as a Public Achievement
 
 The ordinary word "matter" hides several layers of stabilization. At the
-lowest level relevant to this chapter are quantum fields and excitations.
+lowest level relevant here are quantum fields and excitations.
 Those excitations carry charges, transform under symmetries, and interact
 through the allowed carriers. At the next level some excitations become
 long-lived particles. Electrons are stable in ordinary conditions because no
@@ -364,7 +363,7 @@ lighter charged particle is available for them to decay into while preserving
 charge and energy. Protons are stable for all practical purposes, at least on
 observed timescales, because baryon-number-violating routes are either absent
 or fantastically suppressed. Neutrons are unstable when free but stable inside
-many nuclei. Already the word "particle" is an achievement of symmetry,
+many nuclei. The word "particle" is an achievement of symmetry,
 kinematics, and allowed decay channels.
 
 Atoms add another layer. The electron's small mass, the electromagnetic
@@ -388,8 +387,8 @@ Modern mass measurements then require colliders, detectors, lattice QCD,
 spectral fits, and global averaging groups.
 
 This is why the ledger language in the chapter is careful. The weak-boson
-pair is a validation row because the framework can be checked against already
-known values. Charged-lepton absolute masses are target-anchored witnesses
+pair is a validation row because the framework can be checked against known
+values. Charged-lepton absolute masses are target-anchored witnesses
 because empirical anchors enter. Hadron masses require the strong-binding
 backend because most of a proton's mass is not the bare quark masses. It is
 QCD binding energy, confinement, condensates, and dynamics. The public matter

@@ -122,7 +122,7 @@ It's not our universe-our universe has positive curvature, with an accelerating 
 
 Imagine the label on the can as a living quantum field theory with particles, forces, and fluctuations. It has no gravity of its own. It just lives on the surface.
 
-Here's the bold claim: **everything happening inside the can is exactly the same as what happens on the label**. A falling particle in the bulk corresponds to ripples on the boundary. A black hole forming inside corresponds to hot plasma on the surface. This isn't an approximation. It's a perfect translation.
+The bold claim is exact: **everything happening inside the can is exactly the same as what happens on the label**. A falling particle in the bulk corresponds to ripples on the boundary. A black hole forming inside corresponds to hot plasma on the surface. This isn't an approximation. It's a perfect translation.
 
 This is the **AdS/CFT correspondence**, the most important theoretical discovery in physics of the past thirty years.
 
@@ -264,7 +264,7 @@ $$S(A) = \frac{\text{Area}(\gamma_A)}{4G}$$
 
 where gamma_A is the **minimal surface** in the bulk that ends on the boundary of region A.
 
-This does more than match two elegant expressions. It tells you how much geometry is needed to keep region $A$ tied to the rest of the state. More entanglement across the boundary cut means a larger minimal surface. Less entanglement means a smaller one. Entropy is no longer a side comment about ignorance. It becomes the quantity that measures how much bulk geometry is supporting the connection.
+This does more than match two elegant expressions. It tells you how much geometry is needed to keep region $A$ tied to the rest of the state. More entanglement across the boundary cut means a larger minimal surface. Less entanglement means a smaller one. Entropy becomes the quantity that measures how much bulk geometry is supporting the connection.
 
 The surface $\gamma_A$ can be read as the cheapest geometric bottleneck compatible with the boundary cut. Its area measures how much correlation has to pass between $A$ and its complement. The formula therefore says something very concrete: the bulk pays for connectivity with area, and that bill is exactly the boundary entanglement entropy.
 
@@ -334,7 +334,7 @@ Black holes saturate the quantum **chaos bound**-they're the fastest scramblers 
 
 ## 8.12 How Gravity Emerges from Entanglement
 
-The deepest insight from holography is that gravity isn't fundamental-it emerges from entanglement structure on the boundary. This section explains how.
+The deepest insight from holography is that gravity isn't fundamental. It emerges from entanglement structure on the boundary.
 
 ### Entanglement Builds Geometry
 
@@ -378,7 +378,7 @@ relationship is Einstein's equation.
 
 Just as PV = nRT follows from statistical mechanics without knowing molecular details, Einstein's equation can be recovered from horizon thermodynamics without knowing the Planck-scale structure of spacetime.
 
-### Why This Matters for Our Framework
+### Why This Matters for OPH
 
 Observer patches have boundaries, those patches have to agree on overlaps, and
 that agreement takes the thermodynamic form of equilibrium.
@@ -396,7 +396,7 @@ constraints.
 
 ## 8.13 What We Borrow from AdS/CFT (and What We Don't)
 
-Our universe isn't AdS. It's closer to de Sitter space-with positive cosmological constant, accelerating expansion, and a cosmological horizon. There's no timelike boundary at infinity. So what's the relationship between our model and AdS/CFT?
+Our universe isn't AdS. It's closer to de Sitter space, with positive cosmological constant, accelerating expansion, and a cosmological horizon. There's no timelike boundary at infinity. So what is the relationship between OPH and AdS/CFT?
 
 ### What We Inherit
 
@@ -406,9 +406,9 @@ entanglement and geometry are deeply linked. Holography supplies the broad idea
 that boundary data can encode bulk physics. Almheiri, Dong, and Harlow show
 that this encoding carries the structure of quantum error correction.
 
-### What We Do NOT Require
+### What OPH Does Not Require
 
-Our model stands apart from AdS/CFT in several crucial ways. It does not need a
+OPH stands apart from AdS/CFT in several crucial ways. It does not need a
 specific boundary CFT. It does not treat bulk and boundary as two complete
 descriptions with equal ontological status. It does not live at negative
 cosmological constant. It does not use a boundary at infinity. The screen is
@@ -427,11 +427,11 @@ setup. Each observer accesses a region bounded by a cosmological horizon, the
 shared parts of those horizons have to agree, and no global boundary theory is
 needed to make this work.
 
-For that reason, we're **not proposing dS/CFT**. A hypothetical dS/CFT would posit a CFT at future infinity dual to de Sitter bulk physics. We're proposing something weaker and more concrete:
+For that reason, OPH is not a dS/CFT proposal. A hypothetical dS/CFT would posit a CFT at future infinity dual to de Sitter bulk physics. The claim here is weaker and more concrete:
 
 **Observer-patch consistency on cosmological horizons, combined with entanglement equilibrium, yields semiclassical gravity in the bulk.**
 
-We don't need the bulk and boundary to be "dual" descriptions. The bulk emerges from the boundary through consistency and compression-it's not an independent theory that happens to match.
+The bulk and boundary do not need to be complete dual descriptions. The bulk emerges from the boundary through consistency and compression. It is not an independent theory that happens to match.
 
 ### Why This Matters
 
@@ -440,7 +440,7 @@ complete descriptions, with one global boundary at infinity, a specific CFT,
 and a negative cosmological constant. OPH takes a different lesson from it.
 The screen is primary, the bulk is emergent, the horizons are
 observer-dependent and overlapping, and the cosmological setting is positive
-Lambda rather than AdS. Think of AdS/CFT as a proof of concept that
+Lambda, not AdS. Think of AdS/CFT as a proof of concept that
 boundaries can encode bulks with gravity. OPH takes that encoding lesson and
 rebuilds it in an observer-first setting.
 
@@ -467,7 +467,7 @@ De Sitter horizons are not a problem to be solved. They are the feature that
 makes observer-patch holography natural. Each observer has a horizon, a patch
 of screen, and overlap conditions tying that patch to neighboring ones.
 
-The cosmological constant appears as a **global capacity parameter**, the total number of degrees of freedom on the screen. It does not come from a local-physics derivation in this framework. From the observed Lambda, we infer a bare de Sitter horizon ratio of about $1.05\times10^{122}$ and a screen-entropy capacity of about $3.31\times10^{122}$ natural units, or $4.77\times10^{122}$ bits. This is the "size" of reality, just as the pixel area is its "resolution."
+The cosmological constant appears as a **global capacity parameter**, the total number of degrees of freedom on the screen. It does not come from a local-physics derivation in OPH. From the observed Lambda, we infer a bare de Sitter horizon ratio of about $1.05\times10^{122}$ and a screen-entropy capacity of about $3.31\times10^{122}$ natural units, or $4.77\times10^{122}$ bits. This is the "size" of reality, just as the pixel area is its "resolution."
 
 This sidesteps that specific "boundary theory at infinity" version of the unsolved problem. We're not trying to build a global boundary theory at infinity. We're building local patch descriptions that must agree on overlaps. The bulk emerges from that agreement, with Lambda as the one global parameter that all overlapping descriptions share.
 

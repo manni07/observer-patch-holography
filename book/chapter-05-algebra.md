@@ -2,7 +2,7 @@
 
 ## 5.1 The Commutativity Puzzle
 
-Here's what seems obvious about measurements: the order shouldn't matter.
+The ordinary intuition says the order of measurements should not matter.
 
 If you want to know an object's position and momentum, you measure one, then
 the other. It shouldn't matter which you measure first. The object has a
@@ -51,7 +51,7 @@ Heisenberg tried something radical. He decided to **abandon the idea of electron
 
 After all, no one had ever seen an electron orbiting. What we actually observe are the frequencies and intensities of spectral lines-the light that comes out when atoms are excited.
 
-So Heisenberg worked only with observable quantities. Instead of asking "where is the electron?" he asked "what are the relationships between observations?"
+So Heisenberg worked only with observable quantities. He set aside "where is the electron?" and asked "what are the relationships between observations?"
 
 He developed a mathematical scheme for these observables. The key quantities were transition probabilities-how likely is the atom to jump from state n to state m while emitting light?
 
@@ -80,15 +80,15 @@ Heisenberg started with observations (spectral lines) and reverse-engineered the
 
 ### Why Non-Commutativity Is Not Arbitrary
 
-The working idea in this chapter is that non-commutativity is part of what makes overlap consistency nontrivial.
+The working idea is simple: non-commutativity is part of what makes overlap consistency nontrivial.
 
 Consider the overlap condition. When two observers compare notes, they must agree on their shared observables. In a commutative world-where all measurements are compatible-the problem is much closer to the classical marginal setting. Pre-existing values can often be assigned more straightforwardly, especially on simple overlap structures, but compatibility is not automatic on arbitrary overlap graphs.
 
-But the Quantum Marginal Problem shows this doesn't work. Pairwise-consistent marginals can fail to glue into a global state. The consistency constraints are non-trivial precisely because not all observables commute.
+The Quantum Marginal Problem shows where the classical intuition breaks. Pairwise-consistent marginals can fail to glue into a global state. The consistency constraints are non-trivial precisely because some observables do not commute.
 
-Here's the deeper point: **non-commutativity is what makes the quantum consistency problem especially hard.** If measurements all commuted, the overlap conditions would be much closer to the classical case. Physics could still have rich laws and dynamics, but it would miss the specifically quantum constraint structure highlighted here.
+**Non-commutativity makes the quantum consistency problem especially hard.** If measurements all commuted, the overlap conditions would be much closer to the classical case. Physics could have rich laws and dynamics, while missing the specifically quantum constraint structure highlighted here.
 
-Non-commutativity creates a tension between local freedom and global consistency. Specific patterns of entanglement can help resolve that tension and are part of what we read as physical law. On this view, quantum non-commutativity is deeply connected to the difficulty of global consistency instead of being treated as an arbitrary extra feature.
+Non-commutativity creates a tension between local freedom and global consistency. Specific patterns of entanglement can help resolve that tension and are part of what we read as physical law. On this view, quantum non-commutativity is deeply connected to the difficulty of global consistency, not an arbitrary extra feature.
 
 ## 5.3 The Order of Questions
 
@@ -100,7 +100,7 @@ This was shocking. Atomic magnetic moments are quantized-they take only discrete
 
 The real surprise comes when you chain measurements. Measure spin along the
 $z$-axis and keep only the up atoms. Then measure along $x$, which gives a
-50/50 split. Measure along $z$ again and the final result is no longer fixed.
+50/50 split. Measure along $z$ again and the final result is not fixed.
 
 The final z-measurement becomes random-50% up, 50% down. But if you skip step 2, the atoms stay "up" with certainty.
 
@@ -211,7 +211,7 @@ In the standard textbook update rule, an ideal measurement updates the state to 
 
 ### The Density Matrix
 
-When we have incomplete knowledge, we use a density matrix $\rho$ instead of a
+When we have incomplete knowledge, we use a density matrix $\rho$ in place of a
 pure state vector. The matrix is Hermitian, its eigenvalues are non-negative,
 and its trace is 1.
 
@@ -343,7 +343,7 @@ signature of a state that behaves thermally with respect to the flow it carries.
 
 ### Time from Algebra
 
-Here's the stunning implication: once you specify an algebra-state pair, modular theory gives a natural flow. Time evolution isn't imposed from outside in this construction-it emerges from that algebraic structure together with the chosen state.
+The implication is strong: once you specify an algebra-state pair, modular theory gives a natural flow. Time evolution is not imposed from outside in this construction. It emerges from that algebraic structure together with the chosen state.
 
 This connects to the **thermal time principle** of Connes and Rovelli: modular flow provides an important candidate for organizing experienced time. Given the quantum state of our patch, the algebra provides a natural clock.
 
@@ -373,7 +373,7 @@ Let us trace the logic explicitly. The intuitive picture says objects have
 definite properties and measurements simply reveal them. The hints keep
 breaking that image. Heisenberg's matrices do not commute. Stern-Gerlach shows
 that measurement order changes outcomes. The uncertainty principle limits
-simultaneous knowledge. Interference demands complex amplitudes rather than
+simultaneous knowledge. Interference demands complex amplitudes, not
 plain probabilities.
 
 The reframing is therefore unavoidable. Observables form algebras with
@@ -410,13 +410,12 @@ record of a long experimental and mathematical reconstruction.
 The same is true for the uncertainty relation. When the book writes
 $\Delta X\,\Delta P\geq \hbar/2$, the symbol $\Delta X$ means the spread of
 position outcomes prepared in a given state, and $\Delta P$ means the spread
-of momentum outcomes in that same state. It does not merely say that a human
+of momentum outcomes in that same state. It says more than that a human
 observer is clumsy. It says a state that makes the position question sharply
 answerable cannot also make the momentum question sharply answerable. The
 restriction belongs to the algebra of questions.
 
-That is why OPH puts algebras on patches. A patch is not just a region of
-space with a box of facts inside it. It is a region with a menu of possible
+That is why OPH puts algebras on patches. A patch is a region with a menu of possible
 questions, and the menu has structure. Some questions can be asked together.
 Some cannot. Some are related by transformation. Some commute with questions
 in a distant patch and therefore respect causal independence. The overlap
@@ -424,14 +423,14 @@ problem is then the problem of making these local menus agree where they
 refer to the same shared records.
 
 The chapter also introduces modular flow because the algebra-state pair is
-already richer than a static database. A state tells the algebra how
+richer than a static database. A state tells the algebra how
 expectation values are assigned. In favorable cases the pair carries a
 natural internal flow, written
 $\sigma_t(A)=\Delta^{it}A\Delta^{-it}$. Here $A$ is an observable, $t$ is the
 flow parameter, and $\Delta$ is the modular operator built from the algebra
 and state. This is the first glimpse of a recurring OPH pattern: once the
 right local structure is specified, time-like behavior can be read from the
-inside rather than imposed by an external clock.
+inside, not imposed by an external clock.
 
 The next chapter develops the overlap consistency condition in detail: exactly how must measurements on shared regions agree?
 

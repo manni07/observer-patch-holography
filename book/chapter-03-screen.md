@@ -2,7 +2,7 @@
 
 ## 3.1 The Volume Hint
 
-Here's what seems obvious about information: more space should hold more data.
+The ordinary intuition says more space should hold more data.
 
 A bigger hard drive stores more files. A bigger warehouse holds more boxes. A bigger brain should hold more memories. The amount of stuff you can fit into a container should scale with its volume.
 
@@ -128,7 +128,7 @@ the escape velocity at the boundary reaches light speed.
 
 The horizon is not a physical surface. You could cross it without noticing anything special. But once you're inside, the geometry of spacetime is such that all paths-even light paths-lead inward.
 
-Here's a way to think about it: near a black hole, space is falling inward like a waterfall. The event horizon is where the water falls faster than you can swim.
+Near a black hole, space is falling inward like a waterfall. The event horizon is where the water falls faster than you can swim.
 
 ### Other Horizons
 
@@ -142,7 +142,7 @@ In each case, the horizon is a boundary that limits what the observer can access
 
 ### Every Observer Has a Screen
 
-Here's the key motivating insight: finite observer access naturally suggests an effective screen picture.
+Finite observer access naturally suggests an effective screen picture.
 
 For an observer in our universe, the accessible boundary can take several
 forms. There is an observer-dependent cosmological horizon scale. Near a black
@@ -151,7 +151,7 @@ Rindler horizon.
 
 In the simplest symmetric situations, the relevant causal boundary is approximately spherical. The area of this sphere bounds the amount of information the observer can access.
 
-This is a deep shift in perspective. Instead of thinking about space as a fixed container, we think about each observer's horizon as their fundamental interface with reality.
+This is a deep shift in perspective. Space is not a fixed container. Each observer's horizon is a fundamental interface with reality.
 
 ## 3.6 Why a Sphere?
 
@@ -247,7 +247,7 @@ In classical physics, observers are implicitly outside the system-disembodied me
 An observer is a special pattern in the horizon data. It has bounded access to
 a finite patch of the screen. It carries stable records, internal
 correlations that persist as memory. It also builds compressed models of its
-environment rather than storing raw data without structure.
+environment, not raw data dumps.
 
 ### The Vortex Analogy
 
@@ -285,7 +285,7 @@ subtler and is developed later.
 
 ### Reality from Computation
 
-Here's a concrete way to think about the screen and its observers.
+A concrete screen picture looks like this.
 
 Imagine the screen as a **gauge-invariant quantum system** on the 2-sphere, something like a quantum cellular automaton but with important structure. Triangulate the sphere into tiny cells. At each edge of the triangulation sits a finite-dimensional quantum system (a qudit). At each vertex, a gauge constraint (Gauss's law) restricts which configurations are physical. Not all states survive; only those satisfying the constraint at every vertex.
 
@@ -333,7 +333,7 @@ One lesson is enough here. Depth is read off from correlation structure.
 Strongly linked regions count as nearby in the emergent bulk. Weakly linked
 regions count as distant.
 
-Chapter 9 develops this in detail. In the present chapter, entanglement does one job. It explains why a screen can support an interior world instead of a flat catalog of data.
+Chapter 9 develops this in detail. In the present chapter, entanglement does one job. It explains why a screen can support an interior world, not a flat catalog of data.
 
 ## 3.11 The Reverse Engineering
 
@@ -348,7 +348,7 @@ $S\leq A/(4\ell_P^2)$. Entanglement patterns on the screen create the geometry
 of the emergent three-dimensional bulk, and overlap consistency makes that bulk
 shared and stable across observers.
 
-The holographic principle is not introduced here as a philosophical preference. It is presented as the strongest explanatory reading of the hints reviewed in this chapter.
+The holographic principle enters as the strongest explanatory reading of the hints reviewed above, not as a philosophical preference.
 
 ## 3.12 Pixel Limits
 
@@ -376,10 +376,10 @@ of causality. The amount of information is finite and bounded by area.
 Entanglement patterns on the screen create the emergent three-dimensional
 geometry.
 
-But we haven't yet explained dynamics. The screen we've described is static-it encodes information. What makes things happen? What creates the arrow of time?
+The screen described here is static. It encodes information. What makes things happen? What creates the arrow of time?
 
 The answer involves entropy again, this time in dynamics. The Second Law says entropy increases. But why? And what does this have to do with the screen?
 
-In the next chapter, we explore the edge of the screen, the boundary conditions that govern what can happen. We will see how entropy growth is a geometric constraint built into the structure of horizons themselves, rather than a statistical tendency alone.
+In the next chapter, we explore the edge of the screen, the boundary conditions that govern what can happen. Entropy growth appears as a geometric constraint built into the structure of horizons themselves, alongside its statistical reading.
 
 Chapter 4 turns the screen from a storage surface into a thermodynamic one.

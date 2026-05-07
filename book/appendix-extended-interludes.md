@@ -6,8 +6,7 @@ algebras to overlap, from overlap to recovery, from recovery to spacetime,
 and from spacetime to matter, selection, and interpretation. This appendix
 slows the path down. It adds longer narrative interludes for readers who want
 more of the connective tissue: how discoveries happened, why equations were
-introduced, and how OPH inherits a vast scientific commons rather than
-standing apart from it.
+introduced, and how OPH inherits a vast scientific commons.
 
 ## Interlude 1: Why Reverse Engineering Is the Right Metaphor
 
@@ -35,7 +34,7 @@ The OPH book uses reverse engineering because the deepest clues in modern
 physics are not isolated facts. They are interface failures. Quantum
 measurement fails to behave like passive reading. Bell correlations fail to
 fit local hidden instruction sheets. Relativity fails to preserve a universal
-now. Black holes fail to count information by volume. Quantum gravity fails
+present. Black holes fail to count information by volume. Quantum gravity fails
 to accept a background clock as an obvious primitive. Particle physics fails
 to look like a random list, yet also fails to look fully explained by the
 Standard Model alone. Each failure is a boundary condition on the architecture.
@@ -77,8 +76,8 @@ cosmological principle. It begins with engines because industry needed work
 from heat. Carnot's insight was austere. The best possible engine depends
 only on the temperatures between which it operates. The machinery can be
 polished, optimized, and made clever, but the temperature ratio sets a limit.
-That was a new kind of physical statement: not a force law, but a boundary on
-what any machine can achieve.
+That was a new kind of physical statement: a boundary on what any machine can
+achieve.
 
 Clausius gave the boundary a name. Entropy expressed a direction hidden inside
 heat flow. Heat passes from hot to cold. Work can be extracted when there is
@@ -96,13 +95,13 @@ configuration underneath. There are vastly more microstates corresponding to
 equilibrated macrostates than to special organized ones. A system wanders
 through microscopic possibilities and spends almost all its time in the
 macrostates with the largest multiplicity. That is why entropy increases.
-Not because the microscopic laws command it at every step, but because the
-high-entropy regions of state space are overwhelmingly larger.
+The microscopic laws do not command it at every step. The high-entropy regions
+of state space are overwhelmingly larger.
 
 This statistical explanation caused controversy because atoms themselves were
 controversial. Boltzmann was defending a world many contemporaries still
 considered speculative. The later confirmation of atoms through Brownian
-motion and Perrin's measurements did not merely vindicate one formula. It
+motion and Perrin's measurements did more than vindicate one formula. They
 made the hidden microscopic layer physically real. The inscription on
 Boltzmann's grave, $S=k\log W$, became a memorial to a whole way of seeing:
 macroscopic irreversibility can emerge from microscopic multiplicity.
@@ -138,7 +137,7 @@ answers, waiting to be revealed by passive measurement.
 The break came through data. Black-body radiation refused to fit classical
 equipartition. The photoelectric effect cared about light frequency in a way
 wave intensity alone could not explain. Atomic spectra formed sharp lines
-instead of continuous smears. Chemical stability required atoms not to behave
+as discrete ladders, not continuous smears. Chemical stability required atoms not to behave
 like tiny solar systems radiating themselves into collapse. The old quantum
 theory patched these facts with rules that worked in special cases and failed
 elsewhere.
@@ -212,7 +211,7 @@ quantum error correction deepened that reading. Bulk operators can be
 represented on different boundary regions, much as logical information in a
 code can be recovered from different sets of physical carriers.
 
-OPH is not simply AdS/CFT moved to our universe. Our universe has a positive
+OPH differs from AdS/CFT in a basic way. Our universe has a positive
 cosmological constant to good approximation at late times. Its horizons are
 observer-dependent. There is no single accessible boundary at infinity where
 all observers naturally meet. OPH therefore takes the holographic lesson and
@@ -223,8 +222,7 @@ from consistency across those overlapping screens.
 This is more modest in one way and more radical in another. It is more modest
 because it does not claim a known global de Sitter CFT. It is more radical
 because observer-dependence is not a problem to hide. It is the organizing
-principle. The boundary is not just where a dual theory lives. It is where
-finite observers' records are compared.
+principle. The boundary is where finite observers' records are compared.
 
 The reader should keep the hierarchy clear. Black-hole thermodynamics gives
 area scaling. AdS/CFT gives a controlled boundary-bulk duality. RT and
@@ -242,7 +240,7 @@ has learned the protected information and whether the remaining system still
 contains enough syndrome data to repair it.
 
 This distinction changes how one thinks about the past. A burned document is
-gone for practical purposes. The ink patterns no longer sit on the page.
+gone for practical purposes. The ink patterns do not sit on the page.
 But physics does not say the information has been annihilated as a matter of
 principle. It has been dispersed into smoke, heat, photons, chemical products,
 air currents, and eventually wider correlations. Recovering it would require
@@ -255,7 +253,7 @@ states, deleting information. That would break unitarity, one of quantum
 theory's central rules. Decades of work changed the consensus. The Page curve,
 holographic duality, replica-wormhole calculations, island formulas, and
 entanglement wedge reconstruction all point toward preservation through
-highly nonlocal encoding rather than destruction.
+highly nonlocal encoding, not destruction.
 
 OPH uses this lesson for observer consistency. If public reality depends on
 records, and records are always local and noisy, then the world needs repair
@@ -334,7 +332,7 @@ controlled chamber. We observe one sky from one cosmic location, then use
 many instruments, wavelengths, surveys, and statistical methods to infer the
 large-scale story. That makes cosmology naturally observer-aware.
 
-The discovery of expansion already changed the meaning of the universe.
+The discovery of expansion changed the meaning of the universe.
 Slipher's redshifts, Leavitt's distance ladder, Hubble's relation, Friedmann's
 solutions, and Lemaitre's interpretation turned the cosmos from a static
 stage into an evolving system. The cosmic microwave background then made the
@@ -347,8 +345,7 @@ found that distant supernovae were dimmer than expected in a decelerating
 universe. The simplest fit is a positive cosmological constant or dark energy
 component. In de Sitter language, a positive $\Lambda$ gives a horizon radius
 $r_{dS}=\sqrt{3/\Lambda}$ and a finite entropy capacity. For OPH that capacity
-is not just one cosmological parameter among others. It is the global screen
-size, the large-number boundary condition for the finite observer-patch
+is the global screen size, the large-number boundary condition for the finite observer-patch
 picture.
 
 The dark-sector continuation is deliberately careful. The modular anomaly
@@ -363,9 +360,8 @@ But "worth taking seriously" is not the same as "settled." Galaxy rotation
 curves, lensing, cluster dynamics, cosmic microwave background peaks,
 structure formation, and precision cosmology all constrain the dark sector.
 Any OPH continuation has to face that whole test suite. The book's value here
-is not that it declares victory. It ties a possible infrared anomaly scale to
-the same de Sitter capacity that already belongs to the observer-patch
-architecture.
+is narrower: it ties a possible infrared anomaly scale to the same de Sitter
+capacity that belongs to the observer-patch architecture.
 
 The human chain includes observers and instrument builders as much as
 theorists: Leavitt, Slipher, Hubble, Friedmann, Lemaitre, Zwicky, Rubin,
@@ -404,7 +400,7 @@ target-anchored witness uses an empirical target as part of the derivation or
 normalization. A source-only row is closer to a prediction because it does not
 use the target. An empirical payload row depends on external data, such as
 hadronic spectral information. A conditional continuation depends on premises
-not yet derived from first principles.
+whose first-principles derivation is work in progress.
 
 The reader should treat these labels as part of the theory, not as legal
 small print. They tell you how much weight each line can carry. They also
@@ -444,7 +440,7 @@ Theoretical interpretations are tested against other domains. Public fact is
 not raw sensation. It is sensation, instrument output, memory, communication,
 and mathematical structure stabilized across many perspectives.
 
-The philosophical payoff is that consciousness and objectivity no longer have
+The philosophical payoff is that consciousness and objectivity do not have
 to be enemies. Experience is the inside of a bounded process. Objectivity is
 the stable outside-facing pattern made by compatible records. Neither side
 has to be denied. The hard part is the interface: how the inside process
@@ -499,8 +495,8 @@ temperature units are being related. If $G$ appears, gravity is present.
 
 Fifth ask for status. Is the equation an established result from prior
 physics? A definition? A derived OPH relation? A conjectural continuation? A
-numerical audit row? The book should make that visible. When it does not,
-the reader should demand the label.
+numerical consistency check? The book should make that visible. If the label is
+missing, the reader should demand it.
 
 Finally, read equations as compressed prose. $[X,P]=i\hbar$ says position and
 momentum questions fail to commute by a quantum amount. $S=A/(4\ell_P^2)$
@@ -511,10 +507,10 @@ sentences. Learn to expand them, and the book opens.
 
 ## Interlude 11: The Book as a Collective Map
 
-One reason this book needed to become longer is that short versions can make
-the project sound too personal. A synthesis can accidentally look like a lone
-author declaring a new world. That is not the intended posture. OPH is a map
-drawn across territory surveyed by generations.
+One reason this book uses the long form is that short versions can make the
+project sound too personal. A synthesis can accidentally look like a lone
+author declaring a world from scratch. That is not the intended posture. OPH
+is a map drawn across territory surveyed by generations.
 
 The thermodynamic territory was surveyed by engineers, chemists, statistical
 mechanicians, and information theorists. The quantum territory was surveyed by
@@ -529,21 +525,20 @@ theorists, quantum information researchers, and mathematical physicists.
 A good synthesis does not erase the surveyors. It tries to draw contour lines
 that make their measurements belong to one terrain. Some contour lines will
 be revised. Some will be wrong. Some may connect regions that later turn out
-to be separated by a fault. That is normal. The point is to make the map
+to be separated by a fault. That is normal. The task is to make the map
 explicit enough that it can be tested, corrected, and improved.
 
 The book's central sentence, reality is the consistency of observations across
-overlapping perspectives, is therefore not a claim to have replaced science
-with a slogan. It is a proposed organizing principle for existing science.
-The equations, diagrams, and ledgers are the test of whether the slogan earns
-its place. If it explains why area laws, algebraic observables, Bell
+overlapping perspectives, is a proposed organizing principle for existing
+science. The equations, diagrams, and ledgers are the test of whether the
+slogan earns its place. If it explains why area laws, algebraic observables, Bell
 correlations, recoverability, modular flow, symmetry, de Sitter capacity, and
 particle structure cluster together, it has value. If it fails, the failure
 should teach us where the architecture was too simple.
 
-That is the attitude the reader should carry forward. The book is ambitious,
-but ambition is not the same as certainty. The right response is not belief
-or dismissal. It is inspection. Check the symbols. Check the status labels.
+That is the attitude the reader should carry forward. The book is ambitious.
+Ambition is separate from certainty. The right response is inspection, not
+belief or dismissal. Check the symbols. Check the status labels.
 Check the bridge from known physics to OPH-specific claims. Check whether the
 diagrams clarify or oversimplify. Check whether public-facing summaries
 preserve the same caution as the technical sources. A theory about
@@ -556,7 +551,7 @@ When rereading the book, use this checklist as a quick guide.
 In the prologue, ask whether the reverse-engineering metaphor is clear and
 whether the reader understands observer patches before any heavy physics
 appears. In Chapter 1, ask whether consistency is being treated as a repair
-condition rather than a social vote. In Chapter 2, ask whether the philosophy
+condition, not a social vote. In Chapter 2, ask whether the philosophy
 is presented as historical resonance, not as retroactive physics. In Chapter
 3, ask whether area scaling has replaced volume intuition. In Chapter 4, ask
 whether records are visibly thermodynamic objects.
@@ -569,14 +564,14 @@ before OPH generalizes it. In Chapter 9, ask whether entanglement is doing
 geometric work. In Chapter 10, ask whether error correction is more than a
 metaphor.
 
-In Chapter 11, ask whether modular time is tied to restricted states rather
-than an external clock. In Chapter 12, ask whether symmetry is presented as a
+In Chapter 11, ask whether modular time is tied to restricted states and not
+an external clock. In Chapter 12, ask whether symmetry is presented as a
 translation rule for shared descriptions. In Chapter 13, ask whether the de
 Sitter horizon is understood as a finite capacity surface. In Chapter 14, ask
 whether Standard Model claims keep their theorem, validation, and empirical
 status labels distinct. In Chapter 15, ask whether relativity emerges through
-modular geometry, generalized entropy, and the weak-field limit rather than
-being assumed whole.
+modular geometry, generalized entropy, and the weak-field limit, with no
+assumption that it arrives whole.
 
 In Chapter 16, ask whether matter is a stability ladder from quantum
 excitations to public records. In Chapter 17, ask whether selection is used
@@ -584,13 +579,65 @@ as a disciplined filter, not a loose metaphor. In Chapter 18, ask whether the
 synthesis preserves all the conditional boundaries. In Chapter 19, ask
 whether metaphysics remains downstream of physics. In the epilogue, ask
 whether restoration is treated as an open engineering problem with explicit
-interfaces rather than a promise.
+interfaces, not a promise.
 
 If the answer to those questions is yes, the book has done its job. It has
 not asked the reader to memorize a doctrine. It has given the reader a way to
 audit a proposed architecture of reality.
 
-## Interlude 13: Instruments as Observer Extensions
+## Interlude 13: The Prose Contract
+
+The book has a technical ambition, but it needs a plain contract with the
+reader. Every public claim should say what exists in the argument, what
+supports it, and where the boundary sits. That sounds simple. In practice it
+is the hardest kind of writing, because a sentence can become smooth while
+losing its load-bearing content.
+
+A good OPH sentence should behave like a good interface. It should expose the
+right inputs. It should hide no critical dependency. It should fail visibly
+when the claim exceeds its support. If a symbol appears, the reader should
+know what physical job it performs. If a status label appears, the reader
+should know whether the line is structural, conditional, empirical, or work
+in progress. If a diagram appears, the diagram should orient the reader
+before the next paragraph asks for more abstraction.
+
+This is also a matter of voice. OPH is strange enough on its own. It does
+not need theatrical language around it. The strong version is the direct
+version: observers have finite access; overlaps have to agree; records cost
+entropy; horizons bound information; algebras encode the questions a patch
+can ask; recovery explains how damaged or hidden information can stay
+available under controlled conditions. Each claim can be tested by asking
+what changes if the condition fails.
+
+The same rule applies to historical material. The names in the chapters are
+not decorations. They mark real handoffs in a long chain: Carnot to Clausius
+to Boltzmann to Shannon; Maxwell to Lorentz to Einstein; Noether to Wigner;
+Bekenstein to Hawking to holography; Shannon to quantum codes to
+entanglement wedges. OPH belongs inside that chain. The book should give the
+reader enough context to see the inheritance without making the history sound
+like a procession toward one author.
+
+The same rule applies to metaphysics. A metaphysical sentence earns its place
+only when it remains tied to the machinery that came before it. Experience is
+inside a bounded observer process. Objectivity is the overlap-stable public
+pattern. A strange-loop reading is a possible interpretation of a closed
+information architecture. Those claims are powerful because they are
+constrained. Remove the constraints and they turn into slogans.
+
+The reader can use one practical test throughout the book. Ask what the
+sentence lets you check. A claim about symmetry should tell you what remains
+invariant. A claim about particles should tell you which structure fixes the
+role. A claim about time should tell you which algebra-state pair carries the
+flow. A claim about dark-sector behavior should tell you which open
+derivation is work in progress. A claim about consciousness should tell you
+which boundary and record conditions make the observer identifiable.
+
+This prose contract is part of the physics. OPH is a theory about compatible
+descriptions. The book should therefore be a compatible description of
+itself: chapter text, equations, diagrams, appendices, PDF, website, and
+paper abstracts all carrying the same claims in the same plain language.
+
+## Interlude 14: Instruments as Observer Extensions
 
 The word observer can mislead if it makes the reader picture only a human
 eye or a human mind. Modern science observes through extensions: telescopes,
@@ -622,17 +669,16 @@ signals between distant sites, matched waveforms to general-relativistic
 templates, and rejected environmental noise. The event became public because
 overlap-consistent records survived a harsh pipeline.
 
-This is why OPH's observer language should feel practical rather than
-mystical. Observers are record-making systems embedded in physical
+This is why OPH's observer language should feel practical. Observers are
+record-making systems embedded in physical
 interfaces. Human consciousness matters in later interpretive chapters, but
 the scientific role of the observer is broader: bounded access, memory,
 comparison, and update. Instruments enlarge patches and make records more
 shareable. They do not remove the observer problem. They make it precise.
 
-## Interlude 14: Diagrams Are Arguments With Edges
+## Interlude 15: Diagrams Are Arguments With Edges
 
-The new SVG diagrams in the book are not decorations. They are compact
-arguments. A good diagram shows what has to be related, what has to be
+The SVG diagrams in the book are compact arguments. A good diagram shows what has to be related, what has to be
 separated, and where the dangerous interface lies. It also has edges: places
 where the simplified picture stops being the theory.
 
@@ -644,7 +690,7 @@ thermodynamic processes can be enormously more complex than the arrow. The
 algebra-order diagram shows that question order matters. Its edge is that an
 operator algebra is richer than two boxes labeled A and B.
 
-The screen and overlap diagrams show why public reality is not simply private
+The screen and overlap diagrams show why public reality differs from private
 experience. The shared lens is where agreement can be checked. Their edge is
 that real overlaps are quantum-algebraic and may not be literal flat
 intersections. The collar diagram shows why a buffer can make recovery
@@ -668,7 +714,7 @@ are orientation devices. They tell the reader where to look in the prose.
 They should never replace the prose. A diagram is useful when it makes the
 reader ask a sharper question about the equation next to it.
 
-## Interlude 15: What Would Count as Failure?
+## Interlude 16: What Would Count as Failure?
 
 A serious theory should say how it could fail. OPH can fail in several ways,
 and naming them makes the book stronger.
@@ -689,22 +735,20 @@ A neutrino or quark-sector claim might not survive scheme dependence and
 uncertainty analysis.
 
 It could fail conceptually. Observer-first language might become too loose,
-turning into rhetoric rather than operational structure. The metaphysics
+turning into rhetoric without operational structure. The metaphysics
 could outrun the physics. The self-reference story could become poetic
 closure without technical necessity. The restoration discussion could be
-misread as a promise rather than an open problem.
+misread as a promise. It is an open problem.
 
 It could fail editorially. Public summaries might overstate theorem status.
 The book might explain a symbol after using it too heavily. Diagrams might
-look more settled than the text. A release pipeline might refresh PDFs but
-leave web text stale. That is why this publication cycle treats the PDF,
-book source, README files, release helpers, and refresh endpoints as one
-surface.
+look more settled than the text. The PDF, book source, website text, and
+public refresh surfaces have to agree.
 
 Naming failure modes does not weaken a theory. It creates handles for review.
 A theory about consistency should welcome hard consistency checks.
 
-## Interlude 16: How Particle Data Enters a Book Like This
+## Interlude 17: How Particle Data Enters a Book Like This
 
 Particle data is not a table handed down from nature in final form. It is a
 careful product of experiments and conventions. This is easy to forget when a
@@ -741,7 +785,7 @@ Every number rests on machines, collaborations, calibration campaigns,
 statistical methods, theory corrections, and review groups. The book can use
 the numbers because a vast community made them public.
 
-## Interlude 17: Mathematical Bridges Are Not Magic Doors
+## Interlude 18: Mathematical Bridges Are Not Magic Doors
 
 The book uses several mathematical bridges: sheaves, operator algebras,
 Tannaka-Krein reconstruction, modular theory, quantum error correction,
@@ -779,40 +823,200 @@ derivation earns the crossing. When OPH says a result is established,
 conditional, conjectural, target anchored, or empirical-payload dependent,
 those words mark where the bridge stands.
 
-## Interlude 18: Why the Book Needed to Become Longer
+## Interlude 19: Why Length Helps
 
-A short book can be elegant, but a short book about a synthesis this large can
-also become misleading. It can make a theorem look like an intuition. It can
-make a conditional continuation look like a conclusion. It can let a symbol
-appear before the reader has been given enough handles to use it. It can make
-the work of whole communities disappear behind a few famous names.
+A short book can be elegant. A short book about a synthesis this large can also
+become misleading. It can make a theorem look like an intuition. It can make a
+conditional continuation look like a conclusion. It can let a symbol appear
+before the reader has been given enough handles to use it. It can make the work
+of whole communities disappear behind a few famous names.
 
-Length is not automatically virtue. Padding is bad. Repetition is bad. But
-there is a kind of length that serves the reader: historical context, symbol
-explanations, status labels, diagrams placed where they reduce cognitive
-load, and appendices that let a reader recover the thread after a difficult
-chapter.
+Length has no automatic virtue. Padding is bad. Repetition is bad. Useful
+length serves the reader: historical context, symbol explanations, status
+labels, diagrams placed where they reduce cognitive load, and appendices that
+let a reader recover the thread after a difficult chapter.
 
-That is the purpose of this expanded edition. The new chapter-ledger appendix
-lets readers revisit each chapter's symbols and human lineage. The concept
-glossary gives quick local definitions. The extended interludes explain how
-major bridges should and should not be read. The chapter illustrations make
-the structure visible without pretending the diagram is the proof.
+That is the purpose of the long form. The chapter-ledger appendix lets readers
+revisit each chapter's symbols and human lineage. The concept glossary gives
+quick local definitions. The extended interludes explain how major bridges
+should and should not be read. The chapter illustrations make the structure
+visible without pretending the diagram is the proof.
 
-The 100,000-word target therefore has a practical meaning. It gives the book
-room to be honest. A theory this ambitious needs room for caveats, examples,
-historical credit, and reader support. The goal is not to be long for its own
-sake. The goal is to be long enough that a serious reader can see what is
-being claimed, what is inherited, what is conditional, and what remains open.
+Length has a practical meaning here. It gives the book room for caveats,
+examples, historical credit, and reader support. The goal is to be long enough
+that a serious reader can see what is being claimed, what is inherited, what
+is conditional, and what remains open.
 
-## Interlude 19: Open Problems as Part of the Architecture
+## Interlude 20: How a Public Fact Gets Built
+
+The word fact can sound simple. A thing happens. Someone sees it. A sentence
+gets written down. Science is harder than that, and more interesting. A
+scientific fact is a stabilized record chain. It is a pattern that survives
+instruments, calibration, repeated analysis, skeptical colleagues, background
+models, independent checks, and translation into a shared language.
+
+That is why the observer language in this book should feel practical. An
+observer is any bounded system that can form records, keep some of them
+stable, compare them with other records, and update without losing the
+conditions that made the comparison meaningful. A person can do this. A
+detector can do part of it. A telescope can do part of it. A data pipeline can
+do part of it. A collaboration can do part of it. The public fact appears only
+when the chain holds together.
+
+Consider the speed of light. The Michelson-Morley experiment is remembered as
+a famous null result, but the word null hides a great deal of work. The
+apparatus had to split light, recombine it, suppress vibration, rotate
+smoothly, and measure tiny fringe shifts. The negative result mattered because
+the instrument had enough sensitivity to see the predicted aether wind if that
+wind existed in the expected form. The result became public because the
+question, instrument, sensitivity, and interpretation were all sharp enough
+for other physicists to attack.
+
+Einstein did something different with that public fact. He treated the
+stubborn invariance as a structural clue. Time, length, simultaneity, and
+energy had to be rewritten so that the shared speed of light survived every
+allowed change of frame. Special relativity was born from that discipline.
+The lesson for OPH is direct: agreement between observers is not a decorative
+theme. It can force the shape of spacetime.
+
+Consider the cosmic distance ladder. Henrietta Swan Leavitt studied Cepheid
+variables in the Magellanic Clouds and found that their brightness period
+carried distance information. Her work gave astronomers a rung on the ladder.
+Vesto Slipher measured redshifts. Edwin Hubble combined distances and
+redshifts into an expansion relation. Georges Lemaitre gave the relation a
+relativistic reading. The expanding universe became a public fact through a
+chain of plates, stars, spectra, statistics, theory, and contested
+interpretation.
+
+The same pattern appears in the cosmic microwave background. Penzias and
+Wilson found excess microwave noise. Dicke, Peebles, Roll, and Wilkinson
+recognized the cosmological meaning. Later satellites mapped the radiation
+with exquisite precision. The background became more than a glow. It became a
+statistical surface covered in acoustic peaks, polarization patterns, and
+parameter constraints. Cosmology grew sharper because many record chains
+converged on one sky.
+
+Consider the Higgs boson. A simple story says CERN found a particle in 2012.
+The real story is a machine story, an analysis story, and a collaboration
+story. Proton beams had to be accelerated, focused, crossed, and monitored.
+Detectors had to track charged particles, measure energy deposits, identify
+muons, reject noise, and survive extreme event rates. Analysts had to model
+backgrounds, blind selections, combine channels, estimate systematic
+uncertainties, and compare independent experiments. ATLAS and CMS did not
+share one eye. They built separate record chains that agreed.
+
+That is why particle tables deserve status labels. A mass value can be an
+experimental measurement, a derived structural output, a validation row, a
+target-anchored witness, or an empirical closure check. Those categories are
+different ways of saying how the fact chain is built. A reader who knows the
+category knows what kind of stress the claim can bear.
+
+The history of parity violation gives another example. Before 1956, many
+physicists expected the laws of nature to respect mirror symmetry. Chen-Ning
+Yang and Tsung-Dao Lee saw that the weak interaction had not been tested
+cleanly. Chien-Shiung Wu and collaborators performed the decisive cobalt-60
+experiment. The result showed that weak interactions distinguish left from
+right. A philosophical phrase like nature has handedness became a laboratory
+fact because nuclei, cryogenics, magnetic fields, detectors, statistics, and
+theory lined up.
+
+Noether's theorem shows the mathematical version of the same relay. A
+symmetry is a transformation that leaves the action fixed. A conservation law
+is a public balance that survives every allowed description. Energy,
+momentum, angular momentum, and charge are not loose bookkeeping habits. They
+are invariants under shared transformations. That is why Chapter 12 treats
+symmetry as a language for agreement. If observers can translate between
+descriptions while preserving the relevant structure, they can share a law.
+
+Black-hole entropy followed a different route. Bekenstein asked what happens
+to entropy when matter falls through a horizon. Hawking used quantum fields on
+curved spacetime and found radiation. Gibbons and Hawking extended the
+thermodynamic lesson to cosmological horizons. Holography, AdS/CFT,
+entanglement wedges, and island formulas turned that thermodynamic clue into
+a deep statement about encoding. Each step changed the record chain. A black
+hole was no mere sink. It became a surface with countable capacity.
+
+This matters because OPH leans heavily on the idea that records live on
+accessible boundaries. The statement is not free poetry. It inherits the
+labor of black-hole thermodynamics, quantum field theory, quantum
+information, and holographic duality. The book has to keep that inheritance
+visible. If the prose makes boundary language sound too easy, it has failed
+the reader.
+
+Public facts also depend on error correction. A detector has noise. A
+telescope has atmosphere, foregrounds, dust, instrument drift, and missing
+pixels. A collider analysis has backgrounds. A gravitational-wave detector
+has seismic motion, thermal noise, quantum noise, and human-made
+disturbances. A public fact is the signal that survives after these error
+sources are modeled, bounded, rejected, or carried as uncertainty.
+
+That is why the recovery chapters matter. Recovery is not a fantasy of
+perfect restoration. It is the mathematical study of which correlations still
+contain enough information to rebuild a useful description. In classical
+error correction, redundant bits protect a message. In quantum error
+correction, information is stored in correlations that local damage cannot
+fully erase. In holography, bulk information can be encoded redundantly on
+boundary regions. These are different technical domains, but the shared
+lesson is visible: public structure can be protected by distributing it.
+
+The observer side has the same discipline. A memory can be fragile. A record
+can be corrupted. A social report can be wrong. A scientific collaboration can
+mistake a background for a signal. The answer is not cynicism. The answer is a
+better overlap structure: independent instruments, independent teams,
+transparent assumptions, calibration standards, uncertainty estimates, and
+claims that say exactly what support they have.
+
+OPH asks for the same thing at the level of physics. A local patch carries
+bounded access. Another patch carries different bounded access. Their shared
+region is where the test happens. The public world is the structure that
+survives compatible comparison. This is not a sociology of science pasted on
+top of physics. It is the physical problem of making records agree under
+finite access, finite memory, finite noise, and finite horizons.
+
+The cumulative nature of the theory follows from that. OPH is not the work of
+one isolated author. No theory at this scale could be. It draws on thermal
+physics, quantum mechanics, relativity, gauge theory, representation theory,
+operator algebras, cosmology, particle experiments, quantum information,
+error correction, holography, neuroscience, philosophy, and computer science.
+The book should read like a map of that inheritance. When it introduces a
+claim, the reader should be able to see the relay behind it.
+
+This relay also explains the book's caution around open particle derivations.
+The fine-structure branch, electroweak rows, Higgs/top surface, neutrino
+branch, quark sector, strong-CP boundary, and hadron payloads do not all have
+the same status. Some rows are structural. Some are validation rows. Some
+depend on empirical payloads. Some are work in progress. A public fact built
+from a long chain has to show which links are welded and which links are
+scaffolds.
+
+The same rule applies to metaphysics. A sentence about experience, God,
+restoration, or self-reference becomes serious only when the record chain
+behind it stays visible. Experience is patch-internal. Objectivity is
+overlap-stable. Restoration is tied to recoverable checkpoint data and
+identity conditions. Meaning is tied to participation inside a closed
+observer-consistency structure. Those claims should never float away from the
+physics that constrains them.
+
+The reader can therefore treat each chapter as a fact-building exercise. What
+is the record? What is the instrument? What is the equation? What is the
+status label? What is inherited from established physics? What does OPH add?
+What would break the claim? If those questions can be answered, the chapter is
+doing its job. If they cannot, the prose needs more work.
+
+That is the book's deeper promise. It does not ask the reader to accept a
+private revelation. It asks the reader to inspect a public construction. The
+construction may succeed or fail, but it should fail in the open, with its
+assumptions, symbols, lineage, diagrams, and artifacts exposed to review.
+That is how science earns a shared world.
+
+## Interlude 21: Open Problems as Part of the Architecture
 
 The book should end with open problems visible, not hidden. OPH still has to
 sharpen the exact mathematical form of observer-overlap gluing in the quantum
 setting. It has to clarify which compatibility conditions are assumed and
 which are derived. It has to push the modular-to-geometric route through
 precise hypotheses. It has to keep the Standard Model reconstruction audited
-as empirical inputs and theorem statuses evolve.
+while empirical inputs and theorem-status labels remain explicit.
 
 The dark-sector continuation needs confrontation with the full cosmological
 and astrophysical data suite. Matching an acceleration scale is interesting,
@@ -829,7 +1033,7 @@ The observer and restoration discussions need more formal interfaces. What
 exactly counts as a recoverable observer pattern? Which records are public,
 which are private, and which are needed for continuation? What kinds of
 hardware could instantiate the relevant patch federation? Which error bounds
-matter? These questions belong to future work.
+matter? These questions are open problems.
 
 Open problems are not a blemish. They are the work surface. A theory that
 claims to reverse engineer reality should produce better questions as well

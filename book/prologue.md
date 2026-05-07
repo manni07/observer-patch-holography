@@ -2,7 +2,7 @@
 
 *For my wife Noon, and for Douglas Adams.*
 
-> Core idea, in plain English: there is no single objective camera angle on reality.
+> There is no single objective camera angle on reality.
 > There are only local, subjective perspectives, and physics is the rulebook that keeps them consistent where they overlap.
 > If you are not a physicist, you are in the right place; this book is written as a reverse-engineering book, not a math-first textbook.
 
@@ -47,9 +47,9 @@ deeply mysterious at its core.
 
 ## The Weirdest Program Ever Written
 
-Here's what makes physics the ultimate reverse engineering challenge: the
-program we're analyzing behaves in ways that violate every intuition we
-brought to the task.
+Physics becomes the ultimate reverse engineering challenge because the program
+we're analyzing behaves in ways that violate every intuition we brought to the
+task.
 
 **There's no preferred reference frame.** Run your experiments on a moving
 train or a stationary platform-the laws work identically. There's no "true"
@@ -78,9 +78,8 @@ of space may be encoded on its boundary. The three-dimensional
 world can then be read as an emergent bulk description.
 
 If a human engineer wrote a program with these specifications, we'd assume
-they were trolling us. But this is how reality behaves. These aren't bugs.
-They're features. And the fact that they seem contradictory or impossible
-is our problem, not nature's.
+they were trolling us. Reality behaves this way. These are not bugs. They are
+features. The contradiction belongs to our intuition, not to nature.
 
 ## The Question We Rarely Ask
 
@@ -98,11 +97,11 @@ Sensations, perceptions, measurements, memories. We see, hear, feel, detect.
 We compare notes with other observers and find that we generally
 agree. The apple is red. The electron went left. The clock shows 3 PM.
 
-This agreement is striking. It demands explanation. But does it require
+This agreement is striking. It demands explanation. Does it require
 an "objective" world existing independently of all observers?
 
 We've assumed yes for so long that the question sounds strange. Of course
-there's an objective reality, what else could there be? But look closer.
+there's an objective reality, what else could there be? Look closer.
 Every piece of evidence we have for objective reality is itself a subjective
 experience. Every measurement, every observation, every data point passes
 through an observer. We never step outside our perspectives to check if
@@ -140,14 +139,14 @@ observer to define one. Why does measurement affect outcomes? Because "measureme
 is just observer patches comparing notes. Why does time dilate? Because different
 observers have different internal clocks, and relativity is the consistency
 condition between them. Why can't you explain consciousness from physics?
-Because you're trying to derive the inside from the outside, but there is no
-outside.
+Because the inside cannot be derived from an outside that the theory itself
+does not contain.
 
 Long-standing philosophical puzzles dissolve too. The hard problem of
 consciousness, the measurement problem in quantum mechanics, the nature of
-time, the question of free will-these stop being mysteries and start looking
+time, the question of free will: these stop being mysteries and start looking
 like artifacts of asking the wrong question. We were trying to explain how
-observers emerge from an objective world. But if there is no objective world
+observers emerge from an objective world. Without an objective world
 independent of observers, the question was malformed from the start.
 
 The math we've developed over centuries stays in place. Quantum mechanics
@@ -211,8 +210,9 @@ The program targets the recovery of known physics, gravity and the Standard
 Model included, from this simple starting point. The answer is not inserted by
 hand.
 
-The apparent mysteries of physics dissolve once you make the conceptual shift from
-"objective reality exists" to "consistency across observers is fundamental."
+The apparent mysteries of physics dissolve once the conceptual starting point
+changes from "objective reality exists" to "consistency across observers is
+fundamental."
 
 The structure follows the logic of reverse engineering. Each chapter begins
 with the intuitive picture most readers carry into the subject and then turns
@@ -243,7 +243,7 @@ Big Bang, processing inputs and producing outputs according to rules physics
 seeks to decode. Thousands of brilliant minds have contributed to the reverse
 engineering effort.
 
-But the naive model, a 3D world of independent objects moving through absolute
+The naive model, a 3D world of independent objects moving through absolute
 time and existing whether or not anyone observes it, turns out to be the
 equivalent of a stub loader. It works for everyday purposes, but it's not
 what's really going on.

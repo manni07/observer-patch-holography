@@ -143,7 +143,7 @@ The deeper answer to the arrow of time is the **Past principle**: the universe b
 
 We are riding the expansion from a very special initial condition: the Big Bang. The early universe was hot and smooth, with matter spread almost uniformly. That uniformity is low gravitational entropy.
 
-Why was the Big Bang low entropy? Standard physics treats this as an unexplained initial condition. But our model offers a different perspective.
+Why was the Big Bang low entropy? Standard physics treats this as an unexplained initial condition. OPH gives the condition a role in record formation.
 
 **The Past principle as a consistency requirement**: For observers to exist at all, they must be able to form and compare records. Records require entropy gradients-you can only write information by pushing entropy elsewhere. A universe in thermal equilibrium contains no observers, no records, no consistency-checking.
 
@@ -215,7 +215,7 @@ fixes its normalization. Geometric time flow gives Lorentz kinematics on the
 screen, and entanglement equilibrium together with the local energy bridge
 yields Einstein's equation.
 
-This chapter builds the time ingredient. The next sections show how it feeds into gravity.
+The time ingredient is in place. The next sections show how it feeds into gravity.
 
 ## 11.7 Jacobson's Derivation
 
@@ -308,7 +308,7 @@ This reverses the usual logic in QFT. We don't postulate Lorentz symmetry and th
 That modular-boost link is the route by which Lorentz kinematics and a
 universal light speed are recovered on the screen.
 
-### Connection to Our Framework
+### Connection to OPH
 
 Each observer's patch has a boundary, that boundary carries a horizon
 temperature, and the modular flow of the horizon state generates the
@@ -336,7 +336,7 @@ The modular flow provides the time direction. Entanglement provides correlations
 
 ### Why This Matters
 
-Einstein discovered special relativity in 1905 by thinking about light and motion. Over a century later, we see it differently: in QFT, Lorentz boosts are tied to horizon thermodynamics via the Bisognano-Wichmann theorem. In our model the same pattern appears when the screen reaches its smooth geometric limit, so the Lorentz group shows up as the geometry of modular flow on caps.
+Einstein discovered special relativity in 1905 by thinking about light and motion. QFT gives the same structure another reading: Lorentz boosts are tied to horizon thermodynamics via the Bisognano-Wichmann theorem. In OPH the same pattern appears when the screen reaches its smooth geometric limit, so the Lorentz group shows up as the geometry of modular flow on caps.
 
 The laws of physics look the same to all inertial observers because thermal states on wedge-shaped regions naturally evolve via boosts. In the OPH program, the universal speed emerges when that modular-boost structure is carried over to the screen and then read back into bulk kinematics.
 
@@ -382,6 +382,6 @@ toward gravity.
 
 We’ve located a source of time without putting time in by hand. Incomplete knowledge, restricted access, and record-building are enough to generate clocks and an arrow.
 
-The harder question concerns translation. Different observers inherit different local clocks, different horizons, and different cuts through the state. Why do the conversion rules between their descriptions lock into the rigid form of symmetry and conservation law instead of dissolving into case-by-case negotiation?
+The harder question concerns translation. Different observers inherit different local clocks, different horizons, and different cuts through the state. Why do the conversion rules between their descriptions lock into the rigid form of symmetry and conservation law, with no case-by-case negotiation?
 
 That is where **Chapter 12: Symmetry on the Sphere** begins.

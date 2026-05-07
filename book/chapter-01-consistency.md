@@ -1,6 +1,6 @@
 # Chapter 1: The Consistent Universe
 
-> Plain-English version: there is no objective "view from nowhere."
+> There is no objective "view from nowhere."
 > There are only perspectives from somewhere, and reality is what stays consistent between them.
 
 ## 1.1 The Intuitive Picture
@@ -37,7 +37,7 @@ We take a narrower, operational step: **start from perspectives and demand consi
 
 Why abandon the intuitive picture at all? Because the universe gave us hints, strange, persistent, reproducible hints, that it cannot be correct.
 
-Here's a thought experiment that illustrates the problem: imagine a cosmic record that contains **all** facts at one global instant. You might expect physics to supply the rules for such a record. But relativity says there is no unique global present. Quantum mechanics says not all properties can be simultaneously definite. Horizons say no observer can access everything. The record is not even well-defined.
+Imagine a cosmic record that contains **all** facts at one global instant. You might expect physics to supply the rules for such a record. But relativity says there is no unique global present. Quantum mechanics says not all properties can be simultaneously definite. Horizons say no observer can access everything. The record is not even well-defined.
 
 The intuitive picture is wrong. Not approximately wrong. Not wrong in some technical sense that doesn't matter for everyday life. It's *fundamentally* wrong about the nature of space, time, and observation.
 
@@ -85,7 +85,7 @@ time differently, while still agreeing on the laws and on the speed of light.
 
 ### The Surprising Conclusion
 
-Here's what Einstein discovered: **to keep the speed of light consistent across all observers, space and time themselves must be observer-dependent.**
+Einstein's discovery was sharp: **to keep the speed of light consistent across all observers, space and time themselves must be observer-dependent.**
 
 Time dilates. A moving clock ticks slower. In 1971, physicists Hafele and Keating flew atomic clocks around the Earth on commercial jets. When the clocks returned, they had ticked differently than clocks that stayed on the ground. The differences were nanoseconds, and they were consistent with relativity's predictions within experimental uncertainty.
 
@@ -119,7 +119,7 @@ The mere act of observation changes the outcome.
 
 ### The Measurement Problem
 
-This has nothing to do with technological limitations or clumsy detectors disturbing the electrons. In the standard textbook reading of quantum mechanics, before measurement the electron is described by a superposition rather than by a single definite path through one slit.
+This has nothing to do with technological limitations or clumsy detectors disturbing the electrons. In the standard textbook reading of quantum mechanics, before measurement the electron is described by a superposition, not by a single definite path through one slit.
 
 The wave function $|\psi\rangle$ describes probabilities, not definite properties. When you measure, the wave function "collapses" to a definite state. But what counts as a measurement? Who is the observer? When exactly does collapse happen?
 
@@ -132,7 +132,7 @@ These questions have haunted physics for a century. Different interpretations of
 
 ### The Surprising Conclusion
 
-**The hint**: Measurement affects outcomes. The act of observation is not passive recording-it's an active intervention that changes the system.
+**The hint**: Measurement affects outcomes. Observation is an intervention that changes the system.
 
 **The lesson**: The intuitive picture-where objects carry a full set of classical-style definite properties whether or not we observe them-doesn't work at the quantum level. Which properties can be treated as definite depends on the measurement context and the interpretation.
 
@@ -142,9 +142,9 @@ These questions have haunted physics for a century. Different interpretations of
 
 The "measurement problem" has haunted physics for a century: When does the wave function collapse? What counts as an observer? Why does measurement produce definite outcomes from indefinite superpositions?
 
-Our model reframes this problem.
+OPH reframes this problem.
 
-The puzzle assumes a God's-eye view where the wave function is "really" in superposition, and then something magical happens called "collapse." But there is no God's-eye view. There are only observer patches.
+The puzzle assumes a God's-eye view where the wave function is "really" in superposition, followed by something magical called "collapse." There is no God's-eye view. There are only observer patches.
 
 From within a patch, you always see definite outcomes. That's what it means to be an observer: you have records, and records are definite. The "superposition" isn't a mysterious state waiting to collapse. It's a description of how different observers' potential records relate to each other before they compare notes.
 
@@ -152,7 +152,7 @@ When Alice measures an electron's spin, she gets a definite result. Always. Ther
 
 The measurement problem asks: "When does objective reality become definite?" Our answer is that OPH reorganizes that question around observer patches and record consistency. Reality was never "indefinite" from any observer's perspective. It was always definite within each patch. The wave function describes how patches must relate, not some ghostly pre-measurement state.
 
-Bohr was half right. He insisted that quantum mechanics describes relationships between observers and systems, not systems in isolation. Our model makes this precise: quantum mechanics is the mathematics of patch consistency.
+Bohr was half right. He insisted that quantum mechanics describes relationships between observers and systems, not systems in isolation. OPH makes this precise: quantum mechanics is the mathematics of patch consistency.
 
 ## 1.4 The Overlap Test
 
@@ -191,7 +191,7 @@ This is the overlap test at industrial scale. Each detector is an observer. Thei
 
 ## 1.5 Hint #3: Consistency is Not the Default
 
-Here's a hint that's easy to miss: it's incredibly hard to construct a universe where observers agree.
+The easy-to-miss hint is that agreement between observers is hard to construct.
 
 ### The Fine-Tuning Puzzle
 
@@ -260,7 +260,7 @@ Even without black holes, if you keep accelerating, signals from behind you can 
 
 The major hints line up. The speed of light is invariant, so space and time are
 observer-dependent. Measurement affects outcomes, so observers are part of the
-physics rather than spectators outside it. The laws are uniform and fine-tuned,
+physics, not spectators outside it. The laws are uniform and fine-tuned,
 which means consistency is expensive. Symmetries enforce conservation, so
 physics is structured to enable agreement. Horizons limit access, so every
 observer lives on a finite patch.
@@ -287,15 +287,15 @@ We propose this principle goes deeper than biology. It applies to physics itself
 
 **The laws of physics are what allow observers to agree on what the data means.**
 
-In our framework, the laws of physics, Lorentz symmetry, gauge structure, and conservation laws, emerge from the consistency program. They are not imposed from outside.
+In OPH, the laws of physics, Lorentz symmetry, gauge structure, and conservation laws emerge from the consistency program. They are not imposed from outside.
 
 **A strong OPH reading views the laws of physics as survivors of a selection process.**
 
 Think of the early universe as a chaos of competing possibilities: different geometries, different dynamics, different rules. Most configurations were inconsistent. They could not support stable patterns. They could not enable multiple observers to share a coherent reality.
 
-The only things that survived were the consistent ones. The laws we see today (gravity, quantum mechanics, thermodynamics) are the only patterns stable enough to persist.
+The surviving structures are the consistent ones. The laws we see, gravity, quantum mechanics, and thermodynamics included, are the patterns stable enough to persist.
 
-There is a Darwinian aspect to this. Observers that fit into the consensus survive and replicate. Laws that allow observers to agree proliferate. What we see today is the outcome of a selection process: the physics that remains is the physics that permits stable, self-consistent observers to exist and to agree with each other. Observers and laws co-evolve. Neither is primary. They select each other.
+There is a Darwinian aspect to this. Observers that fit into the consensus survive and replicate. Laws that allow observers to agree proliferate. The physics that remains is the physics that permits stable, self-consistent observers to exist and to agree with each other. Observers and laws co-evolve. Neither is primary. They select each other.
 
 If something cannot be consistent, it cannot be observed by multiple observers, so it cannot be part of a shared reality.
 
@@ -324,7 +324,7 @@ If you look at a star and I look at the same star, we have to agree on what we c
 At the regulator scale, the realized state is selected by maximizing entropy
 subject to a finite family of local constraints. As the screen is refined, that
 same constraint family persists, so the theory stays on one stable track
-instead of changing its rules at every cutoff.
+without changing its rules at every cutoff.
 
 The regulator scale is the working resolution of the screen. MaxEnt means
 "maximum entropy": choose the least biased state compatible with the constraints
@@ -357,7 +357,7 @@ constraints, outputs.
 
 A qudit is the multi-level cousin of a qubit. A triangulated sphere is a sphere
 approximated by small triangular pieces, so the screen can be treated as a
-finite network rather than a perfectly smooth surface.
+finite network, not as a perfectly smooth surface.
 
 What is the output? Everything. Spacetime geometry emerges from entanglement patterns. Particles emerge as excitations. Observers emerge as self-modeling patterns that process information and maintain records. The laws of physics emerge as the rules that permit consistent information flow between patches.
 
@@ -367,7 +367,7 @@ You might ask: "If reality is a computation, what is it computing?" It is comput
 
 This view changes many traditional puzzles. "Why does anything exist at all?" becomes a question about the coherence of a closed self-referential structure. On this reading, the loop does not need an external cause because it is not a temporal chain with a first step waiting to be triggered from outside.
 
-"What is the universe made of?" becomes, within OPH, "What substrate best realizes the computational picture?" The construction studied here uses finite-dimensional quantum systems on a 2D surface, constrained by gauge invariance, organized by maximum entropy, and narrowed at low energy by the minimal admissible realization rule. It is concrete enough to do physics, yet broad enough to keep the focus on structure rather than on a material picture borrowed from everyday life.
+"What is the universe made of?" becomes, within OPH, "What substrate best realizes the computational picture?" The construction studied here uses finite-dimensional quantum systems on a 2D surface, constrained by gauge invariance, organized by maximum entropy, and narrowed at low energy by the minimal admissible realization rule. It is concrete enough to do physics, and broad enough to keep the focus on structure without borrowing a material picture from everyday life.
 
 ## 1.12 The Reverse Engineering Ahead
 

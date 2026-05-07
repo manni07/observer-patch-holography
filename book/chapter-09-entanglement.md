@@ -74,7 +74,7 @@ We introduced the RT formula in Chapter 8: entanglement entropy of a boundary re
 
 The deep implication: **geometry encodes entanglement**.
 
-That sentence is easy to repeat and easy to misunderstand. The claim is not that geometry and entanglement vaguely resemble each other. The claim is that the amount of quantum correlation across a cut determines the size of the bulk surface associated with that cut. Entropy is doing geometric work. If the boundary state ties two regions together strongly, the bulk description between them is correspondingly thick and connected.
+That sentence is easy to repeat and easy to misunderstand. The precise claim is stronger: the amount of quantum correlation across a cut determines the size of the bulk surface associated with that cut. Entropy is doing geometric work. If the boundary state ties two regions together strongly, the bulk description between them is correspondingly thick and connected.
 
 This idea did not arrive as one person's finished vision. Bekenstein and
 Hawking made black holes count states. Srednicki and many others showed how
@@ -148,7 +148,7 @@ $\rho_A$ is the state seen by an observer who can access only qubit $A$.
 Because that observer has ignored the other qubit, the local state looks like
 a fair coin even though the two-qubit state is perfectly ordered.
 
-Chapter 6 gives the overlap-consistency reading of Bell correlations. The lesson needed here is narrower. Space cannot be built out of classical bookkeeping alone. The vacuum correlations used in this chapter belong to the same experimentally compulsory quantum structure.
+Chapter 6 gives the overlap-consistency reading of Bell correlations. The lesson needed here is narrower. Space cannot be built out of classical bookkeeping alone. The vacuum correlations belong to the same experimentally compulsory quantum structure.
 
 ## 9.5 ER = EPR: Wormholes Are Entanglement
 
@@ -191,7 +191,7 @@ In the dual setting, the same protocol can be read in quantum-information langua
 
 The RT formula uses minimal surfaces. In 2016, Freedman and Headrick introduced an equivalent picture: **bit threads**.
 
-Instead of drawing a surface, draw threads-imaginary lines carrying entanglement. The density of threads can't exceed 1/4G at any point. Subject to this constraint, maximize the number of threads connecting region A to its complement.
+Draw threads: imaginary lines carrying entanglement. The density of threads can't exceed 1/4G at any point. Subject to this constraint, maximize the number of threads connecting region A to its complement.
 
 The maximum number equals the RT entropy.
 
@@ -294,7 +294,7 @@ respect unitarity through encoded interior information.
 That is the direction the evidence points. Ryu-Takayanagi works in the
 settings where it should. Area-law scaling is widespread in the regimes that
 matter here. Entanglement wedge reconstruction works in explicit examples.
-Black-hole information is read through encoded radiation rather than deletion.
+Black-hole information is read through encoded radiation, not deletion.
 
 ### Entanglement as a Discovery Chain
 
@@ -306,7 +306,7 @@ the distinctive feature of quantum theory. For decades the issue looked
 philosophical. Then John Bell found the inequality that moved the argument
 from taste to experiment. Clauser, Freedman, Aspect, Zeilinger, and many
 others turned the test into a laboratory program. Modern loophole-free Bell
-experiments now make the point hard to evade: the world does not carry local
+experiments make the point hard to evade: the world does not carry local
 classical instruction sheets that determine all possible measurement results.
 
 The later holographic story is just as communal. Bekenstein and Hawking made

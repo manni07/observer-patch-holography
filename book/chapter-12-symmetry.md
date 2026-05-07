@@ -21,7 +21,7 @@ In 1918, Emmy Noether proved one of the most important theorems in physics.
 
 Noether was working at Gottingen, helping Hilbert and Klein understand energy conservation in General Relativity. What she discovered was far more general.
 
-Her position in that story matters. Noether was already one of the strongest
+Her position in that story matters. Noether was one of the strongest
 algebraists in Europe, but she worked for years without the ordinary academic
 security granted to men around her. Hilbert famously defended her right to
 lecture by asking whether the faculty senate was a bathhouse. The theorem that
@@ -38,7 +38,7 @@ symmetry gives conservation of charge.
 
 Conservation laws aren't arbitrary rules. They're geometric consequences of symmetry.
 
-This is the point where physics stops looking like a cabinet full of separate rules. Energy conservation, momentum conservation, and charge conservation are not independent miracles. They are what remain fixed when the same action can be read from shifted, rotated, or phase-twisted points of view.
+This is where physics stops looking like a cabinet full of separate rules. Energy conservation, momentum conservation, and charge conservation are not independent miracles. They are what remain fixed when the same action can be read from shifted, rotated, or phase-twisted points of view.
 
 Once that connection lands, symmetry stops being decorative. It becomes the reason repeated measurements made by different observers can be stitched into one account without inventing conservation laws by decree.
 
@@ -46,8 +46,7 @@ Symmetries are connected to the deepest physical laws. The "stuff" of physics (e
 
 ## 12.3 The First-Principles Reframing: Symmetries Are Consistency Requirements
 
-The deeper question is why symmetry keeps showing up as law instead of
-decoration.
+The deeper question is why symmetry keeps showing up as law, not decoration.
 
 ### Symmetry Enables Agreement
 
@@ -55,7 +54,7 @@ Recall our thesis: reality is the process of making observations consistent betw
 
 Consider two astronomers observing the same galaxy. One measures energy in her reference frame. The other measures energy in his frame, moving at a different velocity. Their numbers are different.
 
-But they're not inconsistent. They're related by a Lorentz transformation. On
+They are compatible because they are related by a Lorentz transformation. On
 the screen, this symmetry grows out of modular time-flow. It tells them how to
 translate between their observations. Lorentz invariance is the rule that keeps
 both accounts compatible.
@@ -123,7 +122,7 @@ returns to the starting lift.
 
 Quantum mechanics allows **projective representations**. Physical states are rays in Hilbert space-vectors defined only up to an overall phase. This phase freedom permits the double cover SU(2).
 
-A ray is a direction rather than one particular arrow. Multiplying a quantum
+A ray is a direction, not one particular arrow. Multiplying a quantum
 state by an overall phase changes the vector but not the physical state. That
 small freedom is what lets spinors carry the minus sign after a 360-degree
 rotation without changing observable probabilities.
@@ -148,7 +147,7 @@ That's it. Those are the only quantum numbers that follow from spacetime symmetr
 
 **Particles are representations of symmetries.** The specific zoo of particles is dictated by the symmetry group of the boundary.
 
-That is a profound change in what a particle is. A particle is no longer a tiny marble with a fixed identity tag. It is an allowed transformation pattern. Mass tells you how the excitation sits with time translations. Spin tells you how it sits with rotations.
+That is a profound change in what a particle is. A particle is not a tiny marble with a fixed identity tag. It is an allowed transformation pattern. Mass tells you how the excitation sits with time translations. Spin tells you how it sits with rotations.
 
 The spare label set matters. Once the symmetry group is fixed, only a limited menu of stable transformation patterns is left. The particle table starts to look less like a box of arbitrary ingredients and more like a list of admissible roles.
 
@@ -212,7 +211,7 @@ roles.
 
 Where do these internal symmetries come from?
 
-With the notation unpacked, the physical roles are less mysterious. $SU(3)$ keeps track of the color bookkeeping that confines quarks. $SU(2)$ groups left-handed weak partners into doublets. $U(1)$ carries the leftover charge assignment that survives symmetry breaking and becomes ordinary electromagnetism. The real question of the chapter is why nature settles on exactly this trio instead of some nearby alternative.
+With the notation unpacked, the physical roles are less mysterious. $SU(3)$ keeps track of the color bookkeeping that confines quarks. $SU(2)$ groups left-handed weak partners into doublets. $U(1)$ carries the leftover charge assignment that survives symmetry breaking and becomes ordinary electromagnetism. The real question of the chapter is why nature settles on exactly this trio.
 
 The useful picture is practical. These groups are the accounting systems that specify which transformations count as physically equivalent in the strong, weak, and electromagnetic sectors. The later Standard Model chapter asks why this accounting structure is so specific.
 
@@ -363,8 +362,8 @@ physics. It is one of the mechanisms by which physics keeps itself coherent.
 Emmy Noether arrived at her theorem through a problem that looked technical:
 how to understand conservation laws in general relativity. Hilbert and Klein
 recognized her power, but the university system around her did not. She
-lectured for years without the status her work deserved. The theorem that now
-bears her name is one of the central pillars of theoretical physics.
+lectured for years without the status her work deserved. The theorem bearing
+her name is one of the central pillars of theoretical physics.
 
 The theorem's lesson is simple enough to say without the machinery: if a
 physical description can be changed in a certain way without changing the
@@ -375,9 +374,9 @@ charge conservation. Each conserved quantity is a public invariant, something
 different observers can carry through their calculations without losing
 agreement.
 
-This turns symmetry from beauty into bookkeeping. A symmetry is not merely a
-pattern that looks pleasing. It is a rule for translating descriptions while
-preserving what can be checked. In OPH language, it is a compatibility rule
+This turns symmetry from beauty into bookkeeping. A symmetry is a rule for
+translating descriptions while preserving what can be checked. In OPH language,
+it is a compatibility rule
 for patches. Two observers may use different coordinates, phases, frames, or
 local bases. If their translation rule is a true symmetry, they still agree
 on the shared content.

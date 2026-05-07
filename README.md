@@ -204,9 +204,9 @@ source-only OPH values stay separate from OPH plus empirical hadron closure
 values carried by the empirical \(e^+e^-\to\mathrm{hadrons}\) payload class.
 
 The selected-class quark theorem leaves strong CP as an open companion branch:
-the available corpus does not derive `theta_QCD`, does not emit physical
-`bar(theta)`, and does not prove that the physical strong-CP phase vanishes.
-Issue `#155` tracks that phase, anomaly, and topological-angle bridge.
+the available corpus does not derive the QCD theta angle, does not emit the
+physical strong-CP angle, and does not prove that the physical strong-CP phase
+vanishes. Issue `#155` tracks that phase, anomaly, and topological-angle bridge.
 
 ## Repository Guide
 

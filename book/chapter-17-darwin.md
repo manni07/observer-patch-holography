@@ -124,7 +124,7 @@ Pointer states are the winners of quantum natural selection. They survive the pr
 
 ## 17.5 Laws as Compression Algorithms
 
-Here's another way to think about the evolution of laws.
+Another way to think about the evolution of laws starts with compression.
 
 The holographic screen has limited capacity: A/4G bits. It can't encode infinite complexity. It must compress.
 
@@ -214,7 +214,7 @@ stress them from different sides.
 
 ### The Simulator Meme
 
-Here is a striking observation: among all the memes that have evolved in human culture, one stands out as unique.
+Among all the memes that have evolved in human culture, one stands out as unique.
 
 The **simulator meme**, the idea that reality is computational and can be simulated, is the meme that allows reality to understand itself.
 
@@ -251,7 +251,7 @@ Physics has laws because the consistency requirement forces reality into structu
 
 **The laws of physics are what allow observers to agree on what the data means.**
 
-This statement cuts to the heart of the model. Lorentz invariance is not an arbitrary symmetry. It exists because different observers moving through the same region must arrive at consistent descriptions. Gauge symmetry is not a mathematical curiosity. It exists because overlapping patches must identify shared observables without ambiguity. Conservation laws are not coincidences. They exist because the same quantities must be conserved across all perspectives.
+This statement cuts to the heart of OPH. Lorentz invariance is not an arbitrary symmetry. It exists because different observers moving through the same region must arrive at consistent descriptions. Gauge symmetry is not a mathematical curiosity. It exists because overlapping patches must identify shared observables without ambiguity. Conservation laws are not coincidences. They exist because the same quantities must be conserved across all perspectives.
 
 The selection filter is severe. A candidate law must support stable records,
 local repair, transport across overlaps, and enough redundancy for many
@@ -291,7 +291,7 @@ experience in the Amazon and Malay Archipelago. Natural selection became
 persuasive because it organized a huge mess of observations with one filter:
 variants that reproduce better become more common.
 
-The analogy in this chapter should be handled with the same discipline. OPH
+The analogy needs the same discipline. OPH
 does not say that equations literally have children, or that constants wander
 around like animals. It says that public physical structure must pass filters
 before it can belong to a stable observer world. A candidate pattern must fit
@@ -308,7 +308,7 @@ parameters are considered through the structures they permit. OPH adds the
 observer-overlap version: a law survives if it can act as a coordination
 protocol across finite patches.
 
-The symbol work in this chapter is correspondingly light but important.
+The symbol work is correspondingly light but important.
 When the text says a black-hole entropy budget scales like $A/(4G)$ or
 $A/(4\ell_P^2)$, it is pointing at a finite selection environment. $A$ is
 area. $G$ is Newton's constant when units keep it explicit. $\ell_P$ is the

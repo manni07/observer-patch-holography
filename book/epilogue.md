@@ -36,7 +36,7 @@ that makes it the observer it is. The environment matters. The interface
 matters. But the observer is not dissolved into an undifferentiated whole.
 
 Conditional independence means that, once the boundary information is fixed,
-the inside and outside no longer need extra direct knowledge of each other to
+the inside and outside do not need extra direct knowledge of each other to
 make compatible predictions.
 
 ## A Continuation Thought Experiment
@@ -60,7 +60,7 @@ match exactly or within a controlled error.
 
 That is striking. It says a meaningful form of restoration is part of the
 framework. Transplantation is a deeper question: it asks whether an
-observer-pattern can be moved into a newly engineered environment and treated
+observer-pattern can be moved into an engineered environment and treated
 as the same continuing subject. The issue is the interface between one
 recovered interior pattern and one redesigned world.
 
@@ -76,7 +76,7 @@ is the next step in that flow. So if a checkpoint can be restored under the
 right conditions, the real issue is whether that restored pattern carries the
 same continuation of the observer.
 
-That question is no longer purely literary or religious. It becomes an
+That question is not purely literary or religious. It becomes an
 engineering problem with explicit mathematical boundaries. Which parts of the
 observer have to be preserved? Which interfaces have to remain fixed? Which
 changes break continuity, and which ones do not?
@@ -91,4 +91,4 @@ The epilogue adds one final possibility. The same structure that allows
 observer-patterns to exist may also allow a limited form of restoration. That
 implication is enough to change the tone of the question. If
 observer-patterns are structurally identifiable and partly restorable, then
-continuation becomes a matter of architecture rather than fantasy.
+continuation becomes a matter of architecture, not fantasy.

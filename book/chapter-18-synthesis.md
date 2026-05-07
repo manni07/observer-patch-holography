@@ -95,17 +95,17 @@ consistency, and minimality on the same low-energy branch. The photon,
 gluons, and graviton stay massless because they ride on redundancy directions
 the architecture cannot break. The weak pair, the low-energy electromagnetic
 coupling, the Higgs-top surface, a running quark sector, and one
-weighted-cycle neutrino family all sit inside the same reconstruction. The late
-ledger records the scope of the weak validation pair, charged-lepton witnesses,
-source-only hadron backend rows, and empirical hadron closure rows. Hadrons add
-the strong-binding problem on top of that particle-level picture.
+weighted-cycle neutrino family all sit inside the same reconstruction. The
+technical status ledger separates weak validation, charged-lepton witnesses,
+source-only hadron calculations, and empirical hadron closure checks. Hadrons
+add the strong-binding problem on top of that particle-level picture.
 
 The particle words here refer to roles explained in Chapters 12-16: color is the
 three-way strong-force bookkeeping, CKM phases describe quark mixing under the
 weak interaction, and hadrons are composite particles such as protons and
 neutrons.
 
-That is the twist. The Standard Model no longer looks like a cabinet full of
+That is the twist. The Standard Model stops looking like a cabinet full of
 unrelated entries. It looks like the smallest charged world that lets the
 observer records close.
 
@@ -196,16 +196,15 @@ $\alpha^{-1}(0)$ means uncertainty in the last quoted digits. The number is
 the inverse fine-structure constant at zero momentum, the low-energy
 electromagnetic strength familiar from precision physics.
 
-The source-only audit row emits inverse alpha
-$136.994835164621649457949994585787193262029$ at pixel
-$1.63097209569432901817967892561191884270169$. The displayed endpoint uses the
-same OPH fixed-point equation with measured
+The source-only calculation gives inverse alpha
+$136.9948351646\ldots$ at pixel $1.6309720956943290\ldots$. The displayed
+endpoint uses the same OPH fixed-point equation with measured
 \(e^+e^-\to\mathrm{hadrons}\) input for the empirical hadronic contribution.
 
 The phrase $e^+e^-\to\mathrm{hadrons}$ names electron-positron annihilation
-into strongly interacting composite particles. It is not decorative detail.
-Those data help account for the hadronic contribution to the long-distance
-electromagnetic running used in the displayed endpoint.
+into strongly interacting composite particles. Those data help account for the
+hadronic contribution to the long-distance electromagnetic running used in the
+displayed endpoint.
 
 Alex Osika's optical-cavity hardware work probes the same fixed-point geometry.
 The apparatus is not a miniature universe. It is a controlled physical
@@ -218,7 +217,7 @@ available to observers inside the encoded world.
 
 ## 18.7 Why de Sitter Fits
 
-The large-scale universe is accelerating. In this framework that matters
+The large-scale universe is accelerating. In OPH that matters
 immediately, because de Sitter space gives every observer a natural horizon and
 therefore a natural screen.
 
@@ -247,7 +246,7 @@ splitting of the world into one autonomous inside and one autonomous outside.
 Interior data is encoded, not stored in a second hidden vault.
 
 Fine-tuning also changes tone. Once laws are read as the patterns that survive
-across many overlapping perspectives, a law is no longer a command pinned onto
+across many overlapping perspectives, a law is not a command pinned onto
 the universe from elsewhere. It is the shape that remains stable under the
 harsh test of public consistency.
 
@@ -306,7 +305,7 @@ views mutually legible without erasing their differences.
 The structure is not a flat list. The gauge quotient, charge lattice, counting
 chain, massless carriers, Lorentz geometry, Einstein relation, electroweak
 rows, Higgs-top surface, quark sector, and neutrino family form one organized
-reconstruction rather than a catalog of unrelated facts.
+reconstruction, not a catalog of unrelated facts.
 
 The local-ruler ledger records three technical boundaries. The weak pair is a
 validation row. Charged-lepton absolute masses are target-anchored witnesses.

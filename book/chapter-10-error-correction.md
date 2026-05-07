@@ -58,7 +58,7 @@ showed how stabilizer codes could be handled with a practical symbolic
 calculus. Knill and Laflamme then gave the clean condition for when a code can
 correct a set of errors. The modern surface-code program adds engineers,
 experimentalists, and many thousands of calibration decisions. The phrase
-"quantum error correction" now names a community achievement, not a lone trick.
+"quantum error correction" names a community achievement, not a lone trick.
 
 ## 10.3 The First-Principles Reframing: Reality Is Error-Corrected
 
@@ -94,7 +94,7 @@ A *perfect tensor* is a tensor that looks maximally entangled no matter how you 
 
 Tile a hyperbolic disk with these perfect tensors and three things happen at
 once. The RT formula becomes exact. Bulk operators can be recovered from
-different boundary regions. Erasing part of the boundary no longer destroys the
+different boundary regions. Erasing part of the boundary does not destroy the
 bulk information.
 
 **Geometry emerges from a code.** A stable bulk is hidden inside a noisy boundary through the right pattern of entanglement.
@@ -185,7 +185,7 @@ This is a vivid example of error correction in holography. But in OPH it should 
 
 ## 10.7 Observer Consistency as Error Correction
 
-Here is the connection to our thesis.
+The OPH connection is direct.
 
 ### The Observer-Code Correspondence
 
@@ -315,7 +315,7 @@ stored $|0_L\rangle$ or $|1_L\rangle$, the information would have leaked and
 correction would fail.
 
 Holographic reconstruction has the same flavor. A bulk degree of freedom is
-not stored at one boundary pixel. It is encoded across an extended boundary
+encoded across an extended boundary
 region. Erase some of the boundary and the bulk operator can still be
 reconstructed from what remains, as long as the entanglement wedge supports
 it. The formula is not identical to a lab surface code, and gravity only

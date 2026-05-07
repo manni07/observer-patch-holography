@@ -13,7 +13,7 @@ And they found problems. Paradoxes. Contradictions. They discovered that the int
 
 These philosophical puzzles are the original hints. They're the first cracks in the naive picture. When modern physics confirmed that reality is stranger than it appears, it was validating insights that thinkers had glimpsed millennia ago.
 
-This chapter traces those early hints. We'll see how Plato foreshadowed holographic themes, how Zeno raised discrete-structure puzzles, how the Skeptics anticipated contextuality-like questions, and how Kant foreshadowed emergent-space ideas. The philosophers were asking questions that later physics could formulate more sharply.
+The early hints run through Plato's holographic themes, Zeno's discrete-structure puzzles, the Skeptics' contextuality-like questions, and Kant's emergent-space arguments. The philosophers were asking questions that later physics could formulate more sharply.
 
 ### Through-line: Primacy of Perspective
 
@@ -171,7 +171,7 @@ You cannot start with the world because you may be wrong about the world. You ca
 
 ### The Physics
 
-Our model takes this seriously. We don't start with a global state of the universe and ask what local observers see. We start with local observers, each with their own patch of data, and ask how they can agree.
+OPH takes this seriously. It does not start with a global state of the universe and ask what local observers see. It starts with local observers, each with their own patch of data, and asks how they can agree.
 
 The observer is not added to physics as an afterthought. The observer is the starting point. Reality is what observers can agree on.
 
@@ -319,7 +319,7 @@ Hofstadter argued that consciousness itself is a strange loop, a pattern that pe
 
 ### The Physics
 
-This has profound implications for our model. If reality is computational, and observers are patterns within that computation that model reality, then we have a strange loop: reality contains observers that understand reality.
+This has profound implications for OPH. If reality is computational, and observers are patterns within that computation that model reality, then we have a strange loop: reality contains observers that understand reality.
 
 But strange-loop thinkers argue for something deeper: the loop may be part of how reality closes on itself. Self-reference becomes possible and structurally important.
 
@@ -367,7 +367,7 @@ But what if they are not?
 
 ### The Right Question
 
-Our framework supports a different perspective. Reality is not merely compared to computation; computation becomes a serious candidate organizing picture for reality. The screen is a quantum system processing information according to gauge constraints. Observers are patterns within that computation. The laws of physics are the rules that allow consistent information processing across patches.
+OPH supports a different perspective. Computation becomes a serious candidate organizing picture for reality. The screen is a quantum system processing information according to gauge constraints. Observers are patterns within that computation. The laws of physics are the rules that allow consistent information processing across patches.
 
 From this view, asking "are we in a simulation?" becomes less useful than asking what kind of computational organization reality may instantiate. Computation is not being used here as a loose metaphor; it is being treated as a serious candidate organizing picture for reality.
 
@@ -394,7 +394,7 @@ which configurations are allowed, and maximum entropy selects the state. It is
 a concrete quantum-computational model, with qubits, gates, and constraints,
 and in that model spacetime, particles, and observers all emerge as outputs.
 
-The simulation principle asked the right question but framed it wrong. The question is not "are we simulated?" The question is "what is the nature of the self-simulating loop we are part of?" Our framework provides a direction toward the answer.
+The simulation principle asked the right question in the wrong frame. The useful question is not "are we simulated?" It is "what is the nature of the self-simulating loop we are part of?" OPH gives that question a physical direction.
 
 ## 2.12 The Meter: A Case Study in Agreement
 
@@ -434,11 +434,9 @@ The convergence is striking. The intuitive picture of an objective 3D reality in
 
 ### The Original Hackers Were a Network
 
-The point of this chapter is not that Plato secretly knew holography, that
-Zeno secretly knew quantum gravity, or that Kant secretly knew gauge theory.
-That would be a bad history and a worse physics. The point is more useful:
-human beings kept finding the same weak joints in the ordinary picture long
-before the laboratory had the power to expose them.
+Plato, Zeno, and Kant are lineage markers, not retroactive physicists. The
+useful lesson is this: human beings kept finding the same weak joints in the
+ordinary picture long before the laboratory had the power to expose them.
 
 Plato's cave is powerful because it separates appearance from source. Zeno's
 paradoxes are powerful because they make infinite divisibility feel suspect.
@@ -477,7 +475,7 @@ cases. Physics later turned some of them into equations. OPH belongs to that
 same chain. It is an attempt to read the symptoms together, not to pretend
 that the chain began here.
 
-### What the Symbols in This Chapter Are Doing
+### What the Symbols Are Doing
 
 Only one equation was needed in this opening lineage chapter, but it carries
 the load for much of the book:
@@ -506,6 +504,6 @@ those hints precise.
 
 The philosophers gave us hints. The next step is the machinery.
 
-Black-hole entropy and holographic arguments push strongly toward a boundary-first description instead of naive volume counting. The holographic principle suggests that 3D physics may admit an encoding on 2D surfaces.
+Black-hole entropy and holographic arguments push strongly toward a boundary-first description, away from naive volume counting. The holographic principle suggests that 3D physics may admit an encoding on 2D surfaces.
 
-The next chapter turns that suspicion into a physical object: the **holographic screen**. Instead of speaking loosely about hidden structure, it asks where the data lives and why boundary area, rather than volume, controls it.
+The next chapter turns that suspicion into a physical object: the **holographic screen**. It asks where the data lives and why boundary area, not volume, controls it.

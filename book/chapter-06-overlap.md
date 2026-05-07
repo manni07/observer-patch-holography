@@ -32,7 +32,7 @@ In May 1935, Einstein, Boris Podolsky, and Nathan Rosen published what became kn
 
 EPR constructed a thought experiment. Take two particles created together and let them fly apart. Quantum mechanics says they can be *entangled*-correlated in a way that has no classical analog. Measure a property of one particle, and you instantly know the corresponding property of the other, even if they're light-years apart.
 
-Here's the puzzle. According to quantum mechanics, the particles don't have definite values until measured. But if I measure particle A and find it has spin-up, I instantly know particle B has spin-down-without ever touching particle B. Did my measurement somehow affect particle B instantaneously? Einstein called this "spooky action at a distance" and found it absurd.
+The puzzle is sharp. According to quantum mechanics, the particles don't have definite values until measured. But if I measure particle A and find it has spin-up, I instantly know particle B has spin-down-without ever touching particle B. Did my measurement somehow affect particle B instantaneously? Einstein called this "spooky action at a distance" and found it absurd.
 
 EPR concluded that quantum mechanics must be incomplete. The particles must have had definite values all along-values we just didn't know. There must be "hidden variables" underneath the quantum description.
 
@@ -128,7 +128,7 @@ When information is partial, we use probability distributions. Let rho_A be Alic
 
 $$\langle O \rangle_A = \int O(s)\rho_A(s)ds = \int O(s)\rho_B(s)ds = \langle O \rangle_B$$
 
-Here's the key fact for tree-like overlap structures: if marginals agree on overlaps, you can glue them into a joint distribution. If Alice's distribution over variable X matches Bob's marginal over X, and Bob's distribution over variable Y matches Carol's marginal over Y, there is a joint distribution P(X,Y,Z) that reproduces all the marginals.
+For tree-like overlap structures, the key fact is this: if marginals agree on overlaps, you can glue them into a joint distribution. If Alice's distribution over variable X matches Bob's marginal over X, and Bob's distribution over variable Y matches Carol's marginal over Y, there is a joint distribution P(X,Y,Z) that reproduces all the marginals.
 
 The angle brackets mean expectation value, the average result predicted for
 observable $O$. The variable $s$ labels a classical state, and $\rho_A(s)$ and
@@ -255,7 +255,7 @@ QMA is the quantum analog of NP. Just as NP captures problems where solutions ar
 Being QMA-complete means the Quantum Marginal Problem is as hard as any problem in the class. If you could solve QMP efficiently, you could solve any QMA problem efficiently.
 
 If the complexity labels are unfamiliar, keep the operational lesson: local
-quantum consistency is not just tedious bookkeeping. In the worst case it is as
+quantum consistency is serious bookkeeping. In the worst case it is as
 hard as the hardest verification problems quantum computers are expected to
 handle.
 
@@ -269,7 +269,7 @@ This shows that quantum mechanics hides global structure in a fundamentally comp
 
 ## 6.6 A Concrete Counterexample: Three Qubits
 
-Here's a case where quantum marginals look consistent but can't be glued together.
+One quantum case looks consistent locally but cannot be glued together.
 
 Consider three qubits $A$, $B$, and $C$. Suppose every pair were maximally
 entangled: $A$ with $B$, $B$ with $C$, and $A$ with $C$. Each pair looks
@@ -279,7 +279,7 @@ Each pair being maximally entangled seems fine. The reduced state of any single 
 
 Try to find a state |psi>_ABC that produces all three Bell pairs. You can't.
 
-Here's why. For any pure state of three parties, there's a constraint:
+The obstruction is simple. For any pure state of three parties, there's a constraint:
 
 $$S(\rho_A) = S(\rho_{BC})$$
 
@@ -313,7 +313,7 @@ $$|W\rangle = \frac{1}{\sqrt{3}}(|001\rangle + |010\rangle + |100\rangle)$$
 In the W state, every pair has some entanglement, but none is maximal. The entanglement is spread around, diluted.
 
 The GHZ state is named after Greenberger, Horne, and Zeilinger. The W state is
-named for the shape of its entanglement pattern rather than for a person. The
+named for the shape of its entanglement pattern, not for a person. The
 normalizing factors $1/\sqrt{2}$ and $1/\sqrt{3}$ make total probability 1.
 The three slots in each ket are the three qubits. These two states show that
 "three-party entanglement" is not one thing. It has distinct species.
@@ -340,7 +340,7 @@ The practical consequence is easy to state. Quantum systems do not come with a s
 
 ### The Peres-Mermin Magic Square
 
-Here's a vivid example. Arrange nine observables for two qubits in a 3x3 grid. Each row and each column contains three observables that can be measured together (they commute).
+The Mermin-Peres square gives a vivid example. Arrange nine observables for two qubits in a 3x3 grid. Each row and each column contains three observables that can be measured together (they commute).
 
 The product of observables in each row is +I (the identity).
 The product of observables in each column is +I.
@@ -406,7 +406,7 @@ If quantum mechanics is so resistant to consistency, how does the classical worl
 
 The answer involves a concept called **quantum Darwinism**, developed by Wojciech Zurek.
 
-Here's the idea. A quantum system interacts with its environment-air molecules, photons, everything around it. Some information about the system gets copied into the environment. Not perfectly copied (quantum mechanics forbids that), but redundantly encoded.
+The mechanism is environmental copying. A quantum system interacts with air molecules, photons, and everything around it. Some information about the system gets copied into the environment. Quantum mechanics forbids perfect copying of arbitrary unknown states, so the useful information is redundantly encoded in stable records.
 
 Consider Schroedinger's cat. If the cat is alive, air molecules bounce off it in a certain way. Light reflects off it in a certain way. Heat radiates from it in a certain way. Each of these environmental fragments carries partial information about the cat's state.
 
@@ -491,8 +491,8 @@ $$\omega_i(O) = \omega_j(O)$$
 They must assign the same expectation value.
 
 $O$ is any observable in the overlap. The equation says that the two observers
-do not need identical private descriptions everywhere, but they must make the
-same predictions for questions both can actually ask.
+may keep different private descriptions elsewhere. On the overlap, they must
+make the same predictions for questions both can actually ask.
 
 ### The Patch Graph
 
@@ -520,7 +520,7 @@ bound.
 
 ## 6.13 Reverse Engineering Summary
 
-This chapter turns objectivity into agreement. Correlations do not need to be
+Objectivity becomes agreement. Correlations do not need to be
 explained by hidden classical instruction sets carried from a common past.
 Bell's theorem makes that fantasy too small for the world we observe. Here,
 the stronger quantum structure belongs to the consistency conditions linking
@@ -539,10 +539,9 @@ We have the Screen. We have the Algebra. We have the Consistency Rules.
 
 But what if the web gets torn? What if I measure something here, and you measure something there, and we lose the connection? What if information seems to disappear into a black hole or leak out through quantum noise?
 
-That tension is sharper after this chapter than before it. Overlap is
-contextual, entanglement is limited, and global compatibility can be brutally
-hard to check. A world built from such ingredients should feel fragile. The
-next chapter explains why it does not.
+That tension is sharper here. Overlap is contextual, entanglement is limited,
+and global compatibility can be brutally hard to check. A world built from such
+ingredients should feel fragile. The next chapter explains why it does not.
 
 That is where the next chapter picks up. If overlap is contextual, limited, and sometimes globally hard, why does the world feel stable at all? Why do broken traces, partial records, and scrambled signals so often still lead back to one shared history?
 

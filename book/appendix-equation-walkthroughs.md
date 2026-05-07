@@ -112,8 +112,8 @@ uncertainty relation follows:
 $$\Delta X\,\Delta P\geq\frac{\hbar}{2}.$$
 
 $\Delta X$ and $\Delta P$ are spreads in possible measurement outcomes. The
-relation is not merely about disturbing a particle with a bad instrument. It
-is about the algebraic structure of the questions themselves.
+relation is about the algebraic structure of the questions themselves, not
+about disturbing a particle with a bad instrument.
 
 OPH puts local algebras on patches because this structure has to be respected
 when observers compare notes. A shared public world cannot be built from a
@@ -168,8 +168,7 @@ formula says that a boundary entanglement quantity is measured by a bulk
 geometric area.
 
 This is one of the strongest bridges between quantum information and
-geometry. Entropy is not merely sitting inside space. Entropy helps define
-the spatial relationships. If the entanglement pattern changes, the emergent
+geometry. Entropy helps define the spatial relationships. If the entanglement pattern changes, the emergent
 geometry changes.
 
 OPH uses the RT idea as evidence that the public bulk can be reconstructed
@@ -286,8 +285,7 @@ same status. Higgs and top relations, charged-lepton anchors, quark payloads,
 and neutrino assumptions must be tracked separately.
 
 The equation is a good example of how a simple-looking formula can carry a
-large experimental and theoretical world. It is not just a curve. It is a
-mechanism for why the low-energy world has massive weak bosons and massive
+large experimental and theoretical world. It is a mechanism for why the low-energy world has massive weak bosons and massive
 fermions.
 
 ## The Relativistic Energy Relation
@@ -299,7 +297,7 @@ In natural units, physicists set $c=1$ and the equation becomes
 $E^2=p^2+m^2$. For a particle at rest, $p=0$, so $E=mc^2$.
 
 The equation links mass, motion, and energy in special relativity. OPH uses
-it in the matter chapter to remind the reader that matter is not just stuff
+it in the matter chapter to remind the reader that matter is not stuff simply
 moving through space. Energy, momentum, mass, and time translation are part
 of one relativistic structure.
 
@@ -322,12 +320,12 @@ public copy.
 
 This warning belongs in an equation appendix because not every important
 symbol is part of a successful derivation. Some symbols mark the edge of the
-current theory. A good ledger records those edges as clearly as its wins.
+OPH derivation. A good ledger records those edges as clearly as its wins.
 
-## A Practical Audit Method for Any New Equation
+## A Practical Audit Method for Equations
 
-When a future edition adds an equation, the author or reviewer should be able
-to answer a fixed set of questions before the equation is allowed to stand.
+For any equation in the book, the author or reviewer should be able to answer
+a fixed set of questions before the equation is allowed to stand.
 
 First, what are the symbols? Every symbol should have a declared meaning in
 the local paragraph or in an earlier chapter where the reader can reasonably
@@ -344,11 +342,10 @@ gravitational.
 
 Third, what kind of statement is the equation? It may be a definition, an
 established theorem, an empirical fit, a dimensional estimate, a conditional
-OPH derivation, a conjectural continuation, or a numerical audit row. These
-categories should not be blurred. A definition cannot be experimentally
-confirmed in the same way as a prediction. A conditional derivation cannot
-carry the same weight as an established theorem unless its assumptions are
-accepted.
+OPH derivation, a conjectural continuation, or a numerical consistency check.
+These categories should stay distinct. A definition cannot be experimentally
+confirmed in the same way as a prediction. A conditional derivation carries the
+weight of its assumptions.
 
 Fourth, what is being held fixed? Many equations are misunderstood because the
 reader does not know the controlled variables. Carnot fixes reservoir
@@ -370,11 +367,10 @@ ambiguity, a missing uncertainty estimate, or an invalid transfer from one
 mathematical setting to another can all break a claim. A book that explains
 failure conditions is more trustworthy than one that hides them.
 
-This audit method is part of the publication cycle. When new diagrams or
-chapters are added, equations should be checked against it. When release
-scripts rebuild the PDF, the text should not merely compile. It should still
-explain itself. The point of a beautiful PDF is not only visual polish. It is
-to make the intellectual contract with the reader visible on every page.
+This audit method is part of the publication discipline. Equations should be
+checked against it whenever a chapter or diagram depends on them. A beautiful
+PDF also has to make the intellectual contract with the reader visible on
+every page.
 
 ## How the Appendices Should Be Used
 
@@ -386,16 +382,14 @@ reader evaluating status claims can use the chapter ledger to check whether a
 claim is established, conditional, target anchored, empirical-payload
 dependent, or open.
 
-The appendices also make the book easier to maintain. If a future paper audit
-downgrades a theorem status, the relevant chapter and the ledger entry should
-change together. If a new diagram is added, the concept it visualizes should
-also be named in the glossary or chapter ledger. If a public website summary
-uses a simplified phrase, the appendix can act as the more careful reference
-surface.
+The appendices also give the book a stable reference surface. A theorem-status
+label in a chapter should match the ledger. A diagram should visualize a
+concept that the glossary or chapter ledger can name. A simplified public
+summary should be traceable to a more careful explanation inside the book.
 
-This matters because OPH is not a frozen artifact. It is a research program
-with public-facing explanations, paper PDFs, web chapters, bots, and release
-automation. The same idea can drift as it moves across those surfaces. The
+This matters because OPH is a research program with several public surfaces:
+papers, book chapters, diagrams, PDF downloads, websites, and explanatory
+systems. The same idea can drift as it moves across those surfaces. The
 appendices are one defense against drift. They say, in slower language, what
 the book means by its symbols, diagrams, and claims.
 
@@ -404,23 +398,19 @@ A cover can invite the reader in. A diagram can orient them. A long narrative
 can keep them engaged. But the theory earns trust only when every equation,
 status label, and historical inheritance remains checkable.
 
-## Maintenance Notes for Future Releases
+## The Publication Contract
 
-Future releases should treat the book as part of the same research surface as
-the papers. If a paper claim changes, the corresponding book passage should
-be searched, not trusted from memory. The common drift points are easy to
-predict: theorem-status language, particle-ledger rows, dark-sector claims,
-the strong-CP boundary, neutrino assumptions, charged-lepton anchors, hadron
-payload language, and metaphysical summaries that may sound more settled than
-the technical chapter permits.
+The book belongs to the same research surface as the papers. Paper claims,
+book passages, diagrams, and PDF downloads should carry the same status
+language. The common drift points are theorem-status language, particle-ledger
+rows, dark-sector claims, the strong-CP boundary, neutrino assumptions,
+charged-lepton anchors, hadron payload language, and metaphysical summaries
+that may sound more settled than the technical chapter permits.
 
-Every new release should also rebuild the PDF after the Markdown chapters
-change. A generated PDF is not merely a convenience artifact. It is the most
-stable downloadable form of the public book. That means it must carry the
-current cover, current diagrams, current appendices, and current cautious
-wording. If the website refreshes but the PDF lags, readers receive two
-different books. If the PDF refreshes but the backend chapter database lags,
-the public site and download disagree. Both cases are release failures.
+The PDF is the most stable downloadable form of the public book. It should
+carry the cover, diagrams, appendices, and cautious wording. If the website
+and PDF disagree, readers receive two different books. That is a publication
+failure.
 
 The visual inspection step is part of the content process, not a cosmetic
 afterthought. Equations can overflow. Captions can detach from diagrams.
@@ -437,11 +427,9 @@ reader deserves the condition. Length is justified only when it pays those
 debts.
 
 Finally, the normal publication cycle should keep source and artifact
-together. The book sources, graphics, cover, build script, and generated PDF
-belong inside `reverse-engineering-reality`. Release automation should rebuild
-the PDF before publishing. The book refresh endpoint should be called only
-after the intended commit is available to the backend source. That order keeps
-the public book, downloadable PDF, and research repository aligned.
+together. The chapters, graphics, cover, build rules, and generated PDF belong
+to one book package. The PDF should be rebuilt before public refresh. That
+order keeps the public book, downloadable PDF, and research record aligned.
 
 One more rule follows from the same discipline: never let a short public
 summary become the only place where a claim is explained. Summaries are useful
@@ -450,35 +438,34 @@ symbols, the assumptions, the known lineage, the status label, and the open
 edge. If a reader arrives from the website, a social post, a bot answer, or a
 download link, the PDF should still give them enough context to audit the
 claim without guessing what the shorthand meant. That is why the appendices
-exist, and why the release process should preserve them as first-class book
-material.
+exist, and why the publication process should preserve them as first-class
+book material.
 
-For the same reason, future editorial passes should prefer clarification over
+For the same reason, editorial passes should prefer clarification over
 compression when a chapter introduces unfamiliar notation. A concise paragraph
 that names each symbol can prevent hundreds of readers from silently losing
-the thread. The best popular-science prose is not prose that avoids
-technicality. It is prose that earns technicality by making every new object
-do visible work. OPH asks readers to follow a long bridge across philosophy,
-thermodynamics, quantum theory, relativity, holography, particle physics, and
-metaphysics. The bridge can be demanding, but it should not contain hidden
-steps.
+the thread. The best popular-science prose earns technicality by making every
+object do visible work. OPH asks readers to follow a long bridge across
+philosophy, thermodynamics, quantum theory, relativity, holography, particle
+physics, and metaphysics. The bridge can be demanding, but it should not
+contain hidden steps.
 
 That editorial rule also honors the community behind the work. Every compact
 equation in this book rests on years of argument, measurement, and repair by
 many people. Explaining notation is therefore not a concession to beginners.
 It is respect for the chain of work that made the notation meaningful.
 
-A future reviewer should be able to trace any public claim back through that
-chain: from the sentence in the book, to the symbol in the equation, to the
-paper or established result behind it, to the generated PDF and live book
-surface that readers actually see. When that trace is intact, publication is
-not just distribution. It is accountable communication.
+A reviewer should be able to trace any public claim back through that chain:
+from the sentence in the book, to the symbol in the equation, to the paper or
+established result behind it, to the generated PDF and live book surface that
+readers actually see. When that trace is intact, publication is accountable
+communication.
 
 That accountability is the final overlap condition between author, reader,
-repository, website, and release artifact.
+source, website, and downloadable artifact.
 
-It is also how a living research book stays honest while it grows.
+It is also how a research book stays accountable.
 
-That standard applies to every future edition.
+That standard applies to every edition.
 
-No future release should skip that check.
+No publication pass should skip that check.

@@ -14,8 +14,8 @@ where established field theory and relativity enter the reconstruction.
 **Algebra.** An algebra is a collection of observables together with rules for
 adding and multiplying them. In quantum theory the multiplication can be
 non-commutative, meaning $AB$ need not equal $BA$. The book puts algebras on
-observer patches because a patch is not merely a region with facts inside it.
-It is a region with a structured menu of possible questions.
+observer patches because a patch is a region with a structured menu of possible
+questions, not a box of facts.
 
 **Anomaly.** An anomaly is a mismatch between a classical symmetry and the
 quantum theory, or more broadly a leftover term that prevents an ideal
@@ -25,7 +25,7 @@ anomaly is a residual mismatch in the modular-geometric bookkeeping that
 acts gravitationally while remaining dark to electromagnetic probes.
 
 **Area law.** An area law says that a quantity scales with boundary area
-rather than volume. Black-hole entropy is the central example:
+by boundary area, not volume. Black-hole entropy is the central example:
 $S=A/(4\ell_P^2)$ in natural units. Entanglement entropy in many low-energy
 states also obeys area-like scaling. OPH treats area laws as one of the
 strongest clues that boundary screens carry the fundamental bookkeeping.
@@ -36,8 +36,8 @@ no-signaling. The CHSH statistic $S$ has a classical limit $|S|\leq2$ and a
 quantum limit $2\sqrt2$. Bell correlations show that shared reality cannot
 be explained by local prewritten instruction sheets.
 
-**Boundary.** A boundary is not merely the edge of a container in this book.
-It is the surface or interface where information capacity, comparison, and
+**Boundary.** A boundary is the surface or interface where information capacity,
+comparison, and
 reconstruction are organized. Black-hole horizons, de Sitter horizons, and
 observer-patch overlaps all use boundary logic, although they are not the
 same mathematical object.
@@ -176,7 +176,7 @@ states, algebras, and screen degrees of freedom.
 **Holography.** Holography is the idea that bulk gravitational physics can be
 encoded on a boundary. It is motivated by black-hole entropy and realized
 sharply in AdS/CFT. OPH adapts the lesson to observer-dependent finite
-screens rather than assuming one global boundary at infinity.
+screens without assuming one global boundary at infinity.
 
 **Horizon.** A horizon is a boundary of causal access. A black-hole horizon
 separates outside observers from the interior. A de Sitter horizon limits
@@ -212,7 +212,7 @@ arguments use this style of reasoning to make repair termination precise.
 **MaxEnt.** Maximum entropy inference chooses the least biased state
 compatible with known constraints. Jaynes made this a general principle of
 statistical reasoning. OPH uses MaxEnt to select screen states under stable
-local constraints rather than adding unnecessary structure.
+local constraints without adding unnecessary structure.
 
 **Metric.** The metric $g_{\mu\nu}$ defines distances, times, and causal
 relations in spacetime. General relativity treats the metric as dynamical.
@@ -231,7 +231,7 @@ why it fits observer patches.
 
 **No-cloning.** The no-cloning theorem says an unknown quantum state cannot be
 copied perfectly. This forces quantum error correction to use entangled
-encoding rather than simple duplication. It also helps explain why public
+encoding, not simple duplication. It also helps explain why public
 classical records are special.
 
 **Noether theorem.** Noether's theorem links continuous symmetries to
@@ -344,8 +344,8 @@ producing the reduced state seen by a local observer.
 
 **Uncertainty relation.** The uncertainty relation limits simultaneous
 sharpness of non-commuting observables. For position and momentum it is
-$\Delta X\Delta P\geq\hbar/2$. It reflects algebraic structure, not merely
-measurement disturbance.
+$\Delta X\Delta P\geq\hbar/2$. It reflects algebraic structure, not measurement
+disturbance alone.
 
 **Unitarity.** Unitarity is the quantum rule that total time evolution
 preserves inner products and total probability. The black-hole information
