@@ -1,6 +1,6 @@
 # Particle Derivation Gap Ledger
 
-Generated: `2026-05-07T01:36:54Z`
+Generated: `2026-05-07T03:01:04Z`
 
 Systematic claim-safe queue after the five-equation P-trunk simplification.
 

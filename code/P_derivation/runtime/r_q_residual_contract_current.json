@@ -7,7 +7,7 @@
     "S_required",
     "c_Q target"
   ],
-  "generated_utc": "2026-05-06T10:15:20Z",
+  "generated_utc": "2026-05-07T03:01:04Z",
   "github_issue": 235,
   "issue_235_resolution": {
     "close_recommendation": "close_as_first_missing_lemma_isolated",
@@ -16,10 +16,10 @@
     "minimal_new_theorem": "WardProjectedHadronicSpectralEmission_Q"
   },
   "promotion_allowed": false,
-  "required_center_at_compare_pixel": "0.04146586100522338906579687487",
+  "required_center_at_compare_pixel": "0.04146586100522338905344871536",
   "required_image_on_I_P": {
-    "hi": "0.041465882203433082437059770911496119165336126803548185781191920386024546159389117020589968294",
-    "lo": "0.041465839807013695694533978824727497250816029298626968384049991899081453840610882979410031706"
+    "hi": "0.041465882203433082424711611400698355444562130738367725266691528892915269231530459298257778294",
+    "lo": "0.041465839807013695682185819313929733530042033233446507869549600405972155581400042935011741706"
   },
   "required_map": "R_Q(P)=Delta_had_src(P)+Delta_EW_src(P)-implemented_free_quark_screen_component(P)",
   "required_prime_abs_target": "1000",

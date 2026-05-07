@@ -28,6 +28,7 @@ from paper_math import PaperMathContext, _dec, to_serializable
 
 DEFAULT_REPORT = Path(__file__).resolve().parent / "runtime" / "full_p_alpha_report_current.json"
 DEFAULT_OUT = Path(__file__).resolve().parent / "runtime" / "thomson_endpoint_package_current.json"
+DEFAULT_ENDPOINT_PRECISION = 80
 
 
 def _now_utc() -> str:
@@ -132,7 +133,7 @@ def build_endpoint_package(
     *,
     compare_alpha_inv: Decimal = CODATA_2022_ALPHA_INV,
     compare_alpha_inv_uncertainty: Decimal = CODATA_2022_ALPHA_INV_UNCERTAINTY,
-    precision: int = 60,
+    precision: int = DEFAULT_ENDPOINT_PRECISION,
     su2_cutoff: int = 80,
     su3_cutoff: int = 60,
 ) -> dict[str, Any]:
@@ -223,7 +224,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output", default=str(DEFAULT_OUT))
     parser.add_argument("--compare-alpha-inv", default=str(CODATA_2022_ALPHA_INV))
     parser.add_argument("--compare-alpha-inv-uncertainty", default=str(CODATA_2022_ALPHA_INV_UNCERTAINTY))
-    parser.add_argument("--precision", type=int, default=60)
+    parser.add_argument("--precision", type=int, default=DEFAULT_ENDPOINT_PRECISION)
     parser.add_argument("--su2-cutoff", type=int, default=80)
     parser.add_argument("--su3-cutoff", type=int, default=60)
     parser.add_argument("--print-json", action="store_true")

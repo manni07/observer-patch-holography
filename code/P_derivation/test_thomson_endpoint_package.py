@@ -5,7 +5,11 @@ from __future__ import annotations
 
 from decimal import Decimal
 
-from thomson_endpoint_package import build_endpoint_package
+from thomson_endpoint_package import DEFAULT_ENDPOINT_PRECISION, build_endpoint_package
+
+
+def test_endpoint_package_default_precision_matches_public_values() -> None:
+    assert DEFAULT_ENDPOINT_PRECISION == 80
 
 
 def test_endpoint_package_is_conditional_and_source_guarded() -> None:
