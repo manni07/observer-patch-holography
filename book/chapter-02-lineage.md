@@ -9,7 +9,7 @@ accelerators or interferometers. They had something close in spirit: pure
 logical reasoning applied to careful observation. They asked what *must* be
 true if experience is to make any sense at all.
 
-And they found problems. Paradoxes. Contradictions. They discovered that the intuitive picture-objective reality independent of observers-leads to logical difficulties.
+And they found problems. Paradoxes. Contradictions. They discovered that the intuitive picture of an objective reality independent of observers leads to logical difficulties.
 
 These philosophical puzzles are the original hints. They're the first cracks in the naive picture. When modern physics confirmed that reality is stranger than it appears, it was validating insights that thinkers had glimpsed millennia ago.
 
@@ -207,7 +207,7 @@ We don't perceive space directly. Our minds construct spatial experience from mo
 
 The holographic principle and emergent geometry resonate with this picture.
 
-The fundamental data lives on the 2D holographic screen. This data has no spatial interpretation-it's just quantum information on a sphere. Space is *reconstructed* from this data through the pattern of entanglement.
+The fundamental data lives on the 2D holographic screen. This is not yet the familiar 3D bulk geometry; it is quantum information organized on a sphere. Space is *reconstructed* from this data through the pattern of entanglement.
 
 The Ryu-Takayanagi formula makes the geometry-entanglement link precise in
 holographic settings: the amount of entanglement across a boundary is computed

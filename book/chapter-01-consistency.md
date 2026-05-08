@@ -146,11 +146,11 @@ OPH reframes this problem.
 
 The puzzle assumes a God's-eye view where the wave function is "really" in superposition, followed by something magical called "collapse." There is no God's-eye view. There are only observer patches.
 
-From within a patch, you always see definite outcomes. That's what it means to be an observer: you have records, and records are definite. The "superposition" isn't a mysterious state waiting to collapse. It's a description of how different observers' potential records relate to each other before they compare notes.
+From within a patch, measurement is registered through definite records on the operational readout surface. The "superposition" is not a mysterious state waiting for a magic event. It is a description of how different observers' potential records relate to each other before they compare notes.
 
-When Alice measures an electron's spin, she gets a definite result. Always. There's no moment where she experiences superposition. The wave function describes the consistency relations between Alice's possible outcomes and Bob's possible outcomes. When they meet and compare, their records must agree. That agreement is what "collapse" describes from the outside.
+When Alice measures an electron's spin, her instrument writes one definite record on that readout surface. The wave function describes the consistency relations between Alice's possible records and Bob's possible records. When they meet and compare, those records must agree on the shared event surface. That agreement is the operational content behind textbook collapse language.
 
-The measurement problem asks: "When does objective reality become definite?" Our answer is that OPH reorganizes that question around observer patches and record consistency. Reality was never "indefinite" from any observer's perspective. It was always definite within each patch. The wave function describes how patches must relate, not some ghostly pre-measurement state.
+The measurement problem asks: "When does objective reality become definite?" Our answer is that OPH reorganizes that question around observer patches and record consistency. What becomes definite in the first instance are the records carried by each patch. The wave function describes how patches must relate, not some ghostly pre-measurement stage.
 
 Bohr was half right. He insisted that quantum mechanics describes relationships between observers and systems, not systems in isolation. OPH makes this precise: quantum mechanics is the mathematics of patch consistency.
 
@@ -267,7 +267,7 @@ observer lives on a finite patch.
 
 What picture explains all these hints?
 
-**A strong OPH reading is that what we call objective reality is reconstructed from a network of subjective perspectives that must agree where they overlap.**
+**What we call objective reality is reconstructed from a network of subjective perspectives that must agree where they overlap.**
 
 This sounds radical, but think about what "reality" actually means operationally. It means agreement. If I see a red car parked on the street, and you look at the same spot and see a blue elephant, we have a problem. If a third person sees a red car, and a fourth person sees a red car, we conclude the red car is "real."
 
@@ -289,7 +289,7 @@ We propose this principle goes deeper than biology. It applies to physics itself
 
 In OPH, the laws of physics, Lorentz symmetry, gauge structure, and conservation laws emerge from the consistency program. They are not imposed from outside.
 
-**A strong OPH reading views the laws of physics as survivors of a selection process.**
+**The laws of physics can be read as survivors of a selection process.**
 
 Think of the early universe as a chaos of competing possibilities: different geometries, different dynamics, different rules. Most configurations were inconsistent. They could not support stable patterns. They could not enable multiple observers to share a coherent reality.
 
@@ -387,7 +387,7 @@ In the chapters ahead, we'll apply this method systematically:
 
 **Chapter 17-19**: The selection hint-why these laws and not others? Are laws evolutionary survivors? And what does this mean for existence itself?
 
-The 3D world you see around you-the chairs, the stars, the empty space-is not the primary storage device of reality. The real data is stored on boundaries. We call this the holographic principle. It says that everything happening in a volume of space can be described by data on the surface that encloses it.
+The 3D world you see around you-the chairs, the stars, the empty space-is not the primary storage device of reality. The real data is organized on boundaries. We call this the holographic principle. In gravitational settings, it says that the independent bookkeeping for a region may be carried by data on the surface that encloses it.
 
 This isn't philosophy. It's physics, and the first hard clue came from black holes.
 

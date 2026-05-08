@@ -99,9 +99,9 @@ Boltzmann's answer: the arrow of time is not in the laws. It is in the initial c
 
 The universe started in a very low-entropy state. Given that starting point, entropy almost certainly increases. If the universe had started in equilibrium, it would stay there-no arrow of time, no memory, no observers.
 
-## 4.3 The Past principle
+## 4.3 The Past Hypothesis
 
-This idea-that the arrow of time traces back to a special beginning-is called the **Past principle**.
+This idea-that the arrow of time traces back to a special beginning-is called the **Past Hypothesis**.
 
 ### What Low Entropy Means for the Early Universe
 
@@ -132,14 +132,14 @@ laws.
 
 **The hint**: The microscopic laws are time-symmetric. Irreversibility is statistical, not fundamental. The arrow traces to the low-entropy initial condition.
 
-**The reframing**: OPH gives the Past principle a consistency role. Standard physics usually treats the low-entropy beginning as a brute fact, an unexplained initial condition. This picture suggests why low-entropy beginnings are structurally important.
+**The reframing**: OPH gives the Past Hypothesis a consistency role. Standard physics usually treats the low-entropy beginning as a brute fact, an unexplained initial condition. This picture suggests why low-entropy beginnings are structurally important.
 
 Consider: for observers to exist at all, they must be able to form consistent records. Records require entropy gradients-you can only write information by pushing entropy somewhere else. A universe in thermal equilibrium has no observers, no records, no consistency-checking, no reality in the sense we've been developing.
 
 The MaxEnt principle tells us to assign the maximum-entropy state *given our constraints*. But what are the constraints? If one of them is "observers exist to apply MaxEnt," then equilibrium states are ruled out by construction. The very act of asking "what state should I assign?" presupposes a questioner embedded in an entropy gradient.
 
 This does not derive the specific low entropy of the Big Bang from pure logic.
-It does show why the Past principle is structurally important in this picture.
+It does show why the Past Hypothesis is structurally important in this picture.
 A universe with durable observers checking for consistency requires a
 significant departure from equilibrium. The low-entropy past is therefore a
 structural precondition for the consistency-building present.
@@ -404,7 +404,7 @@ geometry. The work of making observations agree consumes free energy and
 generates entropy. Durable observers therefore require entropy gradients, and
 entropy gradients point back toward a low-entropy beginning.
 
-On this reading, the Past principle is not a decorative extra. It is part of
+On this reading, the Past Hypothesis is not a decorative extra. It is part of
 the deep structure required for records, comparison, and public reality.
 
 ## 4.11 Summary: The Entropy Budget
