@@ -74,7 +74,8 @@ memories fade, quantum fluctuations intrude. If two observers want to agree on
 a shared world, they need redundancy, overlap, and a correction protocol. That
 is exactly what error-correcting codes provide.
 
-**Reality is error-corrected.** The consistency we observe requires robust encoding of shared information.
+**Reality can be read as error-corrected.** The consistency we observe requires
+robust encoding of shared information.
 
 ### Holographic Error Correction
 
@@ -84,7 +85,9 @@ In 2015, Almheiri, Dong, and Harlow (ADH) showed that the AdS/CFT dictionary has
 
 The geometric structure is controlled by **entanglement wedges**. For a boundary region A, the entanglement wedge is the bulk region that can be reconstructed from A. A bulk point can be reconstructed from any boundary region whose entanglement wedge contains it.
 
-This redundancy makes the bulk stable. Operators deep in the bulk require large boundary regions to reconstruct-they have high code distance. The radial direction in AdS corresponds to protection level. Depth equals robustness.
+This redundancy makes the bulk stable. Operators deep in the bulk require large
+boundary regions to reconstruct-they have high code distance. In the toy-model
+picture, radial depth tracks protection level.
 
 ### The HaPPY Code
 
@@ -245,7 +248,10 @@ protected subspace in the same bland way, differing only by an overall number.
 The physical carrier may be damaged, but the logical information stays hidden
 from the noise. That hiddenness is what makes recovery possible.
 
-In quantum gravity, we only have approximate codes. The Knill-Laflamme condition holds up to 1/N corrections. This is enough to make classical spacetime look stable.
+In quantum gravity, we only have approximate codes. The Knill-Laflamme
+condition is correspondingly approximate, with corrections often organized in
+powers of \(1/N\). That is enough to make classical spacetime look stable in
+the controlled large-\(N\) settings where the code picture applies.
 
 ## 10.9 The Threshold Theorem
 

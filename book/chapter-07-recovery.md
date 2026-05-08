@@ -78,9 +78,11 @@ The information isn't destroyed. It's scrambled. Hidden in correlations among bi
 
 ### The Universe's Error Correction
 
-**The universe is built with error-correcting structure that preserves information even when it appears lost.**
+**The universe appears to use error-correcting structure that preserves information even when it appears lost.**
 
-In quantum mechanics, this requirement is non-negotiable. Quantum evolution is **unitary**-reversible by definition. If information could genuinely be destroyed, unitarity would break. If unitarity breaks, probabilities don't sum to 1. Physics collapses into nonsense.
+In quantum mechanics, this requirement is non-negotiable. Closed-system quantum
+evolution is **unitary**. If information were genuinely destroyed in that
+setting, the standard quantum-mechanical evolution law would fail.
 
 So the universe must preserve information, even when it looks scrambled beyond recognition. There must be a mechanism-a "Save Game" feature-that allows, in principle, the smoke to remember what the scroll said.
 
@@ -121,7 +123,9 @@ The universe has finite resources. Recovery must be efficient, local, bounded. Y
 
 This constraint shapes reality. The area law says a boundary can only carry so many bits. If information capacity is bounded by area, then recovery must respect geometry. Distant regions can't share unlimited redundancy.
 
-**Spacetime itself behaves like a Shannon code.** Gravity acts like an error corrector, keeping the global account consistent even when local observations are noisy.
+**Spacetime can be read through a Shannon-code analogy.** Gravity then acts
+like an error corrector, keeping the global account consistent even when local
+observations are noisy.
 
 ## 7.5 The Mathematics of Redundancy
 
@@ -242,7 +246,10 @@ $\rho_{BC}$ is the reference correlation pattern telling the map how $B$ and
 $C$ fit together. The square roots and inverse square roots are matrix
 operations that rebalance the known state before rebuilding the missing side.
 
-Don't worry about the formula's details. This is a physical operation, something you could implement with a quantum computer. Given only B's state sigma, the Petz map outputs a state on BC that correctly reproduces all correlations with A.
+Don't worry about the formula's details. This is a physical operation, in
+principle something you could implement on a quantum device. Given only B's
+state sigma, the Petz map outputs a comparison state on BC that reproduces the
+reference correlations in the exact Markov case.
 
 Think of it like calibrating a distorted photograph. The original image (BC) got scrambled into a noisy version (B alone). The Petz map knows what the original "should" look like (from the reference state rho_BC) and applies the inverse distortion.
 
@@ -353,13 +360,13 @@ The recovery rule has dramatic consequences. If the interior of a region can be
 recovered from its boundary, bulk physics is encoded in boundary physics. If
 $I(A:C|B)$ is small, then $A$ and $C$ behave independently once $B$ is known,
 which is exactly the operational face of locality. Ground states of local
-Hamiltonians tend toward area-law entanglement because recovery keeps the
-correlations under control. Classical facts become the records that survive
-because they are redundantly encoded.
+Hamiltonians often show area-law entanglement, and recoverability helps explain
+why correlations can remain organized in a boundary-sensitive way. Classical
+facts become the records that survive because they are redundantly encoded.
 
-## 7.10 The Black Hole Information Paradox Resolved
+## 7.10 The Black Hole Information Paradox Reframed
 
-The recovery rule resolves one of physics' most famous puzzles.
+The recovery perspective sharpens one of physics' most famous puzzles.
 
 ### Hawking's Calculation
 
@@ -462,7 +469,8 @@ information does not need to sit in one place to survive.
 
 ## 7.13 The Indestructible Past
 
-The recovery rule has a startling implication: in this recoverability picture, nothing is ever truly lost.
+The recovery rule has a startling implication: in this recoverability picture,
+nothing is simply deleted from the full quantum description.
 
 If the universe is unitary and holographic encoding is robust, information is not simply destroyed; it is redistributed into increasingly nonlocal correlations of the full quantum state.
 
@@ -470,7 +478,8 @@ The Library of Alexandria? The scrolls burned, and the information scrambled int
 
 Paleontology and astronomy use weak versions of this. Fossils preserve information about creatures from millions of years ago. Astronomy records light that has traveled for billions of years before reaching our telescopes. The cosmic microwave background is one vivid example of very old information preserved in radiation.
 
-The recovery rule says this is not accident or luck. It's structural: the past is encoded in the present in increasingly scrambled form.
+The recovery rule says this is not accident or luck. In a unitary encoding
+picture, the past is carried forward in increasingly scrambled form.
 
 ### The Structural Constraint
 
@@ -493,7 +502,9 @@ why black holes do not behave like cosmic shredders. And it is why spacetime
 starts to look like a code, a structure whose geometry and stability are tied
 to the same redundancy that protects information.
 
-Shannon started with a practical problem-sending messages over noisy phone lines. His solution, redundancy, turns out to be built into spacetime itself. The universe is the ultimate error-correcting code.
+Shannon started with a practical problem-sending messages over noisy phone
+lines. His solution, redundancy, reappears as one of the strongest organizing
+analogies for spacetime and holographic encoding.
 
 ---
 

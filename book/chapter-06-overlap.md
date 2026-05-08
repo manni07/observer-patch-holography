@@ -172,7 +172,8 @@ The hardness of the Quantum Marginal Problem tells us the filter is doing real w
 
 Overlap conditions favor allowing correlations that exceed classical bounds.
 Bell-violating correlations can then be read as part of the quantum structure
-that helps keep patches consistent without a large hidden-variable overhead.
+available to an observer-consistency framework, without appealing to a large
+hidden-variable overhead.
 
 In a universe built on observer agreement, the nonlocal correlations that so troubled Einstein are not inexplicable. They become part of the consistency structure, with no unexplained add-on.
 
@@ -263,7 +264,9 @@ handle.
 
 In classical physics, local data often determine global data on simple overlap structures, and compatibility checking is much easier than in the quantum case.
 
-In quantum physics, local data constrain but don't determine global data. Checking consistency is computationally hard-there's no efficient algorithm to decide if quantum marginals are compatible.
+In quantum physics, local data constrain but don't determine global data. In
+the worst case, checking consistency is computationally hard-there is no known
+efficient general algorithm to decide whether quantum marginals are compatible.
 
 This shows that quantum mechanics hides global structure in a fundamentally complex way. You can't easily deduce the whole from the parts.
 
@@ -408,7 +411,7 @@ The answer involves a concept called **quantum Darwinism**, developed by Wojciec
 
 The mechanism is environmental copying. A quantum system interacts with air molecules, photons, and everything around it. Some information about the system gets copied into the environment. Quantum mechanics forbids perfect copying of arbitrary unknown states, so the useful information is redundantly encoded in stable records.
 
-Consider Schroedinger's cat. If the cat is alive, air molecules bounce off it in a certain way. Light reflects off it in a certain way. Heat radiates from it in a certain way. Each of these environmental fragments carries partial information about the cat's state.
+Consider Schrödinger's cat. If the cat is alive, air molecules bounce off it in a certain way. Light reflects off it in a certain way. Heat radiates from it in a certain way. Each of these environmental fragments carries partial information about the cat's state.
 
 When you look at the cat, you're not accessing the cat directly-you're reading information from these environmental fragments. Many observers can read many different fragments and agree.
 

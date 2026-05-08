@@ -110,7 +110,10 @@ observer's patch includes a region of the boundary. When patches overlap, the
 boundary values must agree. The bulk emerges as the most consistent account
 that fits all the boundary data.
 
-This explains why information scales with area, not volume. The boundary is the fundamental storage; the bulk is derivative. There's no hidden interior capacity beyond what the surface encodes-because the interior *is* the surface, reorganized into a convenient three-dimensional description.
+This explains why information scales with area, not volume. The boundary is the
+fundamental storage; the bulk is derivative. In the holographic settings that
+motivate the chapter, there is no independent interior bookkeeping beyond what
+the surface encodes.
 
 ## 8.4 The Soup Can Universe
 
@@ -122,7 +125,11 @@ It's not our universe-our universe has positive curvature, with an accelerating 
 
 Imagine the label on the can as a living quantum field theory with particles, forces, and fluctuations. It has no gravity of its own. It just lives on the surface.
 
-The bold claim is exact: **everything happening inside the can is exactly the same as what happens on the label**. A falling particle in the bulk corresponds to ripples on the boundary. A black hole forming inside corresponds to hot plasma on the surface. This isn't an approximation. It's a perfect translation.
+The bold claim is exact in that duality: **everything happening inside the can
+is exactly the same as what happens on the label**. A falling particle in the
+bulk corresponds to ripples on the boundary. A black hole forming inside
+corresponds to hot plasma on the surface. This isn't an approximation. It's a
+perfect translation within AdS/CFT.
 
 This is the **AdS/CFT correspondence**, the most important theoretical discovery in physics of the past thirty years.
 
@@ -334,7 +341,8 @@ Black holes saturate the quantum **chaos bound**-they're the fastest scramblers 
 
 ## 8.12 How Gravity Emerges from Entanglement
 
-The deepest insight from holography is that gravity isn't fundamental. It emerges from entanglement structure on the boundary.
+One of holography's deepest insights is that gravity may be emergent from
+entanglement structure on the boundary.
 
 ### Entanglement Builds Geometry
 
@@ -389,10 +397,10 @@ then Jacobson's thermodynamic argument applies. Under those conditions, Einstein
 equations emerge as the natural effective way for observer horizons to remain
 thermodynamically consistent.
 
-Four-dimensional spacetime geometry works so well because it is the
-thermodynamic equilibrium of horizon entropy. The geometry we observe is the
-most probable configuration, the one that maximizes entropy subject to matter
-constraints.
+On this thermodynamic reading, four-dimensional spacetime geometry works so well
+because it behaves like an equilibrium description of horizon entropy. The
+geometry we observe is then read as the effective configuration favored by that
+entropy bookkeeping under matter constraints.
 
 ## 8.13 What We Borrow from AdS/CFT (and What We Don't)
 
@@ -417,7 +425,7 @@ finite horizon.
 
 ### The De Sitter Advantage
 
-De Sitter space is actually **better suited** to this approach than AdS.
+De Sitter space is, in one important respect, **well suited** to this approach.
 
 In AdS/CFT, there's one global boundary that all observers share. A global CFT lives on it. The bulk and boundary are two complete, equivalent descriptions.
 
@@ -429,7 +437,9 @@ needed to make this work.
 
 For that reason, OPH is not a dS/CFT proposal. A hypothetical dS/CFT would posit a CFT at future infinity dual to de Sitter bulk physics. The claim here is weaker and more concrete:
 
-**Observer-patch consistency on cosmological horizons, combined with entanglement equilibrium, yields semiclassical gravity in the bulk.**
+**Observer-patch consistency on cosmological horizons, combined with the
+entanglement-equilibrium / Jacobson-style branch, can yield semiclassical
+gravity in the bulk.**
 
 The bulk and boundary do not need to be complete dual descriptions. The bulk emerges from the boundary through consistency and compression. It is not an independent theory that happens to match.
 

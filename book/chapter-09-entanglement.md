@@ -211,7 +211,8 @@ The **Multi-scale Entanglement Renormalization Ansatz** (MERA) handles critical 
 
 In 2012, Brian Swingle noticed something striking: the geometry of a MERA network is **hyperbolic**-just like AdS space. The depth in the network plays the role of the radial direction in AdS.
 
-MERA isn't just a numerical trick. It's a discrete version of AdS/CFT-the first concrete circuit that turns entanglement into geometry.
+MERA isn't just a numerical trick. It is one influential discrete model showing
+how entanglement can organize geometry in an AdS-like way.
 
 ### The HaPPY Code
 
@@ -242,7 +243,9 @@ system made from $B$ and $C$." The inequality says that entanglement cannot be
 freely duplicated. If $A$ uses up its entanglement budget with $B$, less is
 available for $C$.
 
-That's what locality means. Things can only be near a limited number of other things. Geometry emerges from the constraints of entanglement monogamy.
+That is one reason locality can emerge. Things can only be near a limited
+number of other things. Geometry can then inherit sparse structure from the
+constraints of entanglement monogamy.
 
 ## 9.9 Entanglement Wedges and Reconstruction
 
@@ -294,13 +297,15 @@ respect unitarity through encoded interior information.
 That is the direction the evidence points. Ryu-Takayanagi works in the
 settings where it should. Area-law scaling is widespread in the regimes that
 matter here. Entanglement wedge reconstruction works in explicit examples.
-Black-hole information is read through encoded radiation, not deletion.
+Black-hole information is read through encoded radiation, not simple deletion,
+in the semiclassical holographic models where the island/Page-curve picture is
+under control.
 
 ### Entanglement as a Discovery Chain
 
 Entanglement has one of the strangest histories in physics because it began
 as a complaint. Einstein, Podolsky, and Rosen used it in 1935 to argue that
-quantum mechanics could not be complete. Schrodinger answered by naming the
+quantum mechanics could not be complete. Schrödinger answered by naming the
 phenomenon and emphasizing that entanglement was not a small detail. It was
 the distinctive feature of quantum theory. For decades the issue looked
 philosophical. Then John Bell found the inequality that moved the argument
