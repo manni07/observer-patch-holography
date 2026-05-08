@@ -68,34 +68,34 @@ where p is momentum. For everyday objects, this wavelength is absurdly tiny. A b
 
 In 1927, Davisson and Germer proved de Broglie right. They bounced electrons off a nickel crystal and saw interference patterns. Electrons really do behave like waves.
 
-### Schrodinger's Equation
+### Schrödinger's Equation
 
-Erwin Schrodinger took de Broglie's idea and ran with it. If electrons are waves, what's waving?
+Erwin Schrödinger took de Broglie's idea and ran with it. If electrons are waves, what's waving?
 
-Schrodinger proposed that electrons are described by a wave function psi(x,t). The equation governing this wave is:
+Schrödinger proposed that electrons are described by a wave function psi(x,t). The equation governing this wave is:
 
 $$i\hbar \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\psi + V\psi$$
 
-This is the Schrodinger equation, and it works spectacularly well. It predicts atomic spectra, chemical bonds, semiconductor behavior. It's the foundation of quantum chemistry and materials science.
+This is the Schrödinger equation, and it works spectacularly well. It predicts atomic spectra, chemical bonds, semiconductor behavior. It's the foundation of quantum chemistry and materials science.
 
-But what is psi? Schrodinger initially thought it described a smeared-out electron, spread across space like a cloud. Max Born had a different interpretation: psi squared gives the probability of finding the electron at each location.
+But what is psi? Schrödinger initially thought it described a smeared-out electron, spread across space like a cloud. Max Born had a different interpretation: psi squared gives the probability of finding the electron at each location.
 
 $$P(x) = |\psi(x)|^2$$
 
-The electron isn't smeared out. It's genuinely indeterminate. The wave function doesn't describe where the electron is. It describes the probabilities of where you might find it.
+Operationally, the wave function does not assign a classical trajectory. It gives the probabilities for different measurement outcomes.
 
 The early formulas introduce the basic quantum dictionary. In Planck's
 $E=nhf$, $E$ is energy, $n$ is a whole-number quantum count, $h$ is Planck's
 constant, and $f$ is frequency. In Bohr's $L=n\hbar$, $L$ is angular momentum
 and $\hbar=h/(2\pi)$. In de Broglie's $\lambda=h/p$, $\lambda$ is wavelength
-and $p$ is momentum. In Schrodinger's equation, $\psi$ is the wave function,
+and $p$ is momentum. In Schrödinger's equation, $\psi$ is the wave function,
 $m$ is mass, $V$ is potential energy, and $\nabla^2$ measures spatial
 curvature of the wave. Born's rule, $P(x)=|\psi(x)|^2$, turns the wave
 function into a probability density for detection at position $x$.
 
 That dictionary was assembled by many people under pressure from experiment.
 Planck's blackbody curve, Einstein's photons, Bohr's spectral lines, de
-Broglie's matter waves, Schrodinger's wave mechanics, Heisenberg's matrices,
+Broglie's matter waves, Schrödinger's wave mechanics, Heisenberg's matrices,
 Born's probability rule, Dirac's relativistic equation, and Feynman's diagrams
 are different steps in one long reconstruction. The Standard Model inherits
 that whole history.
@@ -122,7 +122,7 @@ Bohr and Heisenberg developed what became the "Copenhagen interpretation." The w
 
 This interpretation was never universally accepted. Einstein famously objected: "God does not play dice." But the mathematics works. Quantum mechanics makes predictions, and those predictions are confirmed to extraordinary precision.
 
-The lesson is clear. At the fundamental level, nature is not deterministic. Outcomes are genuinely random. The best we can do is calculate probabilities.
+The core lesson is operational rather than interpretive. Quantum theory gives probabilities for measurement outcomes with extraordinary accuracy. What those probabilities mean ontologically depends on the interpretation.
 
 ## 14.4 From Particles to Fields
 
@@ -132,7 +132,7 @@ You don't. You need quantum field theory.
 
 ### Dirac's Equation
 
-In 1928, Paul Dirac sought a relativistic version of Schrodinger's equation. He found something deeper.
+In 1928, Paul Dirac sought a relativistic version of Schrödinger's equation. He found something deeper.
 
 The Dirac equation describes spin-1/2 particles like electrons:
 
@@ -235,7 +235,7 @@ The electron is stable. The muon and tau decay quickly.
 
 The fermions come in a strange pattern: three copies. The up and down quarks, plus the electron and its neutrino, form the first generation. The charm and strange quarks, plus the muon and its neutrino, form the second. The top and bottom, plus the tau and its neutrino, form the third.
 
-Why three? No one knows. The charged members of the second and third generations are heavier copies of the first, while the neutrino sector has its own mixing pattern. Almost all ordinary matter uses only first-generation particles.
+Historically, the Standard Model by itself does not explain why there are three generations. OPH later argues that, on its realized one-Higgs branch, the minimal viable count is three. The charged members of the second and third generations are heavier copies of the first, while the neutrino sector has its own mixing pattern. Almost all ordinary matter uses only first-generation particles.
 
 ### Bosons: The Force Carriers
 
@@ -253,7 +253,7 @@ Forces are mediated by bosons: particles with integer spin.
 
 ### The Gauge Groups
 
-The Standard Model is organized by symmetry. The gauge group is:
+The Standard Model is organized by symmetry. One usually writes the gauge group as:
 
 $$G_{SM} = SU(3)_C \times SU(2)_L \times U(1)_Y$$
 
@@ -305,10 +305,9 @@ Lee and Yang had predicted this. Wu proved it. Parity violation earned Lee and Y
 
 ### Why Chirality Matters
 
-Chirality matters everywhere. It helps explain why neutrinos stay so light,
-why the weak interaction carries the C and P violation needed for CP
-violation, and why anomaly cancellation places such sharp restrictions on the
-allowed fermion content.
+Chirality matters everywhere. It is essential to weak parity violation and to
+anomaly-cancellation constraints, and it sharply restricts which fermion mass
+terms can appear without extra structure.
 
 ## 14.7 Anomaly Cancellation: Why the Charges Are What They Are
 
@@ -481,7 +480,7 @@ supplied by the transport premises, is unique and checkable.
 
 ### The Standard Model Factors
 
-Why does the reconstructed group have the form SU(3) x SU(2) x U(1)?
+Why does the reconstructed group have the form SU(3) x SU(2) x U(1) up to finite quotient?
 
 Once you ask for the smallest matter sector that can carry color, weak
 interactions, chirality, and ordinary charge, the answer is forced into a
@@ -515,7 +514,7 @@ Given one generation of chiral fermions with SU(3) x SU(2) x U(1) charges, and r
 
 ### The Derivation
 
-Start with Yukawa invariance. Writing the anomaly equations in terms of left-handed Weyl fields means the right-handed singlets enter through their conjugates:
+Start with Yukawa invariance. Using the familiar physical hypercharges for the right-handed singlets gives:
 
 $$Y_u = Y_Q + Y_H, \quad Y_d = Y_Q - Y_H, \quad Y_e = Y_L - Y_H$$
 

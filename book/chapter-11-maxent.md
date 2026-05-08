@@ -23,7 +23,7 @@ General relativity and quantum theory broke that picture.
 
 Physics has a scandal.
 
-Almost all our fundamental laws are time-reversible. Newton's F = ma works the same forward and backward. Maxwell's equations are reversible. Schroedinger's equation is reversible. Einstein's General Relativity is reversible.
+Almost all our fundamental laws are time-reversible. Newton's F = ma works the same forward and backward. Maxwell's equations are reversible. Schrödinger's equation is reversible. Einstein's General Relativity is reversible.
 
 Film a planet orbiting a star and play it backward-it looks perfectly physical. But film an egg breaking and play it backward? Absurd.
 
@@ -33,7 +33,7 @@ This is the **Arrow of Time**. Where does it come from? It's not in the microsco
 
 In general relativity, there's no preferred time coordinate. Different observers slice spacetime differently; none is privileged.
 
-The Wheeler-DeWitt equation-the analog of Schroedinger's equation for the universe-is:
+The Wheeler-DeWitt equation-the analog of Schrödinger's equation for the universe-is:
 
 $$H\Psi = 0$$
 
@@ -137,19 +137,19 @@ In Chapter 4, we saw Boltzmann's insight: entropy $S = k \ln W$ measures the num
 
 But why did the universe start with low entropy in the first place?
 
-### The Past principle
+### The Past Hypothesis
 
-The deeper answer to the arrow of time is the **Past principle**: the universe began in a state of extraordinarily low entropy.
+The deeper answer to the arrow of time is the **Past Hypothesis**: the universe began in a state of extraordinarily low entropy.
 
 We are riding the expansion from a very special initial condition: the Big Bang. The early universe was hot and smooth, with matter spread almost uniformly. That uniformity is low gravitational entropy.
 
 Why was the Big Bang low entropy? Standard physics treats this as an unexplained initial condition. OPH gives the condition a role in record formation.
 
-**The Past principle as a consistency requirement**: For observers to exist at all, they must be able to form and compare records. Records require entropy gradients-you can only write information by pushing entropy elsewhere. A universe in thermal equilibrium contains no observers, no records, no consistency-checking.
+**The Past Hypothesis as a consistency requirement**: For observers to exist at all, they must be able to form and compare records. Records require entropy gradients-you can only write information by pushing entropy elsewhere. A universe in thermal equilibrium contains no observers, no records, no consistency-checking.
 
 The MaxEnt principle says: assign the maximum-entropy state consistent with your constraints. But one constraint is that someone must exist to apply MaxEnt. This rules out equilibrium. The very existence of observers selecting MaxEnt states presupposes a universe far from equilibrium.
 
-This doesn't derive the specific numerical entropy of the Big Bang. But it reframes the question: the Past principle isn't an arbitrary input to be explained by some deeper theory. It can be read as a consistency requirement. A universe containing observers who check for consistency appears to require a low-entropy beginning. The arrow of time points in the direction that allows records to be made.
+This doesn't derive the specific numerical entropy of the Big Bang. But it reframes the question: the Past Hypothesis isn't an arbitrary input to be explained by some deeper theory. It can be read as a consistency requirement. A universe containing observers who check for consistency appears to require a low-entropy beginning. The arrow of time points in the direction that allows records to be made.
 
 ## 11.5 Jaynes: Entropy as Ignorance
 
@@ -194,17 +194,17 @@ trace over $\bar P$ discards inaccessible degrees of freedom and leaves the
 state available to the observer. The logarithm then turns that restricted
 state into the modular generator for the patch.
 
-**Every observer has their own emergent clock.**
+**Each observer patch carries its own emergent modular clock.**
 
 ### Consistency of Clocks
 
-If two observers' patches overlap, their modular times must be compatible on the overlap. This is a strong constraint. Reality hangs together because the modular flows mesh.
+If two observers' patches overlap, their modular times have to agree on the shared operational content. On the smooth geometric branch, that compatibility is what later supports a shared causal structure.
 
 ### Cosmic Time
 
 Why do we all agree on a "cosmic time"?
 
-If the global state is highly entangled in a particular pattern, the modular flows of local patches are synchronized. Cosmic time emerges as the "center of mass" of all local modular times.
+If the global state synchronizes many local modular flows, a shared coarse-grained cosmic time can emerge as an effective collective clock. It is not a second fundamental time parameter.
 
 ### Roadmap: From Modular Time to Gravity
 
@@ -301,12 +301,12 @@ One structure is doing two jobs at once. Read algebraically, it is the modular e
 
 ### Boosts from Thermal Structure
 
-Start with thermal structure. Ask: what is the natural notion of time evolution? The answer is Lorentz boosts.
+Start with thermal structure. Ask: what is the natural notion of time evolution? In the wedge setting, the answer is Lorentz boosts.
 
 This reverses the usual logic in QFT. We don't postulate Lorentz symmetry and then discover thermal horizons; the BW theorem shows the boost structure is encoded in modular flow.
 
-That modular-boost link is the route by which Lorentz kinematics and a
-universal light speed are recovered on the screen.
+That modular-boost link is the route by which the smooth geometric branch
+recovers Lorentz kinematics and a universal causal speed on the screen.
 
 ### Connection to OPH
 
@@ -338,7 +338,7 @@ The modular flow provides the time direction. Entanglement provides correlations
 
 Einstein discovered special relativity in 1905 by thinking about light and motion. QFT gives the same structure another reading: Lorentz boosts are tied to horizon thermodynamics via the Bisognano-Wichmann theorem. In OPH the same pattern appears when the screen reaches its smooth geometric limit, so the Lorentz group shows up as the geometry of modular flow on caps.
 
-The laws of physics look the same to all inertial observers because thermal states on wedge-shaped regions naturally evolve via boosts. In the OPH program, the universal speed emerges when that modular-boost structure is carried over to the screen and then read back into bulk kinematics.
+The laws of physics look the same to all inertial observers because thermal states on wedge-shaped regions naturally evolve via boosts. In the OPH program, the universal speed emerges on the smooth geometric branch when that modular-boost structure is carried over to the screen and then read back into bulk kinematics.
 
 ## 11.10 What Time Predicts
 
