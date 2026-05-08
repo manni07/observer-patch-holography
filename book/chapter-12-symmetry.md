@@ -127,7 +127,7 @@ state by an overall phase changes the vector but not the physical state. That
 small freedom is what lets spinors carry the minus sign after a 360-degree
 rotation without changing observable probabilities.
 
-The matter content of the universe-quarks, leptons, all fermions-exists because quantum mechanics allows projective representations of the screen's symmetry group.
+Half-integer-spin matter sectors become possible because quantum mechanics allows projective representations of the screen's symmetry group.
 
 ## 12.6 Wigner's Classification
 
@@ -145,7 +145,7 @@ discrete ladder $0, 1/2, 1, 3/2, 2, \ldots$.
 
 That's it. Those are the only quantum numbers that follow from spacetime symmetry.
 
-**Particles are representations of symmetries.** The specific zoo of particles is dictated by the symmetry group of the boundary.
+**Particles are representations of symmetries.** Spacetime symmetry fixes the mass-and-spin labels, while the realized internal charges and matter content require additional structure.
 
 That is a profound change in what a particle is. A particle is not a tiny marble with a fixed identity tag. It is an allowed transformation pattern. Mass tells you how the excitation sits with time translations. Spin tells you how it sits with rotations.
 
@@ -153,7 +153,7 @@ The spare label set matters. Once the symmetry group is fixed, only a limited me
 
 ## 12.7 The Standard Model Gauge Groups
 
-The Standard Model is based on the gauge group:
+One usually writes the Standard Model gauge group as:
 
 $$G_{SM} = SU(3) \times SU(2) \times U(1)$$
 
@@ -231,7 +231,7 @@ A conserved current on the screen creates a gauge boson in the bulk.
 
 ### Our Route: Gauge Group from Gluing
 
-In this book we take a different route. The gauge group is not assumed in advance. Instead, we look at what happens when you glue observer patches together: fixed-cutoff edge charges fuse in specific ways, their transport data persists coherently across refinement, and the compatible multiplicity spaces descend with them. A reconstruction theorem then lets you work backward from that persistent sector package to the symmetry group behind it. A minimal admissible realization principle fixes the realized low-energy branch, and the answer turns out to be exactly $SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$, the Standard Model gauge group. On that same branch, the minimal coupled carrier fixes three colors, while CKM phase counting together with weak-sector ultraviolet consistency fixes three generations.
+In this book we take a different route. The gauge group is not assumed in advance. Instead, we look at what happens when you glue observer patches together: fixed-cutoff edge charges fuse in specific ways, their transport data persists coherently across refinement, and the compatible multiplicity spaces descend with them. A reconstruction theorem then lets you work backward from that persistent sector package to the symmetry group behind it. On the realized one-Higgs low-energy branch, the physical gauge group is exactly $SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$. On that same branch, the minimal coupled carrier fixes the realized color triplet, while CKM phase counting together with weak-sector ultraviolet consistency picks the minimal viable generation count.
 
 The notation looks forbidding, but the roles are practical. $SU(3)$ is the
 color accounting system for quarks. $SU(2)$ is the weak doublet accounting
@@ -291,7 +291,7 @@ You can break C, P, T, CP, CT, PT individually. But if you apply all three toget
 The consequences are famously sharp. Every particle has an antiparticle with
 exactly the same mass, and particle and antiparticle lifetimes are identical.
 
-On the screen, CPT corresponds to mapping every point to its antipode and reversing the modular flow.
+A full screen implementation of CPT is subtler than a literal antipodal map. At book level, the clean statement is that the effective Lorentzian field-theory limit inherits the usual combined charge, parity, and time-reversal symmetry.
 
 CPT is the immune system of reality-the consistency check that can never be bypassed.
 

@@ -163,11 +163,11 @@ This fits naturally with OPH. Reality is a collection of consistent patches. You
 
 Where should we put the holographic screen in de Sitter?
 
-The natural answer: on the cosmological horizon.
+A natural candidate: on the cosmological horizon.
 
 For an observer at $r = 0$, the horizon is a sphere at $r = c/H$. This sphere has area $4\pi c^2/H^2$ and the entropy capacity above.
 
-The three-dimensional bulk inside the horizon is encoded holographically on the two-dimensional horizon.
+The three-dimensional bulk inside the horizon is treated holographically as data organized on the two-dimensional horizon.
 
 When an object falls toward the horizon, it gets redshifted and appears to freeze onto the surface, its information smeared across the screen.
 
@@ -200,13 +200,13 @@ equation that acts like a uniform large-scale tendency for space to accelerate.
 OPH reads it as global capacity data, not as one more local particle-physics
 coupling.
 
-So Lambda must be fixed by a **global** constraint: the total capacity of the screen. In natural units, the relationship is:
+So on the D6 closure branch Lambda is fixed by a **global** constraint: the total capacity of the screen. In natural units, once $N_{\mathrm{scr}}=\log(\dim \mathcal{H}_{\text{tot}})$ is supplied, the relationship is:
 
 $$\Lambda = \frac{3\pi}{G \cdot \log(\dim \mathcal{H}_{\text{tot}})}$$
 
 In the book's reading, the observed $\Lambda$ is the way the world announces
-its total screen capacity. It is the global size parameter carried by every
-consistent patch.
+its total screen capacity once that global input is identified. It is the
+global size parameter carried by every consistent patch.
 
 The symbol $\mathcal H_{\text{tot}}$ means the total Hilbert space available to
 the screen, and $\dim$ means its dimension, the number of independent quantum
@@ -277,9 +277,9 @@ OPH suggests a different route.
 
 ### The Modular Anomaly
 
-In Chapter 11, we saw that a first-variation Einstein relation, later upgraded to the semiclassical Einstein equation, emerges from an entanglement-equilibrium argument in the scaling regime. But that derivation assumed perfect Markov structure-perfect recoverability across patch overlaps.
+In Chapter 11, we saw that a first-variation Einstein relation emerges from an entanglement-equilibrium argument in the scaling regime, and that the same branch can be upgraded to the semiclassical Einstein equation. The continuation below asks what happens when one moves away from the ideal recoverability limit.
 
-In reality, the Markov condition is only approximate. There's always some residual correlation that can't be perfectly captured by the boundary alone. This imperfection appears as an extra term:
+In the phenomenological continuation considered here, the Markov condition is treated as only approximate. Some residual correlation is then not perfectly captured by the boundary alone. That imperfection is packaged as an extra term:
 
 $$K_C = 2\pi B_C + K_C^{(\text{anom})} + \text{const}$$
 
@@ -297,14 +297,14 @@ energy and has no direct observational role.
 
 $$G_{00} + \Lambda g_{00} = 8\pi G \left( \langle T_{00} \rangle + \langle T_{00}^{\text{anom}} \rangle \right)$$
 
-The coefficient is fixed by the derivation: $\frac{15}{8\pi^2} \approx 0.19$.
+The continuation highlighted here uses the coefficient $\frac{15}{8\pi^2} \approx 0.19$.
 
 ### Why This Is "Dark"
 
-The anomalous term $T_{00}^{\text{anom}}$ is dark by construction. It arises
-from information structure, not from Standard Model fields, it
-gravitates, and it does not couple electromagnetically. That gives it exactly
-the profile a dark component ought to have.
+In this continuation, the anomalous term $T_{00}^{\text{anom}}$ is dark at the
+level of its couplings. It arises from information structure rather than
+Standard Model fields, it gravitates, and it carries no direct electromagnetic
+coupling in the effective description.
 
 ### The Acceleration Scale
 
@@ -329,9 +329,9 @@ de Sitter capacity logic that fixed the horizon.
 
 ### What This Continuation Looks Like
 
-If the modular anomaly is read as part of the dark sector, the deep infrared
-picture takes a familiar form. In the regime where $g<a_0$, the effective
-gravitational acceleration can be written as
+If the modular anomaly is read as part of the dark sector, one MOND-like
+continuation takes a familiar deep-infrared form. In the regime where $g<a_0$,
+the effective gravitational acceleration is written as
 
 $$g_{\text{obs}} \approx \sqrt{a_0 \cdot g_b}$$
 
@@ -348,10 +348,11 @@ The same picture yields the baryonic Tully-Fisher relation:
 
 $$V^4 = G \cdot M_b \cdot a_0^{(\text{OPH})}$$
 
-This has the observed Tully-Fisher form, with its normalization set by screen
-capacity. The dark sector is then read as an infrared correction to gravity,
-not as a new species of particle. The cosmological constant and the
-galaxy-scale anomaly sit inside one de Sitter picture.
+This is the observed Tully-Fisher form that the continuation aims to
+reproduce, with its normalization set by screen capacity. In that
+phenomenological branch, the dark sector is read as an infrared correction to
+gravity rather than a new species of particle. The cosmological constant and
+the galaxy-scale anomaly then sit inside one de Sitter picture.
 
 ---
 

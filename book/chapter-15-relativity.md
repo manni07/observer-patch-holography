@@ -364,10 +364,10 @@ Consider two observers with overlapping patches. Each has a modular flow, a
 local clock. When their descriptions are compared, the admissible
 transformations have to map patches to patches, preserve the overlap
 structure, and avoid turning any one patch into the privileged center of the
-world. The group that does exactly that is the conformal group of $S^2$, and
-$\text{Conf}(S^2)\cong \mathrm{SO}(3,1)$ is the Lorentz group.
+world. A natural symmetry group that does that is the conformal group of
+$S^2$, and $\text{Conf}(S^2)\cong \mathrm{SO}(3,1)$ is the Lorentz group.
 
-So Lorentz invariance is not imposed from outside. It is the *only* way different observer perspectives can be consistently related without privileging any one of them.
+So Lorentz invariance is not imposed from outside. It is the natural symmetry class relating observer perspectives without privileging any one of them.
 
 **The qubits do not need to move.** What we call "motion" in the emergent 4D spacetime is not qubits rearranging themselves. Motion is a pattern in how correlations change. A "moving particle" is a correlation pattern that shifts across the screen. A "Lorentz boost" is a transformation relating how two observers describe the same correlation pattern.
 
@@ -377,12 +377,16 @@ The substrate (the qubits) is not in spacetime. Spacetime emerges from how patch
 
 Why is there a maximum speed, and why is it the same for everyone?
 
-Information propagates on the screen. The modular flow determines the rate of
-propagation. The conformal structure of $S^2$ determines the causal structure.
+On the recovered geometric branch, the common causal structure on the screen
+determines the effective light cone.
 
-The speed of light c is the conversion factor between modular time and geometric distance. It's universal because the conformal structure of the sphere is unique.
+The speed of light $c$ is then the conversion factor between modular time and
+geometric distance in the emergent bulk description. It is universal because
+all observers read the same conformal light-cone structure.
 
-Different observers have different modular flows. But their flows are all conformal transformations of S^2. The Lorentz group is precisely the set of transformations that preserve the causal structure while changing the observer's notion of time.
+Different observers have different modular flows. On the geometric branch, the
+inter-observer relations are carried by conformal transformations of $S^2$.
+The Lorentz group is the corresponding symmetry of the shared causal structure.
 
 ## 15.9 Recovering General Relativity
 
@@ -393,9 +397,9 @@ Special relativity emerges from the conformal structure of the screen. What abou
 Patch consistency does two crucial jobs here. First, it forbids any preferred
 observer or preferred frame. Second, once each observer gets the same local
 rest-frame relation, patch consistency forces those local relations to fit
-together into a full tensor equation. MaxEnt supplies the equilibrium state,
-modular flow supplies the local clock, and generalized entropy supplies the
-thermodynamic relation that becomes Einstein's equation.
+together into a tensor law. MaxEnt supplies the equilibrium state, modular
+flow supplies the local clock, and the null-modular and bounded-interval
+bridges let generalized-entropy stationarity feed the Einstein branch.
 
 ### Jacobson's Insight (1995, 2016)
 
@@ -485,8 +489,8 @@ to be shadows of one frame-independent tensor relation:
 
 $$G_{ab} + \Lambda g_{ab} = 8\pi G \langle T_{ab} \rangle$$
 
-This is the semiclassical Einstein equation, obtained by combining the
-thermodynamic argument with patch consistency in the scaling regime.
+On the stated scaling branch, this is the semiclassical Einstein equation,
+obtained by combining the thermodynamic argument with patch consistency.
 
 The lower-case indices $a,b$ again label spacetime directions. The angle
 brackets around $T_{ab}$ mean expectation value: matter is still quantum, so
@@ -548,7 +552,10 @@ Emergent geometry is the most economical description of how modular clocks fit t
 
 Imagine collecting all the data about how every patch's modular flow relates to every other patch's flow. This is an enormous amount of information.
 
-But there's a compression. If you specify a metric g_{ab}, you can derive all the modular flows from it. The metric is the minimum description that captures the overlap structure.
+But there's a compression. In the effective geometric regime, specifying a
+metric $g_{ab}$ organizes the leading overlap relations between nearby modular
+flows. The metric is the compressed description that captures that common
+structure.
 
 General relativity is the natural effective dynamics associated with this compression. It's not arbitrary. It's the simplest theory that respects the recovered structure.
 
@@ -606,14 +613,14 @@ An alternative: modify gravity (MOND). At low accelerations, perhaps gravity beh
 
 ### A Third Route
 
-OPH gives a third route. Extra gravitational pull may come from imperfect
-information recovery.
+One phenomenological OPH continuation gives a third route. Extra
+gravitational pull may come from imperfect information recovery.
 
 The underlying logic is simple. In the ideal Markov limit, information on one
 side of a boundary is perfectly recoverable from the boundary itself, and the
-result is pure Einstein gravity. Move away from that ideal limit and some
-correlation sits out of reach. That leftover correlation can feed an extra
-term into the effective equations.
+recovered branch follows the Einstein relation. In the D12 continuation
+considered here, one moves away from that ideal limit and some correlation
+sits out of reach. That leftover correlation can feed an extra effective term.
 
 It gravitates because missing recoverability has physical weight in the
 bookkeeping. This supplies a structural ingredient for a dark sector without
@@ -621,16 +628,17 @@ introducing new particle species.
 
 ### Why It's Dark
 
-This sector is dark by construction. It comes from information structure, it
-gravitates, and it does not couple electromagnetically. The observational work
-then becomes concrete: rotation curves, lensing, clusters, and cosmology have
-to read the same information-recovery term.
+In that continuation, the sector is dark at the level of its couplings. It
+comes from information structure, it gravitates, and it does not couple
+electromagnetically. Any successful phenomenological completion then has to
+confront rotation curves, lensing, clusters, and cosmology with the same
+information-recovery term.
 
 ### The MOND Scale
 
-This anomaly is tied to the cosmological constant. The only
-available large-scale length in this construction is the de Sitter radius, and from it
-the construction singles out a characteristic acceleration:
+In that continuation, the cosmological constant supplies the natural infrared
+scale. The de Sitter radius then singles out a characteristic acceleration
+benchmark:
 
 $$a_0 = \frac{15}{8\pi^2} c^2 \sqrt{\frac{\Lambda}{3}} \approx 1.0 \times 10^{-10} \text{ m/s}^2$$
 
@@ -643,14 +651,16 @@ logic that shaped the horizon from the start.
 The old picture treated time as universal, gravity as a force, and geometry as
 a fixed stage. Relativity overturns each part. The speed of light forces time
 and distance into one four-dimensional structure. Free fall reveals gravity as
-geometry. OPH pushes the logic one step deeper. Lorentz symmetry becomes the
-geometry of how modular times mesh across patches, and gravity becomes the
-equilibrium condition that lets those patches share one spacetime.
+geometry. OPH pushes the logic one step deeper. On the controlled scaling
+branch, Lorentz symmetry becomes the geometry of how modular times mesh across
+patches, and gravity becomes the equilibrium condition that lets those patches
+share one spacetime.
 
 On this reading, the speed of light is not a random number sprinkled into the
 laws. It is the conversion factor between information flow on the screen and
-emergent geometry in the bulk. Einstein's equation is the public face of
-entanglement equilibrium written in the language of curvature.
+emergent geometry in the bulk. On the Einstein branch, Einstein's equation is
+the public face of entanglement equilibrium written in the language of
+curvature.
 
 Newton's absolute time and space were beautiful ideas that served humanity well for two centuries. But they were always approximations. The deeper truth is that time and space are not the stage on which physics happens. They emerge from the physics itself.
 
