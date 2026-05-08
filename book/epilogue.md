@@ -52,17 +52,17 @@ The boundary-sector label is the interface tag. It tells the outside world how
 the observer-pattern connects back to its surroundings. The interior
 conditional state is the inside pattern, specified relative to that interface.
 
-What does the framework actually support? It supports a backup-and-restore
-statement on the operational surface studied in the paper. If the accessible
-checkpoint is restored, the exposed interfaces are kept the same, and the
-subsequent updates follow the same path, then the future accessible statistics
-match exactly or within a controlled error.
+What does the framework actually support? It supports a fixed-cutoff
+backup-and-restore statement on the operational surface studied in the paper.
+If the accessible checkpoint is restored, the exposed interfaces are kept the
+same, and the subsequent updates follow the same path, then the future
+accessible statistics match exactly or within a controlled error.
 
 That is striking. It says a meaningful form of restoration is part of the
-framework. Transplantation is a deeper question: it asks whether an
-observer-pattern can be moved into an engineered environment and treated
-as the same continuing subject. The issue is the interface between one
-recovered interior pattern and one redesigned world.
+fixed-cutoff framework. Transplantation is a deeper question: it asks whether
+an observer-pattern can be moved into an engineered environment and treated as
+the same continuing subject. The issue is the interface between one recovered
+interior pattern and one redesigned world.
 
 ## What Follows
 
