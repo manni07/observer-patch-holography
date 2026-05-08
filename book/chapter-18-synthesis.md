@@ -59,7 +59,7 @@ Once cap modular flow becomes geometric, time stops looking imported from
 outside. It becomes the internal flow attached to a restricted state. When
 those local flows fit together across the smooth screen, Lorentz kinematics
 appears. When generalized entropy sits at equilibrium under the allowed
-MaxEnt variations of a fixed cap, Einstein gravity appears as the public
+MaxEnt variations of a fixed cap, the Einstein relation appears as the public
 large-scale grammar of that equilibrium.
 
 Read that sentence as a compressed recap. Modular flow is the clock a restricted
@@ -77,7 +77,7 @@ The particle world follows the same logic from another angle. Once fixed-cutoff
 charge sectors can fuse, split, carry duals, persist coherently under
 refinement, and descend with compatible finite-dimensional multiplicity spaces,
 the gauge group is reconstructed from that persistent charge bookkeeping
-itself. The group that emerges is
+itself. On the realized one-Higgs matter branch, the group that emerges is
 
 $$
 SU(3)\times SU(2)\times U(1)/\mathbb Z_6.
@@ -93,12 +93,13 @@ The color triplet follows from the minimal coupled carrier, and the
 three-generation count follows from CKM phase counting, weak-sector
 consistency, and minimality on the same low-energy branch. The photon,
 gluons, and graviton stay massless because they ride on redundancy directions
-the architecture cannot break. The weak pair, the low-energy electromagnetic
-coupling, the Higgs-top surface, a running quark sector, and one
-weighted-cycle neutrino family all sit inside the same reconstruction. The
-technical status ledger separates weak validation, charged-lepton witnesses,
-source-only hadron calculations, and empirical hadron closure checks. Hadrons
-add the strong-binding problem on top of that particle-level picture.
+the architecture cannot break. The broader particle ledger then carries the
+weak validation pair, the low-energy electromagnetic endpoint, the declared
+Higgs-top surface, the selected-class quark sector, and one weighted-cycle
+neutrino family. The technical status ledger separates charged-lepton
+witnesses, source-only hadron calculations, and empirical hadron closure
+checks. Hadrons add the strong-binding problem on top of that particle-level
+picture.
 
 The particle words here refer to roles explained in Chapters 12-16: color is the
 three-way strong-force bookkeeping, CKM phases describe quark mixing under the
@@ -114,10 +115,11 @@ observer records close.
 The quantitative side of the framework turns on two scales with very different
 roles.
 
-The first is global. The observed cosmological constant fixes the total screen
-capacity, about $3.31\times10^{122}$ natural entropy units, or about
-$4.77\times10^{122}$ bits. That gives the size of the accessible computation
-and sets the de Sitter horizon scale.
+The first is global. On the screen-capacity identification branch, the observed
+cosmological constant fixes the total screen capacity, about
+$3.31\times10^{122}$ natural entropy units, or about $4.77\times10^{122}$
+bits. That gives the size of the accessible computation and sets the de Sitter
+horizon scale.
 
 The second is local. The pixel ratio
 
@@ -271,9 +273,10 @@ By this point the central sentence of the book can be spoken plainly:
 
 **Reality is the consistency of observations across overlapping perspectives.**
 
-Everything else unfolds from that pressure. Space is the geometry of
-entanglement. Time is modular flow read from inside restricted states. Matter
-is the family of stable excitations that can survive transport across patches.
+Everything else unfolds from that pressure. Spatial geometry is organized by
+entanglement structure. Time is modular flow read from inside restricted
+states. Matter is the family of stable excitations that can survive transport
+across patches.
 Laws are the public regularities that endure repeated comparison. Objectivity
 is the residue left behind after many partial viewpoints are made to agree.
 
@@ -303,9 +306,9 @@ information theorist sees a code. A good theory earns its keep by making those
 views mutually legible without erasing their differences.
 
 The structure is not a flat list. The gauge quotient, charge lattice, counting
-chain, massless carriers, Lorentz geometry, Einstein relation, electroweak
-rows, Higgs-top surface, quark sector, and neutrino family form one organized
-reconstruction, not a catalog of unrelated facts.
+chain, massless carriers, Lorentz geometry, Einstein relation, and the
+ledgered electroweak, Higgs-top, quark, and neutrino surfaces form one
+organized reconstruction, not a catalog of unrelated facts.
 
 The local-ruler ledger records three technical boundaries. The weak pair is a
 validation row. Charged-lepton absolute masses are target-anchored witnesses.

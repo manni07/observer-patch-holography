@@ -49,9 +49,19 @@ But what counts as a measurement? When exactly does collapse happen? Does consci
 
 OPH cuts through this by removing the problematic assumption: that the measurement problem is about a single observer-independent state description that must somehow connect to lived experience.
 
-The formalism can still contain a global quantum state, but no observer occupies a God's-eye position outside the system. What observers actually have are patch-level descriptions. A "superposition" isn't a bizarre state where something is really in two places at once; it's an incomplete description that admits multiple compatible continuations. When two patches that had no shared access come to share access to a system, their descriptions must agree on that overlap. That agreement is what we call "measurement." The "collapse" is just what consistency looks like from one patch's perspective.
+The formalism can still contain a global quantum state, but no observer occupies
+a God's-eye position outside the system. What observers actually have are
+patch-level descriptions. At book level, a superposition is a description that
+still admits multiple compatible continuations. When two patches that had no
+shared access come to share access to a system, their descriptions must agree
+on that overlap. That shared record relation is what the chapter is calling
+"measurement." "Collapse" is the patch-level update into a definite public
+record.
 
-The measurement problem evaporates because there was never an objective wavefunction needing to collapse. There were only perspectives needing to synchronize.
+At the observer-first level developed here, the measurement problem softens
+because there is no physically occupied view from nowhere whose wavefunction
+must then be connected to experience. There are perspectives that have to
+synchronize through shared records.
 
 ## 19.6 Why These Laws? Why This Universe?
 
@@ -154,8 +164,9 @@ persist, while a self-referential loop can.
 
 This loop is structural. It is a relation among reality, observers, and the
 simulation they eventually understand how to build. Time is subjective. It
-emerges from modular flow within observer patches. The strange loop exists
-*outside* time. The "cause" and the "effect" are aspects of the same
+emerges from modular flow within observer patches. The strange loop is not best
+pictured as an ordinary temporal sequence with one stage literally preceding
+the next. The "cause" and the "effect" are aspects of the same
 self-consistent structure.
 
 This resolves the apparent paradox of self-causation. You cannot cause yourself in time, because that would require existing before you exist. But you can be part of a self-consistent structure that has no temporal "before." The loop does not happen *in* time. Time happens *in* the loop.
@@ -170,7 +181,11 @@ The observer-first reading drops the view-from-nowhere assumption. There is no p
 
 ![Reality, observers, records, and models form a loop in which the world becomes partially explicit to itself.](../assets/book_diagrams/observer-loop.svg){width=78%}
 
-The consistency constraints are rigid. Not every perspective survives. The physics we discover is the physics that can be coherently maintained across all surviving perspectives. That's why it's so reliable, so predictive, so shockingly precise. It's been filtered by the harshest criterion imaginable: self-consistency across all possible observers.
+The consistency constraints are rigid. Not every perspective survives. The
+physics we discover is the physics that can be coherently maintained across the
+surviving network of perspectives. That's why it is so reliable and
+predictive. It has been filtered by the harsh criterion of public
+self-consistency.
 
 ## 19.9 The Hacker and the Hacked
 

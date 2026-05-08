@@ -41,8 +41,9 @@ design. One says we won a cosmic lottery. One says there is selection across a
 space of possible laws, so observers inevitably see the conditions that permit
 observers. That third route is the anthropic principle in its bare form.
 
-Fine-tuning reveals that laws are not unique. There are many possible laws,
-and what we observe is filtered by the fact that we are here to observe it.
+Fine-tuning at least suggests that the realized laws are not the only
+conceivable ones, and that what we observe is filtered by the fact that we are
+here to observe it.
 
 This line of thought was shaped by many different communities. Dicke and
 Carter made anthropic reasoning part of modern cosmology. Weinberg used it to
@@ -73,11 +74,15 @@ a new region of spacetime, the daughter region inherits parameters close to
 those of the parent, small mutations occur in the bounce, and the universes
 that produce more black holes leave more descendants.
 
-This is Darwin on a cosmic scale. After countless generations, we should find ourselves in a universe near a fitness peak-one optimized for black hole production.
+This is Darwin on a cosmic scale. In Smolin's proposal, after countless
+generations we should find ourselves in a universe near a fitness peak-one
+optimized for black hole production.
 
 ### A Testable Prediction
 
-CNS makes a directly testable prediction: **you cannot change any physical constant by a small amount and increase the number of black holes our universe would produce**.
+In Smolin's proposal, CNS makes a directly testable prediction: **you cannot
+change any physical constant by a small amount and increase the number of black
+holes our universe would produce**.
 
 If you could, our universe wouldn't be at a fitness peak.
 
@@ -126,7 +131,9 @@ Pointer states are the winners of quantum natural selection. They survive the pr
 
 Another way to think about the evolution of laws starts with compression.
 
-The holographic screen has limited capacity: A/4G bits. It can't encode infinite complexity. It must compress.
+The holographic screen has limited capacity: roughly $A/(4G)$ in natural
+entropy units, often translated loosely into bits. It cannot encode infinite
+complexity. It must compress.
 
 Here $A$ is the area of the boundary and $G$ is Newton's gravitational constant.
 The formula is the black-hole entropy scaling in plain form: storage capacity
@@ -165,11 +172,11 @@ The electron is a vibration pattern that persists. The muon is a pattern that pe
 The "particle zoo" is a census of vibrational survivors.
 
 Within OPH, that census is uneven. Some particles sit on especially clean
-structural results: photon, gluons, graviton, $W$, and $Z$. The Higgs and top
-are tied together on one electroweak surface, and the neutrino sector
-has definite masses of its own. Quarks close on a selected public frame class.
-Charged leptons have a determinant-character attachment boundary before a
-promoted physical mass-scale row. Composite particles like hadrons demand
+structural or near-structural surfaces: photon, gluons, graviton, and the weak
+validation pair. The Higgs and top are tied together on one declared
+electroweak surface, the neutrino sector sits on a weighted-cycle absolute
+branch, and quarks close on a selected public frame class. Charged leptons
+remain more target-anchored, and composite particles like hadrons demand
 stronger computational control of the strong interaction; empirical hadron
 closure values use a separate \(e^+e^-\to\mathrm{hadrons}\) payload class.
 
@@ -267,11 +274,17 @@ The laws are not imposed from outside. They are the conditions that make agreeme
 
 Observers and laws select each other. Neither is primary.
 
-Observers that fit into the consensus survive and replicate. An observer whose internal model contradicts the shared reality cannot maintain stable correlations with other observers. It loses coherence and dissolves.
+Observers that fit into the consensus survive and replicate. An observer whose
+internal model persistently contradicts the shared reality cannot maintain
+stable public coordination with other observers. It drops out of the shared
+description.
 
 Laws that allow observers to agree proliferate. A law that prevents consistent gluing between patches cannot support stable observers. No observers means no one to instantiate that law in their shared description.
 
-The outcome of this mutual selection is the physics that permits stable, self-consistent observers to exist and to agree with each other. The universe is governed by laws that are maximally hospitable to the existence of observers who can verify those laws.
+The outcome of this mutual selection is the physics that permits stable,
+self-consistent observers to exist and to agree with each other. On this
+selection picture, the surviving laws are those hospitable enough to the
+existence of observers who can verify them.
 
 ### Laws as Coordination Protocols
 
