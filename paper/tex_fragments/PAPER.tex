@@ -60,7 +60,7 @@ A global state \(\omega\) is a positive linear functional on the inductive-limit
 
 \subsubsection{Five OPH axioms}\label{13-core-axioms}
 
-This paper uses five OPH axioms. The only labeled technical premises used below are the canonical premises \textbf{T1}--\textbf{T5} stated in Section~\ref{14-assumptions-and-external-inputs}. Other theorem-local hypotheses are written out in prose where needed instead of being assigned a separate label family.
+This paper uses five OPH axioms. The remaining theorem-side technical premise used below is \textbf{T2}, stated in Section~\ref{14-assumptions-and-external-inputs}. The former \textbf{T1} transportability burden, fixed-cutoff \textbf{T3} category burden, and refinement/fiber \textbf{T4} burden are now theorem-level results. The former \textbf{T5} slot is retained only as a named gauge-side nontrivial-realization burden: after compact reconstruction produces a possibly trivial compact group, one still has to show that the OPH/MAR branch actually occupies the nontrivial low-energy gauge sector. Other theorem-local hypotheses are written out in prose where needed instead of being assigned a separate label family.
 
 \textbf{1. Screen Net.} A horizon screen \(S^2\) carries a net of algebras \(P \mapsto \mathcal{A}(P)\).
 
@@ -104,7 +104,7 @@ Using the Planck-2018 late-time de Sitter scale~\cite{planck18} gives
 \(N_{\mathrm{scr}}\simeq3.31\times10^{122}\), and
 \(\Lambda\ell_P^2\simeq2.85\times10^{-122}\).
 
-The list below introduces the only labeled technical premises used later, namely \textbf{T1}--\textbf{T5}. Fixed-cutoff regulator bookkeeping, quasi-local propagation, endpoint-Lipschitz control, collar decomposition, and related branch-internal statements are cited directly from axioms and earlier theorems rather than through a second premise-label system.
+The list below introduces the remaining labeled technical premise used later, namely \textbf{T2}, and records the remaining gauge-side nontrivial-realization burden formerly called \textbf{T5}. The former \textbf{T1} path-independent transportability burden is now derived from overlap gluing; the former fixed-cutoff \textbf{T3} category premise and refinement/fiber \textbf{T4} premise are theorem-level results. Fixed-cutoff regulator bookkeeping, quasi-local propagation, endpoint-Lipschitz control, collar decomposition, and related branch-internal statements are cited directly from axioms and earlier theorems rather than through a second premise-label system.
 
 \textbf{Local MaxEnt at the regulator scale.} At the regulator scale \(\ell_{\mathrm{UV}}\), the global state \(\omega\) maximizes von Neumann entropy subject to:
 
@@ -193,17 +193,30 @@ for an induced map \(R_{\ell\to L}\) on one common finite-dimensional multiplier
 
 \textbf{Fixed-cutoff realized presentation.} At a UV scale \(\ell_{\mathrm{UV}}\), local patch algebras are type-I with finite-dimensional Hilbert spaces, and gauge-as-gluing is realized as a boundary action on a lifted finite-dimensional presentation. Section 2.3 proves the resulting fixed-cutoff collar package directly from overlap consistency on this realized presentation, while distinguishing the lifted fixed-point algebra from the sector-preserving collar algebra used in the EC theorem.
 
-External mathematical inputs: SSA and recovery theorems (Petz 1986, 1988; Fawzi and Renner 2015), the fixed-volume area-variation identity for small geodesic balls used in the D5 rest-frame relation, and the local quadratic-polarization argument used in the D5 tensor upgrade. The null modular bridge and the small-ball kernel are carried internally on the compact surface rather than imported from a separate EFT small-ball law. For SM contact we also use the Doplicher-Roberts reconstruction (Doplicher and Roberts 1989, 1990) once localized transportable sectors are assumed in the small-region limit. Full citations appear in the References.
+External mathematical inputs: SSA and recovery theorems (Petz 1986, 1988; Fawzi and Renner 2015), the fixed-volume area-variation identity for small geodesic balls used in the D5 rest-frame relation, and the local quadratic-polarization argument used in the D5 tensor upgrade. The null modular bridge and the small-ball kernel are carried internally on the compact surface rather than imported from a separate EFT small-ball law. For SM contact we also use the Doplicher-Roberts reconstruction (Doplicher and Roberts 1989, 1990) once localized zero-obstruction sectors are assembled in the small-region limit. Full citations appear in the References.
 
-\textbf{Canonical technical premises.} The only labeled technical premises used in this manuscript are:
+\textbf{Canonical technical premises.} The remaining theorem-side technical premise used in this manuscript is:
 \begin{itemize}
 \tightlist
-\item \textbf{T1}: on the central-defect branch, the gluing-side criterion corresponding to path-independent transportability is written \([z]=0\); on the genuinely noncentral fixed-cutoff branch the parallel criterion is \(q_\Sigma=0\), but that branch is handled by crossed-module data rather than by the ordinary DR field-algebra route. This identifies the obstruction data attached to the transportability premise on each fixed-cutoff branch; it is not a second theorem-side premise beyond the supplied transportable sector system.
 \item \textbf{T2}: all Lorentz/null-modular/Einstein statements are claims about a controlled refinement/scaling limit of the regulator net, not literal exactness at fixed finite cutoff.
-\item \textbf{T3}: the fixed-cutoff collar-sector packages are bosonic symmetric \(C^*\)-tensor categories in the \(3+1\)D EFT branch.
-\item \textbf{T4}: the refinement maps are faithful monoidal \(^*\)-functors compatible with composition and preserving transportable sector classes on cofinal tails, together with compatible finite-dimensional bosonic multiplicity fibers.
-\item \textbf{T5}: compact gauge reconstruction uses the refinement-limit category and bosonic fiber functor constructed from that supplied coherent ladder; nontriviality of the realized branch is still an extra burden.
 \end{itemize}
+
+The former \textbf{T5} slot is not a refinement/fiber premise. It records the remaining gauge-side nontriviality burden: the constructed refinement-limit category may be trivial unless OPH plus MAR proves nontrivial zero-obstruction occupancy of the realized low-energy branch.
+
+Former \textbf{T1}: path-independent transportability is replaced by TransportabilityFromOverlapGluing. On the ordinary/central branch, strict transport is equivalent to the vanishing central loop-coherence class \([z]_\Sigma=0\). On the genuinely noncentral branch, strict ordinary transport is equivalent to \(q_\Sigma=0\); when \(q_\Sigma\ne0\), the fixed-cutoff sector is a higher-gauge crossed-module sector rather than an ordinary compact-group DR sector.
+
+Former \textbf{T3}: the fixed-cutoff bosonic collar-sector category is now the theorem
+FixedCutoffBosonicSectorCategory. Edge-center completion gives localized collar charges as
+minimal central summands with boundary carriers; zero-obstruction overlap transport identifies
+localizations; collar concatenation gives tensor product; overlap-gluing associativity gives the
+associator; orientation reversal gives duals; the finite-dimensional lifted collar algebra gives
+the \(^*\)-operation and \(C^*\)-norm; and \(3+1\)-dimensional spacelike exchange gives bosonic
+symmetry. Fermionic signs and chirality are routed to the later super-Tannakian/matter lift, not
+inserted into the bosonic internal-gauge category.
+
+Former \textbf{T4}: the faithful monoidal refinement functors and compatible finite bosonic
+multiplicity fibers are now constructed by RefinementFunctorAndFiberDescent from the fixed-cutoff
+zero-obstruction bosonic sector system. They are no longer supplied as a separate premise.
 
 \subsubsection{Notation}\label{15-notation}
 
@@ -312,6 +325,27 @@ finite-state exact theorem package plus this conditional inverse-limit bridge: d
 normal-form computation with the Lyapunov step bound, collar-local approximate stability only
 through the splice and record controls, a verified rooted-tree packet-net subdomain, and no
 universality theorem for a uniform family of growing patch nets and repair laws.
+
+\textbf{Fixed-cutoff packet closure map and invariant simplex.} On any declared fixed-cutoff
+packet quotient \(Q\) whose repair relation is terminating and confluent, the normal-form map
+\[
+N:Q\to Q_{\mathrm{nf}}
+\]
+is well-defined and schedule-independent. It induces an affine OPH closure map on the probability
+simplex over packet states,
+\[
+\mathcal C_Q:\Delta(Q)\to\Delta(Q),
+\qquad
+\mathcal C_Q\!\left(\sum_{q\in Q}p_q\delta_q\right)
+=
+\sum_{q\in Q}p_q\delta_{N(q)}.
+\]
+Since \(Q\) is finite, \(\Delta(Q)\) is a nonempty compact convex set and \(\mathcal C_Q\) is a
+continuous affine self-map. Its image \(\Delta(Q_{\mathrm{nf}})\) is invariant, and
+\(\mathcal C_Q^2=\mathcal C_Q\). This is an actual closure map on the fixed-cutoff packet-closed
+quotient branch. It is not the full Appendix/habitat closure-map theorem for arbitrary OPH
+state-and-law data; the first operation not internalized at that level is the general habitat lift
+from this finite packet quotient to the full compact-convex observer-supporting sector.
 
 \textbf{Theorem 2.3 (EC from regulated overlap gluing).} For a collar \(B_\delta\) around a cap boundary \(\Sigma\), there is a canonical decomposition
 
@@ -430,7 +464,7 @@ sufficient realization on a chosen fixed-cutoff collar family is a Dobrushin-typ
 for the corresponding local Gibbs specifications, or a spectral-gap estimate uniform across that
 family. Used here, it is
 a collar-local recoverability condition on the selected branch; it does not imply infinite-volume
-uniqueness and it does not decide whether a separately supplied refinement-limit gauge-sector
+uniqueness and it does not decide whether the separately constructed refinement-limit gauge-sector
 colimit is trivial or nontrivial.
 
 \begin{quote}
@@ -524,7 +558,7 @@ C_{\psi,\phi,I_{\max}}\,|I'\Delta I|,
 \]
 used later in the null-modular bridge. So quasi-local propagation and endpoint-Lipschitz control are not external regularity selectors; they are the local-constraint MaxEnt branch written in dynamical form.
 
-\textbf{Refinement-stable multiplier branch.} Because the same finite constraint family is preserved under coarse-graining, the regulator states lie in one common finite-dimensional multiplier family rather than in unrelated state spaces at different cutoffs. The ``refinement-stable'' language used later therefore means persistence along the stable or fixed branch of this multiplier family. This state-side notion is enough to compare realized states across cutoffs. It does \emph{not} by itself upgrade fixed-cutoff edge labels to transportable refinement-persistent sectors, and it does not show that the supplied coherent bosonic refinement ladder is emitted on a nontrivial realized branch. Accordingly, whenever the gauge derivation speaks of a refinement-stable directed colimit of sectors, the entire transportable monoidal-refinement/fiber clause is the explicit content of \textbf{T3}--\textbf{T5}; the third OPH axiom supplies only the realized state branch along which one asks whether such sector transport persists.
+\textbf{Refinement-stable multiplier branch.} Because the same finite constraint family is preserved under coarse-graining, the regulator states lie in one common finite-dimensional multiplier family rather than in unrelated state spaces at different cutoffs. The ``refinement-stable'' language used later therefore means persistence along the stable or fixed branch of this multiplier family. This state-side notion is enough to compare realized states across cutoffs. It does \emph{not} by itself prove nontrivial realized gauge occupancy. The fixed-cutoff bosonic sector category is constructed in FixedCutoffBosonicSectorCategory, and the refinement functors plus finite bosonic fiber descent are constructed in RefinementFunctorAndFiberDescent. Accordingly, whenever the gauge derivation speaks of a refinement-stable directed colimit of zero-obstruction sectors, the remaining gauge-side burden is the former \textbf{T5} nontrivial MAR occupancy theorem; the third OPH axiom supplies only the realized state branch along which one asks whether nontrivial sector occupancy persists.
 
 \textbf{Scaling limit and algebraic type.} The regulator presentation gives a family of finite type-I algebras
 \[
@@ -605,6 +639,38 @@ r_{\mathrm{FR}}(\varepsilon_{n,m,\delta})
 \bigl(\varepsilon_{n,m,\delta}\bigr)
 \]
 to zero after transport to each fixed local collar model; only then can local weak-\(*\) extraction and GNS gluing emit the realized scaling-limit geometric cap pair. Beneath that derived schedule, the sharper raw datum is the transported fixed-local-collar Markov/faithfulness package, and the single missing clause inside that lower datum is the eventual common floor on the finite modular-transport family feeding the faithful modular-defect term. No separate exact-Markov-reference faithfulness input is missing there: on one fixed collar model, the exact-Markov comparison marginals inherit the same eventual floor once the exact-Markov modulus tends to zero. The manuscript does not derive a refinement-uniform common floor on the finite modular-transport marginals; this single clause is external to the emitted theorem chain. Second, one needs ordered cut-pair rigidity on that realized limit. That stage is symbolic until the realized scaling-limit geometric cap pair exists. The weak-\(*\) extraction plus rigidity route is therefore an explicit internal extension route, not part of the proved theorem surface.
+
+\textbf{Proposition 2.6a (common-floor collapse countermodel).} Exact or asymptotically exact Markov recovery at finite cutoff does not by itself imply the eventual common floor needed in the transported modular-defect term. Already in a two-dimensional matrix algebra, let
+\[
+\rho_n=\begin{pmatrix}e^{-n}&0\\0&1-e^{-n}\end{pmatrix}.
+\]
+Each \(\rho_n\) is faithful at finite \(n\), and tensoring it with any fixed finite exact-Markov collar factor gives a full-rank exact-Markov collar family. Nevertheless \(\lambda_{\min}(\rho_n)=e^{-n}\to0\), so there is no positive lower bound along the refinement family. On the off-diagonal matrix unit \(E_{12}\), the modular generator carries the logarithmic gap
+\[
+[ -\log\rho_n, E_{12} ] = n\,E_{12}+O(1)E_{12},
+\]
+and the unregularized modular transport has no finite common-floor limit on that direction. Thus collar Markovity and finite-stage faithfulness are not enough to promote the transported cap-local system to the BW/geometric cap-pair extraction. The noncollapse/common-floor clause is a genuine extra theorem if one wants the unregularized BW lift.
+
+\textbf{Theorem 2.6b (regularized support-visible modular transport).} Fix a local collar model of finite dimension \(d_{m,\delta}\). Let \(\rho_n\) be the transported physical collar marginal, \(\widehat\rho_n\) the exact-Markov comparison marginal on the same collar model, and \(\Delta_n=\|\rho_n-\widehat\rho_n\|_1\). For \(a>0\), set \(K_a(\rho)=-\log(\rho+a\mathbf 1)\). For every bounded collar observable \(O\) in the support-visible algebra,
+\[
+\left|\operatorname{Tr}\rho_n O\bigl(K_a(\rho_n)-K_a(\widehat\rho_n)\bigr)\right|
+\le
+\|O\|\left(
+  \frac{4\Delta_n}{a}
+  + d_{m,\delta}a
+  +4\Delta_n|\log a|
+\right).
+\]
+Consequently, if \(a_n\downarrow0\) is chosen with
+\[
+\Delta_n/a_n\to0,\qquad
+d_{m,\delta}a_n\to0,\qquad
+\Delta_n|\log a_n|\to0,
+\]
+then the regularized support-visible modular matrix elements converge on that fixed collar model.
+
+\textbf{Proof sketch.} On the spectral interval \([a,\infty)\), the logarithm is operator-Lipschitz at the scale used above by its integral representation. Splitting the comparison into the support above \(a\), the \(a\)-tail, and the trace-distance error gives the displayed bound. The three displayed conditions make the three error terms vanish. QED.
+
+\textbf{BW-side closure status.} Proposition 2.6a blocks the stronger unregularized conclusion from the currently proved finite-cutoff package. The regularized theorem supplies the constructive replacement actually used by the paper: visible-support modular transport is controlled with an explicit cutoff schedule, while the exact BW/geometric cap-pair extraction remains conditional on a noncollapse/common-floor theorem or an equivalent microscopic realization. Thus \textbf{T2} is not a hidden finite-cutoff exactness claim; it is the declared scaling-limit branch, with the unregularized BW lift separated from the support-visible regularized transport theorem.
 \subsection{Overlap Consistency and Gluing}\label{3-overlap-consistency-and-gluing}
 
 The constructive part of overlap consistency is the tree-gluing theorem below. The structural part is the origin of the gluing redundancy itself. On the ordinary or central-defect branch, gauge-as-gluing is the finite-regulator overlap redundancy of local chart presentations: once the overlap algebras are realized in finite-dimensional charts, overlap-consistent rechartings of a cut form a compact unitary transition system. The collar theorem of Section 2.3 should therefore be read with its boundary group \(G_\Sigma\) understood as shorthand for this derived compact boundary action, not as a model-specific add-on. On the genuinely noncentral branch, the same weak gluing data are encoded by a compact crossed-module change system, so the fixed-cutoff collar theorem upgrades to a higher-gauge statement rather than failing. The fixed-cutoff topological package is therefore closed on all three branches.
@@ -746,6 +812,12 @@ q_\Sigma=[(g,h)]\in \check H^2(N_\Sigma,H_\Sigma\to G_\Sigma)
 is invariant under local rechartings, classifies fixed-cutoff genuinely noncentral sectors, and vanishes iff the defect is removable.
 
 \textbf{Proof sketch.} Pair-overlap rechartings are inner, while triple-overlap associators strictify to compact crossed-module data. Finite-dimensional unitary \(\mathcal T_\Sigma\)-modules decompose semisimply, and Schur matching leaves only diagonal left/right blocks. The transport statement is the crossed-module \v{C}ech analogue of the central-defect case. QED.
+
+\textbf{Theorem 3.4b (TransportabilityFromOverlapGluing).} Fix a connected cut \(\Sigma\) and a finite regulator charting nerve \(N_\Sigma\). Transport of a collar charge is defined by the path composite in the overlap recharting groupoid: along \(p=(i_0\to\cdots\to i_m)\), the charge block is moved by \(U_p=U_{i_{m-1}i_m}\cdots U_{i_0i_1}\). This construction uses the overlap unitary transition system itself, not an added DHR transportability assumption.
+
+On the ordinary branch, this transport is strictly path-independent iff every closed overlap loop has trivial holonomy on the collar-sector block. On the central branch, elementary triangle moves accumulate the central cocycle \(z_{ijk}\); strict path-independent transport exists iff the central loop-coherence class \([z]_\Sigma\in\check H^2(N_\Sigma,Z)\) vanishes. When \([z]_\Sigma=0\), a central \(1\)-cochain strictifies the lifts \(U_{ij}\), and when \([z]_\Sigma\ne0\), the residual path dependence is exactly the represented central multiplier.
+
+On the genuinely noncentral branch, path comparisons are \(H_\Sigma\)-valued \(2\)-morphisms in the crossed module \(H_\Sigma\to G_\Sigma\). Strict ordinary transport exists iff \(q_\Sigma=[(g,h)]\) vanishes. If \(q_\Sigma=0\), the crossed-module data strictify to a genuine \(G_\Sigma\)-valued \(1\)-cocycle and the ordinary path-composite construction applies. If \(q_\Sigma\ne0\), the sector is a higher-gauge fixed-cutoff sector with higher transport rather than an ordinary compact-group DR sector. Thus the former \textbf{T1} condition is a theorem-level zero-obstruction classification, not an independent premise. QED.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 \subsection{Modular Flow and Lorentz Kinematics}\label{4-modular-flow-and-lorentz-kinematics}
@@ -2589,26 +2661,36 @@ on the explicit \textbf{T2} plus extraction-and-rigidity branch, the realized sc
 
 \subsubsection{Edge sector category and gauge group reconstruction}\label{61-edge-sector-category-and-gauge-group-reconstruction}
 
-At any fixed UV cutoff, edge-center completion provides finite collar-sector packages of transportable edge charges, intertwiners, fusion, and duals. The local MaxEnt / collar-mixing package established earlier controls only fixed-cutoff recoverability, modular-support localization, and carried error terms on the realized branch. It is logically separate from the question whether transportable edge sectors survive refinement, and it supplies no theorem that the refinement-limit sector category is trivial or nontrivial. A nontrivial transportable branch is therefore treated here as additional gauge data rather than as something decided by the mixing estimate itself. Whenever compact gauge reconstruction is invoked, the coherent bosonic refinement ladder itself is the content of \textbf{T3}--\textbf{T5}.
+At any fixed UV cutoff, edge-center completion provides finite collar-sector packages of edge charges, intertwiners, fusion, and duals. The local MaxEnt / collar-mixing package established earlier controls only fixed-cutoff recoverability, modular-support localization, and carried error terms on the realized branch. It is logically separate from the question whether zero-obstruction edge sectors survive refinement, and it supplies no theorem that the refinement-limit sector category is trivial or nontrivial. A nontrivial zero-obstruction branch is therefore treated here as an additional gauge-side realization burden rather than as something decided by the mixing estimate itself. Whenever compact gauge reconstruction is invoked, the fixed-cutoff category and refinement/fiber ladder are theorem-produced below; the remaining former \textbf{T5} burden is nontrivial MAR occupancy of the realized branch.
 
-On the central-defect branch, the transportability carried by this assumed directed system matches the vanishing of the central gluing obstruction by Proposition 6.1a. Therefore \([z]=0\) is not listed again as a second independent gauge premise on the ordinary compact-group route. The genuinely noncentral fixed-cutoff branch remains separate: its obstruction is \(q_\Sigma\), and it is handled by the crossed-module theorems rather than by the ordinary DR field-algebra corollary.
+On the ordinary or central-defect branch, path-independent movement of collar charges is no longer supplied as an independent premise. TransportabilityFromOverlapGluing constructs transport from overlap paths and proves the exact zero-obstruction criterion: ordinary/central strict transport exists exactly when \([z]_\Sigma=0\). The same theorem handles the genuinely noncentral branch by the crossed-module criterion \(q_\Sigma=0\); if \(q_\Sigma\ne0\), the fixed-cutoff sector remains a higher-gauge sector rather than an ordinary DR field-algebra sector.
 
-Assume therefore that in the EFT regime there is a directed ladder \((\mathsf{Sect}_r,U_{rs},F_r)\) of transportable bosonic edge-sector packages with monoidal refinement functors and compatible finite multiplicity fibers, and write
+\textbf{Theorem (FixedCutoffBosonicSectorCategory).} At every fixed regulator cutoff, on the ordinary or central-defect zero-obstruction branch and in the bosonic internal-gauge sector of the \(3+1\)-dimensional EFT regime, the localized collar charges form a semisimple rigid symmetric \(C^*\)-tensor category \(\mathsf{Sect}^{\mathrm{bos}}_r\). Edge-center completion identifies the simple objects as minimal central summands \(P_\alpha\) with irreducible boundary carriers \(W_\alpha\). Zero-obstruction overlap transport identifies localizations. Collar concatenation gives tensor product; overlap-gluing associativity gives the associator; orientation reversal gives duals; the finite-dimensional lifted collar algebra gives the \(^*\)-operation and \(C^*\)-norm; and \(3+1\)-dimensional spacelike exchange gives bosonic symmetry. Fermionic signs, spinorial matter, and chirality are not part of this bosonic internal-gauge category; they belong to the later super-Tannakian or matter-sector lift.
+
+\textbf{Theorem (RefinementFunctorAndFiberDescent).} On a cofinal refinement tail of the ordinary or central zero-obstruction bosonic EFT branch, the fixed-cutoff categories \(\mathsf{Sect}^{\mathrm{bos}}_r\) of FixedCutoffBosonicSectorCategory assemble into a directed refinement system. For \(s\succeq r\), refinement induces faithful monoidal \(^*\)-functors
+\[
+U_{rs}:\mathsf{Sect}^{\mathrm{bos}}_r\to\mathsf{Sect}^{\mathrm{bos}}_s
+\]
+that preserve the tensor unit, tensor product, associator, duals, \(^*\)-structure, bosonic symmetry, and zero-obstruction transport classes on cofinal tails, with \(U_{rt}\simeq U_{st}\circ U_{rs}\). The lifted finite collar Hilbert spaces also give compatible finite-dimensional bosonic multiplicity fibers \(F_r:\mathsf{Sect}^{\mathrm{bos}}_r\to\mathsf{Hilb}_{\mathrm{fd}}\), with natural unitary identifications \(F_s(U_{rs}X)\cong F_r(X)\).
+
+\textbf{Proof.} Edge-center completion realizes each fixed-cutoff bosonic sector as a minimal central summand with a finite boundary carrier. A refinement embeds the coarse collar presentation into the refined collar presentation and sends each overlap-visible zero-obstruction summand to the direct sum of its refined descendants with the same transported charge class. Intertwiners refine by conjugating with the collar inclusion, so the induced map on sectors is faithful and \(^*\)-preserving. Collar concatenation commutes with refinement up to the overlap-gluing associator, while orientation reversal and \(3+1\)-dimensional spacelike exchange commute with the same inclusion; hence the induced functors are monoidal, preserve duals, and preserve bosonic symmetry. Compatibility of successive inclusions gives \(U_{rt}\simeq U_{st}\circ U_{rs}\). Finally, the lifted collar carrier of a sector is finite-dimensional at every fixed cutoff, and refinement only changes its presentation by a unitary identification inside the refined lifted collar algebra. These carriers define finite multiplicity fibers \(F_r\), and the same inclusions give the required natural unitary compatibilities. QED.
+
+Consequently the EFT branch has a directed ladder \((\mathsf{Sect}^{\mathrm{bos}}_r,U_{rs},F_r)\) of theorem-produced bosonic edge-sector categories satisfying that zero-obstruction criterion, with monoidal refinement functors and compatible finite multiplicity fibers. Write
 
 \[
-\mathsf{Sect}_\infty := \varinjlim_r \mathsf{Sect}_r,
+\mathsf{Sect}_\infty := \varinjlim_r \mathsf{Sect}^{\mathrm{bos}}_r,
 \]
 
-for the directed colimit retaining the sectors and intertwiners that persist in that transportable system. The theorem below is neutral about whether \(\mathsf{Sect}_\infty\) is trivial or nontrivial: if the supplied bosonic ladder furnished only the tensor unit, the reconstructed compact group would be the trivial group.
+for the directed colimit retaining the sectors and intertwiners that persist in that system. The theorem below is neutral about whether \(\mathsf{Sect}_\infty\) is trivial or nontrivial: if the realized branch furnishes only the tensor unit, the reconstructed compact group is the trivial group.
 
-\textbf{Persistence lemma.} Write \(U_{rs}:\mathsf{Sect}_r\to\mathsf{Sect}_s\) for the refinement functor from a regulator scale \(r\) to a finer scale \(s\succeq r\). If a realized transportable edge-sector class \(\alpha_{r_0}\) appears on a sufficiently fine collar, has overlap-visible edge-center support, and has representatives \(\alpha_s\in\mathsf{Sect}_s\) on a cofinal refinement tail such that \(U_{st}\alpha_s\simeq\alpha_t\) for all later \(t\succeq s\) on that tail, then it determines a unique object \([\alpha]\in\mathsf{Sect}_\infty\). The reason is just the directed-colimit equivalence relation: two representatives define the same object once their images agree at a common finer stage. Therefore a later stage cannot erase, split, or change the transportability status of that class without either breaking the stated refinement-system hypotheses or introducing new overlap-visible support. This is a persistence result inside \textbf{T5}, not a proof that a nontrivial transportable colimit exists.
+\textbf{Persistence lemma.} Write \(U_{rs}:\mathsf{Sect}^{\mathrm{bos}}_r\to\mathsf{Sect}^{\mathrm{bos}}_s\) for the refinement functor from a regulator scale \(r\) to a finer scale \(s\succeq r\). If a realized zero-obstruction edge-sector class \(\alpha_{r_0}\) appears on a sufficiently fine collar, has overlap-visible edge-center support, and has representatives \(\alpha_s\in\mathsf{Sect}^{\mathrm{bos}}_s\) on a cofinal refinement tail such that \(U_{st}\alpha_s\simeq\alpha_t\) for all later \(t\succeq s\) on that tail, then it determines a unique object \([\alpha]\in\mathsf{Sect}_\infty\). The reason is just the directed-colimit equivalence relation: two representatives define the same object once their images agree at a common finer stage. Therefore a later stage cannot erase, split, or change the zero-obstruction status of that class without either breaking the theorem-produced refinement-system hypotheses or introducing new overlap-visible support. This is a persistence result in the constructed ladder, not a proof that a nontrivial colimit exists.
 
 This gives a refinement-limit bosonic tensor category \(\mathsf{Sect}_\infty\) of edge charges:
 
 \begin{itemize}
 \tightlist
 \item
-  objects: transportable sector labels that persist in the assumed directed system,
+  objects: zero-obstruction sector labels that persist in the assumed directed system,
 \item
   morphisms: intertwiners between sectors,
 \item
@@ -2619,9 +2701,9 @@ This gives a refinement-limit bosonic tensor category \(\mathsf{Sect}_\infty\) o
   symmetric braiding in the EFT regime (no anyonic statistics in 3+1D).
 \end{itemize}
 
-The monoidal refinement maps descend the tensor unit, associators, duals, and bosonic symmetry to the colimit, while the compatible stagewise multiplicity spaces descend to a faithful bosonic fiber functor \(\mathcal F: \mathsf{Sect}_\infty \to \mathsf{Hilb}_{\mathrm{fd}}\). The fibers are finite-dimensional objectwise even though \(\mathsf{Sect}_\infty\) can have infinitely many simple objects. The theorem begins only once that bosonic refinement ladder is supplied; those data are not consequences of Axiom 3 alone.
+The monoidal refinement maps descend the tensor unit, associators, duals, and bosonic symmetry to the colimit, while the compatible stagewise multiplicity spaces descend to a faithful bosonic fiber functor \(\mathcal F: \mathsf{Sect}_\infty \to \mathsf{Hilb}_{\mathrm{fd}}\). The fibers are finite-dimensional objectwise even though \(\mathsf{Sect}_\infty\) can have infinitely many simple objects.
 
-\textbf{Theorem 6.1 (Constructed bosonic sector category and Tannaka/DR reconstruction).} If the supplied bosonic refinement ladder is as above, then the colimit \(\mathsf{Sect}_\infty\) is a rigid symmetric \(C^*\) tensor category with faithful bosonic fiber functor \(\mathcal F\), and therefore
+\textbf{Theorem 6.1 (Constructed bosonic sector category and Tannaka/DR reconstruction).} On the ordinary or central zero-obstruction bosonic EFT branch constructed by FixedCutoffBosonicSectorCategory and RefinementFunctorAndFiberDescent, the colimit \(\mathsf{Sect}_\infty\) is a rigid symmetric \(C^*\) tensor category with faithful bosonic fiber functor \(\mathcal F\), and therefore
 
 \[
 G := \mathrm{Aut}_\otimes(\mathcal F)
@@ -2629,7 +2711,7 @@ G := \mathrm{Aut}_\otimes(\mathcal F)
 
 is a compact group and \(\mathsf{Sect}_\infty \simeq \mathrm{Rep}(G)\). In particular \(G\) is unique up to isomorphism, and this group is a compact subgroup of a product of unitary groups.
 
-\textbf{Proof.} The MaxEnt/local-Gibbs/collar-mixing package is not used here to prove nontriviality of the transportable branch; those data are supplied by the bosonic refinement ladder. The monoidal refinement functors preserve tensor products, unit, duals, and \(^*\)-structure, so the directed colimit inherits a rigid symmetric \(C^*\)-tensor structure, and the compatible stagewise finite multiplicity spaces descend to a faithful bosonic fiber functor \(\mathcal F\). Fix a small skeleton of \(\mathsf{Sect}_\infty\). For every object \(X\), a monoidal natural automorphism \(\eta \in \mathrm{Aut}_\otimes(\mathcal F)\) has a unitary component \(\eta_X \in U(\mathcal F(X))\), so
+\textbf{Proof.} The MaxEnt/local-Gibbs/collar-mixing package is not used here to prove nontriviality of the zero-obstruction branch. The fixed-cutoff categories are constructed by FixedCutoffBosonicSectorCategory, and the monoidal refinement functors and finite fibers are constructed by RefinementFunctorAndFiberDescent. Since those functors preserve tensor products, unit, duals, and \(^*\)-structure, the directed colimit inherits a rigid symmetric \(C^*\)-tensor structure, and the compatible stagewise finite multiplicity spaces descend to a faithful bosonic fiber functor \(\mathcal F\). Fix a small skeleton of \(\mathsf{Sect}_\infty\). For every object \(X\), a monoidal natural automorphism \(\eta \in \mathrm{Aut}_\otimes(\mathcal F)\) has a unitary component \(\eta_X \in U(\mathcal F(X))\), so
 
 \[
 \mathrm{Aut}_\otimes(\mathcal F) \hookrightarrow \prod_X U(\mathcal F(X)), \qquad \eta \mapsto (\eta_X)_X.
@@ -2645,19 +2727,9 @@ For each intertwiner \(f:X\to Y\), naturality gives the closed relation \(\mathc
 
 Hence \(G=\mathrm{Aut}_\otimes(\mathcal F)\) is a closed subgroup of the compact product \(\prod_X U(\mathcal F(X))\), so \(G\) is compact. The DR/Tannaka hypotheses are therefore satisfied on the constructed pair \((\mathsf{Sect}_\infty,\mathcal F)\), and the Doplicher--Roberts/Tannaka reconstruction theorem gives a symmetric \(C^*\)-tensor equivalence \(\mathsf{Sect}_\infty \simeq \mathrm{Rep}(G)\) \cite{dr89,dr90}. If another compact group \(G'\) gave the same category through a faithful bosonic fiber functor, the induced symmetric tensor equivalence \(\mathrm{Rep}(G)\simeq\mathrm{Rep}(G')\) compatible with the forgetful functors would identify both groups as the automorphism group of the same fiber functor. Thus \(G\cong G'\), so the reconstruction is unique up to isomorphism. QED.
 
-\textbf{Corollary 6.1 (field algebra reconstruction, conditional).} If in the small-region limit the edge sectors are localized and transportable in the DHR sense (i.e., charges can be moved between patches without changing their fusion), then there exists a field algebra \(\mathcal F\) and a compact group \(G\) such that \(\mathcal A = \mathcal F^G\). This is the Doplicher--Roberts reconstruction of local gauge symmetry from sectors. QED.
+\textbf{Corollary 6.1 (field algebra reconstruction, conditional).} If in the small-region limit the edge sectors are localized and satisfy the zero-obstruction transport criterion of Theorem 3.4b, then there exists a field algebra \(\mathcal F\) and a compact group \(G\) such that \(\mathcal A = \mathcal F^G\). This is the Doplicher--Roberts reconstruction of local gauge symmetry from the constructed transportable sector category. QED.
 
-\textbf{Proposition 6.1a (Transportability from gluing obstruction on the central branch).} On the central-defect branch, the gluing framework identifies the explicit loop-coherence criterion that accompanies DHR transportability in the later ordinary compact-gauge route. In the gluing framework (Section 3), transportability is the statement that charges can be moved between patches without changing fusion rules. The obstruction to path-independent transport is the \v{C}ech-type central cocycle \(z_{ijk}\) from the central-defect subbranch.
-
-Explicitly: the gluing framework gives a gauge-invariant \v{C}ech 2-cocycle class \([z]\) built from triple overlaps (Section 6.6). Transportability holds iff this class vanishes:
-
-\[
-\text{DHR transportable} \iff [z] = 0 \iff \text{loop-coherent gluing}.
-\]
-
-\textbf{Proof.} Transportability means charges can be moved along any path without affecting the result. In gluing language, this is path-independent parallel transport of edge labels. Lemma 6.12 shows that loop-coherent global gluing exists iff \([z] = 0\). But loop-coherent gluing is exactly path-independent transport, so the equivalence holds. QED.
-
-\textbf{Corollary.} On the central branch, the DHR-transportability condition in Corollary 6.1 is tracked explicitly by the equivalent loop-coherence condition \([z]=0\). This statement gives the central gluing-side criterion explicitly. On the genuinely noncentral branch, Corollary 3.4a gives the parallel fixed-cutoff criterion in terms of the higher-gauge class \(q_\Sigma\), and that branch is handled by crossed-module data rather than by the ordinary DR field-algebra corollary.
+\textbf{Corollary 6.1a (No separate T1, fixed-cutoff T3, or T4 premise).} On the central branch, the strict DHR-transportability condition used in Corollary 6.1 is exactly the theorem-level loop-coherence condition \([z]_\Sigma=0\) of TransportabilityFromOverlapGluing. On the genuinely noncentral branch, strict ordinary transport is exactly \(q_\Sigma=0\), while \(q_\Sigma\ne0\) remains a higher-gauge fixed-cutoff sector handled by crossed-module data rather than by the ordinary DR field-algebra corollary. The fixed-cutoff bosonic category is constructed by FixedCutoffBosonicSectorCategory, and the faithful monoidal refinement functors plus finite bosonic fibers are constructed by RefinementFunctorAndFiberDescent. Thus the compact-gauge route uses the zero-obstruction sectors classified by gluing and theorem-produced category/refinement/fiber data. The remaining former \textbf{T5} burden is nontrivial realized MAR occupancy, not the construction of the compact reconstruction category itself.
 
 \subsubsection{Selecting the SM factors (derived from MAR)}\label{62-selecting-the-sm-factors-derived-from-mar}
 
@@ -2673,7 +2745,28 @@ The complete formal statement, admissibility definitions, and proof route are gi
 
 Here \(\chi_{\mathrm{cpl}}\) is the \textbf{coupled edge capacity}: the dimension of the minimal unitary carrier containing a common irreducible block on which the admissible pseudoreal and complex nonabelian charge types both act nontrivially. This is intentionally stronger than the abstract minimal faithful representation dimension. For \(S(U(3)\times U(2))\), the block-diagonal action on \(\mathbb{C}^3 \oplus \mathbb{C}^2\) is faithful of dimension \(5\), but it is not coupled and therefore does not enter MAR. The object minimized by MAR is the sector package \(\mathfrak S\), not the bare tensor category by itself. MAR is thus an explicit structural-economy selector on the admissible class, not a theorem derived from the earlier axioms.
 
-\textbf{Note on transport obstruction.} The gluing obstruction is tracked explicitly so the gauge lane states its burdens. On the central branch, Proposition 6.1a identifies \([z]=0\) as the gluing-side form of the DHR transportability required by the supplied transportable sector system, so it is not an additional free theorem-side premise. On the genuinely noncentral branch, Corollary 3.4a gives the parallel fixed-cutoff criterion \(q_\Sigma=0\), and that branch is handled by crossed-module data rather than by the ordinary DR field-algebra corollary.
+\textbf{Definition 6.1b (MAR realization space and physical equivalence).} Let
+\(\mathfrak A_{\mathrm{MAR}}\) be the set of isomorphism classes of finite low-energy sector packages
+\[
+\mathfrak S=(G^0,\mathcal R_{\mathrm{light}},H,\mathcal Y,\mathcal F)
+\]
+on the ordinary or central zero-obstruction bosonic branch of Theorem 6.1, together with the explicit realized one-Higgs chiral matter package used below. Here \(G^0\) is the connected Lie gauge-sector image, \(\mathcal R_{\mathrm{light}}\) is the light chiral matter representation family, \(H\) is one Higgs doublet, \(\mathcal Y\) denotes the Yukawa-completable charge data, and \(\mathcal F\) is the descended finite bosonic fiber functor on the retained transportable sector package. A package is MAR-admissible exactly when it satisfies the six clauses in Axiom 5: zero obstruction, anomaly cancellation, refinement stability with light chiral matter, one-Higgs Yukawa completability with one connected abelian charge factor acting nontrivially on the coupled carrier, intrinsic quark-sector CP capability, and weak-sector UV completability on the same one-Higgs branch.
+
+Two packages are physically equivalent when they are related by a compact-group isomorphism and a fiber-compatible symmetric monoidal equivalence that preserve the observer-visible representations, Yukawa invariants, anomaly polynomial, hypercharge lattice up to the allowed \(\mathrm U(1)\) normalization, and the one-Higgs branch, modulo generation relabeling, charge-conjugation convention, gauge-center quotienting, implementation hiding, and inert ancillary stabilization.
+
+\textbf{Definition 6.1c (MAR order).} For \(\mathfrak S\in\mathfrak A_{\mathrm{MAR}}\), define
+\[
+C(\mathfrak S)=(\chi_{\mathrm{cpl}},N_{\mathrm{nonab}},N_c,N_g)\in\mathbb N^4,
+\]
+where \(N_{\mathrm{nonab}}\) is the number of connected nonabelian simple factors acting nontrivially on the coupled carrier, \(N_c\) is the dimension of the minimal intrinsically complex color-type role, and \(N_g\) is the generation count on the realized one-Higgs chiral branch. MAR orders packages by the lexicographic order on \(C(\mathfrak S)\), then quotients ties by the physical equivalence relation above.
+
+\textbf{Proposition 6.1d (well-founded MAR minima).} Every nonempty MAR-admissible class has a nonempty set of MAR-minimal packages. More precisely, if \(\mathcal A\subseteq\mathfrak A_{\mathrm{MAR}}\) is nonempty, then the set \(C(\mathcal A)\subseteq\mathbb N^4\) has a lexicographically least element. The MAR-minimal packages in \(\mathcal A\) are exactly the packages whose complexity vector is that least element.
+
+\textbf{Proof.} The lexicographic order on \(\mathbb N^4\) is well-founded: first minimize \(\chi_{\mathrm{cpl}}\), then \(N_{\mathrm{nonab}}\) on that fiber, then \(N_c\), then \(N_g\). Each step minimizes a nonempty subset of \(\mathbb N\). QED.
+
+\textbf{Proposition 6.1e (meaning of MAR uniqueness).} MAR uniqueness is uniqueness of the observer-visible low-energy package modulo the physical equivalence relation in Definition 6.1b. It is not uniqueness of a microscopic regulator representative. The subsequent lemmas prove that, within the connected positive-dimensional Lie admissible class with one connected abelian factor and faithful action on the minimal coupled carrier, all MAR-minimal representatives realize the same connected SM gauge image, the same exact hypercharge lattice after normalization, \(N_c=3\), and \(N_g=3\). Any remaining differences are gauge-center quotient choices, relabelings, or inert implementation data and therefore do not change the physical predictions recorded in D8--D9.
+
+\textbf{Note on transport obstruction.} The gluing obstruction is tracked explicitly so the gauge lane states its burdens. TransportabilityFromOverlapGluing identifies \([z]_\Sigma=0\) as the central-branch strict transport criterion and \(q_\Sigma=0\) as the genuinely noncentral strict ordinary transport criterion. When \(q_\Sigma\ne0\), the sector is handled by crossed-module data rather than by the ordinary DR field-algebra corollary. FixedCutoffBosonicSectorCategory constructs the fixed-cutoff category, and RefinementFunctorAndFiberDescent constructs the refinement/fiber descent. The remaining gauge-side burden is the former \textbf{T5} nontrivial-realization clause.
 
 \textbf{What MAR derives.} Product structure, minimal sector content, and coupled edge-capacity minimality are consequences of MAR applied to the admissible class:
 
@@ -2878,6 +2971,17 @@ QED.
 \item
   Under the stated gauge-selection hypotheses, this is a derived result, not conditional.
 \end{itemize}
+
+\textbf{Corollary 6.9a (MAR-minimal SM package is unique up to physical equivalence).} On the ordinary or central zero-obstruction bosonic branch, assume the MAR-admissible class is nonempty and contains the explicit realized one-Higgs chiral matter package used in Theorem 6.1 through Proposition 6.9. Then every MAR-minimal representative in that branch has the same observer-visible Standard Model package:
+\[
+\frac{\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm U(1)}{\mathbb Z_6},
+\qquad
+N_c=3,\qquad
+N_g=3,
+\]
+with the hypercharge lattice of Proposition 6.6 and the finite quotient fixed by Proposition 6.6. The only residual freedom is physical equivalence in the sense of Definition 6.1b.
+
+\textbf{Proof.} Proposition 6.1d supplies the MAR minima. Lemmas 6.3--6.5 and Proposition 6.6a fix the minimal weak, color, coupled-carrier, and connected abelian roles at the least first three complexity entries. Corollary 6.6b fixes \(N_c=3\), Proposition 6.9 fixes \(N_g=3\), and the hypercharge and quotient propositions fix the visible charge lattice and \(\mathbb Z_6\) kernel. The equivalence relation removes only relabelings, gauge-center conventions, and inert implementation data. QED.
 
 \subsubsection{Hilbert-space formulation of gluing data}\label{65-hilbert-space-formulation-of-gluing-data}
 
@@ -3115,9 +3219,9 @@ The model requires photons and gravitons.
 \item
   Theorem 2.3 (edge-center completion) decomposes collar Hilbert spaces into sectors labeled by boundary gauge representations.
 \item
-  Theorem 6.1 constructs the refinement-limit bosonic edge-sector category from the supplied coherent ladder and then recovers a compact gauge group G from it.
+  Theorem 6.1 constructs the refinement-limit bosonic edge-sector category from theorem-produced fixed-cutoff category, refinement, and fiber data, then recovers a compact gauge group G from it.
 \item
-  Corollary 6.1 (conditional on DHR transportability) reconstructs a field algebra with G as a local gauge symmetry.
+  Corollary 6.1 (conditional on the zero-obstruction sector system of TransportabilityFromOverlapGluing) reconstructs a field algebra with G as a local gauge symmetry.
 \item
   For the Standard Model, G includes U(1)\_em after electroweak symmetry breaking.
 \item

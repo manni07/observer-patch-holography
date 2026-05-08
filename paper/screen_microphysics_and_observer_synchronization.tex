@@ -1466,6 +1466,14 @@ backend must run each order once exactly. The sampled backend must run each orde
 independent seeds and $1024$ shots per seed. A reported reference-model pass is not valid unless it
 includes all named benchmarks and all six schedule orders.
 
+The canonical executable surface for the analytic fixed-cutoff suite is
+\path{code/consensus/reference_architecture_benchmark_suite.py}. Its current emitted artifact is
+\path{code/consensus/runs/reference_architecture_benchmark_suite_current.json}. That artifact is
+the issue-237 reference-architecture benchmark surface: it runs the named $\mathbb Z_2$ and $S_3$
+families over all six schedules, records packet-closure and repair-completeness gates, includes the
+residual-obstruction gate, and states explicitly that the result is fixed-cutoff only. It is not a
+continuum/gravity lift and it is not a uniqueness theorem for microscopic UV completion.
+
 \subsection{Required run manifest and per-cycle log}
 
 Every run must write two artifacts.
@@ -1683,6 +1691,11 @@ implementation team which layer is not doing the job the paper assigns to it, an
 logs above tell them where to start looking. Literal microscopic uniqueness is not the target
 invariant here; the OPH theorem surface fixes only the physical branch modulo gauge or
 implementation hiding and inert ancillary refinement.
+
+As of the current reference artifact, the analytic backend passes all named $\mathbb Z_2$ and $S_3$
+fixed-cutoff gates across all six schedules. The pass should be read only as an existence-program
+benchmark for the regulated architecture. The open bridge remains the continuum/gravity lift and
+any claim of uniqueness of the underlying microscopic completion.
 
 \section{Dependence on Existing OPH Results and Open Bridges}
 
