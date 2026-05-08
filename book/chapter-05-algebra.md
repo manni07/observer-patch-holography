@@ -23,10 +23,9 @@ $$[X, P] = XP - PX = i\hbar$$
 This is the **commutator**, and it's the heart of quantum mechanics.
 
 The symbols are the whole lesson. $X$ is the position operator. $P$ is the
-momentum operator. Writing $XP$ means "ask the momentum question after the
-position question" in the algebraic order used by operators, while $PX$ means
-the reverse order. The bracket $[X,P]$ measures the failure of those two orders
-to agree. The number $i$ is the imaginary unit and $\hbar$ is Planck's
+momentum operator. Writing $XP$ and $PX$ means composing the two operations in
+opposite orders. The bracket $[X,P]$ measures the failure of those two
+compositions to agree. The number $i$ is the imaginary unit and $\hbar$ is Planck's
 constant divided by $2\pi$. Nature is not saying that our instruments are
 clumsy. It is saying that these two questions do not belong to one classical
 spreadsheet of pre-existing answers.
@@ -84,7 +83,7 @@ The working idea is simple: non-commutativity is part of what makes overlap cons
 
 Consider the overlap condition. When two observers compare notes, they must agree on their shared observables. In a commutative world-where all measurements are compatible-the problem is much closer to the classical marginal setting. Pre-existing values can often be assigned more straightforwardly, especially on simple overlap structures, but compatibility is not automatic on arbitrary overlap graphs.
 
-The Quantum Marginal Problem shows where the classical intuition breaks. Pairwise-consistent marginals can fail to glue into a global state. The consistency constraints are non-trivial precisely because some observables do not commute.
+The Quantum Marginal Problem shows that the difficulty survives in a sharper form. Pairwise-compatible reduced states can still fail to come from one global state. Non-commutativity intensifies the quantum consistency problem, but it is not the only obstruction to gluing.
 
 **Non-commutativity makes the quantum consistency problem especially hard.** If measurements all commuted, the overlap conditions would be much closer to the classical case. Physics could have rich laws and dynamics, while missing the specifically quantum constraint structure highlighted here.
 
@@ -147,7 +146,7 @@ Thomas Bayes and Pierre-Simon Laplace developed the rules for updating probabili
 
 $$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$$
 
-This "Bayesian update" is how rational agents modify beliefs in light of evidence. If two observers start with the same priors and observe the same evidence, this rule guarantees they reach the same posteriors.
+This "Bayesian update" is how rational agents modify beliefs in light of evidence. If two observers start with the same priors and observe the same evidence, this rule guarantees the same posteriors.
 
 The vertical bar means "given." $P(A|B)$ is the probability of $A$ after
 learning $B$. $P(A)$ is the prior probability of $A$, $P(B|A)$ says how likely
@@ -155,7 +154,7 @@ the evidence $B$ would be if $A$ were true, and $P(B)$ normalizes the result.
 Bayes' rule is a small equation with a large moral for this book: shared
 evidence can make separate observers converge.
 
-This is a form of consistency. Bayesian reasoning ensures that observers who share information will converge.
+This is one form of consistency. Bayesian reasoning shows how shared evidence can drive convergence when the starting assumptions are sufficiently aligned.
 
 ### From Sets to Hilbert Space
 
@@ -349,9 +348,11 @@ This connects to the **thermal time principle** of Connes and Rovelli: modular f
 
 ## 5.11 Commutation and Causality
 
-The locality axiom says disjoint patches have commuting algebras:
+The locality axiom says observables from disjoint patches commute: if
+$A \in \mathcal{A}(P)$ and $B \in \mathcal{A}(Q)$ with $P \cap Q = \emptyset$,
+then
 
-$$[A(P), A(Q)] = 0 \text{ when } P \cap Q = \emptyset$$
+$$[A, B] = 0$$
 
 ### But What About Entanglement?
 
@@ -361,11 +362,11 @@ The key distinction: **correlations** are not **influence**.
 
 Alice and Bob share an entangled pair. Alice measures and gets "up." She can then infer that Bob will measure "up." But she hasn't influenced Bob's particle-she has learned about it.
 
-The commutation relation [A(P), A(Q)] = 0 says Alice's measurement operator doesn't change Bob's statistics. Before Alice measures, Bob has 50/50 odds. After Alice measures, Bob still has 50/50 odds. Alice's knowledge changed, but not Bob's physics.
+The commutation relation above says Alice's measurement operator doesn't change Bob's statistics. Before Alice measures, Bob has 50/50 odds. After Alice measures, Bob still has 50/50 odds. Alice's knowledge changed, but not Bob's physics.
 
 Bell's theorem shows these correlations cannot be explained by local hidden variables. The correlations are genuinely quantum. But they still respect causality: no signal can be sent using entanglement alone.
 
-The algebraic condition [A(P), A(Q)] = 0 is the mathematical statement that consistency and causality can coexist, even with entanglement.
+That algebraic locality condition is the mathematical statement that consistency and causality can coexist, even with entanglement.
 
 ## 5.12 The Reverse Engineering Summary
 

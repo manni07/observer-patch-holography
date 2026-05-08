@@ -299,9 +299,9 @@ physical.
 
 **Overlap consistency** is built into this constructive picture. Where two patches intersect, they access the same gauge-invariant observables. Both observers are reading the same underlying data, just from different angles. The gauge redundancy at boundaries is what makes gluing non-trivial and gives rise to the "edge modes" that carry geometric information.
 
-**The dynamics** comes from MaxEnt: among all states consistent with the constraints, nature selects the maximum entropy state. This is like a Gibbs state $\rho \propto e^{-H}$ where $H$ is a sum of local terms. The system thermalizes at the UV scale, and the macroscopic physics emerges from this equilibrium.
+**The dynamics** comes from MaxEnt: among all states consistent with the constraints, nature selects the maximum entropy state. At fixed cutoff this is modeled by a Gibbs-like state $\rho \propto e^{-H}$, where $H$ is a sum of local terms. The macroscopic physics then emerges from that constrained equilibrium picture.
 
-**The 4D bulk isn't on the sphere.** It emerges from the entanglement structure between patches. When you look around and see three-dimensional space, you're experiencing a compressed encoding of how your patch is entangled with others. Distance in the bulk is entanglement on the boundary.
+**The 4D bulk isn't on the sphere.** It emerges from the entanglement structure between patches. When you look around and see three-dimensional space, you're experiencing a compressed encoding of how your patch is entangled with others. In the constructions emphasized later, bulk distance is read from boundary entanglement structure.
 
 *The screen is the computation. Observer patches are the threads. Reality is what they agree on.*
 
