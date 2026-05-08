@@ -55,11 +55,12 @@ the zoo stops looking like a zoo.
 The first bridge is symmetry. Once Lorentz kinematics is recovered, a durable
 excitation is sorted by the familiar labels of relativistic physics: mass,
 spin, and helicity. Once the gauge structure is recovered, the charge bookkeeping
-also stops looking arbitrary. The realized sector fixes the Standard Model
-quotient $SU(3)\times SU(2)\times U(1)/\mathbb Z_6$, the exact hypercharge
-lattice, the realized color triplet $N_c=3$, and the generation count $N_g=3$.
-Those are structural
-answers about what kinds of matter can exist at all.
+also stops looking arbitrary. On the realized one-Higgs low-energy branch, the
+sector fixes the Standard Model quotient
+$SU(3)\times SU(2)\times U(1)/\mathbb Z_6$, the exact hypercharge lattice, the
+realized color triplet $N_c=3$, and the generation count $N_g=3$. Those are
+structural answers about what kinds of matter can exist on that realized
+branch.
 
 This is where the book leans heavily on the collective history of particle
 physics. Rutherford showed that atoms have small nuclei. Chadwick found the
@@ -79,7 +80,8 @@ structure also blocks gauge-mediated proton decay, because the realized gauge
 group is a product group and does not contain the extra leptoquark gauge
 bosons required by simple-group unification.
 
-The electroweak transport family records a target-free weak-boson continuation
+The electroweak transport family records the weak-sector validation pair
+through a target-free continuation row
 
 $$
 M_W = 80.37700001539531\,\mathrm{GeV}, \qquad
@@ -126,7 +128,7 @@ from one continuous construction. The status ledger records the diagnostic
 source trunk, the endpoint residual, and the empirical hadron closure row that
 uses a separate \(e^+e^-\to\mathrm{hadrons}\) payload class.
 
-The same electroweak core continues into the scalar and companion top values
+The same electroweak core carries the declared Higgs/top surface
 
 $$
 (m_H,m_t)=(125.1995304097179,\ 172.3523553288312)\,\mathrm{GeV}.
@@ -136,7 +138,7 @@ $m_H$ is the Higgs-boson mass and $m_t$ is the top-quark mass on this
 calculation surface. They are paired because the Higgs and top sectors are
 strongly linked in the electroweak bookkeeping.
 
-The quark sector gives the running mass structure
+The selected-class quark sector gives the running mass structure
 
 $$
 \begin{aligned}
@@ -161,7 +163,7 @@ triplet. The aligned equation layout keeps the two families readable, but the
 important physical point is that these are quark-level running masses before
 strong binding turns quarks into hadrons.
 
-The neutrino sector is concrete as well:
+On the weighted-cycle absolute branch, the neutrino sector is concrete as well:
 
 $$
 (m_{\nu_e},m_{\nu_\mu},m_{\nu_\tau})=
@@ -169,15 +171,15 @@ $$
 $$
 
 together with definite Majorana phases in that construction. Taken together,
-the particle picture is larger than a handful of isolated numbers. OPH fixes
-the structural gauge reconstruction, the exact massless carriers, the declared
-Higgs/top surface, the selected-class running quark sextet with Yukawas, and one
-weighted-cycle neutrino family. The late status ledger records the weak
-validation pair, the fine-structure audit trunk, and the charged-lepton
-absolute-mass no-go boundary. The selected-class quark theorem leaves strong
-CP open: the available corpus does not derive $\theta_{\mathrm{QCD}}$, does
-not emit physical $\bar\theta$, and does not prove that the physical strong-CP
-phase vanishes.
+the particle picture is larger than a handful of isolated numbers. The OPH
+ledger carries structural massless carriers, the weak-sector validation pair,
+the declared Higgs/top surface, the selected-class running quark sextet with
+Yukawas, and one weighted-cycle neutrino family. The late status ledger
+records the fine-structure audit trunk and the charged-lepton witness surface.
+The selected-class quark theorem leaves strong CP open: the
+available corpus does not derive $\theta_{\mathrm{QCD}}$, does not emit
+physical $\bar\theta$, and does not prove that the physical strong-CP phase
+vanishes.
 Hadrons require a separate nonperturbative bound-state step
 because protons, neutrons, and mesons are QCD composites, not elementary
 particle rows. Source-only hadron masses require an OPH backend. Empirical
@@ -329,7 +331,10 @@ This resolves an old puzzle: why does the quantum world give rise to classical p
 
 In the standard picture, classical physics is an approximation that breaks down at small scales. OPH inverts this: classical physics is what emerges when consistency constraints are satisfied. The classical world is not fundamental reality poorly approximating quantum mechanics. It is the consistent core that multiple observers can share.
 
-The quantum world is larger but less shareable. Superpositions exist, but they can't be consistently communicated. When you try to share quantum information broadly, decoherence kicks in, and you're left with classical correlations.
+The quantum world is larger but less shareable. Superpositions exist, but broad
+decohered superpositions do not survive as public records that many observers
+can compare. When quantum information is spread broadly into the environment,
+decoherence leaves classical correlations behind.
 
 **Classical physics is the public face of quantum reality.** It is the stable consistency regime that many observers can share.
 
