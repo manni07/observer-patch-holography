@@ -125,9 +125,10 @@ backbone that all observers must agree on.
 This is a significant shift from the traditional view, and it works. Gravity
 emerges from how observers share entanglement across their screens. The
 particle world emerges from the symmetry structure forced by the framework. A
-dark component appears through modular anomalies, residual mismatches in the
-bookkeeping that turns local observer time into geometry. The question of why
-anything exists at all enters through a self-referential closure picture.
+dark-sector continuation appears through modular anomalies, residual mismatches
+in the bookkeeping that turns local observer time into geometry. The question
+of why anything exists at all enters through a self-referential closure
+picture.
 
 Once you make this shift, strange features of reality start making sense.
 The "weird" behaviors of physics, the ones that seem bizarre or paradoxical
@@ -162,10 +163,11 @@ access to information, and they must agree where their observations overlap.
 
 Only a small amount of outside numerical help is needed. One number sets the
 overall size of the screen, and that number is read from the cosmological
-constant. Another number sets the local grain of the picture, the effective
-pixel size. From there the question is simple: how much of gravity, gauge
-structure, and the particle world can be forced from observer consistency
-alone?
+constant. The local grain of the picture, the effective pixel size, is then
+solved on the OPH quantitative branch rather than inserted as a separate
+measured constant. From there the question is simple: how much of gravity,
+gauge structure, and the particle world can be forced from observer
+consistency alone?
 
 The OPH basis is quantum-algebraic by design. It starts with algebraic
 observables, states, trace/Born event probabilities on declared record
